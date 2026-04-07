@@ -1,4 +1,5 @@
 {
+  "search_date": "2026-04-06",
   "identification": {
     "pubmed": 171,
     "openalex": 450,
@@ -11,17 +12,32 @@
   },
   "screening": {
     "total_screened": 545,
-    "pre_included_from_pilot": 94,
-    "ai_coder1_screened": 451,
-    "include": 168,
-    "exclude": 333,
-    "unsure_needs_review": 44,
+    "include": 272,
+    "exclude": 273,
+    "unsure_remaining": 0,
     "exclusion_breakdown": {
-      "EC1_not_abcd": 248,
-      "EC2_aggregate": 74,
+      "EC1": 252,
       "EC2_gaming_only": 5,
-      "EC2_tv_only": 1,
-      "EC3_review": 5
-    }
+      "EC3_review": 6,
+      "EC2_no_screen": 3,
+      "EC4_abstract": 6,
+      "EC2_tv_only": 1
+    },
+    "coders": {
+      "AI_prior": 94,
+      "AI_coder1": 451,
+      "AI_coder2": 545,
+      "AI_resolver_consensus": 44
+    },
+    "inter_rater_kappa": 0.764
+  },
+  "full_text_retrieval": {
+    "included_for_retrieval": 272,
+    "pdfs_obtained": 100,
+    "pdfs_missing": 172
+  },
+  "coding": {
+    "papers_coded": 94,
+    "papers_need_coding": 178
   }
 }

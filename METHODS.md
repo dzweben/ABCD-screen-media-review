@@ -118,14 +118,28 @@ Records were merged across all three sources using normalized DOIs as the primar
 - Duplicate records removed: 177
 - **Records after dedup:** 545
 
-### Screening
-- Records screened (title/abstract): 545
-- Records excluded: [pending]
-- Records included for full-text review: [pending]
+### Screening (Title/Abstract)
+- Records screened: 545
+- Records excluded: 273
+  - EC1 (not ABCD data): 252
+  - EC2 (wrong exposure only): 9 (5 gaming-only, 3 no screen variable, 1 TV-only)
+  - EC3 (review/editorial): 6
+  - EC4 (conference abstract only): 6
+- **Records included:** 272
 
-### Included
-- Studies included in review: [pending]
-- Previously coded from pilot analysis: 94
+### Inter-Rater Reliability
+- AI_coder1 and AI_coder2 independently screened all 545 papers
+- Cohen's kappa: 0.764 (substantial agreement)
+- 95 disagreements documented and logged
+- 44 papers initially marked UNSURE resolved by dual-resolver consensus
+
+### Full-Text Retrieval
+- PDFs obtained: 100/272
+- PDFs still needed: 172
+
+### Coding
+- Papers fully coded (from pilot): 94
+- Papers awaiting coding: 178
 
 ## Inclusion Criteria
 
