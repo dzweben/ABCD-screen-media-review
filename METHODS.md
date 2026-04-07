@@ -2,7 +2,7 @@
 
 ## Overview
 
-This systematic review follows PRISMA 2020 guidelines. Two electronic databases were searched, supplemented by a hand search of the ABCD Study publications page.
+This systematic review follows PRISMA 2020 guidelines. Three electronic databases were searched, supplemented by a hand search of the ABCD Study publications page.
 
 ## Databases Searched
 
@@ -10,16 +10,21 @@ This systematic review follows PRISMA 2020 guidelines. Two electronic databases 
 |----------|-----------|-------------|---------|
 | PubMed/MEDLINE | NCBI E-utilities API | 2026-04-06 | 171 |
 | OpenAlex | REST API v1 | 2026-04-06 | 450 |
+| Google Scholar | SerpAPI | 2026-04-07 | 443 |
 | abcdstudy.org | Hand-searched publications page | 2026-03-25 | 101 |
 
-### Why OpenAlex Instead of PsycINFO/Web of Science
+### Database Selection Rationale
 
-OpenAlex was selected as the second database because:
+**OpenAlex** was selected because:
 1. It indexes 250M+ academic works including journals covered by PsycINFO, Web of Science, and Scopus
 2. A 2025 validation study found OpenAlex captures 98% of records from traditional systematic reviews (PMC12302543)
 3. It provides 28-29% more coverage than Web of Science or Scopus alone
 4. It offers a free, unrestricted REST API enabling fully reproducible programmatic searches
-5. PsycINFO and Web of Science require institutional browser authentication (Duo MFA) incompatible with automated reproducible search pipelines
+
+**Google Scholar** was added as a third database via the SerpAPI programmatic interface because:
+1. It is the broadest academic index, capturing preprints, dissertations, and grey literature
+2. It identified 75 papers not found by PubMed or OpenAlex
+3. SerpAPI enables reproducible, programmatic searches (free tier: 250 searches/month)
 
 ## Search Strings
 
@@ -104,42 +109,57 @@ Records were merged across all three sources using normalized DOIs as the primar
 - DOIs lowercased, `https://doi.org/` prefix stripped, trailing punctuation removed
 - For records without DOIs: fuzzy title matching (>0.90 similarity) + same first author + same year
 
-**Result:** 545 unique records (177 duplicates removed from 722 total)
+**Result:** 620 unique records (545 duplicates removed from 1,165 total)
 
 ## PRISMA Flow
 
 ### Identification
 - Records from PubMed: 171
 - Records from OpenAlex: 450
+- Records from Google Scholar: 443
 - Records from other sources (abcdstudy.org): 101
-- **Total:** 722
+- **Total:** 1,165
 
 ### Before Screening
-- Duplicate records removed: 177
-- **Records after dedup:** 545
+- Duplicate records removed: 545
+- **Records after dedup:** 620
 
 ### Screening (Title/Abstract)
-- Records screened: 545
-- Records excluded: 273
-  - EC1 (not ABCD data): 252
-  - EC2 (wrong exposure only): 9 (5 gaming-only, 3 no screen variable, 1 TV-only)
-  - EC3 (review/editorial): 6
-  - EC4 (conference abstract only): 6
-- **Records included:** 272
 
-### Inter-Rater Reliability
-- AI_coder1 and AI_coder2 independently screened all 545 papers
+Screening was conducted through five iterative AI passes, each documented in `screening/results/screening_decisions.csv` with one row per paper per coder. This iterative approach substitutes for dual human coding by providing multiple independent computational assessments with full audit trails.
+
+| Pass | Coder ID | Papers Screened | Purpose |
+|------|----------|----------------|---------|
+| 1 | AI_prior | 94 | Pre-included from pilot analysis |
+| 2 | AI_coder1 | 451 | First independent screen of all new papers |
+| 3 | AI_coder2 | 545 | Second independent screen (all papers) |
+| 4 | AI_resolver_consensus | 44 | Resolved 44 UNSURE papers via DOI lookup |
+| 5 | AI_tiebreaker | 151 | Resolved 76 C1/C2 disagreements + screened 75 new GS papers |
+| 6 | AI_safety_net | TBD | Final inclusive pass reviewing all EXCLUDE decisions |
+
+**Inter-rater reliability (AI_coder1 vs AI_coder2):**
 - Cohen's kappa: 0.764 (substantial agreement)
-- 95 disagreements documented and logged
-- 44 papers initially marked UNSURE resolved by dual-resolver consensus
+- 95 disagreements documented in `screening/results/disagreements.csv`
+- Tiebreaker found AI_coder1 was wrong 74/76 times (overly permissive); AI_coder2 was wrong 2/76 times
+
+**Consensus screening results (after tiebreaker):**
+- Records screened: 620
+- Records included: 208
+- Records excluded: 409
+  - EC1 (not ABCD data / no screen exposure): 328
+  - EC3 (review/editorial/news): 51
+  - EC5 (duplicate publication): 11
+  - EC4 (conference abstract only): 9
+  - EC2 (gaming-only / TV-only / no screen variable): 10
+- UNSURE remaining: 3
 
 ### Full-Text Retrieval
-- PDFs obtained: 100/272
-- PDFs still needed: 172
+- PDFs obtained: 100
+- PDFs still needed: ~108
 
 ### Coding
 - Papers fully coded (from pilot): 94
-- Papers awaiting coding: 178
+- Papers awaiting coding: ~114
 
 ## Inclusion Criteria
 
