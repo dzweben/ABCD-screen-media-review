@@ -1,0 +1,100 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "64",
+    "citation": "Nagata, J. M., Chu, J., Zamora, G., Ganson, K. T., Testa, A., Jackson, D. B., Costello, C. R., Murray, S. B., & Baker, F. C. (2023). Screen time and obsessive-compulsive disorder among children 9-10 years old: A prospective cohort study. Journal of Adolescent Health, 72, 390-396.",
+    "doi": "10.1016/j.jadohealth.2022.10.023",
+    "journal": "Journal of Adolescent Health",
+    "year": "2023",
+    "first_author": "Nagata, Jason M.",
+    "senior_author": "Baker, Fiona C."
+  },
+  "3B_Sample": {
+    "N": "9208 (Model 2); 8542 (Model 3, excluding baseline OCD)",
+    "ABCD_release_version": "ABCD 4.0 release",
+    "timepoints_used": "Baseline (2016-2018, ages 9-10) and 2-year follow-up (2018-2020, ages 11-12)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Youth Screen Time Survey",
+    "modalities_included": ["total screen time", "television shows/movies", "videos (YouTube)", "video games", "texting", "video chat", "social networking"],
+    "how_operationalized": "Self-reported typical hours per day for each modality, weekday and weekend; weighted average ([weekday x 5] + [weekend x 2])/7; continuous hours/day for each modality and total"
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Obsessive-compulsive disorder (OCD) at 2-year follow-up",
+    "measure_used": "Kiddie Schedule for Affective Disorders and Schizophrenia (KSADS-5), computerized version; DSM-5 criteria for OCD (presence of obsessions or compulsions meeting clinical criteria)",
+    "base_rate_if_binary": "6.1% met criteria for OCD at Year 2; 4.4% new-onset OCD (excluding baseline OCD)"
+  },
+  "3E_Design_Analysis": {
+    "design": "Prospective cohort (2-year follow-up)",
+    "model_type": "Logistic regression",
+    "model_type_detail": "Three model series: Model 1 (unadjusted), Model 2 (adjusted for demographics, baseline depression, family history of psychopathology, study site, and baseline OCD), Model 3 (same as Model 2 but excluding participants with baseline OCD, n=8542). Propensity weights applied.",
+    "covariates_listed": "Age, sex, race/ethnicity, household income, parent education, baseline major depressive disorder, family history of psychopathology, study site, baseline OCD (Model 2)",
+    "SES_in_model": "yes - household income and parent education included",
+    "verbatim_analysis_description": "Multiple logistic regression analyses were conducted to estimate associations between baseline screen time (exposure variable) and OCD at 2-year follow-up (outcome variable). We analyzed associations in three sets of logistic regression models."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "aOR",
+      "value": "1.05",
+      "CI_95": "(1.01, 1.09)",
+      "p_value": "0.012",
+      "outcome_scale_note": "Total screen time (per hour/day) -> OCD at Year 2 (Model 3, excluding baseline OCD)",
+      "verbatim_quote": "Each additional hour of total screen time was prospectively associated with 1.05 higher odds of OCD at 2-year follow-up (adjusted odds ratio [aOR] 1.05, 95% confidence interval [CI] 1.01-1.09).",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "aOR",
+      "value": "1.15",
+      "CI_95": "(1.03, 1.28)",
+      "p_value": "0.015",
+      "outcome_scale_note": "Video games (per hour/day) -> OCD at Year 2 (Model 3)",
+      "verbatim_quote": "each additional hour of playing video games (aOR 1.15, 95% CI 1.03-1.28)",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "aOR",
+      "value": "1.11",
+      "CI_95": "(1.01, 1.23)",
+      "p_value": "0.038",
+      "outcome_scale_note": "Videos/YouTube (per hour/day) -> OCD at Year 2 (Model 3)",
+      "verbatim_quote": "and watching videos (aOR 1.11, 95% CI 1.01-1.23) was associated with subsequent OCD.",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "aOR",
+      "value": "1.10",
+      "CI_95": "(0.98, 1.24)",
+      "p_value": "0.106",
+      "outcome_scale_note": "Television (per hour/day) -> OCD at Year 2 (Model 3)",
+      "verbatim_quote": "Television shows/movies... Model 3 AOR 1.10 (0.98-1.24), p = .106",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "aOR",
+      "value": "1.20",
+      "CI_95": "(1.00, 1.44)",
+      "p_value": "0.056",
+      "outcome_scale_note": "Texting (per hour/day) -> OCD at Year 2 (Model 3)",
+      "verbatim_quote": "Texting... Model 3 AOR 1.20 (1.00-1.44), p = .056",
+      "below_threshold": "yes"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "significance-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "no",
+    "small_ES_acknowledged": "yes",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "Healthcare professionals could consider limiting excessive video games and videos in children with OCD. Video game developers and companies could develop more safeguards and game structures that encourage breaks from the game."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "significance-primary",
+    "pattern_detail": "The paper frames results primarily through statistical significance. The total screen time OR of 1.05 per hour is very small (5% increased odds per additional hour of daily screen time). The authors acknowledge 'The association between total screen time and OCD was relatively weak and was mainly explained through video games and watching videos' but still frame the findings as supporting clinical recommendations to limit screen time in children with OCD.",
+    "list_1_qualifier": "yes",
+    "list_2_qualifier": "yes"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "",
+    "ambiguity_notes": "The total screen time OR of 1.05 per hour/day is very small. Even the largest modality-specific ORs (video games 1.15, videos 1.11) are below the 1.20 threshold. The authors note the association was 'relatively weak.' Television, texting, video chat, and social networking were not significantly associated with OCD. The prospective design is a strength but the effects are very small. OCD is measured via computerized KSADS-5 which may overestimate prevalence."
+  }
+}

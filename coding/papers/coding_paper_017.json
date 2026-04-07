@@ -1,0 +1,123 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": 17,
+    "citation": "Adan-Lopez, D., Franquelo, J. F., Viejo, E. F., & Wade, E. V. (2024). The caudate and symptoms of gaming addiction in a large sample of adolescents. Journal of Behavioral Addictions, 13(4), 1051-1063.",
+    "doi": "10.1556/2006.2024.00068",
+    "journal": "Journal of Behavioral Addictions",
+    "year": 2024,
+    "first_author": "Adan-Lopez, D.",
+    "senior_author": "Wade, E. V.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3B_Sample_Data": {
+    "candidate_id": 17,
+    "n_analytic": 6143,
+    "abcd_release": "Not explicitly stated; data from Year 2, Year 3, and Year 4 visits",
+    "timepoints_used": "2yr, 3yr, 4yr",
+    "n_timepoints": 3,
+    "verbatim_sample_description": "The analytic sample included 6,143 adolescents (12,745 observations) that attended the year-2, year-3, or year-4 visit and did not have missing data (Table 1). Missing data was minimal for non-imaging predictor variables (64 observations or 0.5% of the sample).",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3C_Exposure": {
+    "candidate_id": 17,
+    "exposure_variable": "Neural reward anticipation and feedback during the Monetary Incentive Delay (MID) task - bilateral caudate activation (large reward vs. neutral anticipation, and feedback contrasts)",
+    "exposure_instrument": "Monetary Incentive Delay (MID) task during fMRI",
+    "modalities": "N/A - brain measure (fMRI task-based activation), not screen time modality",
+    "operationalization": "Continuous (beta values from fMRI contrasts in bilateral ROIs)",
+    "time_frame": "Each study visit (Year 2, 3, 4)",
+    "reporter": "Device-based (fMRI)",
+    "verbatim_exposure_description": "Reward anticipation and feedback phases of the MID task were used as predictors. The MID task is a well-established paradigm designed to measure neural responses during reward anticipation and feedback processing. During anticipation, participants view a cue indicating potential gain or loss, then prepare to respond to a target. During feedback, participants learn the outcome of their response.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "This is a brain-to-behavior study; the exposure is neural activation during reward processing, and the outcome is gaming addiction symptoms. Not a typical screen-time-as-exposure study."
+  },
+  "3D_Outcome": {
+    "candidate_id": 17,
+    "primary_outcome": "Video Game Addiction Questionnaire (VGAQ) score over time",
+    "outcome_domain": "mental health",
+    "outcome_instrument": "Video Game Addiction Questionnaire (VGAQ) - total score",
+    "outcome_type": "continuous",
+    "base_rate_if_binary": "N/A - continuous outcome",
+    "verbatim_outcome_description": "Instead of using arbitrary cut points, we opted for a total score for the VGAQ. This approach minimized the risk of misclassification and allowed for a more nuanced understanding of gaming addiction that captures the full spectrum of gaming behaviors, from non-problematic to potentially problematic use.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3E_Design_Analysis": {
+    "candidate_id": 17,
+    "study_design": "longitudinal with baseline control",
+    "model_type": "other",
+    "model_type_detail": "Bayesian hierarchical models (brms package in R)",
+    "covariates_listed": "age, sex, race/ethnicity, household education, household income, neighborhood safety, KSADS ADHD diagnosis, parental monitoring, study site",
+    "n_covariates": 9,
+    "multiple_comparisons_correction": "Other",
+    "verbatim_analysis_description": "Statistical analyses were performed using R version 4.2.2 and R Studio version 2023.06.1. All models are adjusted for age, sex, race/ethnicity, household education, household income, neighborhood safety, KSAD ADHD diagnosis, parental monitoring, and study site. Bold = Credible interval excludes the null value of 0.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Uses credible intervals (Bayesian) rather than confidence intervals."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "candidate_id": 17,
+      "effect_id": 1,
+      "predictor": "Bilateral caudate - anticipation of large reward vs. neutral",
+      "outcome": "VGAQ score",
+      "effect_type": "beta",
+      "standardized_or_unstandardized": "Unstandardized",
+      "effect_value": -0.87,
+      "ci_lower": -1.68,
+      "ci_upper": -0.07,
+      "p_value": "credible interval excludes 0",
+      "se": "",
+      "outcome_scale_note": "VGAQ total score (range 0-30)",
+      "base_rate_for_or": "",
+      "r2_or_variance_explained": "",
+      "in_supplementary": "No",
+      "verbatim_quote": "Bilateral Caudate: -0.87 (-1.68, -0.07) for anticipation of large reward vs. neutral",
+      "context": "Primary"
+    }
+  ],
+  "3G_Reporting_Quality": {
+    "candidate_id": 17,
+    "p_value_reporting_style": "Other - uses Bayesian credible intervals, no p-values",
+    "abstract_uses_significance_language": "Yes",
+    "abstract_significance_verbatim": "the caudate nucleus plays a significant role in gaming addiction",
+    "p_values_in_abstract": "No",
+    "cis_reported_for_primary": "Yes",
+    "large_n_acknowledged": "No",
+    "large_n_verbatim": "",
+    "small_es_acknowledged": "No",
+    "small_es_verbatim": "",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Uses Bayesian framework; 'significance' is determined by credible intervals excluding zero rather than p-values."
+  },
+  "3H_Recommendations": {
+    "candidate_id": 17,
+    "recommendations_issued": "Yes",
+    "recommendation_target": "researchers, clinicians",
+    "recommendation_verbatim": "Future studies could explore intervention strategies that target caudate nucleus activity to mitigate gaming addiction. For example, neurofeedback training, a noninvasive technique used to modulate brain activity in the dorsal striatum, could be explored as a potential treatment approach.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3I_Rhetorical_Moves": {
+    "candidate_id": 17,
+    "population_level_override": "No",
+    "population_override_verbatim": "",
+    "modifiable_factor_framing": "Yes",
+    "modifiable_factor_verbatim": "research should explore modifiable factors that could help prevent the onset of gaming addiction symptoms, such as family dynamics or social support",
+    "per_unit_framing": "Yes",
+    "per_unit_verbatim": "a one-unit increase in the anticipation of a large reward versus neutral condition in the bilateral caudate was associated with a 0.87-point decrease in VGAQ score",
+    "discussion_characterization": "The discussion interprets the inverse association between caudate reward anticipation and gaming addiction symptoms as evidence that blunted reward response may contribute to problematic gaming. It suggests the caudate may serve as a protective factor. The paper recommends exploring neurofeedback interventions targeting the caudate, which is speculative given the observational design. The framing positions the finding within addiction neuroscience literature without discussing the small magnitude of the single significant effect found among many tested ROIs.",
+    "coder_confidence": "Medium",
+    "ambiguity_notes": "This paper is atypical for the review - the exposure is neural activation, not screen time, and the outcome is gaming addiction symptoms. Only one of many ROIs tested showed a credible effect. The study is more neuroscience-focused than epidemiological.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  }
+}

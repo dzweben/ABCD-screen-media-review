@@ -1,0 +1,31 @@
+# PDFs too large for git
+data/pdfs/
+*.pdf
+
+# Temp browser download folders
+data/browser_dl*/
+data/browser_downloads*/
+data/chrome_profile/
+
+# OS files
+.DS_Store
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+*.log
+logs/
+
+# Old working files (archived)
+audit_dashboard.html
+dashboard_data.json
+data/ABCD_SM_Review_Codebook.xlsx
+data/fulltext_text/
+data/fulltext_xml/
+data/raw/dashboard_data*.json
+output/
