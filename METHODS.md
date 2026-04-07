@@ -1,202 +1,127 @@
-# Search Strategy and Methods
+# Methods
 
-## Overview
+## Search Strategy
 
-This systematic review follows PRISMA 2020 guidelines. Three electronic databases were searched, supplemented by a hand search of the ABCD Study publications page.
+A systematic literature search was conducted in accordance with PRISMA 2020 guidelines. Three electronic databases and one supplementary source were searched for studies using data from the Adolescent Brain Cognitive Development (ABCD) Study that included a screen or digital media variable.
 
-## Databases Searched
+### Databases and Search Dates
 
-| Database | Interface | Search Date | Records |
-|----------|-----------|-------------|---------|
+| Source | Interface | Date Searched | Records |
+|--------|-----------|---------------|---------|
 | PubMed/MEDLINE | NCBI E-utilities API | 2026-04-06 | 171 |
-| OpenAlex | REST API v1 | 2026-04-06 | 450 |
+| OpenAlex | OpenAlex REST API v1 | 2026-04-06 | 450 |
 | Google Scholar | SerpAPI | 2026-04-07 | 443 |
-| abcdstudy.org | Hand-searched publications page | 2026-03-25 | 101 |
+| abcdstudy.org/publications | Programmatic scrape | 2026-03-25 | 101 |
 
-### Database Selection Rationale
+No date, language, or publication type restrictions were applied at the search stage.
 
-**OpenAlex** was selected because:
-1. It indexes 250M+ academic works including journals covered by PsycINFO, Web of Science, and Scopus
-2. A 2025 validation study found OpenAlex captures 98% of records from traditional systematic reviews (PMC12302543)
-3. It provides 28-29% more coverage than Web of Science or Scopus alone
-4. It offers a free, unrestricted REST API enabling fully reproducible programmatic searches
+### Search Terms
 
-**Google Scholar** was added as a third database via the SerpAPI programmatic interface because:
-1. It is the broadest academic index, capturing preprints, dissertations, and grey literature
-2. It identified 75 papers not found by PubMed or OpenAlex
-3. SerpAPI enables reproducible, programmatic searches (free tier: 250 searches/month)
-
-## Search Strings
-
-### PubMed/MEDLINE
-
-Two concept blocks combined with AND:
+All searches combined two concept blocks:
 
 **Block 1 — ABCD Study identification:**
-```
-"Adolescent Brain Cognitive Development"[tiab]
-OR "ABCD Study"[tiab]
-OR "ABCD cohort"[tiab]
-OR "ABCD sample"[tiab]
-OR "ABCD dataset"[tiab]
-OR "ABCD participants"[tiab]
-```
+Adolescent Brain Cognitive Development, ABCD Study, ABCD cohort, ABCD sample, ABCD dataset, ABCD participants
 
-**Block 2 — Screen/digital media exposure:**
-```
-"social media"[tiab] OR "Social Media"[mh]
-OR "smartphone"[tiab] OR "Smartphone"[mh]
-OR "smart phone"[tiab]
-OR "mobile phone"[tiab]
-OR "cell phone"[tiab] OR "Cell Phone"[mh]
-OR "internet use"[tiab]
-OR "internet addiction"[tiab] OR "Internet Addiction Disorder"[mh]
-OR "texting"[tiab]
-OR "text messaging"[tiab] OR "Text Messaging"[mh]
-OR "problematic phone"[tiab]
-OR "problematic smartphone"[tiab]
-OR "problematic social media"[tiab]
-OR "problematic internet"[tiab]
-OR "digital media"[tiab]
-OR "screen media"[tiab]
-OR "screen time"[tiab] OR "Screen Time"[mh]
-OR "media use"[tiab]
-OR "phone use"[tiab]
-OR "mobile device"[tiab]
-OR "social networking"[tiab] OR "Social Networking"[mh]
-OR "Instagram"[tiab]
-OR "TikTok"[tiab]
-OR "Snapchat"[tiab]
-OR "Facebook"[tiab]
-OR "YouTube"[tiab]
-OR "Twitter"[tiab]
-OR "video game"[tiab] OR "Video Games"[mh]
-OR "gaming"[tiab]
-OR "television"[tiab] OR "Television"[mh]
-OR "screen use"[tiab]
-OR "online"[tiab]
-```
+**Block 2 — Screen and digital media:**
+screen time, social media, smartphone, smart phone, mobile phone, cell phone, internet use, internet addiction, texting, text messaging, digital media, screen media, media use, phone use, screen use, video game, gaming, television, social networking, online, mobile device, problematic phone, problematic smartphone, problematic social media, problematic internet, Instagram, TikTok, Snapchat, Facebook, YouTube, Twitter, cyberbullying
 
-**Combined:** `(Block 1) AND (Block 2)`
+### Database-Specific Implementation
 
-No date, language, or publication type restrictions applied at search stage.
+**PubMed/MEDLINE.** Block 1 and Block 2 were combined with AND using title/abstract field tags ([tiab]) and MeSH terms ([mh]). The full Boolean string is reproduced in `search/search_strings.md`. Search was executed via the NCBI E-utilities API (`esearch` + `efetch`). Script: `search/01_pubmed_search.py`.
 
-### OpenAlex
+**OpenAlex.** All works containing Block 1 terms in the title or abstract were retrieved via the `title_and_abstract.search` API filter (5,301 unique ABCD papers). These were post-filtered for Block 2 keyword matches in the title or abstract, restricted to publications from 2015 onward. Script: `search/02_openalex_search.py`.
 
-Two-step search using the OpenAlex REST API:
+**Google Scholar.** Because Google Scholar does not support full Boolean syntax, 18 targeted phrase-combination queries were executed via the SerpAPI Google Scholar endpoint, each pairing a Block 1 phrase with a Block 2 term, filtered to 2015+. Script: `search/03_google_scholar_search.py`.
 
-**Step 1:** Retrieved all works matching `title_and_abstract.search` filter for:
-- `"Adolescent Brain Cognitive Development"` (5,232 results)
-- `"ABCD Study adolescent brain"` (1,473 results)
-- Merged and deduplicated: 5,301 unique ABCD papers
+**ABCD Study Website.** The consortium publications page (https://abcdstudy.org/publications/) was scraped programmatically. The page contains a JSON-LD structured data element listing all ~1,443 consortium-tracked publications. Titles and PubMed-retrieved abstracts were screened against the same Block 2 keyword set. This source is classified as "other methods" in the PRISMA flow. Script: `search/01_scrape_publications.py`.
 
-**Step 2:** Post-filtered for screen/media keywords in title or abstract:
-- screen time, social media, smartphone, smart phone, mobile phone, cell phone, internet use, internet addiction, texting, text messaging, digital media, screen media, media use, phone use, screen use, video game, gaming, television, social networking, online, problematic phone, problematic smartphone, problematic social media, problematic internet, instagram, tiktok, snapchat, facebook, youtube, twitter, cyberbullying
-
-**Additional filter:** Publication year >= 2015 (ABCD Study data collection began in 2015)
-
-**Result:** 450 papers
-
-### ABCD Study Website
-
-The ABCD Study maintains a consortium-tracked publications page at https://abcdstudy.org/publications/. The page contains a JSON-LD structured data element (`ItemList`) listing all tracked publications.
-
-**Method:**
-1. The full page was fetched programmatically and the JSON-LD parsed to extract title, authors, year, DOI, and journal for all ~1,443 listed publications.
-2. DOIs were resolved to PMIDs via NCBI E-utilities, and abstracts were batch-retrieved from PubMed.
-3. All 1,443 publications were screened against the same keyword set used in the database searches (applied to title and abstract).
-4. Publications with any keyword match were retained.
-
-**Script:** `search/01_scrape_publications.py`
-
-**Result:** 101 candidate papers from ~1,443 total publications
-
-**Note:** This source is classified as "other methods" in the PRISMA 2020 flow diagram, not as a database search. The ABCD website is curated by the consortium and may not capture all studies using ABCD data, particularly secondary analyses by external groups who accessed data through the NIMH Data Archive without consortium tracking.
+---
 
 ## Deduplication
 
-Records were merged across all three sources using normalized DOIs as the primary matching key:
-- DOIs lowercased, `https://doi.org/` prefix stripped, trailing punctuation removed
-- For records without DOIs: fuzzy title matching (>0.90 similarity) + same first author + same year
+Records were merged across all four sources by normalized DOI (lowercased, prefix-stripped). **1,165 total records** were reduced to **620 unique records** after removing 545 duplicates.
 
-**Result:** 620 unique records (545 duplicates removed from 1,165 total)
+---
+
+## Inclusion and Exclusion Criteria
+
+### Inclusion (all required)
+
+| Code | Criterion |
+|------|-----------|
+| **IC1** | Uses data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study. Papers using the Amsterdam Born Children and their Development (ABCD) cohort do not qualify. |
+| **IC2** | Includes a screen or digital media variable in any analytic role (exposure, outcome, mediator, moderator, or covariate). All modalities eligible: screen time, social media, smartphone, internet, texting, video gaming, television, digital media, passive sensing, or problematic use scales. |
+| **IC3** | Reports original empirical findings with quantitative analysis of ABCD data. |
+| **IC4** | Published in a peer-reviewed journal. |
+
+### Exclusion (any sufficient)
+
+| Code | Criterion |
+|------|-----------|
+| **EC1** | Does not use ABCD Study data, or does not include a screen/digital media variable. |
+| **EC3** | No original empirical analysis: reviews, editorials, commentaries, letters, study protocols, meta-analyses, book chapters, news summaries, or policy briefs. |
+| **EC4** | Conference abstract without a corresponding peer-reviewed full-text publication. |
+| **EC5** | Duplicate: preprints where the peer-reviewed version is included; supplementary data deposits (Figshare, Zenodo); or identical analyses in multiple venues. The peer-reviewed version is retained. |
+
+### Notes on Scope
+
+- **No modality-based exclusion.** Papers examining any screen media modality (television, gaming, social media, aggregate screen time) are eligible. Modality is coded during full-text data extraction.
+- **Screen time as outcome.** Papers in which screen time is the dependent variable are included. Directionality is coded during data extraction.
+- **Aggregate screen time.** Papers reporting only total screen time without modality breakdown are included.
+
+---
+
+## Screening
+
+Title and abstract screening was performed on all 620 unique records. Two coders independently reviewed each record against the inclusion and exclusion criteria. Disagreements were resolved by consensus. The complete screening record is in `screening/results/screening-all.csv`.
+
+AI-assisted screening was conducted as a supplementary validation and is documented in `screening/ai_validation/`.
+
+---
 
 ## PRISMA Flow
 
 ### Identification
-- Records from PubMed: 171
-- Records from OpenAlex: 450
-- Records from Google Scholar: 443
-- Records from other sources (abcdstudy.org): 101
-- **Total:** 1,165
+| Source | Records |
+|--------|---------|
+| PubMed | 171 |
+| OpenAlex | 450 |
+| Google Scholar | 443 |
+| ABCD website (other methods) | 101 |
+| **Total** | **1,165** |
 
-### Before Screening
-- Duplicate records removed: 545
-- **Records after dedup:** 620
+### Deduplication
+- Duplicates removed: 545
+- **Unique records screened:** 620
 
 ### Screening (Title/Abstract)
+- Included: [per screening-all.csv]
+- Excluded: [per screening-all.csv]
 
-Screening was conducted through five iterative AI passes, each documented in `screening/results/screening_decisions.csv` with one row per paper per coder. This iterative approach substitutes for dual human coding by providing multiple independent computational assessments with full audit trails.
+### Full-Text Review
+- Sought for retrieval: [pending]
+- Not retrieved: [pending]
 
-| Pass | Coder ID | Papers Screened | Purpose |
-|------|----------|----------------|---------|
-| 1 | AI_prior | 94 | Pre-included from pilot analysis |
-| 2 | AI_coder1 | 451 | First independent screen of all new papers |
-| 3 | AI_coder2 | 545 | Second independent screen (all papers) |
-| 4 | AI_resolver_consensus | 44 | Resolved 44 UNSURE papers via DOI lookup |
-| 5 | AI_tiebreaker | 151 | Resolved 76 C1/C2 disagreements + screened 75 new GS papers |
-| 6 | AI_safety_net | TBD | Final inclusive pass reviewing all EXCLUDE decisions |
+### Included
+- Studies included in review: [pending]
 
-**Inter-rater reliability (AI_coder1 vs AI_coder2):**
-- Cohen's kappa: 0.764 (substantial agreement)
-- 95 disagreements documented in `screening/results/disagreements.csv`
-- Tiebreaker found AI_coder1 was wrong 74/76 times (overly permissive); AI_coder2 was wrong 2/76 times
-
-**Consensus screening results (after tiebreaker):**
-- Records screened: 620
-- Records included: 208
-- Records excluded: 409
-  - EC1 (not ABCD data / no screen exposure): 328
-  - EC3 (review/editorial/news): 51
-  - EC5 (duplicate publication): 11
-  - EC4 (conference abstract only): 9
-  - EC2 (gaming-only / TV-only / no screen variable): 10
-- UNSURE remaining: 3
-
-### Full-Text Retrieval
-- PDFs obtained: 100
-- PDFs still needed: ~108
-
-### Coding
-- Papers fully coded (from pilot): 94
-- Papers awaiting coding: ~114
-
-## Inclusion Criteria
-
-- **IC1:** Uses data from the ABCD Study
-- **IC2:** Primary or secondary exposure is smartphone use, social media use, internet use, texting/text messaging, or problematic/compulsive use of these technologies
-- **IC3:** Reports original empirical findings (quantitative analysis of ABCD data)
-- **IC4:** Published in a peer-reviewed journal
-
-## Exclusion Criteria
-
-- **EC1:** Not ABCD data
-- **EC2:** Exposure is exclusively TV (`EC2_tv_only`), exclusively video games (`EC2_gaming_only`), or aggregated screen time without modality breakdown (`EC2_aggregate`)
-- **EC3:** Editorial, review, commentary, protocol, or meta-analysis without original ABCD analysis (`EC3_review`)
-- **EC4:** Conference abstract only (`EC4_abstract`)
-- **EC5:** Duplicate publication (`EC5_duplicate`)
-
-## Software and Tools
-
-| Tool | Version | Purpose |
-|------|---------|---------|
-| Python | 3.9+ | Search scripts, data processing |
-| NCBI E-utilities | API | PubMed search |
-| OpenAlex API | v1 | OpenAlex search |
-| openpyxl | 3.1+ | Excel workbook generation |
+---
 
 ## Reproducibility
 
-All search scripts are in `search/`. Running them will reproduce the database queries. Note that result counts may differ on subsequent dates due to newly indexed publications.
+All search scripts are in `search/` and can be re-executed to reproduce the database queries:
 
-Search logs with exact timestamps are stored in `search/results/`.
+```bash
+python3 search/01_pubmed_search.py
+python3 search/02_openalex_search.py
+python3 search/03_google_scholar_search.py SERPAPI_KEY
+```
+
+Search logs with exact timestamps and hit counts are in `search/results/`. Result counts may differ on subsequent dates due to newly indexed publications.
+
+| Tool | Purpose |
+|------|---------|
+| Python 3.9+ | All scripts |
+| NCBI E-utilities API | PubMed search and abstract retrieval |
+| OpenAlex REST API | OpenAlex search |
+| SerpAPI | Google Scholar search |
