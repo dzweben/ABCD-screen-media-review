@@ -12,25 +12,28 @@
     "unique_records": 620
   },
   "screening": {
-    "total_screened": 545,
-    "include": 272,
-    "exclude": 273,
-    "unsure_remaining": 0,
+    "total_screened": 620,
+    "include": 208,
+    "exclude": 409,
+    "unsure_remaining": 3,
     "exclusion_breakdown": {
-      "EC1": 252,
-      "EC2_gaming_only": 5,
-      "EC3_review": 6,
+      "EC1": 328,
+      "EC5_duplicate": 11,
+      "EC2_gaming_only": 6,
+      "EC3_review": 51,
+      "EC2_tv_only": 1,
       "EC2_no_screen": 3,
-      "EC4_abstract": 6,
-      "EC2_tv_only": 1
+      "EC4_abstract": 9
     },
-    "coders": {
+    "screening_passes": {
       "AI_prior": 94,
       "AI_coder1": 451,
       "AI_coder2": 545,
-      "AI_resolver_consensus": 44
+      "AI_resolver_consensus": 44,
+      "AI_tiebreaker": 151
     },
-    "inter_rater_kappa": 0.764
+    "inter_rater_kappa_c1_c2": 0.764,
+    "tiebreaker_result": "C1 wrong 74/76 times, C2 wrong 2/76"
   },
   "full_text_retrieval": {
     "included_for_retrieval": 272,
