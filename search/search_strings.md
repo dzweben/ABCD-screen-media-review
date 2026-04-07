@@ -31,10 +31,19 @@ Keywords: screen time, social media, smartphone, smart phone, mobile phone, cell
 
 **Result:** 450 records
 
-## ABCD Study Website
+## ABCD Study Website (Supplementary Hand Search)
 
 **Source:** https://abcdstudy.org/publications/
 
-**Method:** Programmatic scrape of JSON-LD structured data containing all ~1,443 publications, followed by keyword filtering against title and PubMed-retrieved abstracts using the same keyword set as the database searches.
+**Date accessed:** 2026-03-25
 
-**Result:** 101 candidate records
+**Method:**
+1. The ABCD Study publications page contains an embedded JSON-LD `<script type="application/ld+json">` element with an `ItemList` of all consortium-tracked publications (~1,443 at time of access).
+2. The page was fetched via Python `requests` and parsed with BeautifulSoup. Each `itemListElement` yielded: title, authors, year, DOI or URL, and journal.
+3. DOIs were resolved to PubMed IDs (PMIDs) via NCBI E-utilities `esearch`, and abstracts were batch-retrieved via `efetch` (200 PMIDs per request).
+4. All 1,443 publications were screened against the same keyword set used in the database searches (applied to title and abstract): screen time, social media, smartphone, smart phone, mobile phone, cell phone, internet use, internet addiction, texting, text messaging, problematic phone, problematic smartphone, problematic social media, problematic internet, digital media, screen media, media use, phone use, screen use, video game, gaming, television, social networking, online, mobile device, Instagram, TikTok, Snapchat, Facebook, YouTube, Twitter, cyberbullying.
+5. Papers with any keyword match in title or abstract were retained as candidates.
+
+**Script:** `search/01_scrape_publications.py`
+
+**Result:** 101 candidate records from ~1,443 total publications

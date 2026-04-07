@@ -99,9 +99,19 @@ Two-step search using the OpenAlex REST API:
 
 ### ABCD Study Website
 
-The complete publications list at abcdstudy.org/publications/ was scraped programmatically. All ~1,443 listed publications were retrieved, then keyword-filtered against the same screen/media terms applied to titles and abstracts retrieved via PubMed.
+The ABCD Study maintains a consortium-tracked publications page at https://abcdstudy.org/publications/. The page contains a JSON-LD structured data element (`ItemList`) listing all tracked publications.
 
-**Result:** 101 candidate papers
+**Method:**
+1. The full page was fetched programmatically and the JSON-LD parsed to extract title, authors, year, DOI, and journal for all ~1,443 listed publications.
+2. DOIs were resolved to PMIDs via NCBI E-utilities, and abstracts were batch-retrieved from PubMed.
+3. All 1,443 publications were screened against the same keyword set used in the database searches (applied to title and abstract).
+4. Publications with any keyword match were retained.
+
+**Script:** `search/01_scrape_publications.py`
+
+**Result:** 101 candidate papers from ~1,443 total publications
+
+**Note:** This source is classified as "other methods" in the PRISMA 2020 flow diagram, not as a database search. The ABCD website is curated by the consortium and may not capture all studies using ABCD data, particularly secondary analyses by external groups who accessed data through the NIMH Data Archive without consortium tracking.
 
 ## Deduplication
 
