@@ -32,25 +32,21 @@ Studies were excluded at Stage 1 if ANY of the following applied:
 
 ## Stage 2: Full-Text Eligibility Review
 
-All papers that passed Stage 1 (INCLUDE, n = 171) are assessed against the full-text eligibility criteria below. Two independent coders review each full text. Disagreements are resolved by discussion or a third reviewer.
+All papers that passed Stage 1 (INCLUDE, n = 171) are assessed against the full-text eligibility criteria below. Five independent AI coders (C1–C5) review each full text. Disagreements proceed to four independent resolvers (R1–R4) and a final meta-resolver pass that adjudicates against the revised criteria below. Five split papers were manually adjudicated by the lead author.
 
-### Full-Text Inclusion Criteria
+### Important: FT-IC2 was revised after the first resolver pass
+
+The original FT-IC1 criterion ("screen media is a focal variable") proved too subjective: 100+ AI coders disagreed on what "focal" meant when a screen variable appeared alongside many other predictors, mediators, or covariates. The revised criterion replaces the "focal variable" judgment with a concrete, binary test: **does the paper report at least one extractable statistic for an association between a screen media variable and a non-screen outcome?** All disagreement papers (n = 56 with PDFs) were re-adjudicated by a meta-resolver pass under the revised criterion.
+
+### Full-Text Inclusion Criteria (REVISED)
 
 Studies were retained at Stage 2 if they met ALL of the following:
 
 | Code | Criterion | Operationalization |
 |------|-----------|-------------------|
-| **FT-IC1** | Screen media is a focal variable | Screen media must function as a primary predictor, outcome, mediator, or moderator in at least one analytic model. Papers in which screen media appears **only** as a covariate or control variable are excluded. |
-| **FT-IC2** | Tests an association between screen media and at least one substantive outcome | The paper must report a quantitative association (correlation, regression coefficient, odds ratio, group comparison, path coefficient, prediction accuracy, etc.) linking a screen media variable to at least one outcome. Eligible outcome domains include but are not limited to: |
-| | | - **Neural/brain:** structural MRI, fMRI activation, connectivity, white matter, cortical thickness |
-| | | - **Mental health:** internalizing, externalizing, depression, anxiety, suicidality, psychotic-like experiences, emotion dysregulation |
-| | | - **Behavioral:** substance use/initiation, risk-taking, aggression, conduct problems, impulsivity |
-| | | - **Cognitive:** executive function, working memory, attention, academic achievement, IQ/fluid/crystallized intelligence |
-| | | - **Sleep:** duration, quality, latency, bedtime behaviors |
-| | | - **Physical health:** BMI, obesity, physical activity, cardiometabolic markers |
-| | | - **Social:** peer relationships, family conflict, cyberbullying, dating, social functioning |
-| | | - **Clinical:** ADHD symptoms, gaming disorder, problematic media use scales, eating disorder symptoms |
-| **FT-IC3** | Quantitative results are extractable | At minimum, the paper reports an effect size, test statistic, or p-value for the screen-media-to-outcome association. If only a figure is shown with no numeric values, the paper is flagged for contact with authors but provisionally included. |
+| **FT-IC1** | Uses data from the U.S. ABCD Study | The U.S. longitudinal cohort initiated in 2015 (N ~ 11,878). Excludes the Amsterdam Born Children and their Development cohort. |
+| **FT-IC2 (REVISED)** | Reports an extractable statistic for an association between a screen media variable and a non-screen outcome | The paper must report at least one effect size, regression coefficient, odds ratio, hazard ratio, correlation, factor loading, or other quantitative association (with a CI or p-value) linking a measured screen media variable to a **non-screen** psychosocial, health, cognitive, behavioral, or neurological outcome. Eligible outcome domains include but are not limited to: neural/brain (sMRI, fMRI, connectivity, white matter), mental health (internalizing, externalizing, depression, anxiety, suicidality, psychotic-like experiences), behavioral (substance use, risk-taking, aggression, impulsivity), cognitive (executive function, working memory, attention, IQ), sleep (duration, quality, bedtime), physical health (BMI, obesity, cardiometabolic markers), social (peer relationships, family conflict, dating), and clinical (ADHD, gaming disorder, eating disorder). **Null associations with extractable statistics still satisfy this criterion.** |
+| **FT-IC3** | Quantitative results are extractable from the manuscript | At minimum, the paper reports a numeric effect size, test statistic, or p-value (not solely a figure). If only a figure is shown with no numeric values, the paper is flagged for contact with authors but provisionally included. |
 
 ### Full-Text Exclusion Criteria
 
@@ -58,12 +54,23 @@ Each excluded paper is assigned exactly one primary reason — the **first** cri
 
 | Code | Criterion | Operationalization | Example |
 |------|-----------|-------------------|---------|
-| **FT-EC1** | Not ABCD data (discovered at full text) | Full-text review reveals the paper does not actually analyze ABCD data, despite appearance at abstract stage. | Paper references ABCD in introduction but analyses use a different sample. |
-| **FT-EC2** | Screen media is covariate only | Screen media appears **exclusively** as a statistical control (covariate) in every model. No model in the paper treats screen media as a predictor, outcome, mediator, or moderator — it is only included to adjust for confounding. Papers that test screen media in **any** analytic role (even as one mediator among many, or one predictor among many) do **not** meet this exclusion. | Paper predicts brain volume from adverse childhood experiences, controlling for screen time. Screen time has no hypothesis, no dedicated model, and no results interpreted. |
-| **FT-EC3** | No association tested | Screen media and a substantive outcome are both measured but no statistical association between them is modeled. Purely descriptive reporting of screen media prevalence or means does not qualify. | Paper reports screen time means by demographic group but never tests whether screen time relates to any outcome. |
-| **FT-EC4** | Psychometric only | Paper solely validates or develops a screen media measurement instrument without testing associations with substantive outcomes. | Paper reports factor structure and test-retest reliability of the SMAQ with no outcome analyses. |
-| **FT-EC5** | Full text not obtainable | Full text could not be retrieved through institutional access, open access, or interlibrary loan after reasonable effort. Papers coded FT-EC5 are marked **UNSURE** (not EXCLUDE) until all retrieval options are exhausted. | Paper behind paywall with no OA version; ILL request returned no results. |
-| **FT-EC6** | Duplicate sample (discovered at full text) | Full-text review reveals the paper uses an identical sample, exposure, and outcome as another included study. The more comprehensive or more recent version is retained. | Two papers from the same lab report the same baseline cross-sectional model with trivial covariate differences. |
+| **FT-EC1** | Not the U.S. ABCD Study | Paper uses a different cohort (e.g., the Amsterdam ABCD cohort, MTF, NHANES, MCS, Generation R) or references ABCD only in the introduction/discussion without analyzing ABCD data. | Paper analyzes Amsterdam Born Children and their Development cohort. |
+| **FT-EC2 (REVISED)** | No extractable screen → non-screen outcome statistic | The paper has no extractable statistic linking a screen media variable to a non-screen outcome. This applies when: (a) screen media is used **only** as a covariate with no reported coefficient; (b) screen media is bundled into an inseparable composite (e.g., a single 24-hour movement or lifestyle composite where screen's individual contribution cannot be extracted); (c) screen media is tested **only** against other screen/media variables (e.g., measurement concordance, screen-to-screen associations) with no non-screen outcome; or (d) cyberbullying victimization is measured without a separately measured screen time/dose variable. | Paper predicts ADHD from 100+ features in a gradient-boosting model; screen time is one feature with no extractable coefficient or independent statistical test. |
+| **FT-EC3** | Review/protocol/commentary with no original ABCD analysis | Reviews, editorials, commentaries, letters, study protocols, meta-analyses, or special-issue introductions with no original empirical ABCD analysis. | Editorial introducing a special issue on screen media. |
+| **FT-EC4** | No statistical association tested (purely descriptive) | Screen media is measured and reported descriptively (means, prevalences, frequencies) but no inferential test of an association with a non-screen outcome is performed. | Paper reports prevalences of TikTok, Instagram, and YouTube use by demographic group; uses only chi-square/t-tests for demographic comparisons. |
+| **FT-EC5** | Methods/measurement-only paper | Paper solely develops, validates, or compares screen media measurement instruments (e.g., EARS passive sensing, SMAQ) without testing their association with a non-screen outcome. | Paper reports factor structure and test-retest reliability of a screen media scale; no outcome analyses. |
+| **FT-EC6** | Duplicate or overlapping sample with the same analysis | Full-text review reveals identical sample, exposure, and outcome as another included study; the more comprehensive or peer-reviewed version is retained. | Preprint with the same baseline analysis as a published paper already included. |
+
+### Decisions that the revised criterion explicitly **does not** exclude
+
+Under the revised FT-IC2, the following are **INCLUDED** even though they would have been borderline under the old "focal variable" wording:
+
+- Screen media is one predictor among many in a regression model, **as long as** its own coefficient/CI is reported.
+- Screen media is one mediator among many in a mediation model, **as long as** the screen-specific indirect effect is reported.
+- The paper's primary purpose is something else (e.g., the role of parenting, ACEs, neighborhood) — if screen → outcome stats exist, the paper qualifies.
+- The paper uses a 24-hour movement framework, **as long as** screen time effects are independently extractable from the composite (e.g., an isotemporal substitution column or a "screen time only" row in a results table).
+- Null results: a non-significant association with an extractable coefficient still meets FT-IC2.
+- Screen media is the **outcome** rather than the predictor (e.g., predictors of screen time use). Directionality is a coding variable, not an eligibility filter.
 
 ### Directionality Decision Rules
 
@@ -72,13 +79,21 @@ The following edge cases are **included** and coded for directionality during da
 | Scenario | Decision | Rationale |
 |----------|----------|-----------|
 | Screen media is the **DV** (e.g., predictors of screen time such as ADHD, ACEs, parenting, SES) | **INCLUDE** | Papers examining what predicts screen media use are informative about the functional role of screen media in youth development. Directionality is a coding variable, not an eligibility criterion. |
-| Screen media is a **mediator** between two other variables (e.g., ACEs → screen time → depression) | **INCLUDE** | Screen media is a focal variable, and the mediation path tests its association with an outcome. |
-| Screen media is a **moderator** (e.g., the effect of peer victimization on depression varies by screen time level) | **INCLUDE** | Screen media is a focal variable that modifies the relationship between a predictor and outcome. |
+| Screen media is a **mediator** between two other variables (e.g., ACEs → screen time → depression) | **INCLUDE** | Mediation provides an extractable indirect effect linking screen media to a non-screen outcome. |
+| Screen media is a **moderator** (e.g., the effect of peer victimization on depression varies by screen time level) | **INCLUDE** | The moderation interaction test produces an extractable coefficient. |
 | Bidirectional model (e.g., CLPM testing screen time → depression AND depression → screen time simultaneously) | **INCLUDE** | Both directions test screen-media-to-outcome associations. |
 
 ### Notes
 
 - **No modality-based exclusion.** Papers examining any screen media modality (TV, gaming, social media, smartphone, internet, total screen time) are eligible. Modality is coded during full-text data extraction, not used as a screening criterion.
-- **Aggregate screen time.** Papers reporting only total screen time without modality breakdown are included. Whether modality-specific data are available is assessed during full-text coding.
+- **Aggregate screen time.** Papers reporting only total screen time without modality breakdown are included.
 - **Exclusion hierarchy.** When a paper fails multiple criteria, assign the first applicable code in order: FT-EC1 → FT-EC2 → FT-EC3 → FT-EC4 → FT-EC5 → FT-EC6.
-- **PRISMA flow.** Stage 2 results are reported as: "Full-text articles assessed for eligibility (n = X)" → "Full-text articles excluded, with reasons (n = Y)" with counts itemized by FT-EC code → "Studies included in quantitative synthesis (n = Z)."
+- **PRISMA flow.** Stage 2 results are reported as: "Full-text articles assessed for eligibility (n = 171)" → "Full-text articles excluded, with reasons (n = 41)" with counts itemized by FT-EC code → "Studies included in quantitative synthesis (n = 118; 12 unsure pending PDF retrieval/clarification)."
+
+### Adjudication pipeline
+
+1. **Coders C1–C5** (5 independent AI passes): each paper rated INCLUDE/EXCLUDE/UNSURE under the criteria.
+2. **Resolvers R1–R4** (4 independent AI passes): re-rate any paper without C1–C5 unanimity. Resolvers are blind to one another.
+3. **Meta-resolver** (final pass): re-adjudicates every disagreement paper using the **revised** FT-IC2 criterion (above), with full visibility into all 9 prior coder/resolver decisions.
+4. **Manual adjudication**: 5 papers where R1–R4 split 2–2 were reviewed by the lead author by reading the PDF directly, and recorded in the `FINAL_R` / `FINAL_R_reason` columns.
+5. **FINAL_DECISION** (the authoritative decision used for downstream synthesis): coder consensus where C1–C5 agreed; meta-resolver decision for disagreement papers with PDFs; manual adjudication for the 5 split papers; UNSURE for 4 disagreement papers without PDFs and 8 papers where all 5 coders rated UNSURE.
