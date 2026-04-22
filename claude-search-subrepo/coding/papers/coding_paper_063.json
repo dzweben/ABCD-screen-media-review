@@ -1,0 +1,127 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "63",
+    "citation": "Fung, H., Yeo, B. T. T., Chen, C., Lo, J. C., Chee, M. W. L., & Ong, J. L. (2023). Adherence to 24-hour movement recommendations and health indicators in early adolescence: Cross-sectional and longitudinal associations in the Adolescent Brain Cognitive Development Study. Journal of Adolescent Health, 72, 460-470.",
+    "doi": "10.1016/j.jadohealth.2022.10.019",
+    "journal": "Journal of Adolescent Health",
+    "year": "2023",
+    "first_author": "Fung, Hoki",
+    "senior_author": "Ong, Ju Lynn"
+  },
+  "3B_Sample": {
+    "N": "10574 (T1); 9273 (T2)",
+    "ABCD_release_version": "ABCD 4.0 data release",
+    "timepoints_used": "Baseline T1 (ages 9-11) and 2-year follow-up T2 (ages 11-14)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "24-hour movement behaviors: sleep duration, screen time, and physical activity (adherence to guidelines)",
+    "modalities_included": ["total screen time (all modalities combined)"],
+    "how_operationalized": "Screen time: <=2 hrs/day (meeting guideline) vs >2 hrs/day (not meeting). Sleep: 9-11 hrs/night (meeting) vs not. Physical activity: >=60 min MVPA/day (meeting) vs not. Combined into 8 categories of adherence (none, sleep only, screen time only, both sleep+screen, activity only, sleep+activity, screen+activity, all three)."
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Cognition, psychosocial health, BMI, and brain gray matter volumes",
+    "measure_used": "NIH Toolbox Cognition Battery (fluid intelligence, crystallized intelligence, composite); CBCL (internalizing, externalizing, total problems T-scores); BMI z-scores; cortical and subcortical gray matter volumes (FreeSurfer 7.1.1)",
+    "base_rate_if_binary": "N/A - continuous outcomes. At T1: 49% met sleep guideline, 35% met screen time guideline, 17% met activity guideline, 4% met all three, 31% met none."
+  },
+  "3E_Design_Analysis": {
+    "design": "Cross-sectional and longitudinal (2-year follow-up)",
+    "model_type": "Linear mixed effects models",
+    "model_type_detail": "Cross-sectional: LME with 24h-MB category as fixed effect, reference=group meeting no recommendations; controlled for sociodemographics; families nested within site as random effect. Longitudinal: same but controlling for T1 outcome, time elapsed, and T1 sociodemographics. FDR correction (Benjamini-Hochberg).",
+    "covariates_listed": "Age, sex, highest parental education, race, family income; for GMV models: also estimated total intracranial volume. Longitudinal: also T1 outcome and time elapsed.",
+    "SES_in_model": "yes - family income and highest parental education included",
+    "verbatim_analysis_description": "Associations between adherence to each 24h-MB combination category (compared to a reference group meeting no recommendations) and outcome variables for cognition, psychosocial health, zBMI, and GMVs were investigated using linear mixed effects models, controlled for age, sex, highest parental education, household income, and race."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "b (unstandardized)",
+      "value": "1.93",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time group vs None: fluid intelligence at T1 (NIH Toolbox, M=100, SD=15)",
+      "verbatim_quote": "Sleep & Screen Time: fluid intelligence b=1.93*** [from Figure 2A]",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "b (unstandardized)",
+      "value": "1.67",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time group vs None: crystallized intelligence at T1",
+      "verbatim_quote": "Sleep & Screen Time: crystallized intelligence b=1.67*** [from Figure 2A]",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "b (unstandardized)",
+      "value": "-2.85",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time group vs None: CBCL total problems at T1 (T-score, M=50, SD=10)",
+      "verbatim_quote": "Sleep & Screen Time: total problems b=-2.85*** [from Figure 2B]",
+      "below_threshold": "N/A - T-score units"
+    },
+    {
+      "effect_type": "b (unstandardized)",
+      "value": "-0.43",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time group vs None: zBMI at T1",
+      "verbatim_quote": "Sleep & Screen Time: zBMI b=-0.43*** [from Figure 2C]",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "b (unstandardized)",
+      "value": "2319.28",
+      "CI_95": "",
+      "p_value": "<0.01 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time group vs None: cortical GMV (mm3) at T1",
+      "verbatim_quote": "Sleep & Screen Time: cortical GMV b=2319.28** [from Figure 2D]",
+      "below_threshold": "N/A - mm3 units"
+    },
+    {
+      "effect_type": "b (unstandardized, longitudinal T2-T1)",
+      "value": "-1.05",
+      "CI_95": "",
+      "p_value": "0.02 (FDR=0.18)",
+      "outcome_scale_note": "Sleep & Screen Time at both T1 and T2 vs None: change in externalizing problems",
+      "verbatim_quote": "Sleep & Screen Time: externalizing b=-1.05, p=.02, pFDR=.18 [from Figure 3B longitudinal]",
+      "below_threshold": "N/A - T-score units"
+    },
+    {
+      "effect_type": "b (unstandardized, longitudinal T2-T1)",
+      "value": "-0.20",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time at both T1 and T2 vs None: change in zBMI",
+      "verbatim_quote": "Sleep & Screen Time: zBMI T2-T1 b=-0.20*** [from Figure 3C]",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "b (unstandardized, longitudinal T2-T1)",
+      "value": "3242.37",
+      "CI_95": "",
+      "p_value": "<0.001 (FDR-corrected)",
+      "outcome_scale_note": "Sleep & Screen Time at both T1 and T2 vs None: change in cortical GMV",
+      "verbatim_quote": "Sleep & Screen Time: cortical GMV T2-T1 b=3242.37*** [from Figure 3D]",
+      "below_threshold": "N/A - mm3 units"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "ES-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes (in figures via error bars)",
+    "large_N_acknowledged": "yes",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "It is recommended that movement behaviors be simultaneously targeted for better developmental outcomes... these guidelines would be strengthened by introduction of appropriate public policies that would encourage adoption, rather than only health promotion at an individual level. For example, delaying school start times and regulating late night extra-curricular activities would create an environment that would enable many more adolescents to obtain adequate sleep."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "modifiable-factor",
+    "pattern_detail": "The paper frames screen time as part of a modifiable '24-hour movement behavior' triad and argues for integrated guidelines. Cognitive effects are small (1-2 points on a standardized scale with M=100, SD=15) but psychosocial and BMI effects are more substantial. The paper does not explicitly note the small magnitude of cognitive effects relative to the scale.",
+    "list_1_qualifier": "yes",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "",
+    "ambiguity_notes": "Screen time is examined as part of a combined 24h movement behavior framework (sleep + screen time + physical activity). Effects of screen time alone cannot be fully isolated from the combined guideline adherence categories. Cognitive effects (b=0.70-1.93 on a M=100, SD=15 scale) are very small in standardized terms (~0.05-0.13 SD). Psychosocial effects in CBCL T-score units (~1.5-3.25 on M=50, SD=10 scale) are modest (~0.15-0.33 SD). Longitudinal analyses are limited since many comparisons did not survive FDR correction."
+  }
+}

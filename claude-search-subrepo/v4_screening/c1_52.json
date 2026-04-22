@@ -1,0 +1,102 @@
+[
+ {
+  "paper_id": "55",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses ABCD Study data: '9- to 11-year-olds from the 21-site adolescent brain cognitive development study'"
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Measures multiple SM/phone variables: 'television/movies, watching videos (e.g., YouTube), playing video games, texting, visiting social networking sites (e.g., Twitter, Instagram), and using video chat (e.g., FaceTime)' plus 'mature-rated video games' and 'R-rated movies'"
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Reports inferential tests with ST variables: 'generalized linear mixed models' testing associations between ST types/content and behavioral outcomes (CBCL syndrome scales)"
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Reports multiple statistics: IRR values (e.g., 'IRR = 1.059' for TV/movies\u2192rule-breaking), \u03b2 coefficients, p-values, and 95% CIs throughout Tables 2-3"
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical analysis: cross-sectional observational study using baseline ABCD data with formal statistical modeling"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Journal article (peer-reviewed): published in International Journal of Behavioral Nutrition and Physical Activity, 2019"
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "ST not used as DV in all analyses. Multiple analyses have ST as IV predicting non-SM outcomes (problem behaviors). Cross-sectional design. Not a longitudinal demographic-predictor-of-ST study.",
+  "edge_cases_applied": [
+   "E2",
+   "E8"
+  ],
+  "notes": "Paper 398. Mixed modality but ST types are separately reported with extractable coefficients for each (TV, videos, games, SM). Excellent fit with inclusion criteria\u2014original ABCD analysis examining ST\u2192behavioral outcomes."
+ },
+ {
+  "paper_id": "429",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses ABCD Study: 'first annual curated release of the Adolescent Brain Cognitive Development Study. Participants included 4524 children between the ages of 8 and 11 years'"
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Measures recreational screen time (ST) as SM/phone variable: 'Canadian 24-Hour Movement Guidelines for Children and Youth...\u22642 hours of recreational screen time (ST) per day'"
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Reports inferential statistics linking ST recommendations to impulsivity outcomes: 'Meeting the ST and sleep recommendations was associated with less impulsive behaviors on all dimensions' with CIs and p-values reported"
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Reports extractable statistics: 95% confidence intervals and coefficients throughout results (e.g., 'negative urgency (95% CI: \u22120.20 to \u22120.10)'; Table 3 contains standardized \u03b2 coefficients and p-values)"
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical analysis: cross-sectional observational study examining associations between movement behavior recommendations and impulsivity dimensions"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Journal article: published in Pediatrics, 2019"
+  },
+  "FT_EC7_applies": true,
+  "FT_EC7_reason": "ST is modeled as part of movement behavior recommendations (DV context), but in this cross-sectional analysis, ST itself is treated as an independent variable (meeting vs not meeting ST recommendation). However, the primary direction appears to be movement behavior combinations predicting impulsivity, not the reverse. The paper is fundamentally cross-sectional, which negates FT-EC7 application per E7 binding rule.",
+  "edge_cases_applied": [
+   "E2"
+  ],
+  "notes": "Paper 429. Uses 24-hour movement composite including ST (\u22642 h/day recreation ST). ST-specific coefficients appear extractable from tables examining movement behavior combinations. Edge case E2 applied: within 24-h movement composite, ST recommendation is separately reportable."
+ },
+ {
+  "paper_id": "398",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses ABCD baseline data, N ~11,875 children, US 21-site cohort."
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Measures separate screen time modalities including TV/movies, videos, video games, social media, video chat/texting with extractable modality-specific coefficients."
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Negative binomial SEM with mediation linking screen type/content to behavioral problems (CBCL); reports IRR with 95% CIs."
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Multiple IRRs with 95% CIs reported per screen modality-behavior association (e.g., social media IRR linked to externalizing behaviors)."
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical cross-sectional analysis of ABCD data using SEM."
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed journal article."
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "Cross-sectional design; screen is IV predicting non-SM behavioral outcomes; FT-EC7 does not apply.",
+  "edge_cases_applied": [
+   "E1"
+  ],
+  "notes": "Recovered from agent summary (batch 52); original file had duplicate 55 and omitted 398."
+ }
+]

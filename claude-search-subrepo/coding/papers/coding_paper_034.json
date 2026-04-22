@@ -1,0 +1,118 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "34",
+    "citation": "Nagata, J. M., Balasubramanian, P., Iyra, P., Ganson, K. T., Testa, A., He, J., Glidden, D. V., & Baker, F. C. (2024). Screen use in transgender and gender-questioning adolescents: Findings from the Adolescent Brain Cognitive Development (ABCD) Study. Annals of Epidemiology, 95, 6-11.",
+    "doi": "10.1016/j.annepidem.2024.04.013",
+    "journal": "Annals of Epidemiology",
+    "year": "2024",
+    "first_author": "Nagata, Jason M.",
+    "senior_author": "Baker, Fiona C."
+  },
+  "3B_Sample": {
+    "N": "9859",
+    "ABCD_release_version": "ABCD 5.0 release",
+    "timepoints_used": "Year 3 follow-up (2019-2021)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Transgender identification and gender-questioning status (independent variable); screen time and problematic screen use are dependent variables",
+    "modalities_included": ["total recreational screen time", "television/movies", "single-player video games", "multi-player video games", "texting", "social media", "video chat", "browsing the internet"],
+    "how_operationalized": "Transgender: 'Are you transgender?' (yes/maybe/no). Screen time: self-reported hours and minutes on typical weekday/weekend for each modality, weighted average. Problematic use: SMAQ (6-item, 1-6 scale), VGAQ (6-item, 1-6 scale), MPIQ (8-item, 1-7 scale)."
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Screen time (hours/day by modality) and problematic screen use scores as outcomes; gender identity as predictor",
+    "measure_used": "Total recreational screen time (hrs/day), modality-specific screen time, SMAQ mean score, VGAQ mean score, MPIQ mean score",
+    "base_rate_if_binary": "1.0% transgender, 1.1% gender-questioning, 94.7% cisgender"
+  },
+  "3E_Design_Analysis": {
+    "design": "Cross-sectional",
+    "model_type": "Multiple linear regression",
+    "model_type_detail": "Separate linear regression models for each screen time modality and each problematic use measure as dependent variable; transgender (yes vs no) and gender-questioning (maybe vs no) as independent variables in separate model sets. 22 regression models total for transgender, 22 for gender-questioning. Propensity weights applied from ACS.",
+    "covariates_listed": "Age, sex assigned at birth, race/ethnicity, household income, parent education, study site",
+    "SES_in_model": "yes - household income and parent education included",
+    "verbatim_analysis_description": "Multiple linear regression analyses were conducted to estimate associations between transgender identification ('yes' compared to 'no') or gender-questioning ('maybe' compared to 'no') and recreational screen time (seven modalities in total) as well as three forms of problematic screen use (video game, social media, mobile phone), adjusting for potential confounders."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "4.51",
+      "CI_95": "(1.17, 7.85)",
+      "p_value": "0.008",
+      "outcome_scale_note": "Transgender vs cisgender: total recreational screen time (hrs/day), adjusted",
+      "verbatim_quote": "transgender adolescents reported 4.51 (95% CI 1.17-7.85) more hours of total daily recreational screen time",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "3.41",
+      "CI_95": "(1.16, 5.67)",
+      "p_value": "0.003",
+      "outcome_scale_note": "Gender-questioning vs cisgender: total recreational screen time (hrs/day), adjusted",
+      "verbatim_quote": "Gender-questioning participants reported 3.41 (95% CI 1.16-5.67) more hours of total daily recreational screen time",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "0.46",
+      "CI_95": "(0.19, 0.74)",
+      "p_value": "0.001",
+      "outcome_scale_note": "Transgender vs cisgender: problematic video game use (VGAQ score), adjusted",
+      "verbatim_quote": "Video Game Addiction Questionnaire Score B 0.46 (0.19, 0.74), p = .001",
+      "below_threshold": "N/A - mean score on 1-6 scale"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "0.43",
+      "CI_95": "(0.17, 0.69)",
+      "p_value": "0.001",
+      "outcome_scale_note": "Transgender vs cisgender: problematic social media use (SMAQ score), adjusted",
+      "verbatim_quote": "Social Media Addiction Questionnaire Score B 0.43 (0.17, 0.69), p = .001",
+      "below_threshold": "N/A - mean score on 1-6 scale"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "0.34",
+      "CI_95": "(0.07, 0.61)",
+      "p_value": "0.012",
+      "outcome_scale_note": "Transgender vs cisgender: problematic mobile phone use (MPIQ score), adjusted",
+      "verbatim_quote": "Mobile Phone Involvement Questionnaire Score B 0.34 (0.07, 0.61), p = .012",
+      "below_threshold": "N/A - mean score on 1-7 scale"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "0.57",
+      "CI_95": "(0.27, 0.88)",
+      "p_value": "<0.001",
+      "outcome_scale_note": "Gender-questioning vs cisgender: problematic video game use (VGAQ score), adjusted",
+      "verbatim_quote": "Video Game Addiction Questionnaire Score B 0.57 (0.27, 0.88), p < .001",
+      "below_threshold": "N/A - mean score"
+    },
+    {
+      "effect_type": "B (unstandardized)",
+      "value": "0.46",
+      "CI_95": "(0.21, 0.71)",
+      "p_value": "0.001",
+      "outcome_scale_note": "Gender-questioning vs cisgender: problematic social media use (SMAQ score), adjusted",
+      "verbatim_quote": "Social Media Addiction Questionnaire Score B 0.46 (0.21, 0.71), p = .001",
+      "below_threshold": "N/A - mean score"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "ES-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "yes",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "Our findings support the need for digital media technology interventions to be scaffolded and tailored to the unique needs of gender minority adolescents. Given the differential uses and functions of screen time for gender minority adolescents, school media literacy programs can meaningfully support and empower adolescents through their identity formation journeys."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "none",
+    "pattern_detail": "The paper examines group differences in screen time by gender identity, and the effects are relatively large (4+ hours difference). The framing is appropriate for the magnitude of effects found. Recommendations are tailored to the population studied.",
+    "list_1_qualifier": "no",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "POSSIBLE EXCLUSION - screen time is the outcome variable, not the exposure; gender identity is the predictor",
+    "ambiguity_notes": "This paper treats screen time and problematic screen use as OUTCOMES predicted by gender identity, not as exposures predicting health outcomes. It describes differences in screen use between transgender/gender-questioning and cisgender adolescents. No health outcome is examined. Small transgender (n~99) and gender-questioning (n~108) subsamples. The direction of the research question is inverted relative to the typical screen time -> outcome framework."
+  }
+}

@@ -1,88 +1,103 @@
-# ABCD Study Screen Media Systematic Review
+# ABCD Smartphone & Social Media Systematic Review
 
-A systematic review of publications using Adolescent Brain Cognitive Development (ABCD) Study data to examine associations between screen media use and youth outcomes.
+A PRISMA 2020 systematic review of publications using U.S. Adolescent Brain Cognitive Development (ABCD) Study data that examine associations involving youth **smartphone** or **social media** use.
 
-## Repo Structure
+---
+
+## Repository structure
 
 ```
-search/                          # Phase 1: Database searches (fully reproducible, no AI)
-  01_pubmed_search.py            # PubMed via NCBI E-utilities API
-  02_openalex_search.py          # OpenAlex via REST API
-  03_google_scholar_search.py    # Google Scholar via SerpAPI
-  search_strings.md              # Exact search queries for each database
-  results/                       # Raw search exports + logs
+00-search/         Phase 0 — database searches, deduplication
+  search-terms-platforms.md      Exact Boolean queries per database
+  search-results.md              Per-platform yield summary
+  deduplication.md               Dedup logic and counts
+  01_pubmed_search.py            Reproducible search scripts
+  01_scrape_publications.py
+  02_openalex_search.py
+  03_google_scholar_search.py
+  03_fetch_abstracts.py
+  03_deduplicate.py
+  pubmed_results.csv
+  openalex_results.csv
+  google_scholar_results.csv
+  *_search_log.json              API call logs
+  deduplicated.csv               620 unique records after dedup
+  prisma_counts.json             Historical PRISMA flow counts
 
-screening/                       # Phase 2: Title/abstract screening
-  screening_criteria.md          # Inclusion/exclusion criteria
-  results/
-    screening-all.csv            # PRIMARY: Human-validated screening (620 papers)
-    deduplicated.csv             # All 620 unique papers merged across sources
-    prisma_counts.json           # PRISMA flow numbers
-  ai_validation/                 # SUPPLEMENTARY: AI screening process
-    screening_decisions.csv      # 6 AI screening passes (1298 rows)
-    screening_prompt.md          # AI screening methodology
-    disagreements.csv            # Inter-rater disagreements
-    ...                          # Individual AI coder outputs
+01-L1/             Phase 1 — Title/abstract screening
+  1L-criteria.md                 Stage 1 eligibility criteria
+  1L-scoring.csv                 620 papers × (metadata + Coder1 + Coder2 + L1_decision)
 
-coding/                          # Phase 3: Full-text coding
-  coding_rubric.md               # Operationalized coding rubric
-  papers/                        # One JSON per coded paper
+02-L2/             Phase 2 — Full-text eligibility
+  2L-criteria.md                 Stage 2 criteria (smartphone/SM scope, FT-EC7 directionality)
+  2L-scoring.csv                 171 Stage-1 includes × per-criterion C1/C2/Resolver/FINAL
+  2L-INCLUDE.csv                 Slim list: 94 included papers
+  2L-EXCLUDE.csv                 Slim list: 61 excluded papers with codes
+  2L-UNSURE.csv                  Slim list: 16 papers pending retrieval/clarification
 
-data/
-  abstracts.csv                  # All 620 abstracts
-  ABCD_SM_Screening_Workbook.xlsx
-  pdfs/                          # Full-text PDFs (gitignored)
+claude-search-subrepo/          AI processing artifacts (not part of PRISMA output)
+  v4_screening/                  Per-coder JSON outputs (C1, C2, resolver), batch inputs
+  ai_validation/                 Earlier AI-only screening passes (pre-PRISMA)
+  ...                            (old dashboards, logs, intermediate CSVs)
+
+METHODS.md                      Overall methods overview
+README.md                       This file
 ```
 
-## Search Strategy
+---
 
-| Database | Tool | Records |
-|----------|------|---------|
-| PubMed/MEDLINE | NCBI E-utilities API | 171 |
-| OpenAlex | REST API | 450 |
-| Google Scholar | SerpAPI | 443 |
-| abcdstudy.org | Web scrape | 101 |
-| **Total** | | **1,165** |
-| **After dedup** | | **620** |
+## PRISMA flow (current)
 
-All searches are fully reproducible Python scripts — no AI required. See [search/search_strings.md](search/search_strings.md) for exact queries.
+| Stage | Records |
+|---|---:|
+| **Identification**: Records from PubMed, OpenAlex, Google Scholar, ABCD website | 1,165 |
+| **Deduplication**: Unique records | 620 |
+| **Stage 1 (title/abstract)**: Advanced to full-text | 171 |
+| **Stage 1 excluded (by code)**: EC1–EC5 | 449 |
+| **Stage 2 (full-text)**: Included in synthesis | **94** |
+| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **61** |
+| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 4 |
+| &nbsp;&nbsp;&nbsp;FT-EC2 (no smartphone/SM variable) | 48 |
+| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC4 (no smartphone/SM ↔ non-SM test) | 2 |
+| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal demographic → SM epidemiology) | 2 |
+| **Stage 2 UNSURE** (pending retrieval) | 16 |
 
-## Screening
+---
 
-This review uses a two-stage PRISMA 2020 screening pipeline.
+## Stage 2 screening pipeline (2L)
 
-**Stage 1 — Title/abstract** (`screening/results/screening-all.csv`)
-- 620 papers, each with title, abstract, DOI, journal, year, sources
-- Human coder decisions in `coder1_decision` and `coder_2_decision`
-- 171 papers passed Stage 1.
+Each of the 171 Stage-1 includes is screened atomically against six criteria (FT-IC1 through FT-IC6) and a directionality gate (FT-EC7):
 
-**Stage 2 — Full text** (`screening/results/stage2_fulltext_screening.csv`)
-- All 171 Stage-1 includes assessed against the revised full-text criteria.
-- Pipeline: 5 independent AI coders (C1–C5) → 4 independent resolvers (R1–R4) for disagreements → meta-resolver pass under revised FT-IC2 → 5 split papers manually adjudicated by lead author.
-- **Results:**
+1. **C1_AI** — independent AI coder, full PDF review, per-criterion MET/NOT_MET/UNKNOWN with evidence
+2. **C2_AI** — independent AI coder, blinded to C1
+3. **Resolver** — independent AI pass only on criteria where C1 ≠ C2
+4. **Algorithmic aggregation** — hierarchical exclusion codes; no subjective judgment
 
-| Outcome | n |
-|---|---|
-| INCLUDE | 118 |
-| EXCLUDE | 41 |
-| UNSURE (no PDF / all-UNSURE coders) | 12 |
-| **Total** | **171** |
+**C1 vs C2 agreement (pre-resolver):** 74.9%, Cohen's κ = 0.51 (moderate). Resolver adjudicated 43 papers with at least one criterion-level disagreement.
 
-The authoritative decision for each paper is in the `FINAL_DECISION` column; `FINAL_DECISION_source` records whether it came from coder consensus, meta-resolver, or manual adjudication.
+See `02-L2/2L-criteria.md` for full criteria and edge-case rules (E1–E18).
 
-### FT-IC2 was revised after the first resolver pass
+---
 
-The original FT-IC2 ("screen media is a focal variable") proved too subjective — over 100 AI coders disagreed on what "focal" meant whenever screen variables appeared alongside many other predictors or covariates. We replaced it with a concrete binary test: **does the paper report at least one extractable statistic for an association between a screen media variable and a non-screen psychosocial / health / cognitive / behavioral / neurological outcome?** All 56 disagreement papers (with PDFs) were re-adjudicated by a meta-resolver pass using the revised criterion. See [screening/screening_criteria.md](screening/screening_criteria.md) for full criteria and the adjudication pipeline.
-
-### AI Validation (Supplementary)
-
-The `screening/ai_validation/` folder documents an independent AI screening process that ran 6 passes over the same 620 papers before human review. This serves as methodological validation — the AI decisions aligned with the human coder, documented transparently for reproducibility. See [screening/ai_validation/screening_prompt.md](screening/ai_validation/screening_prompt.md) for methodology.
-
-## Reproducing the Search
+## Reproducing the search
 
 ```bash
-python3 search/01_pubmed_search.py
-python3 search/02_openalex_search.py
-python3 search/03_google_scholar_search.py YOUR_SERPAPI_KEY
-python3 screening/03_deduplicate.py
+cd 00-search/
+python 01_pubmed_search.py                   # → pubmed_results.csv
+python 01_scrape_publications.py              # → ABCD website candidates
+python 02_openalex_search.py                  # → openalex_results.csv
+python 03_google_scholar_search.py $SERPAPI_KEY   # → google_scholar_results.csv
+python 03_fetch_abstracts.py                  # fill in missing abstracts
+python 03_deduplicate.py                      # → deduplicated.csv (n=620)
 ```
+
+---
+
+## Notes
+
+- **v4 criteria** narrow Stage 2 to smartphone/social-media-specific exposures (superseding earlier v1–v3 passes, preserved only in git history).
+- **FT-EC7** excludes longitudinal demographic-only prediction of future smartphone/SM use (epidemiology-of-adoption is out of scope). Cross-sectional demographic → SM associations remain eligible.
+- **Apps = smartphone** (any app use qualifies as a smartphone exposure).
+- **Cyberbullying alone** does not qualify; requires a separately measured smartphone or SM variable.
+- Generic "screen time" composites without modality breakdowns are excluded.

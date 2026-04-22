@@ -1,0 +1,33 @@
+[
+  {
+    "paper_id": "543",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study baseline data, N=15,022 American children aged 9-11 years. Explicitly states: 'This secondary analysis borrowed data from the Adolescent Brain Cognitive Development (ABCD) study' and 'The data came from the baseline of the Adolescent Brain Cognitive Development (ABCD) study.'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time as continuous variable: 'average weekdays...measured in hours.' Parents reported 'average weekdays' screen time. This is a specific, quantifiable smartphone/media use variable per FT-IC2. Screen time is explicitly defined as recreational screen use (TV, video games, internet use combined by parent report)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects regression models (Model 1 and Model 2) with inferential statistics. Model 1 tests family income + race on screen time with regression coefficients and p-values. Model 2 includes interaction terms between race and family income. Chi-square and ANOVA tests reported for bivariate analysis. All meet FT-IC3 requirement for inferential hypothesis tests."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results clearly reported in Table 3. Model 1: Income ≥50K and <100K: b=-0.60, p<0.001; Income >100K: b=-1.20, p<0.001; Race (Black): b=1.32, p<0.001. Model 2 interaction terms: Income (>100K) × Race (Black): b=0.74, p=0.003. Multiple coefficients, SEs, and p-values reported throughout."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. Secondary analysis using baseline cross-sectional data with mixed-effects regression models testing associations between family income, race, and children's screen time. This is empirical analysis with inferential statistics, not purely descriptive or psychometric."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Information 2020, 11(11), 538. doi:10.3390/info11110538. Original empirical research article, not a preprint, conference abstract, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Although screen time is the dependent variable and predictors are demographic/contextual (family income, race, ethnicity, sex, parental education, marital status), this is a CROSS-SECTIONAL analysis at ABCD baseline. FT-EC7 explicitly requires: 'ALL such analyses are LONGITUDINAL / PROSPECTIVE (predicting FUTURE smartphone/SM use from baseline demographics).' Per the exception rule: 'Paper also reports cross-sectional analyses with smartphone/SM as DV (cross-sectional ignores direction)' - FT-EC7 does NOT apply. Per E14 binding rule: 'Sociodemographic predictors of phone/SM — cross-sectional MET; longitudinal-only → FT-EC7.' This is cross-sectional, therefore MET for inclusion.",
+    "edge_cases_applied": ["E14", "E8"],
+    "notes": "C1 and C2 disagree on FT-EC7. C1 correctly identified this as cross-sectional (FT-EC7 does not apply, per exception rule). C2 initially assessed FT-EC7=true but then self-corrected noting the cross-sectional design, arriving at the same conclusion that cross-sectional analyses invoke the exception. Resolver agrees: FT-EC7 does NOT apply; cross-sectional design with demographic predictors on screen-time DV = MET for inclusion per E14. E8 applies: chi-square and ANOVA tests exist (inferential), not just means/SDs. Paper qualifies for inclusion."
+  }
+]

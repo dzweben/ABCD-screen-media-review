@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "59",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline (2016-2018) through 2-year follow-up (ages 9-10 years at baseline)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Bullying victimization measured as dichotomized any/no bullying (cyberbullying + traditional bullying combined) but not a specific smartphone/social media variable separately extracted. Cyberbullying assessed only as single-item: 'Have you ever been cyberbullied...on social media (like Instagram or Snapchat)?' but this is part of broader bullying construct. No separate smartphone/SM exposure metric. Per E6, cyberbullying alone without separately-measured phone/SM variable = NOT_MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models with two main effects testing ACEs and bullying victimization associations with mental health problems; interaction term for ACEs × bullying victimization on internalizing/externalizing outcomes. Table 2 reports β and 95% CI for main effects."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports β coefficients and 95% CIs for ACEs (e.g., ACE=1: B=1.92 [1.27-2.58], p<.001 for internalizing) and bullying victimization (B=1.28 [0.72-1.84], p<.001). Includes p-values and confidence intervals."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis using regression and interaction testing; secondary data analysis of baseline to Year 2 follow-up with inferential statistics."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal of Youth and Adolescence 2024; published article, not preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET, so FT_EC7 does not apply. However, if FT_IC2 were met: bullying/cyberbullying is not a pure demographic predictor; ACEs are psychological/environmental (abuse, neglect, household dysfunction) not purely demographic. E16 applies: Individual-characteristic predictors of outcome (mental health problems) with any predictor type = MET regardless of direction.",
+    "edge_cases_applied": ["E6"],
+    "notes": "Primary issue: Cyberbullying measured only as single item within broader bullying construct (traditional + cyber combined). No separate smartphone/social media variable with own coefficient. This is an excluded paper for FT_IC2 per the criterion 'Cyberbullying alone with no separately-measured phone/SM variable = NOT_MET.'"
+  },
+  {
+    "paper_id": "436",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study (https://abcdstudy.org) with baseline (T0) and 4-year longitudinal follow-up (T1-T4) of 8324 children aged 9-10 years at baseline. Data release 5.0."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use explicitly measured: time spent on social networking sites (Facebook, Instagram) + video chat + texting via phone/tablet/computer, self-reported hours/day. Separate from video games and TV/videos. Authors categorize DM use: (a) social media use (4+5+6 items combining social networking, texting, video chat), (b) playing video games, (c) watching television/videos. Qualifies as specific smartphone/social media variable per prompt definition (time on phone, apps, social media platform-specific)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models with fixed effects for DM use, time, and interaction terms (DM use × time capturing longitudinal effects; three-way interaction DM use × time × PGS-ADHD testing moderation). Results for social media use and inattention: social media × time: β [SE], 0.03 [0.01]; P < .001. Inferential statistical test (mixed model regression)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports standardized β (standard error) for social media use × time interaction: 0.03 (0.01) for inattention; cumulative 4-year effect: β [SE], 0.15 [0.03]; P < .001. Figure 2 provides quartile-stratified trajectories with numerical values. Cross-lagged panel models (Figure 3) report standardized β coefficients (e.g., social media predicts inattention: β [SE], 0.03 [0.01]; P = .004)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis: longitudinal mixed model analysis of 4-year follow-up data examining associations between digital media use and ADHD symptoms with genetic predisposition (polygenic risk scores) as moderator."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Pediatrics Open Science 2026; published journal article. First author Samson Nivins. Not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media use is the INDEPENDENT variable (IV), not dependent variable (DV). Paper reports social media → inattention symptoms (DV = ADHD symptoms). This is the opposite direction of FT_EC7's scope (which applies only when smartphone/SM is DV). Per FT_EC7 definition: 'applies ONLY when smartphone/SM is the DEPENDENT variable in every reported analysis.' Here SM is IV. EXCLUDE does NOT apply.",
+    "edge_cases_applied": ["E4"],
+    "notes": "Robust longitudinal study with genetic moderator. Social media use uniquely associated with inattention (not video games or TV). Cross-lagged models confirm directional association (social media → inattention, not reverse). Effect size small individually but meaningful at population level per authors' discussion."
+  },
+  {
+    "paper_id": "303",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract indicates ABCD study but full text needed to confirm U.S. ABCD data and release."
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'screen time' but does not specify if smartphone/social media specific or generic composite. Cannot determine without PDF whether criterion is met."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF. Cannot assess whether inferential test links screen time (exposure) to non-SM outcome."
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF. Cannot verify numeric results (β, p-values, etc.)."
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF. Cannot confirm study design (empirical vs. review)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article citation (Wiley Online Library, J Child Psychol Psychiatry). Appears to be published article, not preprint or duplicate based on metadata."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 UNKNOWN; cannot assess directionality without PDF.",
+    "edge_cases_applied": [],
+    "notes": "Paper cannot be screened without PDF. No PDF provided in batch metadata (pdf_path: null). Recommend obtaining PDF for full FT-IC1 through FT-IC5 assessment."
+  }
+]

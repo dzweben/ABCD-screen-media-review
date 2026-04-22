@@ -1,0 +1,175 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "20",
+    "citation": "Doran, N., Wade, N. E., Courtney, K. E., Sullivan, R. M., & Jacobus, J. (2025). Mobile phone ownership, social media use, and substance use at ages 11-13 in the ABCD study. Addictive Behaviors, 161, 108211.",
+    "doi": "10.1016/j.addbeh.2024.108211",
+    "journal": "Addictive Behaviors",
+    "year": "2025",
+    "first_author": "Doran, Neal",
+    "senior_author": "Jacobus, Joanna"
+  },
+  "3B_Sample": {
+    "N": "10,907 (all participants with substance use data at 1+ of 4 assessment points); sensitivity subsample n=9,628 (no prior substance use)",
+    "ABCD_release_version": "not specified (Year 2 through Year 3 mid-year)",
+    "timepoints_used": "Year 2 annual (age 11-12, predictor baseline), Year 2 mid-year, Year 3 annual, Year 3 mid-year (ages ~12-14)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Two binary self-report items: (1) Do you have your own mobile phone? (2) Do you have at least one social media account?",
+    "modalities_included": [
+      "mobile phone ownership (binary)",
+      "social media use (binary: any social media account)"
+    ],
+    "how_operationalized": "Binary (yes/no) at Year 2 annual assessment. 71.2% owned phones; 54.9% used social media. 66.7% of phone owners used social media."
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Substance use: alcohol, nicotine/tobacco, cannabis (time-varying binary at each of 4 timepoints)",
+    "measure_used": "Timeline Followback (annual assessments) and brief substance use questionnaire (mid-year assessments); combined into binary any-use-since-last-assessment variables",
+    "base_rate_if_binary": "At age 11-12: alcohol 9.9%, nicotine/tobacco 0.9%, cannabis 0.5%"
+  },
+  "3E_Design_Analysis": {
+    "design": "Prospective longitudinal (Year 2 through Year 3 mid-year, ~18 months)",
+    "model_type": "Longitudinal logistic regression (GEE)",
+    "model_type_detail": "Generalized estimating equations with binomial distribution, logit link, autoregressive covariance. Separate models for each predictor x outcome combination (6 models). Tested predictor x time interactions; retained if significant. Sensitivity analyses in substance-naive subsample (n=9,628).",
+    "covariates_listed": "age, sex assigned at birth, racial/ethnic background (categorical: Black, Hispanic, Asian, Other, with non-Hispanic White reference), household income (ordinal 1-10)",
+    "SES_in_model": "yes - household income was a covariate in all models",
+    "verbatim_analysis_description": "To estimate associations between predictors and substance use outcomes over time, we utilized a longitudinal logistic regression model for correlated dichotomous outcomes, estimated using the generalized estimating equations (GEE) method"
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "OR",
+      "value": "1.34",
+      "CI_95": "1.18, 1.51",
+      "p_value": "p < .001",
+      "outcome_scale_note": "Phone ownership -> alcohol use (main effect across study period)",
+      "verbatim_quote": "There was a main effect of phone ownership (b = 0.29 [95 % confidence interval 0.16, 0.41], Odds Ratio [OR] = 1.34 [95 % confidence interval 1.18, 1.51], p < 0.001), such that participants who owned phones at age 11-12 were about 34 % more likely to report any alcohol use across the study period.",
+      "below_threshold": "no (OR 1.34 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.71",
+      "CI_95": "1.21, 2.40",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Phone ownership -> nicotine/tobacco use (main effect)",
+      "verbatim_quote": "There was a main effect of phone ownership (b = 0.53 [0.19, 0.87], OR = 1.71 (1.21, 2.40]), indicating that youth who owned mobile phones at age 11-12 were 71 % more likely to report nicotine/tobacco use throughout the study period.",
+      "below_threshold": "no (OR 1.71 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.31",
+      "CI_95": "0.82, 2.09",
+      "p_value": "not significant",
+      "outcome_scale_note": "Phone ownership -> cannabis use (not significant)",
+      "verbatim_quote": "cannabis use...did not differ depending for youth who did and did not own mobile phones at age 11-12 (b = 0.27 [-0.20, 0.74], OR = 1.31 [0.82, 2.09]).",
+      "below_threshold": "no (OR 1.31 exceeds 1.20 but CI crosses 1.0)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.06",
+      "CI_95": "0.92, 1.21",
+      "p_value": "not significant (main effect)",
+      "outcome_scale_note": "Social media -> alcohol use (main effect ns, but interaction with time significant)",
+      "verbatim_quote": "a non-significant main effect of social media (b = 0.04 [-0.18, 0.26], OR = 1.06 [0.92, 1.21])",
+      "below_threshold": "yes (OR 1.06 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "OR (interaction)",
+      "value": "1.09",
+      "CI_95": "1.01, 1.17",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Social media x time interaction -> alcohol use (growing divergence over time)",
+      "verbatim_quote": "a significant interaction between the two (b = 0.09 [0.01, 0.16], OR = 1.09 [1.01, 1.017])",
+      "below_threshold": "yes (OR 1.09 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.22",
+      "CI_95": "1.06, 1.37",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Social media -> nicotine/tobacco use (main effect)",
+      "verbatim_quote": "a significant main effect of social media use (b = 0.21 [0.06. 0.37], OR = 1.22 [1.06, 1.37])",
+      "below_threshold": "no (OR 1.22 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR (interaction)",
+      "value": "1.08",
+      "CI_95": "1.05, 1.11",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Social media x time interaction -> nicotine/tobacco (growing association over time)",
+      "verbatim_quote": "a significant interaction between the two (b = 0.08 [0.05, 0.11], OR = 1.08 [1.05, 1.11])",
+      "below_threshold": "yes (OR 1.08 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "4.91",
+      "CI_95": "2.84, 8.47",
+      "p_value": "p < .001",
+      "outcome_scale_note": "Social media -> cannabis use (main effect; very large OR but very low base rate)",
+      "verbatim_quote": "the model of the association between age 11-12 social media use and cannabis use over time yielded a main effect of social media use status (b = 1.59 [1.04, 2.14], OR = 4.91 [2.84, 8.47])",
+      "below_threshold": "no (OR 4.91 far exceeds 1.20; however cannabis prevalence <1% at baseline)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.28",
+      "CI_95": "1.10, 1.50",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Sensitivity: phone ownership -> alcohol (substance-naive subsample)",
+      "verbatim_quote": "participants who at age 11-12 owned mobile phones but had never used any of the 3 substances were 28 % more likely to report alcohol use",
+      "below_threshold": "no (OR 1.28 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.92",
+      "CI_95": "1.25, 2.96",
+      "p_value": "p < .05",
+      "outcome_scale_note": "Sensitivity: phone ownership -> nicotine/tobacco (substance-naive subsample)",
+      "verbatim_quote": "92 % more likely to report nicotine/tobacco use over the next 18 months",
+      "below_threshold": "no (OR 1.92 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "1.61",
+      "CI_95": "1.40, 1.85",
+      "p_value": "p < .001",
+      "outcome_scale_note": "Sensitivity: social media -> alcohol (substance-naive subsample)",
+      "verbatim_quote": "participants who reported social media use and no prior substance use at age 11-12 were 61 % more likely to report alcohol use",
+      "below_threshold": "no (OR 1.61 exceeds 1.20)"
+    },
+    {
+      "effect_type": "OR",
+      "value": "4.12",
+      "CI_95": "2.70, 6.27",
+      "p_value": "p < .001",
+      "outcome_scale_note": "Sensitivity: social media -> nicotine/tobacco (substance-naive subsample)",
+      "verbatim_quote": "312 % more likely to report nicotine/tobacco use",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "OR",
+      "value": "3.46",
+      "CI_95": "1.96, 6.10",
+      "p_value": "p < .001",
+      "outcome_scale_note": "Sensitivity: social media -> cannabis (substance-naive subsample)",
+      "verbatim_quote": "246 % more likely to report cannabis use over the next 18 months",
+      "below_threshold": "no"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "significance-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "no",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "These findings highlight the importance of additional research into digital and non-digital interventions to reduce these risks. The ubiquity of mobile phone ownership and social media use suggest that interventions with a broad reach (e.g., school-based) are likely to be most impactful."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "combination",
+    "pattern_detail": "significance-primary combined with modifiable-factor. Large ORs for cannabis (4.91) are emphasized but base rate is <1%, meaning absolute risk differences are tiny. The framing of '312% more likely' and '246% more likely' in the sensitivity analyses is technically accurate but rhetoically misleading given the extremely low base rates (nicotine ~0.9%, cannabis ~0.5%). Binary exposure measure (any social media yes/no) conflates all levels of use.",
+    "list_1_qualifier": "yes - authors note 'the design of the present study does not permit us to conclude that mobile phone ownership or social media use at age 11-12 had a causal effect'",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "",
+    "ambiguity_notes": "Binary exposure measures (own phone yes/no, have social media yes/no) are very crude. Cannabis OR of 4.91 is driven by extremely low base rates (<0.5% at baseline). No control for peer substance use or parental substance use. Different substance use measures at annual vs. mid-year assessments. Data collection overlapped with COVID-19 pandemic onset. Authors note confounding by unmeasured variables (peer/parent use, mental health)."
+  }
+}

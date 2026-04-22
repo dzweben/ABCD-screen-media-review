@@ -1,0 +1,97 @@
+[
+  {
+    "paper_id": "26",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study (Adolescent Brain Cognitive Development) Year 2 assessment (2018-2020), N=10,258/11,875"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Cyberbullying victimization and perpetration measured via validated questions asking about harm 'online, in texts, or group texts, or on social media (like Instagram or Snapchat)' - social media is explicitly measured component"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional Modified Poisson regression with multiple inferential tests linking cyberbullying (IV) to eating disorder symptoms (DVs): worry about weight gain, self-worth tied to weight, compensatory behaviors, binge eating, distress with binge eating"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Prevalence ratios with 95% CI and p-values reported for all associations, e.g., cyberbullying victimization→worry about weight gain (PR 2.41, 95% CI 1.48–3.91, p<.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data with statistical tests of associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (International Journal of Eating Disorders, 2023), not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper is cross-sectional (directionality criterion not applicable). Cyberbullying is IV, eating disorder symptoms are DVs - not the reverse direction that would trigger EC7",
+    "edge_cases_applied": [
+      "E6"
+    ],
+    "notes": "Paper measures cyberbullying as separate construct (not cyberbullying-only). All five eating disorder outcomes are non-SM outcomes. Good example of cyberbullying→eating disorder pathway."
+  },
+  {
+    "paper_id": "394",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract mentions ABCD Study prospective analysis but cannot verify details without full text"
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'screen time' but no PDF available to verify if smartphone/SM specific or generic STS composite"
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'mixed-effects models' for associations with 'baseline self-reported screen time' but no PDF to confirm inferential test details"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available to extract numeric values"
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available to verify study design"
+    },
+    "FT_IC6": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available to verify publication status"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cannot determine without PDF access",
+    "edge_cases_applied": [],
+    "notes": "No PDF available in batch_55.json (has_pdf: false). Cannot complete coding without document."
+  },
+  {
+    "paper_id": "309",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Uses Amsterdam Born Children and their Development (ABCD) cohort from The Netherlands (Van Eijsden et al., 2010), NOT the U.S. ABCD Study. Paper explicitly states 'fifth and sixth waves of the ABCD study (Van Eijsden et al., 2010)' referring to Dutch cohort study, not U.S. ABCD"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures Problematic Social Media Use (PSMU) with Social Media Disorder Scale (9 items about social media use in past year) and Problematic Gaming (PG) with Internet Gaming Disorder Scale (9 items about gaming in past year)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel model (CLPM) with multiple inferential tests examining bidirectional temporal associations between PSMU/PG and mental health domains (emotional problems, hyperactivity/inattention, conduct problems, prosocial behavior) across two time points"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized regression coefficients (β), standard errors (SE), z-values, and p-values reported in Table 2, e.g., Emotional problems T2 → PSMU T2: β=.280, SE=.042, z=6.681, p<.001"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis using two waves of data with cross-lagged panel modeling and multiple imputation for missing data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Journal of Research on Adolescence, 2025), not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports bidirectional associations with PSMU/PG as both IV and DV across different pathways. Multiple mental health constructs (emotional problems, hyperactivity/inattention, conduct problems, prosocial behavior) are analyzed—these include psychological/behavioral variables beyond demographics. EC7 does not apply.",
+    "edge_cases_applied": [],
+    "notes": "EXCLUDED due to FT_IC1 NOT_MET: Uses Dutch ABCD cohort, not U.S. ABCD Study. Despite meeting all other criteria, this is not the target population."
+  }
+]

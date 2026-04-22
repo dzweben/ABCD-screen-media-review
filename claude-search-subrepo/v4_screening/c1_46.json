@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "439",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD baseline data (Release 3.0), N=10,691 participants aged 9-10 years from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen Media Activity (SMA): total hours on six specific activities - TV shows/movies, watching videos, playing video games, texting on device, social networking sites, video-chatting"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effect models with SMA as predictor of externalizing behaviors, psychopathology, sleep, and cognition; JIVE component as predictor with multiple outcomes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β = 0.107, P = 0.002 for SMA association; β = 0.117, P = 0.002 for externalizing psychopathology"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis with JIVE dimension reduction and linear mixed-effect regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Behavioral Addictions 2022"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design with SMA as independent variable (not dependent variable). Also includes non-demographic predictors (brain structural covariation patterns). E7 does not apply.",
+    "edge_cases_applied": ["E3"],
+    "notes": "Latent structural covariation pattern from JIVE extracted and used as predictor with separately reportable coefficient"
+  },
+  {
+    "paper_id": "283",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort baseline data, N=11,834 children ages 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Recreational screen time measured in hours: weighted average of weekday and weekend screen-based activities (watching television, video games)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects model with screen activity as fixed effect predicting general p factor; multiple linear regression models"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Screen Activity coefficient β = 0.116, P < 2.00E-16 in mixed-effects model (Table VIII); significant regression coefficients reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: confirmatory factor analysis extracting latent p factor, then regression analyses with behavioral and demographic predictors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable predicting p factor (not dependent variable). Includes other independent variables beyond demographics (neurocognition, mental health outcomes). E7 does not apply.",
+    "edge_cases_applied": [],
+    "notes": "Mixed-effects model includes family/site random effects and gender, screen activity, sleep, physical activity, household income as fixed effects"
+  },
+  {
+    "paper_id": "129",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Commentary describing the ABCD study; states ABCD enrolled nearly 12,000 youth aged 9-10 across U.S."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Commentary mentions screen time monitoring as a novel technology/data type in Table 1 but does not measure or analyze any specific smartphone or social media variable"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No inferential statistical tests reported linking SM/phone variable to non-SM outcomes. This is a resource overview, not an analysis paper."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric values (β, OR, p-values) reported for smartphone/SM associations"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Commentary/editorial describing ABCD study infrastructure, data resources, and responsible data use principles. No original empirical analyses conducted."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Journal of Adolescent Health 2021"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT-IC3 and FT-IC5 (not an empirical analysis); FT-EC7 not applicable to editorials/commentaries",
+    "edge_cases_applied": ["E10"],
+    "notes": "This is a special-issue commentary without original analysis. Fails inclusion at FT-IC5 level."
+  }
+]

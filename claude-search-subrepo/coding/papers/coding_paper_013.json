@@ -1,0 +1,82 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "13",
+    "citation": "Nagata, J. M., Memon, Z., Talebloo, J., Li, K., Low, P., Shao, I. Y., Ganson, K. T., Testa, A., He, J., Brindis, C. D., & Baker, F. C. (2025). Prevalence and patterns of social media use in early adolescents. Academic Pediatrics, 25, 102784.",
+    "doi": "10.1016/j.acap.2025.102784",
+    "journal": "Academic Pediatrics",
+    "year": "2025",
+    "first_author": "Nagata, Jason M.",
+    "senior_author": "Baker, Fiona C."
+  },
+  "3B_Sample": {
+    "N": "10092",
+    "ABCD_release_version": "ABCD 5.1 release",
+    "timepoints_used": "Year 3 follow-up (2019-2021)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Youth Screen Time Questionnaire - social media use items; Social Media Addiction Questionnaire (SMAQ)",
+    "modalities_included": ["social media"],
+    "how_operationalized": "Self-reported daily social media use in hours and minutes (weighted average of weekday and weekend); platform-specific binary use (yes/no for TikTok, Instagram, YouTube, Snapchat, etc.); SMAQ 6-item Likert scale adapted from Bergen Facebook Addiction Scale"
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Prevalence and patterns of social media use (descriptive study - no health outcome)",
+    "measure_used": "Platform-specific social media use, number of accounts, secret accounts, problematic social media use (SMAQ), daily hours of social media use",
+    "base_rate_if_binary": "69.5% had at least one social media account; 63.8% of under-13 participants reported social media use"
+  },
+  "3E_Design_Analysis": {
+    "design": "Cross-sectional (descriptive)",
+    "model_type": "Descriptive statistics, chi-square tests, t-tests",
+    "model_type_detail": "Chi-square tests for categorical variables, independent samples t-tests for continuous variables, stratified by age group (under 13 vs 13+) and sex (male vs female). Propensity weights applied based on American Community Survey.",
+    "covariates_listed": "None - descriptive study",
+    "SES_in_model": "no - descriptive study with no regression models",
+    "verbatim_analysis_description": "Descriptive analyses were conducted for all social media measures to analyze the prevalence of social media usage in the ABCD Study sample. Additionally, all study measures were stratified by age group (under 13 vs 13 and over) and sex (male vs female) to understand potential differences by groups."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "prevalence/percentage",
+      "value": "69.5%",
+      "CI_95": "",
+      "p_value": "",
+      "outcome_scale_note": "Percentage of adolescents with at least one social media account",
+      "verbatim_quote": "A majority (69.5%) of adolescents reported having at least one social media account.",
+      "below_threshold": "N/A - descriptive"
+    },
+    {
+      "effect_type": "prevalence/percentage",
+      "value": "63.8%",
+      "CI_95": "",
+      "p_value": "",
+      "outcome_scale_note": "Percentage of under-13 participants reporting social media use",
+      "verbatim_quote": "A majority (63.8%) of participants under 13 years (minimum age requirement) reported social media use.",
+      "below_threshold": "N/A - descriptive"
+    },
+    {
+      "effect_type": "mean",
+      "value": "0.19 hours/day",
+      "CI_95": "",
+      "p_value": "",
+      "outcome_scale_note": "Average daily social media use",
+      "verbatim_quote": "participants reported an average of 0.19 hours of social media use per day",
+      "below_threshold": "N/A - descriptive"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "N/A - descriptive",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "no",
+    "large_N_acknowledged": "yes",
+    "small_ES_acknowledged": "N/A - descriptive",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "Policies that protect early adolescents on social media, such as more robust age verification and enhancement of parental controls and privacy settings, should be implemented. Pediatricians can educate parents and early adolescents regarding the potential risks of underage social media use, and also the protective roles that parents can play."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "none",
+    "pattern_detail": "Purely descriptive study documenting prevalence; no effect sizes to frame. However, uses prevalence data to justify policy recommendations for age verification and parental controls.",
+    "list_1_qualifier": "no",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "POSSIBLE EXCLUSION - purely descriptive prevalence study with no screen time-outcome association tested",
+    "ambiguity_notes": "This is a descriptive study of social media use patterns with no health/behavioral outcome. It describes platform prevalence, underage use, and problematic use scores but does not test associations between screen time and any outcome. May not fit inclusion criteria for a review of screen time effects."
+  }
+}

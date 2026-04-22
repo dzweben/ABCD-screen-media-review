@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "92",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data at baseline (Y0; ages 9-10) with 2-year follow-up (Y2; ages 11-12)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures addictive videogaming, addictive social media use, addictive phone use, and composite ASU measure"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects regression analyses: β=-0.056 for max-ASU, β=-0.060 for addictive videogaming, both p<0.001; indirect-effects mediation models with cognitive task performance and ASU"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients and p-values reported: β=-0.056, CI [-0.083, -0.027], p<0.001 for max-ASU; β=-0.060, CI [-0.087, -0.031], p<0.001 for videogaming"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical longitudinal analysis using fMRI connectomic maturation measures to predict future ASU outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging (2026)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper includes individual psychological/neurobiological predictors (cortical connectomic maturation, NAc reward activation, cognitive task performance) beyond demographic variables; longitudinal analysis with psychological predictors of phone/SM outcomes does not trigger EC7",
+    "edge_cases_applied": ["E16"],
+    "notes": "E16 applies: individual-characteristic predictors (cortical maturation, reward processing) of phone/SM use overcome the FT-EC7 exclusion criterion. Paper reports associations in both cross-sectional and longitudinal contexts."
+  },
+  {
+    "paper_id": "445",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data, 6,467 youth who reported playing digital games, follow-up at ages 12-13"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures problematic gaming only. No separate smartphone or social media variable measured independently. Does not qualify: video games unspecified platform in broader context, and gaming is measured as sole screen/digital exposure metric"
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Insufficient due to FT_IC2 failure"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Insufficient due to FT_IC2 failure"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical cohort study with regression analyses examining problematic gaming at age 12 and psychotic-like experiences at age 13"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Journal of Behavioral Addictions (2026)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper excluded at FT_IC2; does not reach EC7 evaluation. Problematic gaming alone does not constitute a smartphone or social media variable per criteria.",
+    "edge_cases_applied": ["E17"],
+    "notes": "E17 applies: video games unspecified platform → NOT_MET on FT_IC2. Paper focuses on gaming disorder (problematic gaming) without separately measuring smartphone or social media use as distinct exposures."
+  },
+  {
+    "paper_id": "149",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study (5.1 data release), 2,294 participants with baseline rs-fMRI at ages 9-10 years and PUSM scores at 4-year follow-up (ages 13-14)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic use of social media (PUSM) measured with 6-item Social Media Addiction Questionnaire (SMAQ) at 4-year follow-up"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling (CPM) with Pearson's r correlation: combined positive and negative networks r=0.055, p=0.016; permutation testing p=0.02"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Correlation coefficient r=0.055, p-value p=0.016 reported for main CPM model; permutation testing significance p=0.02"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical longitudinal neuroimaging analysis using connectome-based predictive modeling on resting-state fMRI data to predict PUSM severity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in NeuroImage (2026)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Although PUSM is the dependent variable in the analyses, the predictors are individual neurobiological features (whole-brain functional connectivity patterns, neural networks) rather than demographic-only variables. These are individual-characteristic/neural predictors per E16, which override FT-EC7 exclusion.",
+    "edge_cases_applied": ["E4", "E16"],
+    "notes": "E4 applies: machine-learning model (CPM) with coefficient/correlation reported → MET on FT_IC3 and FT_IC4. E16 applies: individual neurobiological predictors of phone/SM use prevent FT-EC7 application."
+  }
+]

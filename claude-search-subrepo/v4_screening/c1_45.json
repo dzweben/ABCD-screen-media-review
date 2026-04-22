@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data from 3.0 release, COVID RRR Survey 1 (May 2020), N=6749 adolescents aged 12-13"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Measures generic 'total screen time' composite across 7 modalities (gaming, texting, social media, video chatting, browsing, streaming) summed together; no separately extractable smartphone or social media coefficient"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses with ACE score as predictor, screen time and physical activity as outcomes; adjusted models reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports B coefficients with 95% CI and p-values for ACEs→screen time (B=0.44, p<.001) and ACEs→physical activity (B=-0.17, p=.048)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis using ABCD baseline and COVID RRR Survey 1 data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Academic Pediatrics, 2022"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET (generic screen time composite, not smartphone/SM-specific); EC7 does not apply when inclusion criteria fail",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper fails FT_IC2 because total screen time is reported as single composite without separate smartphone or social media breakdown. Generic 'total screen time' is explicitly excluded in FT_IC2 criteria."
+  },
+  {
+    "paper_id": "190",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD dataset; 9855 children from USA with measures of intelligence at baseline (ages 9-10) and 2-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three specific screen time types separately measured and analyzed: screen time Watching (TV/video), Socializing (video chat/social media), and Gaming; each with extractable coefficient"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Latent change score model with regression coefficients; longitudinal mediation analyses; standardized β coefficients reported for each screen time type"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients reported: Gaming β=+0.17 (p<0.001), Watching β=+0.12 (posthoc analysis), Socializing effects reported in Table 1; correlation coefficients (r=-0.12, r=-0.10) at baseline"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis; cross-sectional baseline comparisons; latent change score modeling with 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Scientific Reports, 2022, volume 12, article 11341"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper includes individual psychological predictor (lack of perseverance as mediator); includes cross-sectional analyses at baseline; phone/SM is both outcome variable (dependent) and predictor in different analyses; FT_EC7 criteria (a) not met",
+    "edge_cases_applied": ["E3", "E7", "E16"],
+    "notes": "Latent construct with separate pathways for each screen time type meets FT_IC2 via E3 and E16 (lack of perseverance is individual characteristic predictor). FT_EC7 does not apply due to inclusion of individual psychological characteristics and cross-sectional analyses."
+  },
+  {
+    "paper_id": "110",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Leverages ABCD cohort data; 11,000+ children aged 9-11 from USA with genetics, neuroimaging, and behavioral data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Specific measure of screen time utilization (STU); measured via self-report using electronic devices and child behavior checklist; continuous variable with extractable coefficients"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional and longitudinal regression analyses linking STU to ADHD scale, white matter microstructure (FA values), and polygenic risk scores; mediation analyses; multiple statistical tests reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Correlation coefficients reported (e.g., FA negatively correlated with both ADHD PRS and STU); standardized regression coefficients in mediation models; p-values reported throughout"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional and longitudinal analyses; mediation analysis examining white matter microstructure as mechanism; brain imaging and genetic data integrated"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in EBioMedicine, 2022, volume 80, article 104039"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper includes individual psychological/clinical/neural/genetic predictors (ADHD trait, polygenic risk scores, white matter microstructure FA values); includes mediation/moderation involving STU; includes cross-sectional analyses; FT_EC7 criteria (b) not met",
+    "edge_cases_applied": ["E16"],
+    "notes": "E16 applies: individual-characteristic predictors of phone/SM (ADHD, genetic risk) regardless of direction/timeframe. FT_EC7 does not apply because predictors include ADHD trait and polygenic risk (individual characteristics), not only demographics, and paper reports mediation analyses."
+  }
+]

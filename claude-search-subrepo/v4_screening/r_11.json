@@ -1,0 +1,95 @@
+[
+ {
+  "paper_id": "380",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses U.S. ABCD Study data (N=11,878 children, ages 9-10 at baseline)"
+  },
+  "FT_IC2": {
+   "status": "UNKNOWN",
+   "evidence": "Abstract mentions 'screen time use' examined as correlate but does not specify smartphone-specific, social-media-specific, or generic screen time composite. No PDF available to verify FT-IC2 status. Requires full-text review."
+  },
+  "FT_IC3": {
+   "status": "UNKNOWN",
+   "evidence": "Cannot assess without clarifying exposure specification in FT-IC2. No PDF available."
+  },
+  "FT_IC4": {
+   "status": "UNKNOWN",
+   "evidence": "No numeric coefficients for screen time associations provided in abstract. Requires PDF review."
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Cross-sectional empirical analysis of ABCD Study data examining correlates of emotion dysregulation"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Journal article: Journal of Child and Adolescent Psychopharmacology, 2026, DOI 10.1177/10445463251415488"
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "FT_IC2 status is UNKNOWN; cannot determine FT-EC7 applicability without PDF verification of exposure specification.",
+  "edge_cases_applied": [],
+  "notes": "Paper excluded pending PDF review to clarify whether 'screen time use' is generic composite or includes smartphone/SM-specific variables. Currently UNKNOWN on FT-IC2."
+ },
+ {
+  "paper_id": "390",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses U.S. ABCD Study data prospectively from Baseline and Year 2 (2018-2020), N=9,673 early adolescents"
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Measures three specific smartphone/SM variables: Video Game Addiction Questionnaire (VGAQ), Social Media Addiction Questionnaire (SMAQ), and Mobile Phone Involvement Questionnaire (MPIQ). All assess problematic use of specific modalities."
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Generalized logistic mixed effects models and generalized linear mixed effects models testing prospective associations between baseline ACE score and problematic video game, social media, and mobile phone use outcomes."
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Multiple ORs reported in Table 2 with 95% CIs. For 4+ ACEs: adjusted OR=3.11 (95% CI 2.05-4.73) for problematic video game use; adjusted OR=1.57 (95% CI 1.22-2.03) for problematic mobile phone use."
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical ABCD analysis using prospective design with logistic and linear mixed effects models predicting Year 2 outcomes from baseline exposures"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Published in BMC Public Health, 2023, DOI:10.1186/s12889-023-16111-x; not a preprint or duplicate"
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "Although design is prospective/longitudinal with problematic screen use as DV and demographic/contextual predictors (ACE score, age, sex, race/ethnicity, income, parent education), the analyses include individual psychological/clinical predictors (anxiety, depression, attention-deficit symptoms from CBCL) as covariates. Per FT-EC7 criterion (b), exclusion criterion applies ONLY when predictors are 'ONLY demographic or contextual.' Inclusion of mental health symptoms violates this criterion, so FT-EC7 does NOT apply. Paper is INCLUDED.",
+  "edge_cases_applied": ["E16"],
+  "notes": "Resolver notes: C1 correct (FT_EC7 false due to mental health covariates). C2 incorrectly applied FT_EC7 (missed the inclusion of anxiety, depression, ADHD symptoms which are individual clinical predictors per criterion b). Paper passes all inclusion criteria."
+ },
+ {
+  "paper_id": "397",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Uses ABCD Study data from Year 2 (2018-2020) and Year 4 (2020-2022); N=4,443 adolescents"
+  },
+  "FT_IC2": {
+   "status": "NOT_MET",
+   "evidence": "Exposure measured as 'recreational screen time' self-reported and categorized as low (0-4), medium (>4-8), or high (>8) hours/day. Methods describe this as composite: 'estimate the total number of hours that they spent engaging with screens recreationally (e.g. watching television and videos, playing video games, texting, social media, and video chat).' This is a generic total screen time composite with no separately extractable smartphone-specific or social-media-specific coefficient. Per criteria: 'Generic total screen time or STS composite with no phone/SM breakdown' = NOT_MET (FT-IC2 exclusion)."
+  },
+  "FT_IC3": {
+   "status": "NOT_MET",
+   "evidence": "FT-IC2 NOT_MET; FT-IC3 not applicable. Generic screen time composite with no phone/SM-specific test."
+  },
+  "FT_IC4": {
+   "status": "NOT_MET",
+   "evidence": "FT-IC2 NOT_MET; subsequent criteria not assessed."
+  },
+  "FT_IC5": {
+   "status": "NOT_MET",
+   "evidence": "FT-IC2 NOT_MET; subsequent criteria not assessed."
+  },
+  "FT_IC6": {
+   "status": "NOT_MET",
+   "evidence": "FT-IC2 NOT_MET; subsequent criteria not assessed."
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "FT-IC2 NOT_MET. Paper excluded on exposure criterion. FT-EC7 not evaluated.",
+  "edge_cases_applied": ["E2"],
+  "notes": "Resolver notes: C1 correct (FT_IC2 NOT_MET; composite screen time with no phone/SM breakdown). C2 incorrectly marked FT_IC2 as MET, misclassifying a composite measure as a specific phone/SM exposure. Paper is EXCLUDED per FT-IC2 failure."
+ }
+]

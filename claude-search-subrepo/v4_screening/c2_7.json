@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study data from 5.0 release with nearly 10,000 children aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is generic composite including television, videos, video games, texting, and video chat combined (Methods: 'total digital devices'). No smartphone/SM-specific breakdown extractable. Falls under 'generic total screen time' composite criterion."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effects models and mediation analysis with ABCD data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Acta Psychologica, 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET; exclusion criterion does not apply",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper fails at FT_IC2 (screen time composite without phone/SM breakdown). Generic screen time measure does not qualify per prompt criterion."
+  },
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study 5.1 data release, two-year follow-up cohort, N=1,036 participants aged ~12 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Problematic gaming severity measured via VGAQ scale. Video games platform unspecified (applies E17). Per prompt: 'Video games unspecified platform → NOT_MET (ambiguous)'. No smartphone/SM exposure specified."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using connectome-based predictive modeling (CPM) with fMRI data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Behavioral Addictions, 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET; exclusion criterion does not apply",
+    "edge_cases_applied": ["E17"],
+    "notes": "Paper fails at FT_IC2 (video games without specified platform; no smartphone/SM variable). Does not meet exposure criterion."
+  },
+  {
+    "paper_id": "475",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study longitudinal data, N=1,186 participants (551/186 cyberbullying victims/non-victims), 9-10 years at baseline"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Measures cyberbullying victimization alone (whether adolescents were bullied via social media in past 12 months). No separately-measured smartphone/SM variable. Applies E6: 'Cyberbullying alone without separately-measured phone/SM variable → NOT_MET'."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Criterion contingent on FT_IC2 MET; FT_IC2 fails"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis examining cyberbullying victimization at T1 predicting brain activation and mental health outcomes at T2"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Medical Internet Research, 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET; exclusion criterion does not apply",
+    "edge_cases_applied": ["E6"],
+    "notes": "Paper fails at FT_IC2 (cyberbullying victimization without separately-measured smartphone/SM variable). Does not meet exposure criterion."
+  }
+]

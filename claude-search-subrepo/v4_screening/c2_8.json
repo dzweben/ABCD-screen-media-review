@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "381",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study (Data Release 4.0), ongoing longitudinal study beginning in 2016 across 21 US research sites. N=8979 participants at baseline."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen activities: TV streaming, video watching (YouTube), videogames, online chatting (texting + video chat combined), social media platforms (Instagram). Assessed via ABCD Youth Screen Time Survey."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential statistical tests linking screen time variables to irritability: Gaussian Graphical Models (GGM), Graphical Vector Autoregressive Models (GVAR). Multiple tests reported with coefficients (e.g., online chatting β=-0.03 predicting irritability decrease; TV watching β=0.03 predicting irritability increase)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports numeric coefficients/edge weights for screen-irritability associations: TV watching (0.03), social media (0.12), online chat (-0.03); also reports edge weights from temporal network. p-values reported for model fit (CFI=0.99, TLI=0.98)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis using longitudinal data across three timepoints (baseline, Year 1, Year 2) with temporal network modeling of bidirectional associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article (Journal of Child and Adolescent Psychopharmacology, 2026). Published original research, not preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Paper includes bidirectional analyses (screen time as both IV and DV): irritability predicts increased online chatting; TV watching and social media predict increased irritability. Also includes individual psychological predictor covariates (ADHD, anxiety, depression).",
+    "edge_cases_applied": ["E7", "E8"],
+    "notes": "Strong fit. Bidirectional design with clear directional findings. Both cross-sectional (GGM) and temporal (GVAR) analyses reported. Controlled for co-occurring psychopathology."
+  },
+  {
+    "paper_id": "31",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses baseline and 2-year follow-up data from ABCD study (n=7043). Explicitly stated: 'We used baseline and 2-year follow-up data...from the Adolescent Brain Cognitive Development (ABCD) study.'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen time variables: passive watching (TV/streaming), gaming, social media, social engagement. Self-reported via ABCD Study Screen Time Questionnaire with quantified hours per week for each activity type."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effect models examining associations between screen time variables and cognitive development outcomes. Reports inferential test results: passive watching, social media, and social engagement all show significant associations (p<0.05) with cognitive scores across domains."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports regression coefficients (B values with SEs and p-values) in Table 3 and Table 4. Examples: Passive watching on inhibitory control B=-0.22 (p<0.001); Social media on visuospatial memory B=-1.40 (p<0.001); Gaming on verbal intellect B=-0.12 (p=0.040)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD longitudinal analysis using linear mixed-effect models with residual change score approach to assess associations of modifiable lifestyle factors with cognitive development over time."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article (Journal of Adolescence, 2026). Published research article, not preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Paper includes screen time as predictor (IV) of cognitive development outcomes (DV), not cognitive development predicting screen time. Cognitive outcomes are non-SM dependent variables (inhibitory control, memory, processing speed, verbal intellect).",
+    "edge_cases_applied": ["E1", "E8"],
+    "notes": "Strong fit. Longitudinal design with clear predictor-outcome direction (screen time→cognitive development). Sex moderation effects examined. Multiple cognitive outcomes measured as non-SM variables."
+  },
+  {
+    "paper_id": "135",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses extensive ABCD dataset: 'We utilized the extensive adolescent brain cognitive development data set.' Sample divided into test (n=3,415) and validation sets. Study conducted with ABCD longitudinal data."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time variable in exploratory factor analysis: 'screen time' identified as one of six significant factor domains contributing to risk classification. Listed as predictor in factor analysis model."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression models analyzing relationships between screen time (in risk groups) and outcomes: fMRI activation patterns during reward/loss tasks, behavioral problems. Reports statistical tests comparing risk groups on reward sensitivity and behavioral outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports numeric statistics for risk group comparisons: MFC activation differences (e.g., β=-0.02 for high-risk vs low-risk), thickness measurements (various regions in mm), behavioral outcome statistics comparing high-risk to low-risk groups."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis: exploratory factor analysis to identify risk domains, regression models analyzing associations between risk groups and neural/behavioral outcomes, fMRI analysis on 2-year follow-up data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article (Journal of Adolescent Health, 2025). Published original research, not preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Screen time is part of a risk composite predictor (one of six factor domains: fat/sugar intake, screen time, prenatal exposure, parental aggression, hyperactivity, family violence) predicting neural/behavioral outcomes (fMRI activation, behavioral problems, reward sensitivity). Non-demographic predictors included (parental aggressiveness, hyperactivity, family violence).",
+    "edge_cases_applied": ["E3"],
+    "notes": "Moderate fit. Screen time is component of latent risk factor structure (factor domain), not measured independently. Extractable as separate factor domain in EFA (meets E3). Predicts reward function/behavioral outcomes at 2-year follow-up. Individual psychological predictors (hyperactivity, impulsivity) included alongside demographic/environmental factors."
+  }
+]

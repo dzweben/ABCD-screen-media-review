@@ -1,0 +1,96 @@
+[
+  {
+    "paper_id": "124",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline data from 11,780 youth aged 9-10 years from 21 multi-site locations in the U.S."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific smartphone/digital media variables: TV watching, online videos, video games, texting, social media use, video chatting (all reported separately in hours/day)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Chi-square tests, logistic regression with relative risk (RR) and adjusted relative risk (ARR) comparisons; Tables 2-3 report statistical tests linking screen media to internalizing disorder diagnoses"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric statistics reported: β coefficients, RR, ARR with 95% CI, and p-values throughout Tables 2-3 (e.g., RR=2.00, 95% CI 1.48-2.70 for girls' depression)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Cross-sectional empirical analysis of ABCD baseline data using K-SADS-5 clinical interview with statistical hypothesis testing"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Affective Disorders, 2022"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (criterion c not met); screen media is independent variable predicting psychiatric outcomes as dependent variable (not vice versa per criterion a)",
+    "edge_cases_applied": ["E8"],
+    "notes": "Clear inferential statistics throughout; uses K-SADS-5 clinical interview for diagnosed disorders rather than symptom surveys"
+  },
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Release 5.0, children aged 9-11 years (n=4,262) with genetically assigned European ancestry, 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Child-reported daily screen time measured from questionnaires at baseline (hours/day)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models with polygenic risk scores and heritability estimates; Gsens genetic confounding framework with structural equation models reporting β coefficients"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Extensive numeric reporting: β coefficients with 95% CI throughout (e.g., β=0.10 SD, 95% CI 0.07-0.13 SD for screen time-attention association; β=0.03 SD, 95% CI 0.003-0.06 SD for internalizing)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using genetic sensitivity analysis model (Gsens) with SNV-based and twin-based heritability frameworks"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JAMA Network Open, November 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Includes individual psychological/genetic predictors (ADHD PRS, depression PRS) as per criterion (b) violation; genetic factors are explicitly modeled as confounders/predictors alongside screen time"
+    ,
+    "edge_cases_applied": ["E16"],
+    "notes": "Genetic confounding study; includes polygenic risk scores for ADHD and depression as individual-characteristic predictors"
+  },
+  {
+    "paper_id": "440",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study (Release 3.0) baseline and 2-year follow-up data from 5,166 participants aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) measured at baseline via parent-report and child self-report questionnaires; specific types include TV, movies, online videos, video games, texting, social media"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear mixed-effect models (GLMM) with mediation analyses; JIVE (Joint and Individual Variation Explained) identified brain co-development patterns; reports β coefficients, standard errors, and p-values"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric statistics reported: β=0.020 (SE=0.008, P=0.014) for SMA-internalizing association; β=0.015 (SE=0.007, P=0.029) for SMA-brain co-development; indirect effect=0.020, P=0.043"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Longitudinal empirical analysis with mediation modeling using baseline SMA and structural brain measures to predict 2-year follow-up internalizing problems"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Behavioral Addictions, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design includes mediation/moderation (brain co-development pattern mediates SMA-internalizing link); also reports associations with psychological outcomes (internalizing/externalizing behaviors as dependent variables, not just SMA as DV)",
+    "edge_cases_applied": [],
+    "notes": "Uses JIVE method for brain structural co-development; mediation analysis shows small but significant indirect effects through cortical-brainstem circuitry"
+  }
+]

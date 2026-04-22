@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "433",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data (N=9475, baseline mean age 9.9 years, enrolled 2016 onward)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership age of acquisition is the primary exposure variable"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Smartphone ownership is the DEPENDENT variable only. Predictors are exclusively demographic (sex, race/ethnicity, household income, household structure, parental education). No smartphone→non-SM outcome association reported. Fails FT-IC3 requirement for inferential test linking smartphone/SM to a non-SM outcome."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple odds ratios reported: Black (OR=3.01, 95% CI 2.50-3.64), Female (OR=1.38, 95% CI 1.19-1.60), Single parent (OR=2.01, 95% CI 1.67-2.44), Lower parental education (OR=1.70, 95% CI 1.40-2.06)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; cross-sectional multivariable logistic regression model examining sociodemographic predictors of smartphone ownership age"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Pediatrics (2026), not a preprint or duplicate"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Smartphone ownership is the DEPENDENT variable in all reported analyses. Predictors are ONLY demographic/contextual (sex, race/ethnicity, household income, household structure, parental education). Design is cross-sectional with demographic-only predictors of smartphone DV. Meets all three criteria for FT-EC7 application.",
+    "edge_cases_applied": [
+      "E13",
+      "E14"
+    ],
+    "notes": "Paper fails FT-IC3 because it examines demographic predictors of smartphone ownership, not smartphone/SM as a predictor of non-SM outcomes. FT-EC7 exclusion criterion applies."
+  },
+  {
+    "paper_id": "123",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD SM Study data (Adolescent Brain Cognitive Development Social Media Study, n=5,639, ages 10-13 years)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media usage including hours per day on social media, platform-specific use (TikTok, Instagram, Snapchat), public accounts, secret accounts, follower/following counts"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression models linking social media variables (hours, platforms, account type) to Social Media Addiction (SMA) scale scores as outcome; multiple inferential tests reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple regression coefficients (b values) reported: TikTok (b=1.52, 95% CI 1.12-1.93), Instagram (b=0.92, 95% CI 0.51-1.34), Snapchat (b=0.60, 95% CI 0.16-1.03), social media hours (b=0.66, 95% CI 0.61-0.71), secret account (b=2.27, 95% CI 1.65-2.89)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; cross-sectional regression models examining associations between social media usage patterns and addiction scores"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JAACAP Open (2026), not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media variables are independent variables (hours, platforms, account types) predicting SMA scale (a psychological outcome measure), not a demographic predictor of SM as DV. Paper includes individual psychological predictor (addiction), so FT-EC7 does not apply.",
+    "edge_cases_applied": [
+      "E1",
+      "E8"
+    ],
+    "notes": "Paper meets all inclusion criteria. Social media platform-specific and hours-specific coefficients are separately extractable and reported with confidence intervals."
+  },
+  {
+    "paper_id": "397",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (Year 2 [2018-2020] and Year 4 [2020-2022] assessments; N=4,443 adolescents)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Recreational screen time measured via self-report and categorized as low (0-4 hours/day), medium (>4-8 hours/day), or high (>8 hours/day)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Adjusted linear and Poisson regression models examining associations between screen time categories and cardiovascular disease risk outcomes (blood pressure percentile, hypertensive-range BP, cholesterol levels, hemoglobin A1c)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple coefficients and risk ratios reported: high screen time associated with 4.25-point increase in diastolic BP percentile (95% CI 1.85-6.65), adjusted risk ratio 1.88 (95% CI 1.42-2.56) for hypertensive-range BP, non-HDL cholesterol increase (95% CI 1.79-2.36)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD longitudinal analysis; examined associations of Year 2 screen time and step count with Year 4 cardiovascular outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Public Health (2026), not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the independent variable predicting cardiovascular health outcomes (blood pressure, cholesterol, hemoglobin A1c) as dependent variables. This is a screen time→non-SM outcome association, so FT-EC7 exclusion applies.",
+    "edge_cases_applied": [
+      "E8",
+      "E11"
+    ],
+    "notes": "Paper examines recreational screen time as exposure with objective cardiovascular biomarkers as outcomes. Longitudinal design (Year 2 to Year 4) with well-reported statistical tests and effect sizes."
+  }
+]

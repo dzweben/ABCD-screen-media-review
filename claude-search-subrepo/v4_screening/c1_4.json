@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "83",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data from baseline 2016-2018 cohort. Abstract explicitly states 'Adolescent Brain Cognitive Development (ABCD) Study' with 8,446 adolescents aged 9-10."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposes measured are neighborhood quality indices (COI, SVI, ADI). Outcomes are 'daily screen time measures' aggregated as 'total screen time, particularly television/movie watching, video game playing, and video streaming' with NO separate smartphone or social media variable reported. Generic 'total screen time' composite without phone/SM breakdown = NOT_MET per FT-IC2 rule."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects linear regression with neighborhood indices as predictors and screen time as outcome. Reports coefficients: 'compared to highest COI quintile, lower COI quintiles (1st-4th) were associated with higher total screen time (B = 0.39-0.64, P<.05)'. Inferential test present."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported: β coefficients (B = 0.39-0.64, 0.28-0.64, 0.46-1.17) and p-values (P<.05, P<.01, P<.001) for associations."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective cohort study (baseline 2016-2018, 2-year follow-up) using mixed-effects models on ABCD data examining associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Academic Pediatrics, 2026). No evidence of prior publication as preprint/conference abstract."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET (generic total screen time, not smartphone/SM-specific). Exclusion does not hinge on FT-EC7; the paper fails FT-IC2 first, which is a harder inclusion cutoff.",
+    "edge_cases_applied": [
+      "E2: Screen time composite without phone/SM-specific breakdown"
+    ],
+    "notes": "Paper excludes on FT-IC2: exposure is aggregated 'total screen time' without separate smartphone or social media component extractable. While outcomes are stratified (TV, video games, video streaming), the exposure variable itself is not phone/SM-specific."
+  },
+  {
+    "paper_id": "86",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Prospective cohort from ABCD Study (Year 2, 2018-2020; Year 3 follow-up). Paper explicitly states 'Adolescent Brain Cognitive Development Study' with N=8,119 (ages 11-12 at baseline). Uses U.S. ABCD data."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three QUALIFYING problematic use scales measured at Year 2: (1) Mobile Phone Involvement Questionnaire (MPIQ; 8-question, mean 3.08 SD 1.10), (2) Social Media Addiction Questionnaire (SMAQ; 6-question, mean 1.84 SD 0.89), and (3) Video Game Addiction Questionnaire (6-question, mean 2.09 SD 1.06). All are specific phone/SM/gaming scales. MPIQ measures 'texting, emailing, video chatting.' Per criteria: MPIQ and SMAQ are qualifying problematic/addictive scales."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear and logistic regression models reported. Example: 'Problematic mobile phone use and social media use were prospectively associated with higher depressive, somatic, attention/deficit, oppositional defiant, and conduct problems scores' and 'higher odds of developing suicidal behaviors, sleep disturbance, and substance initiation.' Tests include CBCL continuous outcomes (linear regression) and binary outcomes (logistic regression with odds ratios). Figure 1 and 2 display coefficients and ORs."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Extensive numeric reporting in Figures 1-2 and text. Examples from Figure 1: depressive problems β=0.31 (phone), 0.42 (social media), 0.32 (video games); from Figure 2: suicide behaviors OR=1.57 (phone), 1.86 (social media), 1.54 (video games). All with reported p-values and confidence intervals."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis. Year 2 (2018-2020) baseline measures predict Year 3 outcomes 1 year later using linear/logistic regression. Measurement paper with external outcome associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in American Journal of Preventive Medicine (2026). No indication of prior publication as preprint/duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports phone/SM as INDEPENDENT VARIABLES predicting mental health, sleep, and substance use OUTCOMES (not as dependent variable). Associations are with multiple non-SM outcomes (depression, suicidal behaviors, sleep, substance initiation). Does not meet FT-EC7 condition (a): phone/SM is predictor, not outcome in all analyses.",
+    "edge_cases_applied": [
+      "E16: Individual-characteristic problematic use scales (MPIQ, SMAQ, VGAQ) are qualifying exposures"
+    ],
+    "notes": "Clear prospective analysis with phone/SM as independent variables. Multiple qualifying exposure measures and diverse non-SM outcomes."
+  },
+  {
+    "paper_id": "144",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Prospective cohort from ABCD Study (baseline 2016-2018, Year 2 2018-2020). Paper states 'Adolescent Brain Cognitive Development (ABCD) Study' with N=7,528 (mean age 10 years, 8-13 range). Uses U.S. ABCD data."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use trajectory measured as daily hours spent on social media (Instagram, Facebook, Twitter, etc.) from Youth Screen Time Survey at baseline, Year 1, and Year 2. Weighted average calculated: '([weekday average x 5] + [weekend average x 2])/7'. Specific social media exposure measured separately as continuous variable (hours/day). Explicitly a social media-specific variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models examining associations between social media trajectories (3 groups identified via group-based trajectory modeling) and cognitive outcomes at Year 2, adjusted for covariates. Multiple statistical tests reported: 'Linear regression models estimated the association between baseline–Year 2 social media time trajectory and Year 2 cognitive performance scores'. Examples: 'low increasing use associated with lower RAVLT Initial Trials (B: −1.38; 95% CI: −1.82, −0.94; P < 0.001)' and 'high increasing use associated with lower LMT accuracy (B: −0.03; 95% CI: −0.05, −0.01; P = 0.004)'."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Extensive numeric reporting. Table 2 and text provide β coefficients with 95% CIs and p-values for all cognitive outcomes. Examples: LMT accuracy (low increasing B=−0.01, high increasing B=−0.03), RAVLT Initial Trials (low increasing B=−1.38, high increasing B=−1.90), RAVLT Retroactive Interference (low increasing B=−0.38, high increasing B=−0.61), RAVLT Long Delay (low increasing B=−0.41, high increasing B=−0.55). All p-values <0.05 reported."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis using group-based trajectory modeling (GBTM) to identify social media patterns over 2 years, then linear regression to associate trajectories with cognitive outcomes measured at Year 2. Measurement of cognition paired with external outcome (cognitive performance)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Lancet Regional Health - Americas (2026). No evidence of prior publication as preprint/duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports social media time as INDEPENDENT VARIABLE (predictor) with cognitive performance as DEPENDENT VARIABLE (outcomes: LMT accuracy, RAVLT scores). Social media is not the outcome in this analysis. FT-EC7 condition (a) requires SM/phone as DV in all analyses; this paper has SM as IV. Does not apply.",
+    "edge_cases_applied": [
+      "E3: Social media-specific trajectory pathway extractable from group-based trajectory modeling"
+    ],
+    "notes": "Rigorous prospective design using trajectory modeling. Clear SM-specific exposure and multiple cognitive outcomes (spatial and verbal memory). Large, diverse sample (N=7,528)."
+  }
+]

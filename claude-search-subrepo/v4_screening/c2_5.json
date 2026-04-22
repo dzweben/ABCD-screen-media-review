@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "150",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data from Year 2 (2018–2020) with 7,614 participants ages 10–13"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures social media use (hours per day) and social media addiction (Social Media Addiction Questionnaire); both qualify as specific SM variables"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports mixed-effects regression models with coefficients linking social media use to cortical thickness, surface area, and volume outcomes; vertexwise analysis with FEMA also reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 and text report standardized beta coefficients (e.g., social media use associated with lower cortical thickness/volume with p-values)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional neuroimaging study with structural MRI analysis in ABCD cohort"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in NeuroImage (2026), not preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media is the independent variable (predictor); brain morphology (cortical thickness/volume) is the dependent outcome. FT-EC7 only applies when SM is the dependent variable.",
+    "edge_cases_applied": ["E1"],
+    "notes": "Paper reports both region-of-interest (ROI) and vertexwise analysis. Social media addiction was not significantly associated with morphology in ROI analysis, but social media use (hours/day) showed significant associations."
+  },
+  {
+    "paper_id": "287",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data from Years 2–4 (2018–2022) with N=8,292 participants ages 12.0 years at Year 2"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures social media time (hours per day) at Year 2; qualifies as specific SM variable"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized structural equation modeling (GSEM) reports direct effect of social media time on nicotine experimentation (B=0.14, 95% CI: 0.08–0.20, p<.001) and indirect mediation pathways via smoking expectancies"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports coefficients (B values), confidence intervals, and p-values for direct and indirect effects; also reports proportion mediated (5.97%, 95% CI: 1.27%–10.67%, p=.013)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis: prospective cohort study from ABCD with mediation analysis across Years 2–4"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in American Journal on Addictions (2026), not preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media is the independent variable. Nicotine experimentation (non-SM outcome) is the dependent variable. Additionally, paper reports both direct and indirect pathways, and includes individual psychological predictor (smoking expectancies). FT-EC7 does not apply.",
+    "edge_cases_applied": ["E1", "E3"],
+    "notes": "Mediation analysis via smoking expectancies (Year 3). Only positive smoking expectancies significantly mediated the relationship; negative expectancies did not."
+  },
+  {
+    "paper_id": "404",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data from Year 5 (2021–2023) with N=11,530 participants ages 13–16 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures dating app use (lifetime use, ever used vs. never used); qualifies as online dating/hookup app exposure"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression analysis linking dating app use to depression symptoms with cluster-robust standard errors; reports coefficients (standardized beta ß=0.42, 95% CI 0.08–0.76, p=0.017)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports standardized beta coefficient (ß=0.42), 95% confidence interval (0.08–0.76), and p-value (0.017) for adjusted model"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional study from ABCD Year 5 with linear regression analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Research Notes (2026), not preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Dating app use is the independent variable (predictor); depression symptoms is the dependent outcome (non-SM). Paper uses cross-sectional design. FT-EC7 does not apply.",
+    "edge_cases_applied": ["E1", "E7"],
+    "notes": "Study found 0.9% of adolescents reported ever using a dating app. Results remained stable in sensitivity analyses with additional covariates. Parallel analysis with adolescent-reported internalizing symptoms showed similar association (ß 0.66, 95% CI 0.34–0.99, p<.001)."
+  }
+]

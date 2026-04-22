@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "183",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Year 2 follow-up (2018-2020), N=8753 children aged 10-14 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures three specific SM/phone variables: Video Game Addiction Questionnaire, Social Media Addiction Questionnaire (SMAQ), Mobile Phone Involvement Questionnaire (MPIQ)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses linking problematic phone/SM use to sociodemographic factors (age, sex, race/ethnicity, income, parental education). Table 3 reports associations with all three screen use measures"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 3 reports B coefficients with 95% CIs and p-values for all associations (e.g., Male vs Female: B=0.74, 95% CI 0.69-0.79, p<0.001 for video games)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data with hypothesis testing and reported associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Pediatric Research, 2022); no evidence of duplicate/preprint"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "APPLIES. Phone/SM variables are the DEPENDENT variables in all reported analyses (problematic video game use, social media use, mobile phone use are outcomes). Predictors are ONLY demographic/contextual (age, sex, race/ethnicity, income, parental education, parental marital status). Analysis is cross-sectional (not longitudinal).",
+    "edge_cases_applied": ["E14"],
+    "notes": "E14 applies: Sociodemographic predictors of phone/SM in cross-sectional context. FT-EC7 applies because phone/SM are always DVs with only demographic IVs in cross-sectional design."
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline data (2016-2018), N=10,650 children aged 9.9±0.6 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures general screen time categories (TV, videos, video games, social media, mature-rated media) but does NOT measure a SPECIFIC smartphone or social media variable as the primary exposure. Measures generic screen time across modalities without phone-specific or SM-specific metrics. Generic total screen time composite without phone/SM breakdown."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is dependent variable, not independent variable. Parental psychological problems are predictors. No smartphone/SM variable is linked to a non-SM outcome as required by FT-IC3."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 failure prevents scoring. Screen time is outcome, not exposure variable."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis with inferential statistics (multilevel regression, logistic regression)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Acta Paediatrica, 2022); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not reach FT-EC7 evaluation. Paper fails FT-IC2 (no specific phone/SM variable) and FT-IC3 (phone/SM as DV, parental psychology as IV, no phone/SM→non-SM outcome). Fails inclusion criteria before FT-EC7 is evaluated.",
+    "edge_cases_applied": ["E18"],
+    "notes": "E18 relevant: Generic screen time composite without device/modality specificity = NOT_MET for FT-IC2. Paper is about parental psychological correlates of children's general screen time, not about smartphone/SM-specific variables."
+  },
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline data, N=4042 with follow-up at 1 year; assessed at ages 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Includes 'screen media activity' as one of 131 questionnaire/task predictor variables in machine learning models. Measures typical weekly screen time on computers, cellphones, tablets, and electronic devices (watching TV, videos, gaming, texting, social media, video chatting)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning predictive models with cross-validation test screen media activity and other variables as predictors of delayed reward discounting (DRD) at 1-year follow-up. Models tested multiple algorithms (elastic net, random forest, light gradient boosting, support vector regression)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Key predictive variables identified: 'screen media activity' listed among top predictive variables (neuropsychological test performance, socioeconomic status, screen media activity, psychopathology, parenting, personality). ML coefficients reported via model performance metrics."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: Machine learning predictive models with cross-validation and held-out test set, predicting DRD from baseline variables"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Experimental and Clinical Psychopharmacology, 2022); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does NOT apply. Screen media activity is an INDEPENDENT variable (predictor) in the ML models, not a dependent variable. Outcome is delayed reward discounting (DRD), a non-SM variable. Paper includes individual psychological/clinical predictor (DRD as a behavioral/clinical outcome). Does not meet FT-EC7 criteria (which requires phone/SM as DV with only demographic predictors).",
+    "edge_cases_applied": ["E4"],
+    "notes": "E4 applies: ML coefficients reported via model features and performance metrics. Screen media activity contributes to prediction models as one of multiple variables. Paper includes beyond-demographic predictors (personality, psychopathology, cognitive ability), so FT-EC7 does not apply."
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "1",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses prospectively collected data from the U.S. ABCD Study (baseline 2016-2018, ages 9-10 years; follow-up to year 2 2018-2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media time (hours per day) trajectories measured using group-based trajectory modeling from baseline to year 2"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses estimated associations between social media trajectories and cognitive performance scores (5 subtests and composite score); reports β coefficients and 95% CIs"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β and 95% CI values reported: ORRT low trajectory β=-1.39 [95% CI -2.10 to -0.68], PSMT β=-2.03 [95% CI -2.91 to -1.15], PVT β=-2.09 [95% CI -2.78 to -1.41], composite β=-0.85 [95% CI -1.30 to -0.40]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis with prospective cohort design examining trajectories of social media use and cognitive outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article: JAMA December 2, 2025 Volume 334, Number 21; no evidence of duplicate/preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports social media as IV with cognitive performance (non-SM outcome) as DV; not smartphone/SM as DV. Does not meet FT-EC7 conditions.",
+    "edge_cases_applied": [],
+    "notes": "Longitudinal trajectories with multiple time points; clear association between social media use and cognitive outcomes reported."
+  },
+  {
+    "paper_id": "8",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses data from the Adolescent Brain Cognitive Development Study across 21 sites; baseline October 2016 to October 2018; children aged 9-10 years at baseline with follow-up through year 3 (2022)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported time spent on social media (hours per day) at baseline to 3-year follow-up; measured via ABCD Youth Screen Time Survey"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal cross-lagged structural equation panel models assessing reciprocal associations between social media use and depressive symptoms (Child Behavior Checklist) across 4 waves"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients and 95% CIs reported: within-person SM→depression year 1-2: β=0.07 [95% CI 0.01-0.12]; year 2-3: β=0.09 [95% CI 0.04-0.14]; between-person covariance: β=-0.01 [95% CI -0.04 to 0.02]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; prospective cohort study with cross-lagged mediation design examining SM and depressive symptoms associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article: JAMA Network Open 2025;8(5):e2511704; May 21, 2025; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports bidirectional associations examined; social media is IV predicting depressive symptoms AND depressive symptoms as IV (though the latter showed null associations). Not solely SM as DV with demographic-only predictors. Includes non-demographic covariates (family conflict, parental monitoring, adverse childhood experiences).",
+    "edge_cases_applied": ["E7"],
+    "notes": "Random-intercept cross-lagged panel model distinguishes within-person from between-person effects; found unidirectional within-person association (SM→depression) but no reverse association."
+  },
+  {
+    "paper_id": "49",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses Adolescent Brain Cognitive Development Study data; N=9,243; ages 10-11 years in Year 1 (2017-2019); baseline and 3 follow-up years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time subtypes including social media (hours per day); participants reported daily time on six screen subtypes (TV, videos, video games, texting, video chat, social media)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses determining associations between Year 1 screen time and Year 3 manic symptoms (7 Up Mania scale); mediation analyses via structural equation models"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple B coefficients and 95% CIs reported: overall screen time B=0.05 [95% CI 0.03, 0.07] p<0.001; social media B=0.20 [95% CI 0.09, 0.32] p=0.001; texting B=0.18 [95% CI 0.08, 0.28] p<0.001; videos B=0.14 [95% CI 0.08, 0.19] p<0.001; video games B=0.09 [95% CI 0.04, 0.14] p=0.001"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; prospective cohort design examining associations between screen time and manic symptoms with mediation pathways tested"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article: Social Psychiatry and Psychiatric Epidemiology 2025;60:1479-1487; Published online February 19, 2025; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports screen time (including social media) as IV predicting manic symptoms (non-SM outcome) as DV. Not a case of SM/screen time as sole DV. Includes individual psychological predictors (ADHD, depressive symptoms) as covariates, not solely demographic/contextual factors.",
+    "edge_cases_applied": ["E1"],
+    "notes": "Comprehensive screen time analysis across subtypes; mediation analyses show problematic social media use, problematic video game use, and sleep duration partially mediate associations."
+  }
+]

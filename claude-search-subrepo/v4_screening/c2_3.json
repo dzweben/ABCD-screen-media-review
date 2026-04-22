@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "2",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (N=640 with EARS passive sensing data from follow-up years 4, 5, 6)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific smartphone app use via EARS passive sensing; categorizes apps into 49 categories including social media (Instagram, TikTok, Snapchat) and games"
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Supplementary material shows measurement methods and app categorization but main article text not fully accessible; unclear if reported associations to non-SM outcomes"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Supplementary material references Table I with average times (e.g., medical category 0.13 min) and mentions means, but numeric coefficients/statistics for associations not visible in supplement reviewed"
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "Appears to be empirical analysis of ABCD Study smartphone use patterns but full methods/results not in supplementary material reviewed"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in JAMA (2026), full journal article (not preprint)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cannot fully assess directionality without access to main article results; supplementary material alone insufficient. If smartphone/SM use is examined as outcome, cannot determine if only demographic predictors with longitudinal design",
+    "edge_cases_applied": ["E1", "E5", "E12"],
+    "notes": "Only supplementary material accessible; main article text needed for complete FT_IC3 and FT_IC4 assessment. Paper uses passive sensing (EARS) which is a qualifying smartphone measurement. Descriptive statistics visible but inferential tests unclear from supplement alone."
+  },
+  {
+    "paper_id": "36",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (N=5356 US adolescents, Year 2: 2018-2020, Year 4: 2020-2022)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures self-reported recreational screen time via ABCD Youth Screen Time Survey, categorized into 0-4h (low), 4-8h (medium), >8h (high) daily. Surveys ask about watching television and videos, playing video games, texting, social media, video chat"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Poisson regression models examining screen time associations with BMI percentile and overweight/obesity risk. Linear and multivariable regression models tested dose-response relationships. Example: high screen time (>8h/day) associated with overweight/obesity risk (RR 1.09; 95% CI 1.02-1.16; p=0.013)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric statistics reported: RR 1.09 (95% CI 1.02-1.16, p=0.013) for high vs low screen time; coefficient B values for BMI percentile; continuous variables also examined with reported p-values"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis with 2-year follow-up (Year 2 to Year 4)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Obesity (2026), original research article (not preprint or duplicate)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable (predictor) and BMI/overweight-obesity are dependent variables (outcomes). Study is prospective but FT_EC7 only applies if screen time is DV with demographic-only predictors in longitudinal design. Here screen time is IV predicting health outcome",
+    "edge_cases_applied": ["E1", "E8", "E11"],
+    "notes": "Strong quantitative analysis with clear reported statistics. Screen time measured via self-report but combined with objective Fitbit step count data. Clear temporal ordering with 2-year follow-up supports causality inference direction"
+  },
+  {
+    "paper_id": "67",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (N=7407 adolescents, Year 3: 2019-2021 to Year 5: 2021-2023)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Study measures video game use (mature-rated games, problematic video game use, weekend video game time) but NOT smartphone or social media specifically. Focus is on parental media practices predicting video game behaviors. Does not meet criteria for specific smartphone/SM variable"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects ordinal logistic regression and generalized linear models assess associations between parent media practices and video game behaviors. Example: higher mealtime screen use associated with greater problematic video game use (B 0.02, 95% CI 0.01, 0.04); greater screen time limits associated with lower mature-rated game odds (AOR 0.90, 95% CI 0.86, 0.95)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported throughout: AOR 1.08 (95% CI 1.02, 1.14, p=0.005); B 0.02 (95% CI 0.01, 0.04, p=0.001); B -0.14 (95% CI -0.22, -0.06, p=0.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis with 1- and 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in World Journal of Pediatrics (2026), original research article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not qualify because FT_IC2 is NOT_MET - study does not measure specific smartphone/SM variable as required. Study focuses on video game use as outcome with parental media practices as predictors, not smartphone/SM exposure",
+    "edge_cases_applied": ["E17"],
+    "notes": "EXCLUDED at FT_IC2 level. While study uses ABCD and reports on screen time in context of parenting, the specific outcome variable is video game use (console/platform unspecified per E17 logic), not smartphone or social media use. Parental practices like screen time modeling and limiting could apply to multiple modalities but video games alone do not meet smartphone/SM specificity requirement"
+  }
+]

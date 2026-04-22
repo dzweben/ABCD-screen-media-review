@@ -1,0 +1,94 @@
+[
+ {
+  "paper_id": "154",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Title states 'adolescent brain cognitive development (ABCD) study' and abstract absent but title explicitly indicates U.S. ABCD Study."
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Title indicates sensor-based smartphone use measures (EARS = passive sensing app categories). Sensor-based smartphone measures and app category data qualify as screen exposure variables."
+  },
+  "FT_IC3": {
+   "status": "UNKNOWN",
+   "evidence": "No PDF available to verify whether daily associations reported include screen\u2194non-screen inferential tests (sleep and physical activity are non-screen outcomes mentioned in title). Title indicates associations but cannot confirm statistics without full-text."
+  },
+  "FT_IC4": {
+   "status": "UNKNOWN",
+   "evidence": "No PDF available; cannot verify numeric coefficients reported in results."
+  },
+  "FT_IC5": {
+   "status": "UNKNOWN",
+   "evidence": "Title indicates daily associations and sensor-based approach but no PDF to confirm study design and whether original empirical analysis of ABCD data is conducted."
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Appears to be peer-reviewed journal article (Psychiatry Research, 2025). Assume MET unless clear evidence of preprint/abstract/deposit status."
+  },
+  "edge_cases_applied": [],
+  "notes": "Paper lacks PDF; abstract also absent from batch JSON. Multiple criteria marked UNKNOWN due to inability to access full text. Title suggests it likely meets FT-IC3 and FT-IC5 but cannot confirm without PDF."
+ },
+ {
+  "paper_id": "215",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Paper explicitly analyzes U.S. ABCD Study data, n=7,445 adolescents ages 9-10 at baseline (2016-2018) with 2-year follow-up data. Text states 'Data are from 7445 participants...in the longitudinal Adolescent Brain Cognitive Development (ABCD) Study.'"
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Screen time measured as continuous variable (hours/day) and categorized (0-4, 4-8, \u22658 hours/day). Also measured by type (TV, movies, video games, socializing, texting, video chatting, social media). Enters all primary analyses."
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Multiple screen-to-non-screen linear regression tests: screen time (continuous) with BMI (\u03b2=0.32, 95%CI:0.19,0.45, p<.001), screen time with waist circumference (\u03b2=0.40, 95%CI:0.23,0.56, p<.001). Joint associations of screen time + sleep disturbance with BMI and WC reported in Tables 2-3."
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Numeric coefficients reported throughout: \u03b2=0.32 (p<.001) for screen time\u2192BMI overall; \u03b2=1.69 (95%CI:0.82,2.55) for 4-8 hrs vs reference; \u03b2=2.76 (95%CI:1.62,3.90) for 4-8 hrs medium screen vs low screen\u2192WC."
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Prospective longitudinal cohort design analyzing independent and joint associations of screen time and sleep with BMI/WC at 2-year follow-up. Original empirical analysis with weighted multivariate linear regression models."
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed journal article published in Childhood Obesity (October 2025), DOI: 10.1089/chi.2025.0022."
+  },
+  "edge_cases_applied": [
+   "E2",
+   "E8"
+  ],
+  "notes": "E2 applied: screen time measured both continuously and categorized with separate coefficients. E8 applied: inferential tests of screen-to-non-screen associations throughout."
+ },
+ {
+  "paper_id": "429",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "Paper explicitly states 'Data from this study were part of the first annual curated release of the Adolescent Brain Cognitive Development Study. Participants included 4524 children between the ages of 8 and 11 years.' ABCD is the U.S. ABCD Study."
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Screen time (ST) measured as recreational screen time via Youth Screen Time Survey (12 items), encompassing watching shows and movies, watching videos, video games, texting, and other digital activities on weekday and weekend days."
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "Multiple inferential tests reported linking ST and movement behavior combinations to impulsivity dimensions. Example: Meeting ST + sleep recommendations was negatively associated with positive urgency (95% CI: -0.20 to -0.10)."
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Numeric coefficients reported throughout. Example: \u03b2 = -0.12 (p<0.001) for ST + sleep recommendations vs positive urgency; \u03b2 = -0.09 (95% CI: -0.12 to -0.05) for ST + sleep vs positive urgency."
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Cross-sectional empirical analysis of ABCD baseline data examining associations between 24-hour movement behaviors (including ST) and impulsivity dimensions using structural equation modeling."
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed journal article published in Pediatrics, 2019, with distinct analyses from other ABCD studies."
+  },
+  "edge_cases_applied": [
+   "E2"
+  ],
+  "notes": "E2 applied: 24-hour movement composite with screen time component; screen time has own coefficient extracted separately (e.g., Only ST rows in tables)."
+ }
+]

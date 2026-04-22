@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study data at two-year follow-up (N=1,036 participants, Mage=12.0)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Problematic gaming severity measured via VGAQ (Video Game Addiction Questionnaire). Video games unspecified platform fails FT-IC2 per E17."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling (ML) with reported correlation: r=0.12, p=0.002 linking fMRI functional connectivity to problematic gaming scores"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "r=0.12, p=0.002 reported for CPM prediction of problematic gaming"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; machine-learning approach (CPM) analyzing functional connectivity data with behavioral outcome (VGAQ scores)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article; full-length report published in Journal of Behavioral Addictions 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-EC7 criteria: gaming is the outcome variable (DV) but predictors are neural (fMRI functional connectivity), not demographic/contextual only. Per E16, individual psychological/neural characteristic predictors (here: brain connectivity) mean FT-EC7 does not apply.",
+    "edge_cases_applied": ["E4", "E17"],
+    "notes": "Paper fails on FT-IC2: problematic gaming (video games) without platform specification is excluded. E17 states video games unspecified platform = NOT_MET (FT-IC2). This is a secondary inclusion criterion failure."
+  },
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses Adolescent Brain Cognitive Development study data, nearly 10,000 children aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured by self-report questionnaire assessing time on digital devices including television, videos, video games, texting, and video chat. Qualifying as smartphone/screen measure per FT-IC2 (texting, video chat, and digital device time are included)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models with multiple inferential tests: screen time significantly negatively associated with executive function, processing speed, language, working memory, episodic memory (all p<.001). Mediation analysis with bootstrap approach (10,000 samples) testing indirect effects."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β values and p-values reported. Examples: putamen mediation on executive function (β=-0.015, FDR p=.027), processing speed (β=-0.012, FDR p=.027), language (β=-0.005, FDR p=.027)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-sectional design using linear mixed-effects regression and mediation analysis examining associations between screen time and cognitive function"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article; published in Acta Psychologica 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-EC7 criteria: screen time is the independent variable (IV), cognitive function is the dependent variable (DV). Additionally, mediation analysis is reported (putamen volume as mediator), which per FT-EC7 exclusion criterion excludes this paper.",
+    "edge_cases_applied": [],
+    "notes": "Meets all inclusion criteria. Cross-sectional mediation design with clearly reported coefficients and statistical tests."
+  },
+  {
+    "paper_id": "475",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses Adolescent Brain Cognitive Development data; 551/1186 participants (46.5% female) at baseline aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization is the primary exposure variable, not a smartphone or social media use measure. Per E6, cyberbullying alone with no separately-measured phone/SM variable = NOT_MET (FT-IC2 exclusion)."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Failed at FT-IC2; unable to evaluate FT-IC3 separately as the exposure does not qualify"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Failed at FT-IC2; unable to evaluate"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; retrospective longitudinal cohort study with linear mixed-effects models examining associations between cyberbullying victimization and neural/behavioral outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article; published in Journal of Medical Internet Research 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet screening criteria at FT-IC2 level. Cyberbullying is measured but no smartphone or social media use variable is separately reported per the abstract and methods. This paper does not measure smartphone/SM exposure.",
+    "edge_cases_applied": ["E6"],
+    "notes": "Paper is excluded at FT-IC2 due to lack of smartphone or social media exposure measure. Cyberbullying victimization alone does not qualify per criteria E6."
+  }
+]

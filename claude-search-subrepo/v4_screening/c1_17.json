@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "107",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses Adolescent Brain Cognitive Development (ABCD) Study, N=7691, ages 9-10 at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media time measured via ABCD Youth Screen Time Survey (self-reported hours per day on Facebook, Instagram, Twitter/X)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Sequential modeling with logistic regression; direct association between social media exposure (Year 2) and cannabis experimentation (Year 4); mediation analysis via GSEM"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Direct effect: B=0.18, 95% CI: 0.13-0.24, p<0.001; indirect effects: positive expectancies B=0.05, 95% CI: 0.03-0.06, p<0.001; negative expectancies B=0.03, 95% CI: 0.02-0.04, p<0.001"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis with mediation modeling"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Drug and Alcohol Dependence, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media is IV (independent variable), cannabis experimentation is DV (outcome). Paper reports social media→cannabis outcome and includes mediation analysis. FT-EC7 does not apply.",
+    "edge_cases_applied": ["E15"],
+    "notes": "Prospective design with appropriate temporal sequence. Mediation by cannabis expectancies strengthens relationship evidence."
+  },
+  {
+    "paper_id": "143",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Year 2, N=9799 early adolescents"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is cyberbullying victimization (measured via Cyberbullying Scale). No separately measured smartphone or social media variable reported. Falls under E6: cyberbullying measured alone without separate phone/SM variable."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Criterion not evaluated due to FT_IC2 failure"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Criterion not evaluated due to FT_IC2 failure"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis from ABCD"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Lancet Regional Health - Americas, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not meet FT_IC2; cyberbullying is not a smartphone/SM variable. FT_EC7 evaluation not performed.",
+    "edge_cases_applied": ["E6"],
+    "notes": "Paper excluded at FT_IC2. Cyberbullying victimization is the exposure variable (not phone/SM). While outcomes include substance use, the lack of a specific smartphone/social media measurement variable is the barrier."
+  },
+  {
+    "paper_id": "158",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Year 3 (2019-2021), N=10,305 early adolescents"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Bedtime screen use measured via self-report questionnaire covering multiple devices and modalities. Includes phone-specific items (turning off phone, using phone for texts/social media at bedtime). Weighted average of sleep duration on weekdays/weekends used to assess bedtime screen use."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple regression analyses examining associations between bedtime screen use (independent variable) and sleep outcomes (caregiver-reported sleep disturbance and self-reported sleep duration); also modified Poisson regression"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β and p-values reported in Table 3. Example: bedtime screen use associated with sleep disturbances (p<.001) and shorter sleep duration (p<.001) across sociodemographic subgroups"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Sleep Health, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Bedtime screen use is independent variable; sleep outcomes are dependent variable. Cross-sectional design. FT_EC7 criterion (a) requires smartphone/SM as DV in ALL analyses — criterion not met.",
+    "edge_cases_applied": ["E2"],
+    "notes": "Cross-sectional design. Bedtime screen use includes general electronic device use but with separately identifiable screen time components. Social media components embedded in broader bedtime screen use measure."
+  }
+]

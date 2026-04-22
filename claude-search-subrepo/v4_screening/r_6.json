@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "162",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Curated Annual Release 2.0; N=7994 unrelated children, mean age 9.9 years (SD 0.5), U.S. population-based sample recruited across 22 sites encompassing >20% of US population in age group"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen use time as specific exposure variable. Text reports: 'The risk of child-reported suicidality increased with higher weekend screen use time (OR 1.3, 95% CI 1.2–1.7)'. Weekend screen use time is a specific, separately-measured variable in analysis."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Bootstrapped logistic regression quantifying association between weekend screen use time and suicidal ideation/behaviors. Inferential test with odds ratio and 95% confidence intervals reported for screen use predictor."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratio reported for weekend screen use time: OR 1.3 (95% CI 1.2–1.7) for child-reported suicidality in main text and Figure 1"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD Release 2.0 data examining associations between multiple risk/protective factors (including screen use) and childhood suicidality using bootstrapped logistic regression"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in The Lancet Psychiatry, 2020; original research (not preprint, protocol, or duplicate)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Weekend screen use is the independent variable (predictor) in analysis; suicidality is the dependent/outcome variable. FT-EC7 does not apply. Paper includes both demographic factors (sex, parental education, income) AND individual psychological/clinical predictors (child psychopathology via CBCL, family conflict) so FT-EC7 criteria (b) fails.",
+    "edge_cases_applied": ["E7"],
+    "notes": "C1 marked FT_IC2 as NOT_MET due to lack of PDF access and 'generic screen use time' concern. However, upon full-text review, weekend screen use is measured as a specific, separately-reported variable with its own coefficient in logistic regression. Not generic composite; distinct from other screen/physical activity measures."
+  },
+  {
+    "paper_id": "164",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study (Adolescent Brain Cognitive Development) data from 4520 participants aged 8-11 years across 20 study sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic 'recreational screen time' embedded within 24-hour movement behavior guideline composite (physical activity ≥60 min/day, screen time ≤2 h/day, sleep 9-11 h/night). No smartphone or social media-specific breakdown. Per prompt: 'Generic total screen time or STS composite with no phone/SM breakdown' = NOT_MET"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; cannot satisfy FT_IC3"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; cannot satisfy FT_IC4"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; study design alone does not overcome FT_IC2 failure"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in The Lancet Child & Adolescent Health, 2018"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 not met; FT_EC7 check not applicable when paper fails inclusion criterion FT_IC2",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper reports guideline adherence (meeting none, one, two, or all three movement recommendations) and global cognition association, but does not separately report phone/SM-specific coefficients. Entire 24-h composite tested as aggregate without extractable screen-time-specific coefficient."
+  },
+  {
+    "paper_id": "166",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study first wave (4524 participants, 9-10 year olds, U.S. sample across 21 sites). Analysis sample n=3847 after quality control (training n=2724, test n=1123)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time defined as 'average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device' (Methods section). No smartphone/social media-specific breakdown; treated as generic composite across device types. Per prompt rule: 'Generic total screen time or STS composite with no phone/SM breakdown' = NOT_MET. LASSO model selected 25 of 43 variables including screen time as undifferentiated predictor without device-specific coefficients."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; cannot satisfy FT_IC3"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; cannot extract phone/SM-specific coefficient"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; original empirical analysis alone does not overcome FT_IC2 failure"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Psychological Medicine, 2020"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 not met; FT_EC7 check not applicable when paper fails inclusion criterion FT_IC2",
+    "edge_cases_applied": ["E2"],
+    "notes": "Machine learning regression (LASSO, elastic net, ridge, linear) used screen time as one of 43 variables. While reported in Fig. 1 with coefficient 1.17 for full sample LASSO, screen time lacks phone/SM specificity required by FT_IC2. No separate smartphone-specific or social media-specific exposures measured."
+  }
+]

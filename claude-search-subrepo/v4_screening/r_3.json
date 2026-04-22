@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "97",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Data Release 4.0, participants aged 9-12 years from first two years of the study, N=11,878 baseline with 7,309 having longitudinal fMRI data at two timepoints"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures digital screen media activity (SMA) via 7-point self-report scale assessing time spent on: TV shows/movies, online videos, video games, YouTube, texting on phone, and social media platforms. Explicitly includes social media platform usage as distinct item"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized additive mixed models (GAMM) testing associations between screen media activity profiles and functional brain organization (resting-state fMRI connectivity). Multiple hypothesis tests reported with statistical inference regarding SMA→brain relationships"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric statistics reported in figures with p-values and effect indicators. Null results explicitly stated with statistical notation in Figure 1 panels. p < 0.05 or BF10 > 3 indicated with asterisks"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using registered report protocol. Longitudinal study with cross-sectional and exploratory longitudinal analyses of screen media activity and functional brain organization over two-year period"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Cortex, 2023, Special Issue on ABCD Study. Registered report design. Not identified as preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen media activity is an independent variable (predictor) and functional brain organization is the dependent variable (outcome). This is standard exposure→outcome directionality. FT-EC7 criteria require SMA to be the dependent variable in ALL analyses, which is not the case here",
+    "edge_cases_applied": ["E8"],
+    "notes": "Null findings reported with full statistical support. All major criteria clearly satisfied. No ambiguity on FT-IC2 (explicit SM component in scale) or directionality"
+  },
+  {
+    "paper_id": "101",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: baseline N=8,324 children aged 9-11 years (M=119.28 months); 2-year follow-up N=3,891. ABCD 2.0 release used"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures daily screen time via Screen-Activity Proportion (SAP) score computed from child self-report of screen time on: TV, videos, video games, texting, social media, video chat. Score reflects proportion of time on screens vs non-screen activities"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation analyses, mediation analysis with bootstrapping, and group comparisons testing screen time associations with neural and behavioral outcomes. Reported: r = -0.040 (p < 0.001 by Bayes factor, BF10 = 13.10) for baseline; r = -0.0933 (BF10 = 428995.74) for year 2 connectivity"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric statistics reported: correlation coefficients, 95% bootstrap CIs, Bayes factors, p-values, Cohen's d, independent t-tests. Example: r = -0.0933, 95% CI[-0.1231, -0.0635], BF10 = 428995.74; mediation indirect effect B = -6.920e-5, p < 0.001"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis examining baseline and 2-year follow-up data. Mediation analysis included (screen time → reward sensitivity → inhibitory control network development)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Developmental Cognitive Neuroscience, 2023. Not identified as preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the independent variable predicting neural outcomes (fronto-striatal connectivity). Includes individual psychological predictor (reward sensitivity via BAS scores). Reports mediation analysis. Does not meet FT-EC7 criterion (a) - screen time is not the dependent variable",
+    "edge_cases_applied": ["E16"],
+    "notes": "Clear exposure→outcome direction (screen time→brain). Individual characteristic predictor (reward sensitivity) explicitly included, which precludes FT-EC7 even if other criteria held. Robust analysis with Bayesian and frequentist approaches"
+  },
+  {
+    "paper_id": "115",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: N=4,557 adolescents (mean age 9.955±0.164 years) analyzed across four timepoints: baseline, 1-year, 2-year, and 3-year follow-ups (2017-2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures Screen Media Activity (SMA) with six measured components: television, video watching, video games, video chat, texting on phone/tablet, and social media (visiting social networking sites). Social media is separately measured and analyzed as distinct component with extractable coefficients"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models, cross-lagged panel models, and mediation analyses testing SMA and media-specific associations with mental health outcomes (internalizing, externalizing, stress problems) and brain development. Example: 'Higher baseline SMA associated with increased internalizing (β = 0.030, SE = 0.012, pfdr = 0.016)' at 3-year follow-up"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with SE and pfdr reported throughout. Text reports: β = 0.030, SE = 0.012, pfdr = 0.016 for SMA-internalizing; TV watching β = 0.054, pfdr < 0.001; video watching β = 0.061, pfdr < 0.001. Mediation effects with β and p-values also reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal study with multiple analytic approaches: linear mixed models assessing SMA associations with mental health and brain outcomes; cross-lagged panel models examining temporal/causal relationships; mediation analyses exploring brain function/structure as mediators"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in International Journal of Clinical and Health Psychology (2025). Original research article format, not preprint, protocol, or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA is the independent variable predicting mental health and neural outcomes (forward direction). Paper reports neural structural/functional features (RSFC, cortical morphology) as mediators - these are not demographic-only predictors. Does not meet FT-EC7 criterion (b) which requires demographic/contextual predictors only",
+    "edge_cases_applied": ["E2"],
+    "notes": "Mixed-modality paper with smartphone/SM-specific and media-specific components measured separately. Social media coefficients are extractable per E2 rule (mixed-modality MET if SM-specific coefficient separately extractable). Results emphasize TV/video but social media measured and analyzed as distinct component"
+  }
+]

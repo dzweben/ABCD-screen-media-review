@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "440",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Release 3.0 with baseline and 2-year follow-up structural imaging data; N=5,166 participants aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic 'screen media activity (SMA)' composite measured as total hours on non-school-related activities. Methods (p. 82) lists 'Main types of SMA activities included watching TV shows/movies, watching videos on an electronic device, visiting social networking sites, and video-chatting' but these are not smartphone-specific or social-media-specific measures. No breakdown of phone-specific variables or social media app use separately. SMA is treated as single composite measure without extractable phone/SM-specific coefficient."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. SMA composite does not qualify as smartphone/SM-specific exposure."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. While numerics are reported (β=0.020 for SMA-internalizing), the exposure is not qualifying."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis with mediation modeling (GLMM with JIVE analysis) using baseline SMA to predict 2-year follow-up internalizing/externalizing problems"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Behavioral Addictions, 2023, vol. 12(1):80-93"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC2 (generic SMA composite, not phone/SM-specific); therefore excluded before FT-EC7 assessment",
+    "edge_cases_applied": [],
+    "notes": "C1 incorrectly coded FT_IC2 as MET by treating SMA (which includes TV, videos on electronic devices, social networking sites) as qualifying phone/SM variable. However, per criteria, SMA is generic screen time. E2 requires 'phone/SM-specific row/column extractable' from within a composite; here SMA is treated holistically without separate phone/SM coefficients. The paper fails on FT_IC2 and is excluded."
+  },
+  {
+    "paper_id": "442",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from years 2-4, N=6,143 adolescents with observations=12,745, mean age at year-2=12 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures 'Video Game Addiction Questionnaire (VGAQ)' as primary outcome. Predictor is reward processing (neural fMRI activation in caudate during Monetary Incentive Delay task). Video games explicitly listed under NOT QUALIFYING exposures per criteria: 'Console or PC video games' excluded. E17 states 'Video games unspecified platform → NOT_MET'. No smartphone or social media variables measured in this analysis."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. Exposure (reward processing neural activation) is neither smartphone nor social media."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure."
+    },
+    "FT_IC6": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC2 (video games are explicitly out-of-scope, not smartphone/SM); FT_EC7 inapplicable",
+    "edge_cases_applied": ["E17"],
+    "notes": "C1 correctly identified that video game addiction (VGAQ) with reward processing predictor fails FT_IC2. C2 marked all as UNKNOWN due to stating 'PDF not yet reviewed' but the decision is unambiguous: video gaming is out of scope per explicit criteria."
+  },
+  {
+    "paper_id": "473",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study subsample of 67 participants aged 11-12 years recruited as part of ABCD's 2-year follow-up. Described as 'Four ABCD study sites participated in this pilot substudy project'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures passive sensing of smartphone screen use via EARS app with specific app category breakdown. Methods: 'passively sense smartphone screen use by time and types of apps used.' Table 1 lists: streaming (1h 57min/day), YouTube (1h 18min/day), communication (48min/day), gaming (41min/day), social media (36min/day), SMS (6min/day), reading, music, news. Smartphone-specific variables extracted."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Per E5 and guideline, measurement papers must report phone/SM↔non-SM association to satisfy FT_IC3. This paper reports only measurement concordance: 'Self-report of smartphone screen use was partly consistent with objective measurement (r=0.49)' and 'Analyses of variance were run to assess differences in categorical app use by demographics.' These are measurement validation tests, not associations between smartphone/SM use and external non-SM outcomes (behavioral, mental health, clinical). No inferential test linking smartphone use to outcomes like sleep, academic performance, mental health, etc."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports correlation coefficient r=0.49 (p<.001) between passive sensing and self-report; descriptive statistics in Table 1 (means and SDs for app use times)"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Per criteria: 'psychometric-only (factor structure / reliability without external outcome)' = NOT_MET. This is a measurement/feasibility/validation study of the EARS app describing passive sensing protocol and concordance between EARS and self/parent report. The abstract and methods explicitly frame this as a feasibility/acceptability study with no analysis linking smartphone use to external outcomes. E5 states measurement papers must 'also report a phone/SM↔non-SM association'; this fails that requirement."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JMIR Mental Health, 2021;8(10):e29426, DOI 10.2196/29426. Peer-reviewed article, not preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC5 (measurement-only without external outcome analysis); FT_EC7 assessment is moot",
+    "edge_cases_applied": ["E5"],
+    "notes": "C1 correctly identified FT_IC3 as NOT_MET per E5 (measurement concordance only, no phone/SM-outcome association). However, C1 incorrectly coded FT_IC5 as MET by characterizing this as an 'empirical measurement/validation study within ABCD.' The criteria explicitly exclude measurement-only papers without external outcomes. C2 correctly identified both FT_IC3 and FT_IC5 as NOT_MET. This paper is a feasibility/validation study and does not meet inclusion criteria."
+  }
+]

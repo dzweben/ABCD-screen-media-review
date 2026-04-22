@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "395",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD study data, n=9,474 participants aged 9-10 at baseline, longitudinal data 2016-2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time (hours/week via parent CBCL) and social media use (hours/week, platform-specific) as distinct exposures"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression models examining screen time/social media trajectories linked to anxiety/depression t-scores with interaction terms for substance use"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 3: Screen time trajectory group 2 β=0.55 (95% CI 0.25, 0.85, p<0.001) for anxiety; group 3 β=0.96 (p=0.001); social media trajectory group 5 β=1.49 (95% CI 0.78, 2.19, p<0.001) for depression"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis using group-based trajectory modeling and multivariable linear regression with longitudinal outcome data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Public Health, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports screen time/social media as independent variables predicting anxiety/depression outcomes (non-SM outcomes). This is a smartphone/SM → mental health analysis, not prospective prediction of phone/SM use from demographics. FT-EC7 does not apply.",
+    "edge_cases_applied": ["E8"],
+    "notes": "Clear inferential statistics with hypothesis tests and reported coefficients. Study design is longitudinal with multiple waves, examining trajectories over time."
+  },
+  {
+    "paper_id": "186",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD cohort, n=7,471 young adolescents (mean age 9.87±0.62 years)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use is mentioned only as one of three lifestyle factors (physical activity, screen use, sleep duration) in lifestyle impact analysis, not as a primary/measured exposure variable. No specific smartphone or social media variable is independently measured. Screen use serves only as a mediating variable in the neural basis section, not as the primary exposure of interest."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Screen use does not have independent associations with non-SM outcomes; it functions only as a potential mediator in lifestyle-intelligence pathways"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No extractable numeric coefficients for screen use associations reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining neuroimaging, gene expression, and intelligence measures with linear mixed effects models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Translational Psychiatry, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails FT_IC2 (screen use not measured as primary specific smartphone/SM variable). Paper focuses on intelligence-brain correlates; screen use is subsidiary.",
+    "edge_cases_applied": [],
+    "notes": "While the paper mentions screen use in the methods and lifestyle impact analysis, it is not the primary exposure variable. The study is primarily about fluid vs. crystallized intelligence and their neural bases."
+  },
+  {
+    "paper_id": "194",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD data, n=8,125 participants with MRI and cognitive tests from larger cohort of 11,875 US adolescents"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary exposure is television viewing (TV viewing), which is explicitly excluded per criteria: 'TV viewing alone' is NOT QUALIFYING (not a smartphone or social media variable)"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 exclusion"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 exclusion"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis with linear mixed effects models examining associations between reading/TV viewing and brain morphology and neurocognitive performance"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Scientific Reports, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails FT_IC2: television viewing is not a qualifying smartphone/SM exposure variable per screening criteria",
+    "edge_cases_applied": [],
+    "notes": "Paper compares reading vs. television viewing effects on brain development. TV viewing is the primary screen-based exposure; does not meet criteria for smartphone/SM narrowing."
+  }
+]

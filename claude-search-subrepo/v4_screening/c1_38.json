@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "389",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data, Year 2 assessment (2018-2020), N=9,008"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures problematic social media use via Social Media Addiction Questionnaire (SMAQ), a six-item scale assessing addiction components"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses examining associations between problematic social media use and alcohol expectancies (positive and negative)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports B coefficients with 95% CIs: B=0.045 (95% CI 0.020-0.069) for positive expectancies; B=0.072 (95% CI 0.043-0.101) for negative expectancies"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data examining phone/SM variable linked to non-SM outcome (alcohol expectancies)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Public Health, 2023, not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design with social media use as independent variable predicting non-SM outcome (alcohol expectancies); FT-EC7 applies only to prospective designs with SM as dependent variable and demographic-only predictors",
+    "edge_cases_applied": ["E1"],
+    "notes": "Both time spent on social media and problematic social media use measured; only problematic use (with separate coefficient) was significantly associated with outcomes in adjusted models, meeting E1 criteria"
+  },
+  {
+    "paper_id": "390",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data, Baseline and Year 2 (2018-2020), N=9,673 (prospective design)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures three specific screen use variables: problematic social media use (SMAQ), problematic mobile phone use (MPIQ), and problematic video game use (VGAQ), all assessed via validated addiction questionnaires"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized logistic mixed effects models for binary outcomes (problematic use yes/no) and generalized linear mixed effects models for continuous problematic use scores; multiple imputation by chained equations for missing data"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports odds ratios with 95% CIs across multiple models; e.g., for problematic video game use with 4+ ACEs: adjusted OR=3.11 (95% CI 2.05-4.73); for mobile phone: OR=1.57 (95% CI 1.22-2.03)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective analysis examining baseline ACE exposure predicting Year 2 problematic screen use outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Public Health, 2023, not a preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Although design is prospective (longitudinal) with demographic predictor (ACE), the analysis includes individual psychological/clinical predictors (anxiety, depression, attention-deficit symptoms from CBCL), which are specifically excluded from FT-EC7 applicability per criterion (b)",
+    "edge_cases_applied": ["E16"],
+    "notes": "Prospective design with ACE (adverse experiences, demographic/contextual) as predictor, but inclusion of anxiety, depression, and ADHD as covariates (individual-characteristic predictors) excludes FT-EC7 application. E16 applies: individual-characteristic predictors (mental health conditions) of phone/SM use → MET regardless of direction"
+  },
+  {
+    "paper_id": "178",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "References ABCD Study but is a special issue introduction providing overview of consortium and included papers, not reporting original data analysis"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Special issue introduction discusses various topics (screen time, caffeine, sleep, substance use, etc.) but does not present original measurements or analyses of specific smartphone or social media variables"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No original inferential statistical tests reported; this is an editorial introduction summarizing other papers"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric coefficients, p-values, or statistical estimates reported for any phone/SM associations"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "This is a special issue introduction/editorial without original empirical analysis; per criteria, editorials and commentaries with no analysis are excluded"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Health Psychology, not a preprint or duplicate (default MET unless duplicate evidence present)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC5 (not original empirical analysis), therefore FT_EC7 is not applicable",
+    "edge_cases_applied": ["E10"],
+    "notes": "Per E10, special-issue intros/resources with no original analysis → NOT_MET. This is an introduction to a Health Psychology special issue featuring ABCD studies; it describes included papers but contains no original data analysis"
+  }
+]

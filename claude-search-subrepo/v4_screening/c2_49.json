@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "128",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data (release 2.0; www.abcdstudy.org), a large, nationally diverse sample of 11,875 youth aged 9-11 years from 21 U.S. data collection sites."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures recreational screen time as part of 24-hour movement guidelines. Assessed via Youth Screen Time Survey, including TV watching, video watching, video games, texting, social media sites, and video chat."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports negative binomial regression analyses testing associations between screen time (within movement behavior recommendations) and internalizing/externalizing behaviors (non-SM outcome). Presents prevalence ratios (PR), 95% CIs, and p-values."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported: PR .77 (95% CI .68-.86) for total problems; PR .78 (95% CI .68-.89) for internalizing; PR .79 (95% CI .68-.91) for externalizing when meeting all three recommendations vs. none."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis: cross-sectional study examining associations between movement behavior recommendations and problem behaviors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Adolescent Health 68 (2021) 969-977, not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is an independent variable (predictor), not the dependent variable. The outcome is internalizing/externalizing behaviors (non-SM), so this is a phone/SM→non-SM-outcome analysis, which explicitly excludes FT-EC7.",
+    "edge_cases_applied": ["E2"],
+    "notes": "E2 applied: screen time is one component of 24-hour movement composite, and screen-time-specific coefficients are separately extractable from tables. Cross-sectional design; screen time is predictor, behavioral problems are outcome."
+  },
+  {
+    "paper_id": "543",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses baseline data from the Adolescent Brain Cognitive Development (ABCD) study, which followed 15,022 American children aged 9-11 years."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures children's screen time (continuous variable, reported in hours on typical weekdays by parents). Screen time is a specific smartphone/media use variable per FT-IC2 definition."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports mixed-effects regression models (Model 1 and Model 2) with screen time as outcome and family income + race as predictors. Provides regression coefficients (b), standard errors, 95% CIs, and p-values."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: Model 1 for income ≥50K-<100K: b = -0.60, p < 0.001; for income >100K: b = -1.20, p < 0.001. Model 2 interaction terms also reported with coefficients and p-values."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis: longitudinal observational study examining associations between family income (by race) and children's screen time."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Information 2020, 11, 538, not a preprint or duplicate."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Screen time is the dependent variable (outcome). Predictors are demographic/contextual only (family income, race, sex, parental education, marital status). However, the analyses include both cross-sectional and longitudinal components, and interactions between race and income. Per FT-EC7 rule: it applies ONLY when phone/SM is DV in EVERY analysis AND predictors are ONLY demographic AND ALL analyses are LONGITUDINAL. Since cross-sectional analyses are included (Model 1/2 appear to be cross-sectional at baseline), FT-EC7 does NOT apply per exception rule 'cross-sectional analyses with smartphone/SM as DV'.",
+    "edge_cases_applied": ["E7", "E14"],
+    "notes": "E7 & E14 applied: screen time as outcome with demographic predictors. Cross-sectional design with demographic and income-race interactions included; FT-EC7 does not apply because cross-sectional analyses are present."
+  },
+  {
+    "paper_id": "126",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses data from the Adolescent Brain Cognitive Development (ABCD) study, a national sample of 11,670 U.S. participants aged 9-10 years from 21 ABCD data collection sites."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Measures sleep disturbance and sleep duration (dependent variables), not smartphone or social media. While screen time is included as a covariate, the main exposures are sleep-related, not phone/SM-specific. Does not meet the requirement for 'paper measures a SPECIFIC smartphone OR social media variable.'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Baseline and longitudinal analyses using generalized additive mixed models (GAMMs) testing associations between sleep disturbances (DOES, DIMS, SWTD, TST) and mental health outcomes (depression, internalizing, externalizing). Reports statistical tests with coefficients and p-values."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported in Table 2: DOES baseline internalizing R²=.19, b=.41, p<.001; depression R²=.22, b=.43, p<.001; DIMS externalizing R²=.17, b=.39, p<.001. Longitudinal: DOES depression b=.13, p<.001."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD study: cross-sectional baseline (11,670) and longitudinal (4,951 at 1-year follow-up) analyses examining associations between sleep and mental health."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Adolescent Health 66 (2020) 567-574, not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-IC2 threshold (not a smartphone/SM variable paper), so FT-EC7 criteria are not applicable. Exclusion is via FT-IC2 failure, not FT-EC7.",
+    "edge_cases_applied": [],
+    "notes": "EXCLUDE: Fails FT-IC2. Although sleep is measured and depression outcomes are assessed, the primary exposure is sleep (not phone/SM), and screen time is only included as a covariate with no separately reported association with SM. Paper does not qualify as a smartphone/social media study."
+  }
+]

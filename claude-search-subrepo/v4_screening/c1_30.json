@@ -1,0 +1,108 @@
+[
+  {
+    "paper_id": "403",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study Year 2 (2018-2020), ages 11-12, N=10,157 cross-sectional data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online dating app use: 'Have you ever used a dating app?' (yes/no) — qualifies as online dating/hookup app variable"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression analyses testing associations between sociodemographic factors and online dating behavior"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "AOR and 95% CI reported: Males AOR 2.72 (95% CI 1.11-6.78); Sexual minority AOR 12.97 (95% CI 4.32-38.96)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD Study data with logistic regression"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, BMC Research Notes 2024"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Online dating app use is the dependent variable in all analyses. All predictors are demographic only (sex, age, race/ethnicity, sexual orientation, household income, parental education). Analysis is cross-sectional, not longitudinal. Therefore FT-EC7 applies: longitudinal + DV + demographic-only predictors triggers exclusion, but this is CROSS-SECTIONAL with DV demographic predictors, so E7 and E14 apply — cross-sectional + demographic predictors of SM = MET, not FT-EC7 excluded.",
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Although online dating app use is the DV with demographic-only predictors, this is CROSS-SECTIONAL, not longitudinal-prospective. Per E7 and E14, cross-sectional analyses with SM as DV = MET (do not trigger FT-EC7 exclusion). FT-EC7 only applies to LONGITUDINAL demographic-only predictors of SM. Therefore FT-EC7 does NOT apply.",
+    "edge_cases_applied": [
+      "E7",
+      "E13",
+      "E14"
+    ],
+    "notes": "Smartphone ownership as exposure (E13) with non-SM outcome MET. Sociodemographic predictors of phone/SM in cross-sectional design (E14) = MET."
+  },
+  {
+    "paper_id": "291",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "References Carter et al. (2024) and ABCD study findings but does not clearly state original analysis of ABCD data by these authors"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Discusses problematic smartphone use, notification strategies, social media use, specific apps (TikTok, Instagram, apps, video games), addiction patterns"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "This is a perspective/commentary article; no original inferential statistical tests reported by authors linking smartphone/SM variables to outcomes"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No original numeric coefficients, beta values, or p-values reported by authors; references others' findings only"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Perspective/commentary article with no original empirical analysis; review of existing literature and commentary on Carter et al. 2024"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Acta Paediatrica 2024"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable; this is not an original empirical analysis paper, so FT-EC7 screening irrelevant",
+    "edge_cases_applied": [
+      "E10"
+    ],
+    "notes": "Per E10 (special-issue intros/resources), this is a perspective article with no original analysis of ABCD or other data. Fails FT-IC3 and FT-IC5. EXCLUDE."
+  },
+  {
+    "paper_id": "196",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study 2-year follow-up assessed 2019-2020, N=10,147, mean age 12.0 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple specific social media variables measured: type of apps used (TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter, Reddit, Tumblr), time spent, secret accounts, problematic/addictive use patterns, cyberbullying, weekday/weekend use patterns, bedtime social media use"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models and logistic regression testing associations between 41 digital/social media exposures and BPM Total Problems T-scores (LME with FDR-correction); logistic regression with suicide attempts outcome"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Coefficients, 95% CI, t-statistics, p-values reported: e.g., digital exposomic risk estimate=1.78 (95% CI [1.58-1.98], t=17.41, p<0.001); OR=1.76 (95% CI [1.39-2.23]) for suicide attempts"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD Study; exposure-wide association study (ExWAS) with separate LME models for each of 41 digital exposures; validation in independent test subsample"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, NPP - Digital Psychiatry and Neuroscience 2024"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media/digital exposures are INDEPENDENT VARIABLES predicting mental health outcomes (BPM-T-scores, suicide attempts), not dependent variables. Therefore FT-EC7 does not apply; paper includes SM as IV.",
+    "edge_cases_applied": [
+      "E2",
+      "E3",
+      "E4",
+      "E8"
+    ],
+    "notes": "ExWAS approach identifies 35 significant digital exposures; aggregate weighted risk scores computed (E2, E3). LME coefficients reported (E4). Multiple inferential tests with reported statistics (E8). Cross-sectional with SM as IV predicting mental health outcomes."
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": 68,
+    "citation": "Bagot, K. S., Baker, F. C., Engel, S., Garg, A., Ngo, A. L., Nally, R. M., ... & Yip, S. W. (2022). Youth screen use in the ABCD study. Developmental Cognitive Neuroscience, 57, 101150.",
+    "doi": "10.1016/j.dcn.2022.101150",
+    "journal": "Developmental Cognitive Neuroscience",
+    "year": 2022,
+    "first_author": "Bagot, K. S.",
+    "senior_author": "Yip, S. W.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "This is a methods/measurement paper describing the ABCD screen use measures, not a study testing screen-time-to-outcome associations."
+  },
+  "3B_Sample_Data": {
+    "candidate_id": 68,
+    "n_analytic": 11871,
+    "abcd_release": "Not explicitly stated; baseline through 3-year follow-up data",
+    "timepoints_used": "baseline, 1yr, 2yr, 3yr",
+    "n_timepoints": 4,
+    "verbatim_sample_description": "Nearly 12,000 children ages 9-10 years at baseline and their parents were included in the analyses... Total 11,871 (100%)",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Descriptive/methods paper. Sample includes nearly all ABCD participants."
+  },
+  "3C_Exposure": {
+    "candidate_id": 68,
+    "exposure_variable": "Screen use across multiple modalities (watching TV/movies, videos, video games, texting, social media, video chat) and addiction questionnaires (SMAQ, VGAQ)",
+    "exposure_instrument": "ABCD Youth Screen Time Survey (youth and parent report), Social Media Addiction Questionnaire (SMAQ), Video Game Addiction Questionnaire (VGAQ)",
+    "modalities": "TV/movies, videos, single-player video games, multiplayer video games, texting, social media, video chat, internet browsing",
+    "operationalization": "Categorical hours/day for screen time; continuous scale scores for SMAQ and VGAQ",
+    "time_frame": "Typical weekday and weekend day",
+    "reporter": "Self-report (youth) and parent-report",
+    "verbatim_exposure_description": "We describe methods by which the screen usage questionnaire was developed in the Adolescent Brain Cognitive Development (ABCD) Study, demonstrate longitudinal changes in screen usage via child report and describe data harmonization baseline-year 2. We further include psychometric analyses of adapted social media and video game addiction scales completed by youth.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "This is a measurement/methods paper. Screen use is described, not used as a predictor."
+  },
+  "3D_Outcome": {
+    "candidate_id": 68,
+    "primary_outcome": "Psychometric properties of SMAQ and VGAQ; descriptive screen use patterns over time",
+    "outcome_domain": "other",
+    "outcome_instrument": "Social Media Addiction Questionnaire (SMAQ), Video Game Addiction Questionnaire (VGAQ), measurement invariance analyses",
+    "outcome_type": "continuous",
+    "base_rate_if_binary": "N/A",
+    "verbatim_outcome_description": "We further include psychometric analyses of adapted social media and video game addiction scales completed by youth.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "No health outcome tested. This is a measurement description paper."
+  },
+  "3E_Design_Analysis": {
+    "candidate_id": 68,
+    "study_design": "longitudinal with baseline control",
+    "model_type": "other",
+    "model_type_detail": "Confirmatory factor analysis (CFA) with measurement invariance testing across sex, race, and income; descriptive longitudinal analyses of screen use trajectories",
+    "covariates_listed": "N/A (descriptive and psychometric analyses)",
+    "n_covariates": 0,
+    "multiple_comparisons_correction": "None",
+    "verbatim_analysis_description": "We conducted initial tests of measurement invariance across sex, race, and income for both scales.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Primarily descriptive and psychometric. No regression models testing screen time as predictor of health outcomes."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "candidate_id": 68,
+      "effect_id": 1,
+      "predictor": "N/A (descriptive paper)",
+      "outcome": "Screen use patterns and SMAQ/VGAQ psychometric properties",
+      "effect_type": "other",
+      "standardized_or_unstandardized": "N/A",
+      "effect_value": null,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": "<0.001 for sex differences in SMAQ and VGAQ; <0.001 for longitudinal increases",
+      "se": "",
+      "outcome_scale_note": "RMSEA, CFI, SRMR for CFA models; p-values for group comparisons",
+      "base_rate_for_or": "",
+      "r2_or_variance_explained": "",
+      "in_supplementary": "No",
+      "verbatim_quote": "Compared with boys, girls engaged in greater social media use (p < .001) and demonstrated higher ratings on the SMAQ (p < .001). Compared with girls, boys played more video games (p < .001) and demonstrated higher ratings on the VGAQ (p < .001).",
+      "context": "Primary"
+    }
+  ],
+  "3G_Reporting_Quality": {
+    "candidate_id": 68,
+    "p_value_reporting_style": "Mixed",
+    "abstract_uses_significance_language": "Yes",
+    "abstract_significance_verbatim": "Black youth demonstrated significantly higher SMAQ and VGAQ scores compared to all other racial/ethnic groups",
+    "p_values_in_abstract": "Yes",
+    "cis_reported_for_primary": "Yes",
+    "large_n_acknowledged": "No",
+    "large_n_verbatim": "",
+    "small_es_acknowledged": "NOT APPLICABLE",
+    "small_es_verbatim": "",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Methods/measurement paper. Reports CFA fit indices (RMSEA, CFI, SRMR) rather than effect sizes for predictive associations."
+  },
+  "3H_Recommendations": {
+    "candidate_id": 68,
+    "recommendations_issued": "No",
+    "recommendation_target": "researchers",
+    "recommendation_verbatim": "",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Paper recommends researchers consider modality-specific screen use and demographic differences when analyzing ABCD data, but issues no clinical/policy recommendations."
+  },
+  "3I_Rhetorical_Moves": {
+    "candidate_id": 68,
+    "population_level_override": "No",
+    "population_override_verbatim": "",
+    "modifiable_factor_framing": "No",
+    "modifiable_factor_verbatim": "",
+    "per_unit_framing": "No",
+    "per_unit_verbatim": "",
+    "discussion_characterization": "The discussion is appropriately framed as a measurement and descriptive paper. It describes how screen use measures were developed and evolved in ABCD, presents psychometric properties of addiction questionnaires, and notes sex and racial/ethnic differences in use patterns. The paper draws parallels between screen-related behavioral addictions and substance use disorders when discussing racial disparities in SMAQ/VGAQ scores, extrapolating from the substance addiction literature to suggest potential health disparities.",
+    "coder_confidence": "High",
+    "ambiguity_notes": "This is a methods paper without formal screen-time-to-health-outcome analyses. No standard effect sizes for predictor-outcome associations.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  }
+}

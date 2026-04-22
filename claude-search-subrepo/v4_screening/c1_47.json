@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "541",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study baseline data, 10,712 children ages 9-10 years from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is component of outcome (movement behavior composite), not the exposure. Exposures are parental acceptance, monitoring, and family conflict. Screen time measurement used only for outcome categorization."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multilevel logistic regression examining association between family typologies and meeting movement behavior recommendations; multiple tests reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "ORs with 95% CIs reported: P2 OR=0.54 (0.39-0.76), P3 OR=0.28 (0.20-0.40), P4 OR=0.24 (0.16-0.36), P5 OR=0.19 (0.12-0.29)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Cross-sectional empirical analysis using latent profile analysis and logistic regression on ABCD baseline data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in International Journal of Environmental Research and Public Health, 2021"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; predictors are family environment characteristics (parental acceptance, monitoring, conflict); outcome is movement behavior (non-SM), not screen media. FT_EC7 exclusion criterion not met.",
+    "edge_cases_applied": ["E2"],
+    "notes": "Edge case E2 applies: screen time is part of 24-h movement composite (physical activity, screen time, sleep). Only aggregate composite outcome reported, not screen-time-specific coefficient. This disqualifies FT_IC2."
+  },
+  {
+    "paper_id": "295",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study baseline data, 9,718 children ages 9-11 years from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity measured as specific variable: weekday/weekend breakdown including social network sites, text/instant messages, TV shows/movies, R-rated movies, videos (YouTube), video games"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning framework identifies associations between screen media activity and fluid cognitive functioning; multiple statistical tests conducted via ML algorithm"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Variable importance (VI) metrics reported for screen media activity; Table 2 shows statistical values including VI estimates for weekday/weekend screen media activity"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical ML analysis of ABCD baseline data identifying predictors of cognitive functioning"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Child Development, September/October 2021"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen media activity is predictor (IV) of fluid cognitive functioning (non-SM outcome), not the dependent variable. FT_EC7 applies only when SM is DV with demographic-only predictors in longitudinal design.",
+    "edge_cases_applied": ["E4"],
+    "notes": "Edge case E4: ML analysis with variable importance metrics reported, which qualifies as extractable coefficient for FT_IC4. Not SHAP/Gini alone."
+  },
+  {
+    "paper_id": "24",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study baseline and one-year follow-up data, 11,025 children ages 9-10 years at baseline from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time modalities measured: social networking (aOR 1.62), texting (aOR 1.40), watching/streaming TV shows/movies (aOR 1.39), videos (YouTube), video games, video chat. Each modality separately assessed."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses testing associations between baseline screen time and binge-eating disorder at one-year follow-up; multiple screen time types tested independently"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "ORs with 95% CIs reported: total screen time aOR 1.11 (1.05-1.18); social networking aOR 1.62 (1.18-2.22); texting aOR 1.40 (1.08-1.82); TV aOR 1.39 (1.14-1.69)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Prospective cohort empirical analysis with logistic regression, baseline exposure measured and one-year follow-up outcome assessed"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in International Journal of Eating Disorders, 2021"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable (IV) predicting binge-eating disorder outcome. Paper includes screen media → non-SM outcome analysis. FT_EC7 does not apply.",
+    "edge_cases_applied": [],
+    "notes": "Prospective design with clear smartphone/social media exposure (social networking, texting) and clinical outcome (binge-eating disorder based on KSADS-5 DSM-5 criteria). All inclusion criteria met."
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "116",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) study in the Netherlands, not U.S. ABCD"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "TV and video games measured but no smartphone or social media variables; generic screen time only"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT-IC1; not assessed further"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT-IC1; not assessed further"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT-IC1; not assessed further"
+    },
+    "FT_IC6": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT-IC1; not assessed further"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT-IC1 (wrong ABCD cohort); exclusion via population criterion",
+    "edge_cases_applied": [],
+    "notes": "Excluded at FT-IC1: uses Amsterdam ABCD (Dutch cohort), not U.S. ABCD Study"
+  },
+  {
+    "paper_id": "146",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study, U.S., N=4277 with usable imaging and SMA data from first cross-sectional release"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) measured: watching TV/videos, playing video games, using social media; composite score reported plus component breakdown"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Group Factor Analysis (GFA) with generalized linear mixed-effect models testing associations between SMA latent variables and psychopathology (internalizing/externalizing) and cognition (fluid/crystalized intelligence); multiple inferential tests reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Cohen's d effect sizes reported (ES 0.04-0.1); 37% variance explained in SMA-brain relationship; multiple effect size statistics in Table 1 and results"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis with multivariate structural analysis testing association between SMA and brain structure outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (NeuroImage 2019); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA not outcome variable in primary analyses; SMA is predictor of brain structure and psychopathology outcomes (SMA → outcomes direction)",
+    "edge_cases_applied": ["E3"],
+    "notes": "Latent construct analysis: SMA-specific pathways extractable from four GFA factors (E3 applies); mixed-modality SMA composite with separate TV/video games/social media components"
+  },
+  {
+    "paper_id": "98",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, U.S.; paper discusses current and planned ABCD technologies"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Mobile phone use, smartphone use, wearable technologies, social media data capture discussed as measurement approaches in ABCD"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Methods/perspective paper; no inferential statistical tests linking smartphone/SM variables to non-SM outcomes reported; no original empirical associations tested"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric statistics (β/OR/p-values) reported for smartphone/SM associations; paper is prospective/planning only"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Not original empirical analysis; perspective/methods paper outlining future potential technologies and data collection approaches, no completed analyses"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Developmental Cognitive Neuroscience 2018); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT-IC3 and FT-IC5 (no empirical analyses with inferential tests); exclusion criteria met before FT-EC7 assessment",
+    "edge_cases_applied": ["E10"],
+    "notes": "Excluded: methods/perspective paper with no original empirical analysis (E10 applies). Paper describes technologies currently used and those being piloted in ABCD but contains no statistical tests of smartphone/SM associations with outcomes."
+  }
+]

@@ -1,0 +1,99 @@
+SYSTEMATIC REVIEW — 2L FULL-TEXT SCREENING (v4 — smartphone/SM narrowing + FT-EC7)
+
+You are an independent AI coder. For ONE paper, decide MET / NOT_MET / UNKNOWN for each of FT-IC1 through FT-IC6, PLUS decide whether FT-EC7 applies. Evidence required for each.
+
+================================================================
+FT-IC1 — Population: Uses U.S. ABCD Study data.
+  MET: Uses U.S. ABCD (any release, any sub-sample including EARS N=640, autism subgroup, etc.)
+  NOT_MET: Uses Amsterdam/Dutch ABCD, Generation R, NHANES, MTF, MCS, or other cohort. Only cites ABCD in intro.
+  UNKNOWN: No PDF, abstract doesn't specify.
+
+FT-IC2 — Exposure: Paper measures a SPECIFIC smartphone OR social media variable.
+  QUALIFYING (INCLUDE):
+    - Smartphone / mobile phone: ownership, age of acquisition, time on phone, passive sensing (EARS), texting (phone), video chat (phone), phone-app categories
+    - Any app use (apps = smartphone inherently)
+    - Social media: time, platform-specific (TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter, Reddit, etc.), accounts, secret accounts
+    - Problematic/addictive scales: SMAQ (social media), MPIQ (mobile phone), PSMUS, SNS-A, Bergen Facebook Addiction, etc.
+    - Online dating / hookup apps
+    - Bedtime phone/SM use
+  NOT QUALIFYING (NOT_MET = exclusion via FT-EC2):
+    - TV viewing alone
+    - Video streaming on non-phone devices (or unspecified)
+    - Console or PC video games
+    - Video games unspecified platform → NOT_MET (ambiguous)
+    - Generic "total screen time" or STS composite with no phone/SM breakdown
+    - "Internet use" without clarifying it's phone/SM
+    - Reading on screens, e-mail, general browsing
+    - Radio, podcasts
+    - Cyberbullying alone with no separately-measured phone/SM variable
+  MIXED-MODALITY papers: MET if smartphone-specific OR social-media-specific coefficient is separately extractable. NOT_MET if only aggregate composite reported.
+
+FT-IC3 — Association: Paper reports an inferential statistical test linking the smartphone/SM variable to at least one non-SM variable (in either direction).
+  MET: OLS/logistic/Poisson/multilevel/Cox/SEM/mediation/moderation/correlation/chi-square/t-test/ANOVA with at least one test involving the smartphone/SM variable. ML coefficients count; SHAP/Gini alone does NOT.
+  NOT_MET: Only screen-to-screen (e.g., EARS vs self-report phone-use concordance with no non-SM outcome). OR only descriptive (no hypothesis test). OR phone/SM only as adjustment covariate with no reported coefficient.
+
+FT-IC4 — Extractable numeric: At least one β / OR / HR / r / CI / F / t / χ² / p-value reported for a smartphone/SM association.
+  MET: numeric value present in text, tables, labeled figures, or supplement.
+  NOT_MET: narrative-only.
+
+FT-IC5 — Study design: Original empirical ABCD analysis.
+  MET: empirical analyses (cross-sectional, longitudinal, mediation, ML, etc.). Measurement papers that ALSO report a phone/SM↔non-SM association count.
+  NOT_MET: review, editorial, commentary, letter, protocol describing planned (not completed) work, resource/data description with no analysis, psychometric-only (factor structure / reliability without external outcome).
+
+FT-IC6 — Non-duplicate: Not a preprint/conference abstract/deposit of an already-included paper.
+  Default MET unless clear duplicate evidence.
+
+================================================================
+DIRECTIONALITY / FT-EC7 — Critical, separate check
+
+FT-EC7 applies ONLY when BOTH:
+  (a) Smartphone/SM is the DEPENDENT variable in every reported analysis involving smartphone/SM, AND
+  (b) The predictors are ONLY demographic or contextual (SES, race, sex, age, income, parental education, gender identity, sexual orientation, urbanicity, neighborhood, parenting, family structure), AND
+  (c) ALL such analyses are LONGITUDINAL / PROSPECTIVE (predicting FUTURE smartphone/SM use from baseline demographics).
+
+FT-EC7 does NOT apply (keep INCLUDE) if ANY of these hold:
+  - Paper also reports cross-sectional analyses with smartphone/SM as DV (cross-sectional ignores direction)
+  - Paper includes any individual psychological / clinical / behavioral / neural / genetic predictor (ADHD, autism, depression, anxiety, personality, impulsivity, executive function, sleep, reward sensitivity, sensation seeking, cognitive ability, neural features, polygenic risk)
+  - Paper also reports any smartphone/SM → non-SM-outcome analysis
+  - Paper reports mediation/moderation involving smartphone/SM
+  
+================================================================
+BINDING EDGE-CASE RULES (apply verbatim)
+
+E1: phone/SM as one predictor of many with own coefficient reported → FT_IC3 MET. Only covariate, no coefficient → FT_IC3 NOT_MET.
+E2: Inside 24-h movement composite — phone/SM-specific row/column extractable → MET. Whole-composite only → NOT_MET.
+E3: Latent construct — phone/SM-specific pathway extractable → MET. Latent-only → NOT_MET.
+E4: ML — coefficient reported → MET. SHAP/Gini/permutation only → NOT_MET.
+E5: Measurement papers — also reports phone/SM↔non-SM association → MET. Only measurement concordance → NOT_MET (FT-IC5 fail).
+E6: Cyberbullying — paper also measures phone/SM separately → MET. Cyberbullying only → NOT_MET.
+E7: phone/SM as outcome — cross-sectional any predictor → MET. Longitudinal individual predictor → MET. Longitudinal demographic-only predictor → FT-EC7 applies.
+E8: Descriptive vs inferential — χ²/t/ANOVA/regression test exists → MET. Only means/SDs → NOT_MET.
+E9: Recreation displacement — phone/SM vs other activities → MET if phone/SM specifically tested.
+E10: Special-issue intros/resource — original analysis present → MET. No analysis → NOT_MET.
+E11: Null results with reported stat → MET.
+E12: Figure-only — numeric supplement exists → MET; no numerics → UNKNOWN.
+E13: Smartphone ownership as exposure → MET if non-SM outcome; if DV see E7.
+E14: Sociodemographic predictors of phone/SM — cross-sectional MET; longitudinal-only → FT-EC7.
+E15: Parenting/family predictors of phone/SM — cross-sectional MET; longitudinal-only → FT-EC7 unless downstream non-SM outcome.
+E16: Individual-characteristic predictors of phone/SM (ADHD, depression, impulsivity, genes, etc.) → MET regardless of direction/timeframe.
+E17: Video games unspecified platform → NOT_MET (FT-IC2).
+E18: "Internet use" unspecified device → NOT_MET (FT-IC2).
+
+================================================================
+OUTPUT (strict JSON, one object per paper):
+
+{
+  "paper_id": "<id>",
+  "FT_IC1": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "..."},
+  "FT_IC2": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<which phone/SM variable, cite from PDF>"},
+  "FT_IC3": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<cite test type + stat>"},
+  "FT_IC4": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<cite β/OR/p>"},
+  "FT_IC5": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<study design>"},
+  "FT_IC6": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<journal article>"},
+  "FT_EC7_applies": true|false,
+  "FT_EC7_reason": "<if true, explain. If false, state why (cross-sectional? individual predictor? phone/SM as IV?)>",
+  "edge_cases_applied": ["E?", "E?"],
+  "notes": "<anything else>"
+}
+
+No prose outside JSON. Save the array to the designated results file using the Write tool.

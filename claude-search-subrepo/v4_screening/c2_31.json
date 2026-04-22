@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "192",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 'a prospective, multicentre, longitudinal cohort of children from the Adolescent Brain and Cognitive Development Study, aged 9.9 years when entering the study'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Specific smartphone/SM variables measured: social media use, video game playing, watching television/videos via Youth Screen Time Survey; social media usage measured separately with hours/day estimates"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential statistical tests linking SM/DM variables to non-SM outcomes (brain development): quadratic-mixed effect modeling testing relationships between individual DM usage (social media, video games, TV/videos) and brain structures (cortex, striatum, cerebellum)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients reported: e.g., social media usage × time interaction with cerebellum 'β = 0.02'; social media usage × time² 'β = −0.02'; Table 2 contains extensive numeric results with β values and p-values"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis: 4-year follow-up study with annual measurements of DM usage and biennial brain MRI scans; quadratic-mixed effect modeling employed"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Scientific Reports, 2024"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/DM variables are not uniformly dependent variables. Paper reports SM/DM → brain development (non-SM outcome) analyses. Cross-sectional and longitudinal analyses both present. FT-EC7 does not apply.",
+    "edge_cases_applied": [
+      "E2",
+      "E4"
+    ],
+    "notes": "E2: Individual DM usage rows extractable from composite; E4: ML coefficients (quadratic mixed effects) reported with statistics. This is a measurement paper that also reports SM/DM-to-outcome associations (FT-IC5 MET per E5)."
+  },
+  {
+    "paper_id": "79",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 'we used multivariable logistic regressions...in 10,410 eligible ABCD study participants' with baseline enrollment ages 9–10"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Outcome is cyberbullying victimization only; no specific smartphone or social media variable measured as exposure. Exposures are family environment (parental monitoring, family conflict) and sociodemographic factors. Cyberbullying alone without separately measured phone/SM variable does not qualify per E6."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression testing associations: parental monitoring → cyberbullying victimization (OR: 0.61, 95% CI: 0.50–0.75); family conflict → cyberbullying victimization (OR: 1.10, 95% CI: 1.04–1.16)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "OR and 95% CI reported: 'OR: 0.61, 95% CI: 0.50–0.75' and 'OR: 1.10, 95% CI: 1.04–1.16'; secondary analyses include individual item OR estimates"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis: family environment measured at Year 1, cyberbullying victimization measured at Year 2 follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Academic Pediatrics, 2024"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET—no smartphone/SM exposure variable measured, only cyberbullying outcome. FT-EC7 criterion (a) cannot be satisfied. Paper excluded via FT-IC2 fail.",
+    "edge_cases_applied": [
+      "E6"
+    ],
+    "notes": "E6: Paper measures cyberbullying victimization only, with no separately measured phone/SM variable. Family environment/parental factors are the exposures, not phone/SM. This is FT-IC2 NOT_MET (exclusion via FT-EC2: neither phone/SM nor problematic use scale measured)."
+  },
+  {
+    "paper_id": "377",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 'The Adolescent Brain Cognitive Development data were analyzed' in analysis of traumatic stress exposure and dual systems model development"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "No smartphone or social media variable measured. Exposures are traumatic stress exposure and deviant peer association; outcomes are impulse control and sensation-seeking (psychological constructs only, no non-SM outcome involving phone/SM). No SM/phone-specific variable present."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Structural equation modeling (SEM) testing mediation: 'Deviant peer association significantly mediated the relationship between traumatic stress exposure and impulse control, accounting for about 25% of this relationship'"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric coefficients, β values, OR, p-values, or statistics reported. Only narrative statement of mediation finding (e.g., 'accounted for about 25%') without specific statistical estimates or test values."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical study using ABCD data with structural equation modeling to analyze direct and indirect effects across waves"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Crime & Delinquency, 2024"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET—no smartphone/SM exposure variable measured. FT-EC7 is inapplicable when exposure criteria not met.",
+    "edge_cases_applied": [
+      "E8"
+    ],
+    "notes": "E8: Paper reports only narrative findings without reported inferential statistics (no β, p-values, test statistics). Fails FT-IC4. Additionally, FT-IC2 NOT_MET because no phone/SM variable measured; exposures are traumatic stress and peer association only."
+  }
+]

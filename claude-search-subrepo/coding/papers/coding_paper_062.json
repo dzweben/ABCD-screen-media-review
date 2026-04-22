@@ -1,0 +1,109 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "62",
+    "citation": "Nagata, J. M., Yang, J. H., Singh, G., Kiss, O., Ganson, K. T., Testa, A., Jackson, D. B., & Baker, F. C. (2023). Cyberbullying and sleep disturbance among early adolescents in the U.S. Academic Pediatrics, 23, 1220-1225.",
+    "doi": "10.1016/j.acap.2022.12.007",
+    "journal": "Academic Pediatrics",
+    "year": "2023",
+    "first_author": "Nagata, Jason M.",
+    "senior_author": "Baker, Fiona C."
+  },
+  "3B_Sample": {
+    "N": "9443",
+    "ABCD_release_version": "ABCD 4.0 release",
+    "timepoints_used": "Year 2 follow-up (2018-2020, ages 10-14)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Cyberbullying Questionnaire (victimization and perpetration)",
+    "modalities_included": ["cyberbullying victimization", "cyberbullying perpetration"],
+    "how_operationalized": "Binary (yes/no) for cyberbullying victimization and perpetration in past 12 months. Based on validated Cyberbullying Scale. Victimization: 'Have you ever been cyberbullied...' Perpetration: 'Have you ever cyberbullied someone...'"
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Sleep disturbance",
+    "measure_used": "KSADS DSM-5 Sleep Outcomes (adolescent-reported trouble falling/staying asleep, dichotomized); Sleep Disturbance Scale for Children (SDSC, 26-item, caregiver-reported, cutoff >39)",
+    "base_rate_if_binary": "15.2% trouble falling/staying asleep; 26.6% overall sleep disturbance; 5.1% cyberbullying victimization; 0.5% cyberbullying perpetration"
+  },
+  "3E_Design_Analysis": {
+    "design": "Cross-sectional",
+    "model_type": "Modified Poisson regression with robust standard errors",
+    "model_type_detail": "Three models for each cyberbullying type x each sleep outcome: Model 1 (unadjusted), Model 2 (adjusted for sociodemographics), Model 3 (adjusted for sociodemographics + total recreational screen time). Risk ratios reported. Propensity weights applied from ACS.",
+    "covariates_listed": "Age, sex, race/ethnicity, household income, parent education, study site, total recreational screen time (Model 3)",
+    "SES_in_model": "yes - household income and parent education included",
+    "verbatim_analysis_description": "Multiple modified Poisson regression analyses using robust standard errors were conducted to calculate risk ratios (RR) estimating associations between cyberbullying victimization and perpetration (exposure variables) and sleep problems and disturbance (outcome variables)."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "RR",
+      "value": "1.87",
+      "CI_95": "(1.57, 2.21)",
+      "p_value": "",
+      "outcome_scale_note": "Cyberbullying victimization -> trouble falling/staying asleep (Model 3, fully adjusted)",
+      "verbatim_quote": "In models adjusted for sociodemographic factors and screen time (Model 3), cyberbullying victimization was associated with a 1.87 (95% CI 1.57, 2.21) higher risk for trouble falling/staying asleep",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "RR",
+      "value": "1.16",
+      "CI_95": "(1.00, 1.33)",
+      "p_value": "",
+      "outcome_scale_note": "Cyberbullying victimization -> overall sleep disturbance (Model 3, fully adjusted)",
+      "verbatim_quote": "and a 1.16 (95% CI 1.00, 1.33) greater risk of overall sleep disturbance.",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "RR",
+      "value": "1.95",
+      "CI_95": "(1.21, 3.15)",
+      "p_value": "",
+      "outcome_scale_note": "Cyberbullying perpetration -> trouble falling/staying asleep (Model 3, fully adjusted)",
+      "verbatim_quote": "cyberbullying perpetration was associated with trouble falling/staying asleep (RR 1.95, 95% CI 1.21, 3.15)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "RR",
+      "value": "1.49",
+      "CI_95": "(1.00, 2.22)",
+      "p_value": "",
+      "outcome_scale_note": "Cyberbullying perpetration -> overall sleep disturbance (Model 3, fully adjusted)",
+      "verbatim_quote": "and overall sleep disturbance (RR: 1.49, 95% CI 1.00, 2.22).",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "RR",
+      "value": "1.02",
+      "CI_95": "(1.01, 1.03)",
+      "p_value": "",
+      "outcome_scale_note": "Total recreational screen time -> trouble falling/staying asleep (Model 3)",
+      "verbatim_quote": "Total recreational screen time [in Model 3]... trouble falling/staying asleep RR 1.02 (1.01, 1.03)",
+      "below_threshold": "yes"
+    },
+    {
+      "effect_type": "RR",
+      "value": "1.01",
+      "CI_95": "(1.01, 1.01)",
+      "p_value": "",
+      "outcome_scale_note": "Total recreational screen time -> overall sleep disturbance (Model 3)",
+      "verbatim_quote": "Total recreational screen time... overall sleep disturbance RR 1.01 (1.01, 1.01)",
+      "below_threshold": "yes"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "ES-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "yes",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "Digital media education and counseling for adolescents, parents, teachers, and clinicians could focus on guidance to prevent cyberbullying and support healthy sleep behavior for early adolescents."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "none",
+    "pattern_detail": "The primary cyberbullying-sleep associations are moderate to large (RR 1.87, 1.95). The total screen time RRs are tiny (1.01-1.02 per hour) but are covariates, not the primary focus. The paper notes effects were 'slightly attenuated' when controlling for screen time.",
+    "list_1_qualifier": "no",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "POSSIBLE EXCLUSION - primary exposure is cyberbullying, not screen time per se. Screen time is a covariate.",
+    "ambiguity_notes": "The paper's primary focus is cyberbullying (victimization/perpetration) as the exposure, with sleep as the outcome. Screen time is included only as a covariate in Model 3. The screen time RRs are very small (1.01-1.02 per hour). Very low base rate of cyberbullying perpetration (0.5%). Cross-sectional design."
+  }
+}

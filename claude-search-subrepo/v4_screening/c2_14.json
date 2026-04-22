@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract explicitly states: 'Data from the Adolescent Behavior Cognitive Development (ABCD) Study were used to identify clinical and neuroimaging characteristics of participants at late childhood (T1; defined as aged 9-10 years) and early adolescence (T2; defined as age 11-13 years). Children and their parent/caregiver were recruited across 21 US cities.' Uses U.S. ABCD Study data."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract states: 'Outcomes included screen time assessed using a self-report questionnaire'. However, no PDF available and abstract provides no details on what specific smartphone/SM variable is measured. Generic 'screen time' without clarification of phone/SM specificity. Does not meet FT-IC2 requirement for a SPECIFIC smartphone OR social media variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Abstract reports: 'Each additional hour of daily screen time at T1 was associated with a 0.12-point (95% CI, 0.04-0.20; P = .008) increase in Child Behavior Checklist depressive score at T2.' Reports regression/inferential test (screen time → depression outcome)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Abstract provides extractable numerics: β coefficient of 0.12 (95% CI, 0.04-0.20, p=.008) for screen time → depression; mediation pathway statistics (36.4%, 95% CI, 18.2%-63.6%)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Prospective longitudinal study with mediation analysis examining associations between T1 screen time and T2 depressive symptoms, with sleep duration and white matter as mediators."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in JAMA Pediatrics 2025; no evidence of duplicate/preprint/protocol."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Paper reports screen time (exposure) → depression (non-SM outcome), not smartphone/SM as dependent variable. This is an IV→non-SM-outcome analysis, explicitly excluded by FT-EC7 rule.",
+    "edge_cases_applied": [],
+    "notes": "Paper EXCLUDED because FT_IC2 NOT_MET: no PDF to verify specificity of 'screen time' variable. While abstract mentions 'screen time,' lacks clarity on whether this is smartphone/mobile phone-specific or generic screen time composite (TV, streaming, etc.). Without PDF confirmation of a SPECIFIC phone/SM variable, cannot justify inclusion."
+  },
+  {
+    "paper_id": "305",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract states: 'Data were from the first three waves of the Adolescent Brain Cognitive Development (ABCD) Study (5,596 9-10-year-old youth...).' Uses U.S. ABCD Study data."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract mentions 'experiences of peer (overt, relational, reputational) and cyber victimization' as measured variables. However, cyber victimization measured in isolation with no separately measured smartphone/SM variable. Abstract provides no evidence of a SPECIFIC smartphone or social media variable (e.g., SM time, app use, platform-specific SM, phone ownership). Cyberbullying/victimization alone without separately measured phone/SM fails FT-IC2 per edge case E6."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Abstract reports mixed-effects logistic regression: 'SGM youth were at greater risk for lifetime suicidal ideation (odds ratio [OR] 4.75, 95% CI 3.74-6.03)' and 'SGM youth experienced elevated peer (overt: β = 0.40, 95% CI 0.31-0.49; relational: β = 0.43, 95% CI 0.34-0.53; reputational: β = 0.51, 95% CI 0.42-0.60) and cyber victimization (OR 2.35, 95% CI 1.77-3.11).' Reports inferential tests with coefficients."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Abstract provides multiple extractable numerics: OR values, β coefficients, 95% CIs, and percentages (22%-28% mediation effect)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Longitudinal mediation study with mixed-effects logistic regression examining waves 1-2 predictors (SGM identity) → wave 3 outcomes (suicidality), with mediation through peer and cyber victimization."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Journal of Child Psychology and Psychiatry, 2025; no evidence of duplicate/preprint."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Paper does not report smartphone/SM as dependent variable. Instead, it examines SGM identity and victimization (peer and cyber) as predictors of suicidality. Cyber victimization is measured but not a phone/SM variable per se.",
+    "edge_cases_applied": ["E6"],
+    "notes": "Paper EXCLUDED because FT_IC2 NOT_MET: cyber victimization is measured but without a separately measured, SPECIFIC smartphone or social media variable. Per edge case E6: 'Cyberbullying — paper also measures phone/SM separately → MET. Cyberbullying only → NOT_MET.' This paper measures cyber victimization only without explicit phone/SM measurement."
+  },
+  {
+    "paper_id": "94",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "PDF Methods section: 'The ABCD Study is a longitudinal study with 11,875 children (ages 9–10 years) from 22 sites across the United States... This study used ABCD Release 4.0 data... Our primary analysis focused on year 2 data, which has 3 measures of sleep duration... This left 5596 participants across 21 sites for our principal component analysis (PCA)... and 3037 participants with complete data on all sleep measures.' Uses U.S. ABCD Study data."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "PDF Results and Figure 3A explicitly report: 'somatomotor disconnection was related to key developmental contexts, including... screen time (β = 0.13, p = 2.6 × 10^-19).' Screen time is measured as a specific variable; confirmed in Methods section under 'Socioenvironmental Context' examining 'screen time' as a predictor of somatomotor disconnection. This qualifies as smartphone/screen-related exposure measurement."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "PDF reports multiple inferential tests: (1) Multivariate regression predicting sleep from 836 graph metrics (rCV = 0.230, pPERM < .0001); (2) Linear regression models predicting somatomotor disconnection from screen time (β = 0.13, p = 2.6 × 10^-19); (3) Linear regression predicting cognitive/behavioral outcomes from somatomotor disconnection (e.g., externalizing symptoms β = 0.05, p = 5.0 × 10^-4; grades β = -0.04, p = .007; general cognitive ability β = -0.06, p = 4.8 × 10^-5). Screen time is independently tested as a predictor."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "PDF Figure 3A provides: 'screen time (β = 0.13, p = 2.6 × 10^-19)' with 95% CIs plotted. Additionally reports β coefficients for associations between somatomotor disconnection and externalizing (β = 0.05, p = 5.0 × 10^-4), grades (β = -0.04, p = .007), and cognitive ability (β = -0.06, p = 4.8 × 10^-5)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using multivariate predictive modeling (principal component regression with cross-validation), graph theory, and linear regression models examining associations between sleep duration, brain architecture (somatomotor disconnection), environmental contexts (screen time, SES), and behavioral/cognitive outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Biological Psychiatry: Global Open Science, July 2025 (https://doi.org/10.1016/j.bpsgos.2025.100522). No evidence of duplicate; PDF confirms original research article."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Paper examines screen time as a predictor/contextual variable related to somatomotor disconnection (a brain marker), which is linked to sleep duration and downstream outcomes (cognition, psychopathology). Screen time is NOT the dependent variable in all analyses; instead it is one of multiple predictors of brain architecture and correlates with behavioral/cognitive phenotypes. Additionally, paper includes individual psychological/behavioral predictors (externalizing/internalizing symptoms, cognitive ability) and reports cross-sectional architecture-phenotype associations.",
+    "edge_cases_applied": [],
+    "notes": "Paper INCLUDED. Meets all criteria: (1) Uses U.S. ABCD (FT-IC1 MET); (2) Measures screen time as a specific exposure variable with reported coefficient (FT-IC2 MET); (3) Reports multiple inferential tests linking screen time to brain/behavioral outcomes (FT-IC3 MET); (4) Provides β coefficients, p-values, CIs (FT-IC4 MET); (5) Original empirical analysis with multivariate modeling (FT-IC5 MET); (6) Published journal article (FT-IC6 MET); (7) FT-EC7 does not apply (screen time not sole DV, cross-sectional architecture associations included)."
+  }
+]

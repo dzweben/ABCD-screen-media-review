@@ -1,0 +1,99 @@
+[
+  {
+    "paper_id": "388",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study with 9254 youth aged 9-10 years from baseline cross-sectional data release"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen media activity (SMA) - assessed youth non-educational SMA including TV shows/movies, videos, video games on computer/console/phone, messaging, and social networking sites; video chat"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic mixed models with inferential tests; groupwise comparisons (ps < .001); adjusted odds ratios reported for SMA associations with recreational activities"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios with 95% CI reported: games/movies vs social media (0.83, 95% CI 0.76-0.89); general SMA with soccer (0.93, 0.88-0.98) and baseball (0.92, 0.86-0.98)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis - cross-sectional study analyzing associations between SMA and recreational activity endorsement in 9-10-year-olds"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in BMC Public Health, 2020"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper reports cross-sectional analyses with SMA as predictor (IV) of recreational activity outcomes (DV), not SMA as DV predicted by demographics; includes individual factors (cognition, psychopathology)",
+    "edge_cases_applied": [
+      "E9"
+    ],
+    "notes": "E9 applies: recreation displacement - paper specifically tests phone/SM vs other recreational activities. Results show minimal displacement when accounting for confounding factors."
+  },
+  {
+    "paper_id": "57",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study baseline data from 9987 families with youth ages 9-10 years (age 9-10 years, SD=0.62)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen time types: TV/movies, videos, video games, texting, social media, video chatting, mature video games, R-rated movies; scored on typical weekday and weekend day"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed graphical models with network analysis; inferential tests including regression coefficients and permutation-based tests; multiple associations between screen time types and mood symptoms with reported p-values and coefficient estimates"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Coefficients (b values) and p-values reported throughout; e.g., age-inappropriate screen time associations with mood symptoms (p < .001); node strength estimates with confidence intervals from bootstrapped networks"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical network analysis - analyzes relationships of mood symptoms with different types of screen time using network psychometric approach"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Abnormal Child Psychology, 2020"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is predictor (IV) of mood symptoms (DV), not DV outcome of demographics; includes individual psychological factors (BIS/BAS behavioral inhibition/activation systems, parental monitoring as moderators)",
+    "edge_cases_applied": [
+      "E3"
+    ],
+    "notes": "E3 applies: latent construct with extractable screen-time-specific pathways. Network analysis demonstrates distinct associations between different screen time types and mood symptoms; age-inappropriate content shows stable significant associations independent of other screen time types."
+  },
+  {
+    "paper_id": "239",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Uses Dutch ABCD Study (children aged 9-11 years, n=2,952) and Spanish INMA Project (adolescents 17-18 years, n=261), not U.S. ABCD Study"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time: information on children's use of mobile phones, tablets, and laptops; whole-brain and lobe-specific RF-EMF doses estimated from screen device use"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analysis with inferential tests; multiple linear regression comparing RF-EMF and screen time associations with validated cognitive test outcomes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports beta coefficients with 95% CI: non-verbal IQ [β -0.01 points (95%CI -0.02; -0.01)]; visuomotor coordination [β 970.07 milliseconds (95%CI 60.28; 1879.85)]; three-back detectability [β-0.07 (95%CI -0.15; -0.01)]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis examining associations between RF-EMF exposure, screen time, and cognitive function outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published conference/journal abstract in Environmental Epidemiology, 2019"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT_IC1 (uses non-U.S. ABCD cohort); inclusion criteria require U.S. ABCD Study data",
+    "edge_cases_applied": [],
+    "notes": "Paper uses Dutch ABCD Study and Spanish INMA Project rather than U.S. ABCD Study; fails inclusion criteria at FT_IC1 stage. Screen time is predictor of cognitive outcomes, not as DV."
+  }
+]

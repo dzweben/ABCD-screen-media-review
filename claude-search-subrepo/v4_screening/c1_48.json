@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "302",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline (2016-2018, ages 9-10 years), N=11,066. Methods state: 'We analyzed data from the ABCD 3.0 release for the baseline (2016-2018, ages 9-10 years) and 1-year follow-up (2017-2019, ages 10-11 years) assessments.'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific smartphone/SM variables. Methods: 'Children answered questions about typical hours per day spent on six different screen modalities (viewing/streaming television shows or movies, watching/streaming videos [e.g., YouTube], playing video games, texting, video chatting [e.g., Skype, Facetime] and social networking [e.g., Facebook, Instagram, Twitter]).' Results: texting, video chat, and video games examined separately."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses linking baseline screen time behaviors (exposure) to BMI percentile at 1-year follow-up (non-SM outcome). Table 2 shows regression coefficients for each screen time modality predicting BMI percentile."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports β coefficients with 95% CIs and p-values. Table 2: texting B=0.92, 95% CI 0.29-1.55, p=0.004; video chat B=0.72, 95% CI 0.09-1.36, p=0.025; video games B=0.42, 95% CI 0.06-0.78, p=0.021."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal cohort analysis. Study design: prospective cohort with baseline and 1-year follow-up assessments; multiple linear regression to determine prospective associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Pediatric Obesity, 2021;16(12):e12827. Not a preprint, conference abstract, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the independent variable (predictor) and BMI percentile is the dependent variable (outcome). FT-EC7 only applies when smartphone/SM is the DV with demographic-only predictors. Here, BMI is the outcome of interest, not screen time.",
+    "edge_cases_applied": ["E2"],
+    "notes": "Phone/SM-specific variables (texting, video chat, social networking, video games) are examined separately with own coefficients reported. Large, diverse US cohort."
+  },
+  {
+    "paper_id": "420",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study. Methods: 'All data were from the existing Adolescent Brain Cognitive Development (ABCD) dataset... which draws from 21 research sites across the country, which in total recruited 11,875 children, ages 9 to 10 years.' Analysis on sample of 11,727 children ages 9 to 10.92 years."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen time modalities. Methods: 'A 14-question Screen Time Questionnaire (STQ) was completed by the children, providing self-report measures of screen time use, divided by weekdays and weekends... television shows and movies, videos, video games, texting, social media, and video chat.' Results examine relationships between different types of screen time and outcomes."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation and regression analyses linking screen time to mental health, academic, and social outcomes. Methods: 'Bivariate Pearson correlations between each of the variables were computed... Multiple linear regressions were then run, separately by sex.' Results reported in Tables 1-4 with statistical tests (t-statistics, p-values)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports t-statistics, standardized betas, partial correlations, and p-values. Table 2: Main effect of screen time on depression (Standardized Beta=0.018, t=1.24, p=.214); on externalizing (Standardized Beta=0.083, t=5.69, p<.001*); on ADHD (Standardized Beta=0.088, t=6.04, p<.001*)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Study design: cross-sectional baseline ABCD analysis examining correlations and regressions between screen time and various outcomes including depression, anxiety, academic performance, sleep, and peer relationships."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in PLoS ONE, 2021;16(9):e0256591. Not a preprint, conference abstract, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional study measuring screen time and outcomes at the same timepoint. FT-EC7 criteria (b) and (c) require longitudinal/prospective design with demographic-only predictors of screen time as DV, which does not apply here. Additionally, paper includes psychological/clinical predictors and reports screen time→outcome associations.",
+    "edge_cases_applied": ["E8"],
+    "notes": "Multiple screen time modalities examined separately. Large diverse US sample. Main effects and interaction tests reported with corrected significance levels. Effect sizes noted as small."
+  },
+  {
+    "paper_id": "473",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study subsample. Methods: 'Four ABCD study sites that were roughly geographically dispersed... Four ABCD study sites participated in this pilot substudy project... 67 participants (aged 11-12 years)' from the larger ABCD cohort. Participants recruited as part of ABCD study 2-year follow-up."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific smartphone use variables via passive sensing. Methods: 'passive, objective phone app methods for assessing smartphone screen use' including 'streaming (mean 1 hour 57 minutes per day... communication (mean 48 minutes per day... gaming (mean 41 minutes per day... and social media (mean 36 minutes per day).' Results: Table 1 lists streaming, YouTube, communication, gaming, social media, SMS, reading, music, and news as measured app categories."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports correlation and inferential analyses. Results: 'Self-report of smartphone screen use was partly consistent with objective measurement (r=0.49)' with significance testing. Methods: 'Analyses of variance were run to assess differences in categorical app use by demographics.' Pearson correlations and paired sample t-tests reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports correlation coefficients, means, standard deviations, and p-values. Results: 'r=0.49, P<.001' for self-report vs passive sensing correlation; Table 2 reports means (SD) for self-report and EARS app use; Figure 1 shows r=.49, P<.001 for parent-report correlation."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical measurement/validation study. Study design: feasibility and validation substudy within ABCD examining correspondence between passive sensing and self-report/parent-report of smartphone screen use, plus app use differences by demographics."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in JMIR Mental Health, 2021;8(10):e29426. Not a preprint, conference abstract, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional measurement study comparing passive sensing to self-report and examining app use patterns by demographics. FT-EC7 requires longitudinal/prospective design with smartphone/SM as DV predicted by demographic-only variables. This paper is primarily a validation/feasibility study, not a longitudinal analysis of demographic predictors of screen time.",
+    "edge_cases_applied": ["E5"],
+    "notes": "Measurement paper that also reports phone/SM associations with external outcome (self-report and parent-report concordance). Small pilot subsample (N=67) but from larger ABCD cohort. Passive sensing data provides objective measurement of app-specific use."
+  }
+]

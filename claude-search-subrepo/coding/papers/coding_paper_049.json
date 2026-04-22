@@ -1,0 +1,123 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": 49,
+    "citation": "Nagata, J. M., Smith, N., Garg, A., Ganson, K. T., Haaland, B. A., Mehus, C. J., ... & Baker, F. C. (2023). Identification and characterization of screen use trajectories from late childhood to adolescence in a US-population based cohort study. Preventive Medicine Reports, 36, 102428.",
+    "doi": "10.1016/j.pmedr.2023.102428",
+    "journal": "Preventive Medicine Reports",
+    "year": 2023,
+    "first_author": "Nagata, J. M.",
+    "senior_author": "Baker, F. C.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3B_Sample_Data": {
+    "candidate_id": 49,
+    "n_analytic": 11869,
+    "abcd_release": "Not explicitly stated; data from 2016-2021",
+    "timepoints_used": "baseline, 1yr, 2yr, 3yr",
+    "n_timepoints": 4,
+    "verbatim_sample_description": "Participants of the Adolescent Brain Cognitive Development (ABCD) Study (2016-2021) with non-missing screen use data at any wave of the study follow-up were included in the analysis (N = 11,869).",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Growth mixture model approach using all available waves."
+  },
+  "3C_Exposure": {
+    "candidate_id": 49,
+    "exposure_variable": "Screen use trajectory class membership (Drastically Increasing vs. Gradually Increasing)",
+    "exposure_instrument": "ABCD Youth Screen Time Survey",
+    "modalities": "total screen time (TV, videos, video games, social media, video chat, texting)",
+    "operationalization": "Continuous (standardized total screen use as outcome in growth mixture model, with age as time variable)",
+    "time_frame": "Typical day",
+    "reporter": "Self-report (youth)",
+    "verbatim_exposure_description": "Average daily screen use was calculated as the sum of self-reported hours of daily use of television, videos, video games, social media, video chat, and texting",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "This is a trajectory analysis; screen time is the outcome of the growth mixture model, not a predictor."
+  },
+  "3D_Outcome": {
+    "candidate_id": 49,
+    "primary_outcome": "Screen use trajectory class membership and sociodemographic/discrimination correlates",
+    "outcome_domain": "other",
+    "outcome_instrument": "Growth mixture model class assignment; Perceived Discrimination Scale",
+    "outcome_type": "categorical",
+    "base_rate_if_binary": "Drastically Increasing: 1533/11869 (12.9%); Gradually Increasing: 10336/11869 (87.1%)",
+    "verbatim_outcome_description": "Growth mixture modeling with standardized total screen use as the outcome and age as a continuous variable was used to identify the optimal number of subgroups of participants with similar trajectories.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "This paper characterizes screen use trajectories. There is no traditional screen-time-to-health-outcome association. Screen time IS the outcome."
+  },
+  "3E_Design_Analysis": {
+    "candidate_id": 49,
+    "study_design": "longitudinal with baseline control",
+    "model_type": "other",
+    "model_type_detail": "Growth mixture modeling (GMM) using lcmm package in R",
+    "covariates_listed": "None listed for the GMM; sociodemographic characteristics examined descriptively",
+    "n_covariates": 0,
+    "multiple_comparisons_correction": "None",
+    "verbatim_analysis_description": "Growth mixture modeling with standardized total screen use as the outcome and age as a continuous variable was used to identify the optimal number of subgroups of participants with similar trajectories. Subsequently, sociodemographic characteristics (baseline) and perceived racism and discrimination (year 1) was assessed for each subgroup population. All analyses were conducted in R (version 4.2.1) with 'lcmm' package.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Primarily descriptive. No formal regression models linking screen time to health outcomes."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "candidate_id": 49,
+      "effect_id": 1,
+      "predictor": "Screen use trajectory class (Drastically Increasing vs Gradually Increasing)",
+      "outcome": "Descriptive comparison of racial/ethnic minority proportion",
+      "effect_type": "other",
+      "standardized_or_unstandardized": "N/A",
+      "effect_value": null,
+      "ci_lower": null,
+      "ci_upper": null,
+      "p_value": "Not reported (descriptive only)",
+      "se": "",
+      "outcome_scale_note": "Percentages reported for class characteristics; no formal effect sizes reported",
+      "base_rate_for_or": "",
+      "r2_or_variance_explained": "",
+      "in_supplementary": "No",
+      "verbatim_quote": "Higher proportions of the Drastically Increasing group were racial/ethnic minorities (70%) as compared to the Gradually Increasing group (45%).",
+      "context": "Primary"
+    }
+  ],
+  "3G_Reporting_Quality": {
+    "candidate_id": 49,
+    "p_value_reporting_style": "Threshold language only",
+    "abstract_uses_significance_language": "No",
+    "abstract_significance_verbatim": "",
+    "p_values_in_abstract": "No",
+    "cis_reported_for_primary": "No",
+    "large_n_acknowledged": "No",
+    "large_n_verbatim": "",
+    "small_es_acknowledged": "NOT APPLICABLE",
+    "small_es_verbatim": "",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": "Brief research letter format. No formal effect sizes or p-values reported for primary findings. Purely descriptive trajectory analysis."
+  },
+  "3H_Recommendations": {
+    "candidate_id": 49,
+    "recommendations_issued": "Yes",
+    "recommendation_target": "clinicians, policymakers, researchers",
+    "recommendation_verbatim": "Our study highlighted that early adolescence between 11 and 13 years old is an important target time window for behavioral interventions that promote healthy screen use in adolescents. Future studies should assess key factors that shape the trajectories of screen use across developmental periods further into later adolescence to inform guidance for pediatricians, parents, and adolescents.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  },
+  "3I_Rhetorical_Moves": {
+    "candidate_id": 49,
+    "population_level_override": "No",
+    "population_override_verbatim": "",
+    "modifiable_factor_framing": "Yes",
+    "modifiable_factor_verbatim": "early adolescence between 11 and 13 years old is an important target time window for behavioral interventions that promote healthy screen use",
+    "per_unit_framing": "No",
+    "per_unit_verbatim": "",
+    "discussion_characterization": "The discussion frames screen time trajectory differences as linked to socioeconomic disadvantage and perceived discrimination. The paper recommends interventions to promote healthy screen use during early adolescence, though no health outcomes are examined. The framing implies that higher screen time is inherently problematic without testing associations with any health outcome.",
+    "coder_confidence": "Medium",
+    "ambiguity_notes": "No formal effect sizes are reported. The paper is a brief research letter with a growth mixture model. Screen time is the outcome, not a predictor of health outcomes. Difficult to extract standard effect sizes.",
+    "coder": "AI",
+    "date_coded": "2026-03-24",
+    "notes": ""
+  }
+}

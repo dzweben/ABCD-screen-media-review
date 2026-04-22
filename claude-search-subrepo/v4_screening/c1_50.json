@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "166",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses first wave of ABCD Study data (4524 participants, 9-10 year olds, U.S. sample)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time defined as generic 'average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device' — no smartphone/SM-specific variable; composite without breakdown"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; screen time as aggregate variable only"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; cannot extract smartphone/SM-specific coefficient"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analyses using machine learning regression (LASSO, ridge, elastic net) predicting BMI from 43 demographic, psychological, behavioral, and cognitive variables"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Psychological Medicine 2020, DOI: 10.1017/S0033291719001545"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 not met; generic screen time composite without SM-specific breakdown does not qualify",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper measures generic screen time as one of 43 predictors of BMI. While screen time appears as significant variable in models, it is not a smartphone or social media-specific measure. Fails FT_IC2 per edge case E2 (composite only, no SM-specific breakdown)."
+  },
+  {
+    "paper_id": "156",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline data (Release 2.0); N=11,000+ U.S. children age 9-10 across 21 study sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen media variables: TV, video, video game, social media, texting, and video chat — all separately reported"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression tests linking each screen media type to sleep-wake disturbances (insomnia, excessive sleepiness, sleep onset latency, sleep duration, etc.); coefficients reported with p-values"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios, 95% CIs, effect sizes (d), and p-values reported in Tables 2 and 3 and text (e.g., social media ≥2 hours: OR=1.59, 95% CI 1.39-1.82, p<.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD baseline survey; children report screen media use; parents report sleep disturbances via Sleep Disturbance Scale for Children"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Sleep Health 2020, DOI: 10.1016/j.sleh.2020.07.002"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional analysis (not longitudinal); screen media are predictors of sleep outcomes, not outcomes predicted by demographics. FT_EC7 only applies to longitudinal demographic-only predictors of phone/SM use.",
+    "edge_cases_applied": [],
+    "notes": "Strong paper with multiple specific screen media variables separately measured and analyzed. Social media, texting, and video chat measured independently. All criteria met."
+  },
+  {
+    "paper_id": "162",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (Release 2.0); N=7994 unrelated children, mean age 9.9 years, U.S. population-based sample"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract mentions 'higher weekend screen use time' as a risk factor for suicidality, but full PDF not available to verify if specific smartphone/social media variables are separately measured from other screen time. Generic 'screen use time' without SM/phone specificity evident from abstract."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "PDF not available; abstract indicates bootstrapped logistic regression was used but cannot verify specific statistical tests and coefficients for smartphone/SM variables"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "PDF not available; abstract shows OR values (e.g., 1.3 for screen use) but cannot verify extraction of specific SM/phone coefficients without full text"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical study using bootstrapped logistic regression to quantify associations between suicidality and multiple risk/protective factors from ABCD data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, The Lancet Psychiatry 2020, DOI: 10.1016/s2215-0366(20)30049-3"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen use is independent variable, not dependent variable; suicidality is outcome. FT_EC7 does not apply.",
+    "edge_cases_applied": [],
+    "notes": "PDF not available; screened based on abstract only. Abstract references 'weekend screen use time' as risk factor (OR 1.3, 95% CI 1.2-1.7) but does not specify whether this is smartphone/SM-specific or generic screen time. Likely does not meet FT_IC2 based on abstract language, but full verification requires PDF access."
+  }
+]

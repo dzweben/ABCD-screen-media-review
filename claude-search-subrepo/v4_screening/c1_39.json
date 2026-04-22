@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (2016-2021) with N=11,869 participants"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Measures generic total screen time as sum of television, videos, video games, social media, video chat, and texting with no separate phone/SM-specific coefficient extractable. Composite outcome with no breakdown per E2."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; ineligible to proceed"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT_IC2 not met; composite outcome only"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using growth mixture modeling to identify screen use trajectories from late childhood to adolescence"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Preventive Medicine Reports, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 not met; paper excluded due to generic screen time composite",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper uses total screen time composite; lacks separate smartphone or social media specific variable for inclusion."
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (N=11,876 at baseline) with HCP-D validation sample"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Identifies specific SMA patterns: higher-frequency video-centric pattern (entertainment-focused) and lower-frequency pattern; includes TV, videos, games, texting, social networking measured via ABCD Youth Screen Time Questionnaire (14 items)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed effects (LME) modeling with multiple outcomes; reports associations between SMA patterns and neurocognitive performance, behavioral problems, psychotic-like experiences, impulsivity, reward sensitivity, and resting-state brain functional connectivity"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports standardized β coefficients with 95% CIs and FDR-corrected p-values: video-centric vs lower-frequency SMA on neurocognitive performance (β=-0.12, 95% CI [-0.08, -0.16], FDR p<.001); behavioral problems (β=0.13, 95% CI [0.09, 0.18], FDR p<.001); psychotic-like experiences (β=0.31, 95% CI [0.27, 0.36], FDR p<.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with cross-sectional baseline patterns and longitudinal follow-up (1-year, 2-year) examining persistence of patterns and associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Journal of the American Academy of Child & Adolescent Psychiatry, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper includes cross-sectional analyses with SMA patterns as grouping variables (not DV); also reports associations with psychological/behavioral outcomes (impulsivity, reward sensitivity, brain connectivity) indicating individual characteristic predictors beyond demographic-only framework",
+    "edge_cases_applied": ["E3"],
+    "notes": "Strong paper with platform-specific SMA measurement and multiple developmental outcomes; latent patterns identified and coefficients extractable"
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (baseline ages 9-10) from 10,000+ youth across 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Includes screen time as predictor variable in machine learning models; measured from ABCD Screen Time Questionnaire and featured in predictive feature importance analysis (appears in continuous and categorical feature weights across PCR/LASSO models)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning regression models (PCR and LASSO) with reported correlation coefficients between predicted and actual ADHD symptoms; LME models with fixed effects of SMA groups and coefficients reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports multiple r values and 95% CIs across models and timepoints (e.g., 1-year full sample PCR r=0.40, CI 0.38-0.42; LASSO r=0.39, CI 0.37-0.41; 2-year full sample PCR r=0.40, CI 0.38-0.42)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using machine learning predictive modeling with cross-validation across ABCD sites and left-out test data validation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Translational Psychiatry, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is a predictor (IV) of ADHD symptoms (DV), not the dependent variable. FT_EC7 only applies when smartphone/SM is the DV. Paper uses screen time among multiple predictors including neurocognitive, demographic, and child self-report features.",
+    "edge_cases_applied": ["E4"],
+    "notes": "Machine learning approach with screen time as one of many predictive features; strong generalizability across sites"
+  }
+]

@@ -1,0 +1,1362 @@
+Translational Psychiatry
+
+ARTICLE
+
+www.nature.com/tp
+
+OPEN
+
+Neural correlates differ between crystallized and ﬂuid
+intelligence in adolescents
+Bowen Qiu 1, Rui Qian1, Baorong Gu1, Zichao Li1, Zhifan Chen1, Xinyi Xu1, Huaijin Gao1, Yiwei Chen1, Ruoke Zhao1, Ruike Chen1,
+✉
+✉
+Yuqi Zhang1, Lingxuan Zhang1, Zhiyong Zhao1,2, Mingyang Li 1,2 and Dan Wu 1
+
+1234567890();,:
+
+© The Author(s) 2025
+
+Fluid and crystallized intelligence are acknowledged as distinct facets of cognitive ability during brain development, but the speciﬁc
+neural substrates and molecular mechanisms underlying them remain unclear. This study used a sample comprising 7471 young
+adolescents (mean age 9.87 ± 0.62 years) from the ABCD cohort to elucidate the differential neural correlates of ﬂuid and
+crystallized intelligence. Our ﬁndings indicated that micro-level brain MRI phenotypes such as water diffusivity were closely
+associated with ﬂuid intelligence, whereas macro-level brain MRI phenotypes such as gray matter cortical thickness were indicative
+of crystallized intelligence. We further investigated the molecular mechanisms underlying ﬂuid and crystallized intelligence by
+correlating the characteristic MRI markers with spatial transcriptome proﬁles and PET imaging. Results showed that ﬂuid
+intelligence had signiﬁcant associations with serotonin and glutamate system, while crystallized intelligence was related to
+serotonin, dopamine and acetylcholine system. Furthermore, we examined the impacts of lifestyle factors on these two forms of
+intelligence and how the molecular pathways mediated these impacts. Our investigation suggested that physical activities, screen
+use and sleep duration inﬂuenced ﬂuid intelligence mainly through mGlu5 receptors and crystallized intelligence through 5HT1a
+and D2 receptors. In conclusion, these ﬁndings illustrated a distinct neural basis between ﬂuid and crystallized intelligence from the
+perspectives of neuroimaging, neurotransmitters, and lifestyles in young adolescents.
+Translational Psychiatry (2025)15:246 ; https://doi.org/10.1038/s41398-025-03467-4
+
+INTRODUCTION
+Comprehending the mechanism of general intelligence has been
+an important area of research for over a century [1]. General
+intelligence can be decomposed into ﬂuid and crystallized
+intelligence [2, 3]. Fluid intelligence is characterized by the
+capacity to reason and solve problems in novel situations,
+reﬂecting the ability to adapt and learn independently of prior
+knowledge. In contrast, crystallized intelligence is shaped by
+accumulated experiences and learning, representing knowledge
+and expertise developed over time [4]. Distinguishing between
+ﬂuid and crystallized intelligence is vital for understanding how
+individuals approach cognitive tasks, highlighting the dynamic
+interplay between adaptability and accumulated knowledge in
+human cognition. In adolescents, the development of ﬂuid and
+crystallized intelligence follows distinct trajectories and fundamentally shaped brain development [5, 6].
+Many studies tried to identify differences between two forms of
+intelligence using neuroimaging technology [7, 8] and identiﬁed
+several imaging characteristics [9–11]. Fluid intelligence was found
+related to the executive network within the dorsolateral prefrontal
+cortex, anterior cingulate gyrus, and inferior and superior parietal
+lobules [12, 13]. Higher crystallized intelligence level was found
+associated with cortical volume and thickness of the whole brain
+[14–16]. Moreover, ﬂuid and crystallized intelligence both had
+
+signiﬁcant associations with white-matter tract integrity and
+microstructural properties, which might be related to information
+processing [17–19]. However, these studies mainly focused on
+adults [20], and thus could not intuitively reﬂect the basis of
+adolescent intelligence.
+Several studies have reported that neurotransmitter systems
+were associated with general intelligence using tools such as
+blood biochemical tests, DNA analysis, and positron emission
+tomography (PET). The neurotransmitter systems included serotonin system [21–23], dopamine [24–26], acetylcholine [27, 28],
+GABA [29, 30] and glutamate [29, 31]. Only a limited number of
+studies have attempted to examine a speciﬁc form of intelligence
+[22, 32]. Due to the lack of separate quantiﬁcation of ﬂuid and
+crystallized intelligence, previous research on molecular mechanisms did not distinguish the neurotransmitter basis of ﬂuid and
+crystallized intelligence [8].
+Besides the molecular drivers, lifestyle was known to have a
+signiﬁcant impact on adolescent intelligence [33, 34], and 24-H
+Movement Guidelines for Children and Youth were suggested to
+promote mental health and intelligence development [35–38].
+The guidelines recommended daily physical activity, adequate
+sleep duration, and limited screen time to promote overall wellbeing and cognitive development in children and youth. Previous
+studies indicated that physical activities [39, 40] had a positive
+
+1
+Key Laboratory for Biomedical Engineering of Ministry of Education, Department of Biomedical Engineering, College of Biomedical Engineering & Instrument Science, Zhejiang
+University, Hangzhou, China. 2Children’s Hospital, Zhejiang University School of Medicine, National Clinical Research Center for Child Health, Hangzhou, China.
+✉email: mylee_postdoc@zju.edu.cn; danwu.bme@zju.edu.cn
+
+Received: 12 January 2025 Revised: 23 May 2025 Accepted: 7 July 2025
+
+B. Qiu et al.
+
+2
+
+Fig. 1 The study workﬂow. a Study datasets and main measures used in the present study; b Two different linear mixed models (LME).
+Separate model investigated the direct relationship between MRI phenotypes and two forms of intelligence, while combined model
+investigated the relationship between MRI phenotypes and one intelligence after removing the inﬂuence of the other one; c Spatial
+correlation between intelligence-associated MRI maps and AHBA transcriptome maps, followed by GO/KEGG enrichment; d Spatial correlation
+between intelligence-association MRI maps and neurotransmitter density maps; e Spatial correlation between lifestyle-mediation maps and
+neurotransmitter density maps.
+
+effect on adolescent intelligence. Meanwhile, screen use was
+traditionally believed to have negative effects [41, 42], and the
+causal effect was recently conﬁrmed through the method of
+Mendelian Randomization [43]. Short sleep duration was also
+shown to hurt intelligence development [44–46]. However, the
+molecular mechanisms underlying the inﬂuence of those lifestyles
+on intelligence have not been well understood.
+In this study, we aimed to differentiate the neuroimaging
+phenotypes between ﬂuid and crystallized intelligence and to
+further identify the neural and genetic mechanisms supporting
+the two forms of intelligence. We used neuroimaging and
+cognitive data from the Adolescent Brain Cognitive Developmental (ABCD) study. The pipeline of the current study is
+illustrated in Fig. 1. We ﬁrst evaluated the association between
+neuroimaging phenotypes and each form of intelligence measure
+to obtain intelligence-associated MRI maps using the linear mixed
+model (Fig. 1b). We then performed spatial correlation between
+the MRI-intelligence association maps and Allen Human Brain
+Atlas (AHBA) transcriptome maps to identify the highly related
+genes, followed by genetic enrichment analysis (Fig. 1c).
+Furthermore, we correlated the association maps with neurotransmitter density maps from PET (Fig. 1d). Finally, mediation
+analysis was utilized to uncover the association between lifestyles,
+MRI phenotypes, and intelligence, as well as the underlying neural
+basis (Fig. 1e).
+METHODS
+Participants and datasets
+The ABCD study. The ABCD study was a longitudinal population study to
+investigate the development of a diverse group of young adolescents,
+aged 8–18 years, from various sites across the United States (source:
+https://abcdstudy.org). Each participating center ensured that they
+obtained comprehensive written consent from parents and enthusiastic
+assent from the children involved. Rigorous research protocols were
+
+reviewed and approved by the institutional review board of all
+participation sites. For this investigation, we utilized data from the ABCD
+Data Release 5.0. The present analysis included a sample of 7045
+individuals with complete demographic information, intelligence assessments, and MRI data.
+Intelligence measures. Crystallized intelligence and ﬂuid intelligence were
+evaluated using the NIH Toolbox [47, 48], a widely recognized tool known
+for its strong reliability in assessing children [49]. The toolbox encompassed seven tasks: picture vocabulary, ﬂanker inhibitory control and
+attention, list sorting working memory, dimensional change card sort,
+pattern comparison processing speed, picture sequence memory, and oral
+reading recognition. The NIH Toolbox yielded three composite scores for
+crystallized, ﬂuid, and total intelligence [48]. For this study, we used
+corrected t-scores of the crystallized and ﬂuid intelligence.
+Neuroimage data. In the ABCD study, 3D T1- and T2-weighted structural
+images along with diffusion images were obtained using 3 T scanners
+across 21 data collection sites [50]. The scanning and preprocessing details
+have been previously outlined [51]. This study used the preprocessed data
+including macro-structure such as brain volume (BV), surface area (SA), and
+cortical thickness (CT); as well as micro-structure such as fractional
+anisotropy (FA), mean diffusivity (MD), longitudinal diffusivity (LD) and
+transverse diffusivity (TD) in the Destrieux cortical atlas [52].
+Gene expression data. The human microarray-based gene expression data
+were obtained from the AHBA (http://human.brain-map.org) [53]. These
+data were sourced from six postmortem adult brains (1 Hispanic, 2 AfricanAmerican, and 3 Caucasian; aged 24–57 years, comprising one female and
+5 males). Speciﬁcally, AHBA provided comprehensive coverage of nearly
+the entire brain, including normalized expression data of 20,737 genes
+with unique Entrez IDs detected by 58,692 probes obtained from
+3702 spatially distinct tissue samples.
+Given the large transcriptional differences between cortical and
+subcortical regions, we performed gene expression analysis within the
+cortical regions. Then we used the abagen toolkit (https://
+www.github.com/netneurolab/abagen) [54] based on Python to extract
+the transcriptome matrix at the region-of-interest (ROI) level, and ROI
+
+Translational Psychiatry (2025)15:246
+
+B. Qiu et al.
+
+3
+partitioning was based on Destrieux2009 atlas [52]. The processing
+pipeline was summarized in [55]. As a result, we retained a total of
+15,632 genes for further analysis, resulting in a gene expression matrix of
+148 regions × 15,632 genes.
+Neurochemical data. The neurochemical data were derived from the
+average group maps of healthy volunteers who had participated in prior
+PET and SPECT studies, on ﬁfteen receptors and transporters [56], spanning
+eight neurotransmitter systems, including serotonin (5HT1a, 5HT1b, 5HT2a,
+5HT4, and 5HTT), dopamine (D1, D2, and DAT), GABA (GABAa), μ-opioid
+(MU), norepinephrine (NAT), cannabinoid (CB1), acetylcholine (VAChT) and
+glutamate (mGluR5 and NMDA). These density maps, available from an
+online repository (https://github.com/juryxy/JuSpace/tree/JuSpace_v1.5/
+JuSpace_v1.5/) were normalization to the Montreal Neurological Institute
+(MNI) space. Subsequently, the maps were linearly rescaled to a
+standardized range of 0–100 [56]. We calculated the mean value of the
+neurotransmitter data in the 148 regions based on Destrieux2009
+parcellation, and the results were then used to perform the spatial
+correlation with intelligence-related MRI markers.
+Lifestyle data. The lifestyle data were provided by the ABCD study
+[46, 57]. Based on the 24-H Movement Guidelines, we included three kinds
+of lifestyles (physical activity, screen use, and sleep duration) from the
+ABCD Risk Behavior Survey Exercise Physical Activity, Screen Time
+Questionnaire (Parent report), and Sleep Duration Scale for Children
+(Parent report). The value of physical activity represented how many days
+the teenager was physically active over 60 min during the past 7 days.
+Screen use was measured as the average hours an adolescent used screen
+in a day. Sleep scores, ranging from 1 (more than 9 h) to 5 (less than 5 h)
+represented the adolescent sleep duration, where higher scores meant
+shorter sleep duration.
+
+Statistical analysis
+
+Linear mixed effect analysis. The linear associations between ﬂuid/
+crystallized intelligence and structural MRI (sMRI)/ diffusion MRI (dMRI)
+phenotypes were examined using a linear mixed-effect model (LME).
+Considering the high correlation between the two forms of intelligence,
+examining them separately as reported in previous studies [11, 58] may
+not be able to disentangle their intertwined effects. We applied two LME
+models by modeling the ﬂuid and crystallized intelligence separately or
+jointly.
+In the separate LME model, we included age, sex, ethnicity, race, family
+income, and parental education as ﬁxed effects, while also factoring in the
+MRI site as a random effect. In the combined LME model, the other form of
+intelligence was added to the ﬁxed effects.
+Furthermore, brain regions demonstrating signiﬁcant associations
+(unadjusted p < 0.05; in order to include more ROIs with signiﬁcant
+association) with intelligence were utilized to construct intelligence-MRI
+association maps [59], based on the association coefﬁcients in the
+combined LME model. These maps were then utilized for spatial
+correlation analysis in subsequent investigations.
+Partial least regression analysis. PLSR was a widely used multivariate
+method to identify relationships between multiple predictor and response
+variables [60, 61], and it was widely used in gene enrichment [55, 62]. Here
+we utilized PLSR to explore intelligence-related genes. In the PLSR model,
+the predictor variables were the z-statistics normalized matrix of the
+sample-wise mean gene expression level of all probes from each donor.
+The response variables were the intelligence-MRI association maps.
+After the analysis, PLSR components were ranked based on explained
+variances, and thus, the components with the highest explained variances
+represent the covariance of high-dimensional data matrices through lowdimensional sequences. We used permutation tests (permutation times =
+5000) to assess the statistical signiﬁcance of each PLSR component [63].
+For each signiﬁcant component, we used a bootstrapping method to
+correct the estimation error of the weight of each gene [64]. We then
+ranked the genes according to their corrected weights, which represented
+their contribution to the PLSR component.
+GO/KEGG enrichment. Gene Ontology (GO) [65] and the Kyoto Encyclopedia of Genes and Genomes (KEGG) [66] were employed for functional
+annotation of the intelligence-related genes, encompassing both positive
+and negative gene weights. Genes with top 10% positive weight were
+selected for enrichment [67, 68].
+
+Translational Psychiatry (2025)15:246
+
+For gene set functional enrichment analysis, we ﬁrst utilized the GO and
+KEGG annotations of genes from the annotation package org.Hs.eg.db
+(version 3.1.0) to map genes into the background set. Subsequently, we
+conducted enrichment analysis using the R package clusterProﬁler [69] to
+obtain the results of gene set enrichment. All enrichment analyses were
+performed using Fisher’s exact tests and adjusted p-value < 0.05 together
+with q-value < 0.05 [61, 64] were considered statistically signiﬁcant.
+Atlas-based spatial correlation. Based on the intelligence-MRI association
+maps, atlas-based spatial correlations based on Destrieux ROIs were
+applied through the JuSpace toolbox [56]. In this study, intelligence-MRI
+association maps were correlated with PET/SPECT-neurotransmitter
+density maps to evaluate the neurotransmitter basis underlying the two
+forms of intelligence. We applied Spearman’s rank correlation and used
+bootstrapping to estimate the signiﬁcance. The signiﬁcance was tested
+through 5000 permutations [70, 71]. Additionally, precise p-values for
+spatial correlation were calculated by recomputing the correlation using
+null t-statistic maps obtained through label shufﬂing for intelligence levels
+[51].
+Mediation analysis. We applied mediation analysis using the Matlab
+Mediation toolbox [72, 73] to examine whether and how the impact of
+lifestyle on intelligence was mediated by the MRI phenotypes. For each
+brain region, the Average Mediation Effect (AME) was used to represent
+the mediating effect. Similar to the method above, the signiﬁcant AME
+map was also spatially correlated with the neurotransmitter density map to
+elucidate the speciﬁc neurotransmitters supporting the mediation effect.
+
+RESULTS
+Overview of ﬂuid and crystallized intelligence in adolescents
+In the ABCD study, 7471 participants (aged 9.87 ± 0.62 years old,
+3538 [47.3%] females) underwent intelligence testing using the
+NIH Toolbox [47, 48] and had complete, preprocessed sMRI and
+dMRI data Table 1) [74]. Intelligence measures included ﬂuid
+intelligence (fully corrected t-scores: 96.25 ± 17.29) and crystallized
+intelligence (fully corrected t-scores: 107.09 ± 18.43).
+Fluid and crystallized intelligence showed a signiﬁcant association with age (β = 0.18 and 0.15; Bonferroni correction corrected
+p < 0.001), and parental education levels (β = 1.21 and 2.06;
+corrected p < 0.001). There were signiﬁcant gender differences in
+ﬂuid intelligence (male: 95.62 ± 17.31; female: 96.95 ± 17.16;
+β = 1.48, corrected p < 0.001), but not in crystallized intelligence
+(male: 107.38 ± 18.39; female: 106.80 ± 18.46; β = −0.44, corrected
+p > 0.05). Fluid intelligence showed a signiﬁcantly positive
+association with household income (β = 0.09; corrected
+p = 0.013), but not crystallized intelligence (β = 0.06; corrected
+p > 0.05).
+MRI signatures of ﬂuid and crystallized intelligence
+The correlation between the ﬂuid/crystallized intelligence and
+neuroimaging phenotypes include sMRI imaging data and dMRI
+imaging data using the LME model. The results of the LME analysis
+were shown in Supplementary Table S1–S7 for the two
+intelligence measures separately. In the separate LME model, we
+found that ﬂuid and crystallized intelligence were signiﬁcantly
+associated with cortical SA (ﬂuid: 0.001 < β < 0.019, N = 66 of 148
+ROIs; crystallized: 0.003 < β < 0.020, N = 134; Bonferroni correction
+corrected p < 0.05). Meanwhile, the signiﬁcant association
+between ﬂuid/crystallized intelligence and MD was distributed in
+similar regions. The overlap between these associations might be
+attributed to a signiﬁcant correlation between the two forms of
+intelligence (r = 0.396, p < 0.001).
+After controlling the inﬂuence of the crystallized intelligence in
+a combined LME model (Fig. 2), MD of 24 cortical regions
+(−50.81 < β < −30.64, Bonferroni correction corrected p < 0.05;
+mainly in supramarginal gyrus, temporal gyrus, lateral sulcus,
+central sulcus, and occipital sulcus; Fig. 2b) were signiﬁcantly
+associated with ﬂuid intelligence. LD of 8 cortical regions
+(−39.14 < β < −25.60, corrected p < 0.05; Figure S1f) and TD of
+
+B. Qiu et al.
+
+4
+Table 1.
+
+The demographic, intelligence and lifestyle statistics of the
+study population.
+Variable
+
+Mean
+
+SD
+
+Ages (year)
+
+9.87
+
+0.62
+
+Fluid Intelligence
+
+96.25
+
+17.29
+
+Crystallized Intelligence
+
+107.09
+
+18.43
+
+Intelligence
+
+Lifestyle (score)
+Physical activity
+
+3.56
+
+2.29
+
+Screen use
+
+2.80
+
+1.95
+
+Sleep score
+
+1.67
+
+0.80
+
+N
+
+(%)
+
+Male
+
+3933
+
+52.6%
+
+Female
+
+3538
+
+47.4%
+
+White
+
+4868
+
+65.2%
+
+Black
+
+1108
+
+14.8%
+
+Native American
+
+40
+
+0.5%
+
+Paciﬁc island
+
+6
+
+0.1%
+
+Asian
+
+159
+
+2.1%
+
+Others
+
+1290
+
+17.3%
+
+1476
+
+19.8%
+
+<$11 999
+
+2078
+
+27.8%
+
+$12 000–$24 999
+
+1074
+
+14.4%
+
+$25 000–$49 999
+
+1759
+
+23.5%
+
+$50 000–$99 999
+
+1808
+
+24.2%
+
+>$100 000
+
+752
+
+10.1%
+
+6343
+
+84.9%
+
+Gender
+
+Race
+
+Ethnicity
+Hispanic/Latino
+Household income
+
+Parent education
+College or more
+
+Physical activity scores represented how many days in a week were
+involved in one hour of physical exercise. Screen use scores represented
+the screen time of adolescents each week. Sleeping score represented
+sleeping duration, where high scores corresponded to short sleep
+duration.
+SD standard deviation, N number of subjects.
+
+31 cortical regions (−56.89 < β < −27.10, corrected p < 0.05; Figure
+S1g) were signiﬁcantly associated with ﬂuid intelligence. FA
+showed signiﬁcant association only with left accumbens area
+(β = −13.20, corrected p < 0.05; Figure S1d). There were almost no
+signiﬁcant associations between ﬂuid intelligence and sMRI
+phenotypes except for one cortical region (right superior occipital
+sulcus and transverse occipital sulcus: β = 4.49 × 10−3, corrected
+p < 0.05; Fig. 2a), BV of one cortical region (posterior corpus
+callosum: β = 4.62 × 10−3, corrected p < 0.05; Figure S1a), and CT
+of two cortical regions (left anterior part of the cingulate gyrus and
+sulcus: β = −5.92 × 10−3, corrected p < 0.05; left suborbital sulcus:
+β = −4.46 × 10−3, corrected p < 0.05; Figure S1c).
+On the contrary, crystallized intelligence was signiﬁcantly
+associated with sMRI phenotypes. After controlling the inﬂuence
+of ﬂuid intelligence using combined LME model, BV of 127
+cortical regions (6.27 × 10−4 < β < 8.65 × 10−3, corrected p < 0.05;
+Figure S1a) and SA of 126 cortical regions (0.0020 < β < 0.0244,
+corrected p < 0.05; Fig. 2a) across the whole brain cortical gray
+matter were associated with crystallized intelligence. CT showed
+
+a signiﬁcant association in one cortical region (left lingual gyrus:
+β = 1.34, corrected p < 0.05; Figure S1c). A small number of dMRI
+phenotypes were found to be associated with crystallized
+intelligence,
+including
+MD
+of
+6
+cortical
+regions
+(29.43 < β < 39.15, corrected p < 0.05; mainly in the inferior
+frontal gyrus, middle occipital gyrus, and cuneus; Fig. 2b) and
+TD of 18 cortical regions (22.86 < β < 61.20, corrected p < 0.05;
+Figure S1g).
+Based on the results, ROIs having phenotypes signiﬁcantly
+associated (unadjusted p < 0.05) with intelligence were utilized to
+construct intelligence-MRI association maps for further analysis.
+Genetic basis of ﬂuid and crystallized intelligence
+Utilizing the association between MD and ﬂuid intelligence as well
+as the association between SA and crystallized intelligence, the
+MRI-intelligence association maps (Fig. 2b and c) were spatially
+correlated with the gene expression maps, followed by GO and
+KEGG enrichment analysis (Fig. 3, Supplementary Table S8–S19).
+Through GO enrichment (Fig. 3a, c), both ﬂuid and crystallized
+intelligence demonstrated involvement in ion channels and
+signaling pathways that are crucial for neural communication
+and information processing. These genes participated in various
+ion channel activities (1.70 < fold enrichment < 7.52; q < 0.05),
+facilitating the passage of ions across cellular membranes essential
+for neuronal excitability and synaptic transmission. Additionally,
+they were associated with signaling pathways regulating synaptic
+function and neurotransmitter release (1.88 < fold enrichment <
+2.98; q < 0.05), contributing to cognitive processes such as
+learning and memory. Processes such as amide transport (fold
+enrichment = 2.21 and 2.11; q < 0.05) and organic acid binding
+(fold enrichment = 2.05 and 2.02; q < 0.05) underscored their roles
+in cellular metabolism and neurotransmitter function, while
+involvement in synapse organization (fold enrichment = 2.19
+and 1.88; q < 0.05) and cell projection membrane (fold enrichment = 1.91 and 2.10; q < 0.05) highlighted their contribution to
+intercellular communication and synaptic connectivity.
+The complexity of synaptic and membrane-related functions
+varied between ﬂuid and crystallized intelligence. Fluid intelligence exhibited a more complicated relationship with these
+processes, including speciﬁc functions such as glutamatergic
+synapse function, postsynaptic membrane activity, and membrane
+raft organization (fold enrichment = 2.10, 2.29, and 2.15; q < 0.05).
+This complexity may be explained by the dynamic and adaptive
+nature of ﬂuid intelligence, characterized by rapid information
+processing and cognitive ﬂexibility. In contrast, crystallized
+intelligence demonstrated a more straightforward involvement
+in synaptic and membrane-related functions, suggesting a more
+stable and structured cognitive processing. Furthermore, crystallized intelligence is uniquely associated with protein-related
+functions, such as endoplasmic reticulum protein-containing
+complex, MHC class II protein complex binding, and scaffold
+protein binding (fold enrichment = 3.05, 4.66 and 2.88; q < 0.05),
+implicating roles in protein synthesis, immune response modulation, and structural scaffolding supporting crystallized
+intelligence-speciﬁc cognitive processes.
+Through KEGG enrichment (Fig. 3b, d), both ﬂuid and crystallized intelligence exhibited involvement in environmental information processing, particularly in neuroactive ligand-receptor
+interaction (fold enrichment = 1.83 and 1.69; q < 0.05), and shared
+associations with addictive behaviors, indicated by relevance to
+Morphine addiction (fold enrichment = 2.75 and 2.46; q < 0.05)
+and Nicotine addiction (fold enrichment = 3.47 and 3.62; q < 0.05).
+Distinctions emerged in the organismal systems category, where
+ﬂuid intelligence was associated with the cAMP and PPAR
+signaling pathways (fold enrichment = 2.04 and 2.78; q < 0.05),
+while crystallized intelligence was linked to the Notch and NODlike receptor signaling pathways (fold enrichment = 2.98 and 1.91;
+
+Translational Psychiatry (2025)15:246
+
+B. Qiu et al.
+
+5
+
+Fig. 2 The associations between ﬂuid/crystallized intelligence and neuroimaging phenotypes. The colored brain areas represented the
+signiﬁcant associations after Bonferroni correction, and the value indicated the β-value between intelligence measures and MRI markers. In
+each panel, the upper row was the result of a separate LME model which retained the inﬂuence of the other form of intelligence; and the
+bottom row was the result of the combined LME model which removed the inﬂuence of the other form of intelligence. The associations
+between ﬂuid/crystallized intelligence and other brain phenotypes are shown in Supplementary Figure S1.
+
+q < 0.05), indicating divergent pathways related to intracellular
+signaling and immune response modulation. Additionally, ﬂuid
+intelligence demonstrated relevance to the GABAergic synapse
+(fold enrichment = 2.34; q < 0.05), suggesting relevance to neurotransmission, while crystallized exhibited associations with axon
+guidance (fold enrichment = 2.10; q < 0.05), suggesting relevance
+in neuronal development.
+Enrichment analyses of LD- and TD-related genes showed similar
+results to those using MD in GO and KEGG terms. Similarly, analyses
+based on BV and SA also showed comparable results in these terms.
+Details could be found in the Supplementary Table S8–S19.
+Neurotransmitter basis of ﬂuid and crystallized intelligence
+Spatial correlation between intelligence-associated MRI feature
+maps and neurotransmitter density maps was performed to obtain
+the neurotransmitter basis of two forms of intelligence (Table 2,
+Fig. 4). For ﬂuid intelligence, we mainly focused on MD and LD and
+found their association maps were signiﬁcantly associated with the
+neurotransmitter density of the serotonin system, glutamate
+system, and GABA system. The associated serotonin neurotransmitters included 5HT1b (Spearman rho = −0.310, −0.274; adjusted
+p = 0.015, 0.038), 5HT2a (Spearman rho = −0.361, −0.388; adjusted
+p = 0.014, 0.024) and 5HTT (Spearman rho = 0.220, 0.256; adjusted
+p = 0.007, 0.002). The associated glutamate neurotransmitters
+included mGluR5 (Spearman rho = −0.238, −0.261; adjusted
+p = 0.051, 0.036) and NMDA (Spearman rho = −0.255, −0.351;
+adjusted p = 0.049, 0.008). Additionally, based on TD, ﬂuid
+intelligence was signiﬁcantly associated with GABAa (Spearman
+rho = −0.379; adjusted p = 0.005).
+For crystallized intelligence, we mainly assessed crystallizedintelligence-BV/SA association maps and revealed their signiﬁcant
+associations with serotonin, dopamine, and acetylcholine systems.
+The associated serotonin neurotransmitters included 5HT1a
+(Spearman rho = 0.322, 0.394; adjusted p = 0.030, 0.008) and
+5HTT (Spearman rho = 0.631, 0.598; both adjusted p < 0.001). The
+associated dopamine neurotransmitters included D1 (Spearman
+rho = 0.589, 0.446; adjusted p < 0.001, adjusted p = 0.004), D2
+(Spearman rho = 0.352, 0.388; both adjusted p < 0.001) and DAT
+(Spearman rho = 0.845, 0.536; both adjusted p < 0.001). The
+
+Translational Psychiatry (2025)15:246
+
+associated acetylcholine neurotransmitter was VAChT (Spearman
+rho = 0.888, 0.770; both adjusted p < 0.001).
+Impact of lifestyle on two forms of intelligence and the neural
+mediates
+According to the 24-H Movement Guidelines, we included physical
+activities, screen use, and sleep duration in the analysis (Fig. 5).
+Physical activity days per week showed signiﬁcant associations
+with ﬂuid and crystallized intelligence (β = 0.392, adjusted
+p = 6.12 × 10−5; β = 0.295, adjusted p = 4.89 × 10−3). Using mediation analysis, SA of 32 cortical regions (0.011 < AME < 0.035,
+p < 0.05; Fig. 5a and Supplementary Table S20) exhibited
+signiﬁcant full mediating effects on the association between
+physical activities and crystallized intelligence. The spatial pattern
+of these signiﬁcant mediating effects in the brain (primarily
+distributed in the temporal, frontal, and parieto-occipital cortex)
+was associated with the distribution of the serotonin system
+(5HT1a: Spearman rho = 0.340, adjusted p = 0.005) and dopamine
+system (D2: Spearman rho = 0.187, adjusted p = 0.022). SA of 20
+cortical regions (2.48 × 10−4 < AME < 5.68 × 10−4, p < 0.05; Supplementary Table S20) within the 32 regions exhibited signiﬁcant
+inverse mediating effects.
+Screen use showed negative associations with ﬂuid and crystallized
+intelligence (β = –0.509, adjusted p = 1.27 × 10−5; β = –0.699, adjusted
+p = 1.65 × 10−9). SA of 42 cortical regions (−0.05 < AME < −0.014,
+p < 0.05; Fig. 5b and Supplementary Table S21) exhibited signiﬁcant
+mediating effects on the association between screen time and
+crystallized intelligence. The spatial pattern of these mediating effects
+(mainly distributed in the temporal, occipital, and parieto-occipital
+cortex) was signiﬁcantly associated with serotonin system (5HT1b:
+Spearman rho = 0.225, adjusted p = 0.029) and dopamine system (D2:
+Spearman rho = –0.240, adjusted p = 0.004). SA of 22 cortical regions
+(−5.84 × 10−4 < AME < −1.80 × 10−4, p < 0.05; Supplementary Table
+S21) within the 42 regions exhibited signiﬁcant inverse mediating
+effects.
+Sleep duration score (β = –1.04, adjusted p = 6.12 × 10−4; β = –1.61;
+adjusted p = 4.81 × 10−8) had negative associations with both ﬂuid
+and crystallized intelligence. TD of 22 cortical regions
+(0.03 < AME < 0.06, p < 0.05; Fig. 5c and Supplementary Table S22)
+
+B. Qiu et al.
+
+6
+
+Fig. 3 The results of PLRS and GO/KEGG enrichment of ﬂuid and crystallized intelligence. a, b The results of the GO/KEGG enrichment of
+ﬂuid-intelligence-related genes based on MD c, d The results of the GO/KEGG enrichment of crystallized-intelligence-related genes based on
+SA. BP Biological Process, CC Cellular Component, MF Molecular Function.
+
+exhibited signiﬁcant mediating effects on the association between
+short sleep duration and ﬂuid intelligence. On the other hand, SA of 52
+cortical regions (−0.12 < AME < −0.03, p < 0.05; Fig. 5d and Supplementary Table S23) exhibited signiﬁcant mediating effects on the
+association between short sleep duration and crystallized intelligence.
+The spatial pattern of the mediating effects on ﬂuid intelligence was
+signiﬁcantly associated with norepinephrine system (NAT: Spearman
+rho = –0.201; adjusted p = 0.009) and glutamate system (mGluR5:
+Spearman rho = –0.182; adjusted p = 0.025). Conversely, the mediating
+pattern relating to crystallized intelligence was signiﬁcantly associated
+with serotonin system (5HT1a: Spearman rho = –0.233, adjusted
+p = 0.046). These neurotransmitters with mediation effects agreed
+well with aforementioned ﬁndings. For the inverse mediating effect, TD
+of 22 cortical regions (6.40 × 10−5 < AME < 1.32 × 10−4, p < 0.05;
+Supplementary Table S22) and SA of 21 cortical regions
+(−1.94 × 10−4 < AME < −6.62 × 10−5, p < 0.05; Supplementary Table
+S23 exhibited signiﬁcant inverse mediating effects.
+DISCUSSION
+In this study, imaging and intelligence data from the ABCD
+study allowed us to understand the speciﬁc neural signature
+and molecular basis of ﬂuid and crystallized intelligence. We
+
+found that ﬂuid intelligence was signiﬁcantly associated with
+cortical microstructural phenotypes such as MD in the
+supramarginal gyrus, temporal gyrus, lateral sulcus, central
+sulcus, and occipital sulcus. Crystallized intelligence was
+signiﬁcantly associated with macrostructural phenotypes such
+as SA in almost all cortical regions. Through spatial correlation
+with AHBA and neurotransmitter maps, we found that ﬂuid and
+crystallized intelligence had their distinct neural basis while
+also sharing overlapping components. Fluid intelligence had a
+signiﬁcant association with the glutamate system (receptor
+mGluR5 and NMDA) and GABA system (receptor GABAa),
+whereas crystallized intelligence had a signiﬁcant association
+with the dopamine system (receptor D1, D2, and transporter
+DAT) and acetylcholine system (transporter VAChT). Through
+mediation analysis, we found that the way by which sleep
+affects ﬂuid intelligence was mediated by the glutamate
+system, and the mediation effects of exercise, screen use,
+and sleep on crystallized intelligence were related to the
+dopamine and serotonin systems. These ﬁndings imply that
+keeping a healthy lifestyle may help to enhance the development of intelligence in adolescents.
+Previous studies have revealed that ﬂuid intelligence is linked to
+the brain volume and surface area of the dorsolateral prefrontal
+Translational Psychiatry (2025)15:246
+
+Translational Psychiatry (2025)15:246
+0.544
+0.639
+0.091
+
+0.167
+
+−0.049
+
+0.069
+
+−0.223
+
+D2
+
+DAT
+
+0.963
+
+−0.006
+
+VAChT
+
+Spearman rho
+
+0.906
+
+0.005
+
+−0.238
+
+−0.255
+
+−0.051
+
+0.033
+
+−0.151
+
+0.123
+
+−0.103
+
+0.215
+
+−0.325
+
+0.963
+
+0.051
+
+0.049
+
+0.683
+
+0.876
+
+0.240
+
+0.378
+
+0.208
+
+0.195
+
+0.044
+
+0.007
+
+−0.016
+0.220
+
+0.014
+
+0.015
+
+0.474
+
+adjust p
+
+−0.361
+
+−0.310
+
+−0.115
+
+0.072
+
+−0.316
+
+−0.245
+
+−0.236
+
+0.353
+
+−0.379
+
+0.141
+
+−0.004
+
+0.136
+
+−0.130
+
+0.154
+
+−0.019
+
+−0.318
+
+−0.227
+
+0.055
+
+Spearman rho
+
+0.550
+
+0.013
+
+0.068
+
+0.086
+
+0.369
+
+0.004
+
+0.392
+
+0.960
+
+0.541
+
+0.521
+
+0.060
+
+0.901
+
+0.052
+
+0.102
+
+0.788
+
+adjust p
+
+adjust p
+
+0.888
+
+0.123
+
+0.217
+
+0.112
+
+0.000
+
+0.293
+
+0.081
+
+0.366
+
+0.354
+
+0.418
+
+−0.102
+0.219
+
+0.000
+
+0.000
+
+0.000
+
+0.226
+
+0.000
+
+0.761
+
+0.588
+
+0.199
+
+0.030
+
+0.845
+
+0.352
+
+0.589
+
+−0.183
+
+0.631
+
+0.040
+
+−0.075
+
+−0.160
+
+0.322
+
+Spearman rho
+
+0.770
+
+0.054
+
+−0.027
+
+0.183
+
+0.243
+
+−0.212
+
+0.536
+
+0.388
+
+0.446
+
+−0.120
+
+0.598
+
+0.146
+
+−0.146
+
+−0.191
+
+0.394
+
+Spearman rho
+
+Surface Area
+adjust p
+
+0.000
+
+0.653
+
+0.831
+
+0.143
+
+0.306
+
+0.097
+
+0.000
+
+0.000
+
+0.004
+
+0.444
+
+0.000
+
+0.266
+
+0.312
+
+0.129
+
+0.008
+
+5HT1a serotonin receptor 1A, 5HT1b serotonin receptor 1B, 5HT2a serotonin receptor 2A, 5HT4 serotonin receptor 4, 5HTT serotonin transporter, CB1 cannabinoid receptor type 1, D1 dopamine receptor D1, D2
+dopamine receptor D2, DAT dopamine transporter, GABAa gamma-aminobutyric acid receptor type A, MU mu opioid receptor, NAT norepinephrine transporter, NMDA N-methyl-D-aspartate Receptor, mGluR5
+metabotropic glutamate receptor 5, VAChT vesicular acetylcholine transporter.
+Bold values indicates statistical signiﬁcant P < 0.05.
+
+0.008
+0.036
+
+−0.351
+
+−0.261
+
+NMDA
+
+0.601
+
+−0.069
+
+NAT
+
+mGluR5
+
+0.616
+
+0.151
+
+MU
+
+GABAa
+
+0.167
+0.346
+
+−0.229
+
+CB1
+
+D1
+
+0.794
+0.002
+
+0.037
+
+0.256
+
+0.038
+0.024
+
+−0.274
+
+−0.338
+
+5HT1b
+
+5HT2a
+
+5HT4
+
+0.825
+
+5HTT
+
+adjust p
+
+Spearman rho
+
+−0.035
+
+5HT1a
+
+Brain Volume
+
+Transverse Diffusivity
+
+Mean Diffusivity
+
+Longitudinal Diffusivity
+
+Crystallized Intelligence
+
+Fluid Intelligence
+
+Neurotransmitters inﬂuencing ﬂuid and crystallized Intelligence.
+
+neuro-transmitter
+
+Table 2.
+
+B. Qiu et al.
+
+7
+
+B. Qiu et al.
+
+8
+
+Fig. 4 Neurotransmitters inﬂuencing ﬂuid and crystallized intelligence. a Spearman rho of the spatial correlation between ﬂuidintelligence-MD association map and the neurotransmitter density maps. b Spearman rho of the spatial correlation between crystallizedintelligence-BV association map and the neurotransmitter density maps. *: 0.01 ≤ p < 0.05; **: 0.001 ≤ p < 0.01; ***: p < 0.001.
+
+Fig. 5 The mediation effect of lifestyle and neural basis of the mediation. In each panel, the upper row was the average mediation effect of
+the mediation model; the bottom row was results of the spatial correlation between mediation maps and neurotransmitter maps.
+*: 0.01 ≤ p < 0.05; **: 0.001 ≤ p < 0.01.
+
+cortex, anterior cingulate gyrus, and inferior and superior parietal
+lobules [8, 11, 13]. Meanwhile, higher crystallized intelligence level
+was found associated with higher whole-brain gray matter volume
+and cortex thickness [11, 14–16]. In this study, we applied two LME
+models that retained or removed the inﬂuence of the other form
+of intelligence. The separate LME model closely resembled
+previous approaches to the Human Connectome Project [75],
+and reached similar results that MRI phenotypes of ﬂuid and
+crystallized intelligence were highly overlapped [76]. The combined LME model indicated no signiﬁcant associations between
+ﬂuid intelligence and sMRI phenotypes. Compared to the separate
+
+LME model, we speculated that the association between the
+aforementioned MRI markers and ﬂuid intelligence was largely
+due to the correlation between ﬂuid and crystallized intelligence.
+Moreover, Given the pronounced site effects observed in
+intelligence scores within the ABCD study [77], we also tested
+our analysis on the sites with the largest participant numbers. The
+resulting association map demonstrated a signiﬁcant spatial
+correlation with the map derived from data across all sites
+(Supplementary Table S24).
+In our study, signiﬁcant associations between ﬂuid intelligence
+and cortical microstructural phenotypes were observed
+
+Translational Psychiatry (2025)15:246
+
+B. Qiu et al.
+
+9
+speciﬁcally within the supramarginal gyrus, temporal gyrus, lateral
+sulcus, central sulcus, and occipital sulcus, aligning with the
+Parieto-Frontal Integration Theory (P-FIT) which emphasized the
+importance of neural integration across parietal and frontal areas
+[13]. The supramarginal gyrus supported phonological processing
+and working memory [78, 79], essential for complex problemsolving integral to ﬂuid intelligence. The temporal gyrus, involved
+in language comprehension [80, 81], underpinned abstract
+thinking and memory integration, crucial for applying new
+knowledge. The lateral and central sulci, associated with sensory
+and motor processing [82], might facilitate the coordination
+required for executing complex operations. Similarly, the occipital
+sulcus contributed to visual-spatial reasoning [83], vital for
+manipulating spatial information. Together, these ﬁndings suggested that ﬂuid intelligence was underpinned by a network of
+cortical areas, each contributing to the overall cognitive ﬂexibility
+and problem-solving capabilities, reﬂected in the microstructural
+integrity of these regions. The result supported the viewpoint that
+ﬂuid intelligence involved brain functions linked through an
+efﬁcient parietal-frontal network.
+Functional MRI (fMRI) studies have provided substantial insight
+into the differential neural substrates of ﬂuid and crystallized
+intelligence, revealing distinct patterns of cortical activation
+associated with each [77]. Fluid intelligence has been consistently
+linked to activity in frontoparietal networks [84], especially
+dorsolateral prefrontal cortex [85] and posterior parietal cortex
+[80, 86]. These regions are central to executive control and
+cognitive ﬂexibility, supporting the dynamic processing demands
+of ﬂuid reasoning tasks. Our ﬁndings indicated that the ﬂuid
+intelligence-related variation in gray matter density were spatially
+consistent with the fMRI ﬁnding. The density differences might
+account for the capability for working memory, attentional
+control, and problem-solving, all of which were essential
+components of reasoning. In contrast, crystallized intelligence
+showed stronger engagement of the default mode network [87],
+consistent with semantic memory and linguistic retrieval processes [80]. Our ﬁndings offered a more comprehensive explanation for such association. For example, the increased cortical
+thickness and gray matter volume observed in these regions
+suggest a greater capacity for information storage and processing,
+supporting more efﬁcient semantic memory storage, linguistic
+retrieval, and knowledge accumulation over time. Notably, restingstate fMRI studies also highlight that the strength and integrity of
+network connectivity [18, 58] predict individual differences in ﬂuid
+and crystallized abilities respectively, suggesting that baseline
+functional architecture shapes cognitive proﬁles [88, 89]. These
+ﬁndings collectively afﬁrm that ﬂuid and crystallized intelligence
+involve speciﬁc brain networks, and the functional integration and
+specialization of these networks signiﬁcantly impact cognitive
+performance.
+For crystallized intelligence, the positive associations between
+crystallized intelligence and whole-brain cortical macro-structures
+were aligned with the Neural Efﬁciency Hypothesis [90] and
+concepts of brain and cognitive reserve [91, 92]. Higher
+intelligence correlated with more efﬁcient neural processing,
+allowing for quicker access and use of learned skills and
+knowledge. Well-developed cortical architecture, greater cortical
+mass, and integrity were better equipped for efﬁcient neural
+transmission and processing speed in cognitive challenges.
+Furthermore, we found that ﬂuid intelligence was closely
+associated with the glutamate system (receptor mGluR5 and
+NMDA), GABA system (receptor GABAa), and serotonin system
+(transporter 5HTT, receptors 5HT1b and 5HT2a). The ﬁndings
+aligned with previous studies where a higher working memory
+index was signiﬁcantly correlated with a lower GABA level
+[31, 32, 93] and lower GABA to glutamate ratio levels [29], as
+well as other studies which reported cognitive function was
+related to serotonin system [21] in transporter [22, 23] and
+Translational Psychiatry (2025)15:246
+
+receptors [94, 95]. These signiﬁcant associations suggested
+complex mechanisms where the capacity for ﬂuid intelligence
+was inﬂuenced by both neural excitation and inhibition provided
+by glutamate and GABA, as well as the modulatory effects of
+serotonin on cognitive processes.
+Crystallized intelligence had a signiﬁcant association with the
+dopamine system, acetylcholine system, and serotonin system. In
+the formation of crystallized intelligence, acetylcholine enhanced
+the encoding of new information into long-term memory [96],
+establishing a base for memory formation. Dopamine helped
+quickly pull up stored knowledge when necessary [97], aiding in
+decision-making and problem-solving tasks. Meanwhile, serotonin
+enriched these memories with emotional and contextual details
+during the consolidation phase [98], making them more relatable
+and easier to recall. Together, these neurotransmitters form a
+sophisticated cognitive system that helps use learned knowledge
+in various situations.
+Not only the neurotransmitters play a determinant role, but
+lifestyle in adolescents also inﬂuences the development of
+intelligence. Previous research has found that sleep and physical
+exercise are beneﬁcial for intelligence [39, 40], while screen time
+has adverse effects on intelligence [42–46]. Our ﬁndings were
+consistent with these ﬁndings. The mGlu5 activity was important
+for synaptic adjustments and cognitive processes associated with
+ﬂuid intelligence [99]. This suggested that sleep might facilitate
+these processes by optimizing receptor mGlu5 functionality, and
+thus enhancing ﬂuid intelligence by improving synaptic connections and neural communication critical for learning and problemsolving tasks. The receptor 5HT1a in the Serotonin system
+impacted cognitive areas like learning, memory retention, and
+knowledge recall [100], which were key to crystallized intelligence.
+Serotonin levels during sleep affected the cognitive processing of
+learned knowledge, and thus effective serotonin regulation during
+sleep via receptor 5HT1a could be vital for utilizing long-term
+memory and knowledge for crystallized intelligence enhancement. The interaction between Dopamine receptor D2 and both
+physical activity and screen use showed different effects on
+crystallized intelligence. Physical activity positively stimulated
+receptor D2, enhancing motor ﬂexibility and the ability to learn
+motor skills. This could improve abilities related to physical tasks
+and movements [101]. On the other hand, too much screen time
+could overstimulate receptor D2, potentially harming crystallized
+intelligence. This over-stimulation might reduce attention and
+information processing efﬁciency, making it harder to use learned
+knowledge and skills effectively. The receptor D2 played a
+complex role in shaping crystallized intelligence, enhancing it
+through physical activity and potentially impairing it with
+excessive screen use.
+CONCLUSION
+This study identiﬁed distinct neuroimaging, genetic, and neurotransmitter bases between ﬂuid and crystallized intelligence. Our
+ﬁndings highlighted microstructural phenotypes for ﬂuid intelligence and macrostructural phenotypes for crystallized intelligence
+as respective biomarkers. Molecular mechanisms derived from the
+aforementioned biomarkers suggested that ﬂuid intelligence
+mainly had a signiﬁcant association with the serotonin and
+glutamate system; while crystallized intelligence was related to
+serotonin, dopamine, and acetylcholine systems. Lifestyles including physical activities had positive associations but screen use and
+short sleep duration had negative associations with ﬂuid and
+crystallized intelligence, mediated by mGlu5 receptors for ﬂuid
+intelligence and 5HT1a and D2 receptors for crystallized
+intelligence. These ﬁndings provided insights into the neurobiological underpinnings of ﬂuid and crystallized intelligence, laying
+the groundwork for subsequent observational or interventional
+research on intelligence.
+
+B. Qiu et al.
+
+10
+Limitation
+One key limitation of this study is the challenge in conducting
+robust longitudinal analyses. Although baseline data include
+comprehensive cognitive assessments for ﬂuid and crystallized
+intelligence, the follow-up dataset lacked complete measures. This
+inconsistency restricted our ability to perform direct longitudinal
+comparisons and limits the interpretability of temporal trends in
+cognitive outcomes. Meanwhile, the statistical robustness of the
+results might be compromised due to the limited number of
+subjects at individual sites, despite efforts to address site effects.
+Further optimization of strategies to control for site effects might
+be necessary for more reliable ﬁndings. Moreover, whether spatial
+correlation accurately reﬂects underlying neurobiological mechanisms remains unknown. Spatial correlation doesn’t necessarily
+imply population-level relationships, making the inference of
+cognitive abilities from observed component variations somewhat
+indirect. Future research could focus on population-level analyses
+of speciﬁc neurotransmitters or controlled animal experiments to
+gain deeper insights into these relationships.
+DATA AVAILABILITY
+The data used in this study are publicly available and can be accessed through the
+ABCD Study Data Release 5.0 at https://abcdstudy.org. The speciﬁc data utilized in
+this analysis include demographic information, intelligence assessments, MRI
+imaging data, and lifestyle variables, all of which are available upon request from
+the ABCD Data Repository, following their data policies. Additionally, gene expression
+data were obtained from the Allen Human Brain Atlas (AHBA; http://human.brainmap.org). Neurochemical maps were sourced from publicly available repositories,
+including the online resource at https://github.com/juryxy/JuSpace/tree/
+JuSpace_v1.5/JuSpace_v1.5/.
+
+REFERENCES
+1. Spearman C. ‘General intelligence,’ objectively determined and measured. Am J
+Psychol. 1904;15:201.
+2. Brown RE. Hebb and cattell: the genesis of the theory of ﬂuid and crystallized
+intelligence. Front Hum Neurosci. 2016;10:606 https://doi.org/10.3389/
+fnhum.2016.00606
+3. Cattell RB. Theory of ﬂuid and crystallized intelligence: a critical experiment. J
+Educ Psychol. 1963;54:1–22.
+4. Deary IJ, Caryl PG. Neuroscience and human intelligence differences. Trends
+Neurosci. 1997;20:365–71.
+5. Shaw P. Intelligence and the developing human brain. Bioessays.
+2007;29:962–73.
+6. Thorsen C, Gustafsson J-E, Cliffordson C. The inﬂuence of ﬂuid and crystallized
+intelligence on the development of knowledge and skills. Br J Educ Psychol.
+2014;84:556–70. https://doi.org/10.1111/bjep.12041
+7. Deary IJ, Penke L, Johnson W. The neuroscience of human intelligence differences. Nat Rev Neurosci. 2010;11:201–11.
+8. Xu H, Xu C, Yang Z, Bai G, Yin B. Two sides of the same coin: distinct neuroanatomical patterns predict crystallized and ﬂuid intelligence in adults. Front
+Neurosci. 2023;17:1199106.
+9. Li M, Dang X, Chen Y, Chen Z, Xu X, Zhao Z, et al. Cognitive processing speed
+and accuracy are intrinsically different in genetic architecture and brain phenotypes. Nat Commun. 2024;15:7786.
+10. Góngora D, Vega‐Hernández M, Jahanshahi M, Valdés‐Sosa PA, Bringas‐Vega
+ML, CHBMP. Crystallized and ﬂuid intelligence are predicted by microstructure
+of speciﬁc white‐matter tracts. Hum Brain Mapp. 2020;41:906–16.
+11. Tadayon E, Pascual-Leone A, Santarnecchi E. Differential contribution of cortical
+thickness, surface area, and gyriﬁcation to ﬂuid and crystallized intelligence.
+Cereb Cortex. 2020;30:215–25.
+12. Barbey AK, Colom R, Grafman J. Dorsolateral prefrontal contributions to human
+intelligence. Neuropsychologia. 2013;51:1361–9.
+13. Jung RE, Haier RJ. The parieto-frontal integration theory (P-FIT) of intelligence:
+converging neuroimaging evidence. Behav Brain Sci. 2007;30:135–54.
+14. Bajaj S, Raikes A, Smith R, Dailey NS, Alkozei A, Vanuk JR, et al. The relationship
+between general intelligence and cortical structure in healthy individuals.
+Neuroscience. 2018;388:36–44.
+15. Escorial S, Román FJ, Martínez K, Burgaleta M, Karama S, Colom R. Sex differences in neocortical structure and cognitive performance: a surface-based
+morphometry study. Neuroimage. 2015;104:355–65.
+
+16. Yuan P, Voelkle MC, Raz N. Fluid intelligence and gross structural properties of
+the cerebral cortex in middle-aged and older adults: a multi-occasion longitudinal study. Neuroimage. 2018;172:21–30.
+17. Charlton RA, Barrick TR, McIntyre DJ, Shen Y, O’Sullivan M, Howe FA, et al. White
+matter damage on diffusion tensor imaging correlates with age-related cognitive decline. Neurology. 2006;66:217–22.
+18. Penke L, Maniega SM, Bastin ME, Valdés Hernández MC, Murray C, Royle NA,
+et al. Brain white matter tract integrity as a neural foundation for general
+intelligence. Mol Psychiatry. 2012;17:1026–30.
+19. Yeo RA, Ryman SG, Van Den Heuvel MP, De Reus MA, Jung RE, Pommy J, et al.
+Graph metrics of structural brain networks in individuals with schizophrenia and
+healthy controls: group differences, relationships with intelligence, and genetics. J Int Neuropsychol Soc. 2016;22:240–9.
+20. Marek S, Tervo-Clemmens B, Calabro FJ, Montez DF, Kay BP, Hatoum AS, et al.
+Reproducible brain-wide association studies require thousands of individuals.
+Nature. 2022;603:654–60.
+21. Cook EH, Leventhal BL, Freedman DX. Serotonin and measured intelligence. J
+Autism Dev Disord. 1988;18:553–9.
+22. Madsen K, Erritzoe D, Mortensen EL, Gade A, Madsen J, Baaré W, et al. Cognitive
+function is related to fronto-striatal serotonin transporter levels – a brain PET
+study in young healthy subjects. Psychopharmacology (Berl). 2011;213:573–81.
+23. Volf NV, Sinyakova NA, Osipova LP, Kulikov AV, Belousova LV. Association
+between intelligence quotient and the 5HTTLPR polymorphism of human serotonin transporter coding gene. J Psychiatry Brain Funct. 2015;2:8.
+24. Beaulieu J-M, Gainetdinov RR. The physiology, signaling, and pharmacology of
+dopamine receptors. Pharmacol Rev. 2011;63:182–217.
+25. Liggins J. Roles of dopamine D1 and D2 receptors in working memory function.
+MSURJ. 2009;4:39–45.
+26. Miller GM. The emerging role of trace amine-associated receptor 1 in the
+functional regulation of monoamine transporters and dopaminergic activity:
+TAAR1 regulation of monoaminergic activity. J Neurochem. 2011;116:164–76.
+27. Cools R, Arnsten AFT. Neuromodulation of prefrontal cortex cognitive function
+in primates: the powerful roles of monoamines and acetylcholine. Neuropsychopharmacol. 2022;47:309–28.
+28. Sarter M, Bruno JP. Cognitive functions of cortical acetylcholine: toward a unifying hypothesis. Brain Res Rev. 1997;23:28–46.
+29. Marsman A, Mandl RCW, Klomp DWJ, Cahn W, Kahn RS, Luijten PR, et al.
+Intelligence and brain efﬁciency: investigating the association between working
+memory performance, glutamate, and GABA. Front Psychiatry. 2017;8:154.
+30. Reddy-Thootkur M, Kraguljac NV, Lahti AC. The role of glutamate and GABA in
+cognitive dysfunction in schizophrenia and mood disorders – A systematic
+review of magnetic resonance spectroscopy studies. Schizophr Res.
+2022;249:74–84.
+31. De La Vega A, Brown MS, Snyder HR, Singel D, Munakata Y, Banich MT. Individual differences in the balance of GABA to glutamate in pFC predict the ability
+to select among competing options. J Cogn Neurosci. 2014;26:2490–502.
+32. Zacharopoulos G, Sella F, Emir U, Cohen Kadosh R. Dissecting the chain of
+information processing and its interplay with neurochemicals and ﬂuid intelligence across development. eLife. 2023;12:e84086.
+33. Jirout J, LoCasale-Crouch J, Turnbull K, Gu Y, Cubides M, Garzione S, et al. How
+lifestyle factors affect cognitive and executive function and the ability to learn in
+children. Nutrients. 2019;11:1953.
+34. Poitras VJ, Gray CE, Borghese MM, Carson V, Chaput J-P, Janssen I, et al. Systematic review of the relationships between objectively measured physical
+activity and health indicators in school-aged children and youth. Appl Physiol
+Nutr Metab. 2016;41:S197–S239.
+35. Feng J, Zheng C, Sit CH-P, Reilly JJ, Huang WY. Associations between meeting
+24-hour movement guidelines and health in the early years: a systematic review
+and meta-analysis. J Sports Sci. 2021;39:2545–57.
+36. Tapia-Serrano MA, Sevil-Serrano J, Sánchez-Miguel PA, López-Gil JF, Tremblay
+MS, García-Hermoso A. Prevalence of meeting 24-Hour movement guidelines
+from pre-school to adolescence: a systematic review and meta-analysis
+including 387,437 participants and 23 countries. J Sport Health Sci.
+2022;11:427–37.
+37. Tremblay MS, Carson V, Chaput J-P, Connor Gorber S, Dinh T, Duggan M, et al.
+Canadian 24-hour movement guidelines for children and youth: an integration
+of physical activity, sedentary behaviour, and sleep. Appl Physiol Nutr Metab.
+2016;41:S311–27.
+38. Walsh JJ, Barnes JD, Cameron JD, Goldﬁeld GS, Chaput J-P, Gunnell KE, et al.
+Associations between 24 h movement behaviours and global cognition in US
+children: a cross-sectional observational study. Lancet Child Adolesc Health.
+2018;2:783–91.
+39. Al-shoaibi AAA, Iyra P, Raney JH, Ganson KT, Dooley EE, Testa A, et al. Associations between adverse childhood experiences and early adolescent physical
+activity in the United States. Acad Pediatr. 2024;24:662–8.
+
+Translational Psychiatry (2025)15:246
+
+

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "30",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data, baseline 2016-2018, N=10,317 participants"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures cyberbullying victimization as outcome, not smartphone/social media as exposure. Cyberbullying alone without separately measured phone/SM variable fails FT-IC2 per E6."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No smartphone/SM exposure variable measured"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No smartphone/SM variable to extract"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical longitudinal analysis from ABCD baseline to Year 2, logistic regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article, Journal of Adolescence 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 not applicable - paper fails FT-IC2 and does not measure smartphone/SM as primary exposure variable",
+    "edge_cases_applied": ["E6"],
+    "notes": "EXCLUDED: This paper studies ACEs predicting cyberbullying victimization, but does not measure smartphone or social media use as an exposure variable. Cyberbullying victimization is the outcome, not smartphone/SM time/use. Fails FT-IC2 screening."
+  },
+  {
+    "paper_id": "78",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data, Year 2 (2018-2020), N=9,443 early adolescents ages 10-14"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures cyberbullying (victimization and perpetration) as exposure, not smartphone/social media. No smartphone time, social media use, or app usage measured. Cyberbullying alone without separately measured phone/SM fails E6."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No smartphone/SM exposure variable measured"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No smartphone/SM variable to extract"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Empirical cross-sectional analysis, Modified Poisson regression examining cyberbullying associations with sleep disturbance"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article, Academic Pediatrics 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 not applicable - paper fails FT-IC2, does not measure smartphone/SM as exposure",
+    "edge_cases_applied": ["E6"],
+    "notes": "EXCLUDED: Paper studies cyberbullying (victimization and perpetration) as predictor of sleep disturbance, but does not measure smartphone or social media use. No phone/SM exposure variable. Fails FT-IC2."
+  },
+  {
+    "paper_id": "87",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data, Year 2 (2018-2020), N=10,339 early adolescents ages 10-14"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures multiple smartphone and social media variables: recreational screen time, problematic use of video games, social media, and mobile phones. Specific exposures include texting, social media, video chat, YouTube, and internet browsing."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses estimating associations between sexual orientation (predictor) and recreational screen time, problematic screen use (outcomes). Multiple tests reported with coefficients."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported: sexual minority vs heterosexual = 3.72 more hours daily screen time (95% CI 2.96-4.47); possible sexual minority = 1.58 more hours (95% CI 0.92-2.24). Coefficients for problematic use reported."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis from ABCD data, multiple linear regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article, Annals of Epidemiology 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (not longitudinal), and paper reports smartphone/SM as outcome with individual predictor (sexual orientation/identity), which is not demographic-only. FT-EC7 does not apply.",
+    "edge_cases_applied": [],
+    "notes": "INCLUDE: Meets all inclusion criteria. Uses ABCD, measures multiple smartphone/SM variables (screen time, social media, texting, video chat), reports multiple regression associations with sexual orientation, provides numeric coefficients with CIs. Cross-sectional analysis excludes FT-EC7."
+  }
+]

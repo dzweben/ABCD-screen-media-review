@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "181",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 3498 U.S. adolescents aged 9-11 years from Adolescent Brain Cognitive Development Study"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as generic total composite (hours/day) from ABCD Youth Screen Time Survey covering TV, videos, games, texting, video chat, social media combined. No separately reported phone/SM coefficient. Violates FT-IC2 requirement for specific smartphone OR social media variable."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in International Journal of Obesity, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET; does not reach criteria check for FT-EC7",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper measures generic screen time composite without separate phone/SM coefficient. FT-IC2 fails on composite-only exclusion (per E2: phone/SM-specific row/column extractable required, not whole-composite only)."
+  },
+  {
+    "paper_id": "215",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 7445 adolescents aged 9-10 years from Adolescent Brain Cognitive Development Study at baseline (2016-2018)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as composite across multiple modalities (TV, video games, social media, video chatting, etc.) without separately extractable smartphone or social media-specific coefficient. Results report only aggregate screen time associations. Violates FT-IC2 requirement."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "FT-IC2 NOT_MET; exclusion applies"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Childhood Obesity (Print), October 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET; does not reach criteria check for FT-EC7",
+    "edge_cases_applied": ["E2"],
+    "notes": "Paper reports screen time as composite across TV/movies, videos, games, texting, video chat, social media. No separately extractable phone/SM coefficient. FT-IC2 fails per E2 (whole-composite only, not separately measured phone/SM modality)."
+  },
+  {
+    "paper_id": "154",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data: 791 Adolescent Brain Cognitive Development Study participants, Mage=14.12, 53% female, with EARS passive sensing data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone application use measured via EARS (Effortless Assessment Research System) passive sensing; reported by time window: daytime/evening (6AM-7:59PM), late-evening (8PM-9:59PM), late-night (10PM-5:59AM). Specific smartphone exposure variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects models with multiple statistical tests: daytime/evening app use predicted reduced exercise, sedentary time, daily steps; late-night use predicted reduced sleep, delayed sleep onset/waking, increased sedentary time, reduced steps. P<.001 reported throughout."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized beta coefficients reported: daytime/evening β=-0.21 to -0.07 (P<.001); late-evening β=-0.05 to -0.02 (P<.001); late-night β=-0.16 to -0.27 (P<.001). Within-person coefficients: daytime/evening β=-0.22 to -0.07 (P<.001); late-evening β=-0.05 to -0.02 (P<.001); late-night β=-0.16 to -0.24 (P≤.002)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective sensor-based study with mixed-effects models examining daily associations between smartphone use and sleep/physical activity over 3 weeks"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Psychiatry Research, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphone use is independent variable; sleep, physical activity, steps are dependent variables. Cross-sectional daily-level associations. Does not meet FT-EC7 criteria (phone/SM as DV).",
+    "edge_cases_applied": ["E4", "E11"],
+    "notes": "Null results reported with full statistical coefficients (E11 applies). Uses passive sensing (EARS) which provides objective smartphone measurement. Within-person and between-person effects examined; within-person remained significant."
+  }
+]

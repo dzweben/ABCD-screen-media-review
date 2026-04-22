@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: 'This cohort study analyzed data obtained between 2016 and 2019 from the Adolescent Brain Cognitive Development Study at 21 sites in the US'"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic 'child-reported daily screen time (in hours)' with no breakdown into phone-specific or social-media-specific components. No mention of social media, smartphone, texting, or app use separately measured."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Does not meet FT_IC3 because FT_IC2 fails. Screen time exposure variable is not a qualifying phone/SM-specific measure."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Does not meet FT_IC4 because FT_IC2 fails. While numeric values are reported (β=0.10 SD, β=0.03 SD), they are for non-qualifying generic screen time exposure."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cohort study with cross-sectional analysis at baseline, reports association between screen time and psychiatric outcomes with statistical tests (regression with genetic sensitivity analyses)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in JAMA Network Open (2023); not a preprint, protocol, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply because FT_IC2 fails (generic screen time, not phone/SM-specific). Therefore paper is excluded before FT-EC7 assessment.",
+    "edge_cases_applied": [],
+    "notes": "EXCLUSION: Paper fails FT-IC2 due to generic, undifferentiated screen time measure without phone or social media specificity."
+  },
+  {
+    "paper_id": "440",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: 'Data from Adolescent Brain Cognitive Development (ABCD) participants with baseline and two-year follow-up structural imaging data that passed quality control (N = 5,166)'"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic 'screen media activity (SMA)' described as 'About 1/3 of youth spend more than four hours/day engaged in screen media activity' with no breakdown into phone-specific or social-media-specific measures. No mention of smartphone, social media, texting, or other qualifying phone/SM variables."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Does not meet FT_IC3 because FT_IC2 fails. SMA is not a qualifying phone/SM-specific exposure."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Does not meet FT_IC4 because FT_IC2 fails. While numeric values are reported (β=0.020 for SMA→internalizing), the exposure variable is not qualifying."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal cohort study with mediation analyses (GLMM) linking SMA at baseline to internalizing outcomes at 2-year follow-up with reported coefficients."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Journal of Behavioral Addictions (2023); not a preprint, protocol, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply because FT_IC2 fails (generic screen media activity, not phone/SM-specific). Therefore paper is excluded before FT-EC7 assessment.",
+    "edge_cases_applied": [],
+    "notes": "EXCLUSION: Paper fails FT-IC2 due to generic, undifferentiated screen media activity measure without phone or social media specificity. E2 applies: would need phone/SM-specific row/column extractable from SMA composite, which is not provided."
+  },
+  {
+    "paper_id": "124",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: 'Participants were 9- and 10-year-old youth (n = 11,780) in the baseline of the multi-site Adolescent Brain and Cognitive Development Study (ABCD)'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific phone/SM variables: 'Youth reported the number of hours a day they spent watching TV shows or movies, watching videos online, playing video games, texting, using social media, and video chatting.' Social media and texting are explicitly measured as separate components, qualifying as phone/SM-specific exposures."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports inferential statistical tests (logistic regression) linking screen time/digital media use to internalizing disorder diagnoses (depression, anxiety, self-harm, suicidal ideation). Example: 'Youth spending 2 or more hours (vs. less than 2) a day with screen media were more likely to fit criteria for depressive disorders, self-harm, and suicidal ideation or attempts' with statistical adjustment."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported: odds ratios and statistical tests for associations between screen time categories (≥2 hours vs <2 hours) and internalizing disorder diagnoses with p-values and adjusted comparisons."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis: baseline ABCD data with logistic regression examining associations between youth-reported screen time and clinician-assessed internalizing disorder diagnoses via K-SADS-5 interview."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article published in Journal of Affective Disorders (2022); not a preprint, protocol, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because: (1) Paper is cross-sectional, not longitudinal (cross-sectional automatically excludes FT-EC7 per E7); (2) Screen media is predictor (IV) and internalizing disorders are outcome (DV), not screen media as sole DV; (3) Multiple demographic covariates included in adjusted models, but this is an epidemiological cross-section, not prospective prediction of future SM use from baseline demographics only.",
+    "edge_cases_applied": ["E8"],
+    "notes": "INCLUDE. Meets all FT-IC criteria. E8 applied: paper reports inferential tests (logistic regression with p-values and adjusted models), not descriptive means/SDs only. Cross-sectional design with quantifiable screen-time categories and clinically-assessed outcomes."
+  }
+]

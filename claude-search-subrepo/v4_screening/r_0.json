@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "2",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: N=640 participants with EARS passive sensing data from follow-up years 4, 5, and 6"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Specific smartphone exposure measured via EARS passive sensing: apps categorized into 49 categories including social media (Instagram, TikTok, Snapchat with 59 social category apps). Platform-specific measurement of smartphone app use during school hours."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No inferential statistical test linking smartphone/SM variable to any non-SM outcome. PDF supplement shows descriptive methodology and app categorization. Adjusted means calculated via emmeans package for app usage patterns, but no regression/correlation/association test with external behavioral or clinical outcomes reported."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Only descriptive statistics reported (means with 95% CI for app usage times, e.g., medical category 0.13 min, 95% CI 0.11-0.15). No coefficients (β/OR/HR/r/t/χ²) or p-values for tested associations."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Measurement/descriptive study without external analysis. Paper characterizes smartphone app usage patterns and categories but reports no empirical analyses linking phone/SM to behavioral, clinical, or non-SM outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JAMA (January 5, 2026); no evidence of preprint, conference abstract, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC3 and FT_IC5 fail first. This is a measurement/descriptive characterization study, not an analysis with smartphone/SM as outcome variable. FT-EC7 assessment is moot.",
+    "edge_cases_applied": ["E5", "E10"],
+    "notes": "C1 and C2 agree on FT_IC1, FT_IC2, and FT_IC6 (all MET). Both correctly identified this as a measurement paper without external outcome analysis. The paper appears to be a pure descriptive characterization of ABCD EARS smartphone app usage patterns during school hours, using adjusted means to estimate app category usage. Resolver confirms: EXCLUDE (fails FT_IC3 and FT_IC5)."
+  },
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study Release 5.0 data: N=4,262 children aged 9-11 years with genetically assigned European ancestry from 21 U.S. sites, baseline 2016-2019."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic 'child-reported daily screen time (in hours)' with no breakdown into smartphone-specific or social-media-specific components. No separate measurement of phone/SM variables; no mention of TikTok, Instagram, Snapchat, texting, app use, or any SM platform specifically. Fails FT-IC2 criterion requiring SPECIFIC smartphone OR social media variable."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. Exposure variable (generic screen time) does not qualify. While paper reports regression models with genetic sensitivity analyses linking screen time to attention/internalizing problems, the exposure itself is non-qualifying generic screen time, not phone/SM-specific."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. Although numeric coefficients are reported (β=0.10 SD, β=0.03 SD for screen time associations), they apply to non-qualifying generic screen time exposure, not a specific phone/SM variable."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cohort study with baseline cross-sectional analysis (2016-2019). Reports association between screen time and psychiatric outcomes with statistical tests (regression, genetic sensitivity analysis model with polygenic risk scores, SNV-based/twin-based heritability)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JAMA Network Open (2023); not a preprint, protocol, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 fails (generic screen time, not phone/SM-specific). Paper is excluded before FT-EC7 assessment. FT-EC7 cannot apply when the exposure variable does not meet FT-IC2 qualifying criteria.",
+    "edge_cases_applied": ["E17", "E18"],
+    "notes": "C1 disagreed with C2 on FT_IC2. C1 argued that 'child-reported daily screen time' counts as a qualifying exposure and marked FT_IC2 MET; C1 therefore marked FT_IC3, FT_IC4 MET (with genetic/individual predictors present making FT-EC7 not apply). C2 correctly identified FT_IC2 failure due to generic screen time lacking phone/SM specificity. Resolver confirms C2: EXCLUDE via FT_IC2 failure. Generic 'screen time' without phone/SM breakdown violates the requirement for SPECIFIC smartphone OR social media variable (per prompt definition). This is a genetic confounding study of generic screen time and psychiatric outcomes, not a phone/SM study."
+  },
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: participants recruited across 21 U.S. cities, ages 9-10 years at T1 and 11-13 years at T2. Explicitly stated: 'Data from the Adolescent Behavior Cognitive Development (ABCD) Study were used to identify clinical and neuroimaging characteristics of participants at late childhood (T1) and early adolescence (T2).'"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract states: 'screen time assessed using a self-report questionnaire' with no PDF available. Exposure is generic 'screen time' with no clarification of specific smartphone OR social media components. No mention of TikTok, Instagram, Snapchat, texting, app use, mobile phone, or any platform-specific measurement. Fails FT-IC2 requirement for SPECIFIC smartphone OR social media variable."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. Although abstract reports: 'Each additional hour of daily screen time at T1 was associated with a 0.12-point (95% CI, 0.04-0.20; P=.008) increase in Child Behavior Checklist depressive score at T2,' this association is for non-qualifying generic screen time, not a phone/SM-specific variable."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails due to FT_IC2 failure. Although numeric data are reported (β=0.12, 95% CI 0.04-0.20, p=.008; mediation 36.4%, 95% CI 18.2%-63.6%), they apply to non-qualifying generic screen time exposure."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal mediation study: prospective design with baseline (T1, ages 9-10) and follow-up (T2, ages 11-13). Participants with no past/current psychiatric disorders at T1 selected. Reports mediation analysis with sleep duration and white matter organization as mediators of screen time→depression association."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in JAMA Pediatrics (2025); no evidence of duplicate, preprint, or protocol describing planned (not completed) work."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 does NOT apply because FT_IC2 fails. Paper reports screen time (non-qualifying generic exposure) predicting depression (non-SM outcome), but the exposure variable does not meet the specific phone/SM requirement. Even though directionality shows screen time as IV and depression as DV (which would not trigger FT-EC7), the fundamental disqualification is FT_IC2 failure.",
+    "edge_cases_applied": ["E18"],
+    "notes": "C1 and C2 disagree on FT_IC2. C1 marked FT_IC2 MET, reasoning that 'screen time measured via self-report questionnaire' qualifies as a specific exposure. C2 marked FT_IC2 NOT_MET, correctly noting that without PDF and with abstract-only information on 'generic screen time' lacking phone/SM breakdown, the exposure fails the specificity requirement. Resolver confirms C2: EXCLUDE via FT_IC2 failure. The prompt explicitly defines generic 'total screen time' without phone/SM breakdown as NOT_MET (exclusion via FT-EC2). This is a longitudinal mediation study of generic screen time, sleep, white matter, and depression—not a smartphone/social media study. No PDF access limits full verification, but abstract clearly indicates generic screen time exposure."
+  }
+]

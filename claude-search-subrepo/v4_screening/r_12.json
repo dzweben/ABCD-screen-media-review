@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "420",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data from existing Adolescent Brain Cognitive Development dataset with 11,875 children ages 9-10 years recruited from 21 research sites across the country."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary exposure variable is aggregate 'Total Screen Time' composite across television shows/movies, videos, video games, texting, social media, and video chat. Although individual modalities examined in Table 1, main analyses use only aggregate total ST, not separately extractable smartphone/SM-specific coefficients. Per FT-IC2 MIXED-MODALITY rule: MET if smartphone-specific OR social-media-specific coefficient separately extractable; NOT_MET if only aggregate composite reported."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Bivariate Pearson correlations and multiple linear regressions conducted linking screen time to mental health, academic, and social outcomes. Table 2 reports regressions with t-statistics and p-values for main effects of ST and interactions by sex."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports standardized betas, t-statistics, and p-values. Example: 'Main effect of ST on externalizing: Standardized Beta=0.083, t=5.69, p<.001'; 'Main effect of ST on ADHD: Standardized Beta=0.088, t=6.04, p<.001'."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional study from ABCD baseline examining associations between screen time and multiple outcomes (depression, anxiety, ADHD, academic performance, sleep, peer relationships)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article: Paulich KN, et al. Screen time and early adolescent mental health, academic, and social outcomes in 9- and 10-year old children: Utilizing the ABCD Study. PLoS ONE. 2021;16(9):e0256591."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the independent variable; mental health, behavioral, academic, and social outcomes are dependent variables. Cross-sectional design with multiple outcome types. FT-EC7 requires smartphone/SM to be DV in ALL analyses with ONLY demographic predictors in longitudinal/prospective design. Paper reports screen-time→outcome associations, not demographic→smartphone associations. FT-EC7 does not apply.",
+    "edge_cases_applied": ["E2"],
+    "notes": "C1 correctly identified FT-IC1 and FT-IC3-6 as MET. C2 correctly identified FT-IC2 as NOT_MET based on aggregate composite. Disagreement on FT-IC2: C1 incorrectly coded as MET, overlooking that while individual modalities are listed, the primary exposure and main analyses use only total ST aggregate composite, not separately extractable phone/SM coefficients."
+  },
+  {
+    "paper_id": "429",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study first annual curated release with 4524 children aged 8-11 years from Adolescent Brain Cognitive Development Study."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific recreational screen time (ST) variable as part of Canadian 24-Hour Movement Guidelines (≤2 hours of ST per day). ST is separately measured via Youth Screen Time Survey (12 items) encompassing television, videos, video games, texting, and other digital activities on weekday and weekend days. ST is extractable as distinct exposure variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential tests reported linking ST (as component of movement behavior recommendations) to impulsivity dimensions. Example: 'Meeting the ST and sleep recommendations was associated with less impulsive behaviors on all dimensions of impulsivity' with CIs and p-values reported in abstract and tables."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 3 reports standardized β coefficients and p-values. Example: 'Only ST: β=-0.08, p<.001' (negative urgency); 'PA + ST: β=-0.05, p=.002' (negative urgency); numeric CIs and SEs reported throughout tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional observational study using structural equation modeling examining associations between adherence to 24-hour movement behavior recommendations (including ST) and dimensions of impulsivity."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article: Guerrero MD, et al. 24-Hour Movement Behaviors and Impulsivity. Pediatrics. 2019;144(3):e20190187."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper is cross-sectional (not longitudinal/prospective). Per E7 binding rule: 'cross-sectional analyses with smartphone/SM as DV do not trigger FT-EC7 exclusion.' While ST is one component of movement behavior combinations and examined as predictor of impulsivity outcomes, the design is fundamentally cross-sectional, which negates the prospective requirement (c) for FT-EC7 application.",
+    "edge_cases_applied": ["E2"],
+    "notes": "C1 incorrectly coded FT-EC7_applies as true, citing cross-sectional as confusing variable role. C2 left FT-EC7 null. Resolver determination: Cross-sectional design is disqualifying factor per E7. While ST is measured as part of composite, it is not functioning as sole DV predicting from baseline demographics alone. FT-EC7 does not apply."
+  },
+  {
+    "paper_id": "434",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data: 'The ongoing ABCD Study collected demographic and screen use data from 11,878 children and primary caregivers at baseline (mean age = 9.9 years) beginning in 2016 with annual follow-up assessments.' Analytic sample N=9,475."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific smartphone variable: age of first smartphone ownership. Methods: 'Parents were asked each year at what age their child received their first smartphone.' Operationalized as binary outcome (<10 years vs ≥10 years, based on mean 10.9 years, SD 1.5)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional multivariable logistic regression examining associations between sociodemographic predictors and early smartphone ownership: 'We then estimated a cross-sectional multivariable logistic regression model to examine associations between key sociodemographic predictors (sex, race/ethnicity, household income, household structure, and parental education) and first smartphone ownership age.'"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports odds ratios with 95% confidence intervals. Examples: 'Female OR=1.38 (95% CI 1.19-1.60)'; 'Black OR=2.78 (95% CI 2.07-3.64)'; 'Single parent OR=2.01 (95% CI 1.67-2.44)'; 'Less than bachelor's degree OR=1.70 (95% CI 1.40-2.06)'; all p<.001 or p<.01."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional logistic regression from ABCD baseline data (not a measurement paper or protocol) examining associations with hypothesis testing and inferential statistics."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article: Carvalho CA, Ravindran N, Howard G, Oshri A, Hale L. Sociodemographic Associations With Early Smartphone Ownership in US Adolescents. Pediatrics. 2026;157(2):e2025073891. Published online November 2025."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three FT-EC7 conditions satisfied: (a) Smartphone ownership age is the DEPENDENT variable in all reported analyses; (b) ALL predictors are demographic/sociodemographic only (sex, race/ethnicity, household income, household structure, parental education) — no individual psychological/clinical/behavioral/neural predictors; (c) Cross-sectional analysis predicting smartphone ownership from baseline demographic characteristics. Per E14 binding rule: 'Sociodemographic predictors of phone/SM — cross-sectional MET; longitudinal-only → FT-EC7.' This is cross-sectional with only demographic predictors of smartphone as DV. FT-EC7 applies and is EXCLUSION CRITERION.",
+    "edge_cases_applied": ["E14"],
+    "notes": "C1 correctly identified FT-EC7_applies as true and cited E14 rule. C2 incorrectly coded FT-EC7_applies as false, stating cross-sectional design does not trigger exclusion. Resolver determination: C1 is correct. E14 explicitly states cross-sectional analyses with sociodemographic predictors of phone/SM trigger FT-EC7 exclusion. FT-EC7 applies = true."
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "74",
+    "citation": "Roberston, L., Twenge, J. M., Joiner, T. E., & Cummins, K. (2022). Associations between screen time and internalizing disorder diagnoses among 9- to 10-year-olds. Journal of Affective Disorders, 311, 530-537.",
+    "doi": "10.1016/j.jad.2022.05.071",
+    "journal": "Journal of Affective Disorders",
+    "year": "2022",
+    "first_author": "Roberston, Lee",
+    "senior_author": "Cummins, Kevin"
+  },
+  "3B_Sample": {
+    "N": "11780",
+    "ABCD_release_version": "ABCD Release 2.0",
+    "timepoints_used": "Baseline (Wave 1, 2017-2018, ages 9-10)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "Youth Screen Time Survey",
+    "modalities_included": ["total screen time", "total digital media (social media, gaming, texting, online videos)", "TV/movies", "video chat", "social media", "gaming", "texting", "online videos"],
+    "how_operationalized": "Self-reported hours on typical weekday (6 items) and weekend (6 items); weighted average ([weekday x 5 + weekend x 2]/7); dichotomized at >=2 hrs/day vs <2 hrs/day; also examined as continuous (0 to 7+ hrs/day) for dose-response curves. 'Digital media' composite = social media + gaming + texting + online videos (excluding TV and video chat)."
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Internalizing disorder diagnoses (DSM-5 criteria)",
+    "measure_used": "Computerized K-SADS-5 (youth self-report): depressive disorders, anxiety disorders (generalized and social), suicidal ideation or attempts, and non-suicidal self-harm. Lifetime diagnoses (past or current).",
+    "base_rate_if_binary": "Girls: depressive disorders 2.9%, anxiety 1.1%, suicidal ideation/attempt 8.0%, self-harm 3.5%. Boys: depressive 3.5%, anxiety 1.3%, suicidal ideation/attempt 7.7%, self-harm 4.5%."
+  },
+  "3E_Design_Analysis": {
+    "design": "Cross-sectional (baseline only)",
+    "model_type": "Univariate general linear model (logistic)",
+    "model_type_detail": "Relative risk ratios (RR) and adjusted relative risk ratios (ARR) for >=2 hrs/day vs <2 hrs/day for total screen time, total digital media, and each modality. Gender-stratified analyses. Also examined individual digital media activities (social media, gaming, texting, online videos) with >=2 hrs/day vs <2 hrs/day. Exposure-response curves for 0 to 7+ hrs/day.",
+    "covariates_listed": "Child age, race (white vs non-white), child ethnicity (Hispanic/Latino vs not), combined family income, primary caregiver education, primary caregiver employment, gender identity",
+    "SES_in_model": "yes - combined family income and primary caregiver education included",
+    "verbatim_analysis_description": "We rely primarily on relative risk (RR) and adjusted relative risk (ARR) using a univariate general linear model with covariates."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "ARR",
+      "value": "2.00",
+      "CI_95": "(1.48, 1.96 to 2.70)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: total screen time >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [girls total screen time depressive disorders]: 2.9% vs 5.8%... 2.00 (1.48, 2.70)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.27",
+      "CI_95": "(1.03, 1.55)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: total screen time >=2 hrs/day -> suicidal ideation/attempt (adjusted)",
+      "verbatim_quote": "Adjusted [girls total screen time suicidal ideation]: 8.0% vs 10.1%... 1.27 (1.03, 1.55)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.45",
+      "CI_95": "(1.09, 1.93)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: total screen time >=2 hrs/day -> self-harm (adjusted)",
+      "verbatim_quote": "Adjusted [girls total screen time self-harm]: 3.5% vs 5.1%... 1.45 (1.09, 1.93)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "2.23",
+      "CI_95": "(1.11, 1.86 to 3.06)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: total screen time >=2 hrs/day -> anxiety disorders (adjusted)",
+      "verbatim_quote": "Adjusted [girls total screen time anxiety]: 1.1% vs 1.5% [CI from 1.11 in table]... 2.23 (1.11, 4.47)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.66",
+      "CI_95": "(1.22, 2.25)",
+      "p_value": "",
+      "outcome_scale_note": "Boys: total screen time >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [boys total screen time depressive disorders]: 3.5% vs 5.8%... 1.66 (1.22, 2.25)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "2.20",
+      "CI_95": "(1.26, 4.30)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: social media >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [girls social media depressive disorders]: 4.6% vs 10.5%... 2.20 (1.26, 4.30)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.87",
+      "CI_95": "(1.36, 2.13)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: online videos >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [girls online videos depressive disorders]... 1.87 (1.36, 2.13) [approximate from Table 2]",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.74",
+      "CI_95": "(1.34, 2.26)",
+      "p_value": "",
+      "outcome_scale_note": "Girls: total digital media >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [girls digital media depressive disorders]... 3.6% vs 7.1%... 1.96 (1.53, 2.51) [unadjusted]; adjusted ARR from table",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "2.94",
+      "CI_95": "(1.59, 5.42)",
+      "p_value": "",
+      "outcome_scale_note": "Boys: social media >=2 hrs/day -> depressive disorders (adjusted)",
+      "verbatim_quote": "Adjusted [boys social media depressive disorders]... 5.1% vs 14.9%... 2.94 (1.59, 5.42)",
+      "below_threshold": "no"
+    },
+    {
+      "effect_type": "ARR",
+      "value": "1.93",
+      "CI_95": "(1.57, 2.38)",
+      "p_value": "",
+      "outcome_scale_note": "Boys: video chat >=2 hrs/day -> suicidal ideation/attempt (adjusted)",
+      "verbatim_quote": "Adjusted [boys video chat suicidal ideation/attempt]... 6.8% vs 13.2%... 1.93 (1.57, 2.38)",
+      "below_threshold": "no"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "ES-first",
+    "p_values_in_abstract": "no",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "yes",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "caregivers and physicians should be aware that heavy users of digital media are more likely to experience mood disorders, self-harm, and suicidal ideation. If even part of the association is due to digital media use causing mental health disorders, caregivers and physicians might consider counseling parents about appropriate limits for the daily use of digital media."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "combination",
+    "pattern_detail": "The paper contrasts its findings with 'some previous studies that effect sizes in this area are small' by stating 'we found considerable associations between screen time and internalizing disorders, including a doubling of the prevalence of several disorders from light to heavy use.' The ARRs for the dichotomized comparisons (>=2 hrs vs <2 hrs) are indeed moderate (1.5-2.9), but the paper is cross-sectional and uses a dichotomized exposure which maximizes apparent effect sizes. The paper frames findings through effect magnitudes but also notes 'In contrast to the conclusions of some previous studies that effect sizes in this area are small.'",
+    "list_1_qualifier": "no",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "",
+    "ambiguity_notes": "Cross-sectional baseline-only analysis (ABCD Release 2.0). Uses dichotomized screen time (>=2 hrs vs <2 hrs) which can inflate apparent effect sizes compared to per-unit analyses. DSM-5 diagnoses via computerized self-report K-SADS-5 (lifetime prevalence) in 9-10 year olds. Very low base rates for social media use at this age (mean 0.14 hrs/day for girls, 0.09 for boys) limit interpretation of social media-specific findings. Dr. Twenge has received speaking honoraria from law firms on social media and mental health, and Dr. Joiner has consulted for law firms on suicide topics - noted COI disclosures."
+  }
+}

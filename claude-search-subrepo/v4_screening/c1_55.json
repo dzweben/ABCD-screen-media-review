@@ -1,0 +1,99 @@
+[
+  {
+    "paper_id": "26",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study Year 2 follow-up (2018–2020, N=10,258/11,875). Explicitly stated: 'Adolescent Brain Cognitive Development (ABCD) Study' with cross-sectional data analysis from ABCD 4.0 release."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures cyberbullying victimization and perpetration via social media: 'Have you ever been cyberbullied, where someone was trying on purpose to harm you or be mean to you online, in texts, or group texts, or on social media (like Instagram or Snapchat)?'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression analyses examining associations between cyberbullying (IV) and eating disorder symptoms (DV). Reports prevalence ratios (PR) with confidence intervals for multiple outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported: cyberbullying victimization with worry about weight gain (PR 2.41, 95% CI 1.48–3.91), binge eating (PR 1.95, 95% CI 1.59–2.39), distress with binge eating (PR 2.64, 95% CI 1.94–3.59)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. Cross-sectional secondary data analysis with inferential statistics (Modified Poisson regression)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (International Journal of Eating Disorders, 2023;56:2336–2342), not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional analysis (ignores direction per E7); cyberbullying is IV, eating disorder symptoms are DVs. FT-EC7 does not apply because paper includes non-SM outcomes.",
+    "edge_cases_applied": [
+      "E6"
+    ],
+    "notes": "E6 applies: Paper measures cyberbullying separately (distinct exposure from SM) and links to eating disorder outcome (non-SM). Study design is cross-sectional, all criteria MET."
+  },
+  {
+    "paper_id": "394",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract mentions 'Adolescent Brain Cognitive Development (ABCD) Study' with 'mixed-effects models to analyze associations between baseline self-reported screen time', but full details of cohort (U.S. ABCD vs. other cohort) not verifiable from abstract alone."
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'screen time' but does not specify whether this is smartphone/social media-specific. Cannot determine if qualifies as specific SM/phone exposure or generic 'total screen time' without full PDF."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract states 'mixed-effects models to analyze associations' but no specific statistical results or coefficients cited in abstract. Cannot verify from abstract alone."
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No numeric values (β, OR, p-values, CI) reported in abstract. Full text needed."
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract describes prospective analysis with mixed-effects models, suggesting longitudinal design, but abstract does not provide sufficient detail on whether analysis is original empirical work or other type."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Springer, presumably BMC Public Health based on DOI structure), not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cannot determine directionality without PDF. Screen time as outcome would require checking if predictors are demographic-only and analysis is longitudinal.",
+    "edge_cases_applied": [],
+    "notes": "NO PDF AVAILABLE. All criteria except FT_IC6 rated UNKNOWN. Requires PDF retrieval to complete screening. Abstract insufficient for FT_IC2 determination (generic 'screen time' vs. SM/phone-specific)."
+  },
+  {
+    "paper_id": "309",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Study uses Amsterdam Born Children and their Development (ABCD) cohort from the Netherlands. Paper states: 'community sample consisted of 2663 Dutch adolescents (54% girls). Their data were retrieved from the Amsterdam Born Children and their Development (ABCD) cohort study (Van Eijsden et al., 2010).' This is Dutch ABCD, not U.S. ABCD. FT-IC1 explicitly states 'Uses Amsterdam/Dutch ABCD... only cites ABCD in intro' = NOT_MET."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Paper measures problematic social media use (PSMU) with Social Media Disorder Scale (9-item scale) and problematic gaming (PG) with Internet Gaming Disorder Scale (9-item scale). PSMU qualifies as 'social media: time, platform-specific, accounts' per FT-IC2. Clear SM-specific variable measured."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel model with Poisson regression analogs and continuous variables. Autoregressive and cross-lagged paths with inferential tests (z-scores, p-values) examining associations between PSMU/PG and mental health outcomes (emotional problems, hyperactivity/inattention, conduct problems, prosocial behavior). Multiple bidirectional statistical tests reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients reported: PSMU T2 <- PSMU T1 (β = .307, p < .001); PG T2 <- PG T1 (β = .426, p < .001); Emotional problems T2 <- PSMU T1 (β = .172, p < .001); Emotional problems T1 <- PSMU T2 (cross-lagged β = .007, p = .836, not significant). Beta coefficients and p-values throughout Table 2."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. Longitudinal study of 2663 Dutch adolescents with assessments at two time points (T1 2019-2020, T2 2021). Cross-lagged panel model with autoregressive and cross-lagged paths testing temporal precedence."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article (Journal of Research on Adolescence, 2025; DOI: 10.1111/jora.70076), not a preprint or deposit of duplicate work."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper includes individual psychological predictors (emotional problems, hyperactivity/inattention, conduct problems, prosocial behavior) of PSMU/PG per E16. These are not demographic/contextual predictors. FT-EC7 does not apply because paper includes cross-lagged individual characteristic predictors per E16 ('Individual-characteristic predictors of phone/SM (ADHD, depression, impulsivity, genes, etc.) → MET regardless of direction/timeframe').",
+    "edge_cases_applied": [
+      "E16"
+    ],
+    "notes": "CRITICAL: Paper uses Dutch ABCD cohort, not U.S. ABCD. FT_IC1 = NOT_MET, excludes paper. FT_IC1 failure is binding exclusion criterion. All other criteria MET, but cohort non-eligibility makes paper ineligible for inclusion in U.S. ABCD systematic review."
+  }
+]

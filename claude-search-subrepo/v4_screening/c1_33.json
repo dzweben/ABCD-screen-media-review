@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "521",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study baseline data from 10,842 participants, children aged 9-10 years from 21 sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific phone/SM variables: passive screen use (television/movies/watching videos), playing video games, social media (visiting social networking sites such as Facebook, Instagram and video-chatting), and texting"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear models with Poisson distribution and logistic regression. Inferential tests reported: chi-square tests and comparisons by autism status with ratio of means, e.g., passive viewing p < 0.001, video games p = 0.001"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values throughout: means, ratio of means with 95% CI, prevalence ratios with 95% CI, p-values (e.g., Table 3: passive screen time p = 0.002, video games p = 0.05, texting p = 0.04)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis from ABCD baseline data examining screen time and obesity association"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Frontiers in Pediatrics, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-EC7 criteria because: (a) Phone/SM are IVs, not DVs—obesity is the primary outcome; (b) cross-sectional analyses are included (autism status by screen time); (c) autism status is a grouping variable, not a predictor in the sense of FT-EC7",
+    "edge_cases_applied": [],
+    "notes": "Examines screen time patterns separately by gender and autism status with obesity as outcome"
+  },
+  {
+    "paper_id": "101",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD data: 8,324 children at baseline (ages 9-11 years, M=119.28 months) and 3,891 at 2-year follow-up from the ABCD 2.0 release"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time with Screen-Activity Proportion (SAP) score computed from child self-report questionnaire of daily screen time across modalities"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation analyses, mediation analysis with bootstrapping, and group comparisons. Inferential statistics reported: baseline r = −0.040 (p < 0.001 by Bayes factor), year 2 r = −0.0933 (BF10 = 428995.74), group t-tests (t(1571) = 3.043, p = 0.002)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Correlation coefficients, bootstrap 95% CIs, Bayes factors, p-values, Cohen's d, independent t-tests reported throughout (e.g., 'r = −0.0933, 95% CI [−0.1231, −0.0635]')"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis using baseline and 2-year follow-up data examining screen time effects on fronto-striatal connectivity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Developmental Cognitive Neuroscience, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-EC7 criteria because screen time is the IV predicting neural outcomes (fronto-striatal connectivity), not the DV; includes individual psychological factors (reward sensitivity via BAS scores) as predictors; reports mediation analysis",
+    "edge_cases_applied": [],
+    "notes": "Examines screen time as predictor of brain development (inhibitory control network) with reward sensitivity as mediator"
+  },
+  {
+    "paper_id": "160",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data (N=11,633 at baseline, analyzed N=11,633 with complete data) ages 9-11 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen time modalities: total screen time, texting, video chatting, watching videos, playing video games reported separately from ABCD Youth Screen Time Survey"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses with inferential statistics reported. Each additional hour of screen time associated with 1.09 higher odds (95% CI 1.03–1.14). Specific modalities: texting aOR 1.36 (95% CI 1.06–1.74), video chatting aOR 1.30 (95% CI 1.03–1.65), videos aOR 1.21 (95% CI 1.04–1.39), video games aOR 1.18 (95% CI 1.01–1.38)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios (aOR) with 95% confidence intervals reported for all associations (Table 2); p-values derived from logistic regression"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort study with 2-year follow-up, examining baseline screen time predicting 2-year suicidal behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article, Preventive Medicine, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-EC7 criteria because screen time is the IV (independent variable) predicting suicidal behaviors (outcome), not the DV; suicidal behaviors are clinical/psychological outcomes, not demographic predictors; longitudinal analysis but with phone/SM as predictor, not outcome",
+    "edge_cases_applied": [],
+    "notes": "Prospective study finding each additional hour of screen time associated with increased odds of suicidal behaviors at 2-year follow-up"
+  }
+]

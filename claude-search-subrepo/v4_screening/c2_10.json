@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "167",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data. Abstract states: 'We used four waves of longitudinal data (Years 1–4) from the Adolescent Brain Cognitive Development (ABCD; Baseline N = 11,878)'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures smartphone ownership as exposure. Methods: 'Parents were asked whether or not their child owns a smartphone... youth were assigned a value of \"5\" representing no smartphone ownership.' Smartphone ownership is a SPECIFIC phone variable qualifying under FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports inferential statistical tests linking smartphone ownership to parent-child informant discrepancy in internalizing problems. Abstract: 'Across the full sample, significant parent-child informant discrepancy... appeared at Year 2 (M age = 12.0) and increased across the remainder of the study (b = -0.21, SE = .042, p < .001, 95%CI [-.29, -.23]).' Multi-level modeling with regression coefficients reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric statistics reported. β coefficient example: b = -0.21, SE = 0.042, p < .001 for parent-child discrepancy trajectory. Figure 1 reports β values (e.g., β = .29***, β = -.24*, β = -.01). Table 3 presents additional coefficients."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Uses longitudinal ABCD data with multi-level modeling to analyze smartphone ownership impact on parent-child informant discrepancy across 4 years (Years 1–4)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Development and Psychopathology (2025). Not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. The paper includes analyses where smartphone/SM is NOT the dependent variable in isolation; smartphone ownership is examined as a predictor of parent-child discrepancy in internalizing problems (a psychological/clinical outcome), not as a dependent variable predicted only by demographics. Rule E16 applies: individual-characteristic predictors (related to mental health outcomes) → MET regardless of direction.",
+    "edge_cases_applied": ["E1", "E13"],
+    "notes": "Paper 167 clearly qualifies. E1: smartphone ownership as one predictor with coefficient reported → FT_IC3 MET. E13: Smartphone ownership as exposure (IV) with non-SM outcome (parent-child discrepancy in internalizing problems) → MET."
+  },
+  {
+    "paper_id": "175",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data. Methods section: 'The present study examined the longitudinal, bidirectional associations between early adolescents' electronic media use and family conflict across 3 years using data from the ABCD study (T1; N = 11,787).'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific electronic media (SM) variables. Methods: 'Specific types of EMU include television viewing, video games, and social media.' Measures reported for 'Social electronic media use' and electronic media types. Social media is explicitly QUALIFYING under FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports bidirectional associations with inferential tests. Abstract: 'Findings indicated that more overall electronic media use was related to later increases in family conflict, whereas the reverse association was not supported.' Results section reports regression models with p-values (e.g., p < .001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric statistics reported. Results section includes β coefficients and p-values. Example from text: 'higher levels of total screen time at time t predicted more family conflict 1 year later (b = 0.10; p < .001).' Table 1 displays correlation matrix and Table 2 shows model parameters."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis of ABCD data examining bidirectional associations between electronic media use and family conflict across 3 years."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Family Psychology (2025). Not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. The paper reports bidirectional associations between electronic media use and family conflict (a non-SM outcome). Although some analyses examine family conflict as a predictor of media use, the paper ALSO includes electronic media → family conflict analyses (the forward direction), and family conflict is a psychological/relational outcome, not a demographic predictor. Rule E7 & E15 apply: family conflict as predictor of phone/SM is present, but downstream non-SM outcome relationship exists.",
+    "edge_cases_applied": ["E1", "E15"],
+    "notes": "Paper 175 qualifies clearly. Multiple electronic media types and their associations with family conflict outcomes reported with full coefficients."
+  },
+  {
+    "paper_id": "310",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses U.S. ABCD Study data. Abstract: 'data from the ABCD Study (Baseline N ≈ 12,000; Mage = 9.9; White = 52.0%, Hispanic = 20.3%, Black = 15.0%, Asian = 2.1%, Other = 10.5%; Female = 47.8%)'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures social media use as exposure. Methods: 'Social media use... Youth reported on their social media use habits by answering questions about weekday and weekend hours.' Social media is explicitly QUALIFYING under FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports statistical associations linking social media use to cognitive abilities trajectories. Abstract: 'Parallel process latent growth curve models revealed that the trajectory of social media use was negatively coupled with crystallized and inhibitory control/attention performance trajectories.' SEM analysis with latent growth models is an inferential test."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric statistics reported. Results section includes correlation coefficients (e.g., Table 1 shows bivariate correlations) and pathway coefficients from latent growth curve models. Example: social media hours correlated with cognitive performance measures; model parameters reported in text and tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis using parallel process latent growth curve models examining associations between social media use and cognitive performance trajectories over 4 years in early adolescence."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Journal of Research on Adolescence (2025). Not a preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Social media use is examined as an independent variable (IV) predicting cognitive performance trajectories (crystallized abilities, inhibitory control/attention, processing speed), not as a dependent variable. The outcomes (cognitive abilities) are psychological/behavioral, not demographic. Rule E3 applies: latent construct pathway extracted → MET.",
+    "edge_cases_applied": ["E3"],
+    "notes": "Paper 310 qualifies. E3: Latent growth curve model with social media use as IV linked to cognitive ability trajectories as DVs → phone/SM-specific pathway extractable → MET. Parallel process growth models demonstrate coupled trajectories with reportable coefficients."
+  }
+]

@@ -1,0 +1,200 @@
+{
+  "3A_Bibliographic": {
+    "candidate_id": "19",
+    "citation": "Nagata, J. M., Shim, J., Low, P., Ganson, K. T., Testa, A., He, J., Santos, G.-M., Brindis, C. D., Baker, F. C., & Shao, I. Y. (2025). Prospective association between screen use modalities and substance use experimentation in early adolescents. Drug and Alcohol Dependence, 266, 112504.",
+    "doi": "10.1016/j.drugalcdep.2024.112504",
+    "journal": "Drug and Alcohol Dependence",
+    "year": "2025",
+    "first_author": "Nagata, Jason M.",
+    "senior_author": "Shao, Iris Y."
+  },
+  "3B_Sample": {
+    "N": "8006",
+    "ABCD_release_version": "not specified (Year 2 and Year 3 follow-up data)",
+    "timepoints_used": "Year 2 (exposure, ages 11-12, 2018-2020) and Year 3 (outcome)"
+  },
+  "3C_Exposure": {
+    "exposure_measure": "ABCD Youth Screen Time Survey",
+    "modalities_included": [
+      "TV shows/movies",
+      "videos (YouTube)",
+      "single-player video games",
+      "multi-player video games",
+      "texting",
+      "video chatting",
+      "social media",
+      "internet",
+      "total recreational screen time"
+    ],
+    "how_operationalized": "Average hours per day for each modality, weighted formula: ((weekday avg x 5) + (weekend avg x 2))/7. Total = sum of all 8 modalities. Continuous, per-hour units."
+  },
+  "3D_Outcome": {
+    "primary_outcome": "Substance use experimentation (alcohol sip, nicotine puff, cannabis puff/eaten)",
+    "measure_used": "ABCD substance use survey adapted from iSay Sip Inventory; binary yes/no for each substance and any substance composite",
+    "base_rate_if_binary": "Any substance Year 3: 13.2%; Alcohol Year 3: 12.0%; Nicotine Year 3: 2.5%; Cannabis Year 3: 1.0%"
+  },
+  "3E_Design_Analysis": {
+    "design": "Prospective cohort (Year 2 exposure -> Year 3 outcome)",
+    "model_type": "Logistic regression",
+    "model_type_detail": "Multiple logistic regression with ABCD sampling weights (American Community Survey). Separate models for each screen modality predicting each substance outcome. Benjamini-Hochberg correction for multiple comparisons. Tested sex and race/ethnicity moderation.",
+    "covariates_listed": "age, sex, race and ethnicity, household income, parent education, family conflict (Family Environment Scale), Child Opportunity Index score, study site, substance use experimentation at Year 2",
+    "SES_in_model": "yes - household income and parent education were covariates in the screen time models",
+    "verbatim_analysis_description": "Multiple logistic regression models were used to estimate the associations between screen time modalities in Year 2 and substance use experimentation in Year 3, adjusting for covariates and substance use experimentation in Year 2."
+  },
+  "3F_Effect_Sizes": [
+    {
+      "effect_type": "AOR",
+      "value": "1.20",
+      "CI_95": "1.14-1.26",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per additional hour/day of social media -> any substance experimentation",
+      "verbatim_quote": "Each additional hour spent on social media (AOR 1.20; 95 % CI 1.14-1.26)...was associated with higher odds of any substance experimentation.",
+      "below_threshold": "yes (OR 1.20 is within 0.80-1.20 threshold range boundary; marginally at threshold)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.18",
+      "CI_95": "1.12-1.24",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per additional hour/day of texting -> any substance experimentation",
+      "verbatim_quote": "Each additional hour spent...texting (AOR 1.18; 95 % CI 1.12-1.24)...was associated with higher odds of any substance experimentation.",
+      "below_threshold": "yes (OR 1.18 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.09",
+      "CI_95": "1.03-1.16",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per additional hour/day of video chatting -> any substance experimentation",
+      "verbatim_quote": "video chatting (AOR 1.09; 95 % CI 1.03-1.16) was associated with higher odds of any substance experimentation.",
+      "below_threshold": "yes (OR 1.09 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.15",
+      "CI_95": "1.10-1.21",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day social media -> alcohol experimentation",
+      "verbatim_quote": "there was a 1.15 (95 % CI:1.10-1.21) times higher odds of experimenting with alcohol",
+      "below_threshold": "yes (OR 1.15 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.23",
+      "CI_95": "1.14-1.32",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day social media -> nicotine experimentation",
+      "verbatim_quote": "1.23 (95 % CI:1.14-1.32) times higher odds of experimenting with nicotine",
+      "below_threshold": "no (OR 1.23 exceeds 1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.22",
+      "CI_95": "1.13-1.33",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day social media -> cannabis experimentation",
+      "verbatim_quote": "1.22 (95 % CI:1.13-1.33) times higher odds of experimenting with cannabis",
+      "below_threshold": "no (OR 1.22 exceeds 1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.14",
+      "CI_95": "1.08-1.20",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day texting -> alcohol experimentation",
+      "verbatim_quote": "each additional hour spent texting per day in Year 2 was associated with 1.14 (95 % CI:1.08-1.20) times higher odds of experimenting with alcohol",
+      "below_threshold": "yes (OR 1.14 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.16",
+      "CI_95": "1.06-1.26",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day texting -> nicotine experimentation",
+      "verbatim_quote": "1.16 (95 % CI:1.06-1.26) times higher odds of experimenting with nicotine",
+      "below_threshold": "yes (OR 1.16 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.18",
+      "CI_95": "1.08-1.29",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day texting -> cannabis experimentation",
+      "verbatim_quote": "1.18 (95 % CI:1.08-1.29) times higher odds of experimenting with cannabis",
+      "below_threshold": "yes (OR 1.18 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.14",
+      "CI_95": "1.07-1.22",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day video chatting -> nicotine experimentation",
+      "verbatim_quote": "1.14 (95 % CI:1.07-1.22) times higher odds of experimenting with nicotine",
+      "below_threshold": "yes (OR 1.14 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.13",
+      "CI_95": "1.03-1.24",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day video chatting -> cannabis experimentation",
+      "verbatim_quote": "1.13 (95 % CI:1.03-1.24) times higher odds of cannabis use in the following year",
+      "below_threshold": "yes (OR 1.13 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.02",
+      "CI_95": "1.01-1.03",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day total screen time -> any substance experimentation",
+      "verbatim_quote": "Total recreational screen time [any substance]: 1.02 (1.01, 1.03)*",
+      "below_threshold": "yes (OR 1.02 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.01",
+      "CI_95": "1.00-1.02",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day total screen time -> alcohol experimentation",
+      "verbatim_quote": "Total recreational screen time [alcohol]: 1.01 (1.00, 1.02)",
+      "below_threshold": "yes (OR 1.01 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.03",
+      "CI_95": "1.01-1.05",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day total screen time -> nicotine experimentation",
+      "verbatim_quote": "Total recreational screen time [nicotine]: 1.03 (1.01, 1.05)*",
+      "below_threshold": "yes (OR 1.03 within 0.80-1.20)"
+    },
+    {
+      "effect_type": "AOR",
+      "value": "1.03",
+      "CI_95": "1.01-1.06",
+      "p_value": "significant after Benjamini-Hochberg",
+      "outcome_scale_note": "Per hour/day total screen time -> cannabis experimentation",
+      "verbatim_quote": "Total recreational screen time [cannabis]: 1.03 (1.01, 1.06)*",
+      "below_threshold": "yes (OR 1.03 within 0.80-1.20)"
+    }
+  ],
+  "3G_Interpretation": {
+    "significance_first_or_ES_first": "significance-first",
+    "p_values_in_abstract": "no (only CIs reported, significance indicated by asterisks in figure)",
+    "CIs_reported": "yes",
+    "large_N_acknowledged": "no",
+    "small_ES_acknowledged": "no",
+    "recommendations_issued": "yes",
+    "verbatim_recommendation": "Schools can consider implementing media literacy programs that teach students about the influence of digital content on behavior, including the normalization of substance use...parents can consider monitoring and setting clear guidelines for adolescent screen use...warning labels informing parents, educators, and adolescents of the risks of screen use may be beneficial in reducing substance use associated with screen use."
+  },
+  "3H_Rhetorical": {
+    "rhetorical_pattern": "combination",
+    "pattern_detail": "significance-primary combined with per-unit-OR and modifiable-factor. ORs are presented per hour/day, making small per-unit effects appear actionable. No acknowledgment that ORs of 1.02-1.20 per hour represent very small absolute risk differences. Strong policy recommendations (media literacy programs, warning labels, parental monitoring) issued despite small effect sizes.",
+    "list_1_qualifier": "no",
+    "list_2_qualifier": "no"
+  },
+  "3I_Flags": {
+    "exclusion_flag": "",
+    "ambiguity_notes": "Most ORs fall within or very near the below-threshold range (0.80-1.20). Total screen time ORs are essentially 1.01-1.03 per hour. Cannabis experimentation N=65 at Year 3 is very low. Authors do not distinguish between statistical significance driven by large N vs. practical significance. Separate models run for each modality x outcome combination rather than mutually adjusted models."
+  }
+}

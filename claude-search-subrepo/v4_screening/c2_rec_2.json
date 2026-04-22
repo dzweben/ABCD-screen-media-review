@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "303",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study baseline data (cross-sectional, 2016-18). Paper states 'baseline data from the Adolescent Brain Cognitive Development (ABCD) study, a US representative sample of 11,875 children aged 9 to 10 years'."
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'screen time' generically without specifying which types (phone/SM vs TV/games). No PDF provided to determine specificity of exposure measurement."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions associations with depression symptoms but does not specify statistical test type or provide test statistic. Cannot confirm inferential test linking phone/SM to non-SM outcome."
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No numeric values (β, OR, p-value) reported in abstract."
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract suggests empirical analysis but study design not confirmed."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal article (Wiley Online Library). Default assumption of non-duplicate unless contradicted."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cannot determine without full text. However, based on title ('Multi-level predictors of depression'), likely has individual psychological predictor (depression as outcome or ABCD-related outcomes), which would prevent FT-EC7.",
+    "edge_cases_applied": [],
+    "notes": "Cannot complete FT_IC2, FT_IC3, FT_IC4 due to no PDF. Paper excluded based on insufficient evidence from abstract alone."
+  },
+  {
+    "paper_id": "398",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study. Methods state: 'Parents and children provided cross-sectional baseline data (2016–18) as part of the Adolescent Brain Cognitive Development study, a broadly US representative sample of 11,875 children aged 9 to 10 years.'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific screen time types: television/movies, videos, video games, and social media (texting, social networking sites, video chat collapsed). Methods: 'Children self-reported their ST behavior, which comprised ST types (television/movies, videos, video games, and social media) and content (mature-rated video games and R-rated movies).' Qualifies as smartphone/app use (texting, social media, video chat)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports negative binomial SEM with mediation analysis. Tests ST types and content associations with CBCL problem behaviors via sleep duration pathway. Multiple inferential tests reported: direct effects via Mplus MLR, mediation effects via bootstrapping. Example: 'watching television/movies was associated with a 5.9% increase in rule-breaking behavior (IRR = 1.059)'."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported: IRRs with examples 'IRR = 1.059' for TV/movies → rule-breaking, 'IRR = 1.050' for TV/movies → social problems, 'IRRs ranging from .834 to .905' for sleep duration effects. All values in text and tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. Cross-sectional baseline data with mediation analysis testing indirect pathways between ST behaviors and behavioral syndromes through sleep duration. Methods: 'Study hypotheses were tested using Mplus Version 8.2. Using the MODEL INDIRECT command in Mplus, we examined the mediating role of sleep duration.'"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in International Journal of Behavioral Nutrition and Physical Activity, 2019. No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Paper includes ST (phone/SM) as IV predicting non-SM outcomes (CBCL behavioral syndromes). Mediation analysis includes sleep duration as mediator, making this a full etiologic model with ST → sleep → behavior, not a model of demographics predicting ST use only.",
+    "edge_cases_applied": [
+      "E2",
+      "E8",
+      "E11"
+    ],
+    "notes": "ST types separated into measurable categories (< 1h, 1-1.99h, 2-2.99h, ≥ 3h). Includes sleep duration mediation. Social media measured as composite (texting + social networking + video chat) per E2 logic. INCLUDE."
+  },
+  {
+    "paper_id": "436",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study. Methods state: 'The behavioral data were obtained from the Adolescent Brain Cognitive Development (ABCD) Study (https://abcdstudy.org/; data release 5.0), a longitudinal cohort comprising 11 875 children born between 2005 and 2009... enrolled at ages 9 to 10 years from 21 data collection sites across the United States between 2016 and 2018.'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures specific digital media types: social media use (texting + social networking sites + video chat), video games, and television/videos. Methods: 'Children provided reports on the number of hours they spent on weekdays and weekends excluding school-related work on the following: (1) watching television or movies; (2) watching videos (eg, YouTube); (3) playing video games... (4) texting... (5) visiting social networking sites... (6) using video chat.' Categorized as: '(a) social media use (4 + 5 + 6), (b) playing video games (3), or (c) watching television/videos (1 + 2).' Qualifies as smartphone/app use."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports linear mixed models with time × DM use interaction testing longitudinal associations with ADHD-related symptoms. Results: 'Average social media use was associated with increased inattention symptoms over time (β [SE], 0.03 [0.01]; P < .001), with a cumulative 4-year effect of β = 0.15 (SE, 0.03; P < .001).' Also cross-lagged panel models shown in Figure 3."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported: 'β [SE], 0.03 [0.01]; P < .001' for social media use → inattention yearly effect; '4-year effect of β = 0.15 (SE, 0.03; P < .001)'; standardized β weights in Figure 3. P-values, β coefficients, and standard errors throughout."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. Longitudinal cohort followed annually for 4 years (T0-T4) with linear mixed models analyzing DM use → ADHD symptoms associations. Methods: 'Longitudinal associations between average DM use and ADHD-related symptoms were analyzed using separate linear mixed models with random intercept and slopes.'"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article in Pediatrics Open Science, 2026. First author Samson Nivins. No evidence of duplicate/preprint."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Paper examines DM use (social media, video games, TV/videos) as IV predicting ADHD-related symptoms (inattention and hyperactivity-impulsivity) as DV. This is a psychological/behavioral outcome model, not demographics predicting media use. Also includes genetic predictor (PGS-ADHD) which prevents FT-EC7 application per inclusion criteria.",
+    "edge_cases_applied": [
+      "E4",
+      "E7",
+      "E16"
+    ],
+    "notes": "Longitudinal design with 4-year follow-up. Includes polygenic risk score (PGS-ADHD) as individual predictor, which disqualifies FT-EC7. Social media measured as composite (texting + social networking + video chat). INCLUDE."
+  }
+]
