@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, baseline ages 9-10, prospective follow-up to ages 11-13 at T2; recruited across 21 US cities"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective study with mediation analysis examining sleep duration, white matter, and depressive symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Pediatrics"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time variable is measured but not device-specific; abstract describes composite \"screen time\" without isolating phone or social media. Methods and measures section refers to screen time as a composite exposure without per-device breakdown isolating phone/SM activity. Other side pairs with sleep, white matter, and depressive symptoms (individual-trait-level outcomes), but the exposure itself does not meet the specificity requirement for phone/SM use."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper is high-quality and reports mediation pathways, but the screen time variable lacks the required device-modality specificity (phone/SM isolation) per FT-IC2 conceptual criteria."
+  },
+  {
+    "paper_id": "305",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, waves 1-3 (ages 9-12 years), baseline sample 5,596 youths from 21 sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal mediation analysis examining sexual/gender minority identity, peer and cyber victimization, and suicidality"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Child Psychology and Psychiatry"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines peer victimization and cyber victimization as mediators of SGM identity → suicidality pathway. Cyberbullying (victimization) appears as a measured variable in a mediation model, but there is no separately-measured smartphone or social media use variable paired with an individual-trait-level outcome. Cyberbullying alone without a distinct SM/phone measure does not qualify per coder prompt (§25): \"Cyberbullying alone (with no separately-measured SM/phone variable) does NOT qualify.\""
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Although the paper is well-designed and reports quantitative mediation results, it lacks a distinct smartphone or social media use measure. Cyber victimization is assessed but is not the same as SM/phone use modality."
+  },
+  {
+    "paper_id": "94",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, Release 4.0, year 2 data (ages 11-12 years), 3037 participants across 21 sites after QC filtering"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using principal component regression predictive modeling to examine multivariate relationship between 836 graph theory metrics and sleep duration, with examination of context and phenotypic associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed archival report published in Biological Psychiatry: Global Open Science, July 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured and analyzed as a key socioenvironmental context variable predicting somatomotor disconnection (neural architecture). Results section (Fig 3A) and methods state: \"greater somatomotor disconnection was associated with... longer screen times (β = 0.13, p = 2.6 × 10−19).\" Screen time functions as an IV predicting a neural (individual-trait-level) outcome. Although methods do not isolate specific device modality, the construct measured aligns with screen-based media use in an adolescent sample."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric regression coefficient reported: screen time ↔ somatomotor disconnection β = 0.13, p = 2.6 × 10−19 (Figure 3A). Also reported: associations between somatomotor disconnection and cognition (β = −0.06, p = 4.8 × 10−5), externalizing symptoms (youth-reported: β = 0.05, p = 5.0 × 10−4; parent-reported: β = 0.05, p = .001), and school grades (β = −0.04, p = .007)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported for associations between neural and behavioral/cognitive phenotypes: externalizing (youth and parent report), school grades, general cognitive ability. All results include regression coefficients and p-values."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (year 2 only), not longitudinal. FT-EC7 applies only to longitudinal SM-as-DV-only designs.",
+    "notes": "Paper is INCLUDE. High-quality data-driven study linking screen time and socioeconomic context to brain network architecture (somatomotor disconnection) and cognitive/behavioral outcomes. All criteria met; FT-EC7 does not apply due to cross-sectional design."
+  }
+]

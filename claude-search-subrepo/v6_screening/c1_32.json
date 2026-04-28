@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "441",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"This study utilized data from the Adolescent Brain Cognitive Development study (n = 4,641 ages 9-12) at baseline, Year1, and Year2 follow-up.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel models (CLPMs) investigating reciprocal predictive relationships between sleep duration/problems, SMA, and psychopathology symptoms; mediation analysis of baseline thalamus-PFC-brainstem covariation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Full peer-reviewed journal article published in Journal of Behavioral Addictions 2024"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) measured as total hours spent on non-school-related activities (TV, videos, gaming, texting, video chat, social networking) paired bidirectionally with psychopathology (internalizing/externalizing symptoms, individual-trait-level outcomes)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential results reported: bidirectional associations between SMA and sleep duration (β = -0.10, β = -0.11); externalizing symptoms predicting SMA (β = 0.07); mediation pathway with indirect effect = 0.032"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Path coefficients with 95% CIs throughout CLPMs (e.g., β = -0.10 [95%CI: -0.16, -0.03], p = 0.004); indirect effect = 0.032 [95%CI: 0.003, 0.067], p-value = 0.030"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with bidirectional SMA relationships: SMA appears as both IV (predicting sleep and psychopathology) and DV (predicted by externalizing symptoms). EC7 requires DV-only role.",
+    "notes": "Well-executed CLPM with discovery/replication split sample. Clear measurement of SMA across multiple device types and individual-trait outcomes."
+  },
+  {
+    "paper_id": "136",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"Participants were 10,828 youth (47.8% female) enrolled in the Adolescent Brain Cognitive Development Study\" at baseline (mean age 9.9 years) and one-year follow-up (mean age 10.9 years)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal analysis with multilevel logistic regressions testing bidirectional associations between sleep duration, screen time (weekday/weekend), and internalizing symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published in Journal of Adolescent Health 2024"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured via ABCD Youth Screen Time Survey across six types (TV, streaming videos, gaming, texting, video chat, social networking) dichotomized as >2 vs. ≤2 hours/day on weekdays/weekends; paired with individual-trait internalizing symptoms (withdrawn/depressed, anxious/depressed, somatic complaints from CBCL)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential associations tested via multilevel logistic regressions: adjusted odds ratio 0.6 (95% CI 0.4–0.8) for sleep protective effect on withdrawn/depressed symptoms; adjusted OR 1.6 (95% CI 1.1–2.2) for weekend screen time risk on withdrawn/depressed symptoms"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple odds ratios with 95% confidence intervals reported: OR 0.8 (95% CI 0.6–0.97, p = 0.0275) for somatic complaints; bidirectional analyses with ORs ranging 0.7–1.3 across outcomes"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (baseline to one-year follow-up) but bidirectional associations examined: screen time and sleep duration predict internalizing symptoms, and internalizing symptoms also tested as predictor of screen time/sleep. EC7 requires DV-only design.",
+    "notes": "Large well-powered sample (N=10,828). Gender-stratified analyses. Separately examined weekday vs. weekend screen time. Clear ABCD cohort identity confirmed."
+  },
+  {
+    "paper_id": "400",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"Data were baseline (2017–2018) and one-year follow-up (2018–2019) from the Adolescent Brain Cognitive Development Study, a multi-site study of a nationally representative sample of U.S. youth (N = 10,544, mean age 9.9 years)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal analysis using isotemporal substitution and compositional data analysis (CoDA) to estimate associations between baseline screen time behaviors and follow-up BMI z-score"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published in International Journal of Behavioral Nutrition and Physical Activity 2024"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured as three distinct categories (streaming, gaming, socializing) via ABCD Youth Screen Time Survey; paired as IV with BMI z-score at follow-up, an individual-trait-level health variable"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential isotemporal substitution models: in females, replacing 30 min of socializing (β = -0.03 [95% CI -0.05, -0.002]), streaming (β = -0.03 [95% CI -0.05, -0.01]), or gaming (β = -0.03 [95% CI -0.06, -0.01]) with physical activity associated with lower follow-up BMI z-score"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple standardized regression coefficients with 95% CIs reported across sex-stratified isotemporal and CoDA models; in males, replacing socializing with sleep: β = -0.03 [95% CI -0.05, -0.01]; CoDA results: β = 0.05 [95% CI 0.02, 0.08]"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (baseline to one-year follow-up) with screen time as IV predicting BMI outcome. Screen time never appears as DV. EC7 does not apply.",
+    "notes": "Large sample (N=10,544). Sex-stratified analyses. Sophisticated statistical approaches (isotemporal substitution and compositional data analysis) comparing relative time allocation. Screen time measured with adequate granularity (distinct categories)."
+  }
+]

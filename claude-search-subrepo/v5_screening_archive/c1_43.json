@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "76",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Year 2 (2018-2020), N=9429, ages 11-12"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization and perpetration only; B3 applies (cyberbullying alone NOT qualifying). Abstract states total screen time associated with cyberbullying, but no separately-measured SM with own coefficient reported for cyberbullying as outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple logistic regression; cyberbullying as dependent variable, sociodemographic predictors; Table 2 reports AOR with 95% CI"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2: AOR (adjusted odds ratios) with 95% CI for sociodemographic associations; Table 3: OR and 95% CI for screen time modalities"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis of cyberbullying prevalence and correlates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article; no indication of duplicate/preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cyberbullying is NOT SM as IV predicting external outcome; it is the dependent variable (cyberbullying victimization and perpetration). FT-EC7 only applies when SM is the DV. Additionally, analyses include SM exposure (internet, social media) but not as demographic-only predictors.",
+    "binding_rules_applied": ["B3"],
+    "notes": "Paper focuses on cyberbullying epidemiology with sociodemographic and screen time correlates. SM/internet mentioned as associated with cyberbullying but paper does not separately measure and report SM as an independent qualifying exposure variable with its own coefficient for the cyberbullying outcomes."
+  },
+  {
+    "paper_id": "141",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study baseline (2016-2018), N=10,755, ages 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social networking (texting, video chat, social networking platforms), videos (YouTube), video games separately measured; B1 applies (multiple separate coefficients for contemporary screen modalities). Multiple linear regression with separate B coefficients for each modality."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses estimating associations between sociodemographic factors (IV) and screen time (DV); Tables III and IV report B coefficients with 95% CI"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Tables III and IV: B coefficients with 95% CI for all screen time modalities and sociodemographic associations"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis of contemporary screen time correlates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article; no indication of duplicate/preprint"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All THREE FT-EC7 conditions met: (a) Screen time (SM/smartphone) is DEPENDENT variable in all analyses; NO analyses with SM as IV predicting external outcome. (b) All predictors are demographic-only: sex, race/ethnicity, country of birth, household income, parental education. (c) Cross-sectional analysis only (no longitudinal predictor-outcome analysis stated). B15 applies: this is cross-sectional sociodemographic→screen time, which is INCLUDE per instructions. FT-EC7 DOES apply.",
+    "binding_rules_applied": ["B1", "B15"],
+    "notes": "Purely descriptive analysis of screen time disparities by sociodemographic groups. All predictors are demographic-only (no sleep, mental health, parenting, etc.). All analyses cross-sectional. Per B15, cross-sectional sociodemographic→SM analyses are INCLUDED and FT-EC7 applies."
+  },
+  {
+    "paper_id": "152",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, December 2020 COVID-19 survey, N=4,106, ages 12-14"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media (COVID-related checking on Facebook, Twitter, Instagram, TikTok, Snapchat) and television media measured as exposures with separate coefficients in regression models. B1 applies (separate coefficients for distinct modalities)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression with coefficients transformed to risk ratios (RR); Table 2 reports RR and 95% CI for associations between information sources and masking behavior"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2: RR (risk ratios) and ARR (adjusted risk ratios) with 95% CI for all information sources and masking behaviors"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis of COVID-19 information sources and adolescent masking behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article; no indication of duplicate/preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Masking behavior is dependent variable (outcome), not SM. SM (social media) is an independent variable/exposure predicting masking behavior. FT-EC7 only applies when SM/smartphone is the DV; here it is IV. Additionally, non-demographic predictors included: parental counseling (B17 applies—parenting not in demographic-only set).",
+    "binding_rules_applied": ["B1", "B17"],
+    "notes": "Analysis of COVID-19 information sources (including social media exposure) on adolescent masking behaviors. Parental counseling is included as a key predictor, which disqualifies FT-EC7 (not demographic-only)."
+  }
+]

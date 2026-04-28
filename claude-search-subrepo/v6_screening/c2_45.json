@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study data, 2016-2020, n=6749 adolescents aged 12-13 from 21 recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear regression models estimating associations between ACE score and screen time/physical activity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Academic Pediatrics, November-December 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is composite of 7 modalities (multiple-player gaming, single-player gaming, texting, social media, video chatting, browsing internet, watching/streaming movies/videos/TV) with no per-modality breakdown isolating phone or SM. Fails composite-without-isolation rule."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines ACEs as IV and screen time + physical activity as DVs. However, screen time construct bundles TV/console/phone without isolation, violating FT-IC2 conceptual requirement for phone or SM-specific measurement."
+  },
+  {
+    "paper_id": "190",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study data, n=9855 children ages 9-10 at baseline, 2-year follow-up, with measures of intelligence at both timepoints"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: latent change score models, measurement invariance testing, mediation analysis via R package lavaan"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Scientific Reports, May 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Three screen time types measured: watching (TV/videos), socializing (social media and other platforms), gaming. No per-device breakdown isolating phone or SM. Methods state \"time watching,\" \"time socializing,\" \"time gaming\" as generic screen activities, not phone/SM-specific constructs. Fails FT-IC2 requirement for phone or SM variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines screen time types (watching, socializing, gaming) as predictors of change in intelligence. However, constructs are generic screen activities without isolation of phone or SM modality, violating FT-IC2 conceptual criterion."
+  },
+  {
+    "paper_id": "110",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, 11,000+ children ages 9-11, baseline and follow-up assessments, DTI and behavioral data from NIMH Data Archive"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional and longitudinal associations via CLPM (cross-lagged panel model), mediation analysis examining white matter microstructure as mediator between ADHD PRS and STU"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in EBioMedicine, May 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time utilization (STU) measured via self-report on total hours spent on screens in a typical weekday (sij = 5/7 * hours STU + 2/7 * hours STU weekend). No per-device or per-platform breakdown. Methods explicitly state \"screen time utilization was assessed by the total amount of self-reported time using various electronic devices on both typical weekdays and weekend days.\" This is composite screen time without isolation of phone or SM."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines longitudinal associations between ADHD PRS and STU via white matter microstructure mediation. However, STU is composite measure of total screen time across all devices with no breakdown isolating phone or SM, violating FT-IC2."
+  }
+]

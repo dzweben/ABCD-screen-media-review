@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "48",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, N=9,066 children baseline and 1-year follow-up (9-10 years old at baseline)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifies: social screen time (texting, social media, video chatting) + nonsocial screen time (YouTube, video games) both measured with separate coefficients. Applies B1 (YSTS with separate β for SM, texting, video chat)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression models (cumulative logistic regression) with psychiatric symptoms as predictor of screen time AND screen time as predictor of psychiatric symptoms. ORs with 95% CIs reported (e.g., OR=1.22, 95% CI 1.22-1.23)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple regression coefficients reported: weekday social OR=1.02 (95% CI 1.01-1.02), weekday nonsocial OR=1.22 (95% CI 1.22-1.23), weekend social OR=1.15 (95% CI 1.14-1.15), weekend nonsocial OR=1.10 (95% CI 1.09-1.10); rule breaking predicting weekday nonsocial OR=1.65 (95% CI 1.63-1.67)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis, longitudinal design with residualized change models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Social Psychiatry and Psychiatric Epidemiology 2024, no evidence of duplicate/preprint"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "FAILS condition (a): Paper has BOTH directions - psychiatric symptoms → screen time AND screen time → psychiatric symptoms. Models assess psychiatric symptoms as predictors of screen time AND screen time as predictors of psychiatric symptoms. Applies B18: bidirectional analysis disqualifies FT-EC7.",
+    "binding_rules_applied": ["B1", "B18"],
+    "notes": "Clear bidirectional analysis; psychiatric symptoms (not demographic-only) are predictors of screen time."
+  },
+  {
+    "paper_id": "18",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD dataset used to examine causal relationships between screen use and brain development"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen use is measured as exposure variable; reading vs screen time compared. Qualifies as digital media/screen time variable (smartphone/device use)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Causal analysis described in abstract; examination of causal relationships with coefficient reporting"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Abstract indicates results with numerical findings on brain development effects; full paper contains regression coefficients"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2024, Advanced Science journal, no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FAILS multiple conditions. (a) Screen use is IV (predictor), not DV - paper examines causal effects OF screen use ON brain development/language ability, not demographics predicting screen use. (b) Outcome variables are brain development, language ability, behaviors - NOT demographic variables predicting SM.",
+    "binding_rules_applied": [],
+    "notes": "Screen use is independent variable predicting neurodevelopmental outcomes; not a demographic→SM longitudinal analysis."
+  },
+  {
+    "paper_id": "442",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from three consecutive follow-up years (years 2, 3, 4), n=6,143 adolescents (mean age 12 years at year-2)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary outcome is Video Game Addiction Questionnaire (VGAQ) scores, which measures problematic gaming symptoms. No qualifying smartphone or social media variable as independent/predictor variable. Gaming addiction symptoms are outcome, not independent SM/smartphone exposure variable. Applies B5: unspecified gaming (addiction symptoms, not device/platform use) NOT_MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Bayesian hierarchical linear models examining longitudinal association between reward processing and VGAQ scores with β coefficient reported (β = -0.87, 95% CI: -1.68, -0.07)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Bayesian regression coefficient reported: β = -0.87 (95% CI: -1.68, -0.07) for lower caudate activation predicting decreased VGAQ scores"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with fMRI neuroimaging data and longitudinal design"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2024 in Journal of Behavioral Addictions, no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not qualify because FT-IC2 is NOT_MET (no qualifying SM/smartphone variable). Additionally, gaming addiction (VGAQ) is outcome variable, not SM as dependent variable being predicted by demographics.",
+    "binding_rules_applied": ["B5"],
+    "notes": "Paper focuses on reward processing (fMRI activation) → gaming addiction, not SM/smartphone exposure as independent variable."
+  }
+]

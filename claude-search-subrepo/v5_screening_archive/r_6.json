@@ -1,0 +1,52 @@
+[
+  {
+    "paper_id": "128",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Youth Screen Time Survey (YSTS) measures six items (TV, videos, games, texting, social media, video chat), but paper reports results as categorical guideline adherence groupings (meeting/not meeting screen time recommendation) in negative binomial regression models (Tables 2-4). No separate per-item coefficient reported for texting, social media, video chat, or any qualifying smartphone/SM variable.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 directly applies: paper uses YSTS but reports only categorical 'screen time' groupings with no per-modality breakdown. Exposure must have separate coefficient for a qualifying item; here only the summed categorical adherence grouping is analyzed as predictor. FT_IC2 = NOT_MET per B2."
+      }
+    ]
+  },
+  {
+    "paper_id": "130",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "MET",
+        "evidence": "Gradient boosting model explicitly includes screen time variables as separate predictors (Figures 1-4, Results section): 'watching news related to coronavirus,' 'playing single-player video games,' 'browsing the internet,' social media engagement appear as distinct features ranked by SHAP importance for anxiety and depression predictions.",
+        "binding_rules_cited": ["B1"],
+        "rationale": "Screen time and social media variables are separately measured and entered into the ML analysis as individual features. Although not traditional regression, the model structure treats them as distinct exposures (not composited). B1 requires separate estimate; machine learning feature importance satisfies this. FT_IC2 = MET."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Paper reports only SHAP feature importance values (mean absolute SHAP rankings in Figures 1-4) for screen time variables. No traditional regression coefficient (β, OR, RR, t, χ², p-value, CI) reported anywhere in main text or supplement. SHAP values are feature importance rankings, not extractable numeric associations.",
+        "binding_rules_cited": ["B8", "B9"],
+        "rationale": "B9 applies: paper reports SHAP values and feature importance only, with zero traditional regression coefficients for SM variables. B8 would establish FT_IC4 = MET if any β/OR/HR existed in any analysis; it does not. FT_IC4 = NOT_MET (FT-EC4)."
+      }
+    ]
+  },
+  {
+    "paper_id": "132",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper analyzes '24-hour movement guideline combinations' as categorical groupings (Sleep Only, Screen Time Only, Sleep & Screen Time, Activity Only, etc.) vs. reference (None). Linear mixed-effects models report coefficients for adherence category differences on outcomes (Figure 2), not for screen time or activity as separate continuous predictors with individual coefficients.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "Screen time appears only as part of composite categorical adherence variables (e.g., 'Screen Time Only,' 'Sleep & Screen Time'), not as a separately-measured independent variable with its own reported coefficient. B10 logic applies: SM in a composite/categorical grouping with no separately reportable SM coefficient = FT_IC3 NOT_MET. No inferential test isolating SM↔outcome association."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Reported numeric values (Figure 2, Tables) are unstandardized regression estimates for categorical adherence groupings (e.g., β = 0.98 for 'Screen Time Only' vs. 'None'), not coefficients for screen time as a continuous or separately-measured variable. No extractable numeric value for screen time itself.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "FT_IC4 requires a numeric value for the SM↔outcome association. The paper reports coefficients for categorical 'adherence group' comparisons, not for 'screen time' as a standalone predictor. The values are not extractable for the SM exposure itself. FT_IC4 = NOT_MET."
+      }
+    ]
+  }
+]

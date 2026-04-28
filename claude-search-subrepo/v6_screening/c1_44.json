@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "183",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Cross-sectional data from Adolescent Brain Cognitive Development Study (ABCD Study), Year 2, 2018-2020; N = 8,753 children ages 10-14 years from 21 U.S. recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with multiple linear regression analyses estimating associations between sociodemographic factors and problematic screen use measures (VGAQ, SMAQ, MPIQ)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Pediatric Research, 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "All analyses examine sociodemographic correlates (age, sex, race/ethnicity, household income, parental education, parent marital status) as IVs with problematic screen use as DVs. The other side of all relationships consists of demographic-only and contextual-only variables with no individual-trait-level variables (neural, behavioral, health, cognitive, well-being, etc.) analyzed."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper fails FT-IC2 because smartphone/social media appear only as DVs paired with demographic-only predictors, not paired with individual-trait-level variables."
+  },
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline data from Adolescent Brain Cognitive Development Study (ABCD Study); N = 4,042 participants with baseline data; 21 U.S. recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using machine learning models (elastic net regression, random forest regression, light gradient boosting regression, support vector regression) to predict delayed reward discounting at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Experimental and Clinical Psychopharmacology, 2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity is explicitly identified as a key predictive variable in machine learning models predicting delayed reward discounting (DRD). Screen media activity functions as IV; DRD is individual-trait-level outcome (behavioral/cognitive construct measuring impulsivity and temporal decision-making)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning models report quantitative predictions with model performance metrics and feature importance values; models evaluated on cross-validation and held-out test sets with multiple performance indicators"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Screen media activity identified as key predictive variable with feature importance and model-level performance metrics (R², cross-validation performance) reported for SM↔DRD relationship"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen media activity is used as a predictor (IV) in the analyses, therefore EC7 does not apply",
+    "notes": "Design is longitudinal (baseline to 1-year follow-up) but SM is not DV-only because it functions as an IV in predictive models. Paper qualifies for inclusion."
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Cross-sectional data from Adolescent Brain Cognitive Development (ABCD) Study; N = 10,650 children ages 9.9 ± 0.6 years recruited by probability sampling from U.S. population across 21 sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with multilevel general linear models and multilevel logistic regression examining associations between parental psychological problems and children's screen media behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Acta Paediatrica, 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines TV watching, video watching, video gaming, and mature-rated media (movies and games). Mature-rated content variables alone do not qualify per criteria (content rating ≠ phone/SM modality). No separate measure of smartphone or social media use isolated from TV/gaming/general screen time composite. Constructs measured are general screen media behaviors and mature-content consumption, not phone or SM-specific use."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper fails FT-IC2 because it does not isolate phone or SM use as a qualifying variable. Mature-rated media content alone is not sufficient to meet FT-IC2."
+  }
+]

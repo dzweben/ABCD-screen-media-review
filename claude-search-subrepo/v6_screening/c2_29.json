@@ -1,0 +1,92 @@
+[
+ {
+  "paper_id": "208",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "U.S. ABCD Study; N=7,514; ages 9-10 at baseline 2016-2018; 21 research sites across the U.S. (Barch et al., 2018)"
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical prospective analysis; Years 1-3; modified Poisson regression with mediation analysis using GSEM"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed publication in Substance Use & Misuse, 2024; no preprint/duplicate identified"
+  },
+  "FT_IC2": {
+   "status": "MET",
+   "evidence": "Social media time (self-reported hours per day, Year 1) is qualifying SM-use IV; alcohol sipping (Timeline Follow-Back, Year 3) is individual-trait health outcome (substance use initiation); directional pairing as IV→DV"
+  },
+  "FT_IC3": {
+   "status": "MET",
+   "evidence": "RR 1.31 (95% CI 1.20-1.43) p<0.001 for social media time predicting alcohol sipping; RR 1.21 (95% CI 1.10-1.33) p<0.001 when including mediator"
+  },
+  "FT_IC4": {
+   "status": "MET",
+   "evidence": "Multiple quantitative results: direct effect β=0.03 (95% CI 0.01-0.05) p=0.001; indirect effect β=0.011 (BC 95% CI 0.007-0.016) p<0.001; proportion mediated 25.0% (95% CI 11.0-39.3) p=0.001"
+  },
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "Design is longitudinal but SM (social media time, Year 1) appears as IV in main analysis predicting sipping (Year 3); SM-as-IV role disqualifies EC7 exclusion",
+  "notes": "Strong prospective design with mediation analysis; qualifying SM exposure and individual-trait health outcome"
+ },
+ {
+  "paper_id": "392",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "U.S. ABCD Study; N=4,718; ages 10-15 years (2018-2021); longitudinal data from Year 2 and Year 3"
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical analysis; cross-sectional data from Year 2-3; linear and multivariate logistic regression models"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed publication in BMC Public Health, 2024; no preprint/duplicate identified"
+  },
+  "FT_IC2": {
+   "status": "NOT_MET",
+   "evidence": "Screen time measured as multi-device aggregated \"recreational screen time hours per day\" including television, movies, video chat, video games, texting, videos, social media with no per-device breakdown isolating smartphone or SM. Per methods: \"Self-reported recreational screen time hours per day were classified as low (0-4), medium (>4-8), and high (>8) hours per day.\" This is composite bundled screen time without isolation of phone/SM as required by FT-IC2"
+  },
+  "FT_IC3": {
+   "status": "DEFERRED",
+   "evidence": "prior criterion failed; not evaluated"
+  },
+  "FT_IC4": {
+   "status": "DEFERRED",
+   "evidence": "prior criterion failed; not evaluated"
+  },
+  "FT_EC7_applies": "DEFERRED",
+  "FT_EC7_reason": "prior criterion failed; not evaluated",
+  "notes": "Fails FT-IC2 because screen time is generic multi-device aggregate without per-modality breakdown isolating phone or SM"
+ },
+ {
+  "paper_id": "393",
+  "FT_IC1": {
+   "status": "MET",
+   "evidence": "U.S. ABCD Study; N=9,538; ages 9-10 at baseline 2016-2018; longitudinal with two-year follow-up to Year 2"
+  },
+  "FT_IC5": {
+   "status": "MET",
+   "evidence": "Original empirical prospective analysis; mixed-effects models with random effects examining baseline screen time predicting follow-up mental health symptoms"
+  },
+  "FT_IC6": {
+   "status": "MET",
+   "evidence": "Peer-reviewed publication in BMC Public Health, 2024; no preprint/duplicate identified"
+  },
+  "FT_IC2": {
+   "status": "NOT_MET",
+   "evidence": "Primary independent variable is \"total screen time\" (composite of television, movies, video chat, video games, texting, videos, and social media) measured as aggregate hours per day with no per-modality breakdown isolating smartphone or social media use. Methods state weighted mean total screen time calculated \"summing all types of media\" with no per-device isolation. Although paper reports associations with specific screen types post-hoc, the primary analysis uses bundled composite screen time without isolation of phone/SM construct, violating FT-IC2"
+  },
+  "FT_IC3": {
+   "status": "DEFERRED",
+   "evidence": "prior criterion failed; not evaluated"
+  },
+  "FT_IC4": {
+   "status": "DEFERRED",
+   "evidence": "prior criterion failed; not evaluated"
+  },
+  "FT_EC7_applies": "DEFERRED",
+  "FT_EC7_reason": "prior criterion failed; not evaluated",
+  "notes": "Fails FT-IC2 because total screen time is composite bundled measure without per-modality isolation of smartphone or social media; post-hoc stratification by screen type does not remedy primary-analysis failure"
+ }
+]

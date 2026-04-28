@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Release 2.0, children aged 9-11 years (mean 9.9 SD 0.6), n=4262 with genetically assigned European ancestry"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cohort study using Gsens genetic sensitivity analysis model incorporating polygenic risk scores for both exposure and outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Network Open, November 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is generic \"child-reported daily screen time (in hours)\" from questionnaires at baseline, not isolated to smartphone or social media modality. Criteria require phone or SM-specific operationalization; composite generic screen time without per-modality breakdown fails FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Although outcomes (attention problems, internalizing problems measured by ACHENBACH at 1-year follow-up) qualify as individual-trait-level psychiatric measures, the exposure fails FT-IC2 because screen time is not operationalized as phone or SM-specific activity."
+  },
+  {
+    "paper_id": "440",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study Release 3.0, participants aged 9-10 at baseline with structural imaging at T0 and T2, n=5,166 after QC; longitudinal design"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: Joint and Individual Variation Explained (JIVE) to identify brain co-development patterns, generalized linear mixed-effect models with mediation analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Behavioral Addictions, 2023"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Baseline SMA (screen media activity) is IV; measured as total non-school-related screen media time on typical weekday/weekend, including TV, movies, videos online, video games, texting, social media, video chatting. DV is internalizing psychopathology (measured by parent-reported CBCL at two-year follow-up), which is individual-trait-level."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: baseline SMA associated with internalizing psychopathology at year 2 (β=0.020, SE=0.008, p=0.014); SMA related to structural co-development pattern (β=0.015, SE=0.007, p=0.029); indirect effect = 0.020, p-value = 0.043"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results for SM↔outcome relationship: coefficient β, standard error, p-values, and indirect/mediation effects reported with statistical significance"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with baseline SMA as IV predicting future internalizing outcome; SMA is not DV-only, so EC7 exclusion does not apply.",
+    "notes": "Paper examines mediation pathway via brain co-development pattern; relatively small effect sizes but meets all substantive criteria."
+  },
+  {
+    "paper_id": "124",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline data collection, multi-site (21 sites across US), children aged 9-10 years (n=11,780), Release 2.0"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional associations between screen time activities and K-SADS-5 clinical diagnoses using univariate general linear models with demographic covariates; exposure-response curves"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Affective Disorders, 2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured separately for specific modalities: TV/movies, watching videos online, video games, texting, social media, video chatting. Paper reports both total screen time and digital media composites (social media, gaming, texting, online videos). Each pairs with K-SADS-5 diagnoses (depressive disorders, anxiety, suicidal ideation/attempts, self-harm)—all individual-trait-level psychiatric outcomes measured via semi-structured clinical interview."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported throughout: adjusted relative risk (ARR) with 95% CI for all screen time categories and specific digital media activities. Examples: girls ≥2h screen media ARR=2.00 (1.48–2.70) for depressive disorders; digital media use ARR=1.96 (1.53–2.51) for depressive in girls; social media use ARR=2.20 (1.13–4.30) in girls"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results for SM/screen↔outcome relationships: RR, ARR values, confidence intervals, p-values, exposure-response curves comparing hours/day categories (0 to 7+ hours)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional baseline study design; FT-EC7 applies only to longitudinal designs where SM is DV-only with no SM-as-IV analysis anywhere.",
+    "notes": "Comprehensive cross-sectional analysis with stratification by gender; multiple digital media types examined separately and in composite; strong associations with psychiatric diagnoses measured by gold-standard clinical interview."
+  }
+]

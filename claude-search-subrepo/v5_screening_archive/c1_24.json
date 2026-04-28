@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "195",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Release 5.1, Year 4 follow-up); 495 adolescents with EARS data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone: EARS passive app tracking (time on phone); qualifying social media: social media use measured via EARS and self-report. Applies B1 (separate SM coefficient reported: β=0.07 for EARS SM↔externalizing, β=0.06 for EARS SM↔SMAQ)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple regression/mixed-effects coefficients: SM↔externalizing (β=0.07, p=0.002), SM↔SMAQ (β=0.06, p<0.01), SM↔internalizing (self-report β=0.05, p=0.028). Logistic regression for picture vocabulary↔reporting bias (OR=0.96, p=0.010)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric coefficients reported: β values with 95% CIs (e.g., β=0.07 [0.03–0.12] for EARS SM↔externalizing; β=0.06 [0.01–0.11] for EARS SM↔SMAQ), OR with 95% CI (0.96 [0.93–0.99]), p-values, mean±SD for descriptive comparisons"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; measurement study (EARS vs. self-report) with SM↔non-SM outcomes (externalizing, internalizing, SMAQ, VGAQ). Applies B13: measurement paper reporting SM↔outcome coefficients"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article (npj Mental Health Research, 2025); no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is NOT the sole dependent variable. Paper has SM→outcome analyses (SM↔externalizing, SM↔SMAQ, SM↔internalizing, SM↔VGAQ), so condition (a) fails. FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B1",
+      "B13"
+    ],
+    "notes": "Cross-sectional measurement concordance study comparing objective (EARS) and subjective (self-report) SM measurement; reports SM as both IV (predicting behavioral outcomes) and as outcome (predicted by cognitive variables like picture vocabulary). Robust sample with both demographic and outcome associations."
+  },
+  {
+    "paper_id": "27",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; 9,465 children aged 9–11 years at baseline (2016–2021); prospective design to Year 2"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone: average daily screen time (self-reported, includes phone use). Applies B2/B1 (screen time with separate coefficients reported for mediation pathway)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mediation indirect effect (bias-corrected 95% CI for indirect effect [0.10, 0.28]); prospective association via generalized structural equation model (OR=1.09 [1.03, 1.14] for screen time→BED; B=0.19 [0.10, 0.28] for mediation through depression)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "OR with 95% CI (1.09 [1.03, 1.14]); β with BC 95% CI (0.19 [0.10, 0.28]); p-values reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; prospective association of screen time with binge-eating disorder outcome"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article (International Journal of Eating Disorders, 2024); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is an independent variable predicting BED (outcome), not the dependent variable. Condition (a) fails: paper has screen time→BED outcome analysis. FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Prospective mediation study; abstract reports depressive symptoms as mediator of screen time→BED association. Original ABCD cohort analysis with large N=9,465. Clear separation of SM/screen time as predictor and BED as outcome."
+  },
+  {
+    "paper_id": "290",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; 10,757 children aged 10–14 years at baseline; prospective to Year 2 (2016–2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone: time on phone (screen time across modalities). Multiple screen types measured separately: TV/movies, videos (YouTube), video games, texting, video chat, social media. Applies B1 (separate per-modality coefficients reported for each screen activity)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression coefficients (mixed-effects models with robust standard errors): parental monitoring→total screen time (B=−0.37 [−0.58, −0.16]); family conflict→video games (B=0.02 [0.0004, 0.04]); family conflict→YouTube (B=0.03 [0.01, 0.04])"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple B coefficients with 95% CIs reported in Table 2 for all screen modalities and both predictors (parental monitoring, family conflict). P-values <0.05 indicated with bold formatting in tables"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; prospective cohort study examining family environment predictors of adolescent screen time"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article (Acta Paediatrica, 2024); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the OUTCOME/dependent variable, NOT the sole independent variable. Predictors are parental monitoring and family conflict (both demographic/family-environmental), not SM. However, condition (a) for FT-EC7 is NOT met because the paper examines demographics/family factors→SM (NOT SM→outcome). This is a family-environment→screen time prospective study, which does NOT qualify as FT-EC7 (which requires SM as DV with ONLY demographic predictors, with NO SM→outcome analyses anywhere). The paper structure is inverted: family factors predict SM, not vice versa.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Prospective study of parental monitoring and family conflict as predictors of six screen time modalities. Large diverse national sample (N=10,757). Separate coefficients for each screen activity (TV, YouTube, games, texting, video chat, social media). Mixed-effects models with covariates. Stratified analyses by sex, race/ethnicity, and household income provided."
+  }
+]

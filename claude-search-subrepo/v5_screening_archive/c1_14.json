@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study data. 976 participants at 21 US cities; T1 ages 9-10 years, T2 ages 11-13 years."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-report questionnaire) — qualifying smartphone variable per B1 (self-report time on phone). Analysis reports separate coefficient for screen time."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analysis. Main outcome: 'Each additional hour of daily screen time at T1 was associated with 0.12-point (95% CI, 0.04-0.20; P=.008) increase in depressive score at T2.' Mediation analysis testing screen time → sleep → depression pathway."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients extracted: β=0.12 for screen time→depression (95% CI 0.04-0.20, p=.008); 36.4% mediation (95% CI 18.2%-63.6%)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD Study examining prospective association between screen time and depressive symptoms with mediation mechanisms."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in JAMA Pediatrics. No indication of preprint duplicate or prior deposit."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the INDEPENDENT variable (predictor), not dependent variable. Analysis tests screen time → depression (non-SM outcome), failing condition (a) of FT-EC7 which requires SM as dependent variable in ALL analyses. Not a demographic-only predictor study.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Mediation analysis includes sleep duration and white matter (non-demographic mediators), further disqualifying FT-EC7. Sleep is mechanistic mediator between screen time and depression outcome."
+  },
+  {
+    "paper_id": "305",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study. 5,596 youth, 47.2% female, 55.5% non-Hispanic White, ages 9-10 at waves 1-2, 11-12 at wave 3."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Cyber victimization (cyberbullying component of online victimization). Per B4: cyberbullying separately measured as 'cyber victimization' with own coefficient in mixed-effects logistic regression, not cyberbullying alone."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects logistic regression. Direct associations reported: SGM → suicidality (OR 4.75-5.87, 95% CIs); peer/cyber victimization → suicidality. Longitudinal mediation analysis quantifying indirect pathways."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios extracted: SGM→ideation (OR 4.75, 95% CI 3.74-6.03); SGM→attempts (OR 5.87, 95% CI 3.72-9.28); cyber victimization (OR 2.35, 95% CI 1.77-3.11); mediation 22%-28%."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD prospective cohort analysis examining longitudinal associations between sexual/gender minority identity and suicidal outcomes, with victimization as mediators."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Journal of Child Psychology and Psychiatry. No evidence of preprint or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cyber victimization (SM-adjacent) is mediator between SGM identity (demographic/identity predictor) and suicidality (non-SM outcome). Identity variables (sexual orientation, gender identity) per B17 explicitly disqualify FT-EC7. FT-EC7 requires demographic-only predictors; gender identity/sexual orientation are identity constructs exceeding closed demographic set.",
+    "binding_rules_applied": ["B4", "B17"],
+    "notes": "B17 applies: sexual orientation and gender identity as predictors disqualify FT-EC7 per binding rule. Cyber victimization is outcome/mediator (not IV), and identity is primary predictor (not demographic-only)."
+  },
+  {
+    "paper_id": "94",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study. 3,037 youths ages 11-12 years. Multisite U.S. recruitment (21 cities)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (multimodal index: parent-report, youth-report) — qualifying smartphone variable per B1. Text states 'longer screen times' are outcome predictor; coefficients reported separately for screen time associations with somatomotor disconnection and outcomes."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential tests: (1) Multivariate predictive modeling of sleep→brain (r=0.23, p<.001); (2) Regression coefficients for somatomotor disconnection→outcomes (β=0.05 for youth-reported screen time, p=5.03×10⁻²⁴; β=0.05 parent-reported, p=.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values extracted: multivariate r=0.23 (p<.001); somatomotor disconnection→screen time β=0.05 (youth: p=5.03×10⁻²⁴; parent: p=.001); →school grades β=-0.04 (p=.007); →cognitive ability β=-0.06 (p=4.8×10⁻²⁵)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Graph-theoretic network neuroscience methods examining sleep duration associations with brain connectivity, socioeconomic context, screen time, cognition, psychopathology."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Biological Psychiatry: Global Open Science. No preprint or duplicate evidence."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is outcome/dependent variable (predicted by somatomotor disconnection), but analysis also includes non-demographic predictors (sleep duration, socioeconomic resources, brain network metrics) violating condition (b) which requires 'every predictor in closed demographic-only set.' Sleep duration and brain network architecture are not demographic variables. Fails FT-EC7 conditions (b) and (c).",
+    "binding_rules_applied": [],
+    "notes": "Complex multivariate model with screen time as outcome, but predictors exceed demographic-only scope. Condition (b) of FT-EC7 explicitly fails: brain connectivity metrics, sleep, SES are non-demographic predictors."
+  }
+]

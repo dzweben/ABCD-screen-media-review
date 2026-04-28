@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract explicitly states \"Data from the Adolescent Behavior Cognitive Development (ABCD) Study were used to identify clinical and neuroimaging characteristics of participants at late childhood (T1; defined as aged 9-10 years) and early adolescence (T2; defined as age 11-13 years). Children and their parent/caregiver were recruited across 21 US cities.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective longitudinal study with mediation analysis examining screen time → sleep duration → white matter → depressive symptoms pathway"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in JAMA Pediatrics (2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (smartphone/device-based) as IV paired with individual-trait-level DV (depressive symptoms on Child Behavior Checklist, a mental health measure). Screen time measured via self-report questionnaire; depressive symptoms are individual-trait-level psychiatric symptom variable"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports numeric inferential result: \"Each additional hour of daily screen time at T1 was associated with a 0.12-point (95% CI, 0.04-0.20; P = .008) increase in Child Behavior Checklist depressive score at T2\""
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative result reported: regression coefficient (β = 0.12, p = .008) for screen time ↔ depressive symptoms association"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal but screen time is IV (not DV-only); FT-EC7 does not apply",
+    "notes": "Screen time measured via self-report questionnaire; mediation analysis includes sleep duration and white matter (both individual-trait-level mediators)"
+  },
+  {
+    "paper_id": "305",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract explicitly states \"Data were from the first three waves of the Adolescent Brain Cognitive Development (ABCD) Study (5,596 9-10-year-old youth; 2,640 [47.2%] female; 3,107 [55.5%] non-Hispanic White)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal mediation study using mixed-effects logistic regression and mediation analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of Child Psychology and Psychiatry (2025)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures peer victimization (overt, relational, reputational) and cyber victimization as mediators/outcomes, but does NOT measure smartphone or social media use as a standalone variable. Cyber victimization ≠ social media use. No qualifying SM/phone variable paired with individual-trait outcome. The paper focuses on SGM identity → victimization → suicidality, with victimization assessed as peer/cyber experiences but NOT as SM use metrics (time on SM, SM platform use, problematic SM scales, etc.)"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-EC2 exclusion: No qualifying smartphone/SM variable. Cyber victimization is not equivalent to social media use measurement"
+  },
+  {
+    "paper_id": "94",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "PDF and abstract confirm: \"We implemented graph theory and component-based predictive modeling to examine how a multimodal index of sleep duration (parent-report, youth-report, Fitbit) is associated with intrinsic brain architecture in 3037 youths (ages 11–12 years) from the ABCD (Adolescent Brain Cognitive Development) Study\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional study at year 2 (ages 11–12) using graph theory, multivariate predictive modeling (principal component regression), and linear regression models examining sleep duration associations with brain architecture and behavioral/phenotypic outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Biological Psychiatry: Global Open Science (July 2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (a qualifying smartphone/digital-device variable) appears as IV paired with individual-trait-level outcome (cognition, psychopathology). PDF states: \"greater somatomotor disconnection was associated with lower socioeconomic resources, longer screen times, reduced cognitive/academic performance, and elevated externalizing problems (βs > 0.03, ps ≤ .007)\". Figure 3 confirms: screen time (β = 0.13, p = 2.6 × 10⁻¹⁹) associated with somatomotor disconnection, which in turn relates to cognitive ability and externalizing outcomes"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative inferential results reported: (1) Multivariate association between sleep duration and network architecture: rCV = 0.230, pPERM < .0001; (2) Screen time → somatomotor disconnection: β = 0.13, p = 2.6 × 10⁻¹⁹; (3) Somatomotor disconnection → cognitive ability: β = −0.06, p = 4.8 × 10⁻⁵; (4) Somatomotor disconnection → externalizing symptoms (youth-report): β = 0.05, p = 5.0 × 10⁻⁴"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results for screen time ↔ individual-trait-level outcomes: standardized regression coefficients (β values), p-values, and effect sizes (r = 0.23 for multivariate sleep-brain association; individual phenotypic associations: βs > 0.03, ps ≤ .007)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (year 2 only, no longitudinal follow-up); FT-EC7 applies only to longitudinal designs where SM is DV-only",
+    "notes": "Screen time measured via self-report; primary IV in associations with brain architecture (somatomotor disconnection) and downstream outcomes (cognition, psychopathology, externalizing). Strong multivariate and univariate evidence of SM/screen-time associations with individual-trait outcomes"
+  }
+]

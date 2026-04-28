@@ -1,0 +1,80 @@
+[
+  {
+    "paper_id": "202",
+    "title": "ACEs, Problematic Social Media Use, and Emotional/Behavioral Dysregulation Among ABCD",
+    "authors": "",
+    "year": "2025",
+    "doi": "10.1080/01612840.2025.2559062",
+    "abstract": "Dramatic increases in adolescent social media use have occurred alongside worsening adolescent mental and behavioral health and associated risk factors, including adverse childhood experiences (ACEs). Understanding these relationships is important for mental health nurses working with adversity-impacted adolescents. This study examined the association between ACEs exposure and problematic social media use (PSMU), and the moderating role of emotional and behavioral dysregulation among a diverse sample of young United States' (US) adolescents (10-14\u00e2\u0080\u0089years old). A secondary analysis using mixed-effects linear modeling was used to analyze adolescent and parent self-report data collected from baseline through 3-year follow-up in the Adolescent Brain Cognitive Development Study (ABCD Study\u00c2\u00ae). After adjusting for socio-demographic covariates, a significant positive association was found between adolescent cumulative ACEs score at 10-12\u00e2\u0080\u0089years and higher PSMU at 12-14\u00e2\u0080\u0089years: relative to adolescents with low (< 2) ACEs, those with high (\u00e2\u0089\u00a5\u00e2\u0080\u008a4) ACEs reported higher PSMU (\u00ce\u00b2\u00e2\u0080\u0089=\u00e2\u0080\u00891.5, p\u00e2\u0080\u0089<\u00e2\u0080\u00890.001). Adolescent emotional and behavioral dysregulation did not moderate this association. Findings underscore the importance of ACEs and mental health screening, as well as trauma-informed, developmentally appropriate preventative interventions to promote healthy social media use and reduce risk for PSMU among adversity-impacted adolescents.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1080_01612840.2025.2559062.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_EC7_applies",
+        "c1_status": "FALSE",
+        "c1_evidence": "ACEs (adverse childhood experiences) is an explicit disqualifier per B17 (parental psychopathology, family conflict, ACEs, etc. as predictors of SM). Additionally, SM is not the dependent variable; rather, PSMU is outcome being predicted by ACEs.",
+        "c2_status": "TRUE",
+        "c2_evidence": "FT_EC7 = TRUE. All three conditions met: (a) PSMU is the DEPENDENT variable in all analyses (ACEs \u2192 PSMU model); (b) Predictors are demographic-only: cumulative ACEs (childhood adversity exposure), age, gender, race/ethnicity, parent marital status, parent education, household income\u2014all in closed demographic set per B15 criterion; (c) All analyses are LONGITUDINAL (Y1 ACEs predicting Y3 PSMU with 3-year prospective follow-up). No SM-as-IV \u2192 outcome analysis present. No cross-sectional demo\u2192SM reported. No ACE confounders (parenting, psychopathology, sleep, depression, anxiety, etc.) excluded per B17. Cross-sectional carve-out (B15) does not apply\u2014all analyses are prospective. Condition (b) satisfied: ACEs are demographic (adversity), not psychological mechanisms."
+      }
+    ]
+  },
+  {
+    "paper_id": "205",
+    "title": "Pet Ownership and Family Involvement in Sports and Other Activities.",
+    "authors": "",
+    "year": "2024",
+    "doi": "10.1080/08927936.2024.2406097",
+    "abstract": "The impact that companion animals may have on adolescent engagement in sports and other activities is currently unclear. This study included participant data gathered from the Adolescent Brain Cognitive Development (ABCD) Study\u00c2\u00ae, a longitudinal study of brain development and youth health outcomes in the United States (n = 8,489). This study aimed to clarify the extent to which companion animal type impacts family involvement in sports and other activities. Additionally, it is framed within the bioecological model of human development, which provides a useful framework for human-animal interaction researchers going forward. This study utilized multiple logistic and linear regressions in answering the research questions posed. The results indicate that, when adjusting for context- and person-level covariates, there does not appear to be a meaningful relationship between companion animal type and family involvement in sports and other activities, physical activity, or screen time. This study serves as a guidepost for human-animal interaction researchers as to the importance of including contextual variables in their studies before making claims regarding the impact of companion animals on youth, especially when details about the companion animal relationship are unavailable.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1080_08927936.2024.2406097.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC4",
+        "c1_status": "MET",
+        "c1_evidence": "Adjusted odds ratios with 95% CI (e.g., AOR=1.167, 95% CI: 0.957-1.424); McFadden's Pseudo R\u00b2, F-statistics reported in main text.",
+        "c2_status": "UNKNOWN",
+        "c2_evidence": "Tables 2-3 report coefficients (ORs, \u03b2, 95% CIs, p-values) for pet ownership and outcomes (physical activity, sports involvement, screen time), but screen time values not clearly extracted as separate numeric results"
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "c1_status": "TRUE",
+        "c1_evidence": "Meets all three FT-EC7 conditions: (a) Screen time IS the dependent variable in every analysis; no SM\u2192outcome analyses present; (b) All predictors are demographic/contextual only (pet ownership, demographic covariates, contextual covariates per bioecological model); (c) Longitudinal/prospective design. This is a demographic\u2192SM DV study with no external outcomes, qualifying for exclusion under FT-EC7.",
+        "c2_status": "FALSE",
+        "c2_evidence": "Paper fails FT-IC2 (no qualifying smartphone/SM exposure with its own extracted coefficient); screen time is controlled but not analyzed as primary exposure"
+      }
+    ]
+  },
+  {
+    "paper_id": "215",
+    "title": "Independent and Joint Prospective Associations of Screen Time and Sleep Disturbance with Body Mass Index and Waist Circumference Among U.S. Adolescents.",
+    "authors": "",
+    "year": "2025",
+    "doi": "10.1089/chi.2025.0022",
+    "abstract": "Background: We examined the independent and joint prospective associations of screen time, sleep disturbance, and sleep duration with body mass index (BMI) and waist circumference (WC) stratified by sex. Methods: Data are from 7445 participants (47.3% females) aged 9-10 years at baseline (2016-2018) in the Adolescent Brain Cognitive Development Study. Missing data were imputed, and weighted multivariable linear regression models estimated the independent and joint effects of screen time and sleep disturbance or sleep duration on BMI and WC after 2 years. Joint associations grouped participants by combinations of screen time and sleep, with low screen time and sufficient sleep or no sleep disturbance as the reference groups. Results: Screen time was significantly associated with higher BMI (B = 0.32; 95% CI: 0.19, 0.45; p < 0.001) and WC (B = 0.40; 95% CI: 0.23, 0.56; p < 0.001). Sleep disturbance was associated with higher BMI (B = 1.23; 95% CI: 0.14, 2.33; p 0.026) in males. Insufficient sleep (<9 hours) (B = 1.30; 95% CI: 0.53, 2.07; p < 0.001) was associated with higher BMI. Medium screen time without sleep disturbance or insufficient sleep, and medium and high screen time with either sleep problem were associated with higher BMI and WC. Low screen time with insufficient sleep and high screen time with sufficient sleep were associated with higher BMI. Associations were generally stronger among males, particularly with high screen time. Conclusion: Screen time and insufficient sleep were independently and jointly associated with higher BMI and WC 2 years later, especially when both were present.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1089_chi.2025.0022.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Screen time (hours/day) reported but without device/platform specificity. Sleep disturbance and sleep duration are not qualifying exposures. Per B5, unspecified screen time without smartphone/app/platform breakdown = NOT_MET",
+        "c2_status": "MET",
+        "c2_evidence": "Screen time is qualifying smartphone exposure measured in hours/day (continuous and categorical: 0-4, >4-8, >8 hours/day). Self-reported average daily time on screens. Separate \u03b2 coefficients reported for categorical screen time variables (Table 2: B=0.32 continuous, separate models for medium/high categories). Applies B1: ABCD paper reporting separate coefficients for screen time (smartphone-related measure) as exposure."
+      },
+      {
+        "crit": "FT_IC3",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Weighted multivariable linear regression models used but FT-IC2 NOT_MET makes this moot for inclusion",
+        "c2_status": "MET",
+        "c2_evidence": "Weighted multivariable linear regression models; B coefficients with 95% CIs and p-values for independent associations; joint associations tested with categorical groupings"
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Numeric values present but FT-IC2 NOT_MET makes this moot",
+        "c2_status": "MET",
+        "c2_evidence": "B coefficients (0.32, 0.40, etc.), 95% confidence intervals, p-values reported in Tables 2-3 for screen time and sleep associations with BMI and WC"
+      }
+    ]
+  }
+]

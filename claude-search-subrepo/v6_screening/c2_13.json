@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "11",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study confirmed in methods: data release 5.1, recruitment June 2016 to October 2018, 3419 youth with sleep data at wave 3."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective cohort design with mediation analysis examining associations between parental factors (wave 1) and sleep outcomes (wave 3), with screen use and emotional regulation as mediators (wave 2)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in JAMA Network Open, September 2025."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use (measured at wave 2) serves only as a mediator in the pathway from parental factors to sleep outcomes. Screen use does not appear as IV or DV in any primary analysis—it is a mediator variable (e.g., 'indirect association of parental monitoring with better sleep quality was mediated through decreased screen use'). The qualifying relationship requires screen use/SM as IV or DV paired with an individual-trait variable; here, screen use is covariate-only in the mediation pathways."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines modifiable parental factors as predictors of sleep; screen use is a partial mediator in these associations but is not the primary IV or DV of interest. Does not meet the conceptual requirement of FT-IC2 (screen use/SM as IV or DV, not mediator-only)."
+  },
+  {
+    "paper_id": "121",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study confirmed: data release 5.1, baseline and year 4 waves, 4,754 youth ages 9-10 at baseline, 12-15 at year 4."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear mixed-effects regression models testing whether baseline individual differences (impulsivity, motivation, psychopathology, cognitive ability) predicted screen time and problematic screen use at year 4."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in JAACAP Open, December 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (average daily hours of video games, social media, and smartphones) and problematic screen use (PSU, operationalized as compulsive and distressing use) measured at year 4 as outcome variables, paired with individual-trait-level predictors (urgency facet of impulsivity, reward sensitivity, punishment sensitivity, externalizing, internalizing, cognitive ability) measured at baseline. Methods: 'Individual linear mixed-effects regression models tested whether facets of impulsivity, motivation, psychopathology, and cognitive ability at ages 9 to 10...predicted ST and PSU of video games, social media, and smartphones at ages 12 to 15.' Qualifies: screen use is DV, paired with individual-trait variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Table 1 reports zero-order correlations; results section reports regression findings: 'ST in mid-adolescence was positively predicted by baseline urgency...as well as reward sensitivity and externalizing. ST was negatively predicted by cognitive ability. Across all measured screen activities, PSU at ages 12 to 15 was positively predicted by urgency and punishment sensitivity.' Multiple beta coefficients reported for each predictor and outcome type."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results throughout: zero-order Pearson correlations (Table 2), regression beta estimates, and significance levels for associations between individual difference measures and screen time/PSU outcomes across video games, social media, and smartphones."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Longitudinal design (baseline ages 9-10 predicting year 4 outcomes ages 12-15); screen time and problematic screen use are the DV in all analyses ('ST and PSU of video games, social media, and smartphones at ages 12 to 15 was positively predicted by baseline urgency'); no analysis treats smartphone/SM as IV anywhere in the paper. All three EC7 conditions satisfied; paper excluded.",
+    "notes": "Paper demonstrates prospective prediction of screen use from individual traits, but the DV-only focus with no SM-as-IV analysis triggers FT-EC7 exclusion despite meeting all prior criteria."
+  },
+  {
+    "paper_id": "90",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study confirmed: 'The study included 9,337 individuals with baseline social media use and diffusion-weighted magnetic resonance imaging (MRI) data' from ABCD dataset."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear regressions examining the effects of social media consumption on fractional anisotropy (FA) of 34 white matter tracts, with odds ratio analyses for demographic/physical/neighborhood characteristics predicting social media use."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Biological Psychiatry, May 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media consumption (IV: grouped as <30 minutes/day vs. >30 minutes/day) paired with white matter structure (neural outcome, individual-trait-level DV). Methods: 'Participants were grouped by daily social media consumption...Linear regressions examined the effects of social media consumption on FA.' White matter integrity (FA across 34 tracts) represents neural individual-trait-level variable. Qualifies: SM is IV; other side is neural."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric results reported: 'Although social media consumption was initially associated with FA in several white matter tracts, these associations were no longer significant after adjusting for race and socioeconomic status.' Linear regression F-tests, odds ratios (OR > 1.5, p < 0.05), and statistical comparisons documented."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results throughout: odds ratios for demographic/health/neighborhood predictors of social media use ('p < 0.05, Odds Ratio > 1.5'), and linear regression estimates for social media consumption effects on FA values across white matter tracts."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (baseline data only); EC7 rule applies only to longitudinal studies. Paper kept regardless of SM side of equation.",
+    "notes": "Paper demonstrates social media (IV) predicting white matter health (neural outcome, DV). Some associations disappear after demographic/SES adjustment, but numeric results remain reported. Cross-sectional design exempts from EC7 exclusion."
+  }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "paper_id": "172",
+  "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study data (N=8,699) alongside Generation R; ABCD-specific analyses in target trial emulation framework reported across universal, selective, and indicated prevention settings."},
+  "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using target trial emulation and G-formula to estimate potential effects of hypothetical interventions on internalizing symptoms; conducted on longitudinal ABCD and GenR data."},
+  "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Journal of Consulting and Clinical Psychology (2025); no preprint or duplicate indicated."},
+  "FT_IC2": {"status": "NOT_MET", "evidence": "Screen time (ST) is listed as a generic modifiable factor without isolation of smartphone or social media use. Abstract and methods describe ST as a composite factor (alongside sleep, physical activity, social connections) without operationalization specifying phone/SM modality. Does not meet FT-IC2 requirement for qualifying phone or SM variable."},
+  "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+  "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+  "FT_EC7_applies": "DEFERRED",
+  "FT_EC7_reason": "prior criterion failed; not evaluated",
+  "notes": "Paper excluded under FT-EC2 (no qualifying smartphone/SM variable). Generic screen time without phone/SM-specific breakdown does not qualify."
+ },
+ {
+  "paper_id": "50",
+  "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study data; 11,819 youth participants from four waves of ABCD data (baseline ages 9-10 years, assessed at 1-, 2-, and 3-year follow-ups)."},
+  "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using random-intercepts cross-lagged panel models (RI-CLPMs) to estimate longitudinal bidirectional associations between online social activity time and ADHD problems across four waves."},
+  "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in European Child & Adolescent Psychiatry (2025); no preprint or duplicate indicated."},
+  "FT_IC2": {"status": "MET", "evidence": "Online social activity (OSA) time operationalized as summed time on texting, visiting social networking sites, and video chatting. ADHD problems (inattention, hyperactivity, impulsivity via CBCL) represent individual-trait-level behavioral/clinical outcome. OSA appears as IV in cross-lagged analyses (OSA time → ADHD problems at multiple time points) and bidirectionally examined."},
+  "FT_IC3": {"status": "MET", "evidence": "Extensive quantitative results reported: standardized cross-lagged coefficients (β = 0.094, p = 0.023 for girls T2→T3; β = 0.080, p = 0.005 for girls T3→T4; see Table 3), 95% confidence intervals, model fit indices (CFI=0.953, TLI=0.920, RMSEA=0.040)."},
+  "FT_IC4": {"status": "MET", "evidence": "Multiple inferential analyses with numeric results: cross-lagged parameter estimates from RI-CLPM with statistical significance testing; moderation analyses by OSA content type and sex with stratified coefficients; effect sizes reported."},
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "Design is longitudinal with four waves. OSA is an IV in multiple analyses (T2→T3, T3→T4 predicting ADHD). Paper does not fit FT-EC7 (SM-as-DV-only); bidirectional associations examined.",
+  "notes": "Paper INCLUDED. Meets all inclusion criteria. Qualifies as original empirical study of ABCD data examining bidirectional longitudinal associations between online social activity time and ADHD with robust quantitative results."
+ },
+ {
+  "paper_id": "115",
+  "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study data from 4,557 adolescents (mean age 9.955±0.164 years) assessed at baseline, 1-year, 2-year, and 3-year follow-ups."},
+  "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using linear mixed models, cross-lagged panel models, and mediation analyses examining correlational and causal associations between screen media activity (SMA) and mental health; analyzes structural and functional brain changes as mediators."},
+  "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in International Journal of Clinical and Health Psychology (2025); no preprint or duplicate indicated."},
+  "FT_IC2": {"status": "MET", "evidence": "Screen media activity (SMA) operationalized with distinct types: television, video watching, video games, testing on phone or tablet, video chat, and social media. Paper reports media-specific results: \"testing on a phone predicted\" stress outcomes, \"video chat\" and \"social media\" measured separately. The other side is individual-trait-level mental health (internalizing, externalizing, stress problems). SMA (including phone/SM components) is IV predicting mental health outcomes."},
+  "FT_IC3": {"status": "MET", "evidence": "Quantitative results throughout: standardized regression coefficients β (e.g., β = 0.030, SE = 0.012, pfdr = 0.016 for internalizing; β = 0.054, pfdr < 0.001 for TV/externalizing; β = 0.061, pfdr < 0.001 for video/internalizing; see abstract and Table 2)."},
+  "FT_IC4": {"status": "MET", "evidence": "Mediation effects reported: RSFC between cingulo-opercular network (CON) and retrosplenial temporal network (RTN) mediated effects (β = 0.002, pfdr = 0.042 for externalizing; β = -0.003, pfdr = 0.022 for stress). Cross-lagged effects, indirect effects, and multiple statistical tests with p-values and confidence intervals."},
+  "FT_EC7_applies": false,
+  "FT_EC7_reason": "Design is longitudinal (baseline SMA predicts 3-year outcomes). SMA (screen media, including phone and SM components) is the IV/exposure in primary analyses. Paper is not SM-as-DV-only. FT-EC7 does not apply.",
+  "notes": "Paper INCLUDED. Meets all inclusion criteria. Examines longitudinal associations between screen media activity (including phone and social media components) and mental health outcomes in ABCD sample with extensive quantitative results and neurobiological mediation pathways."
+ }
+]

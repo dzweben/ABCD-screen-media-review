@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "181",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper uses data from 3498 U.S. adolescents aged 9-11 years from the Adolescent Brain Cognitive Development (ABCD) Study, as stated in methods."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with Cox proportional hazards models examining prospective associations of sleep duration and screen time with BMI transition."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in International Journal of Obesity."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is a composite measure bundling TV, movies, video games, texting, video chatting, and social media with no per-modality breakdown isolating phone or SM. Methods state adolescents reported time on \"different screen modalities, including viewing/streaming TV shows or movies, watching/streaming videos (e.g., YouTube), playing video games, texting, video chatting (e.g., Skype, FaceTime), and using social media\". Per v6 criteria, composite screen time without per-modality isolation does not qualify."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper fails FT-IC2 because screen time is composite across multiple modalities (TV/movies, gaming, phone, social media) without per-modality breakdown isolating phone or SM specifically."
+  },
+  {
+    "paper_id": "215",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from 7445 adolescents in the longitudinal Adolescent Brain Cognitive Development (ABCD) Study at baseline 2016-2018."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with weighted multivariable linear regression models estimating independent and joint effects of screen time and sleep disturbance/duration on BMI and WC prospectively."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Childhood Obesity."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is composite across multiple screen-based activities. Methods state \"participants completed the ABCD Youth Screen Time Survey at baseline (2016-2018), reporting their total time spent across all screen-based activities on a typical weekday and weekend day\". Screen time categories are 0-4, 4-8, >8 hours/day of total screen time. Results show associations with BMI and WC, but the exposure is bundled TV/movies/games/texting/video-chatting/social-media with no breakdown isolating phone or SM per se."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper fails FT-IC2 because screen time is composite measure without per-modality breakdown isolating phone or social media from other screen activities (TV, gaming, etc.)."
+  },
+  {
+    "paper_id": "154",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "791 Adolescent Brain Cognitive Development (ABCD) Study participants with mean age 14.12 years."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using mixed-effects models to examine daily-level associations between smartphone use and sleep/physical activity outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Psychiatry Research."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone use is qualifying phone-specific variable measured via EARS passive sensing (app use data). Paired with individual-trait-level outcomes: sleep (hours of sleep, sleep onset timing) and physical activity (exercise, steps, sedentary time). Phone use is IV; sleep and physical activity are DVs. Methods state \"smartphone application and keyboard use data via the Effortless Assessment Research System (EARS) application\"."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis with quantitative results reported. Mixed-effects models show associations with standardized β coefficients: daytime/evening use \"Standardized β=-0.21-0.07, P<.001\"; late-evening use \"Standardized β=-0.05-0.02, P<.001\"; late-night use \"Standardized β=-0.16-0.27, P<.001\". Within-person analyses also reported with similar effect magnitudes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results for smartphone↔outcome associations throughout paper. β coefficients, p-values, and confidence intervals reported for multiple time-of-day windows and analysis strategies."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is not purely longitudinal SM-as-DV-only. Smartphone use is the IV predicting sleep and physical activity outcomes (DVs). Therefore EC7 exclusion does not apply.",
+    "notes": "Paper meets all criteria. Smartphone use (passive-sensed EARS data) is direction-agnostic qualifying exposure paired with individual-trait-level variables (sleep, physical activity). Original empirical analysis with robust quantitative results."
+  }
+]

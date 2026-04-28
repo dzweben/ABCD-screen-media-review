@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "314",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, US cohort"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use measured via Youth Screen Time Survey (YSTS), qualifying SM variable. B1 applies: YSTS papers reporting separate coefficient for SM."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression models testing prospective associations between SM and sleep duration; moderation effects by neural activation tested (interaction terms)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Beta coefficients reported in abstract for SM→sleep associations; 95% CIs provided; longitudinal model statistics available"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data; three-wave prospective design"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/duplicate indicated; published 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "B18 applies: paper has both SM-as-IV (SM→sleep) AND brain activation as moderator; SM is not restricted to demographic-only predictors; neural features are excluded from demographic set in (b)",
+    "binding_rules_applied": ["B1"],
+    "notes": "Bidirectional relationships tested (sleep→SM also), but primary model SM as IV predicting sleep as DV outcome."
+  },
+  {
+    "paper_id": "380",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development study, N=11,878 children ages 9-10"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time mentioned as covariate but no qualifying smartphone or SM variable reported with independent coefficient; only descriptive statistics on screen time and correlates of ED. B2 applies: summed/total screen time with no per-item breakdown."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract reports correlations and odds ratios for various predictors of ED, but inferential test framework for screen time specifically not detailed in abstract"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Numeric data (ORs) provided for demographic, sleep, and psychiatric correlates of ED, but no extractable coefficients for SM/screen time relationships"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis examining prevalence and correlates of emotion dysregulation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/duplicate indicated"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET; paper does not report qualifying SM or smartphone exposure as primary variable",
+    "binding_rules_applied": ["B2"],
+    "notes": "Paper focuses on ED prevalence and clinical correlates; screen time is a minor covariate without separate effect estimates"
+  },
+  {
+    "paper_id": "534",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study, Years 2-4, N≈7,260 participants"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Gaming addiction (VGAQ) is the outcome, not SM exposure; video gaming via VGAQ is measured but gaming addiction is not a qualifying smartphone or social media variable per B5 (unspecified platform gaming without SM component). B6 requires mobile/app gaming OR gaming+SM with separate coefficients; this paper reports gaming addiction as outcome only, ADHD as predictor. No qualifying smartphone or SM exposure variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models testing ADHD diagnosis→VGAQ scores longitudinally; parallel mediation model with multiple mediators; indirect and direct effects computed"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Beta coefficients, 95% CIs, p-values reported in Table 3 and supplementary tables; indirect effects and proportion of effect mediated in Table 4; Figure 2 shows path coefficients"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; longitudinal design with mediation framework"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2026, no preprint duplicate noted"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET; gaming addiction is outcome variable, not qualifying SM or smartphone exposure as predictor. Paper does not meet inclusion criteria.",
+    "binding_rules_applied": ["B5"],
+    "notes": "Study examines ADHD as predictor of gaming addiction mediated by psychosocial factors; gaming is outcome, not exposure. Does not qualify as SM/smartphone exposure study."
+  }
+]

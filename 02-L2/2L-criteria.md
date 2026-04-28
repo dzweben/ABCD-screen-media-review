@@ -1,241 +1,225 @@
-# 2L Criteria — Full-Text Eligibility (PRISMA 2020)
+# 2L Criteria — Full-Text Eligibility (PRISMA 2020) — v6
 
 **Stage:** Level 2 — full-text eligibility review.
-**Scope:** Narrowed relative to 1L. Only papers reporting associations involving **smartphone use or social media use** are retained. Papers measuring only TV, console/PC gaming, streaming on non-phone devices, generic "screen time" without phone/SM specificity, "internet use," cyberbullying alone, or reading on screens are excluded.
 
-This document specifies **a priori** eligibility criteria, exclusion codes, directionality rules, and borderline-case decision rules. Coders must apply these rules **verbatim** with no re-interpretation. Borderline rules in §5 are binding; if a paper matches a §5 rule, that rule's verdict overrides any general intuition.
+**Scope:** Only papers reporting an **inferential association** between **smartphone or social media use** (as IV or DV) and an **individual-trait-level** variable (neural, behavioral, health, cognitive, well-being, personality, substance use, sleep, academic, or similar within-person construct) on **U.S. ABCD Study** participants are retained.
 
----
-
-## 1. Research Question
-
-**Among publications that analyze data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, what associations have been reported between youth smartphone or social media use and psychosocial, health, cognitive, behavioral, neural, social, or sociodemographic variables?**
+This document specifies a-priori eligibility criteria. Coders apply these rules conceptually, not by label-matching. The criterion is "what was actually measured and analyzed," not "what label the authors chose."
 
 ---
 
-## 2. Eligibility Criteria — PECOS
+## 1. Research question
 
-### 2.1 Population (P) — FT-IC1
-
-| | Rule |
-|---|---|
-| **MET** | Paper analyzes data from the U.S. ABCD Study. Any release (2.0–5.1). Sub-samples qualify (e.g., EARS N=640, autism subgroup, ABCD-COVID rapid-response survey). |
-| **NOT_MET** (FT-EC1) | Amsterdam Born Children and their Development (Dutch ABCD). NHANES, MTF, MCS, Generation R, INMA, or any non-U.S.-ABCD cohort. ABCD cited only in introduction without analysis. Pooled analysis with another cohort where U.S.-ABCD-only estimates are NOT extractable. |
-| **UNKNOWN** | No PDF AND abstract is silent on the cohort. |
-
-### 2.2 Exposure (E) — FT-IC2 — *the most common disagreement; read all borderline rules*
-
-A paper meets FT-IC2 if **at least one** of the following is measured AND enters a statistical analysis (regression, correlation, group comparison, network edge, etc.):
-
-**Qualifying smartphone variables:**
-- Smartphone ownership (yes/no), age of smartphone acquisition.
-- Time on smartphone (self-report, parent-report, EARS passive sensing).
-- Any app or app-category use (apps inherently = smartphone). Including: app counts, time per app category, notification volume.
-- Mobile-phone-specific items: texting (phone), video chat (phone), bedtime phone use.
-- Problematic / addictive smartphone scales: MPIQ, PSMUS, mobile-phone-checking scales.
-
-**Qualifying social-media variables:**
-- Time on social media (any modality — self-report, parent-report, passive).
-- Platform-specific use: TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter/X, Reddit, Pinterest, Tumblr, Discord, BeReal.
-- Number of social media accounts; secret/private accounts; platform-membership indicators.
-- Online dating / hookup apps.
-- Problematic / addictive SM scales: SMAQ, Bergen SM/Facebook Addiction Scale, SNS-A, Bergen Adolescent Social Media Addiction Scale.
-- Cyberbullying **only counts if the paper also separately measures one of the smartphone or social-media variables above with its own coefficient**.
-
-**Does NOT qualify:**
-- TV viewing alone, video streaming on unspecified device, console / PC video games, "internet use" without device or platform specification, e-mail, reading on screens, generic "screen time" totals where smartphone/SM contribution is not separately measured, mature-rated movie content alone, radio, podcasts, RF-EMF exposure measures.
-
-#### 2.2.1 Borderline rule — composite measures (BINDING)
-
-ABCD's Youth Screen Time Survey (YSTS) produces six per-day modalities: TV/movies, videos, video games, texting, social media, video chat. Many papers analyze YSTS items. Apply this rule:
-
-> **MET** if the results section, any table, any figure, or any supplement reports a **separate** estimate (β / OR / RR / HR / IRR / r / mean difference / network edge weight / event-time hazard / latent path) for **any one** of the qualifying smartphone or social-media YSTS items (texting, video chat, social media, app/phone use). Other items in the same model (TV, gaming, videos) are irrelevant — what matters is whether *one* qualifying item has its own extractable estimate.
->
-> **NOT_MET** if the *only* exposure variable analyzed is a summed/composite "total screen time" (or "total recreational screen use," "weighted average screen hours," "lifestyle factor that includes screen") with no extractable per-item estimate for any qualifying smartphone or social-media item — even when the underlying survey items would have allowed a breakdown.
->
-> Latent variables (factor scores, profile membership, principal components) where screen items load alongside non-screen behaviors and only the latent score is reported → **NOT_MET** (FT-EC2 via E3 rule).
-
-#### 2.2.2 Borderline rule — cyberbullying papers (BINDING)
-
-> **MET** if the paper measures cyberbullying **AND** also separately measures at least one qualifying smartphone or SM variable with its own reported coefficient.
->
-> **NOT_MET** if cyberbullying is the only screen-adjacent variable; FT-EC2 applies. A note about adolescents using the internet as background does not satisfy FT-IC2.
-
-#### 2.2.3 Borderline rule — gaming-only papers (BINDING)
-
-> **NOT_MET** if the only exposure is video gaming on console or PC, or video gaming with platform unspecified.
-> **MET** only if the paper measures gaming via **mobile/app gaming** specifically (e.g., gaming on phone), or also measures a non-gaming smartphone/SM variable with its own coefficient.
-> Problematic-gaming scales (VGAQ, IGDS9-SF) alone → **NOT_MET** unless the paper also reports a separately-measured smartphone or SM variable.
-
-### 2.3 Comparator (C)
-Not applicable. Observational association studies.
-
-### 2.4 Outcomes (O)
-Any non-smartphone-/non-SM-related variable measured on ABCD participants: mental health, physical health, sleep, substance use, cognitive, neural, social, recreational, sociodemographic, parenting, family, ACEs, clinical, genetic, environmental.
-
-### 2.5 Study design (S) — FT-IC5
-
-| | Rule |
-|---|---|
-| **MET** | Original empirical ABCD analysis: cross-sectional, longitudinal, mediation, moderation, ML, causal inference, target-trial emulation, network analysis, factor models with reported pathway estimates. |
-| **MET (borderline — measurement papers)** | Paper develops or validates a smartphone/SM measurement instrument **AND** reports at least one screen → non-screen-outcome association in the same paper (criterion validity). |
-| **NOT_MET** (FT-EC3) | Reviews, meta-analyses without new ABCD analysis, editorials, commentaries, letters, study protocols, resource/data descriptions, book chapters, news. |
-| **NOT_MET** (FT-EC5) | Measurement-only papers: factor structure, reliability, EARS-vs-self-report concordance, method comparison — with **zero** screen → non-screen association anywhere in the paper. |
-
-### 2.6 Reporting — FT-IC3 (statistical test) and FT-IC4 (extractable numeric)
-
-Treat IC3 and IC4 as a paired check. Apply as follows:
-
-#### 2.6.1 FT-IC3 — was an inferential statistical test reported?
-
-| | Rule |
-|---|---|
-| **MET** | At least one inferential statistical test linking a qualifying smartphone/SM variable to a non-SM variable is reported. Qualifying tests: regression (OLS, logistic, Poisson, multilevel, GEE, Cox, GLM), SEM path coefficient, mediation indirect effect, moderation interaction, Pearson/Spearman/partial correlation, chi-square, Fisher's exact, t-test, ANOVA, mixed-effects coefficient, network-analysis edge weight, target-trial-emulation contrast. **Ridge / Lasso / GLM / penalized regression coefficients count.** Bayesian posterior estimates count. |
-| **NOT_MET** | Only descriptive statistics (means, SDs, prevalences) with no inferential test of a SM↔non-SM association. SM appears only as an adjustment covariate with **no reported coefficient anywhere** in the paper. SM is included only in a latent score/composite with no separately reportable coefficient. |
-| **UNKNOWN** | No PDF and the abstract does not allow this judgment. |
-
-#### 2.6.2 FT-IC4 — is a numeric value reportable?
-
-| | Rule |
-|---|---|
-| **MET** | The paper reports at least one numeric value for the qualifying SM ↔ non-SM association: β / OR / RR / HR / Cohen's d / r / F / t / χ² / η² / R² / p-value / 95% CI / posterior mean / network edge weight. May appear in main text, tables, labeled figures, or supplement. |
-| **NOT_MET** | Only narrative claims ("screen time was associated with depression") with no numeric value anywhere. Figure with no numeric labels and no corresponding numeric supplement. |
-
-#### 2.6.3 Borderline rule — machine-learning models (BINDING)
-
-> **MET** if **any analysis in the paper** reports a numeric coefficient (linear β, logistic OR, Cox HR, GLM β, penalized β, Bayesian posterior mean) for the smartphone/SM variable. This includes coefficients reported in supplementary tables, sensitivity analyses, alternative model specifications, robustness checks, or model comparison tables.
->
-> **NOT_MET** if the only outputs reported for the SM variable are: SHAP values, permutation importance, Gini importance, gain importance, attention weights, raw feature ranks, or feature-selection counts — with no traditional regression coefficient anywhere in the paper.
->
-> Concordance / κ / Pearson correlation between two screen-time measures (e.g., EARS vs. self-report) is **not** a SM↔non-SM test (it's SM↔SM) → does not satisfy FT-IC3.
-
-#### 2.6.4 Borderline rule — covariate-only screen time (BINDING)
-
-> If the paper lists screen time / SM in the covariates section but the results tables do **not** report a coefficient for screen time / SM in any model, FT-IC3 = NOT_MET (E1).
->
-> If screen time / SM appears in a model and **any** model in the paper reports its coefficient (even a fully-adjusted final model), FT-IC3 = MET. Look in supplementary tables.
+**Among publications analyzing data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, what associations have been reported between youth smartphone or social media use and individual-trait-level variables (neural, behavioral, health, cognitive, well-being, personality, substance use, sleep, academic, etc.)?**
 
 ---
 
-## 3. Directionality and FT-EC7
+## 2. Eligibility criteria
 
-Direction is **not** an eligibility filter, except for the narrow FT-EC7 case below.
+The criteria are evaluated in cascade order. **As soon as any criterion returns NOT_MET, all subsequent criteria are marked `DEFERRED` with evidence string `"prior criterion failed; not evaluated"`.** Do not score downstream criteria with MET / NOT_MET / UNKNOWN once a prior NOT_MET has occurred.
 
-| Pattern | Decision |
-|---|---|
-| Smartphone/SM → non-SM outcome (any timeframe) | **INCLUDE** |
-| Non-SM predictor → smartphone/SM, **cross-sectional** | **INCLUDE** |
-| Non-SM **individual psychological / clinical / behavioral / cognitive / neural / genetic** predictor → future smartphone/SM, longitudinal | **INCLUDE** |
-| Mediation / moderation involving smartphone/SM | **INCLUDE** |
-| Bidirectional / cross-lagged | **INCLUDE** |
-| Non-SM **demographic-only** predictor → future smartphone/SM, longitudinal | **EXCLUDE (FT-EC7)** |
-
-### 3.1 FT-EC7 — exact rule (BINDING)
-
-FT-EC7 applies if **all three** of the following are simultaneously true:
-
-1. **(a) Smartphone/SM is the dependent variable** in every reported analysis involving smartphone/SM. The paper does not report any analysis where smartphone/SM is the predictor of a non-SM outcome.
-2. **(b) Every reported predictor of smartphone/SM is in the demographic/contextual set:** sex / gender, race/ethnicity, age, household income, parental education, parental marital status, immigration status, urbanicity, neighborhood quality, school type, study site, family structure (e.g., single-parent), or geographic region. **No** individual psychological, clinical, behavioral, cognitive, neural, sleep, dietary, ACEs, parenting-style, parental psychopathology, or genetic predictor appears.
-3. **(c) Every reported analysis predicting smartphone/SM is longitudinal/prospective.** Baseline demographic predicts a later-wave smartphone/SM outcome. **If the paper also reports any cross-sectional analysis with the same demographics → smartphone/SM, FT-EC7 does NOT apply (cross-sectional carve-out).**
-
-### 3.2 What is NOT FT-EC7 (do not exclude)
-
-- ACEs, parenting practices, parental monitoring, family conflict, parental psychopathology → smartphone/SM (longitudinal or cross-sectional). These are **psychosocial / family** predictors, NOT pure demographics. **INCLUDE.**
-- Sexual orientation or gender identity → smartphone/SM. Treated as identity/psychosocial, not pure demographics for this rule. **INCLUDE.**
-- Pet ownership, religious participation, school involvement → smartphone/SM. Lifestyle / psychosocial. **INCLUDE.**
-- Cross-sectional demographic → smartphone/SM. **INCLUDE** (the cross-sectional carve-out applies).
-- Demographic predictors of smartphone/SM that are *also* analyzed alongside smartphone/SM → some non-SM outcome. **INCLUDE.**
+**Cascade order:** FT-IC1 → FT-IC5 → FT-IC6 → FT-IC2 → FT-IC3 → FT-IC4 → FT-EC7.
 
 ---
 
-## 4. Full-Text Exclusion Codes (hierarchical)
+### 2.1 FT-IC1 — Population (U.S. ABCD)
 
-Assigned in this order; first applicable code wins.
+The qualifying cohort is the **U.S. Adolescent Brain Cognitive Development Study** — NIH-funded, 21 U.S. recruitment sites, baseline ages 9–10, any data release (2.0–5.1+).
+
+| Status | When |
+|---|---|
+| **MET** | Paper analyzes data from the U.S. ABCD Study. Sub-samples qualify (EARS subsample, autism subsample, ABCD-COVID rapid-response, etc.). Pooled multi-cohort analyses combining U.S. ABCD with another cohort qualify **only if** at least one ABCD-specific estimate (in main, supplementary, or sensitivity analyses) is extractable. |
+| **NOT_MET** | Different cohort sharing the "ABCD" acronym — including **Amsterdam Born Children and their Development (Dutch ABCD)**, Adolescent Behavior and Cognitive Development cohorts in other countries, and any non-U.S. ABCD initiative. NHANES, MTF, MCS, Generation R, INMA, etc. ABCD cited only in introduction/discussion without analyzing ABCD data. Pooled analyses with no ABCD-specific estimate extractable. **Verify cohort identity by reading the recruitment/methods description, not just the acronym.** |
+| **UNKNOWN** | No PDF AND the abstract genuinely does not identify which cohort is used. **Default rule:** if the title or abstract says "Adolescent Brain Cognitive Development Study" / "ABCD Study" with U.S. or NIH context (U.S. sample, ages 9–10 baseline, 21 sites, NDA release reference, etc.), default to **MET** even without a PDF. |
+
+If FT-IC1 = NOT_MET → exclusion code **FT-EC1**.
+
+---
+
+### 2.2 FT-IC5 — Original empirical analysis
+
+| Status | When |
+|---|---|
+| **MET** | Paper reports an original empirical analysis of ABCD data. Cross-sectional, longitudinal, mediation, moderation, ML, causal inference, target-trial emulation, network analysis, mixed-effects, factor models with reported pathway estimates. |
+| **NOT_MET** | Reviews, meta-analyses without new ABCD analysis, editorials, commentaries, perspectives, letters, study protocols, resource/data-availability descriptions, special-issue introductions, book chapters, news pieces. |
+
+If FT-IC5 = NOT_MET → exclusion code **FT-EC3**.
+
+---
+
+### 2.3 FT-IC6 — Non-duplicate
+
+| Status | When |
+|---|---|
+| **MET** *(default)* | Published peer-reviewed paper. Default presumption. |
+| **NOT_MET** | Paper is identified as a preprint version of an already-included peer-reviewed paper *also* in this corpus, OR a conference abstract of an already-included full paper, OR a re-analysis of identical data with no new statistical content beyond an already-included paper. |
+
+If FT-IC6 = NOT_MET → exclusion code **FT-EC6**.
+
+---
+
+### 2.4 FT-IC2 — Qualifying smartphone/SM exposure (CONCEPTUAL)
+
+**FT-IC2 is direction-agnostic.** A qualifying smartphone or social-media variable can appear as **IV** or **DV** of an analysis. It does not qualify if it appears *only* as a mediator, moderator, or covariate.
+
+The paper must, in at least one analysis, pair a qualifying smartphone/SM variable with an **individual-trait-level** variable on the other side of the relationship.
+
+#### What qualifies as "smartphone use"
+Any operationalization of phone-specific activity:
+- Time on phone (self-report, parent-report, EARS passive sensing)
+- Smartphone ownership (yes/no), age of first smartphone
+- Problematic / addictive smartphone use scales (MPIQ, PSMUS, mobile-phone-checking)
+- Phone-specific items: texting (on phone), video chat (on phone), bedtime phone use
+- App use, app-category time, notification volume, passive-sensed app data
+
+#### What qualifies as "social media use"
+Any operationalization of SM-platform activity:
+- Time on social media (self-report, parent-report, passive)
+- Platform-specific use: TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter/X, Reddit, Pinterest, Tumblr, Discord, BeReal
+- Number of SM accounts; secret/private accounts; platform-membership indicators
+- Online dating apps / hookup apps
+- Problematic / addictive SM scales (SMAQ, Bergen SM/Facebook Addiction Scale, SNS-A)
+
+#### What qualifies as "individual-trait-level" on the other side
+Neural · behavioral · physical health · mental health · cognitive · well-being · personality · substance use · sleep · academic · psychiatric symptom · genetic / polygenic · biological (BMI, puberty, biomarker) · clinical diagnosis · ACEs / trauma exposure · parenting practices / parental psychopathology · pet ownership · religious participation · school engagement · any other within-person construct.
+
+#### What does NOT qualify
+- **Other side is demographic-only** (age, sex, race/ethnicity, household income, parental education, household composition) — paper-level NOT_MET if no individual-trait-level analysis exists anywhere
+- **Other side is contextual-only** (neighborhood, school district, region, season, COVID timing) — paper-level NOT_MET if no individual-trait-level analysis exists anywhere
+- TV-only · console/PC-gaming-only · unspecified-platform-gaming-only · generic "internet use" without device specificity · radio · podcasts · RF-EMF exposure
+- Multi-device aggregated time bundling smartphone with non-smartphone devices ("minutes on computer + tablet + cellphone") with no per-device breakdown
+- Composite "screen time" totals that bundle TV/console/phone with no per-modality breakdown isolating phone or SM
+- Cyberbullying alone (without a separately-measured smartphone or SM variable)
+- Mature-rated content / R-rated content variables alone (content rating ≠ phone/SM modality)
+- SM as covariate-only / mediator-only / moderator-only with no IV-or-DV role anywhere
+
+#### Conceptual judgment for borderline labels
+
+The author's chosen variable label is not authoritative — judge what was conceptually measured.
+
+- A paper labeling its variable "screen time" *qualifies* if the methods make clear the construct is phone/SM-based time (e.g., "time on smartphone-based media"). It *does not qualify* if the methods describe a multi-device or multi-activity composite that bundles TV, console, and phone with no breakdown isolating phone or SM.
+- A paper labeling its variable "screen media activity" *qualifies* if the methods or results isolate phone or SM activity within the composite. Otherwise it does not.
+- A pure psychometric/validation paper (factor structure of SMAQ, reliability of MPIQ, EARS-vs-self-report concordance) does not pair the SM variable with an external individual-trait-level variable as IV or DV → **NOT_MET**. (FT-IC5 may also fail; either route is fine.)
+
+If FT-IC2 = NOT_MET → exclusion code **FT-EC2**.
+
+---
+
+### 2.5 FT-IC3 + FT-IC4 — Inferential analysis with numeric result
+
+These are tested together. The paper must perform an inferential analysis involving the qualifying smartphone/SM variable and an individual-trait-level variable, and must report at least one numeric result for that relationship.
+
+| Status | When |
+|---|---|
+| **MET** | Any quantitative result for the SM ↔ individual-trait-level relationship is reported anywhere (main, supplementary, sensitivity, appendix): regression β · OR · RR · HR · IRR · aOR · aRR · PR · aPR · penalized-regression β (Lasso/Ridge/Elastic Net) · path coefficient (direct/indirect/total) from SEM/CLPM/mediation · Pearson/Spearman/partial r · mean difference between groups (with t/F/p) · η² · R² · adjusted prevalence ratio · SHAP value · permutation feature importance · RF/GBM/XGBoost variable importance · model-level metric (AUC, R²) involving the SM variable · Bayesian posterior estimate · network edge weight · target-trial-emulation contrast. **Anything quantitative counts.** |
+| **NOT_MET** | Paper claims an SM↔outcome association narratively but reports zero numeric quantification anywhere (essentially never occurs in real empirical papers). |
+
+If both = MET, proceed to FT-EC7. If NOT_MET → exclusion code **FT-EC4**.
+
+---
+
+### 2.6 FT-EC7 — Longitudinal SM-as-DV-only exclusion
+
+FT-EC7 applies if **all three** are simultaneously true:
+
+1. The design is **longitudinal** (baseline predicts later wave).
+2. Smartphone/SM is the **DV** in every analysis involving smartphone/SM in the paper.
+3. There is **no analysis anywhere in the paper** with smartphone/SM as IV.
+
+If all three hold → exclusion code **FT-EC7**.
+
+FT-EC7 does **not** apply (paper kept) when any of these is true:
+- Design is cross-sectional (regardless of which side SM is on)
+- Smartphone/SM is IV in any analysis (any topic, anywhere in the paper)
+- Bidirectional / cross-lagged design (SM is both IV and DV)
+
+The predictor type is **not** part of the FT-EC7 rule. Demographic, individual-trait, family, lifestyle — none of it matters. What matters is design (longitudinal) and SM-side-of-the-equation (DV-only with no IV analysis).
+
+---
+
+## 3. Cascade-DEFERRED convention
+
+The cascade is hierarchical. As soon as a criterion returns NOT_MET (or UNKNOWN that fails to upgrade), every subsequent criterion is recorded as exactly:
+
+```
+status: DEFERRED
+evidence: "prior criterion failed; not evaluated"
+```
+
+Coders **must not** score downstream criteria with MET / NOT_MET / UNKNOWN once a prior NOT_MET has occurred. The aggregator treats DEFERRED as non-disagreement, so cascade-stage coding artifacts cannot generate false IRR splits.
+
+---
+
+## 4. Exclusion codes (hierarchical)
+
+Assigned in cascade order; first applicable code wins.
 
 | Code | Label | Trigger |
 |---|---|---|
 | **FT-EC1** | Not U.S. ABCD | FT-IC1 NOT_MET. |
-| **FT-EC2** | No qualifying smartphone/SM variable | FT-IC2 NOT_MET (composite-only, TV-only, console-gaming-only, cyberbullying-only, "internet use" only, RF-EMF, etc.). |
-| **FT-EC3** | Non-empirical | Review, editorial, commentary, protocol, resource/data paper, book chapter. |
-| **FT-EC4** | No SM ↔ non-SM inferential test | FT-IC3 NOT_MET. SM is covariate-only with no coefficient. ML with SHAP-only, no coefficient. SM-↔-SM concordance only. Pure descriptive prevalence. |
-| **FT-EC5** | Psychometric / measurement-only | Factor structure / reliability / concordance / method comparison of SM instrument with no external outcome. |
-| **FT-EC6** | Duplicate | Preprint of an included peer-reviewed paper; conference abstract of an included full paper; supplementary deposit. |
-| **FT-EC7** | Longitudinal demographic-only → SM | All three conditions in §3.1 satisfied. |
+| **FT-EC3** | Non-empirical | FT-IC5 NOT_MET (review, editorial, commentary, protocol, resource paper, etc.). |
+| **FT-EC6** | Duplicate | FT-IC6 NOT_MET (preprint of an included paper, conference abstract of an included paper, identical re-analysis). |
+| **FT-EC2** | No qualifying smartphone/SM variable, or other-side not individual-trait-level | FT-IC2 NOT_MET (composite-only with no phone/SM isolation, TV-only, gaming-only, cyberbullying-only, "internet use" only, RF-EMF, multi-device aggregated, content-rating-only, mediator/covariate-only, demographic-only or contextual-only on the other side, validation-only). |
+| **FT-EC4** | No numeric result for SM↔outcome | FT-IC3/IC4 NOT_MET. |
+| **FT-EC7** | Longitudinal SM-as-DV-only | All three §2.6 conditions hold. |
 
-**UNSURE** — PDF unavailable AND abstract insufficient. Carry forward for retrieval; do not classify as EXCLUDE.
+**UNSURE** — PDF unavailable AND abstract insufficient to score a criterion. Carry forward for retrieval.
 
-**NA_FOR_NOW** — PDF unavailable; classified separately from UNSURE for tracking.
-
----
-
-## 5. Binding Edge-Case Rules
-
-These rules are operative; coders apply them mechanically. If a paper matches a rule, the rule's verdict overrides any general intuition.
-
-| Rule | Trigger | Verdict |
-|---|---|---|
-| **B1** | Paper uses YSTS and reports a separate β/OR for at least one of: social media, texting, video chat, mobile phone, or app-category. | FT-IC2 = MET regardless of whether other modalities (TV, gaming) are also in the same model. |
-| **B2** | Paper uses YSTS but reports only a **summed total screen time** estimate (or a single composite) with no per-modality breakdown anywhere. | FT-IC2 = NOT_MET (FT-EC2). |
-| **B3** | Paper measures cyberbullying as the only screen-adjacent variable. | FT-IC2 = NOT_MET (FT-EC2). |
-| **B4** | Paper measures cyberbullying AND a separately-measured smartphone/SM variable with its own coefficient. | FT-IC2 = MET. |
-| **B5** | Paper analyzes only console/PC video games or unspecified-platform video games. | FT-IC2 = NOT_MET (FT-EC2). |
-| **B6** | Paper analyzes mobile/app gaming specifically OR analyzes gaming alongside another qualifying SM variable with separate coefficients. | FT-IC2 = MET. |
-| **B7** | Paper measures only "internet use" without device or platform specification. | FT-IC2 = NOT_MET (FT-EC2). |
-| **B8** | Paper reports any traditional regression coefficient for the SM variable in *any* analysis (main, supplementary, sensitivity). | FT-IC4 = MET (and FT-IC3 = MET if the test type is on the qualifying list). |
-| **B9** | Paper reports only SHAP / permutation importance / Gini / attention weights / feature ranks for the SM variable. | FT-IC3 = NOT_MET (FT-EC4). |
-| **B10** | SM appears in the covariates list but no coefficient for SM is reported anywhere. | FT-IC3 = NOT_MET (FT-EC4). |
-| **B11** | SM is one of multiple variables loading on a single latent score, and only the latent score's coefficient is reported. | FT-IC2 = NOT_MET (FT-EC2). |
-| **B12** | EARS vs self-report concordance (or any SM-vs-SM measurement comparison) is the only analysis reported. | FT-IC3 = NOT_MET (FT-EC4) → if also no external outcome, FT-IC5 = NOT_MET (FT-EC5). |
-| **B13** | Measurement paper (e.g., scale validation) that ALSO reports any SM ↔ non-SM coefficient. | FT-IC5 = MET. |
-| **B14** | Editorial, commentary, special-issue introduction, perspective, or letter with no original ABCD analysis. | FT-IC5 = NOT_MET (FT-EC3). |
-| **B15** | Paper has any cross-sectional analysis where SM is DV and demographics are predictors. | FT-EC7 does NOT apply (cross-sectional carve-out). |
-| **B16** | Paper's only SM-as-DV analyses are longitudinal AND every predictor is in the demographic-only set (sex, race, age, income, parental education, urbanicity, study site). | FT-EC7 applies → EXCLUDE. |
-| **B17** | Paper's SM-as-DV analyses include **any** non-demographic predictor (ACEs, parenting, parental psychopathology, sleep, depression, anxiety, ADHD, impulsivity, sensation-seeking, executive function, neural, genetic, sexual orientation, gender identity, pet ownership, religious participation, etc.). | FT-EC7 does NOT apply. |
-| **B18** | Paper reports both SM-as-DV (longitudinal demographic) AND SM-as-IV → non-SM outcome. | FT-EC7 does NOT apply (paper has SM-as-IV analysis). |
-| **B19** | Cross-sectional sociodemographic, identity, family, or lifestyle predictor → smartphone/SM. | INCLUDE (FT-EC7 does NOT apply). |
-| **B20** | Bidirectional / cross-lagged model where SM is both predictor and outcome. | FT-EC7 does NOT apply. |
+**NA_FOR_NOW** — PDF unavailable; classified separately for tracking.
 
 ---
 
-## 6. Adjudication pipeline
+## 5. Adjudication pipeline
 
 | Step | Role | Blinding | Output |
 |---|---|---|---|
-| 2L-a | C1_AI — independent AI coder, full PDF | Blind to C2 | Per-criterion MET/NOT_MET/UNKNOWN + evidence + binding-rule references |
-| 2L-b | C2_AI — independent AI coder, same criteria | Blind to C1 | Same |
-| 2L-c | RESOLVE — independent AI coder | Has C1 + C2 reasons | Fires only on per-criterion disagreement |
+| 2L-a | C1_AI — independent AI coder, full PDF | Blind to C2 | Per-criterion MET / NOT_MET / UNKNOWN / DEFERRED + evidence |
+| 2L-b | C2_AI — independent AI coder | Blind to C1 | Same |
+| 2L-c | Algorithmic aggregation | Deterministic | Per-criterion FINAL + paper-level decision |
 | 2L-d | Human spot-check | Lead author | All EXCLUDE + all UNSURE + 10% INCLUDE sample |
 
-### Final-decision algorithm (no subjective judgment)
+**No resolver step in v6.** The criteria are tightened so that C1 and C2 converge by construction. Any residual criterion-level disagreement (after the cascade-DEFERRED convention is applied) routes the paper to UNSURE, not to a third AI coder.
 
-For each of FT-IC1..FT-IC6:
-1. If C1 = C2 → that status.
-2. If one UNKNOWN, one known → UNKNOWN (carry to retrieval).
-3. MET vs NOT_MET → resolver's call.
+### Final-decision algorithm (deterministic)
 
-Then check FT-EC7 separately. Hierarchical exclusion:
-1. First NOT_MET in [FT-IC1, FT-IC2, FT-IC5, FT-IC3, FT-IC4, FT-IC6] → EXCLUDE with that code.
-2. If all MET and FT-EC7 applies → EXCLUDE FT-EC7.
-3. Any remaining UNKNOWN → UNSURE (or NA_FOR_NOW if no PDF).
-4. All MET, no EC7 → INCLUDE.
+For each of FT-IC1, FT-IC5, FT-IC6, FT-IC2, FT-IC3, FT-IC4, FT-EC7:
 
-Cohen's κ between C1 and C2 reported per criterion.
+1. If C1 == C2 (including both DEFERRED) → that status.
+2. If one is DEFERRED and the other is a substantive value → use the substantive value.
+3. If both substantive but differ → **UNSURE** for the paper.
+4. If either is UNKNOWN with no PDF → DEFERRED for downstream + paper-level **NA_FOR_NOW**.
+
+Paper-level decision:
+1. First NOT_MET in cascade order → EXCLUDE with that exclusion code.
+2. All MET and FT-EC7 applies → EXCLUDE with FT-EC7.
+3. All MET and FT-EC7 does not apply → INCLUDE.
+4. Any UNSURE on a substantive disagreement → UNSURE (queue for human).
+5. Any UNKNOWN with no PDF → NA_FOR_NOW.
+
+Cohen's κ between C1 and C2 reported per criterion + pooled.
 
 ---
 
-## 7. Reported in `2L-scoring.csv`
+## 6. Reported in `2L-scoring.csv`
 
 One row per Stage-1 include (n = 171). Columns:
+
 - Metadata: `paper_id, doi, title, first_author, year, journal, has_pdf`
-- 1L decision carried forward: `L1_decision`
-- Per criterion (FT-IC1..FT-IC6): `_C1`, `_C2`, `_RESOLVE`, `_FINAL`, `_C1_evidence`, `_C2_evidence`, `_RESOLVE_evidence`
-- FT-EC7: `FT_EC7_C1`, `FT_EC7_C2`, `FT_EC7_RESOLVE`, `FT_EC7_FINAL`
-- Final: `FINAL_DECISION` ∈ {INCLUDE, EXCLUDE, UNSURE, NA_FOR_NOW}, `FINAL_EXCLUSION_CODE`, `FINAL_FAILED_CRITERION`
+- Per criterion (FT-IC1, FT-IC5, FT-IC6, FT-IC2, FT-IC3, FT-IC4): `_C1`, `_C2`, `_FINAL`, `_C1_evidence`, `_C2_evidence`
+- FT-EC7: `FT_EC7_C1`, `FT_EC7_C2`, `FT_EC7_FINAL`
+- Final: `FINAL_decision` ∈ {INCLUDE, EXCLUDE, UNSURE, NA_FOR_NOW}, `FINAL_EC_code`, `FINAL_reason`
 
 ---
 
-## 8. Protocol deviations from prior versions
+## 7. Protocol deviations from v5
 
-This v5 criteria set tightens FT-IC2/IC3/IC4 borderline language and operationalizes FT-EC7 (§3.1) to remove the agent-level disagreements that produced 75% C1-vs-C2 agreement on the v4 pass. Borderline rules B1–B20 are added as binding decision shortcuts. Coders must apply B1–B20 verbatim.
+v6 replaces v5's twenty binding rules (B1–B20) with conceptual criteria that hinge on what the paper actually measured and analyzed, not on which YSTS items were named or which scale was cited:
 
-All Stage-2 screening prior to v5 is superseded; v5 results overwrite v4 in `02-L2/2L-scoring.csv`. Earlier passes remain in git history.
+- **FT-IC2 is now conceptual.** Composite "screen time" qualifies if the construct isolates phone/SM use; does not qualify if it bundles TV/console/phone with no breakdown. Mature/R-rated content alone, multi-device aggregated time alone, and SM-as-covariate/mediator/moderator-only all fail FT-IC2. The other side of the SM relationship must be individual-trait-level.
+- **FT-IC3 + FT-IC4 collapsed and broadened.** Any quantitative result counts: traditional regression coefficients, ML feature importance, SHAP values, R², AUC, Bayesian posteriors, etc.
+- **FT-EC7 simplified.** Drops the v5 "demographic-only predictor" qualifier. EC7 now hinges on design (longitudinal) and SM side of the equation (DV-only with no SM-as-IV analysis), nothing else.
+- **Cascade reordered.** FT-IC5 (empirical) and FT-IC6 (non-duplicate) are tested before FT-IC2, so reviews/commentaries/preprints don't generate spurious FT-IC2 disagreements.
+- **Cascade-DEFERRED convention.** Once a criterion fails, all downstream are marked DEFERRED, eliminating cascade-stage coding artifacts that produced false IRR splits in v5.
+- **No resolver.** Criteria are tightened so that C1 and C2 converge by construction. Residual disagreements route to UNSURE for human review.
+
+All Stage-2 screening prior to v6 is superseded; v6 results overwrite v5 in `02-L2/2L-scoring.csv`. Earlier passes remain in git history.

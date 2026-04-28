@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "395",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; participants aged 9-10 at baseline (n=9,474), longitudinal data 2016-2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported hours spent on electronic devices) and social media use (five SM trajectory groups identified); both qualify as smartphone/SM exposure per B1/B4 (separate SM coefficient reported)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression models examining anxiety/depression by trajectory groups; group-based trajectory models; interaction term for alcohol/e-cigarette use (p≤0.001, β values reported)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients: β=1.44, 95% CI 0.75–2.12 (Increasing Use screen time/anxiety); β=−2.94, 95% CI −3.63 to −2.36 (Increasing Use screen time/depression); β=−0.30, 95% CI −0.58 to −0.03 (Gradual Increase to Moderate SM/anxiety); p-values≤0.001 reported throughout; Tables 3–4 include full models and statistics"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; longitudinal cohort study analyzing screen time trajectories and SM use patterns with mental health outcomes (anxiety/depression as DV measured via CBCL)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in BMC Public Health; no evidence of preprint duplicate or prior publication; appears to be primary report"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper violates condition (a) of FT-EC7: SM/screen time is NOT always DV; paper includes analyses where screen time/SM are IV predicting anxiety/depression outcomes (SM-as-IV→non-SM-outcome analyses present). Also condition (b) violated: predictors include parental education, household income, race/ethnicity, age, sex (demographics), but depression/anxiety are behavioral/psychopathology outcomes not in the closed demographic-only set. Further, condition (c): analyses are longitudinal but include modeling depression/anxiety as moderator (interaction term with substance use).",
+    "binding_rules_applied": [
+      "B1",
+      "B4"
+    ],
+    "notes": "Paper applies B1 (YSTS-style per-item coefficients for SM and screen time separately) and B4 (cyberbullying not present; SM measured separately with own coefficient). Trajectory modeling provides coefficients per group relative to reference. Moderate social media use associated with lower anxiety but did NOT show significant interaction with substance use moderation."
+  },
+  {
+    "paper_id": "186",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; sample of 7,471 young adolescents (mean age 9.87±0.62 years) from the ABCD cohort"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen use measured as reported hours on screens; included in lifestyle factors (physical activities, screen use, sleep duration) examined as predictors of fluid and crystallized intelligence. Screen use qualifies per B5 carve-out exception: study examines screen use as predictor of cognitive outcomes (intelligence phenotypes) with neurotransmitter/molecular mediation pathway."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed effect (LME) models with MRI phenotypes, fluid intelligence, crystallized intelligence, and covariates; spatial correlation analysis; PET imaging correlation; partial least regression (PLSR) analysis of intelligence-MRI phenotype associations; Gene Ontology (GO) enrichment statistical testing"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients with corrected p-values reported: fluid intelligence associated with serotonin/glutamate system; crystallized intelligence with serotonin/dopamine/acetylcholine systems (Spearman correlations, spatial correlation statistics with p<0.001). Table 1 reports means/SDs; Figure text reports beta values, p-values corrected for multiple comparisons (p≤0.05)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; neuroimaging study using ABCD data examining associations between lifestyle factors (including screen use) and intelligence phenotypes via brain MRI, transcriptome, and molecular mechanisms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Translational Psychiatry; no evidence of preprint or duplicate; primary publication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Condition (a) violated: screen use is NOT the dependent variable; it is a predictor/IV in mediation analysis (screen use → neurotransmitter systems → intelligence outcomes). Paper examines screen use as lifestyle factor predicting intelligence (non-SM outcome), NOT SM/screen as DV. Also condition (b) violated: intelligence is cognitive ability outcome, not in the closed demographic-only set; mediation analysis includes neurotransmitter systems and molecular pathways as mediators (disqualifying per B17: cognitive ability, neural features, neurotransmitters).",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Screen use qualifies under B5 carve-out: 'screen use' in context of cognitive/neural outcomes (not TV-only, console gaming, or unspecified internet) measured as hours/continuous variable. Study integrates multimodal ABCD data (imaging, transcriptomics, genetics, behavior) to examine mechanistic pathways. Does NOT qualify as SM-specific measurement; included as lifestyle exposure variable."
+  },
+  {
+    "paper_id": "194",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; 11,875 US adolescents aged 9-11 at baseline; 8,125 final analytic sample after quality control exclusions"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposures are reading books and television viewing only. TV-only exposure triggers B5 (NOT_MET per binding rules). Reading and television are explicitly excluded: TV is screen-based but does not qualify as smartphone or social media per inclusion criteria. Reading is not screen-based SM/phone use. No qualifying smartphone variables (ownership, app use, texting, video chat, bedtime phone use, MPIQ, PSMUS) reported. No qualifying SM variables (time on SM, platform-specific use, SM accounts, Bergen SM scale) present."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed effects (LME) regression models examining associations between reading/TV viewing and brain morphology; cognitive test performance (NIH Toolbox Battery); ROI-based regression; vertexwise analysis; controlled for demographics, socioeconomic, genetic ancestry, imaging factors"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients reported: reading/TV hours associated with cortical area changes (mm²) and cognitive performance (β, t-statistic, Q-values with corrected p<0.05); Table 2 displays t-statistics, Q-values, and p-adjusted statistics for NIH Toolbox subtests; Figure 2 shows brain maps with z-statistics at each vertex (p<0.05 threshold)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; longitudinal neuroimaging study examining associations between reading/television habits and neurocognitive performance and brain structure"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Scientific Reports; no evidence of preprint duplicate; primary publication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable: paper does NOT meet FT_IC2 (no qualifying SM/smartphone exposure). FT_EC7 is a criterion that applies only when FT_IC1-6 are all MET; failure on FT_IC2 precludes FT_EC7 assessment.",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Excluded per B5: TV viewing only (not smartphone, app, social media, texting, or any qualifying SM platform). Reading is behavioral but non-digital. Paper falls outside scope of smartphone/SM review despite ABCD population and inferential design."
+  }
+]

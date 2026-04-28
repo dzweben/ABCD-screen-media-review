@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "381",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; baseline, 1-year, and 2-year follow-ups (N = 8,979); baseline mean age 9.5 years; data collected 2016-2019 from 21 U.S. recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using temporal network approach (Graphical Vector Autoregressive Model) examining bidirectional associations between screen activities and irritability across three timepoints"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published in Journal of Child and Adolescent Psychopharmacology (2026)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone/SM variables: screen time activities (TV watching, video streaming, videogames, online chatting [texting + video chat combined], social media platforms). Paired with individual-trait-level outcome: irritability measured via parent-rated Child Behavior Checklist (behavioral/emotional dysregulation). Both directions present (SM↔irritability bidirectional)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analyses with quantitative results: Temporal network edge weights reported (e.g., TV-watching→irritability = 0.03; social media→irritability = 0.12; online chat←irritability = 0.03; online chat→irritability = -0.03); Gaussian Graphical Model cross-sectional associations; partial correlations with control variables"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results for SM↔irritability relationships: edge estimates with bootstrapped confidence intervals; network centrality indices (node strength, closeness, betweenness); statistical significance testing; model fit indices (CFI=0.99, TLI=0.98, RMSEA=0.092)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design confirmed; however, SM appears as both IV and DV in temporal network (bidirectional associations). Irritability predicts online chatting (SM as DV) and online chatting predicts irritability (SM as IV). Since SM is analyzed in both directions, EC7 exclusion does not apply",
+    "notes": "Network analysis captures contemporaneous, autoregressive, and lagged associations among multiple screen activities and irritability while controlling for comorbid psychopathologies (ADHD, depression, anxiety). Study design allows disentanglement of temporal (between-within-person) effects"
+  },
+  {
+    "paper_id": "31",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; baseline and 2-year follow-up data (n = 7,043); participants 9-11 years at baseline; recruited from public and private elementary schools across U.S. approximating demographic composition"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: residual change score models (linear mixed-effects) assessing longitudinal associations between modifiable lifestyle factors and cognitive development over time; exploratory analyses testing moderating role of sex"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed research article published in Journal of Adolescence (2026, open access)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying screen time variables: passive watching (TV, streaming videos), gaming, social media, social engagement—each measured as separate time-use categories in hours via ABCD Youth Screen Time Questionnaire. Individual-trait-level outcomes: cognitive abilities (Inhibitory Control, Information Processing Speed, Visuospatial Sequencing and Memory, Verbal Intellect, Reading and Language Ability) from NIH Cognition Battery. Screen time functions as predictors (IVs) of cognitive development trajectories"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis with multiple quantitative results: regression coefficients (B values) reported for each screen time predictor on each cognitive outcome domain; example: Passive watching on Inhibitory Control (B = -0.22, SE = 0.05, t = -4.72, p < 0.001); Social media on Visuospatial Sequencing (B = -1.40, t = -4.68, p < 0.001). Covariates adjusted for age, sex, income-to-needs ratio, parental education"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Comprehensive numeric results: regression parameters with standard errors and t/p values across five cognitive outcomes and eight lifestyle predictors (Tables 3-4); effect sizes reported; conditional R² and AIC/BIC model fit indices provided; exploratory sex-moderated analyses with separate B coefficients for males/females"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design confirmed (baseline→2-year); screen time variables function as predictors (IVs) of cognitive outcomes (DVs) throughout. No analysis with screen time as DV. EC7 exclusion does not apply (design is longitudinal but SM is not in DV-only position)",
+    "notes": "Study explicitly hypothesized directional effects of modifiable lifestyle factors on cognitive development. Residual change score models isolate developmental trajectories independent of baseline levels. Individual task scores used rather than composites to avoid measurement error"
+  },
+  {
+    "paper_id": "135",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study using NIMH Data Archive collection 4.0 (DOI: 10.15154/1523041); baseline assessment; participants aged 9-10; NIH-funded multi-site recruitment"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: exploratory factor analysis identifying risk factors; regression models analyzing relationships between risk groups and behavioral/brain imaging outcomes at 2-year follow-up; Monetary Incentive Delay (MID) fMRI task analysis; behavioral measure analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original article published in The Journal of Adolescent Health (2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time identified as one of six significant risk factor domains in exploratory factor analysis (Factor 5: weekday and weekend screen time). Paired with individual-trait-level outcomes: (1) neural measures—fMRI activation in reward circuitry (MFC, insula, ACC regions) during Monetary Incentive Delay task; (2) behavioral measures—reward sensitivity, impulsive behavior, behavioral problems (BAS drive, fun-seeking, reward responsiveness); (3) biological measures—cortical thickness in reward regions. Outcomes are individual-trait-level constructs (neural reward function, behavioral impulsivity, reward sensitivity)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis with multiple quantitative results: fMRI activation differences across risk groups (test set and validation set) with β coefficients, 95% CI, and p-values (e.g., rostral MFC β = -0.04 [95% CI -0.06, -0.02], p < .001); brain thickness correlations with impulsivity measures (r = -1.00, p = .004); behavioral measure differences between risk groups with statistical significance testing"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Comprehensive numeric results: fMRI activation parameters with confidence intervals across ROIs (frontal, cingulate, striatal regions); brain thickness in millimeters compared across risk categories (Figure 3 bar plots with significance markers); behavioral scale scores (BAS, UPPS subscales) with group comparisons; Bonferroni-corrected p-values for multiple pairwise comparisons; effect sizes presented visually"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design confirmed (baseline risk stratification predicting 2-year outcomes); however, screen time is a baseline predictor variable (IV) used to stratify children into risk groups, not the outcome variable (DV). Behavioral and neural outcomes at follow-up are the DVs. EC7 does not apply (SM is IV, not DV-only)",
+    "notes": "Screen time was one component of a six-factor risk compositeidentified via factor analysis; composite derived from multiple childhood adversity and environmental exposures. Analysis examined whether risk stratification predicts differential neural reward function and behavioral problems at follow-up. Study had test/validation sample design for replicability"
+  }
+]

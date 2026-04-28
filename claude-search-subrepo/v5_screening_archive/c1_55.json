@@ -1,0 +1,100 @@
+[
+  {
+    "paper_id": "26",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Year 2, 2018-2020, N=10,258). Explicitly stated as 'Adolescent Brain Cognitive Development (ABCD) Study'"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying alone (victimization and perpetration), no separately-measured SM variable with own coefficient. Triggers B3: 'Cyberbullying alone → NOT_MET'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression analyses examining associations between cyberbullying (independent variable) and eating disorder symptoms (dependent variable). Multiple prevalence ratios reported in Table 2"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: Prevalence ratios (PR) with 95% CIs reported in Table 2 (e.g., PR 2.41, 95% CI 1.48-3.91; PR 2.08, 95% CI 1.33-3.26; PR 1.95, 95% CI 1.57-2.42; etc.) and p-values"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis from ABCD Study secondary cross-sectional data analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original peer-reviewed publication (International Journal of Eating Disorders, 2023); no indication of preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "IC2 NOT_MET (cyberbullying alone without separately-measured SM with own coefficient) disqualifies the paper from EC7 consideration. Additionally, the paper examines cyberbullying as independent variable predicting eating disorder outcomes (not SM as DV), so EC7 would not apply anyway",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "Paper focuses exclusively on cyberbullying victimization and perpetration as predictors of eating disorder symptoms. No qualifying smartphone or social media variable (per B3 rule). Cross-sectional design."
+  },
+  {
+    "paper_id": "394",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, prospective analysis from baseline through follow-up. Study design section states 'Adolescent Brain Cognitive Development (ABCD) Study'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported baseline) as qualifying smartphone/SM exposure variable. Mixed-effects models examining associations between baseline screen time and outcomes. Qualifies under general screen time/device usage"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects models examining associations between screen time and mental health outcomes. Inferential statistical testing reported"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "PDF not accessible (has_pdf=false). Cannot verify presence of numeric extractable coefficients without full paper access. Abstract only mentions 'mixed-effects models' but does not provide actual β/OR/p values in the available snippet"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis from ABCD Study prospective data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in peer-reviewed journal (Springer/BMC); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time (SM/smartphone exposure) is the independent variable predicting mental health outcomes (not the dependent variable). IC2 involves SM as predictor of non-SM outcomes, which disqualifies EC7"
+    ,
+    "binding_rules_applied": [],
+    "notes": "Cannot fully evaluate due to missing PDF. FT_IC4 status uncertain pending full text review of numeric coefficients. Screen time is the exposure; mental health is outcome."
+  },
+  {
+    "paper_id": "309",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) cohort study from the Netherlands, not the US ABCD Study. Explicitly stated: 'This longitudinal study started in 2003-2004 when pregnant women living in Amsterdam were invited to participate in the cohort study'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic social media use (PSMU) measured with Social Media Disorder Scale (Van Den Eijnden et al., 2016). Internet Gaming Disorder measured with Internet Gaming Disorder Scale. Both are qualifying variables"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel model (CLPM) examining temporal associations between PSMU, gaming, and mental health outcomes. Longitudinal mediation and moderation analyses; directional relationships tested"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel model coefficients reported. Standardized estimates provided (e.g., alpha measures of SMDS, IGDS scales; regression coefficients from CLPM). Path analysis with statistical significance testing"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis from ABCD (Amsterdam) cohort with two time points (T1: 2019-2020; T2: 2021)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published empirical article (Journal of Research on Adolescence, 2025); no evidence of preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Bidirectional/cross-lagged model (B20): The paper examines bidirectional associations between PSMU and problematic gaming with mental health difficulties and strengths. This violates EC7 requirement (b) that SM must be DV only, and would trigger B20 carve-out",
+    "binding_rules_applied": [
+      "B20"
+    ],
+    "notes": "Critical: NOT IC1 MET because this is the Dutch ABCD cohort, not the US ABCD Study. Paper disqualifies at the population level. Also fails EC7 due to bidirectional/cross-lagged design (B20)"
+  }
+]

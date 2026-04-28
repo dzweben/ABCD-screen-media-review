@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "13",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Adolescent Behavior Cognitive Development Study), baseline 2024-2025, 976 participants ages 9-10 at T1 and 11-13 at T2 across 21 US cities"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-report questionnaire) measured as outcome/IV linked to depression, qualifying as smartphone/general screen use variable. Applies B1 (standalone screen time measure with separate coefficient for depression pathway)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential tests: regression coefficient for screen time → depression (β=0.12, 95% CI 0.04-0.20, p=.008); mediation analysis with indirect effects for sleep and white matter (36.4% mediated, 95% CI 18.2%-63.6%)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values in main text: β=0.12 (screen time → depression), 95% CIs, p=.008, mediation proportion 36.4% with 95% CI 18.2%-63.6%"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data with novel mediation pathway linking screen time to depression via sleep and white matter"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/duplicate; published 2025 in JAMA Pediatrics"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is an IV predicting depression (non-SM outcome), not a DV being predicted by demographics. Analysis is not demographic-only → SM; therefore FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Screen time includes general screen devices (questionnaire-based); mediation analysis tests screen time → sleep → depression pathway"
+  },
+  {
+    "paper_id": "305",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Adolescent Brain Cognitive Development Study), first three waves, baseline 5596 participants ages 9-10 years, across multiple sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Cyberbullying combined with peer and cyber victimization as dual predictors of suicidality. Cyber victimization qualifies as online victimization measure. Applies B4 (cyberbullying + separately measured SM/online construct with own coefficients)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects logistic regression for SGM identity → suicidal ideation/attempts (ORs reported); longitudinal mediation analysis quantifying peer and cyber victimization as mediators"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values in main text: OR 4.75 (95% CI 3.74-6.03) for lifetime SI; OR 5.87 (95% CI 3.72-9.28) for lifetime SA; OR 4.94 (95% CI 3.19-7.68) for current SI/SA; peer victimization ORs with 95% CIs; cyber victimization OR 2.35 (95% CI 1.77-3.11); mediation proportions 22%-28%"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data with novel mediation pathways linking SGM identity to suicidality via peer and cyber victimization"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/duplicate; published 2025 in Journal of Child Psychology and Psychiatry"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cyber victimization is an IV (mediator) predicting suicidal ideation/attempts (outcomes), not a DV. Additionally, SGM identity is predictor of both victimization and outcomes, but this is not a demographic-only → SM analysis. Therefore FT-EC7 does not apply.",
+    "binding_rules_applied": ["B4"],
+    "notes": "Online victimization (cyber victimization) measured separately with own coefficients alongside peer victimization. Longitudinal design with 3 waves of ABCD."
+  },
+  {
+    "paper_id": "94",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Adolescent Brain Cognitive Development Study), Release 4.0 data, baseline (9-10 years) and year 2 (11-12 years). Primary analysis n=3037 with complete sleep and neuroimaging data from 21 US sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-report, objective, and multimodal) as predictor of brain architecture (somatomotor disconnection). Qualifies as smartphone/general device use. Applies B1 (screen time as standalone IV with coefficient predicting non-SM neurobiological outcome)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential tests: (1) multivariate regression coefficient r=0.23 (p<.001) for sleep duration → network segregation/integration; (2) principal component regression with leave-one-site-out cross-validation; (3) multiple regression coefficients (βs>0.03, ps≤.007) linking somatomotor disconnection to socioeconomic resources, screen time, cognition, and psychopathology"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values throughout: r=0.23 (multivariate sleep-network association, p<.001); r=0.15 (dominant component contribution); βs>0.03 (somatomotor disconnection associations), ps≤.007; n=3037; significance via nonparametric permutation tests"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data with novel multivariate network neuroscience approach to identify brain signatures of sleep duration and their associations with screen time and outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/duplicate; published 2025 in Biological Psychiatry: Global Open Science"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is an IV predicting brain architecture and behavioral outcomes (cognition, psychopathology), not a DV. Additionally, predictors include socioeconomic context and outcomes, extending beyond demographic-only predictors. Therefore FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1", "B8"],
+    "notes": "B8 applied: traditional regression coefficients reported (r, β, p-values) from multivariate predictive modeling, not ML-only metrics. Screen time measured as risk factor for neurobiological and behavioral outcomes. Multimodal sleep assessment (parent-report, youth-report, Fitbit) via factor analysis."
+  }
+]

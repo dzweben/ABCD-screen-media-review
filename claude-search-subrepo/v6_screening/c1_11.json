@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "172",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from Adolescent Brain Cognitive Development (ABCD) and Generation R studies; ABCD-specific estimates extractable via G-formula results for universal and indicated prevention settings."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using target trial emulation (TTE) and G-formula to estimate causal effects of modifiable factors (screen time, physical activity, sleep, social support) on depression risk."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Consulting and Clinical Psychology (2025)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time (ST) is measured as a generic composite modifiable factor alongside physical activity, sleep duration, and social connections. Methods do not isolate smartphone or social media use specifically; ST is treated as a general lifestyle factor without per-device breakdown isolating phone/SM activity."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Excluded because FT-IC2 fails: screen time is not isolated as a qualifying smartphone/SM variable. The paper evaluates hypothetical prevention strategies on generic modifiable factors, not SM/phone-specific use."
+  },
+  {
+    "paper_id": "50",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study, N = 11,819 youth participants from 21 U.S. sites, baseline ages 9-10 years, four waves of data (baseline, 1-year, 2-year, 3-year follow-ups)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis using random-intercepts cross-lagged panel models (RI-CLPMs) to examine bidirectional associations between online social activity time and ADHD problems."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in European Child & Adolescent Psychiatry (2025)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online social activity (OSA) time measured as composite of texting, visiting social networking sites, and video chatting—all qualifying social media/online social activities. Paired with ADHD problems (individual-trait-level behavioral variable). Bidirectional analysis with OSA as both IV and DV."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal RI-CLPM with reported path coefficients; cross-lagged effect of OSA time on ADHD problems: β = 0.094 (SE = 0.041, p = 0.023) for girls at T2→T3; β = 0.080 (SE = 0.028, p = 0.005) for girls at T3→T4 (Table 3)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results reported for SM↔outcome relationship across multiple waves; regression coefficients with 95% confidence intervals and p-values provided in Table 3 and Figure 1."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with bidirectional SM analysis: OSA is IV in reverse-lagged effects (ADHD→OSA) and DV in forward-lagged effects (OSA→ADHD). EC7 requires SM-as-DV-only with no SM-as-IV; this condition is not met.",
+    "notes": "Bidirectional longitudinal study showing unidirectional within-person effect of OSA time predicting ADHD problems in early adolescence, especially for girls. Meets all criteria for inclusion."
+  },
+  {
+    "paper_id": "115",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study, N = 4,557 adolescents (mean age = 9.955 ± 0.164 years), baseline and 1-year, 2-year, and 3-year follow-ups."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis using linear mixed models, cross-lagged panel models, and mediation analyses to examine associations between screen media activity (SMA) and mental health outcomes, with brain function/structure as mediators."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in International Journal of Clinical and Health Psychology (2025)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) measured with per-media-type breakdown isolating social media and phone-specific activities (testing on phone, video chatting) alongside TV and video watching. Weekly SMA time by media type is disaggregated and analyzed separately. Social media and phone-specific use explicitly qualify as SM/phone variables. Paired with individual-trait-level mental health outcomes (internalizing, externalizing, stress problems)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal cross-lagged panel model with reported direct effects: baseline SMA→internalizing at 3-year follow-up β = 0.030 (SE = 0.012, p_fdr = 0.016); baseline SMA→stress β = 0.026 (SE = 0.012, p_fdr = 0.037). TV watching→externalizing β = 0.054 (p_fdr < 0.001); video watching→internalizing β = 0.061 (p_fdr < 0.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Mediation analyses with quantitative results: RSFC between cingulo-opercular network and retrosplenial temporal network mediated SMA→externalizing (β = 0.002, p_fdr = 0.042) and SMA→stress (β = −0.003, p_fdr = 0.022). Multiple direct and indirect effects reported across mental health outcomes."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with bidirectional effects; SMA is tested as both IV (predicting future mental health) and DV (predicted by baseline mental health in some models). EC7 requires SM-as-DV-only with no SM-as-IV anywhere; this condition is not met.",
+    "notes": "Comprehensive longitudinal study with media-specific SMA measures (isolating phone/SM from TV/games), demonstrating negative impact on mental health mediated by brain functional and structural changes. Meets all criteria for inclusion."
+  }
+]

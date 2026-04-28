@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "395",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study explicitly states 'Data were drawn from the Adolescent Brain and Cognitive Development (ABCD) study, with participants aged 9–10 at baseline (n = 9,474). This cohort study analyzed longitudinal data collected between 2016 and 2022.'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using Group-Based Trajectory Modeling (GBTM) and multivariable linear regression to examine prospective relationships between screen time trajectories and anxiety/depression outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in BMC Public Health (2025); no evidence of being a preprint or duplicate of another included paper."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time and social media use are measured as separate variables and serve as IVs predicting individual-trait-level mental health outcomes (anxiety/depression measured via CBCL). Methods state 'Screen time was self-reported as average hours spent on electronic devices (e.g., TV, texting, gaming, social media), aggregated into a weekly measure' and 'social media was self-reported separately in hours per week/weekend.' Other side is individual-trait mental health (anxiety/depression t-scores)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression models report regression coefficients (β, 95% CI, p-values) for trajectories predicting anxiety/depression. Table 3 and Table 4 report β coefficients with confidence intervals and p-values for screen time and social media associations with anxiety and depression outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported throughout: screen time trajectories show significant associations with anxiety (Group 2: β=0.55, p<0.001; Group 3: β=0.96, p=0.001; Group 4: β=1.44, p<0.001) and depression (Group 2–4 all p<0.001). Social media trajectories show depression associations (Group 3: β=1.03, p<0.001; Group 5: β=1.49, p<0.001)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal but screen time and social media appear as IVs predicting depression/anxiety outcomes (DVs). EC7 only applies when SM is DV-only with no SM-as-IV analysis anywhere. Here, SM is clearly IV in the primary analyses.",
+    "notes": "Strong paper with clear smartphone/SM exposures and individual-trait-level mental health outcomes. Longitudinal design with group-based trajectory modeling identifies distinct SM/screen time patterns and links them to anxiety/depression symptomatology."
+  },
+  {
+    "paper_id": "186",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods section states 'This study used a sample comprising 7471 young adolescents (mean age 9.87 ± 0.62 years) from the ABCD cohort.' ABCD explicitly defined as U.S. Adolescent Brain Cognitive Development study."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effect models (LME), spatial correlation analysis, GO/KEGG enrichment analysis, and mediation analysis to examine relationships between brain MRI phenotypes, intelligence, neurotransmitter systems, and lifestyle factors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Translational Psychiatry (2025); no evidence of preprint or duplicate status."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use is included as a lifestyle factor in the analysis but is only analyzed as a predictor within a mediation model examining its effect on intelligence through neural mediators. The paper states 'Our investigation suggested that physical activities, screen use and sleep duration influenced fluid intelligence mainly through mGlu5 receptors and crystallized intelligence through 5HT1a and D2 receptors.' Screen use does not appear as a substantive IV or DV paired with an individual-trait-level variable (intelligence is the main outcome, but screen use is positioned only as a mediator predictor in the broader model examining multiple lifestyle factors, not as a focal exposure paired with intelligence as a separate individual-trait outcome of interest)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses primarily on neural/genetic correlates of fluid vs. crystallized intelligence. While screen use is mentioned as a lifestyle factor in the abstract and methods, it does not constitute a qualifying smartphone/SM exposure under FT-IC2 because it is not paired with an individual-trait-level outcome as a substantive IV or DV; rather, it appears only as one of several lifestyle predictors in a mediation pathway. The focal analysis is intelligence-brain structure relationships, not screen use associations."
+  },
+  {
+    "paper_id": "194",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods explicitly state 'Using data from 11,875 US adolescents in the Adolescent Brain and Cognitive Development (ABCD) study, we investigated the associations between reading and television viewing on brain morphology and neurocognitive performance. After quality control, 8,125 participants' MRI scans and cognitive tests were analyzed.'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effects models (LME) to examine associations between reading/TV viewing and brain morphology (cortical thickness, surface area) and neurocognitive performance (NIH Toolbox measures)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Scientific Reports (2025); no evidence of preprint or duplicate status."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines reading books and television viewing (neither qualifies as smartphone or social media use under the criteria). The exposure variables are 'daily hours spent reading for pleasure' and 'daily hours spent television viewing.' Television viewing alone is explicitly excluded from FT-IC2 per criteria: 'TV-only · console/PC-gaming-only · unspecified-platform-gaming-only · generic \"internet use\" without device specificity · radio · podcasts · RF-EMF exposure' do not qualify. Reading is also not a smartphone/SM use operationalization."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Well-designed study examining reading and TV viewing in relation to neurocognitive outcomes and brain structure in ABCD, but neither reading nor TV viewing qualifies as a smartphone or social media use exposure under FT-IC2. The paper is out of scope for this review."
+  }
+]

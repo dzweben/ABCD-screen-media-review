@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "384",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (N=10,054, ages 12-13, Year 3 data 2019-2021)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with ordinal logistic regression models assessing associations between media parenting practices and R-rated movies/mature video game use"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed research article published in BMC Pediatrics (2025)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary variables are R-rated movie consumption and mature-rated video game consumption (content ratings based on maturity classification). No smartphone or social-media-specific use measure. Independent variables are parental media practices (behavioral parenting strategies), not qualifying phone/SM exposure. Does not pair a qualifying SM/phone variable with individual-trait outcome."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses on mature content consumption and parental monitoring/limiting practices, not on smartphone or social media use as defined in FT-IC2."
+  },
+  {
+    "paper_id": "385",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (N=9,519, baseline 2016-2018 ages 9-10 to Year 3 2019-2021 ages 12-13)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using compositional data analysis with isometric log-ratio transformations and mixed-effects modeling over four annual longitudinal assessments"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed research article published in BMC Pediatrics (2026)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time operationalized with three isolating sub-categories: TV shows/movies, video games (single and multiplayer), and digital socializing (texting, video chatting, social networking/social media platforms). All three components isolate phone or SM-platform activity. Paired with individual-trait-level outcomes: sleep duration (health/behavioral) and sports/exercise activity (behavioral/physical health). Qualifies conceptually."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports numeric results for screen time ↔ sleep/activity relationships: screen time increased 0.23 h/day (Year 1, 95% CI 0.22-0.24), 1.58 h/day (Year 2, 95% CI 1.53-1.63), 3.28 h/day (Year 3, 95% CI 3.10-3.46); video games increased 1.00-1.65 h/day; digital socializing increased 0.48-1.39 h/day, all with p<0.001; sleep duration decreased slightly; sports/exercise showed U-shaped trajectory."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Longitudinal inferential analysis with mixed-effects models examining time-dependent associations between screen time behaviors and sleep/physical activity outcomes; reported estimates include mean differences with 95% confidence intervals and p-values across four annual assessments"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal, but screen time functions as both IV (predicting sleep/activity changes) and DV (its trajectory examined across developmental time and pandemic period). Bidirectional/cross-lagged conceptualization present. SM-as-IV analysis exists, so EC7 exclusion criterion not met.",
+    "notes": "Study examines longitudinal changes in screen time composition within a 24-hour movement cycle framework alongside sleep and physical activity outcomes. Digital socializing component explicitly includes social media (Facebook, Instagram, Twitter)."
+  },
+  {
+    "paper_id": "444",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (Years 2, 3, 4 follow-up data; N=2,749, Mage=11.9 years at Year 2)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using R package for causal mediation analysis examining mediating effect of caffeine use on gaming-sleep relationship"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed research article published in Journal of Behavioral Addictions (2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Gaming duration (self-reported daily hours) and problematic gaming (VGAQ scale) constitute qualifying gaming/screen-use variables. Paired with sleep duration and sleep difficulties (DIMS subscale), which are individual-trait-level health/behavioral outcomes. Gaming qualifies as device-specific digital activity."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mediation analysis reports numeric quantitative results: caffeine use partially mediated positive relationship between gaming hours/problems and sleep difficulties (indirect effect=0.023, 95% CI [0.004, 0.049]; direct effect=0.036); caffeine mediated negative relationship between gaming and sleep duration (indirect effect=-0.008, 95% CI [-0.013, -0.003]; direct effect=-0.029)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple inferential quantitative results reported for mediation pathways: indirect and direct effect estimates with 95% confidence intervals across four mediation models (problematic gaming-sleep difficulties, problematic gaming-sleep duration, gaming duration-sleep difficulties, gaming duration-sleep duration); all with p-values and proportion mediated."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (Years 2→3→4), but gaming functions as IV (predictor of sleep through caffeine pathway). SM-as-IV analysis is present in the mediation framework, so EC7 exclusion criterion not met.",
+    "notes": "Mediation analysis structure places gaming duration/problems at Year 2 as predictor of Year 4 sleep outcomes through Year 3 caffeine use pathway. Caffeine use is mediator, not outcome; gaming has IV role."
+  }
+]

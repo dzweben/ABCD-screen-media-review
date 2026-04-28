@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "92",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study Release 5.1, baseline ages 9-10, 21 U.S. sites. States: 'We utilized data from ABCD Study® Release 5.1 including baseline (Y0; ages 9-10) neuroimaging and two-year follow-up (Y2; ages 11-12) addictive screen use survey data.'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal neuroimaging analysis with mixed-effects regressions predicting addictive screen use from baseline brain maturation and reward activation measures. Reports inferential statistics and mediation pathways."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed journal preprint in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. No duplication identified."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures three separate qualifying SM/phone domains: addictive videogaming, addictive social media use, addictive phone use. Each paired with individual-trait-level neural outcomes (cortical connectomic maturation/AFC, NAc reward activation). Methods state: 'addictive videogaming, addictive social media use, and addictive phone use questionnaires' administered at Y2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports numeric results for SM-outcome relationships. Examples: cross-domain ASU with AFC: β_M1 = −.056, CI [−.083, −.027], p < .001; addictive videogaming: β_M1 = −.060, CI [−.087, −.031], p < .001; addictive phone use: β_M1 = −.039, CI [−.069, −.008], p = .035."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients and confidence intervals reported. Also reports negative binomial regression odds ratios for videogaming (OR = 0.97) and indirect-effect estimates through mediation pathways."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Longitudinal design (Y0→Y2). SM/phone variables (addictive videogaming, social media, phone use) are outcome variables (DV) in all analyses. No analysis anywhere tests SM/phone as IV. Three conditions for EC7 all met: design is longitudinal, SM is DV only, no SM-as-IV.",
+    "notes": "EXCLUDE under FT-EC7."
+  },
+  {
+    "paper_id": "445",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly states: 'from the Adolescent Brain Cognitive Development Study in the U.S.' and 'Participants were 6,467 youth (39.2% female) who reported playing digital games, from the Adolescent Brain Cognitive Development Study in the U.S.'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cohort study with prospective analyses. Reports associations between problematic gaming at age 12 and psychotic-like experiences at age 13, moderated by environmental factors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed journal article in Journal of Behavioral Addictions. No duplication identified."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Study examines 'problematic gaming' only, which is not a qualifying SM/phone modality per criteria §2.4. The paper measures video game addiction and gaming disorder without isolating or separately measuring smartphone or social media use as distinct IV or DV. Gaming-only constructs (without SM/phone isolation) do not qualify. No separately-measured SM or phone variable exists to pair with PLEs."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "EXCLUDE under FT-EC2 (no qualifying smartphone/SM variable)."
+  },
+  {
+    "paper_id": "149",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly analyzes ABCD Study data: '2294 participants from the Adolescent Brain Cognitive Development study (Mage = 10.03, 50.6% female) who had resting-state functional magnetic resonance imaging (fMRI) data at baseline and PUSM scores at the four-year follow-up.'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using connectome-based predictive modeling (CPM), a machine-learning approach applying inferential analysis to whole-brain functional connectivity data to predict PUSM severity."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed journal article in NeuroImage. No duplication identified."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures problematic use of social media (PUSM) using the 6-item Social Media Addiction Questionnaire (SMAQ). PUSM is paired with individual-trait-level neural outcome: baseline resting-state fMRI connectivity patterns as predictors. Methods state: 'participants who reported having at least one social media account were prompted to complete the SMAQ.'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports numeric results for PUSM prediction from neural connectivity. CPM successfully predicted PUSM severity: combined positive and negative networks: r = 0.055, p = 0.016 (controlled model). Permutation testing confirmed significance: p = 0.02."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Pearson r correlation coefficients reported: r = 0.055 (controlled model with covariates), p = 0.016. Uncontrolled model: r = 0.066, p = 0.003. Permutation testing with 1000 permutations conducted."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Longitudinal design (baseline Y0 rs-fMRI predicts Y4 PUSM). PUSM (problematic use of social media) is the DV throughout—predicted from baseline neural connectivity. No analysis anywhere treats PUSM as IV. All three EC7 conditions met.",
+    "notes": "EXCLUDE under FT-EC7."
+  }
+]

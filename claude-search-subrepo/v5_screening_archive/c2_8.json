@@ -1,0 +1,105 @@
+[
+  {
+    "paper_id": "381",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study (Data Release 4.0), N=8979, baseline 2016-2019, three waves (baseline, Year 1, Year 2)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM (social media, online chat): time spent on social media platforms + time on online chatting (text + video chat combined). Qualifying smartphone activities: TV watching, video streaming, videogame-playing measured separately. Applies B1 (separate β for each SM and screen activity)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Graphical Vector Autoregressive Model (GVAR) — temporal network with bidirectional regression coefficients; cross-sectional Gaussian Graphical Model (GGM); edge weights reported as standardized regression coefficients (Results: TV-watching β=0.03, social media β=0.12, online chat β=-0.03 predicting irritability over time)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Edge weights (β coefficients) reported in Results text and Tables S1-S2: TV-watching→irritability (0.03), social media→irritability (0.12), online chat→irritability (-0.03), irritability→online chat (0.03); bootstrapped 95% confidence intervals"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD data; longitudinal prospective design with three waves; temporal network regression coefficients linking screen activities to irritability outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published 2026 in Journal of Child and Adolescent Psychopharmacology"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply (B20 carve-out). Paper reports bidirectional/cross-lagged associations: irritability→online chat AND online chat→irritability in GVAR temporal network. Also includes SM as IV→outcome analyses (TV/social media→irritability unidirectional). Mixed directionality disqualifies FT-EC7.",
+    "binding_rules_applied": [
+      "B1 - separate coefficients for each SM/screen activity type",
+      "B6 - mobile/app gaming (video games) + SM with separate coefficients MET",
+      "B20 - bidirectional/cross-lagged model disqualifies FT-EC7"
+    ],
+    "notes": "High-quality temporal network analysis with rigorous reporting. SM measured as time on platforms + online chat. All outcomes are non-SM (irritability, psychopathology). Controlled for ADHD, anxiety, depression as covariates."
+  },
+  {
+    "paper_id": "31",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, baseline and 2-year follow-up, n=7043 adolescents with complete data on all variables"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM (social media) + qualifying screen activities (passive watching/video streaming, social engagement, gaming). Measured by self-report ABCD questionnaire: passive watching (hours: watch TV shows/movies), gaming (video games, console, phone, iPad), social media (Facebook, Twitter, Instagram, etc.), social engagement (texting, video chat). Applies B1 — separate β coefficients for each."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models testing associations between lifestyle factors and cognitive development over time (regression coefficients reported); Results show B (β) coefficients with SE and p-values for passive watching, gaming, social media, social engagement on multiple cognitive outcomes (Table 3-5)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients (B, SE, t-value, p) reported in Tables 3-5 for each predictor-outcome pair: e.g., Passive watching→Inhibitory control (B=−0.22, SE=0.05, p<0.001), Social media→Inhibitory control (B=−0.50, SE=0.21, p=0.017), Social engagement→Information processing (B=−0.35, SE=0.20, p=0.072)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective longitudinal analysis of ABCD data; linear mixed-effects models with baseline and 2-year follow-up; cognitive function measured at both timepoints"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2026 in Journal of Adolescence; no evidence of preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. SM is NOT the sole/primary DV. Paper examines SM as IV predicting cognitive development (non-SM outcomes). Predictors include non-demographic variables (sleep duration, physical activity, extracurricular activities), which are NOT in the CLOSED demographic-only set. Also, moderation by sex (not demographic predictor of SM) is analyzed. Mixed IV→outcome focus with non-demographic predictors disqualifies FT-EC7 (B17).",
+    "binding_rules_applied": [
+      "B1 - separate coefficients for social media, passive watching, gaming, social engagement",
+      "B6 - gaming included with separate coefficient MET"
+    ],
+    "notes": "Comprehensive longitudinal cognitive development study. Sex moderation reported (Figure 1). Missing data addressed via Bonferroni correction and multiple imputation. Lifestyle factors as multi-item construct but analyzed as separate predictors."
+  },
+  {
+    "paper_id": "135",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, Release 4.0 (NIMH Data Archive); baseline and 2-year follow-up data; test sample n=3,415, validation sample n=3,415, drawn from larger 11,878 eligible children"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone/screen time (weekend + weekday screen time in Factor 5; entered into exploratory factor analysis). Applies B2 — Screen time is included as summed/total variable in the factor model (not separately measured per activity type). However, B8/B9 rule: traditional regression coefficients reported (Table 2 exploratory factor analysis, Table 3 behavioral differences between risk groups)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression models testing group differences; Table 2 shows eigenvalues and factor loadings from exploratory factor analysis; Table 3 reports descriptive statistics and ANOVA/pairwise Bonferroni tests (p-values) for risk group differences; Figure 1 bar plots with confidence intervals and significance markers"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression model output in Tables 2-3 and Figures 1-3: Factor loadings (eigenvalues, variance explained); Between-group comparisons with p-values; fMRI BOLD activation differences (β coefficients reported in text and supplement for MFC, insula, ACC regions); behavioral scores with 95% CI; Pearson/Spearman correlations of cortical thickness with impulsivity"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data; prospective 2-year follow-up; multiple outcome domains (fMRI reward anticipation, behavioral reward sensitivity, behavioral problems, cortical thickness)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Journal of Adolescent Health; no evidence of duplicate or preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply (B17). Screen time is a COVARIATE, not a DV in analyses. Paper predicts maladaptive behavioral outcomes (alcohol use, obesity, impulsive reward-seeking) from risk groups stratified by multiple factors including screen time, parental aggressiveness, prenatal alcohol exposure, parental education, family income, etc. — a heterogeneous mix of demographic AND non-demographic predictors (B17 disqualifier: parenting-related, prenatal exposure). Additionally, fMRI neural outcomes are the primary focus, with SM/screen time as one of six exploratory factors.",
+    "binding_rules_applied": [
+      "B2 - screen time summed/total (weekday + weekend) without per-activity breakdown (applies to factor analysis component)",
+      "B8 - traditional regression coefficients reported; exploratory factor analysis with pairwise comparisons and ANOVA"
+    ],
+    "notes": "Screen time (Factor 5: weekend/weekday) is included in exploratory factor analysis as one of six domains but is not the primary exposure or outcome. Paper is primarily about risk stratification and neural/behavioral correlates of maladaptive behaviors. Screen time contributes to risk categorization but is not separately analyzed with individual regression coefficients for SM/screen activities."
+  }
+]

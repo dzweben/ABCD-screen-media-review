@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "381",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study explicitly mentioned; Data Release 4.0; 21 U.S. research sites; baseline 2016-2019; ages 9-10 years"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis using temporal network modeling (Graphical Vector Autoregressive Model) across baseline, Year 1, and Year 2 follow-ups"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published 2026 in Journal of Child and Adolescent Psychopharmacology"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures time spent on specific screen activities: online chatting, social media platforms, TV watching, video streaming, videogames (separately). These isolate modalities and are not bundled without breakdown. Paired with irritability (behavioral/emotional outcome), which is individual-trait-level, not demographic-only"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports quantitative temporal network pathways: online chatting predicted decreases in irritability over time (Graphical Vector Autoregressive Model estimate); irritability predicted increased online chatting; TV and social media associated with subsequent increases in irritability"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Network edge weights and temporal coefficients reported for all SM-irritability associations; cross-sectional Gaussian Graphical Model also reported"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Bidirectional design: irritability and online chatting are both IV and DV. EC7 does not apply to bidirectional analyses",
+    "notes": "Longitudinal multi-wave temporal network analysis with bidirectional pathways between screen activities and irritability"
+  },
+  {
+    "paper_id": "31",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study; baseline and 2-year follow-up; n=7043; U.S. sample"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis; linear mixed-effect models assessing association of lifestyle factors with cognitive development over time"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published 2026 in Journal of Adolescence"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Measures screen time across specific modalities: passive watching, social media, gaming, social engagement (separate items). Not bundled TV+console+phone without breakdown. Paired with cognitive development outcomes (fluid/crystallized cognitive function, attention, inhibitory control, processing speed), which are individual-trait-level cognitive/neural variables"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Reports regression coefficients for screen time variables predicting cognitive development. E.g., negative association between passive watching and inhibitory control development; positive association between longer sleep and cognitive increases"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Linear mixed-effect model estimates with t/p values; sex moderation effects reported with beta coefficients and p-values for passive watching-inhibitory control association"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time variables function as IVs predicting cognitive outcomes (DV). EC7 does not apply when SM is IV in any analysis",
+    "notes": "Longitudinal cognitive development study with screen time (SM, passive watching, gaming) as predictors; sex moderates some associations"
+  },
+  {
+    "paper_id": "135",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort explicitly stated; adolescent brain cognitive development data set; U.S. sample"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; exploratory factor analysis on test set, validation on independent set; regression models examining risk groups and behavioral/neural outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published 2025 in The Journal of Adolescent Health"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is one item subsumed within a composite 6-factor exploratory factor analysis (fat/sugar intake, screen time, prenatal alcohol exposure, parental aggressiveness, hyperactivity, family violence, parental education, family income). No separate phone or SM variable measured as IV or DV. No per-modality breakdown isolating phone/SM from other screen devices or activities. Screen time is bundled into a composite risk score for maladaptive behaviors; the construct does not isolate phone/SM as required by FT-IC2. Fails composite-only criterion"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Risk stratification study using factor analysis; screen time not separately operationalized as phone/SM variable"
+  }
+]

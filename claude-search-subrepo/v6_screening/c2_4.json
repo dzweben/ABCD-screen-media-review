@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "83",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from U.S. ABCD Study; methods state \"8446 adolescents (aged 9-10 at baseline in 2016-2018) from the Adolescent Brain Cognitive Development (ABCD) Study\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; mixed-effects models examining associations between baseline neighborhood quality measures and screen time across three time points (baseline, Year 1, Year 2)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article; no evidence of preprint or duplicate"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Neighborhood quality measures (Child Opportunity Index, Social Vulnerability Index, Area Deprivation Index) represent contextual/demographic variables on the predictor side. No analysis pairs smartphone/social media use with individual-trait-level outcomes (neural, behavioral, health, cognitive, well-being, personality, etc.). Paper only examines associations with demographic/contextual factors."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines how neighborhood factors predict screen time, but not how SM/phone use associates with individual-trait outcomes. Fails FT-IC2 due to demographic/contextual-only predictor structure."
+  },
+  {
+    "paper_id": "86",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from U.S. ABCD Study; methods state \"Prospective cohort data from Adolescent Brain Cognitive Development Study participants who reported their screen use at ages 11-12 (Year 2, 2018-2020; N=8,119)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; multiple linear and logistic regression models examining prospective associations between problematic mobile phone use, social media use, and video game use (Year 2) and mental/behavioral health outcomes (Year 3)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published in American Journal of Preventive Medicine; no evidence of duplicate"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic mobile phone use and problematic social media use (operationalized via Mobile Phone Involvement Questionnaire and Social Media Addiction Questionnaire) qualify as SM/phone measures. These are paired as IV with individual-trait-level outcomes: depressive problems, somatic problems, attention/deficit problems, oppositional defiant problems, conduct problems (CBCL), suicidal behaviors (Kiddie Schedule), sleep disturbance (Sleep Disturbance Scale), and substance use initiation (alcohol, tobacco, marijuana). All outcomes represent individual-trait-level variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: linear regression coefficients (β) for continuous CBCL outcomes (depressive: β=0.31 for phone, β=0.42 for SM, β=0.32 for video games; attention/deficit: β=0.23 phone, β=0.23 SM, β=0.25 video games) and logistic regression odds ratios for binary outcomes (suicidal: OR=1.57 phone, OR=1.86 SM, OR=1.54 video games; sleep disturbance: OR=1.11 phone, OR=1.11 SM, OR=1.19 video games; substance: OR=1.23 phone, OR=1.24 SM)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results meet criterion: regression β coefficients and odds ratios reported across all mental health, sleep, and substance use outcomes; all analyzed SM/phone variables show numeric associations with outcomes"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is prospective longitudinal, but SM/phone use is IV (predictor) in all analyses; outcomes are DV. No analysis with SM as DV. EC7 does not apply.",
+    "notes": "Strong inclusion candidate: prospective design, ABCD cohort, qualifying SM/phone measures (problematic mobile phone, problematic social media), paired with individual-trait-level mental/behavioral/sleep outcomes, multiple numeric results."
+  },
+  {
+    "paper_id": "144",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from U.S. ABCD Study; methods state \"Group-based trajectory modeling estimated patterns of daily social media use from baseline-Year 2... from the Adolescent Brain Cognitive Development (ABCD) Study (baseline (2016-2018) to Year 2 (2018-2020)). N=7528, 51.1% male, mean age: 10 years (8-13 years)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; group-based trajectory modeling (GBTM) to classify social media use patterns across three time points (baseline, Year 1, Year 2), followed by linear regression models examining associations with cognitive outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article published in Lancet Regional Health - Americas; no evidence of preprint or duplicate"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (self-reported hours/day, derived from ABCD Youth Screen Time Survey across baseline, Year 1, Year 2) qualifies as SM measure. Paired as IV with individual-trait-level cognitive outcomes: Little Man Task (visuospatial attention, perspective-taking, mental rotation) and Rey Auditory Verbal Learning Test (RAVLT: verbal encoding, learning, memory recall, retroactive interference, long delay recall). Both are within-person cognitive constructs measuring individual trait-level cognitive abilities."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: linear regression coefficients (β) with 95% confidence intervals for social media trajectory groups. Low increasing SM use: RAVLT Initial Trials β=-1.38 (95% CI: -1.82, -0.94), RAVLT Retroactive Interference β=-0.38 (95% CI: -0.52, -0.25), RAVLT Long Delay β=-0.41 (95% CI: -0.55, -0.26). High increasing SM use: LMT β=-0.03 (95% CI: -0.05, -0.01), RAVLT Initial β=-1.90 (95% CI: -2.76, -1.04), Retroactive Interference β=-0.61 (95% CI: -0.89, -0.32), Long Delay β=-0.55 (95% CI: -0.84, -0.27)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results meet criterion: regression coefficients with confidence intervals reported for all cognitive measures (LMT accuracy, RAVLT Initial Learning Trials, RAVLT Retroactive Interference, RAVLT Long Delay Recall) across trajectory groups; all models adjusted for covariates"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is prospective longitudinal, but social media use is IV (predictor of trajectory classification) and cognitive outcomes are DV at Year 2. No analysis with social media as DV. EC7 does not apply.",
+    "notes": "Strong inclusion candidate: prospective trajectory-based design, ABCD cohort, qualifying social media measure, paired with individual-trait-level cognitive outcomes (verbal and spatial memory), multiple numeric regression results with confidence intervals."
+  }
+]

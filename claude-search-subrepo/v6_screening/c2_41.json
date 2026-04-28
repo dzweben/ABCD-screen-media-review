@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "100",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods confirm U.S. ABCD Study, 21 recruitment sites, multisite longitudinal design, 9-10 year baseline cohort with 12,000 children."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis describing screen usage questionnaire development, psychometric analyses of SMAQ and VGAQ scales, longitudinal changes in screen use (Years 1-2)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Developmental Cognitive Neuroscience, 2022."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Pure psychometric/validation paper. Analyzes factor structure, reliability, and measurement invariance of SMAQ (social media addiction) and VGAQ (video game addiction) scales across sex and race/ethnicity. Compares addiction scores by demographic groups and reports longitudinal changes in screen time and addiction ratings, but does not pair a qualifying SM/phone variable with an external individual-trait-level outcome variable as IV or DV in inferential analyses. The addiction scales themselves are the focus, not their association with external traits."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Excluded under FT-EC2 (validation-only paper with no external trait pairing)."
+  },
+  {
+    "paper_id": "4",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study 2.0.1 baseline release, 9-10 year-old children from 21 U.S. recruitment sites, confirmed in Methods."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis comparing cognitive performance (response inhibition and working memory via fMRI and behavioral tasks) between video gamers and non-video gamers."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Network Open, 2022."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Video gaming time (self-reported hours per week; IV) paired with cognitive performance (DV: stop signal task, n-back task, fMRI BOLD signal). Cognitive performance is an individual-trait-level variable (cognitive domain). Video gamers (≥21 hrs/week) compared with non-video gamers (0 hrs/week)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results: fMRI BOLD signal differences (precuneus greater in VGs during inhibitory control; occipital, cingulate, frontal gyri differences during working memory). Behavioral measures: stop signal RT (adjusted means [SE], 287.3 [9.8] vs 300.1 [9.6], p=.018); n-back D' (adjusted means [SE], 2.54 [2.9] vs 2.52 [2.2], p=.002); response reaction times and accuracy reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric inferential statistics for SM↔outcome relationship: mean differences with p-values, t-tests, and fMRI contrast maps all reported for gaming-cognition associations."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline snapshot). FT-EC7 applies only to longitudinal designs where SM is DV-only. This design has SM as IV and cognition as DV; EC7 does not apply.",
+    "notes": "INCLUDE. Strong evidence of video gaming (IV) associated with cognitive performance (DV) with multiple numeric inferential results."
+  },
+  {
+    "paper_id": "130",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Longitudinal ABCD Study, 3,091-3,193 participants ages 11-14 years, 21 U.S. research sites, prepandemic baseline (Year 2) plus three COVID-19 surveys (May-August 2020)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: machine learning models (gradient boosting and logistic regression) trained to predict psychological distress (anxiety, depression, stress) and positive affect with feature importance (SHAP values) analysis."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Adolescent Health, 2022."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time variables appear as predictors (IVs) in machine learning models predicting psychological outcomes (DVs): anxiety, depression, stress, and positive affect. Specific screen time variables include \"watching news related to coronavirus,\" \"playing single-player video games,\" \"browsing the internet,\" \"time on social media,\" \"watching videos.\" These isolate modality-specific and activity-specific screen engagement (not generic internet use). Outcomes are individual-trait-level mental health constructs (anxiety, depression, stress, positive affect)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: SHAP (SHapley Additive exPlanations) values and feature importance scores for screen time variables in predicting anxiety (e.g., \"watching news related to coronavirus\" φ=0.06, \"playing single-player video games\" φ=0.03, \"browsing the internet\" φ=0.10), depression, stress, and positive affect. SHAP values are explicit quantitative metrics of variable importance."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results for SM↔outcome relationships reported via mean absolute SHAP values, AUC metrics (mean AUC ≥0.70 for all models), classification performance. Multiple screen time features ranked by importance in predicting mental health outcomes."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design confirmed, but SM is not DV-only. Screen time variables are IVs (predictors) in the models; mental health outcomes (anxiety, depression, stress, positive affect) are DVs. Thus condition 2 of FT-EC7 is not met (SM must be DV in every analysis). EC7 does not apply.",
+    "notes": "INCLUDE. Longitudinal ML analysis with screen time as predictor of psychological outcomes; multiple numeric results (SHAP values, AUC) for SM↔outcome associations."
+  }
+]

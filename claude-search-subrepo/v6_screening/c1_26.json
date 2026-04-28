@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "70",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study; N=10,246; baseline 2016-2018, ages 9-14; prospective cohort design with data from ABCD 4.0 release."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective logistic regression analyses examining associations between baseline screen time and eating disorder symptoms at year 2 follow-up; cross-sectional logistic regression for problematic screen use associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Eating and Weight Disorders journal (2024)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Total screen time (composite of six modalities: TV, videos, games, texting, video chat, social media) measured at baseline; social media isolated as separate modality (0.1 hours). Both total screen time and social media paired with individual-trait-level mental health outcomes (eating disorder symptoms: fear of obesity, self-worth tied to weight, compensatory behaviors, binge eating, distress). Methods §Exposures describe 'six different screen time modalities...separately for weekdays and weekend days.' Problematic social media use (SMAQ) and mobile phone use (MPIQ) measured at year 2 and paired with eating disorder symptoms."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Table 2 reports logistic regression ORs for baseline screen time associations: OR 1.05-1.55 for total screen time; OR 1.21-1.98 for social media use (all p<0.05). Table 3 reports cross-sectional ORs for problematic social media (1.26-1.82) and mobile phone use (1.26-1.72) with eating disorder symptoms (all p<0.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results reported throughout: odds ratios with 95% confidence intervals and p-values for multiple eating disorder symptom outcomes at year 2 follow-up; fully adjusted models controlling for sociodemographic and clinical covariates."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (baseline to year 2), but screen time and social media function as IV (baseline exposure predicting later eating disorder outcomes), not DV-only. Paper includes analyses with screen time as predictor.",
+    "notes": "High-quality prospective study with large diverse sample. Social media use captured as distinct modality within composite screen time measure. Multiple eating disorder symptom outcomes measured via KSADS-5."
+  },
+  {
+    "paper_id": "205",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study; N=8,489; nationally representative longitudinal sample of U.S. adolescents ages 9-21."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: multiple logistic and linear regression models examining associations between pet ownership type and family involvement in sports, physical activity, and screen time."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Anthrozoos journal (2024)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as parent-reported composite variable (average 400.55 minutes per week) without isolation of phone or SM-specific components. Abstract states: 'there does not appear to be a meaningful relationship between companion animal type and family involvement in sports and other activities, physical activity, or screen time.' Screen time is outcome variable but not operationalized as smartphone/social media use; instead it is generic screen time (TV/computer/devices combined without device-specific breakdown). No qualifying smartphone or social media variable paired with individual-trait outcome."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "Paper does not meet FT-IC2 criteria; cascade-deferred convention applied.",
+    "notes": "Paper examines pet ownership and family activities but does not isolate smartphone or social media use as a distinct exposure variable. Screen time is measured but is generic, not phone/SM-specific."
+  },
+  {
+    "paper_id": "96",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study; N=11,876 adolescents; assessed annually ages 9-12; nationally representative sample recruited from 21 sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal network analysis models examining connections between screen usage types and PLEs (psychotic-like experiences) across three time points (T1, T2, T3); statistical models with centrality and edge weight calculations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Comprehensive Psychiatry journal (2024)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen usage types measured separately via self-report: 'Screen usage (TV, video games, online video, social media, texting, video chat)' assessed via self-report. Social media and texting isolated as distinct constructs. Methods §3.2.1 specifies six screen time modalities measured separately: TV/DVDs, computer, video games, online video, social media, texting/video chat. Social media and texting (phone-specific) paired with individual-trait-level mental health outcome (PLEs: psychotic-like experiences including hallucinations, concentration difficulties, delusions - psychiatric symptoms)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Network analysis with quantitative results: Tables 2-4 report edge strengths across network time points; Fig. 4-9 display expected influence, betweenness, closeness centrality with numerical values; statistical comparisons across time points (T1 vs T2 vs T3) with significance tests."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results throughout: network edge weights (e.g., Table 2: ScrOnlineV-ScrTV 0.164, ScrVG 0.344); centrality indices with decimal values; network comparison statistics (NetworkComparison test p-values comparing global network structure); significance testing for stability and group differences."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (3 time points), but screen usage types function as exposures/predictors of PLEs in network analyses, not exclusively as DV. Screen types are positioned as independent variables in the network model predicting/associated with PLE symptoms.",
+    "notes": "Novel application of network analysis to ABCD data examining specific screen usage types and their associations with PLEs. Longitudinal design with measurement across three time points. Isolates social media and texting within larger screen usage assessment."
+  }
+]

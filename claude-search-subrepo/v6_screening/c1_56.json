@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "59",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, baseline 2016–2018, ages 9–10, 2-year follow-up, 4.0 release"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original regression analyses examining associations between ACEs, bullying victimization, and internalizing/externalizing problems"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Youth and Adolescence (2024)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Bullying victimization (including cyberbullying) measured as predictor of mental health outcomes, but no separately-measured smartphone or social media use variable. Cyberbullying alone (without distinct SM/phone modality measurement) does not qualify per §2.4."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses on cumulative risk model of ACEs and bullying victimization for mental health outcomes. Does not isolate smartphone or social media use as a distinct measured construct."
+  },
+  {
+    "paper_id": "436",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, data release 5.0, enrolled ages 9–10 years (2016–2018), 4-year longitudinal follow-up"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal analyses using linear mixed models with random intercepts and slopes examining associations between digital media use and ADHD-related symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Pediatrics Open Science (2026)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (composite of texting, social networking site visits [Facebook, Instagram], video chat) measured separately and longitudinally. Social media is IV; ADHD-related inattention and hyperactivity-impulsivity symptoms are individual-trait-level DVs. Both role and construct specificity met."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: β coefficients for social media × time interactions (β [SE], 0.03 [0.01]; P < .001), cumulative 4-year effect (β = 0.15, SE 0.03; P < .001), standardized cross-lagged panel model coefficients (β = 0.03 [0.01]; P = .004), moderation analyses"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with extensive numeric quantification: regression coefficients, confidence intervals, p-values, effect sizes reported for SM ↔ ADHD relationship across main, cumulative, and sensitivity analyses"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (4-year follow-up), but social media use appears as IV in primary analyses (predicting inattention symptoms over time). EC7 exclusion criterion requires SM to be DV-only with no SM-as-IV analysis anywhere. Since SM is analyzed as independent variable, EC7 does not apply.",
+    "notes": "Robust longitudinal study with genetic predisposition (PGS-ADHD) included. Association between social media use and inattention symptoms persists across multiple sensitivity analyses and shows unidirectional relationship via cross-lagged models."
+  },
+  {
+    "paper_id": "303",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Title and abstract reference \"Adolescent Brain Cognitive Development (ABCD) study\"; per default rule §2.1, classified as MET despite no PDF"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Abstract indicates \"multi-level predictors of depression symptoms\" with empirical results on screen time associations; presumed original analysis without contradicting indicators"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article (Wiley Online Library)"
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF. Abstract mentions \"screen time\" and \"weekend screen time\" as predictor of depression but does not specify whether construct isolates smartphone/SM use or bundles multi-device activity (TV + console + phone). Insufficient conceptual detail to determine if composite qualifies per §2.4"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "UNKNOWN",
+    "FT_EC7_reason": "No PDF. Insufficient information to determine longitudinal design and SM side-of-equation from abstract snippet alone",
+    "notes": "Full text required to clarify screen time operationalization (phone/SM-specific vs. multi-device composite) and design (cross-sectional vs. longitudinal). Abstract provides insufficient detail for cascade completion."
+  }
+]

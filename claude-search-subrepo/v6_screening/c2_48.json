@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "302",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly analyzes U.S. ABCD Study data (N=11,066) from baseline (2016-2018, ages 9-10) and 1-year follow-up (2017-2019)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort analysis with multiple linear regression examining associations between baseline screen time and BMI percentile at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Pediatric Obesity, 2021"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone/SM variables as IV (texting, video chat, social networking, video streaming) paired with individual-trait-level outcome (BMI percentile, a health variable). Methods explicitly measure contemporary screen time modalities separately"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: regression coefficients (B) with 95% CIs for each screen time modality (e.g., texting B=0.92, 95% CI 0.29-1.55; video chat B=0.72, 95% CI 0.09-1.36; video games B=0.42, 95% CI 0.06-0.78)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results: multiple linear regression with reported p-values <0.05 for texting, video chat, and video games associations"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal but SM appears as IV in multiple analyses (texting, video chat, video games, social networking as predictors of BMI), so EC7 exclusion does not apply",
+    "notes": "Paper 302 meets all criteria. Qualifies for inclusion."
+  },
+  {
+    "paper_id": "420",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes nationwide sample from U.S. ABCD Study (N=11,875 at baseline, ages 9-10 years) using ABCD data archive"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: correlation and regression analyses examining relationships between screen time and multiple outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in PLOS ONE, 2021"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time as IV paired with multiple individual-trait-level outcomes: mental health (anxiety, depression), behavioral problems (ADHD, oppositional defiance, conduct disorder), academic performance, sleep quantity and quality, and peer relationships. Paper uses Screen Time Questionnaire measuring time on television, videos, video games, texting, video chatting, social networking"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative inferential results: Pearson correlations, standardized regression coefficients (beta), t-statistics, p-values reported across multiple outcome measures (e.g., relationships between screen time and depression, anxiety, behavioral problems with p<0.001)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple regression analyses with reported numeric results (standardized betas, t-statistics, p-values) for relationships between screen time and outcomes; separate analyses by sex also conducted"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (not longitudinal), so EC7 does not apply regardless of SM side of equation",
+    "notes": "Paper 420 meets all criteria. Qualifies for inclusion."
+  },
+  {
+    "paper_id": "473",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly analyzes U.S. ABCD Study data from a substudy of 67 participants (aged 11-12 years) with passive sensing protocol implementation"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: pilot substudy reporting passive sensing data collection and feasibility/acceptability of EARS app protocol"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in JMIR Mental Health, 2021"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper is a pure methodological/validation study measuring passive sensing of smartphone use and comparing it to self-report and parent-report. The smartphone variable is NOT paired with an individual-trait-level outcome (neural, behavioral, health, cognitive, well-being, sleep, academic, etc.). Instead, the paper focuses entirely on measurement concordance (self-report vs. passive sensing correlation), app feasibility, and acceptability. No analysis pairs smartphone use with an external individual-trait variable as IV or DV"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper 473 fails FT-IC2. It is a pure methodological/validation paper with no individual-trait-level outcome paired with the smartphone variable. Exclusion code: FT-EC2."
+  }
+]

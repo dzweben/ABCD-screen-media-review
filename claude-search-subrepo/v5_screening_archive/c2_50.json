@@ -1,0 +1,64 @@
+[
+  {
+    "paper_id": "166",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, first wave (Release 1.0), 9-10 year olds (N=3847 after QC), nationally representative sample"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (average minutes per week on computer, cellphone, tablet, or other electronic device) — qualifying smartphone/screen variable; B8 applies: penalized regression (LASSO/Ridge/Elastic net) with traditional regression coefficients reported in main text and figures"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple machine learning regression approaches (LASSO, Ridge, Elastic net, Linear regression) with 10-fold cross-validation; coefficients and model performance metrics reported; F-statistics and R² values provided"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients (β weights) shown in Figs. 1-3; RMSE, R² values (training R²=0.12, test R²=0.12 for full sample); p-values for linear regression (e.g., screen time p=7.5×10⁻⁸); FDR-corrected results in Supplementary Fig. S1"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining relative importance of 43 demographic, psychological, behavioral, and cognitive variables in predicting BMI using machine learning"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/deposit duplicate; first published online July 10, 2019"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Condition (a) fails: Screen time is the INDEPENDENT variable (IV) predicting BMI as the dependent variable (DV), not vice versa. Paper contains SM→non-SM-outcome analyses, violating FT-EC7 requirement that SM/smartphone must be DEPENDENT in every analysis",
+    "binding_rules_applied": ["B8"],
+    "notes": "B8 (ML rule): Penalized regression (LASSO/Ridge/Elastic net) with traditional regression coefficients counted as extractable numeric evidence. Study uses machine learning but reports interpretable β weights and variable importance coefficients."
+  },
+  {
+    "paper_id": "156",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Release 2.0), baseline cross-sectional assessment, 9-10 year old children (N=11,007 recruited across 21 US study sites); analyzed sample N=10,666-10,876 depending on variables"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying screen media with separate coefficients: TV, video, video game use, social media, texting, video chat all reported with independent associations in Tables 2-3 (weekday and weekend use) — B1 applies: YSTS paper with separate β/OR for multiple screen/SM variables"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression predicting sleep-wake disturbance severity (binary/categorical outcomes); Tables 2-3 report odds ratios (ORs) with 95% CIs and p-values; Cohen's d effect sizes calculated and reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios (ORs) with 95% CIs, p-values (<.001 significance indicators), and Cohen's d effect sizes in Tables 2-3 (both weekday and weekend analyses); relative risk of insufficient sleep reported in Table 4"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining associations between different types of screen media use (TV, video, video game, social media, texting, video chat) and symptom severity of sleep-wake disturbances"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; preregistered study (noted in abstract); first published online July 3, 2020"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Condition (a) fails: Screen media is the INDEPENDENT variable (IV) predicting sleep outcomes (non-SM dependent variables), not the reverse. Paper has screen-media→sleep analyses, which violates FT-EC7 requirement that SM/smartphone must be DEPENDENT in every analysis involving SM",
+    "binding_rules_applied": ["B1"],
+    "notes": "B1 applies: Paper reports separate coefficients (ORs) for multiple screen media types (TV, video, video games, social media, texting, video chat) predicting multiple sleep outcomes, meeting B1 criterion for YSTS papers with per-item breakdown of screen/SM variables"
+  }
+]

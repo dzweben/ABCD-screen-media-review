@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "2",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, baseline ages 9-10, passive sensing subsample (EARS app) at follow-up years 4, 5, 6"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data; descriptive and analytical statistics on smartphone app usage patterns during school hours (n=640)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA, published online January 5, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper characterizes smartphone usage by app category during school hours but does not pair smartphone/SM use with an individual-trait-level variable as IV or DV. No reported associations between phone use and behavioral, neural, cognitive, health, or well-being outcomes. The study outcome is descriptive categorization of app usage, not an association with a qualifying outcome variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Descriptive study of EARS passive sensing app usage; lacks quantification of SM/phone-outcome associations required for FT-IC2."
+  },
+  {
+    "paper_id": "36",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 2 (2018-2020, ages 11-12) and Year 4 (2020-2022, ages 13-14); n=5356 adolescents with Fitbit and screen time data"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; prospective cohort design with multivariable linear and Poisson regression models examining screen time and physical activity (step count) associations with BMI percentile and overweight/obesity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Obesity (Silver Spring), published 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported total recreational screen time including TV, videos, games, texting, social media, video chat) as IV paired with BMI percentile and overweight/obesity status (individual-trait-level health outcomes). Prospective analysis with screen time categories: 0-4h, 4-8h, >8h per day."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantified results for screen time and BMI: risk ratio (RR) 1.09 (95% CI 1.02-1.16) for high screen time (>8h/day) vs. overweight/obesity; linear regression coefficients; continuous dose-response associations (RR 1.04 per category increase)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric inferential results reported throughout: Poisson regression RR values for overweight/obesity (Model 3: RR 1.09 for high screen time, p=0.013); linear regression B coefficients for BMI percentile; dose-response relationships quantified with 95% CIs"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (Year 2 baseline to Year 4 follow-up); however, smartphone/screen time appears as IV (predictor), not DV-only. EC7 does not apply when SM is used as IV in any analysis.",
+    "notes": "Prospective design with 2-year follow-up; screen time is independent predictor in multivariable models alongside step count; strong individual-trait outcome (BMI/obesity)."
+  },
+  {
+    "paper_id": "67",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 3 (2019-2021) to Year 5 (2021-2023); n=7407 adolescents ages 12.9±0.6 years at baseline"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; prospective mixed-effects ordinal logistic regression and generalized linear models assessing associations between parent media practices and video game behaviors over 1-2 year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in World Journal of Pediatrics, published online January 8, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures media parenting practices (e.g., parental screen modeling, mealtime screen use, bedroom screen use, monitoring, limiting) as predictors and video game use/behaviors (mature-rated games, problematic use, weekend game time) as outcomes. No separately-measured smartphone or social media use variable. Per criteria: SM/phone must be paired as IV or DV with individual-trait variable. Here the IV is parenting practices (not SM/phone itself), and outcomes are gaming behaviors. Gaming-only without separately-measured phone/SM operationalization does not qualify (analogous to cyberbullying-alone rule)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Prospective study of parenting practices and video gaming; lacks direct smartphone/SM use variable as IV or DV. Gaming behaviors are outcomes but not paired with measured SM/phone use per FT-IC2 definition."
+  }
+]

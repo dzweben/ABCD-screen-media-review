@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "70",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (N=10,246, ages 9-14, 2016-2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying variables: (1) total screen time (self-reported), (2) social media use (time-based), (3) problematic social media use (scale), (4) problematic mobile phone use (scale). Applies B1 (YSTS with separate β for SM and total screen time) and qualifies under 'smartphone' (mobile phone use) and 'social media' branches."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression for longitudinal associations (baseline screen time predicting year-2 eating disorder symptoms); chi-square tests reported in supplementary. Inferential tests compare SM-vs-non-SM outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% confidence intervals reported (OR 1.05-1.55 for screen time/SM; OR 1.26-1.82 for problematic use). Main text and supplementary statistics available."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective cohort analysis of ABCD data with SM as IV and eating disorder symptoms as DV."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "2024 original publication; not a preprint, duplicate, or withdrawal."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): SM is INDEPENDENT variable predicting eating disorder outcomes, not dependent variable. Paper analyzes SM→outcome direction, not demographic→SM direction.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Strong candidate. Longitudinal design with both prospective (screen time→outcomes in year 2) and cross-sectional (problematic use→concurrent symptoms) analyses. All key SM variables qualify. Both individual SM item coefficients reported separately."
+  },
+  {
+    "paper_id": "205",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (N=8,489 in analyzed sample, longitudinal cohort 9-10 years at baseline)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is measured (STQ self-report of visual media use) but IS THE DEPENDENT VARIABLE in all analyses reported. Paper uses pet ownership and demographic/contextual covariates to PREDICT screen time. No SM→non-SM outcome analysis. Applies B10 (screen time measured but only as outcome, never as predictor of external outcome)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple logistic and linear regression models (F-tests, Hosmer-Lemeshow test for model fit reported; p<0.001 for overall model predicting screen time)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios with 95% CI (e.g., AOR=1.167, 95% CI: 0.957-1.424); McFadden's Pseudo R², F-statistics reported in main text."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD longitudinal data; multiple regression analyses adjusting for contextual and person-level covariates."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "2024 original publication; not a preprint, duplicate, or withdrawal."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Meets all three FT-EC7 conditions: (a) Screen time IS the dependent variable in every analysis; no SM→outcome analyses present; (b) All predictors are demographic/contextual only (pet ownership, demographic covariates, contextual covariates per bioecological model); (c) Longitudinal/prospective design. This is a demographic→SM DV study with no external outcomes, qualifying for exclusion under FT-EC7.",
+    "binding_rules_applied": ["B10"],
+    "notes": "EXCLUSION CRITERIA MET: SM is outcome-only, not predictor of health outcome. Paper concludes pet ownership 'does not appear to be associated with meaningful changes in odds of engagement in sports...PA, or screen time.' Screen time measured only as outcome, not as exposure variable for any external health outcome."
+  },
+  {
+    "paper_id": "96",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (N=11,876 adolescents, ages 9-12 years, annual assessments)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying variables: (1) social media use (time-based in network analysis), (2) texting on phone (video text messaging), (3) video chat on phone, (4) online video (platform use), (5) TV viewing, (6) video games. Applies B1 (YSTS reporting separate coefficients for individual SM and screen types in network model). All six variables separately measured and reported in network analysis with distinct coefficients/centrality measures."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal network analysis models examining connections (edges/weights) between screen types and PLE symptoms across three time points (ages 9-10, 10-11, 11-12). Network centrality measures and global strength metrics reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Network metrics reported: centrality measures for each variable at each time point, global strength, network structure comparison with statistical testing (network structure 'significantly differed' between age groups). Numeric edge weights and centrality values in figures/tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal network analysis of ABCD data examining SM/screen usage types as predictors (IVs) of psychotic-like experiences (DV) across three annual assessments."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "2024 original publication; not a preprint, duplicate, or withdrawal."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): Screen usage types are INDEPENDENT variables predicting PLEs (psychotic-like experiences), not dependent variables. Paper analyzes screen→outcome direction (digital media→PLEs), not demographic→SM direction.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Strong candidate. Longitudinal network analysis with separate coefficients for each screen type. Dynamic modeling reveals texting and online video as highest-centrality predictors. All SM variables separately measured and reported per B1 requirement. Non-traditional regression (network analysis) but B8 applied: paper reports network edge weights/centrality, which count as numeric coefficients."
+  }
+]

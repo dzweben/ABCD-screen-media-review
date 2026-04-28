@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "76",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Year 2 (2016-2018 baseline, 2018-2020 follow-up); N=9,429 adolescents; explicitly states \"Adolescent Brain Cognitive Development (ABCD) Study\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original cross-sectional empirical analysis; multiple logistic regression with reported AOR estimates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper; no evidence of duplication or preprint status"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper analyzes cyberbullying victimization and perpetration as outcomes. Screen time is measured but only as a covariate/predictor alongside sociodemographic factors (sex, race/ethnicity, sexual orientation, income, education). Cyberbullying alone without a separately-measured smartphone or social media variable fails FT-IC2. The other side consists primarily of demographic and contextual predictors, not individual-trait-level variables paired with a qualifying SM/phone variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Exclusion code: FT-EC2 (cyberbullying-only outcome without separately-measured SM/phone variable as IV or DV)"
+  },
+  {
+    "paper_id": "141",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study baseline (2016-2018); N=10,755; 9-10 year-old children; clear identification as \"Adolescent Brain Cognitive Development study\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original cross-sectional empirical analysis; multiple linear regression; sociodemographic associations with screen time modalities"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper in The Journal of Pediatrics; no preprint or duplication indicators"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Paper isolates smartphone/SM use per modality: \"social networking, texting, video chat, video games, YouTube videos\" are measured separately from TV/console. Methods section explicitly reports 6 contemporary screen time modalities individually. Sociodemographic factors (sex, race/ethnicity, income, parental education) on the other side are individual-trait-level demographic attributes. Per criteria §2.1, sociodemographic differences constitute individual-level variation."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression coefficients (B values) reported with 95% CI and p-values for all screen time modalities by sociodemographic factors in Table III and stratified analyses in Table IV"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: B coefficients, 95% CI, p-values for associations between screen time modalities and sociodemographic characteristics; linear regression estimates across television, videos, gaming, social networking, texting, video chat"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline data); FT-EC7 applies only to longitudinal designs",
+    "notes": "INCLUDE. Paper reports associations between screen time modalities and sociodemographic factors using linear regression with quantified results."
+  },
+  {
+    "paper_id": "152",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study December 2020 COVID-19 survey; N=4,106 adolescents ages 12-14; baseline 2016-2018; states \"Adolescent Brain Cognitive Development Study (ABCD)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; modified Poisson regression with risk ratios; secondary analysis of December 2020 COVID-19 survey data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper in Preventive Medicine Reports; no preprint or duplication indicators"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Paper measures frequency of COVID-19 information exposure via social media, television media, internet, and parental counseling; masking behavior is the outcome (individual health behavior construct). SM/internet/TV information exposure is the IV; masking is the DV. Masking behavior is an individual-trait-level health protective behavior. Qualifies as SM/media paired with an individual-trait health outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression with adjusted risk ratios (ARR) reported; Table 2 shows ARR for COVID social media (1.09, 95% CI 1.00-1.19), television (1.09, 95% CI 1.01-1.17), parental counseling (1.28, 95% CI 1.20-1.36)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Risk ratio estimates with 95% confidence intervals and p-values reported for all information sources; both unadjusted and adjusted models presented in Table 2"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (December 2020 COVID-19 survey); FT-EC7 applies only to longitudinal designs",
+    "notes": "INCLUDE. Paper reports associations between COVID-19 information sources (social media, television, internet, parental counseling) and masking behaviors with quantified risk ratios."
+  }
+]

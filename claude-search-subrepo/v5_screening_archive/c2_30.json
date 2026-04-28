@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "403",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Year 2, 2018-2020, ages 11-12, N=10,157). Paper explicitly states analysis from Adolescent Brain Cognitive Development Study."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online dating (qualifying social media variable per definition: platform-specific SM use). Assessed via question 'Have you ever used a dating app?' (yes/no). Applies B4: separately-measured SM with own coefficient."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression with adjusted odds ratios (AOR) and 95% CI reported for associations between sociodemographic factors and online dating."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "AOR 2.72 (95% CI 1.11-6.78) for males vs females; AOR 12.97 (95% CI 4.32-38.96) for sexual minorities vs heterosexual. Full coefficients with CIs in Table 2."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis from ABCD Study using cross-sectional data from Year 2 (2018-2020)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published research note in BMC Research Notes (2024), no indication of duplicate/preprint/abstract."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional analysis with demographic predictors of SM (online dating), but FT-EC7 requires LONGITUDINAL analyses only (condition c fails). Also does not meet condition (a): SM is IV (predictor) of outcomes, not DV. Paper tests sociodemographic → online dating associations, not a longitudinal demographic-only → SM study. Per B15: cross-sectional carve-out applies.",
+    "binding_rules_applied": ["B4", "B15"],
+    "notes": "Very low prevalence (0.4%, n=38) but valid prevalence estimate. Clear demographic associations. Online dating is qualifying SM variable."
+  },
+  {
+    "paper_id": "291",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "This is a perspective/commentary article, not an original research study. The article references Carter et al (2024) study of 657 16-18 year-olds from England (five schools). No original ABCD Study data analysis."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "While the article discusses smartphone use and reduction strategies, it is not an original empirical study. It is a perspective piece commenting on other research. No original qualifying exposure variable measurement."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No original inferential test. This is a perspective/commentary with references to other studies' findings."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "While percentages are cited (e.g., 95% used reduction strategies, 78.1% used silent mode), these come from referenced studies, not original analysis reported in this article."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Perspective/commentary article. Applies FT-EC3: resource/perspective paper. Not an original empirical analysis of ABCD data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published as perspective in Acta Paediatrica (2024), appears to be original publication, not a duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable—paper is not an original empirical study (FT-IC5 NOT_MET). FT-EC7 screening only applies to papers meeting FT-IC1 through FT-IC5.",
+    "binding_rules_applied": ["FT-EC3"],
+    "notes": "This is a perspective/opinion piece discussing smartphone use reduction strategies and mental health concerns. It references research including ABCD Study findings but does not conduct original analyses. Does not meet FT-IC5 (original empirical analysis required)."
+  },
+  {
+    "paper_id": "196",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, assessed between 2019-2020, N=10,147, age 12.0 years. Study is collaborative ABCD project with data from 21 US sites. Explicitly states ABCD Study Data Release 4.0."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying social media variables: time spent on SM (hours/minutes per day), platform-specific SM use (Instagram, TikTok, etc.), having secret accounts, addictive/problematic SM use patterns. 41 digital/SM exposure variables analyzed across five domains. Applies B1: separate coefficients for multiple SM measures."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models (LME) with coefficients testing associations between digital exposures and BPM Total Problems T-scores. Exposome-wide association study (ExWAS) methodology. Also logistic regression for suicide attempt outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Aggregate digital exposomic risk scores derived from LME model coefficients. BPM T-scores reported with 95% CI. Marginal R-squared values for variance explained. Separate coefficients for individual digital exposures (41 variables). FDR-corrected significance tests reported."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis from ABCD Study. Cross-sectional data collected 2019-2020 examining SM → mental health associations using ExWAS and validation models. Novel data-driven approach to aggregate digital exposomic risk."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in NPP - Digital Psychiatry and Neuroscience (2024), appears to be original publication. No indication of prior publication, preprint, or duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is independent variable (IV) predicting mental health outcomes (BPM T-scores, suicide attempts), not dependent variable. Condition (a) fails: paper has SM → non-SM outcome analysis, not SM as DV only. This is the inverse of FT-EC7 structure. Additionally, covariates include far more than demographic factors (childhood adversity, non-social screentime). Does not meet FT-EC7 criteria.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Methodologically sophisticated exposome-wide association study with training/testing subsample split. Examines differential effects by sex, race/ethnicity, SGM identity. Primary outcome BPM Total Problems; secondary outcome suicide attempts. Clear SM→mental health directionality."
+  }
+]

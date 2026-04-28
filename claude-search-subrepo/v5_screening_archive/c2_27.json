@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "48",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "N=9,066 children from Adolescent Brain Cognitive Development Study at baseline (primarily aged 9-10) and 1-year follow-up; US-based study with epidemiologically-informed recruitment from 21 geographically and demographically diverse sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social screen time (texting, social media, video chatting) + nonsocial screen time (TV/movies, YouTube, video games) measured separately for weekday and weekend. Meets B1 (separate coefficients for SM and non-SM components). Both social and nonsocial media are qualifying variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cumulative logistic regression models; psychiatric symptoms as predictors of trichotomous screen use outcomes (low/medium/high) with odds ratios reported; also tested reverse pathway (screen use predicting psychiatric symptoms)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% confidence intervals reported in main text and tables. Example: clinical total problems predicting high weekday nonsocial screen time (OR=1.22, 95% CI 1.22–1.23); clinical rule breaking predicting weekday nonsocial screen time (OR=1.65, 95% CI 1.63–1.67)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data testing psychiatric symptoms as predictors of subsequent screen time patterns, controlled for baseline measures, demographics, and screen use at baseline (residualized change models)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "2024 published empirical analysis; no duplicate preprint/abstract marker identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "BINDING RULE B20: Paper tests bidirectional/cross-lagged associations. Abstract states 'Comparable magnitude associations were observed for social and nonsocial media use predicting future psychiatric symptoms, suggesting bidirectionality.' Models include both psychiatric symptoms→screen use AND screen use→psychiatric symptoms pathways. FT-EC7 disqualifies bidirectional analyses per binding rule.",
+    "binding_rules_applied": [
+      "B1",
+      "B20"
+    ],
+    "notes": "Both primary and supplementary analyses test reverse pathways. Screen time measured as outcomes in primary analysis (dependent variable predicting psychiatric symptoms in supplementary). Bidirectionality is explicitly discussed in results and conclusion."
+  },
+  {
+    "paper_id": "18",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD dataset (n=7,107 at baseline, 4,505 at 2-year follow-up) with age range 9.87±0.62 years at baseline; longitudinal design with baseline (2016-2018) and 2-year follow-up data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Six qualifying screen activities: TVM (TV/movies - 96% of sample, 1.21±1.00 h), Video (80%), Game (86%, video games are qualifying per B6), Text (texting 41%, qualifying per FT-IC2), SNS (social networking sites 17%, qualifying), VC (video chatting 36%, qualifying). Meets B1 (separate per-activity coefficients reported)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models with β coefficients; Mendelian randomization (one-sample and two-sample) inferential analysis testing causal relationships; mediation analysis testing displacement effect; all provide inferential tests of associations between screen use and outcomes (cognition, behavior, brain volume)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients reported in main text and tables with p-values and 95% confidence intervals. Examples: TVM use β=-1.07 and -1.09 (p<10^-6) on picture vocabulary; MR analysis β=-2.39 (corrected p<0.02) for TVM on picture vocabulary; reading β=6.31 (corrected p<10^-14)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD longitudinal data examining causal associations between screen use exposures and cognitive/behavioral/neuroimaging outcomes using linear mixed-effects models and Mendelian randomization"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "2024 published research article; no preprint/abstract duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because screen use is the independent variable (exposure) predicting non-SM outcomes (brain development, cognition, behavior). FT-EC7 requires SM/smartphone as DEPENDENT variable (outcome) predicted only by demographics. Here, the paper tests screen use→outcomes (primarily brain structure/cognition), not demographics→SM. Additionally, outcomes include neural and cognitive measures, not purely demographic composition.",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Paper uses advanced causal inference methods (Mendelian randomization). Tests both forward (screen use→outcomes) and reverse (cognition/behavior→screen use) pathways. Outcomes include brain volume, cognitive scores, behavioral problems. Results show screen use has adverse causal effects on language/cognition, while reading has protective effects."
+  },
+  {
+    "paper_id": "442",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from years 2, 3, and 4 (n=6,143, total observations=12,745); mean age at year-2=12 years; longitudinal multi-site US study"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Video game addiction is the OUTCOME measured by VGAQ (Video Game Addiction Questionnaire), not an exposure measure. VGAQ measures addiction symptoms (6-item scale, 6-point Likert) on a 0-30 scale, not time spent on phone/gaming or app use frequency. This is a clinical/symptom outcome, not a qualifying smartphone or SM exposure variable per FT-IC2 criteria. No qualifying exposure measure of smartphone/SM time is included."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Cannot evaluate FT_IC3 because FT_IC2 (exposure criterion) is NOT_MET"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Cannot evaluate FT_IC4 because FT_IC2 is NOT_MET"
+    },
+    "FT_IC5": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Cannot evaluate FT_IC5 because FT_IC2 is NOT_MET"
+    },
+    "FT_IC6": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Cannot evaluate FT_IC6 because FT_IC2 is NOT_MET"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable; FT_IC2 is NOT_MET, therefore paper fails inclusion before EC7 can be evaluated",
+    "binding_rules_applied": [],
+    "notes": "Paper examines neural correlates (reward processing via MID task fMRI) predicting gaming addiction symptoms, but does not include any qualifying SM/smartphone exposure measure. VGAQ is a symptom outcome, not time-on-device exposure. Reward processing in caudate, DACC, insula, etc. are outcomes/neural predictors, not qualifying SM exposures. Paper is primarily a neurobiology study of gaming addiction, not a smartphone/SM exposure study."
+  }
+]

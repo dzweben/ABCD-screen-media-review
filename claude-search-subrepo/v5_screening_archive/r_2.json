@@ -1,0 +1,80 @@
+[
+  {
+    "paper_id": "79",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper measures cyberbullying victimization as outcome, with family environment (parental monitoring, family conflict) as predictors. No qualifying smartphone or social media variable is measured or enters any analysis as an independent variable or predictor.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "B3 explicitly states: 'Paper measures cyberbullying as the only screen-adjacent variable' → FT_IC2 = NOT_MET (FT-EC2). This paper measures cyberbullying victimization alone with no separately-measured smartphone or SM variable with its own coefficient. C1 incorrectly marked FT_IC3, IC4, IC5, IC6 as MET despite FT_IC2 being NOT_MET; these downstream criteria depend on FT_IC2 being satisfied first."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "No inferential test links a qualifying smartphone/SM variable to a non-SM outcome. Paper reports logistic regressions for parental monitoring and family conflict (non-SM predictors) → cyberbullying (outcome), but no SM variable is tested.",
+        "binding_rules_cited": ["FT_IC2_prerequisite"],
+        "rationale": "FT_IC3 requires a qualifying SM variable to be tested against an external outcome. Since FT_IC2 is NOT_MET, FT_IC3 is automatically NOT_MET. No SM exposure is measured, so no SM↔outcome test is possible."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "No numeric coefficient reported for any SM variable predicting a non-SM outcome. Paper reports ORs and CIs only for family environment predictors (parental monitoring, family conflict), not for any SM variable.",
+        "binding_rules_cited": ["FT_IC2_prerequisite"],
+        "rationale": "FT_IC4 requires numeric extraction (β, OR, etc.) for an SM↔outcome association. Since no SM variable is measured or tested, FT_IC4 is NOT_MET."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "MET",
+        "evidence": "Original empirical ABCD analysis with prospective longitudinal design. Multivariable logistic regression analyzing Year 1 family environment measures predicting Year 2 cyberbullying victimization outcome in 10,410 participants. Published in peer-reviewed journal.",
+        "binding_rules_cited": ["Criteria_2.5"],
+        "rationale": "FT_IC5 is MET because this is an original empirical analysis using ABCD data with a clear longitudinal design (Year 1 → Year 2). However, FT_IC2 and FT_IC3 are NOT_MET, so final decision will be EXCLUDE under FT-EC2 before FT_IC5 is evaluated."
+      },
+      {
+        "crit": "FT_IC6",
+        "status": "MET",
+        "evidence": "Published peer-reviewed journal article (Academic Pediatrics, 2024). No indication of duplication as preprint, conference abstract, or prior publication.",
+        "binding_rules_cited": ["Criteria_2.6"],
+        "rationale": "FT_IC6 (no duplication) is MET. However, final decision will be EXCLUDE based on FT-EC2 (no qualifying SM variable)."
+      }
+    ]
+  },
+  {
+    "paper_id": "82",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper reports only descriptive statistics (prevalence percentages, means of SM use) and demographic comparisons (Chi-square, t-tests across age and sex groups). Explicitly stated: 'using Chi-square and t-tests, we compared social media use patterns across demographic characteristics.' No inferential test of any SM variable predicting a non-SM outcome is reported. Paper is structured as: (1) prevalence of SM accounts by platform, (2) comparison of SM use by sex and age. No external outcome (mental health, cognition, behavior, etc.) is measured or analyzed in relation to SM use.",
+        "binding_rules_cited": ["Criteria_2.6.1", "FT-EC4_descriptor"],
+        "rationale": "FT_IC3 requires 'at least one inferential statistical test linking a qualifying smartphone/SM variable to a non-SM variable.' This paper contains no such test. All analyses are prevalence/comparison (descriptive). C1 incorrectly claimed this is 'original empirical analysis' but the analysis is purely descriptive prevalence with no outcome linkage. C2 correctly identified this as NOT_MET: 'Pure descriptive/prevalence study; no SM↔non-SM-outcome analysis.'"
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "No numeric coefficient (β, OR, d, r, F, χ², η², p-value, CI, etc.) is reported for any SM variable predicting a non-SM outcome. Paper reports percentages and descriptive statistics (mean hours/day, prevalence by platform, Chi-square p-values for group comparisons), but no regression coefficient, odds ratio, or other effect-size metric linking SM to external outcome.",
+        "binding_rules_cited": ["Criteria_2.6.2"],
+        "rationale": "FT_IC4 requires numeric extraction for an SM↔outcome association. Since no SM↔non-SM association is tested (FT_IC3 = NOT_MET), no extractable coefficient exists. C2 correctly noted that percentages and p-values for demographic comparisons do not satisfy FT_IC4, which requires effect sizes for SM prediction of external outcomes."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "NOT_MET",
+        "evidence": "Paper is purely descriptive of SM platform prevalence and use patterns by demographic characteristics. No analysis of associations between SM and non-SM outcomes. Explicitly stated in abstract and methods: 'To describe patterns of social media use' and 'using Chi-square and t-tests, we compared social media use patterns across demographic characteristics.' This is measurement/prevalence documentation, not an empirical test of SM predicting or mediating an external outcome.",
+        "binding_rules_cited": ["B14_spirit", "Criteria_2.5_nonmeasurement"],
+        "rationale": "FT_IC5 (empirical analysis) is NOT_MET because the paper reports no associations, tests, or pathways involving SM and external outcomes. Per criteria 2.5, a measurement/validation paper with zero SM↔non-SM external outcome tests is FT-EC5 (measurement-only). Although the paper is not strictly a 'measurement instrument validation,' it functions as a prevalence/descriptive census of SM use without any outcome linkage, analogous to B14 (pure description with no outcome analysis)."
+      }
+    ]
+  },
+  {
+    "paper_id": "84",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Methods section states: 'Screen time was measured using a questionnaire in which participants reported the amount of time they spent on digital devices, including television, videos, video games, texting, and video chat.' Results section reports screen time as total/aggregate measure: 'Screen time was significantly negatively associated with all domains of cognitive function' (unified coefficient reported). Main results (Fig. 1, Table 3.1) report only total screen time β values (e.g., executive function b = −0.212); no separate per-item coefficients for texting, video chat, or individual smartphone/SM modalities are extracted or reported in main results. Supplementary analyses (Table S1, Fig. S1) do examine individual device associations but state only 'almost all of the screen time on each digital device is negatively associated with cognitive function'—no detailed per-item coefficients are presented in main or supplementary tables.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 explicitly states: 'Paper uses YSTS but reports only a summed total screen time estimate (or a single composite) with no per-modality breakdown anywhere' → FT_IC2 = NOT_MET (FT-EC2). The paper's primary analysis reports only total screen time β without separately-measured per-item coefficients for texting, video chat, or app use in main results. Although individual device associations are mentioned, specific extractable coefficients per qualifying smartphone item are not clearly reported with their own β/OR in main text or tables. C1 incorrectly cited 'B1 rule' claiming separate coefficients are reported; however, C1 did not substantiate this with specific text showing a separate β for texting or video chat in the main analyses."
+      }
+    ]
+  }
+]

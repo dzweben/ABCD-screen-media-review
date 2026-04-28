@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "433",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly states \"ongoing ABCD Study collected demographic and screen use data from 11 878 children...at baseline (mean age = 9.9 years) beginning in 2016\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Cross-sectional multivariable logistic regression examining associations between sociodemographic predictors and first smartphone ownership age"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in PEDIATRICS"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Smartphone ownership age is outcome; IVs are demographic-only: sex, race/ethnicity, household income, household structure, parental education. No individual-trait-level variable (behavioral/health/cognitive/well-being/personality/substance/sleep/academic) paired with smartphone variable. Methods state: \"estimated a cross-sectional multivariable logistic regression model to examine associations between key sociodemographic predictors (sex, race/ethnicity, household income, household structure, and parental education) and first smartphone ownership age.\""
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines sociodemographic disparities in smartphone ownership timing, not associations with individual-trait outcomes. Fails FT-IC2 because other side is demographic-only."
+  },
+  {
+    "paper_id": "123",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract states \"Cross-sectional data on youth ages 10-13 years from the Adolescent Brain Cognitive Development SM Study (n = 5,639)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Cross-sectional regression analysis with reported coefficients for associations between social media use and addiction scale"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAACAP Open"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media platforms (TikTok, Instagram, Snapchat) and hours spent on social media as IVs; social media addiction scale (problematic/addictive SM scale) as DV. SMA qualifies as individual-trait-level behavioral/mental-health construct. Abstract: \"SMA was higher among youth whose most-used platforms were TikTok..., Instagram..., and Snapchat...; Those with...reporting more social media hours (b = 0.66) had higher SMA scores.\""
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression coefficients (b values) with 95% confidence intervals reported for all associations, e.g., \"TikTok (b = 1.52, 95% CI 1.12, 1.93), Instagram (b = 0.92, 95% CI 0.51, 1.34), social media hours (b = 0.66, 95% CI 0.61, 0.71)\""
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results for SM ↔ individual-trait-level relationship (SMA) reported in main results section"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional, so FT-EC7 does not apply regardless of which side SM is on",
+    "notes": "Paper meets all criteria. Social media use (platform-specific and time-based) paired with problematic SM scale (individual-trait behavioral outcome). Inferential analysis with quantitative results."
+  },
+  {
+    "paper_id": "397",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods state: \"This study included 4,443 adolescents from the Adolescent Brain Cognitive Development (ABCD) Study collected at Year 2 (2018–2020) and Year 4 (2020–2022)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Longitudinal analysis with adjusted linear and Poisson regression models examining associations between screen time and cardiovascular risk factors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in BMC Public Health"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is defined as multi-activity composite without phone/SM isolation. Methods state: \"Self-reported screen time data was collected via the Screen Time Questionnaire, which asked adolescents to estimate the total number of hours that they spent engaging with screens recreationally (e.g. watching television and videos, playing video games, texting, social media, and video chat).\" This bundles TV, games, texting, SM, and video chat with no per-modality breakdown. Per v6 criteria: \"Composite 'screen time' totals that bundle TV/console/phone with no per-modality breakdown isolating phone or SM\" do NOT qualify for FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper measures generic multi-activity screen time (TV + games + SM + texting + video chat) without isolating phone or SM modality. Fails FT-IC2 for lack of per-modality breakdown per v6 criteria on composite screen time."
+  }
+]

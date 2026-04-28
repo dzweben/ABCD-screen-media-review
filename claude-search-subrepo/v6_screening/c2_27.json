@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "48",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly states N=9,066 children primarily aged 9-10 in the Adolescent Brain Cognitive Development Study at baseline and 1-year later"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis with logistic regression models examining psychiatric symptoms predicting screen time and screen time predicting psychiatric symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Social Psychiatry and Psychiatric Epidemiology (2024)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured as social and nonsocial digital media use (qualifying SM/phone operationalization); paired with individual-trait-level psychiatric symptoms (internalizing, attention, externalizing). Bidirectional analysis: psychiatric symptoms predict screen time AND screen time predicts psychiatric symptoms."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression models with inferential results reported for SM↔psychiatric symptom relationships"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: OR=1.22 (95% CI 1.22-1.23) for clinical problems predicting weekday nonsocial screen time; OR=1.10 (95% CI 1.09-1.11) for weekend nonsocial screen time; highest OR=1.65 (95% CI 1.63-1.67) for rule breaking predicting weekday nonsocial screen time"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal; however, smartphone/screen time appears as both IV and DV (bidirectional analysis). EC7 condition (DV-only with no IV analysis) not met.",
+    "notes": "Clear bidirectional relationships documented. Paper demonstrates both psychiatric symptoms→screen time AND screen time→psychiatric symptoms pathways."
+  },
+  {
+    "paper_id": "18",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper utilizes Adolescent Brain Cognitive Development (ABCD) dataset for analysis"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using Mendelian randomization and causal inference methods on ABCD data with 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Advanced Science (2024)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen use measured via six operationalizations (TVM, video, game, text, SNS, video chatting); paired as IV with individual-trait outcomes including language ability, behavioral outcomes (rule-breaking, aggressive behaviors), and brain volume in frontal/temporal regions. Quote: Results revealed adverse causal effects of screen use on language ability and specific behaviors in early adolescents"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mendelian randomization causal inference analysis examining associations between screen use exposures and cognitive/behavioral/neural outcomes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric effect coefficients reported from MR analysis including β values, confidence intervals, and p-values for causal relationships (e.g., screen use effects on language ability and brain volume; reading causal effects on cognition and brain development)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (2-year follow-up); however, screen use appears as IV in primary causal analyses. EC7 condition (SM as DV in every analysis with no IV role) not met.",
+    "notes": "Strong causal framework with mediation analysis examining indirect effects of screen use via reading habits on brain development. Multiple screen use operationalizations tested as exposures."
+  },
+  {
+    "paper_id": "442",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from Adolescent Brain Cognitive Development (ABCD) Study, years 2, 3, and 4 follow-up"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis examining associations between reward processing and video game addiction symptoms using Bayesian hierarchical linear models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Journal of Behavioral Addictions (2024)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines video gaming addiction (VGAQ scores) and reward processing (fMRI activation during MID task). Video game use/addiction does not qualify as smartphone or social media use per v6 criteria. Criteria explicitly state: TV-only, console/PC-gaming-only, and unspecified-platform-gaming-only do NOT qualify. Gaming is distinguished from SM/phone modalities and does not meet the qualifying exposure requirement."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses on gaming addiction which is outside the scope of smartphone/social media use as defined by v6 criteria. No qualifying SM/phone exposure variable."
+  }
+]

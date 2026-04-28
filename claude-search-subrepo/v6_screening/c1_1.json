@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "433",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, baseline mean age 9.9 years, 21 recruitment sites, 2016-2018 enrollment, N=9475"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional multivariable logistic regression examining associations between sociodemographic predictors and smartphone ownership age"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in Pediatrics, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "DV is smartphone ownership age (<10 years vs. ≥10 years). All IVs are demographic-only: sex, race/ethnicity, household income, household structure, parental education. No individual-trait-level variable (neural, behavioral, health, cognitive, well-being, etc.) paired with SM/phone variable on the other side of the relationship. Criterion requires at least one analysis pairing SM/phone with an individual-trait-level variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper 433 fails on FT-IC2: the other side of the SM relationship is demographic-only (age, sex, race/ethnicity, household income, parental education, household structure). No individual-trait-level outcome. Exclusion code: FT-EC2."
+  },
+  {
+    "paper_id": "123",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development SM Study, ages 10-13 years, n=5,639. Default rule applies: title/abstract identify ABCD Study with U.S. context."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: regression models examined associations between social media addiction (SMA) and hours spent per day on social media, platform-specific use, account settings, and follower/following counts"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in JAACAP Open, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use operationalized as hours per day on SM and platform-specific use (TikTok, Instagram, Snapchat, etc.) is IV. SMA (Social Media Addiction Scale) is DV—an individual-trait-level variable measuring addictive/problematic SM use."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: TikTok b=1.52 (95% CI 1.12, 1.93), Instagram b=0.92 (95% CI 0.51, 1.34), Snapchat b=0.60 (95% CI 0.16, 1.03), public account b=0.85 (95% CI 0.56, 1.13), secret account b=2.27 (95% CI 1.65, 2.89), SM hours b=0.66 (95% CI 0.61, 0.71)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Same regression coefficients (b values with 95% CIs) as FT-IC3"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional; EC7 rule applies only to longitudinal designs where SM is DV-only with no SM-as-IV analysis",
+    "notes": "Paper 123 meets all inclusion criteria and should be INCLUDED."
+  },
+  {
+    "paper_id": "397",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, Year 2 (2018-2020) and Year 4 (2020-2022) follow-ups, N=4,443 adolescents"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: adjusted linear and Poisson regression models examined joint associations of screen time and step count with cardiovascular health outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in BMC Public Health, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is multi-activity composite. Methods state adolescents reported total hours engaging in screens \"recreationally (e.g. watching television and videos, playing video games, texting, social media, and video chat).\" This bundles TV, console/video games, texting, social media, and video chat with no per-modality breakdown isolating phone or SM. Per criteria: \"Composite 'screen time' totals that bundle TV/console/phone with no per-modality breakdown isolating phone or SM\" does NOT qualify for FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper 397 fails on FT-IC2: screen time operationalization is a multi-device/multi-activity composite bundling TV, video games, texting, social media, and video chat with no isolated phone/SM breakdown. Exclusion code: FT-EC2."
+  }
+]

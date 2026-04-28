@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "100",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD study, 11,878 participants baseline, 12,000 children at baseline ages 9-10"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media (SMAQ—6-item Bergen Social Media Addiction Scale adapted Year 2); Video gaming (VGAQ—8-item Bergen Video Game Addiction Questionnaire Year 2); time on social media; online social activity; video gaming time. Qualifies under B1 (YSTS with separate SM/gaming coefficients) and B6 (gaming + SM with separate coefficients)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "T-tests comparing sex differences (p < .001 for girls higher SMAQ, boys higher VGAQ); chi-squared tests; ANOVA; CFA/factor analysis (χ2 tests for invariance across sex/race); linear mixed-effects models; descriptive statistics with p-values"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Tables 1, 4, 5 report χ2 values, p-values, RMSEA, CFI, SRMR; Figures 1–3 show proportions with 95% CIs; t-values and p-values reported throughout (p < .001 for multiple comparisons)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD study. Measurement paper demonstrating screen usage questionnaire development, longitudinal changes baseline–Year 2, and psychometric analyses of SMAQ/VGAQ"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Not identified as preprint, abstract, or duplicate. Published in Developmental Cognitive Neuroscience, 2022"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Smartphone/SM is the DEPENDENT variable in all analyses: time on SM, SMAQ, video gaming time, VGAQ are outcomes. Predictors are exclusively demographics: sex, race/ethnicity, age (per Table 1, Methods). All analyses are longitudinal/prospective (baseline to Year 1 to Year 2). Paper has NO SM↔non-SM outcome analysis. Satisfies FT-EC7 binding conditions (a), (b), (c) with no cross-sectional demographic-SM carve-out.",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Comprehensive measurement study with both parent and youth reports of screen use. Psychometric invariance tested across sex and race/ethnicity."
+  },
+  {
+    "paper_id": "4",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study 2.0.1 release, baseline assessment of 9–10-year-old children recruited across 21 US sites through public, private, and charter elementary schools"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Video gaming time: self-reported hours per week on video games on computer, console, smart phone, or other devices. Qualifies as smartphone app usage (apps = smartphone use, per prompt). Distinct from TV/console-only."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "T-tests comparing video gamers (VGs) vs non-video gamers (NVGs) on SST and n-back performance (t-values, p-values reported). Linear mixed models controlling for demographic covariates. fMRI BOLD activation contrasts. Correlation analyses of video gaming with behavioral/mental health"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Tables 1–2 report means [SD], t-values, p-values, Cohen's d effect sizes. fMRI voxelwise statistics reported (BOLD signal contrasts, p < .05). Supplementary materials include additional statistical outputs"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD baseline data (2.0.1 release 2019). Case-control comparison of video gamers vs non-gamers with neuroimaging and behavioral testing"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in JAMA Network Open, 2022 (retracted and replaced April 2023 with corrections, but primary data are original)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Video gaming is the INDEPENDENT variable (exposure), not dependent variable. Paper examines video gaming → cognitive performance, BOLD signal, mental health outcomes. Has SM/gaming-to-outcome analysis. Does not satisfy FT-EC7 condition (a): SM/gaming must be DV in EVERY analysis.",
+    "binding_rules_applied": [],
+    "notes": "Cross-sectional design. VGs defined as ≥21 hrs/wk; NVGs as 0 hrs/wk. Very small but statistically significant fMRI differences. CBCL scores significantly higher in VGs but below clinical threshold (T < 56)."
+  },
+  {
+    "paper_id": "130",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, US-based multisite (21 research sites from 17 states), >3,000 young adolescents (11–14 years) with prepandemic visits and COVID-19 surveys (May–August 2020)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Mentions 'screen time' as predictor of youth distress (Results, Figure 2), and 'time spent on social media' in Results. However, no qualifying smartphone or platform-specific social media variable with separate coefficient is reported. Screen time without device/platform specification (B5) and generic 'screen time' do not meet criteria. Unclear whether social media use is measured separately or bundled in aggregate screen time."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning (gradient boosting XGBoost) with SHAP feature importance; linear mixed-effects models; AUC metrics; nested cross-validation; classification models with interpretation"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Reports SHAP values (mean absolute SHAP) for feature importance (Figures 1–4). Per B8: traditional regression coefficients appear in linear mixed-effects models and GBT outputs. Supplementary materials include AUC values, p-values"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data (3.0 release + COVID-19 surveys). Machine learning to identify risk and protective factors for psychological distress during pandemic"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Journal of Adolescent Health, 2022. Not identified as duplicate or preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because FT-IC2 is NOT_MET. Paper does not report qualifying smartphone or social media variable separately with extractable coefficient. Generic 'screen time' fails B5 criteria.",
+    "binding_rules_applied": [
+      "B5",
+      "B8"
+    ],
+    "notes": "Applied B5: 'screen time' without device/platform specification does not qualify. Applied B8: machine learning with SHAP + traditional regression coefficients = counts. Paper focuses on pandemic mental health outcomes (anxiety, depression, stress, positive affect) rather than SM-specific relationships."
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "paper_id": "179",
+    "title": "One-year predictions of delayed reward discounting in the adolescent brain cognitive development study.",
+    "authors": "",
+    "year": "2022",
+    "doi": "10.1037/pha0000532",
+    "abstract": "Delayed reward discounting (DRD) refers to the extent to which an individual devalues a reward based on a temporal delay and is known to be elevated in individuals with substance use disorders and many mental illnesses. DRD has been linked previously with both features of brain structure and function, as well as various behavioral, psychological, and life-history factors. However, there has been little work on the neurobiological and behavioral antecedents of DRD in childhood. This is an important question, as understanding the antecedents of DRD can provide signs of mechanisms in the development of psychopathology. The present study used baseline data from the Adolescent Brain Cognitive Development Study (N = 4,042) to build machine learning models to predict DRD at the first follow-up visit, 1 year later. In separate machine learning models, we tested elastic net regression, random forest regression, light gradient boosting regression, and support vector regression. In five-fold cross-validation on the training set, models using an array of questionnaire/task variables were able to predict DRD, with these findings generalizing to a held-out (i.e., \"lockbox\") test set of 20% of the sample. Key predictive variables were neuropsychological test performance at baseline, socioeconomic status, screen media activity, psychopathology, parenting, and personality. However, models using magnetic resonance imaging (MRI)-derived brain variables did not reliably predict DRD in either the cross-validation or held-out test set. These results suggest a combination of questionnaire/task variables as antecedents of excessive DRD in late childhood, which may presage the development of problematic substance use in adolescence. (PsycInfo Database Record (c) 2022 APA, all rights reserved).",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1037_pha0000532.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "MET",
+        "c1_evidence": "Screen media activity included as predictor variable in machine learning models. Abstract lists 'screen media activity' as key predictive variable. Qualifies as SM/smartphone exposure variable per B1.",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "Abstract mentions 'screen media activity' as a key predictive variable but does not specify whether this is a qualifying smartphone or SM measure. No named scale or specific platform mentioned. Insufficient detail to confirm FT_IC2 without full paper text; likely refers to screen time aggregation rather than specific SM or smartphone variable per B2 (summed screen time without per-item breakdown)"
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "MET",
+        "c1_evidence": "Machine learning models report feature importance; applies B8 rule: 'Penalized regression \u03b2 (Lasso/Ridge/elastic-net) counts.' Elastic net regression explicitly used, permitting extraction of regularized coefficients from main models.",
+        "c2_status": "UNKNOWN",
+        "c2_evidence": "Abstract does not provide numeric model coefficients or performance metrics. Requires full paper/supplement to confirm whether \u03b2 values from elastic net or other numeric statistics are reported"
+      }
+    ]
+  },
+  {
+    "paper_id": "181",
+    "title": "Prospective associations of sleep duration and screen time with transition from overweight/obesity to normal BMI in U.S. adolescents.",
+    "authors": "",
+    "year": "2025",
+    "doi": "10.1038/s41366-025-01980-6",
+    "abstract": "BACKGROUND: Shorter sleep duration and longer screen time are established risk factors for adolescent obesity. However, the extent to which these behaviors are prospectively associated with the transition back from overweight/obesity to a healthy status remains unclear. We examined whether sleep duration and screen time among adolescents with overweight/obesity are associated with the likelihood of transitioning to a normal body mass index (BMI). METHODS: We used data from 3498 U.S. adolescents aged 9-11 years with overweight/obesity (45.1% female), from the Adolescent Brain Cognitive Development (ABCD) Study. Cox proportional hazards models examined the prospective associations of parent-reported sleep duration (9-11, 8-9, 7-8, and <7\u00e2\u0080\u0089h/day) and screen time (hours/day) with a shift from overweight/obesity (BMI percentile \u00e2\u0089\u00a585) to a normal (BMI percentile <85) accounting for key covariates including pubertal status. RESULTS: Over a median 657 days of follow-up, 643 (18.4%) adolescents transitioned from overweight/obesity to a normal BMI percentile. Compared with those sleeping 9-11\u00e2\u0080\u0089h, adolescents sleeping 7-8\u00e2\u0080\u0089h were less likely to transition to a normal BMI percentile (hazard ratio [HR]: 0.60, 95% CI 0.44, 0.82), with significant dose-response trend (p for trend\u00e2\u0080\u0089=\u00e2\u0080\u00890.003). The association remained significant in sex-stratified analyses for both females (HR: 0.55, 95% CI 0.30, 0.98) and males (HR: 0.59, 95% CI 0.41, 0.86), with similar significant trend in both groups (p for trend\u00e2\u0080\u0089<0.05). Higher screen time was not associated with transitioning to a normal BMI overall (HR: 0.99, 95% CI 0.96, 1.02) or by sex (females, HR: 1.00, 95% CI 0.95, 1.05; males, HR: 0.99, 95% CI 0.95, 1.02). CONCLUSION: Short sleep duration was prospectively associated with a lower likelihood of transitioning to a normal BMI among adolescents with overweight/obesity. This association warrants further investigation as a potential intervention target.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1038_s41366-025-01980-6.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC3",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "While Cox proportional hazards models are used, FT-IC2 is NOT_MET, making this moot for inclusion",
+        "c2_status": "MET",
+        "c2_evidence": "Cox proportional hazards regression; HRs with 95% CIs and p-values reported for prospective associations with BMI transition"
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Numeric values present but FT-IC2 is NOT_MET, making this moot",
+        "c2_status": "MET",
+        "c2_evidence": "Hazard ratios, 95% confidence intervals, p-values, and trend tests reported in Table 2 and main text; standardized estimates in sensitivity analyses (Table 3)"
+      }
+    ]
+  },
+  {
+    "paper_id": "185",
+    "title": "Generalizable prediction of childhood ADHD symptoms from neurocognitive testing and youth characteristics.",
+    "authors": "",
+    "year": "2023",
+    "doi": "10.1038/s41398-023-02502-6",
+    "abstract": "Childhood attention-deficit/hyperactivity disorder (ADHD) symptoms are believed to result from disrupted neurocognitive development. However, evidence for the clinical and predictive value of neurocognitive assessments in this context has been mixed, and there have been no large-scale efforts to quantify their potential for use in generalizable models that predict individuals' ADHD symptoms in new data. Using data drawn from the Adolescent Brain Cognitive Development Study (ABCD), a consortium that recruited a diverse sample of over 10,000 youth (ages 9-10 at baseline) across 21 U.S. sites, we develop and test cross-validated machine learning models for predicting youths' ADHD symptoms using neurocognitive abilities, demographics, and child and family characteristics. Models used baseline demographic and biometric measures, geocoded neighborhood data, youth reports of child and family characteristics, and neurocognitive tests to predict parent- and teacher-reported ADHD symptoms at the 1-year and 2-year follow-up time points. Predictive models explained 15-20% of the variance in 1-year ADHD symptoms for ABCD Study sites that were left out of the model-fitting process and 12-13% of the variance in 2-year ADHD symptoms. Models displayed high generalizability across study sites and trivial loss of predictive power when transferred from training data to left-out data. Features from multiple domains contributed meaningfully to prediction, including neurocognition, sex, self-reported impulsivity, parental monitoring, and screen time. This work quantifies the information value of neurocognitive abilities and other child characteristics for predicting ADHD symptoms and provides a foundational method for predicting individual youths' symptoms in new data across contexts.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1038_s41398-023-02502-6.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "B5 rule: 'screen time' mentioned only as a covariate/feature in machine learning models predicting ADHD symptoms. Screen time is one of many demographic and child characteristic inputs (alongside neurocognition, sex, impulsivity, parental monitoring, etc.) used in predictive models. No separate smartphone or social media exposure analysis; no independent investigation of SM\u2194non-SM outcomes. Screen time is included as one of multiple features but is not the focus of exposure investigation",
+        "c2_status": "MET",
+        "c2_evidence": "Screen time included as a predictor variable in machine learning models. Methods section states: 'Features from multiple domains contributed meaningfully to prediction, including neurocognition, sex, self-reported impulsivity, parental monitoring, and screen time.' Screen time is a qualifying smartphone/device use variable (self-reported hours of engagement). Applies B8: machine learning with traditional regression baseline validation (PCR and LASSO models both used)."
+      },
+      {
+        "crit": "FT_IC3",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Fails FT_IC2; screen time is treated as a feature in predictive model, not as independent variable in inferential test of SM associations",
+        "c2_status": "MET",
+        "c2_evidence": "Machine learning predictive models (Lasso/Ridge penalized regression, PCR with multiple imputation) predict ADHD symptoms at 1-year and 2-year follow-up. Traditional regression coefficients also reported as baseline comparisons. Multiple cross-validated model evaluations with quantified prediction accuracy (r values, correlation coefficients between predicted and actual ADHD scores)."
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Fails FT_IC2; no extractable coefficients specific to screen time as primary exposure of interest",
+        "c2_status": "MET",
+        "c2_evidence": "Extensive numeric results: predictive model explained 15-20% of variance in 1-year ADHD symptoms (PCR r=0.46, CI 0.42-0.47; LASSO r=0.45, CI 0.42-0.48), 12-13% in 2-year symptoms. Figure 1 displays r-values for multiple model iterations. Figure 3 shows feature weights. Supplementary material includes detailed model coefficients and comparison statistics."
+      }
+    ]
+  }
+]

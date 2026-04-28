@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "183",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study Year 2 data (2018-2020), N=8,753, ages 10-14 years; within ABCD eligibility window"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original multiple linear regression analyses estimating associations between sociodemographic predictors and adolescent-reported problematic screen use outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full manuscript in Pediatric Research; not a preprint, editorial, or re-analysis"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "SM (Social Media Addiction Questionnaire, problematic social media use) and mobile phone use (Mobile Phone Involvement Questionnaire) appear as dependent variables paired with individual-trait-level behavioral/psychological outcomes. The dependent variables themselves - problematic SM/phone use - represent individual-level behavioral and psychological constructs."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses with reported coefficients, t-statistics, and p-values across all outcomes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: regression coefficients, odds ratios (e.g., OR=1.14, 95% CI=1.00-1.30 for mature-rated movies; OR=1.27, 95% CI=1.11-1.45 for mature-rated games), and interaction p-values"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires longitudinal design",
+    "notes": "Primary outcomes are problematic screen measures (Social Media Addiction Questionnaire, Mobile Phone Involvement Questionnaire); predictors are sociodemographic factors. Meets all inclusion criteria."
+  },
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD baseline data, N=4,042; within ABCD eligibility"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original machine learning prediction study using baseline data to predict delayed reward discounting (DRD) at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full manuscript in Experimental and Clinical Psychopharmacology; not a preprint or duplicate re-analysis"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Although screen media activity is mentioned as a key predictive variable, SM/phone is not a focal IV or DV paired with individual-trait-level variables. Instead, it is embedded as one feature among many in a composite ML prediction model where delayed reward discounting (DRD) is the outcome. The criterion requires SM/phone to be an explicit focal relationship; treating it as a buried feature does not meet threshold."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Study uses machine learning to predict DRD; screen media is identified as a key predictor but not a primary focus variable in a focal SM-outcome relationship required by FT-IC2."
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study participants, N=10,650, mean age 9.9±0.6 years; within ABCD eligibility"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original cross-sectional analyses examining associations between parental psychological problems (Adult Self-Report) and children's screen media behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full manuscript in Acta Paediatrica; not a preprint or duplicate re-analysis"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen media outcomes are aggregated composites (TV + videos + video games + social media) without per-modality breakdown isolating phone or SM. Coder prompt states: A composite screen time qualifies for FT-IC2 only if the construct isolates phone or SM. If the composite bundles TV + console + phone with no per-modality breakdown isolating phone/SM, it does NOT qualify. Additionally, mature-rated media (movies, games) are content-rating variables; prompt specifies Content-rating variables alone do NOT qualify; rating ≠ modality."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Outcome is aggregated screen time without phone/SM modality isolation; lacks focal SM/phone variable required by FT-IC2."
+  }
+]

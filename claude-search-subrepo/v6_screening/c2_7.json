@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, two-year follow-up data, Mage = 12.0 years, N = 1,036 participants from the Adolescent Brain Cognitive Development study at the two-year follow-up"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using connectome-based predictive modelling (CPM) with 10-fold cross-validation on problematic-gaming scores and fMRI data during reward-processing task"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Problematic gaming is not smartphone or social media use. The study measures problematic-gaming severity (Bergen Gaming Addiction Scale) paired with neural networks, not a smartphone/SM variable paired with an individual-trait outcome. Gaming-only operationalization does not qualify under FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Excludes on FT-EC2: No qualifying smartphone/SM variable. Study concerns problematic gaming severity, not phone or social media use as IV or DV."
+  },
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, nearly 10,000 children aged 9-10 years, data from ABCD Study's 5.0 release from National Institute of Mental Health Data Archive"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effects models to analyze associations between screen time and cognitive function, with mediation analysis of putamen volume"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Acta Psychologica, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time assessed via self-report questionnaires measuring time on digital devices (television, videos, video games, texting, video chat), calculated as daily average. Cognitive function—working memory, processing speed, language, executive function, episodic memory—is individual-trait-level variable measured via NIH toolbox. Screen time paired with cognitive outcomes as independent-dependent relationship."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis with multiple numeric results reported: screen time associated with executive function (b = −0.212, 95% CI −0.301 to −0.122, p < .001), processing speed (b = −0.327, p < .001), language (b = −0.399, p < .001), working memory (b = −0.396, p < .001), episodic memory (b = −0.361, p < .001)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results reported throughout: regression coefficients (β values) for screen time ↔ cognitive function relationships (e.g., β = −0.051 to −0.078), mediation indirect effects (β = −0.015, −0.012, −0.005 for putamen volume mediation), FDR-adjusted p-values (FDR p = .027). Results include both direct and indirect pathway coefficients from mediation analysis."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; EC7 applies only to longitudinal designs. Paper is not excluded under EC7.",
+    "notes": "INCLUDE. Meets all criteria. Screen time is IV; cognitive function and putamen volume are outcomes. Original empirical analysis with robust sample size and multiple cognitive domains."
+  },
+  {
+    "paper_id": "475",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, retrospective cohort study using data from the 2-year follow-up (T1) and 4-year follow-up (T2), 551/1186 participants analyzed, baseline 9-10 years old"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: retrospective longitudinal cohort study with neuroimaging (fMRI), behavioral measures (inhibitory control), and mental health outcomes; linear mixed models used to examine longitudinal associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Medical Internet Research, 2026"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization measured via modified scale ('In the past 12 months, have you been cyberbullied where someone intentionally tried to hurt you or be mean to you online?'). Study pairs cyberbullying with neural activation (error processing) and mental health outcomes, but contains no separately-measured smartphone or social media use variable. Per criteria: 'Cyberbullying alone (without a separately-measured smartphone or SM variable) does NOT qualify.' While paper addresses online victimization context, there is no distinct SM/phone exposure variable as IV or DV."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Excludes on FT-EC2: No separately-measured smartphone or SM variable. Cyberbullying victimization alone, without isolated phone/SM exposure measure, does not meet FT-IC2."
+  }
+]

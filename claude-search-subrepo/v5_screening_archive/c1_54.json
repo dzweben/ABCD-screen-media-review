@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "164",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, first annual curated release, 4524 participants aged 8-11 from 20 US study sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time (recreational TV/screen) only; no qualifying smartphone or social media variable (B5: TV-only)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear mixed-effects models examining relations with movement behaviour variables"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients reported: e.g., β=1.44 (95% CI 0.82–2.07, p<0.0001) for each additional recommendation met; β=4.25 (2.50–6.01, p<0.0001) for screen time recommendation only"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD baseline data with multivariable regression"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC2 (no qualifying smartphone/SM variable), so FT_EC7 assessment not applicable",
+    "binding_rules_applied": ["B5"],
+    "notes": "Study measures 24-hour movement behaviours including sleep, physical activity, and recreational screen time. Focus is on screen time adherence rather than smartphone or social media use specifically."
+  },
+  {
+    "paper_id": "112",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) Study from the Netherlands, not US ABCD"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone variables: personal cell phone use and cordless phone use (both reported as continuous exposure measures)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models assessing associations between each exposure variable separately and each cognitive function measure; models adjusted for potential confounding variables"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients and standard errors reported in text and supplementary tables; e.g., results for RF-EMF exposure associations with cognitive outcomes in main results section"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using Amsterdam ABCD cohort with linear regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC1 (not US ABCD Study; Dutch ABCD from Netherlands); FT_EC7 not applicable",
+    "binding_rules_applied": [],
+    "notes": "Study examines RF-EMF exposure from mobile phone base stations, presence of indoor RF-EMF sources, and personal cell phone and cordless phone use in relation to cognitive function in 5-6 year old children. While qualifying variables are present, the study uses Dutch ABCD rather than US ABCD Study."
+  },
+  {
+    "paper_id": "434",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, analytic sample N=9475 children with complete baseline data from 11,878 participants at baseline, mean age 9.9 years, enrolled 2016 with annual follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership age (age of first smartphone acquisition); this is a qualifying smartphone variable per binding rules"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression model examining associations between sociodemographic predictors and early smartphone ownership (<10 years) as binary outcome; odds ratios calculated"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple OR and 95% CI reported in Table 2: e.g., Female OR=1.38 (95% CI 1.19–1.60); Black OR=2.78 (95% CI 2.07–3.64); Single parent OR=2.01 (95% CI 1.67–2.44); Parental education <Bachelor's OR=1.70 (95% CI 1.40–2.06)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis examining sociodemographic predictors of early smartphone ownership in US ABCD Study"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published 2026 in Pediatrics"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional logistic regression design (B15 carve-out applies: FT_EC7 does NOT apply when ANY cross-sectional analysis with demographics → SM is reported). Paper uses cross-sectional multivariable logistic regression, not longitudinal/prospective analysis.",
+    "binding_rules_applied": ["B15"],
+    "notes": "Study examines sociodemographic associations with early smartphone ownership in US adolescents using ABCD baseline data. Smartphone ownership age is modeled as binary outcome (early <10 years vs. later). Multivariable model includes sex, race/ethnicity, household income, parental marital status, and parental education as predictors."
+  }
+]

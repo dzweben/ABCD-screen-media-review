@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "55",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline data; US adolescents ages 9-11 from 21 sites (Fors et al. 2019)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Electronic media use (EMU) measured via ABCD Screen Time Survey; includes television, videos, video games, texting, social networking sites, video chat. Collapsed SM categories (texting + social networking + video chat) measured as separate variables with own coefficients. Applies B1, B6 (SM with app-category distinction implicit in item breakdown)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear mixed models testing EMU → anxiety and depression; regression with coefficients (β, t, p). Mediation analysis testing indirect effects via EMU. Table 2 reports coefficients for child weekday/weekend EMU predicting anxiety and depression."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports β coefficients, t-values, p-values, 95% CIs for all EMU variables predicting anxiety and depression (e.g., child weekday EMU → anxiety: β=0.055, t=3.309, p=0.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; analysis of EMU ↔ anxiety/depression outcomes with testing of anxiety controlling for depression and vice versa"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article 2019; no duplicate flag detected"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper tests EMU → psychological outcomes (anxiety, depression), not SM as dependent variable. SM is independent variable / exposure. Condition (a) not met.",
+    "binding_rules_applied": ["B1", "B6"],
+    "notes": "Child report of weekday EMU was most strongly associated with depression when controlling for anxiety; parent-reported weekend EMU significant for both anxiety and depression. Video gaming and video chatting differentially related to anxiety vs depression. Adequate sample size (n=4524)."
+  },
+  {
+    "paper_id": "398",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline cross-sectional data 2016–18; US representative sample of 11,875 children ages 9–10 (Guerrero et al. 2019)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time types: television/movies, videos, video games, social media (texting + social networking sites + video chat collapsed). Content: mature-rated video games, R-rated movies. ST measured in hours/day via Youth Screen Time Survey (14 items). Social media measured as separate collapsed category with own coefficients. Applies B1 (separate SM β reported), B6 (mobile/app gaming with separate coefficient)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Negative binomial structural equation modeling (SEM) testing direct and indirect effects via mediation. Table 2 reports direct effects (β, p, 95% CI, IRR). Table 3 reports indirect effects of ST types through sleep duration. Mediation tested via bootstrapped confidence intervals."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2: β coefficients, p-values, 95% CIs, IRRs for television/movies, videos, video games, social media, mature-rated games, R-rated movies. Example: TV/movies → rule-breaking: β=0.059, p<0.001, IRR=1.059. Table 3: indirect effects with β, p, 95% CI, IRR for all mediation pathways."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; longitudinal baseline data; negative binomial SEM testing associations between ST types/content and CBCL problem behavior syndromes with sleep as mediator"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article 2019; no duplicate flag detected"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper tests ST → problem behaviors (outcomes). SM/ST is exposure/IV, not dependent variable. Condition (a) fails: SM is not the dependent variable.",
+    "binding_rules_applied": ["B1", "B6"],
+    "notes": "Large representative sample; controlled for sex, ethnicity, parental education, family income, BMI, physical activity. Mediation effects through sleep duration were small but significant. Television/movies associated with 4 problem behavior categories; mature-rated games associated with somatic complaints, aggression, reduced sleep."
+  },
+  {
+    "paper_id": "429",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study first annual curated release baseline data; cross-sectional; participants ages 8–11 years (n=4524) (Guerrero et al. 2019)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Recreational screen time (ST) measured via Youth Screen Time Survey. Screen time measured as continuous variable in hours. Meets B1: ST as independent variable with regression coefficient reported. Also assesses sleep (9–11 hours per night recommendation) and physical activity (≥60 min/day) in relation to impulsivity dimensions."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Structural equation modeling (SEM) and path analysis testing associations between meeting movement behavior recommendations (sleep, ST, PA) and impulsivity dimensions. Table 3 reports standardized path coefficients (β), SEs, p-values, 95% CIs. Example: PA + ST recommendations → positive urgency: β=−0.06, p<0.001."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 3: standardized β coefficients, SEs, p-values, 95% CIs, R² effect sizes (4.0–6.7%) for path models predicting negative urgency, positive urgency, perseverance, BIS, BAS dimensions. Example: ST + sleep → negative urgency: β=−0.15, p<0.001, 95% CI [−0.20 to −0.10]."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; cross-sectional baseline testing associations between meeting 24-hour movement guidelines (sleep, ST, PA) and impulsivity dimensions (UPPS-P, BIS/BAS scales)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article 2019; no duplicate flag detected"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper tests movement behaviors (ST, sleep, PA) → impulsivity (psychological outcome). ST is exposure/IV, not dependent variable. Condition (a) fails: ST is not the dependent variable. Cross-sectional analysis, so condition (c) also fails.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Cross-sectional; meeting all 3 movement recommendations (sleep 9–11 h, ST ≤2 h/day, PA ≥60 min/day) associated with lower positive urgency, negative urgency, and higher perseverance and delay-discounting. ST + sleep recommendation combination had strongest association with reduced negative urgency (β=−0.15)."
+  }
+]

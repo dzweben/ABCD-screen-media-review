@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from baseline (2016-2018), 1-year follow-up (2017-2019), and COVID-19 Rapid Response Research Survey (May 2020). Sample n=6,749 US adolescents aged 12-13."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines ACEs as IV predicting screen time as outcome. Screen time is measured (self-reported hours across 7 modalities: gaming, texting, social media, video chatting, internet browsing, watching TV/movies) but is the DEPENDENT variable, not an exposure. No qualifying SM/smartphone variable as predictor of a non-SM outcome. Applies B7 (screen time measured but not as exposure per inclusion criteria)."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Does not qualify; IC2 not met. Paper uses linear regression examining ACE → screen time association, but screen time is outcome not exposure."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Does not qualify; IC2 not met."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data with linear regression models estimating associations between ACE scores and lifestyle behaviors (screen time, physical activity) in May 2020."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No indication of duplicate; original empirical research published in Academic Pediatrics 2022."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet IC2 (SM/smartphone as qualifying exposure). Paper examines trauma exposure (ACEs) predicting screen time, not SM/smartphone as independent predictor of outcomes.",
+    "binding_rules_applied": ["B7"],
+    "notes": "Paper focuses on adverse childhood experiences predicting increased screen time and decreased physical activity during COVID-19 pandemic. While screen time is measured, it serves as an outcome variable rather than an exposure variable per inclusion criteria. Does not meet FT_IC2 requirement."
+  },
+  {
+    "paper_id": "190",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD dataset from USA with 9,855 children aged 9-10 at baseline with 2-year follow-up data available."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying screen time variables measured separately: watching (TV/videos), socializing (social media/text/video chat), and gaming. Paper reports separate standardized β coefficients for each screen time type on intelligence outcomes. Applies B1 (separate coefficients for SM components within same model) and B6 (gaming reported with SM with separate coefficients)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Baseline Pearson correlations (r = -0.12 for watching, r = -0.10 for socializing, no correlation for gaming). Longitudinal analysis with standardized β coefficients: watching baseline r values, and at follow-up standardized β = +0.12 for watching, β = +0.17 for gaming. Also latent change score models with path coefficients."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported: baseline correlations (r = -0.12, r = -0.10), standardized β coefficients (β = +0.17, β = +0.12), path coefficients in latent change score models (β = 0.24, β = 0.20), mediation indirect effects with 95% CIs, RMSEA and CFI fit indices."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data examining impact of different types of screen time (watching, socializing, gaming) on children's intelligence while controlling for cogPGS (polygenic scores for cognitive performance) and SES."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Scientific Reports 2022; no indication of preprint/abstract/deposit duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time/social media (socializing) is independent variable predicting intelligence (non-SM outcome). Paper reports SM → intelligence associations, not SM as dependent variable. Disqualifies EC7 per binding rule criteria.",
+    "binding_rules_applied": ["B1", "B6"],
+    "notes": "Longitudinal study with genetic and socioeconomic controls. Distinguishes between watching digital videos (positive effect β = +0.12), socializing on social media (no effect at follow-up), and gaming (positive effect β = +0.17). Includes mediation analysis via lack of perseverance. Well-structured measurement model with intelligence latent variable."
+  },
+  {
+    "paper_id": "110",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort with 11,000+ children aged 9-11 from Adolescent Brain Cognitive Development study across USA."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time utilization (STU) measured as qualifying smartphone/device exposure variable. Measured via self-reported hours on typical weekdays. Paper reports STU separately and reports associations with ADHD symptoms and white matter microstructure. Qualifies as smartphone/device time use variable per inclusion criteria."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional correlations between STU and white matter microstructure (fractional anisotropy values), ADHD polygenic risk, and ADHD symptoms. Longitudinal analyses examining bidirectional associations between ADHD scale and STU. Mediation analysis testing white matter as mediator between polygenic risk and STU."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple correlation coefficients reported for fractional anisotropy (FA) in multiple white matter tracts (inferior frontal-striatal tract, inferior frontal-occipital fasciculus, superior longitudinal fasciculus, corpus callosum). Longitudinal mediation indirect effects reported with confidence intervals. Path coefficients in mediation models."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD genetics, neuroimaging, and behavioral data investigating associations between polygenic risk for ADHD, STU, and white matter microstructure through cross-sectional and longitudinal analyses."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in EBioMedicine 2022; no indication of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time utilization is independent variable (predictor) examined in relation to ADHD symptoms and neuroimaging outcomes, not as dependent variable. Additionally, predictors include polygenic risk scores and neural features (white matter microstructure), which explicitly disqualifies per B17 (NOT EC7 disqualifiers: 'polygenic scores' and 'neural features').",
+    "binding_rules_applied": ["B17"],
+    "notes": "Large-scale study linking ADHD polygenic risk to STU via white matter microstructure pathways. Uses mediation analysis. Longitudinal design with baseline and 2-year follow-up neuroimaging. Examines bidirectional association between ADHD scale and STU but STU is IV throughout, not DV."
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "132",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study of 10,574 early adolescents from US sites (September 2016-January 2021)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Only unspecified 'screen time' measured as one component of 24-hour movement behavior (sleep/activity/screen as categorical bundle), not separately-measured SM platform use. Applies B5 (non-specific 'screen time' without device/platform breakdown; TV/gaming/internet bundled without separate coefficients)"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No SM-specific inferential test; only categorical adherence groups (met/not-met combinations) compared via multilevel linear models; SM not treated as separate exposure variable"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric extraction possible for SM; categorical grouping only (not individual coefficient for SM ↔ outcome)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD 4.0 release data; longitudinal mixed models comparing movement behavior adherence groups"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2023 publication; no duplicate evident"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is not the dependent variable; rather, adherence to screen time (among sleep/activity) is IV predicting cognition/health outcomes; fails condition (a)",
+    "binding_rules_applied": ["B5"],
+    "notes": "Screen time is measured as categorical adherence to 2-hour/day recommendation, not as continuous exposure or platform-specific variable. Fails inclusion on FT-IC2 despite ABCD data."
+  },
+  {
+    "paper_id": "105",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study with 10,335 participants at year 2 (ages 10-14) and 6,095 at year 3"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization measured alone; no separately-measured SM variable with its own coefficient. Applies B3: cyberbullying alone without concurrent SM measure and separate coefficients → NOT_MET"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No SM-specific coefficient; cyberbullying is sole exposure, predicting substance initiation; no SM ↔ non-SM outcome coefficient"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No SM numeric coefficient to extract; only cyberbullying OR reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis; cross-sectional (year 2) and prospective (year 2→3) multivariable logistic regression"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2023 publication; no duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is not the dependent variable; cyberbullying (measured via online/social media context) is the IV, not SM itself; fails condition (a)",
+    "binding_rules_applied": ["B3"],
+    "notes": "Cyberbullying measured only; no standalone SM exposure variable with coefficient separately reported. Study measures online victimization context but not qualifying SM platform use, time, or account measures."
+  },
+  {
+    "paper_id": "177",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study with 5,027 adolescents assessed pre-pandemic (year 2, ages 10-13) and across 6 pandemic timepoints (May 2020-March 2021)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM: social media use (hours/day); qualifying video gaming: single-player video game time. Both measured separately with distinct coefficients in LMM. Applies B1: separate β for each screen domain"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models (LMM, GLMM) with unstandardized regression coefficients for social media time and video game time predicting sleep outcomes (time in bed, bedtime, sleep onset latency, awakenings)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Unstandardized β coefficients reported (e.g., social media χ²(1)=114.56, p<.01; video games χ²(1)=6.13, p=.013; simple slope coefficients cited, e.g., slope=-0.24, p<.01). Test statistics and p-values reported for each screen variable; coefficient magnitudes estimated from model output"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data; longitudinal mixed-effects models examining associations between screen time and sleep before/during pandemic"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2023 publication (Health Psychology); no preprint/abstract/deposit duplicate evident"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM (social media use) is predictor/IV, not dependent variable; predicts sleep outcomes (TIB, bedtime, latency), not vice versa. Fails condition (a). Also includes non-demographic predictors (assessment date, school status, age-by-assessment interaction), failing condition (b) if SM were DV",
+    "binding_rules_applied": ["B1"],
+    "notes": "Strong inclusion: separate coefficients for social media (χ²=114.56) and video games (χ²=6.13); both show significant associations with sleep timing/quality across pandemic periods with interaction effects reported"
+  }
+]

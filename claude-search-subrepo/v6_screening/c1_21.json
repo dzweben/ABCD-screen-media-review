@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "202",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, baseline ages 10-14 years, 3-year longitudinal follow-up (Y1-Y3), N=6,779 dyads"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: mixed-effects linear modeling with longitudinal data, examining ACEs exposure at baseline/Y1 predicting PSMU at Y3"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Issues in Mental Health Nursing, 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media addiction/problematic social media use (PSMU) measured as outcome variable (DV) via SMAQ at Y3. ACEs exposure (cumulative ACEs score) as IV at baseline. Individual-trait-level outcomes (emotional/behavioral dysregulation, mental health). Also examines dysregulation as moderator, satisfying IV-or-DV requirement."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric results reported: higher cumulative ACEs (4+ vs <2) associated with higher PSMU (β=1.5, p<0.001). Inferential analysis: mixed-effects linear regression"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficient β=1.5 reported (ACEs-PSMU association); dysregulation did not moderate this association"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "Longitudinal design (baseline to Y3). PSMU is the DV in all analyses (outcome of ACEs exposure and dysregulation). No analysis exists with PSMU or smartphone/SM as IV. Therefore all three FT-EC7 conditions are met; paper is excluded under FT-EC7.",
+    "notes": "Paper meets all inclusion criteria but is excluded by FT-EC7 because it tests only SM/phone as a dependent variable in longitudinal design with no SM-as-IV analysis."
+  },
+  {
+    "paper_id": "435",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, 8,324 children (53% boys, mean age 9.9 years), baseline ages 9-10 from 21 U.S. sites, followed annually for 4 years (T0-T4)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal mixed-effects linear regression with random intercepts and slopes examining DM use (social media, video games, TV) predicting ADHD symptoms over 4 years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Pediatrics Open Science, Volume 2, Issue 1, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (measured via Youth Screen Time Survey, categorized as hours per day on social media platforms) as IV. ADHD-related symptoms (inattention and hyperactivity-impulsivity via parent-reported CBCL) as DV, measuring individual-trait-level behavioral/cognitive outcomes. Main finding: social media × time interaction (β=0.03 [0.01], p<0.001) predicting inattention but not other DM types."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results: social media use × time interaction β=0.03 (SE 0.01), P<.001; cumulative 4-year effect β=0.15 (SE 0.03, P<.001). Inferential linear mixed-effects models with two-way and three-way interactions tested."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results for SM ↔ outcome relationship: regression coefficients β and SE, p-values, 95% CIs reported. Cross-lagged panel models confirm directionality (SM→inattention, not reverse)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media is consistently treated as IV (predictor) across all analyses. Although this is longitudinal, SM is not the DV in every analysis; it predicts ADHD symptoms. Therefore FT-EC7 does not apply.",
+    "notes": "Strong methods: large sample (n=8,324), 4-year longitudinal, genetic control (PGS-ADHD), specificity (SM but not gaming/TV associated with inattention), bidirectionality tested. Paper qualifies for inclusion."
+  },
+  {
+    "paper_id": "35",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, 1,940 participants aged 11-12 years at Wave 1, analyzed over three annual waves (Waves 1-3, corresponding to ages 11-14)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: modified Poisson regression with latent class trajectory modeling examining longitudinal associations between SMA/SMT and binge eating symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Obesity (Silver Spring), Volume 33, Issue 2, 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media addiction (SMA) scores (six-item questionnaire adapted from Bergen Facebook Addiction Scale) as IV. Binge eating (BE) symptoms as DV, measured via KSADS-5 (individual-trait-level behavioral/eating disorder symptom). Also time spent on social media (SMT) examined. Main findings: SMA (not SMT) associated with BE cross-sectionally and prospectively; consistently high SMA trajectory strongest association."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results: addiction SMA group RR=1.90 (95% CI 1.10-3.27) for Wave 3 BE in fully adjusted model (Model 3); consistently high SMA trajectory RR=3.01 (95% CI 2.07-4.37). Cross-sectional PR=2.17 (95% CI 1.22-3.84) at Wave 1 and 3.45 (95% CI 1.83-6.49) at Wave 3."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: relative risks (RR) with 95% CIs for prospective associations; prevalence ratios (PR) for cross-sectional; latent class trajectory modeling with RR estimates by trajectory group (decreased, increased, high SMA vs. low reference)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (Wave 1 to Wave 3), but social media addiction (SMA) is consistently the IV predicting binge eating as DV. There is no analysis in which SM/phone is the DV; therefore FT-EC7 does not apply.",
+    "notes": "Paper includes both SMA (addiction symptoms) and SMT (time spent) measures; SMA but not SMT was prospectively associated with BE. Moderation analyses show stronger associations in males and variable patterns by baseline BMI. Latent class trajectory modeling identifies distinct SMA patterns predictive of follow-up BE."
+  }
+]

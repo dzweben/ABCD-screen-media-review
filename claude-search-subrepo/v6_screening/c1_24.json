@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "195",
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study Release 5.1 data; 495 adolescents at Year-4 follow-up"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis comparing passive EARS tracking with self-reported screen time; regression and correlation analyses"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in npj mental health research (2025)"},
+    "FT_IC2": {"status": "MET", "evidence": "Social media use as IV (both self-reported and EARS passive-tracked) paired with individual-trait outcomes: externalizing symptoms (β=0.07, EARS; β=0.06, self-report), internalizing symptoms (β=0.05, self-report), social media addiction (β=0.06-0.15), video game addiction (β=0.05)"},
+    "FT_IC3": {"status": "MET", "evidence": "Regression β coefficients reported for social media ↔ behavioral problems and addiction relationships across both objective and subjective measures"},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results include standardized β estimates with 95% CIs, logistic regression ORs, and Pearson correlations for SM↔outcome associations"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (all variables measured at single Year-4 follow-up); not a longitudinal predictor study with SM as DV-only",
+    "notes": "Paper examines both objective (EARS app) and subjective (self-report) social media measures; robust analysis of measurement concordance; multiple individual-trait outcomes including psychiatric symptoms and behavioral problems"
+  },
+  {
+    "paper_id": "27",
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study data; 9,465 children ages 9-11 years at baseline (2016-2021)"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using generalized structural equation model with mediation pathway"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in International Journal of Eating Disorders (2024)"},
+    "FT_IC2": {"status": "MET", "evidence": "Screen time (average daily baseline) as IV paired with individual-trait-level outcomes: binge-eating disorder diagnosis (OR=1.09, 95% CI 1.03-1.14) at Year 2; depression symptoms as proposed mediator"},
+    "FT_IC3": {"status": "MET", "evidence": "Inferential analysis conducted with SEM; screen time ↔ BED relationship quantified"},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric results reported: OR for screen time-BED association, bias-corrected 95% CI for indirect effect (B=0.19, BC 95% CI 0.10-0.28), mediation percentage (9.2%)"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time functions as IV (predicting downstream BED and depression); not SM-as-DV-only. EC7 exclusion does not apply. Paper retained.",
+    "notes": "Prospective mediation analysis; depression partially mediates screen time ↔ BED association; confirms quantified SM-outcome relationship"
+  },
+  {
+    "paper_id": "290",
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study data; N=10,757 children ages 10-14 years at baseline (2016-2020) to Year 2 follow-up"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using mixed-effects models with robust standard errors; prospective repeated-measures design"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Acta Paediatrica (2024)"},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Parental monitoring and family conflict are contextual/familial-level variables, not individual-trait-level constructs. Criteria require SM/phone paired with an individual-trait variable (neural, behavioral, health, cognitive, well-being, personality, substance use, sleep, academic, etc.). Screen time is the qualifying SM variable but the other side of the relationship comprises only family environment factors (parental monitoring, family conflict), which are contextual-only predictors, not individual-trait outcomes."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines screen time across six modalities (TV, YouTube, video games, texting, video chat, social media) but relates them only to family environment predictors (parental monitoring, family conflict), not to individual-trait outcomes. Exclusion code FT-EC2."
+  }
+]

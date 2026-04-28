@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "314",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly analyzes data from U.S. Adolescent Brain Cognitive Development (ABCD) Study with 1985 adolescents from Year 2-4 waves"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with prospective models examining prospective associations between sleep, social media use, and brain activation over two years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of sleep research"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use measured via Youth Screen Time Survey (qualifying SM variable); paired with sleep duration (Munich Chronotype Questionnaire) and brain activation (fMRI reward task); all are individual-trait-level outcomes"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Prospective models report multiple numeric results: greater SM use at Year 2 predicted shorter sleep at Year 4; effects moderated by nucleus accumbens, cingulate, insula, putamen activation; longer sleep at Year 2 predicted higher caudate activation at Year 4"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantifications of SM-outcome associations reported: direct effects (SM→sleep duration), moderation effects by neural activation regions"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal but SM appears on both sides of the equation (SM predicts sleep; sleep predicts SM), meeting bidirectional criterion; FT-EC7 requires SM-as-DV-only with no SM-as-IV analysis anywhere",
+    "notes": "Paper demonstrates reciprocal associations: greater SM use predicts shorter sleep; shorter sleep predicts increased SM use; effects moderated by reward/executive control brain activation"
+  },
+  {
+    "paper_id": "380",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from Adolescent Brain Cognitive Development study with N=11,878 children ages 9-10"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis estimating prevalence of emotion dysregulation and examining demographic and clinical correlates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of child and adolescent psychopharmacology"
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available; abstract mentions \"screen time use\" was examined as a correlate of emotion dysregulation but does not specify whether screen time is phone-specific, SM-specific, or a multi-device composite (TV+console+phone). Cannot determine from abstract alone whether construct isolates phone/SM use per §2.4 criteria"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC2 returned UNKNOWN with no PDF; downstream cascade deferred",
+    "notes": "Paper focuses on emotion dysregulation prevalence and correlates including psychiatric disorders, socioeconomic factors, sleep disturbances; screen time operationalization insufficient without PDF"
+  },
+  {
+    "paper_id": "534",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from Adolescent Brain Cognitive Development (ABCD) Study across Years 2-4 with approximately 7260 participants"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effects models and parallel mediation model examining longitudinal association between ADHD diagnosis and gaming addiction"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Frontiers in psychiatry"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper measures video game addiction (VGAQ scores), which is gaming-only exposure. Per §2.4 of criteria, \"console/PC-gaming-only\" and \"unspecified-platform-gaming-only\" do NOT qualify. Neither smartphone use nor social media use is measured or analyzed. Gaming addiction is distinct from phone/SM use and does not meet the qualifying smartphone/social-media exposure requirement"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC2 NOT_MET; cascade halted",
+    "notes": "Paper examines ADHD as predictor of gaming addiction with psychosocial mediators (peer involvement, school engagement, family conflict). No smartphone or social media variable measured; gaming is ineligible exposure per criteria"
+  }
+]

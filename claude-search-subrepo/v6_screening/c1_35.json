@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "176",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 3.0; baseline ages 9-10 years; 11,878 participants at baseline, 6,571 at 2-year follow-up"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using bivariate multiple indicator latent change score models to examine interrelationships between lifestyle risk factors and brain structure across baseline and follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Health Psychology, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is bundled into a multi-factor composite domain: \"a single lifestyle risk factor domain (measured by sleep, physical activity, BMI, and screen time)\" with no per-modality breakdown isolating screen time. Methods do not isolate phone or social media activity from the composite. Fails FT-IC2 requirement for isolating phone/SM construct."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "While brain structure (neural) outcome is individual-trait-level, the composite-bundled screen time without isolation violates FT-IC2 conceptually."
+  },
+  {
+    "paper_id": "97",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 4.0; participants ages 9-12 years from first two years of study"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using generalized additive mixed models (GAMM) to examine relationships between digital screen engagement and functional brain organization; includes network analysis and exploratory factor analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Cortex, 2023"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Digital screen media activity (SMA) measured via self-report of six specific activities: TV shows or movies, digital games on computer, online video platforms (YouTube), video chat (Skype, FaceTime), social media (Facebook, Instagram, Snapchat), and text messaging/interactive apps. Paired with functional brain organization (resting-state fMRI network connectivity) as DV, which is individual-trait-level neural outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized additive mixed models with statistical testing; group factor analysis extracted latent variables explaining variance in screen engagement; network-level connectivity correlations reported with r-fMRI data"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: correlation values between SMA and functional networks (Fig. 4-5), AUC clustering metrics (Fig. 3), model fit comparisons using Akaike Information Criterion, group factor analysis variance explained (9.34% and 8.5% for GFA groupings 1 and 2)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (one timepoint from ABCD Release 4.0 baseline data); EC7 does not apply to cross-sectional studies regardless of which side SM occupies",
+    "notes": "Strong FT-IC2 qualification: six discrete screen activities isolate phone and SM components from TV and gaming. Original analysis with novel network-based outcomes."
+  },
+  {
+    "paper_id": "5",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; cross-sectional data from year 2 (September 2018 to September 2020); 5797 adolescents aged 10-14 years from 21 U.S. sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear regression and modified Poisson regression models to examine associations between physical activity (step count) and screen time with BMI and overweight/obesity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Network Open, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as composite of self-reported hours per day across multiple media types: \"television, video games (single player and multiplayer), videos, video chat, social media, and texting.\" Methods state \"The time across all types of media was summed to form a composite amount of time spent using screens per weekday and weekend.\" No per-modality breakdown isolating phone or SM from TV, console gaming, and other device-based activities. Composite bundle without isolation fails FT-IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Despite BMI being a valid individual-trait-level outcome, the composite screen time measure bundles TV and gaming with SM/phone with no isolation, violating FT-IC2 conceptually."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "132",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study with 10,574 early adolescents (baseline ages 9-14 years); data from Curated Annual Release 4.0"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-sectional at baseline T1 and 2-year follow-up T2 with multivariable linear mixed models examining movement behavior adherence and health outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Adolescent Health, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as generic composite component of 24-hour movement guidelines (≤2 hours/day) with no per-device breakdown isolating smartphone or social media modality. Methods state 'screen time' as part of integrated movement recommendations bundling sleep, physical activity, and screen time without device-specific operationalization of phone/SM use."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines movement behavior recommendations including screen time, cognition, psychosocial health, BMI, and brain morphometry. While sleep and screen time showed significant associations with cognitive and behavioral outcomes, the screen time construct is not isolated to smartphone or social media—it is a generic multi-activity composite."
+  },
+  {
+    "paper_id": "105",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study with 10,335 participants aged 9-13 at year 2; cross-sectional and longitudinal data through year 3"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-sectional and longitudinal multivariable logistic regression examining cyberbullying victimization and substance use initiation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Drug and Alcohol Dependence, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary exposure is cyberbullying victimization (bullying behavior), not smartphone or social media use as operationalized constructs. Per criteria §2.4: 'Cyberbullying alone (without a separately-measured smartphone or SM variable) does NOT qualify.' No independent SM/phone use variable is measured or analyzed in the paper."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines cyberbullying victimization as risk factor for substance use initiation, with reported ORs (e.g., OR=2.17 for lifetime cyberbullying). While cyberbullying occurs online/via social platforms, the construct is bullying behavior itself, not SM or phone use as measured constructs."
+  },
+  {
+    "paper_id": "177",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study with 5,027 adolescents (ages 10-13 years at year 2); assessed pre-pandemic (baseline) and across six COVID-19 pandemic timepoints (May 2020–March 2021)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; longitudinal mixed-effects models (LMM and GLMM) examining associations between self-reported social media use, video gaming, and sleep outcomes across multiple timepoints"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Health Psychology, 2023"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Paper isolates social media use ('time spent on social media platforms') measured in hours per day and video gaming ('single player video games') as separate screen time constructs paired with individual-trait-level sleep outcomes (time in bed, bedtime, sleep onset latency, awakenings). Methods explicitly operationalize 'time spent with social media' and 'time spent on single player video games' separately for analysis."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported for SM↔sleep relationships: χ²(1)=114.56, p<.01 (social media × time in bed); χ²(1)=33.74, p<.01 (social media × sleep onset latency); χ²(1)=456.52, p<.01 (social media × bedtime). Slope estimates and interaction effects reported across multiple assessment periods."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results: chi-square statistics, regression slopes (simple slopes Pre-pandemic=-0.24, May=-0.08, August=-0.05, October=-0.15, December=-0.13, March=-0.12, all p<.01), interaction effect coefficients with sex and age; reported for both social media and video gaming associations with sleep variables"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design includes both cross-sectional and longitudinal mixed models. While longitudinal in structure, screen time (SM/gaming) is analyzed as IV predicting sleep outcomes, not as DV-only. Multiple analyses examine SM/gaming as predictors of sleep, satisfying the SM-as-IV requirement that exempts the paper from EC7 exclusion.",
+    "notes": "Paper examines pandemic effects on screen time and sleep with quantified associations. Social media time significantly associated with shorter TIB, later bedtimes, and longer sleep onset latency across pre-pandemic and pandemic assessments. Isolates SM and video gaming as separate constructs with reported quantitative effects."
+  }
+]

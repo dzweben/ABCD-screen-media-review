@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "164",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, first annual release, 4524 US children aged 8-11 years from 20 study sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is 'recreational screen time' without further breakdown. Abstract and methods state 'recreational screen time' as a guideline adherence category. No separate per-item breakdown for smartphone use, SM platform use, app use, texting, or video chat. Applies B2 (summed/total screen time with no per-item breakdown)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear mixed-effects regression with β coefficients reported (e.g., β=1.44, 95% CI 0.82-2.07 for each additional recommendation met)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients with 95% CIs reported in abstract: β=1.44 (95% CI 0.82-2.07), β=3.89 (95% CI 1.43-6.34), β=4.25 (2.50-6.01), β=5.15 (3.56-6.74); also p-values"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of US ABCD Study data with inferential statistics on movement behaviours and cognition"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2018 in The Lancet Child & Adolescent Health; no evidence of preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is NOT the dependent variable—it is a predictor/exposure. Global cognition is the outcome. FT-EC7 only applies when smartphone/SM is the DV in every analysis; this fails condition (a).",
+    "binding_rules_applied": [
+      "B2"
+    ],
+    "notes": "Screen time coded as dichotomous adherence categories rather than continuous measure or per-device/platform breakdown. Disqualifies on FT-IC2 per B2."
+  },
+  {
+    "paper_id": "112",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) study, Netherlands. Not US ABCD. B1 specifies NOT_MET for Amsterdam/Dutch ABCD."
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Unclear at abstract level. Exposes measured include 'personal cell phone and cordless phone use' and 'residential RF-EMF exposure.' RF-EMF exposure is NOT qualifying (falls under B7: RF-EMF → NOT_MET). Phone use would be qualifying if specified as smartphone/app/texting/video chat, but abstract only says 'cell phone and cordless phone use' without further detail. Requires PDF review for specificity."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional regression with associations and coefficients reported (β values inferred from abstract: 'associated with improved speed of information processing', etc.)"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract does not provide numeric coefficients, p-values, or CIs. States qualitative associations ('associated with improved', 'reduced') but no extractable β/OR/p/CI. PDF would clarify if numeric values are in tables/methods."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original cross-sectional analysis of ABCD cohort with cognitive outcomes assessed via Amsterdam Neuropsychological Tasks"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2016 in Environmental Research; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. FT-IC1 NOT_MET (Amsterdam ABCD, not US ABCD) disqualifies the paper entirely.",
+    "binding_rules_applied": [
+      "B7"
+    ],
+    "notes": "Primary disqualifier: NOT US ABCD. Secondary issue: RF-EMF exposure (B7) is not qualifying. Tertiary: abstract lacks extractable numerics for FT-IC4; PDF would be needed to confirm but FT-IC1 failure is terminal."
+  },
+  {
+    "paper_id": "434",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study indicated in abstract and journal (Pediatrics AAP). Title specifies 'US Adolescents'."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership / age of acquisition is a qualifying exposure (B1: smartphone ownership qualifies). Title explicitly: 'Early Smartphone Ownership in US Adolescents'."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Abstract snippet provided is extremely limited (truncated to ~20 words). Based on title and abstract context, study appears to examine sociodemographic associations WITH smartphone ownership (demographics → smartphone), not smartphone → outcome. No test of smartphone ↔ non-SM outcome mentioned in available text. Likely not an inferential test of SM effect on a distal outcome."
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No numeric data (β, OR, p, CI) in available abstract excerpt. PDF would be required to assess."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original analysis of US ABCD cohort"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Pediatrics; no indication of preprint/duplicate"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three FT-EC7 conditions likely met: (a) Smartphone is DV (demographics → early SM ownership), no SM→outcome analysis; (b) Predictors appear to be sociodemographics (sociodemographic associations); (c) Longitudinal structure inferred from 'early ownership' framing in ABCD prospective cohort. Applies B17 check—no disqualifying psychosocial/behavioral predictors evident in abstract. No cross-sectional/cross-lagged/bidirectional indicators. FT-EC7 = TRUE.",
+    "binding_rules_applied": [
+      "B1",
+      "B17"
+    ],
+    "notes": "Paper primarily descriptive of sociodemographic predictors of smartphone ownership (not an SM → outcome test). Fails FT-IC3 (no non-SM outcome). Would fail FT-IC4 if no numerics in PDF. Even if all IC criteria metthrough, FT-EC7 applies, so paper would be EXCLUDE per protocol (EC7=TRUE disqualifies)."
+  }
+]

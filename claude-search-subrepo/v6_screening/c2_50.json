@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "166",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly states first wave of ABCD Study, 9-10 year olds (n=4524 baseline, 3847 final sample), U.S. sample at 21 sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis employing multiple machine learning regression approaches (LASSO, ridge, elastic net, linear) on ABCD baseline data to assess relative importance of 43 demographic, psychological, behavioral, and cognitive variables with BMI."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Psychological Medicine, 2020."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time defined as \"the average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device\" - this is a multi-device composite bundling multiple device types (computer, cellphone, tablet, other) with no per-device breakdown isolating phone or social media. Per FT-IC2 conceptual rules, multi-device aggregated time does not qualify."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-IC2 fails on grounds of composite screen time without per-modality breakdown isolating phone or SM. Although screen time was a significant correlate in the final LASSO model, the construct does not meet the specificity requirement."
+  },
+  {
+    "paper_id": "156",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly states Adolescent Brain Cognitive Development Study (ABCD), Release 2.0, baseline cross-sectional survey. Over 11,000 U.S. children ages 9-10 across 21 study sites using epidemiologically-informed school-based recruitment."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis examining associations of screen media use (TV, video, video game, social media, texting, video chat) with sleep disturbance symptom severity using logistic regressions in a large baseline ABCD sample."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Sleep Health, 2020."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple phone and SM-specific constructs measured separately: social media use, texting (on cell phone), and video chat. These are paired as IVs with individual-trait-level sleep/health outcomes (sleep duration, sleep onset latency, insomnia symptom severity, excessive sleepiness, sleep-wake transition disturbances). Qualifying because social media and phone-specific texting/video chat are isolated from TV and generic gaming."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regressions report odds ratios and relative risks. From results: \"Greater screen media use, TV, video, and video game use, was associated with decreased sleep duration, increased sleep onset latency as well as greater excessive sleepiness, insomnia, and overall sleep disturbance symptom severity.\" Specific ORs and RRs reported in Tables 2-5 (e.g., for social media: OR 1.08-1.56 for various sleep outcomes, p<0.05)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results for SM/phone-sleep relationships reported throughout. Example: social media use >=2 hours associated with increased insomnia (OR 1.56, 95% CI 1.21-2.01, p<0.001). Multiple numeric results in Tables 2-5 across sleep outcomes."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline survey only). FT-EC7 applies only to longitudinal designs where SM is DV in all analyses.",
+    "notes": "Clear inclusion. Multiple screen media types measured separately; social media and phone-specific constructs (texting, video chat) are paired with sleep-wake disturbance symptom severity outcomes."
+  },
+  {
+    "paper_id": "162",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes Adolescent Brain and Cognitive Development (ABCD) study data. Methods state ABCD sample comprises cohort of 11,875 children aged 9-10 years, enrolled at 22 sites with catchment area encompassing over 20% of U.S. population. Data from ABCD Study Curated Annual Release 2.0."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using bootstrapped logistic regression to quantify associations between suicidal ideation/behaviors and measures of mental/physical wellbeing, behavior, cognition, and social/family environment on 7994 unrelated children from ABCD."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in The Lancet Psychiatry, 2020."
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract mentions \"higher weekend screen use time (OR 1.3, 95% CI 1.2-1.7)\" as predictor of child-reported suicidality but does not specify whether screen use is phone-specific, SM-specific, or a multi-device composite. Generic \"screen use\" terminology without breakdown isolating phone or SM cannot be confirmed as qualifying construct from abstract alone."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-IC2 cannot be determined from abstract due to lack of specificity about whether screen use variable isolates phone/SM or is a generic multi-device measure. PDF needed to resolve construct definition."
+  }
+]

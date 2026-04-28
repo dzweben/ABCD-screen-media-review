@@ -1,0 +1,134 @@
+[
+  {
+    "paper_id": "306",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, N=10,075, age 9-10 years at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported screen time (qualifying smartphone/screen variable per B5: time on phone/screen time is qualifying exposure). Also includes physical activity, caffeine, sleep - but screen time is the qualifying exposure."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multinomial logistic regression: adjusted Odds Ratios with 95% CI reported (e.g., screen time OR 2.27, 95% CI 2.03-2.53 vs No Distress trajectory). Citation: abstract states 'multinomial logistic regressions to examine associations between baseline lifestyle behaviors...and PLE trajectories.'"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: OR, 95% CI, and p-values reported in abstract. Example: screen time OR 2.27 (95% CI 2.03-2.53); all key results include numeric coefficients."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: ABCD baseline data with original latent growth mixture models and multinomial logistic regressions examining screen time \u2194 PLE trajectories."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No indication of duplicate; published 2026, Journal of child psychology and psychiatry."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time/lifestyle is the INDEPENDENT variable predicting PLE trajectories (outcome), not the DEPENDENT variable. FT-EC7 requires SM/smartphone as the DV with only demographic predictors. This paper has SM/screen time as IV \u2192 outcome (PLE). Does not meet criterion (a).",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Screen time = qualifying exposure (part of broader lifestyle assessment). The paper examines screen time \u2194 psychotic-like experiences, which is an SM-as-IV analysis."
+  },
+  {
+    "paper_id": "186",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, N=7,471 young adolescents, mean age 9.87\u00b10.62 years, US-based study."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen use and physical activities/sleep duration as lifestyle factors. Per methods/abstract: 'physical activities, screen use and sleep duration influenced fluid intelligence' and 'lifestyle factors on intelligence.' Screen use = qualifying smartphone/screen time variable (B5)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Spatial correlation (Spearman's rank correlation with bootstrapping via 5000 permutations) between intelligence-MRI markers and lifestyle factors. Mediation analysis via Matlab Mediation toolbox examining whether MRI phenotypes mediate lifestyle \u2192 intelligence associations. Methods state 'atlas-based spatial correlations' and 'mediation analysis' with statistical significance testing."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients present: mediation effects (Average Mediation Effect / AME) reported; p-values from 5000 permutation tests and recomputed null-statistic maps. PDF excerpt shows statistical tests with Spearman correlations and p-value adjustments (p<0.05, q-value<0.05)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: ABCD baseline imaging (MRI, PET), gene expression, lifestyle data with novel mediation analyses examining screen use \u2194 intelligence relationships mediated by neural/molecular mechanisms."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025, Translational Psychiatry. No evidence of prior publication or preprint duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen use is the INDEPENDENT variable predicting intelligence (fluid/crystallized), not the DV. Paper examines lifestyle (screen use) \u2192 intelligence relationships, not demographics \u2192 screen use only. Fails criterion (a): SM is IV, not DV in the reported analyses.",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Screen use is nested within broader lifestyle analysis (physical activity, sleep, screen use) as predictors of cognitive outcomes. Cross-sectional ABCD baseline design."
+  },
+  {
+    "paper_id": "194",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD study, 8,125 participants aged 9-11 at baseline, recruited across 21 sites. Based on NDA Release 3.0 baseline data."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Primary exposure is reading (books) and TV viewing. Reading is NOT a qualifying smartphone/SM variable (reading on screens \u2260 screen time per se; TV viewing alone is NOT qualifying per B5: 'TV-only...\u2192 NOT_MET'). No smartphone ownership, app use, SM platform use, or time-on-phone reported. TV viewing and reading are screen behaviors but don't qualify as smartphone/SM exposures under B5 criteria."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional associations analyzed via regression models examining reading/TV viewing \u2194 brain morphology and neurocognitive performance. Methods mention 'associations between reading and television viewing on brain morphology and neurocognitive performance.' Regression-based statistical tests reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients and statistics extractable from imaging correlations and cognitive performance associations, though specific beta/OR/p-values not shown in abstract/methods excerpt. Paper reports 'associations' with statistical significance adjustments for demographics, socioeconomic factors, ancestry, and imaging."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: ABCD baseline MRI and neurocognitive testing with novel regression models examining reading/TV \u2194 brain structure and cognitive outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025, Scientific Reports (Nature). No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 is NOT_MET (reading and TV viewing do not qualify as smartphone/SM variables per B5). Therefore FT-EC7 cannot apply (requires MET for IC1-6 first).",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Paper excluded at FT-IC2 level: reading and TV viewing are not qualifying smartphone or social media exposures. TV-only explicitly NOT qualifying per B5; reading on screens is not the same as smartphone/SM use."
+  },
+  {
+    "paper_id": "162",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD study population-based sample, N=7,994 children mean age 9.9 years. Enrolled at 22 sites with catchment area >20% of US population in age group."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Weekend screen use time as a predictor (self-reported/questionnaire). Screen use = qualifying smartphone/screen time variable per criteria (B5: 'time on phone'). Abstract: 'risk of child-reported suicidality increased with higher weekend screen use time (OR 1.3, 95% CI 1.2-1.7)'."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Bootstrapped logistic regression quantifying associations between suicidality and lifestyle/psychosocial factors including screen use. Abstract: 'bootstrapped logistic regression to quantify the association between suicidal ideation and behaviours, with measures of mental and physical wellbeing, behaviour, cognition, and social and family environment.' Odds ratios with 95% CI reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: Odds Ratios and 95% Confidence Intervals reported in abstract. Example: weekend screen use OR 1.3 (95% CI 1.2-1.7); parental supervision OR 0.8 (95% CI 0.7-0.9). Multiple ORs and CIs documented."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: ABCD baseline cross-sectional data with bootstrapped logistic regression examining screen use \u2194 suicidality associations across multiple domains."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2020, The Lancet Psychiatry. No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen use is the INDEPENDENT variable predicting suicidality (outcome), not the DV. Paper examines screen time + psychopathology + family factors \u2194 suicidal thoughts/behaviors. Fails criterion (a): screen/SM is IV, not DV. Also includes non-demographic predictors (psychopathology, family conflict per B17) which disqualifies even if SM were the DV.",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Weekend screen use is a qualifying exposure predicting suicidal ideation/behavior. Cross-sectional ABCD baseline design."
+  }
+]

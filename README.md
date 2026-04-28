@@ -46,7 +46,7 @@ README.md                       This file
 
 ---
 
-## PRISMA flow (current — v5 tightened criteria)
+## PRISMA flow (current — v6 conceptual criteria)
 
 | Stage | Records |
 |---|---:|
@@ -54,33 +54,38 @@ README.md                       This file
 | **Deduplication**: Unique records | 620 |
 | **Stage 1 (title/abstract)**: Advanced to full-text | 171 |
 | **Stage 1 excluded (by code)**: EC1–EC5 | 449 |
-| **Stage 2 (full-text)**: Included in synthesis | **107** |
-| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **62** |
-| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 6 |
-| &nbsp;&nbsp;&nbsp;FT-EC2 (no smartphone/SM variable) | 48 |
-| &nbsp;&nbsp;&nbsp;FT-EC4 (no smartphone/SM ↔ non-SM test or no extractable estimate) | 5 |
-| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal demographic → SM epidemiology) | 3 |
-| **Stage 2 NA_FOR_NOW** (no PDF; criteria unverifiable) | 2 |
+| **Stage 2 (full-text)**: Included in synthesis | **71** |
+| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **73** |
+| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC2 (no qualifying smartphone/SM ↔ individual-trait analysis) | 58 |
+| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical: review, commentary, protocol, resource paper) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal SM-as-DV-only with no SM-as-IV analysis) | 5 |
+| **Stage 2 UNSURE** (C1≠C2 substantive disagreement; awaiting human review) | 21 |
+| **Stage 2 NA_FOR_NOW** (no PDF; criteria unverifiable) | 6 |
 
 ---
 
-## Stage 2 screening pipeline (2L)
+## Stage 2 screening pipeline (2L) — v6
 
-Each of the 171 Stage-1 includes is screened atomically against six criteria (FT-IC1 through FT-IC6) and a directionality gate (FT-EC7):
+Each of the 171 Stage-1 includes is screened atomically against six criteria (FT-IC1, FT-IC5, FT-IC6, FT-IC2, FT-IC3, FT-IC4) and a directionality gate (FT-EC7), in cascade order:
 
-1. **C1_AI** — independent AI coder, full PDF review, per-criterion MET/NOT_MET/UNKNOWN with evidence
+1. **C1_AI** — independent AI coder, full PDF review, per-criterion MET/NOT_MET/UNKNOWN/DEFERRED with evidence
 2. **C2_AI** — independent AI coder, blinded to C1
-3. **Resolver** — independent AI pass only on criteria where C1 ≠ C2
-4. **Algorithmic aggregation** — hierarchical exclusion codes; no subjective judgment
+3. **Algorithmic aggregation** — hierarchical exclusion codes; no resolver, no subjective judgment
 
-**C1 vs C2 agreement (v5, pre-resolver):**
-- Pooled criterion-level: 88.4% agreement, Cohen's κ = **0.77** (substantial)
-- Paper-level full agreement: 69.6% (119/171)
-- Resolver adjudicated 52 papers with at least one criterion-level disagreement
+The v6 criteria removed the resolver entirely. Tighter criteria (conceptual smartphone/SM exposure, individual-trait outcome requirement, broader IC4, simplified FT-EC7, cascade-DEFERRED convention) produce convergent C1/C2 decisions by construction. Residual disagreements (21 papers) route to UNSURE for human review rather than algorithmic adjudication.
 
-The v5 criteria (with 20 binding borderline rules B1–B20) substantially improved IRR over v4 (κ=0.51 → 0.77).
+**C1 vs C2 agreement, by version:**
 
-See `02-L2/2L-criteria.md` for full criteria and edge-case rules (E1–E18).
+| Version | Pooled κ | Paper-level full agreement |
+|---|---:|---:|
+| v4 | 0.51 (moderate) | — |
+| v5 (B1–B20 binding rules + resolver) | 0.77 (substantial) | 69.6% (119/171) |
+| **v6 (conceptual + cascade-DEFERRED, no resolver)** | **0.90 (almost perfect)** | **83.6% (143/171)** |
+
+Per-criterion v6 agreement: FT-IC1 κ=1.00, FT-IC3/IC4 κ=1.00, FT-IC6 κ=1.00, FT-IC5 κ=0.83, FT-EC7 κ=0.79, FT-IC2 κ=0.70 (the only remaining bottleneck).
+
+See `02-L2/2L-criteria.md` for full v6 criteria.
 
 ---
 

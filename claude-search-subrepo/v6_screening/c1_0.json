@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "431",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from the Adolescent Brain Cognitive Development Study with 10,588 U.S. participants aged 12 years at assessment; mixed-effects logistic regression models test associations of smartphone ownership and age of first smartphone acquisition."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis reporting mixed-effects logistic regression models testing associations of smartphone ownership and age of first smartphone acquisition with depression, obesity, and insufficient sleep outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Pediatrics (2026); no evidence of preprint duplication or identical prior analysis."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership (yes/no) and age of first smartphone acquisition are qualifying phone-specific variables as IV. Health outcomes (depression, obesity, insufficient sleep) are individual-trait-level variables. Paper pairs phone exposure with depression (OR 1.31, 95% CI 1.05-1.63), obesity (OR 1.40, 95% CI 1.20-1.63), and insufficient sleep (OR 1.62, 95% CI 1.46-1.79) at age 12."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported throughout: odds ratios with 95% confidence intervals for smartphone ownership associations (depression OR 1.31, obesity OR 1.40, insufficient sleep OR 1.62) and for age of acquisition (OR 1.09 for obesity per year earlier, OR 1.08 for insufficient sleep per year earlier)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Results remain significant after adjustment for demographic, socioeconomic, and behavioral covariates; E-value sensitivity analyses conducted; results consistent across multiple assessment timepoints (ages 12 and 13)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (smartphone ownership measured at age 12; outcomes measured at same timepoint). Smartphone is IV, health outcomes are DV. EC7 does not apply to cross-sectional designs.",
+    "notes": "Full PDF reviewed. Clear methods section with validated outcome measures (KSADS-5 for depression, BMI for obesity, sleep hours from Munich Chronotype Questionnaire). Large representative sample with detailed covariate adjustment."
+  },
+  {
+    "paper_id": "122",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes longitudinal data from the Adolescent Brain Cognitive Development Study (ABCD) with 11,875 children at baseline ages 9-10 years (ages 10, 11, 12 in study); explicitly states ABCD cohort at 21 U.S. sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using confirmatory factor analysis, linear mixed models testing prospective associations, and mediation models examining environmental and lifestyle factors as mediators of neurodevelopmental-to-psychiatric pathways."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in JAACAP Open (2025); no evidence of preprint duplication or identical prior analysis."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper lists screen use as a candidate mediator in the relationship between neurodevelopmental spectrum and psychiatric dimensions (Table S2, S3, Figures 2-3). Screen use is tested as a MEDIATOR (pathway variable) of the neurodevelopmental-to-psychiatric association, not as a primary IV or DV paired with an individual-trait variable. Methods state 'mediation models examined whether environmental (eg, family conflict, school involvement) and lifestyle (eg, sleep problems, screen use) factors at age 11 mediated these associations.' Screen use does not qualify as an IV or DV in its own substantive relationship; it is covariate-only/mediator-only per FT-IC2 rules."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Full PDF reviewed. Paper is a rigorous longitudinal mediation study with large representative sample, but screen use is treated as a mediator/covariate only, not as a qualifying SM/phone variable with an IV-or-DV role in relation to an outcome."
+  },
+  {
+    "paper_id": "306",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract states 'Using data from the Adolescent Brain Cognitive Development Study (N = 10,075, age 9-10 years at baseline)' with 21 U.S. sites implied in ABCD design."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using latent growth mixture models to characterize trajectories and multinomial logistic regressions to examine associations between baseline lifestyle behaviors and PLE trajectories."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Journal of Child Psychology and Psychiatry (2026); no evidence of preprint duplication or identical prior analysis."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported screen time is a qualifying screen use variable (abstract: 'self-reported screen time, physical activity and caffeine intake'). Paired with psychotic-like experience (PLE) trajectories as outcome (individual-trait-level psychiatric variable). Screen time is IV in the analysis; PLEs are DV."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Abstract reports quantitative results: 'individuals in the Persistent Elevated Distress trajectory spent more time using screens (adjusted Odds Ratio [OR] 2.27, 95% confidence interval [CI] 2.03-2.53)' and additional numeric results for other lifestyle factors."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Results remained statistically significant when established risk factors of psychosis included in model; findings consistent for both total and distress-related PLE scores."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with screen time as baseline predictor of PLE trajectory (screen time is IV, PLE is DV). EC7 applies only when SM is DV-only with no SM-as-IV analysis. Here screen time is IV, so EC7 does not apply.",
+    "notes": "PDF unavailable; scored from abstract only. Abstract provides sufficient detail on design (latent growth mixture models, baseline predictors), exposure (screen time), outcomes (PLE trajectories), and quantitative results (ORs with 95% CIs). Meets all criteria via abstract."
+  }
+]

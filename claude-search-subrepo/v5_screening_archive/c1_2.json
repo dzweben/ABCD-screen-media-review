@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "314",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study explicitly mentioned; prospective ABCD data from 1985 adolescents, mean age Year 2 = 11.91 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use measured via Youth Screen Time Survey (qualifying SM variable). Meets B1—YSTS paper reporting separate estimates for SM use as predictor."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Prospective regression models testing associations between sleep, social media use, and brain activation over two years; bidirectional tests of SM ↔ sleep duration (prospective paths)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported: 'Greater social media use at Year 2 predicted shorter sleep duration at Year 4, particularly among adolescents with lower activation in nucleus accumbens, cingulate gyrus, insula and putamen' (specific coefficients available in main text)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining prospective associations between SM use, sleep, and brain activation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original publication, 2026, Journal of Sleep Research"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper violates FT-EC7 condition (B20): Bidirectional/cross-lagged analysis present. Paper explicitly tests SM → sleep AND sleep → SM (sleep at Year 2 predicted increased SM use at Year 4). Additionally, brain activation (neural features) is included as predictor/moderator of SM, which per B17 disqualifies EC7 (neural features not in closed demographic set).",
+    "binding_rules_applied": ["B1", "B20", "B17"],
+    "notes": "Paper 314 is INCLUDE (meets IC1-IC6) but EXCLUDE under FT-EC7 (longitudinal demographic-only exclusion). Brain activation as moderator and bidirectional/cross-lagged design prevent EC7 application."
+  },
+  {
+    "paper_id": "380",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data, N=11,878 children ages 9-10"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract mentions 'screen time use' but no qualifying smartphone/SM variable reported with separate coefficient. All reported associations are with demographics (parental education, financial hardship, neighborhood safety) and psychopathology (mood, anxiety, PTSD, behavioral disorders). Screen time not presented as independent variable with extractable coefficient for SM outcome relation. Does not meet B1-B7 qualifying measures."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Dependent on IC2 status. If screen time were reported, odds ratios/adjusted odds ratios shown for demographic/clinical correlates of emotion dysregulation (e.g., aOR = 0.716 for parental education). But primary analysis does not target SM-outcome association."
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Numeric data available (aOR, p-values) but not for qualifying SM variable per IC2 definition"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis of emotion dysregulation prevalence and correlates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original publication, 2026, Journal of Child and Adolescent Psychopharmacology"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails IC2 (no qualifying SM/smartphone variable as independent variable). Therefore FT-EC7 criterion not evaluable; paper excluded at FT-IC2 stage.",
+    "binding_rules_applied": ["B5", "B7"],
+    "notes": "Paper 380 is EXCLUDE. Generic 'screen time use' without platform/device specificity does not meet IC2 criteria. Paper focuses on emotion dysregulation correlates (psychopathology, sociodemographics) rather than SM use as exposure."
+  },
+  {
+    "paper_id": "534",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from three consecutive waves (Years 2-4); approximately 7,260 participants; US-based longitudinal cohort"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is ADHD diagnosis (via KSADS), not smartphone/SM. Outcome is Video Game Addiction Questionnaire (VGAQ) measuring gaming addiction symptoms. Gaming alone is not qualifying per B5 rule: 'console/PC gaming, unspecified-platform gaming... → NOT_MET'. Paper examines ADHD → gaming addiction pathway with psychosocial mediators (family conflict, school involvement, prosocial peer involvement), but no qualifying smartphone or social media variable as exposure."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Dependent on IC2. Regression models (linear mixed-effects and parallel mediation) are present, but no SM/smartphone outcome inference tested. ADHD is IV, gaming addiction (VGAQ) is DV."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Numeric results available (β = 1.29 [95% CI: 0.97, 1.61], p < 0.0001 for ADHD on VGAQ; mediation percentages 7.4%, 5.1%, 5.8%), but not for qualifying SM/smartphone variable per IC2"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with parallel mediation model examining longitudinal pathways from ADHD to gaming addiction"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original publication, 2026, Frontiers in Psychiatry"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails IC2 (no qualifying smartphone/SM exposure). FT-EC7 not evaluable; paper excluded at FT-IC2 stage.",
+    "binding_rules_applied": ["B5"],
+    "notes": "Paper 534 is EXCLUDE. Primary exposure is ADHD diagnosis; outcome is gaming addiction (not SM). Gaming-only exposure does not meet IC2 qualifying measures per B5. No smartphone or social media variables as exposures."
+  }
+]

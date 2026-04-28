@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (2016–2021); explicitly stated; 21 sites, NIH-funded"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; growth mixture modeling to identify screen use trajectory subgroups"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Preventive Medicine Reports"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use defined as composite sum of 'television, videos, video games, social media, video chat, and texting' (multi-device/multi-modality with no per-modality breakdown isolating phone/SM). Outcomes paired with screen use are sociodemographic (race/ethnicity) and contextual (perceived racism/discrimination), not individual-trait-level variables (e.g., no behavioral, neural, health, cognitive, or well-being outcomes)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper excluded under FT-EC2: composite screen time without per-modality breakdown and outcomes limited to demographic/contextual variables."
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; 11,876 children at baseline (ages 119.0 [7.5] months); 21 U.S. sites; cross-validated against HCP-D independent sample"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; K-means clustering to identify SMA patterns; cross-sectional and longitudinal (1-year and 2-year follow-up) associations with behavioral and neural outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of the American Academy of Child & Adolescent Psychiatry"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen Media Activity (SMA) patterns identified via 14-item self-report. SMA is IV; outcomes are individual-trait-level: neurocognitive performance, behavioral problems, psychotic-like experiences, impulsivity, sensitivity to punishment/reward, resting-state brain functional connectivity (all within-person developmental constructs)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: video-centric higher-frequency SMA vs lower-frequency comparison. Poorer neurocognitive performance (β = −.12, 95% CI [−0.08, −0.16], FDR-corrected p < .001); more behavioral problems (β = .13, 95% CI [0.09, 0.18], FDR-corrected p < .001); more psychotic-like experiences (β = .31, 95% CI [0.27, 0.36], FDR-corrected p < .001). Longitudinal persistence of associations at 1-year and 2-year follow-up."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Same quantitative evidence as FT-IC3: standardized β coefficients, 95% CIs, and FDR-corrected p-values for SMA pattern associations with neurocognitive, behavioral, and brain connectivity measures."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design includes cross-sectional (baseline) and longitudinal (follow-up) analyses. SMA is IV (predictor of developmental outcomes), not DV-only. Behavioral and neural outcomes are DV. EC7 does not apply.",
+    "notes": "Paper included; meets all substantive criteria with strong quantitative evidence."
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; >10,000 youth at ages 9–10 at baseline; 21 U.S. sites; explicit reference to ABCD 4.0 release and cohort structure"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; machine learning models (PCR and LASSO) predicting ADHD symptoms using neurocognitive abilities, demographics, and child/family characteristics including screen time"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Translational Psychiatry"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time included as IV in predictive models. Output is ADHD symptoms (parent- and teacher-reported) at 1-year and 2-year follow-up, an individual-trait-level variable (behavioral/psychiatric symptom). Paper states 'screen time' among 'features from multiple domains contributed meaningfully to prediction, including neurocognition, sex, self-reported impulsivity, parental monitoring, and screen time.'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results: models explained 15–20% of variance in 1-year ADHD symptoms (R²) and 12–13% in 2-year ADHD symptoms across left-out sites. Feature importance weights provided in Figures 3 and 4 (standardized β and LASSO weights showing screen time contribution to prediction)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Same quantitative evidence as FT-IC3: R² values, feature importance weights (standardized coefficients), and model performance metrics (PCR r and LASSO r) demonstrating screen time contribution to ADHD prediction."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (baseline predicting 1- and 2-year follow-up); screen time is IV (predictor), not DV-only; ADHD symptoms are DV. EC7 does not apply.",
+    "notes": "Paper included; meets all substantive criteria with machine learning quantitative evidence."
+  }
+]

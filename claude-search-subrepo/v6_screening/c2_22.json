@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "187",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study explicitly analyzes data from U.S. Adolescent Brain Cognitive Development (ABCD) Study with 10,116 children at baseline (ages 9–10) from 21 sites. Data Release 5.0 from NIMH Data Archive."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear mixed-effects models and mediation analysis examining associations between screen time, ADHD symptoms, and brain structure from ABCD baseline and 2-year follow-up data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Translational Psychiatry, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time assessed as total time on various devices (weighted daily score from weekday/weekend); paired with individual-trait-level outcomes: ADHD symptoms (behavioral/psychiatric measured via Child Behavior Checklist) and brain structure (neural: cortical thickness, cortical volume, putamen volume). Screen time functions as IV; other side is individual-trait-level."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple inferential results: screen time associated with increased ADHD symptoms (β = 0.032, p = 0.001); reduced cortical thickness in right temporal pole (β = −0.036, FDR-corrected p = 0.020), left superior frontal gyrus (β = −0.028, FDR-corrected p = 0.020), left rostral middle frontal gyrus (β = −0.030, FDR-corrected p = 0.020)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Mediation analysis: total cortical volume partially mediated screen time–ADHD symptoms relationship (indirect effect β = 0.001, 95% CI 0.000–0.002, p = 0.023). All analyses report numeric quantifications (β coefficients, p-values, FDR corrections)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (baseline to 2-year follow-up), but screen time is IV predicting ADHD symptoms and brain structure as DV. SM/phone is never DV in any analysis. EC7 applies only when SM is DV in every analysis with no SM-as-IV anywhere; this condition is not met.",
+    "notes": "Paper measures composite screen time (TV + games + phone) without explicit per-modality breakdown isolating phone or SM. However, the construct measured is device-based time (not generic internet or contextual-only), and the other-side outcomes are clearly individual-trait-level (ADHD behavioral symptoms, neural brain structure). Qualifies on FT-IC2 and passes all subsequent criteria."
+  },
+  {
+    "paper_id": "238",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Abstract explicitly states \"Data from the Adolescent Brain Cognitive Development (ABCD) study.\" No PDF available; default rule applies: abstract names \"ABCD Study\" with U.S. context implied (adolescents, sleep outcomes). MET by default."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: abstract describes t-tests and structural equation modeling (SEM) applied to ABCD data to assess behavioral, social, and psychological predictors of sleep outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Sleep Advances: a journal of the Sleep Research Society, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured as self-reported weekday/weekend use; paired with individual-trait-level health outcomes: sleep duration (behavioral/health), chronotype (biological rhythm, individual trait), social jet lag (sleep-related behavioral outcome). Abstract: \"Screen time was more prevalent among Hispanic adolescents, particularly on weekday evenings (Cohen's d = 0.27) and weekend evenings (Cohen's d = 0.35), and was strongly associated with later chronotype and greater social jet lag.\" Other side (chronotype, sleep, social jet lag) are individual-trait-level."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: Cohen's d effect sizes for screen time differences (d = 0.27 weekday evening, d = 0.35 weekend evening). SEM model variance explained: 12.9% chronotype, 10.5% social jet lag, 6.2% weekday sleep duration. Associations between screen time and chronotype/sleep outcomes described numerically."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: Cohen's d values (0.27, 0.35), R² model fit (12.9%, 10.5%, 6.2%), associations between screen time and sleep outcomes quantified in SEM framework."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (snapshot at baseline data collection); no longitudinal follow-up mentioned in abstract. EC7 applies only to longitudinal designs. Does not apply here.",
+    "notes": "No PDF available; scored from abstract only. Screen time is primary predictor; sleep and circadian outcomes are criterion variables. All individual-trait-level. Passes cascade."
+  },
+  {
+    "paper_id": "3",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study explicitly analyzes \"Adolescent Brain Cognitive Development Study (2016-2022), with population-based samples from 21 US sites.\" Baseline ages 9–10 years, 4-year follow-up data (years 2–4 used for addictive use trajectories, year 4 for outcomes)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis: latent class linear mixed models to identify addictive use trajectories; Poisson regression for categorical outcomes (suicidal behaviors, ideation); generalized linear models for continuous outcomes (internalizing/externalizing symptoms)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in JAMA, published online June 18, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Addictive use of social media, mobile phones, and video games measured via validated child-reported scales (6-item SMAQ, 8-item MPIQ, 6-item VGAQ) from years 2–4. Paired with individual-trait-level mental health outcomes: suicidal behaviors, suicidal ideation (psychiatric/mental health), internalizing symptoms (anxiety, depression), externalizing symptoms (aggression, rule-breaking). SM/phone are IV; outcomes are DV and represent individual-trait-level constructs (mental health, behavioral symptomatology)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Extensive quantitative results: increasing social media addictive use trajectory RR = 2.14 (95% CI 1.61–2.85) for suicidal behaviors, RR = 1.46 (95% CI 1.28–1.67) for suicidal ideation; high mobile phone RR = 2.17 (95% CI 1.48–3.19) for suicidal behaviors; video game high addictive use trajectory RR = 1.54 (95% CI 1.18–2.03) for suicidal behaviors; mean differences for CBCL internalizing T scores (e.g., video games 2.03, 95% CI 1.45–2.61)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results across all analyses: risk ratios with 95% CIs for suicidal outcomes, mean differences with 95% CIs for CBCL internalizing/externalizing symptoms. All quantified."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (baseline through year 4 follow-up; exposure measured years 2–4, outcomes at year 4). However, addictive screen use (SM/phone/games) is IV in all analyses; suicidal behaviors/ideation and mental health are DV. SM/phone are never positioned as DV. EC7 requires SM as DV in every analysis with no SM-as-IV anywhere; this criterion is not met because SM is always IV.",
+    "notes": "Measures addictive use (compulsive, difficulty disengaging, distress when not using) for three distinct platforms separately, each paired with individual-trait-level mental health outcomes. Longitudinal trajectory design with prospective associations. Passes all criteria."
+  }
+]

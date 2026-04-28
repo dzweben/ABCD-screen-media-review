@@ -1,0 +1,45 @@
+[
+  {
+    "paper_id": "172",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC1",
+        "status": "NOT_MET",
+        "evidence": "Methods section states: 'Data were derived from two independent population-based cohorts. The ABCD Study is based at 21 sites in the United States...The Generation R Study conducted at one study site in Rotterdam, The Netherlands.' Results pooled both cohorts (ABCD N=8,699; GenR N=3,739) with no separately reported ABCD-only estimates.",
+        "binding_rules_cited": ["2L-criteria.md FT-IC1 NOT_MET rule"],
+        "rationale": "Pooled analysis with Generation R (Dutch cohort) where U.S. ABCD-only estimates are not separately extractable. Per FT-IC1 rule: 'Pooled analysis with another cohort where U.S.-ABCD-only estimates are NOT extractable' triggers FT-EC1. C1 correctly identified this; C2 incorrectly asserted ABCD estimates were separate per TTE framework, but they were not reported separately in results."
+      },
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Table 2 reports associations for 'Screen time (hr/day)' with brain structure and internalizing symptoms. Results section states adherence to 'more stringent ST guidelines (0-1 hr) decreased internalizing symptoms.' No breakdown into qualifying smartphone/social media items (texting, video chat, social media) or per-app categories. Screen time is measured as a summed total construct with no per-modality coefficient.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "Paper measures only total/composite screen time with no per-item breakdown. The abstract describes ST, PA, sleep, and social support as distinct modifiable factors, but results report only the total ST construct. Per B2 (BINDING): 'Paper uses YSTS but reports only a summed total screen time estimate (or a single composite) with no per-modality breakdown anywhere → FT_IC2 = NOT_MET (FT-EC2).' C2 is correct; C1 incorrectly invoked B5 (which applies to TV-only, not composite ST)."
+      }
+    ]
+  },
+  {
+    "paper_id": "176",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Methods: 'Four lifestyle risk indicators were included in the current study...sleep duration, physical activity, body mass index [BMI], and screen time.' Abstract: 'Using confirmatory factor analysis, a single lifestyle risk factor domain (measured by sleep, physical activity, BMI, and screen time) was shown to fit the data well.' Figure 1 depicts screen time (yst1, yst2, yst3) as measured indicators loading onto a latent 'RISK_T1' construct with no separate coefficient for screen time alone reported in Table 2.",
+        "binding_rules_cited": ["B11"],
+        "rationale": "Screen time is one of four variables embedded in a single latent lifestyle risk factor. Only the latent construct coefficient is reported (Table 2 shows 'lifestyle risk' domain pathway coefficients, not screen time separately). Per B11 (BINDING): 'SM is one of multiple variables loading on a single latent score, and only the latent score's coefficient is reported → FT_IC2 = NOT_MET (FT-EC2).' C1 correctly applied B11; C2 misinterpreted the latent structure as qualifying because screen time is 'measured.' It must be separately extractable to qualify."
+      }
+    ]
+  },
+  {
+    "paper_id": "178",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC5",
+        "status": "NOT_MET",
+        "evidence": "Title page and introduction (pages 835–836) explicitly state this is an 'INTRODUCTION to the Special Issue' that 'showcase[s] the work of...accomplished early-stage investigators' and reviews papers in the special issue. The paper contains no Methods, Results, or original empirical ABCD analysis section—only a literature overview and framing of topics addressed by other papers in the special issue.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "Per B14 (BINDING): 'Editorial, commentary, special-issue introduction, perspective, or letter with no original ABCD analysis → FT_IC5 = NOT_MET (FT-EC3).' This is a special-issue introduction with no empirical data analysis. It fails FT-EC3 hierarchical exclusion before FT_IC1 or FT_IC2 are evaluated. C2 correctly classified this as non-empirical; C1 incorrectly assigned MET to FT_IC1, treating the mention of ABCD as sufficient when no analysis is conducted."
+      }
+    ]
+  }
+]

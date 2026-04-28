@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study data (2016-2020), 6,749 adolescents aged 12-13, 21 recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; linear regression models estimating associations between ACE score and screen time/physical activity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal publication, Academic Pediatrics 2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported hours per day across 7 modalities: texting, social media, video chatting, browsing, gaming, streaming) paired with individual-trait-level outcome: ACE score (trauma exposure). ACEs qualify as within-person construct."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis performed; adjusted linear regression models with numeric results"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported throughout: adjusted model B=0.44 (95% CI 0.26-0.62), p<.001 for ACE→screen time; multiple regression coefficients with significance tests and confidence intervals"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (May 2020 snapshot), not longitudinal; EC7 rule does not apply",
+    "notes": "Strong paper; ACEs as exposure, screen time as outcome. Direction is clear and meets FT-IC2 criteria. No longitudinal follow-up so EC7 does not trigger."
+  },
+  {
+    "paper_id": "190",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD dataset, 9,855 children ages 9-10 at baseline with 2-year follow-up; U.S. cohort explicitly stated"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; longitudinal measurement invariance model and latent change score model examining screen time impact on intelligence change over 2 years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal publication, Nature Scientific Reports 2022"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time construct bundles three modalities (watching, socializing, gaming) without per-modality breakdown isolating phone or social media. Methods state 'we analyzed major screen time categories separately' but these categories are behavioral activities (watching, gaming, socializing), not device-specific modalities. This is multi-activity composite with no phone/SM isolation. Fails FT-IC2 requirement for qualifying SM/phone variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Exclusion code FT-EC2. The paper measures generic screen time activities (watching, gaming, socializing) as composite without device-specific breakdown isolating phone or SM. Does not meet FT-IC2 conceptual requirement for qualifying SM/phone exposure."
+  },
+  {
+    "paper_id": "110",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, 11,000+ children aged 9-11; U.S. study with genetics, neuroimaging, behavioral data from multiple timepoints"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-sectional and longitudinal analyses including cross-lagged panel model (CLPM) and mediation models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal publication, EBioMedicine 2022"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time utilization (STU) measured as total self-reported screen time (validated construct in ABCD); paired with ADHD trait (individual-trait-level behavioral/neuropsychiatric outcome). ADHD symptom severity qualifies as individual-trait-level variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analyses performed: cross-sectional correlations (r values reported), longitudinal CLPM, mediation analyses with path coefficients"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results throughout: Pearson correlations (e.g., STU with FA values, p<.05), CLPM path coefficients (β=0.016, β=0.044), mediation indirect effects with bootstrap CIs. Multiple numeric results across main and supplementary analyses."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Bidirectional/cross-lagged design: STU and ADHD are both IV and DV in longitudinal analyses (CLPM structure). EC7 rule requires DV-only with no SM-as-IV anywhere; this paper has SM as both predictor and outcome. EC7 does not apply.",
+    "notes": "Strong longitudinal paper. Clear evidence of bidirectional associations between STU and ADHD across cross-sectional, longitudinal, and mediation pathways. All criteria met."
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "paper_id": "388",
+    "FT_IC1": {"status": "MET", "evidence": "US ABCD Study, baseline cross-sectional data from 9254 youth aged 9-10 years"},
+    "FT_IC2": {"status": "MET", "evidence": "Screen media activity (SMA) measured separately: TV/movies, videos, video games, texting, social media, video chatting, mature video games, R-rated movies. B1 applies: separate β/OR reported for multiple SM-related variables."},
+    "FT_IC3": {"status": "MET", "evidence": "Logistic mixed models with adjusted odds ratios (ORs) and 95% CIs for recreational activity engagement by SMA variables; multiple comparisons with p-values reported"},
+    "FT_IC4": {"status": "MET", "evidence": "Multiple ORs with 95% CIs reported: e.g., SMA games/movies vs. social (0.83, 95% CI 0.76-0.89); soccer (0.93, 0.88-0.98); baseball (0.92, 0.86-0.98); main text and tables"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis of US ABCD Study; logistic mixed models examining associations between SMA latent factor and recreational activity endorsement"},
+    "FT_IC6": {"status": "MET", "evidence": "No evidence of preprint, abstract, or duplicate publication"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is independent variable predicting recreational activity outcomes (not dependent variable). Predictors include non-demographic factors: cognition, psychopathology, social environment. Cross-sectional design. Condition (a) fails.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Group factor analysis used to create latent SMA factor comprising six types of screen time. All inclusion criteria met. Study explicitly states SMA measured separately for different content types and outcomes assessed."
+  },
+  {
+    "paper_id": "57",
+    "FT_IC1": {"status": "MET", "evidence": "US ABCD Study, baseline data from 9986 families (9987 youth ages 9-10) from Adolescent Brain and Cognitive Development Study"},
+    "FT_IC2": {"status": "MET", "evidence": "Multiple qualifying screen time variables measured separately: TV/movie, video, video game, texting, social media, video chatting, mature video game, R-rated movie. B1 applies: separate coefficients reported for different types of screen time in network models."},
+    "FT_IC3": {"status": "MET", "evidence": "Mixed graphical models estimating network edges (conditional dependencies) between mood symptoms and screen time types; edge weights and conditional relationships reported with statistical significance"},
+    "FT_IC4": {"status": "MET", "evidence": "Network edge weights reported; statistical significance of edges indicated; results reported in main text and supplementary figures; network centrality measures computed"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis of US ABCD Study; network analysis examining relationships between mood symptoms and screen time types with BIS/BAS and parental monitoring"},
+    "FT_IC6": {"status": "MET", "evidence": "No evidence of preprint, abstract, or duplicate publication"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable predicting mood symptoms (not dependent variable). Predictors include non-demographic confounders: BIS/BAS (behavioral inhibition/activation systems), parental monitoring. Condition (a) fails.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Network analysis approach examining mood symptom connectivity and screen time associations. Multiple screen time types examined separately per B1. Study accounts for theoretically important personality and parental factors."
+  },
+  {
+    "paper_id": "239",
+    "FT_IC1": {"status": "NOT_MET", "evidence": "Study participants from Dutch ABCD Study (n=2,952 children ages 9-11) and Spanish INMA Project (n=261 adolescents ages 17-18). Not US ABCD Study. Does not meet inclusion criterion."},
+    "FT_IC2": {"status": "UNKNOWN", "evidence": "Not evaluated due to IC1 not met. However, paper does assess screen time (mobile phones, tablets, laptops) and RF-EMF exposure."},
+    "FT_IC3": {"status": "UNKNOWN", "evidence": "Not evaluated due to IC1 not met. Paper reports regression coefficients for RF-EMF dose and screen time associations with cognitive outcomes."},
+    "FT_IC4": {"status": "UNKNOWN", "evidence": "Not evaluated due to IC1 not met. Beta coefficients with 95% CIs reported in main text."},
+    "FT_IC5": {"status": "UNKNOWN", "evidence": "Not evaluated due to IC1 not met. Original cross-sectional analysis from Generation R and INMA cohorts."},
+    "FT_IC6": {"status": "UNKNOWN", "evidence": "Not evaluated due to IC1 not met."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not meet IC1 (not US ABCD Study). Disqualified at population criterion.",
+    "binding_rules_applied": [],
+    "notes": "Study uses Dutch ABCD Study and Spanish INMA Project, not US ABCD Study. Fails inclusion criterion FT-IC1. No further screening warranted."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "439",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline ABCD data: 'Adolescent Brain Cognitive Development (ABCD) participants with useable baseline structural imaging (N = 10,691; 5,107 girls) were analyzed'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analyses: JIVE approach to identify cortical/subcortical covariation patterns; linear mixed-effect models testing associations with SMA, psychopathology, cognition, sleep"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed full paper in Journal of Behavioral Addictions (2022)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) is primary IV: 'total number of hours spent on all SMA activities based on youth self-report' across six activity types (TV, videos, games, texting, social networking, video-chatting). Paired with individual-trait-level outcomes: externalizing psychopathology, psychopathology measures, sleep disturbances, cognitive performance"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression coefficients: brain structural covariation pattern associated with SMA (β = 0.107, P = 0.002); pattern also associated with externalizing psychopathology (β = 0.117, P = 0.002)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported throughout: β coefficients, P values, R² (R² = 0.104% for total screen time; R² = 0.10% for externalizing behavior); mixed-effects models with standardized estimates"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline data only), not longitudinal. EC7 does not apply when design is not longitudinal",
+    "notes": "Qualifies across all criteria. Cross-sectional design with clear SMA operationalization and individual-trait-level outcome pairing (neural structure + behavioral/mental health outcomes)"
+  },
+  {
+    "paper_id": "283",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline ABCD cohort: 'Using data from the Adolescent Brain and Cognitive Development (ABCD) study...baseline visit of the ABCD cohort, which consisted of 11,834 children ages 9-10'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: performs confirmatory factor analysis (bifactor models) and multiple linear regression testing p factor stability and validity across different behavioral measures"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed conference paper, 2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time appears only as a covariate in a single mixed-effects model predicting the general p factor: 'A mixed-effects model was constructed to measure the association of the p factor with screen time activity, sleep duration, physical activity, household income, and gender (altogether, these explained 8.02% of the variance in the p factor).' Screen time is not operationalized as a primary IV or DV paired with an independent individual-trait-level outcome. The paper's primary analysis focuses on bifactor modeling of mental health constructs; screen time is a demographic/behavioral control variable, not an exposure of interest in an inferential relationship. Does not qualify per FT-IC2"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-IC2 NOT_MET: Screen time is analyzed only as a covariate in a model predicting the p factor (mental health); it is not paired as IV or DV with a separate individual-trait-level outcome. Pure psychometric/validation paper logic applies: the SM variable does not function as a focal predictor or outcome in an SM ↔ outcome relationship"
+  },
+  {
+    "paper_id": "129",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly describes U.S. ABCD Study: 'The Adolescent Brain Cognitive Development (ABCD) study seeks to shed light on developmental trajectories by enrolling nearly 12,000 youth aged 9 and 10 years from across the United States'"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "This is a commentary/editorial article, not an original empirical analysis. It describes the ABCD Study infrastructure, data resources, open science model, and responsible data use principles. No original statistical analyses of ABCD data are reported. Does not meet FT-IC5 per criteria section 2.2"
+    },
+    "FT_IC6": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC2": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-IC5 NOT_MET: Commentary/perspective piece on ABCD Study resources and responsible data use. No empirical analyses reported. Exclusion code FT-EC3 applies"
+  }
+]

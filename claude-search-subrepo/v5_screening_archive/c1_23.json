@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "95",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study (Adolescent Brain and Cognitive Development study). Longitudinal data from U.S.-based study with 543 participants followed at year 2 and year 4."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Video Game Addiction (VGA) Questionnaire (6-item) and Social Media Addiction (SMA) Questionnaire (6-item). Adapted from Bergen Facebook Addiction Scale, assessing addictive use patterns of social media and video games (B1, B6)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models (LMMs) examining interaction effects (VGA × Time, SMA × Time) on neural beta-weights. Regression coefficients reported for reward and loss contrasts across 8 ROIs."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple regression coefficients with 95% CI and p-values reported in tables (Table 3, Table 4). Examples: VGA × Time effects on left nucleus accumbens loss contrast (b = 0.106, 95% CI [0.040, 0.172], p = .002). Beta-weights for reward/loss contrasts across all ROIs."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD data. Longitudinal neuroimaging study examining bidirectional associations between VGA/SMA and fMRI activation during Monetary Incentive Delay (MID) task."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Computers in Human Behavior (2025), DOI: 10.1016/j.chb.2025.108554. No evidence of duplicate publication."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper has SM → non-SM-outcome analyses (SM predicting neural outcomes, not SM as dependent variable). VGA and SMA are independent variables predicting neural reward/loss sensitivity (not demographic-only predictors of SM). Therefore FT-EC7 does not apply. Violates condition (a) of FT-EC7 definition.",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Study examines VGA and SMA as predictors of neural reward circuit function, not as outcomes predicted by demographics. Bidirectional effects tested (SM predicting neural sensitivity AND neural sensitivity predicting SM). Cross-sectional and longitudinal paths examined."
+  },
+  {
+    "paper_id": "443",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study Release 5.1. Cross-sectional networks at 2-year follow-up (T2, ages 11-12) with 9,054 youth and 4-year follow-up (T4, ages 13-14) with 4,007 youth. Cross-lagged-panel-network (CLPN) analysis with 3,954 youth."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen use measures: self-reported screen time (time on video games, social media, TV, phone checking); problematic screen use assessed via Video Game Addiction Questionnaire (VGAQ), Social Media Addiction Questionnaire (SMAQ), and Mobile Phone Involvement Questionnaire (MPIQ). Qualifies as smartphone and social media variables (B1, B6)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Network analysis with multiple inferential tests: cross-sectional networks derived using graphical LASSO; cross-lagged-panel-network (CLPN) models examining temporal relationships. Edge weights and centrality indices calculated with statistical inference."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Network centrality metrics reported with 95% CI (e.g., Table 8 reports strength differences with CI ranges). Beta weights from CLPN analyses reported in tables. Example: out-strength associations with environmental conditions quantified numerically."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data. Network analysis examining relationships between screen use measures, behavioral tendencies, psychopathology, and environmental factors in adolescents."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions (2025), DOI: 10.1556/2006.2025.00035. No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper examines screen use (including social media and video games) as both independent and dependent variables in relation to behavioral/psychopathological outcomes. Screen use is not the sole dependent variable, and predictors include non-demographic factors (behavioral tendencies, psychopathology, environmental factors like family conflict, peer involvement). Violates conditions (a), (b), and (c) of FT-EC7. Additionally, cross-sectional network analysis is included (violates B15 carve-out).",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Problematic screen use measured as continuous functional impairment measure, not solely screen time (B2 not applied). Video games and social media treated separately in network analysis. Both T2 and T4 analyses included (cross-sectional at both timepoints)."
+  },
+  {
+    "paper_id": "234",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study (Adolescent Brain and Cognitive Development). Subsample of 3,687 early adolescents (49.2% female, mean age 11.96 years) with secondary analysis examining bidirectional associations in subset of participants."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Mature screen usage assessed as: mature-rated video game playing (yes/no) and R-rated movie watching frequency (4-point scale: never/once in a while/regularly/all the time). Does not measure qualifying smartphone or social media variables per FT-IC2 binding rules. Mature content consumption is not a qualifying variable (B5 equivalent: reading-on-screens/content type rather than device/platform use). Sleep and sensation-seeking are the predictors, not screen devices/platforms."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Structural equation modeling (SEM) and Johnson-Neyman analyses examining prospective associations. Regression coefficients with 95% CI reported. Bidirectional/cross-lagged analyses of sleep patterns and mature screen usage."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple regression coefficients reported with 95% CI. Examples: shorter sleep duration → R-rated movie watching (β = -0.07, p < .001, 95% CI [-0.10, -0.03]); sleep duration variability → mature video gaming (β = 0.04, p < .05, 95% CI [0.02, 0.09])."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data. Prospective/longitudinal examination of associations between objective sleep measures (Fitbit wearables), sensation-seeking, and mature screen usage across year 2 to year 3."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Sleep journal (2025), DOI: 10.1093/sleep/zsae234. No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 not met (mature screen content is not a qualifying smartphone/SM variable), therefore FT-EC7 criterion for inclusion does not apply. Additionally, even if IC2 were met, predictors include non-demographic factors (sleep, sensation-seeking - B17 lists sensation-seeking as disqualifying for EC7).",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Paper fails FT-IC2 criterion. Screen measures are content-type specific (R-rated movies, mature video games) rather than device/platform use or time-on-device. This is fundamentally different from qualifying smartphone/social media variables. Sensation-seeking included as a moderator/predictor, which would disqualify EC7 even if other criteria were met."
+  }
+]

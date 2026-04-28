@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "95",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Longitudinal data from U.S. ABCD Study (21 sites, ages 9-10 baseline); analyzed data collected at year 2 and year 4 follow-ups with MID task fMRI data"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear mixed models examining VGA × time interactions on neural activation during MID task reward/loss processing, with cross-sectional and longitudinal hypothesis testing"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in Computers in Human Behavior 165 (2025), pp. 108554"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Video Game Addiction Questionnaire (6-item, operationalizing addictive gaming use) paired with neural reward/loss sensitivity (MID task beta-weights for nucleus accumbens, insula, ACC, amygdala). Neural processing is individual-trait-level outcome. VGA appears as IV (Model 1) and DV (Model 2) in separate analyses."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analyses performed: linear mixed models with interaction effects (VGA × Time, neural sensitivity × Time) on neural responses and addiction scores; results reported with 95% CI, p-values, and effect sizes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported throughout: VGA × time interactions on loss contrast in left nucleus accumbens (b=0.106, p=.002), left insula (b=0.103, p=.002), right insula (b=0.111, p=.001), right ACC (b=0.111, p=.001); neural loss sensitivity × time predicting VGA in right amygdala (b=0.086, p=.003) and right ACC (b=0.088, p=.003)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with bidirectional analyses: VGA predicts neural loss sensitivity AND neural loss sensitivity predicts later VGA. Video game addiction analyzed as both IV (Model 1: predicting neural changes) and DV (Model 2: predicted by neural sensitivity). EC7 applies only to DV-only designs; bidirectional disqualifies it.",
+    "notes": "Strong longitudinal evidence for bidirectional relationship between video game addiction and neural reward processing dysfunction in adolescence. SMA analyzed separately and showed no comparable effects."
+  },
+  {
+    "paper_id": "443",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Cohort data obtained from Adolescent Brain Cognitive Development (ABCD) study Release 5.1; cross-sectional networks at T2 (2-year, ages 11-12) and T4 (4-year, ages 13-14) follow-ups; cross-lagged panel network analyses across 3,954 youth"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional network analyses identifying centrality indices and cross-lagged panel network (CLPN) modeling testing bidirectional relationships between screen use measures and developmental outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed full-length report published in Journal of Behavioral Addictions 14(2):724-737, 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic screen use operationalized as screen-related functional impairment (continuous measure of severity) measured via self-report questionnaires capturing experiential and motivational aspects. Paired with individual-trait-level outcomes: psychopathology (anxiety/depression, somatic symptoms, social problems, attention/thought problems, rule-breaking, aggressive behavior), family conflict, peer involvement, school participation. Paper emphasizes problematic use as functional impairment construct distinct from raw screen time."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Network analyses with inferential testing: cross-sectional networks computed using Extended Bayesian Information Criterion graphical lasso; cross-lagged panel network analyses with CLPN modeling testing associations between screen use measures at T2 and psychopathology/environment at T4"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported: 'Problematic use exhibited high out-strength, which was associated with worsening psychopathologies and environmental conditions. Conversely, problematic use at T4 appeared less influenced by factors at T2.' Cross-lagged associations quantified via network edge strengths and centrality metrics."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with screen use (and problematic use) analyzed as predictor (IV) of psychopathology and environmental factors. Screen use is not exclusively DV in all analyses. EC7 does not apply.",
+    "notes": "Emphasis on problematic screen use as functional impairment rather than raw time; network analysis reveals high centrality of problematic use in predicting worse developmental outcomes than self-reported screen time alone."
+  },
+  {
+    "paper_id": "234",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Subsample of 3,687 early adolescents from Adolescent Brain Cognitive Development (ABCD) study; year 2 follow-up with Fitbit wearables (ages ~12) and year 3 follow-up (ages ~13) questionnaire data; subset wore wearables for up to 21 nights"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective investigation with structural equation modeling examining associations between sleep (objective via Fitbit; subjective sleep duration/timing), sensation-seeking traits, and mature screen usage at 1-year follow-up; secondary bidirectional analyses"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in Sleep journal, 2025, doi: 10.1093/sleep/zsae234"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Outcome variable is mature screen usage (mature-rated video games and R-rated movies). According to v6 criteria, 'Content-rating variables (mature-rated games, R-rated movies) alone do NOT qualify; rating ≠ modality.' The paper does not measure smartphone use, social media use, or phone-specific activity. It measures content maturity/rating, not device or platform modality. No per-device breakdown of phone or social media use is provided in the analysis."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses on content maturity (R-rated, mature-rated) rather than smartphone/social media modality. While sleep is measured objectively and sensation-seeking is an individual-trait variable, the exposure is content rating, not SM/phone use. Fails FT-IC2; cascade stops."
+  }
+]

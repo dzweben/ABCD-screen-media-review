@@ -1,0 +1,52 @@
+[
+  {
+    "paper_id": "283",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Table VIII reports mixed-effects model with Screen Activity coefficient β = 0.116 (SE = 1.04E-02, t-value = 11.131, p < 2.00E-16). Individual regression coefficients for screen time are explicitly reported in the fixed effects section alongside sleep duration, physical activity, household income, and gender.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "B8 explicitly states: 'Paper reports any traditional regression coefficient for the SM variable in any analysis (main, supplementary, sensitivity) → FT_IC4 = MET.' The screen activity coefficient is a traditional mixed-effects regression coefficient reported in the main results table. C2 is correct; C1 was incorrect in treating this as an aggregate-only report. The coefficients are extractable and numeric."
+      }
+    ]
+  },
+  {
+    "paper_id": "291",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "This is a perspective/commentary article (authorship framing: 'So what to do?', discussion of other studies). The paper does not conduct original quantitative analysis of qualifying smartphone/social media variables. It references findings from Carter et al (2024) and other prior research without original ABCD measurement of SM/phone use.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 applies: 'Editorial, commentary, special-issue introduction, perspective, or letter with no original ABCD analysis.' The paper is explicitly a PERSPECTIVE (shown in header). It contains no original exposure variable measurement. C2 is correct."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "The paper is a commentary that reviews and discusses findings from other studies (notably Carter et al 2024). No original inferential statistical test linking a qualifying SM variable to a non-SM outcome is reported from this paper's own analysis.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 applies. This is a non-empirical perspective piece with no original ABCD analysis. Per FT-IC3 definition: 'Only narrative claims with no numeric value anywhere' and 'SM appears only as an adjustment covariate with no reported coefficient' — the paper only discusses other studies' results. C2 is correct."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "While percentages are cited in the paper (e.g., '95% had used at least one smartphone reduction strategy', '78.1% putting smartphone on Silent'), these are sourced from Carter et al (2024) findings, not original analysis reported in this article. No numeric values for SM ↔ non-SM association from this paper's original analysis are reportable.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 applies. The cited percentages are descriptive findings from the referenced Carter et al study, not original numeric coefficients or statistics from this perspective article. FT_IC4 requires numeric values for qualifying SM ↔ non-SM association. C2 is correct."
+      }
+    ]
+  },
+  {
+    "paper_id": "303",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC1",
+        "status": "MET",
+        "evidence": "Paper title: 'Multi-level predictors of depression symptoms in the Adolescent Brain Cognitive Development (ABCD) study'. Abstract mentions analysis of ABCD data with screen time as a predictor ('...screen time... which will likely reflect more leisure...'). The study design and data source are explicitly ABCD study.",
+        "binding_rules_cited": ["FT-IC1"],
+        "rationale": "Per FT-IC1 (Population criterion): 'Paper analyzes data from the U.S. ABCD Study' = MET. The title and available abstract snippet unambiguously identify this as an ABCD study analysis. Although no PDF is available, the title is explicit and sufficient to confirm ABCD cohort. No NA_FOR_NOW or UNKNOWN classification is warranted when the title explicitly names ABCD. C2 is correct."
+      }
+    ]
+  }
+]

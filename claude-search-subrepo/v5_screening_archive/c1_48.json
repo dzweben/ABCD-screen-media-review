@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "302",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (N=11,066), baseline 2016-2018 (ages 9-10), 1-year follow-up 2017-2019"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying smartphone and social media variables: texting (B=0.92, 95% CI 0.29-1.55), video chat (B=0.72, 95% CI 0.09-1.36), video games (B=0.42, 95% CI 0.06-0.78), social networking. Applies B1—separate β reported for each SM modality."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses testing SM → BMI percentile outcome (Table 2). Each screen time variable examined in separate regression models with B coefficients and 95% CIs."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Beta coefficients and 95% CIs reported in Table 2 for all screen time modalities (total screen time B=0.22, texting B=0.92, video chat B=0.72, video games B=0.42, social networking B=0.67, all with p-values)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Prospective cohort design with baseline screen time exposure and 1-year follow-up BMI percentile outcome."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published paper, no duplicate detected."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "B18 carve-out applies. Screen time (smartphone/SM) is the independent variable (IV) predicting a non-SM outcome (BMI percentile). FT-EC7 requires SM as dependent variable with only demographic predictors. Here SM is IV → outcome.",
+    "binding_rules_applied": [
+      "B1",
+      "B18"
+    ],
+    "notes": "Strong inclusion candidate. All IC criteria met. Multiple qualifying contemporary screen modalities (texting, video chat, social networking, video games) with separate coefficients. Prospective design, large diverse US-ABCD sample."
+  },
+  {
+    "paper_id": "420",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study. Part 1: N=11,727 (weekday screen time, ages 9-10.92 years). Part 2: N=11,672 (weekend screen time, ages 9-10.92 years)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying screen time modalities measured separately with regression models: television, videos (YouTube), video games, texting, video chat, social media. Applies B1—separate β/correlation coefficients reported for each screen time type."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation and regression analyses. Multiple linear regression models testing screen time → outcome relationships (mental health, academic performance, sleep, peer relationships). Pearson correlations and regression coefficients reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Correlation coefficients (r values) and standardized regression coefficients (β) with p-values reported throughout. Results presented for weekday and weekend screen time separately."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Cross-sectional baseline assessment (October 2018) examining relationships between screen time and multiple outcomes (mental health, academics, sleep, peer relationships)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published paper, no duplicate detected."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "B18 carve-out applies. Screen time is the independent variable predicting multiple non-SM outcomes (depression, anxiety, academic performance, sleep, peer relationships). FT-EC7 requires SM as DV with demographic-only predictors.",
+    "binding_rules_applied": [
+      "B1",
+      "B18"
+    ],
+    "notes": "Strong inclusion candidate. All IC criteria met. Multiple contemporary screen modalities with separate coefficients (B1). Large diverse ABCD sample. Cross-sectional design examining screen time as predictor of mental health, academic, and social outcomes."
+  },
+  {
+    "paper_id": "473",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study subsample substudy. N=67 participants (ages 11-12 years; 31/67 female, 23/67 White). Four geographically dispersed ABCD sites. Passive sensing data collected 2019-2020."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone variables measured objectively via EARS app: streaming (mean 1h 57 min/day), communication/texting (48 min/day), social media (36 min/day), gaming (41 min/day), video chat implied in communication category. Applies B1—separate app category use reported."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No inferential test of SM ↔ non-SM outcome. Paper reports descriptive statistics (means, SDs), correlations between self-report and objective sensing data (r=0.49), and ANOVA for demographic differences in app use. This is a measurement validation/feasibility substudy. Applies B12 carve-out: SM-vs-objective concordance only, no SM → outcome analysis."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric data reported: means and SDs for app use times (Table 1), Pearson correlation (r=0.49) between self-report and objective data, ANOVA F-values and p-values."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Applies B12 + B14 carve-out. This is a measurement paper comparing self-reported vs objective smartphone assessment. No original analysis of SM predicting external outcomes. No SM ↔ non-SM outcome coefficient. Feasibility/acceptability focus only."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published paper, no duplicate detected."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Paper fails FT-IC5 (measurement substudy without external outcome analysis). Does not meet threshold for full-text screening inclusion.",
+    "binding_rules_applied": [
+      "B12",
+      "B14"
+    ],
+    "notes": "EXCLUDE. Fails FT-IC5. This is a substudy validating passive sensing methodology against self-report in a small subsample (N=67). No analysis of smartphone/SM predicting external outcomes. Measurement paper comparing objective vs self-reported screen time concordance (r=0.49). Does not qualify as original empirical analysis predicting non-SM outcomes."
+  }
+]

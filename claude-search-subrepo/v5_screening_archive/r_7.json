@@ -1,0 +1,80 @@
+[
+  {
+    "paper_id": "143",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper measures cyberbullying victimization (Year 2) predicting mental health and substance use outcomes (Year 3) using linear and logistic regression. However, cyberbullying is the only screen-adjacent variable measured; no separately measured smartphone or social media variable with its own coefficient is reported.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "B3 rule: 'Paper measures cyberbullying as the only screen-adjacent variable' → FT_IC2 = NOT_MET (FT-EC2). Once FT_IC2 fails under B3, the paper does not qualify for inclusion. C2's assessment of FT_IC3 as MET is incorrect because the binding rule chain requires FT_IC2 to pass first. The paper fails at FT_IC2, cascading downstream."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Paper reports numeric values (coefficients, odds ratios, 95% CIs) but only for cyberbullying → mental health/substance use associations. No separate smartphone or SM variable coefficient is present.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "FT_IC4 requires a numeric value for a qualifying SM ↔ non-SM association. The paper measures cyberbullying-only (B3), not a qualifying SM variable. Numeric values exist but for the wrong (ineligible) variable."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "MET",
+        "evidence": "Paper reports original prospective empirical analysis on ABCD cohort (Year 2 → Year 3 follow-up). Study design is longitudinal with inferential statistical testing (linear and logistic regression).",
+        "binding_rules_cited": [],
+        "rationale": "FT_IC5 is MET for any original empirical ABCD analysis with appropriate study design. The cyberbullying → outcomes study satisfies this. However, FT_IC2 NOT_MET overrides inclusion at the hierarchical level."
+      },
+      {
+        "crit": "FT_IC6",
+        "status": "MET",
+        "evidence": "Published peer-reviewed article in The Lancet Regional (2025). No duplicate or preprint identified.",
+        "binding_rules_cited": [],
+        "rationale": "Standard publication criterion met. No evidence of duplicate publication."
+      }
+    ]
+  },
+  {
+    "paper_id": "153",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper states: 'Average daily screen use was calculated as the sum of self-reported hours of daily use of television, videos, video games, social media, video chat, and texting.' Results report only trajectory group membership (N = 1,333 Drastically Increasing; N = 10,336 Gradually Increasing) with percentage demographics. No separate coefficient (β, OR, mean difference) is reported for social media, texting, video chat, or any individual YSTS component.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 rule applies: 'Paper uses YSTS but reports only a summed total screen time estimate with no per-modality breakdown anywhere.' The paper's primary outcome is growth mixture modeling with standardized total screen use; trajectory group membership is the outcome, not separate per-modality coefficients. No per-item estimates are extractable for any qualifying smartphone/SM item."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Growth mixture modeling identifies trajectory subgroups and compares them by sociodemographic characteristics and perceived discrimination using descriptive comparisons and statistical tests (implied ANOVA/chi-square). However, there is no SM ↔ non-SM outcome association test. Screen use is the outcome (dependent variable), not the predictor.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "FT_IC3 requires 'at least one inferential statistical test linking a qualifying smartphone/SM variable to a non-SM variable.' In this paper, screen use trajectories are the outcome variable, and the predictors are sociodemographic/discrimination variables, not screen use as the predictor. The directionality is reversed (demographics → screen use, not screen use → outcome). Additionally, B2 failure cascades FT_IC2 to NOT_MET."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Paper reports multiple numeric values: trajectory group sizes (N = 1,333; N = 10,336), percentage comparisons (70% vs 45% racial/ethnic minorities), and percentages for perceived discrimination experiences (e.g., 8% vs 3% unfair treatment by teachers, Table 1).",
+        "binding_rules_cited": [],
+        "rationale": "FT_IC4 requires 'at least one numeric value... mean difference / network edge weight... in main text, tables, labeled figures, or supplement.' The paper reports frequencies, percentages, and group statistics. C2's assessment that numeric values are present is correct; however, FT_IC2 NOT_MET overrides in the hierarchical exclusion."
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "status": true,
+        "evidence": "(a) Screen use is the dependent variable in all analyses (growth mixture modeling outcome). No analysis reports screen use as the predictor of a non-SM outcome. (b) All predictors of trajectory group membership are in the demographic set: race/ethnicity, parental education, household income (all within the closed demographic-only set defined in §3.1). No individual psychological, clinical, behavioral, cognitive, neural, or ACEs predictor appears. (c) All reported analyses are longitudinal/prospective: baseline demographic characteristics predict later-wave screen use trajectory membership (ages 10-14 prospective trajectories). No cross-sectional demographic → screen use analysis is reported.",
+        "binding_rules_cited": ["B15", "B16", "B17"],
+        "rationale": "All three FT-EC7 conditions (§3.1) are satisfied. The paper is longitudinal demographic-only → SM-as-DV. B15 (cross-sectional carve-out) does not apply because all analyses are longitudinal. B17 (non-demographic predictors) does not apply because no psychological, parental, or genetic predictors are present. B16 applies: 'Paper's only SM-as-DV analyses are longitudinal AND every predictor is in the demographic-only set.' FT-EC7 applies = TRUE. (Note: Despite FT-EC7 applying, the paper excludes on FT-EC2 first per hierarchical exclusion in §6, but the criterion itself is satisfied.)"
+      }
+    ]
+  },
+  {
+    "paper_id": "166",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Screen time operationalized as 'average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device.' This measure aggregates time across heterogeneous device types (computer, cellphone, tablet, unspecified other). No separate coefficient for smartphone use alone or social media use alone is reported. LASSO, ridge, elastic net, and linear regression models report screen time as a single composite variable (coefficient = 1.17 in full sample LASSO, p = 7.5 × 10⁻⁸ in linear regression).",
+        "binding_rules_cited": ["B7"],
+        "rationale": "B7 rule: 'Paper measures only \"internet use\" without device or platform specification → FT_IC2 = NOT_MET (FT-EC2).' The paper's screen time measure conflates multiple device types (computer, cellphone, tablet, other) into a single unspecified aggregate. While 'cellphone' is mentioned as one component, the measure does not isolate smartphone/mobile use or social media use with its own extractable coefficient. The aggregation across device types without per-device breakdown fails the requirement for a separately-measured smartphone or SM variable. Criteria specify 'Time on smartphone' or 'any app or app-category use' — not generic 'screen time' across mixed devices."
+      }
+    ]
+  }
+]

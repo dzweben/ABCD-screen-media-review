@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "85",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Secondary analysis of ABCD Study data; baseline ages 9-10 at 21 sites; Year 2 annual assessment (age 11-12) was analytic baseline with follow-up to age 13-14."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; longitudinal logistic regression (GEE method) examining mobile phone ownership and social media use at baseline predicting substance use at four timepoints."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in Addictive Behaviors (2025); no indication of preprint duplication or duplicate analysis."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Mobile phone ownership (binary yes/no) and social media use (binary yes/no) are qualifying SM/phone variables appearing as IV; paired with substance use (alcohol, nicotine/tobacco, cannabis) as DV - an individual-trait-level behavioral outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal logistic regression models report odds ratios with 95% confidence intervals for phone ownership predicting alcohol (OR=1.34, p<0.001), nicotine/tobacco (OR=1.71, p<0.05), and social media predicting alcohol/nicotine/tobacco/cannabis with multiple quantified results across analyses."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with quantitative results throughout: GEE regression models, OR estimates, significance testing (p-values), sensitivity analyses with new ORs demonstrating prospective associations between phone/SM and substance use."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal; however, both phone ownership and social media are tested as IV predicting substance use outcomes (DV), satisfying the condition that SM is not DV-only. EC7 does not apply.",
+    "notes": "Strong v6 candidate. Clear operationalization of phone/SM variables as independent predictors; substance use outcomes are individual-trait-level behavioral measures; robust sample size (n=10,907); multiple quantified results."
+  },
+  {
+    "paper_id": "168",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from ABCD Study release 4.0, Year 2 follow-up timepoint (ages 11-12); multisite study; N=10,052 youth from 21 recruitment sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; multilevel regression models predicting clinical concerns (internalizing/externalizing problems, suicidal ideation, NSSI) from screen time and problematic media use."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in Development and Psychopathology (2025); no preprint or duplication issues noted."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Predictors are 'screen media time per day' (parent-report and youth-report) and 'problematic media use' (Problematic Media Use Measure - 9 items). Neither isolates phone or social media specifically; both refer to generic 'screen media' or 'media use' without device/platform breakdown. Methods state 'youth engage in media activity' covering multiple devices/modalities. Outcomes are clinical concerns (internalizing/externalizing, suicidal ideation, NSSI) - individual-trait-level variables - but the SM/phone variable itself fails FT-IC2 because it is composite 'screen media' without isolation of phone or SM."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "Excluded at FT-IC2.",
+    "notes": "Paper examines screen media use broadly, not isolating phone or social media. Composite 'screen media' includes unspecified modalities (TV, console, phone, tablet). Fails FT-IC2 under v6 criteria despite having individual-trait-level outcomes."
+  },
+  {
+    "paper_id": "10",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from ABCD Study release 5.1; cohort of 4,289 adolescents in US who played video games; 3 waves of data collection at ages 11-12, 12-13, 13-14 between January 2018 and December 2022."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-lagged panel models (CLPM) examining directional associations between psychopathology and gaming disorder across 3 timepoints."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article published in JAMA Network Open (2025); no preprint or duplication concerns."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Variable is 'gaming disorder' measured by Video Game Addiction Questionnaire (VGAQ), aligning with DSM-5 internet gaming disorder criteria. This is gaming-only, not smartphone or social media use as defined in FT-IC2 inclusion criteria. Criteria explicitly state 'unspecified-platform-gaming-only' does NOT qualify. Although psychopathology (depression, ADHD, anxiety, social problems, conduct disorder) is individual-trait-level, the exposure variable is gaming disorder, not a phone/SM variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "Excluded at FT-IC2.",
+    "notes": "Paper focuses on gaming disorder as the primary variable, not smartphone or social media use. Gaming (video games, console/PC gaming) is explicitly excluded under FT-IC2. Does not meet population-level eligibility for this systematic review."
+  }
+]

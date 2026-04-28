@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "81",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study Year 3 (2019-2021), ages 11-14, diverse sample of 9989 adolescents recruited from 21 NIH-funded sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Cross-sectional logistic regression analysis of ABCD data reporting unadjusted and adjusted odds ratios for transgender/gender-questioning identity and cyberbullying victimization."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed journal article (Academic Pediatrics 2025)."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Paper examines cyberbullying victimization (outcome) by gender identity (demographic IV). No separately-measured smartphone or social media variable paired with an individual-trait-level outcome. Per §2.4: 'Cyberbullying alone (without a separately-measured smartphone or SM variable) does NOT qualify.'"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Cyberbullying outcome alone does not qualify without a separately-measured SM/phone variable."
+  },
+  {
+    "paper_id": "82",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study Year 3 (2019-2021), ages 11-15, sample of 10,092 early adolescents from 21 geographically diverse U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: Chi-square and t-tests comparing social media use patterns across demographic characteristics stratified by age and sex; SMAQ (Social Media Addiction Questionnaire) assessment."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed journal article (Academic Pediatrics 2025)."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Paper describes social media use prevalence and patterns (69.5% have accounts, platform usage, underage use) in association with demographic variables only (age, sex, race, household income, parental education). No individual-trait-level outcome (neural, behavioral, health, cognitive, well-being, mental health, sleep, etc.) is paired with SM use. Per §2.4: 'Other side is demographic-only...paper-level NOT_MET if no individual-trait-level analysis exists anywhere.'"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Descriptive prevalence study with demographic covariates only; no individual-trait-level outcome variable."
+  },
+  {
+    "paper_id": "106",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study Years 2 and 3 (2018-2020 baseline, 2019-2021 follow-up). Prospective sample of 8,006 early adolescents (47.9% female, 41.6% racial/ethnic minority) from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original prospective empirical analysis: logistic regression models evaluating associations between eight screen modality types (TV/movies, videos, single-player games, multi-player games, texting, video chatting, social media, internet) in Year 2 and substance use experimentation (alcohol, nicotine, cannabis) in Year 3."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed journal article (Drug and Alcohol Dependence 2025)."},
+    "FT_IC2": {"status": "MET", "evidence": "Social media use (time on platforms like Facebook, Instagram, Twitter) measured in Year 2 as IV; paired with substance use experimentation (alcohol sipping, nicotine puffing, cannabis puffing) in Year 3 as individual-trait-level health/behavioral DV. Meets FT-IC2 requirement: qualifying SM variable paired with individual-trait-level outcome."},
+    "FT_IC3": {"status": "MET", "evidence": "Prospective logistic regression reports adjusted odds ratios (AOR) quantifying associations: social media and any substance use AOR 1.20 (95% CI 1.14-1.26); alcohol AOR 1.15 (95% CI 1.10-1.21); nicotine AOR 1.23 (95% CI 1.14-1.32); cannabis AOR 1.22 (95% CI 1.13-1.33). Numeric results reported."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric quantitative results for SM and substance use relationships reported in main figures and text (logistic regression with adjusted odds ratios, 95% confidence intervals, p-values)."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Prospective design with SM as IV (predictor) and substance use as DV (outcome). EC7 exclusion applies only when SM is DV-only in longitudinal analysis; here SM is on the left side of the causal pathway, so EC7 does not apply.",
+    "notes": "Paper qualifies on FT-IC2, FT-IC3, FT-IC4. Should INCLUDE."
+  }
+]

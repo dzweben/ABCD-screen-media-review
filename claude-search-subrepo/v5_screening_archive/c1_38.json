@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "389",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study cohort; Year 2 assessment (2018-2020), N=9,008, ages 10-14"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM variable: problematic social media use measured via Social Media Addiction Questionnaire (SMAQ); time on SM also measured (B1, B4 - SM with separate coefficient)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential test: adjusted linear regression examining associations between problematic SM use and alcohol expectancies (positive and negative), with multiple coefficients reported (B values)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: β coefficients reported in main text and Table 2 (e.g., B=0.045, 95% CI 0.020-0.069 for positive alcohol expectancies; B=0.072, 95% CI 0.043-0.101 for negative); p-values and confidence intervals provided"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional ABCD Study analysis with SM-to-non-SM-outcome (alcohol expectancies) coefficient reported"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original research article (BMC Public Health 2023); no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does NOT meet EC7 criteria. SM is INDEPENDENT variable (predictor) in all analyses, not dependent variable. Outcome is alcohol expectancies (non-SM outcome). Therefore condition (a) fails — SM is not the dependent variable in every analysis. Paper shows SM→alcohol expectancies relationship, which disqualifies for EC7.",
+    "binding_rules_applied": [
+      "B1",
+      "B4"
+    ],
+    "notes": "Paper examines associations between problematic SM use (SMAQ) and alcohol expectancies. Model 3 includes both time on SM and problematic SM use; time on SM not associated with outcomes but problematic SM use associated with both positive and negative alcohol expectancies. Cross-sectional design."
+  },
+  {
+    "paper_id": "390",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study cohort; Baseline and Year 2 assessments (2018-2020), N=9,673 (screen-using participants), ages 11-12"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying variables: (1) problematic social media use (SMAQ - 6 items); (2) problematic video game use (VGAQ - 6 items); (3) problematic mobile phone use (MPIQ - 8 items). All measured as addictive behaviors. Mobile/app gaming and SM with separate coefficients (B6, B1)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential tests: generalized logistic mixed effects models (binary outcomes) and generalized linear mixed effects models (continuous problematic use scores) examining associations between ACE score (predictor) and SM/video game/mobile phone use (outcomes)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: odds ratios with 95% CIs reported in Table 2 (e.g., ACEs-4+ with video game use OR=3.11, 95% CI 2.05-4.73; mobile phone use OR=1.57, 95% CI 1.22-2.03); p-values indicated (*, **, ***)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective ABCD Study analyzing baseline ACE exposure and follow-up problematic screen use outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original research article (BMC Public Health 2023); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does NOT meet EC7. SM/screen use is DEPENDENT variable (outcome), but predictors include ACEs (not in demographic-only set per B17: 'any of these as predictors of SM disqualifies — ACEs...'). Although analyses are prospective, the inclusion of ACEs as a predictor disqualifies from EC7 per B17. Additionally, this is screen use as outcome, not SM as IV→external outcome.",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Prospective study examining ACE exposure (baseline) as predictor of problematic screen use at Year 2. ACEs associated with higher odds of problematic video game and mobile phone use in adjusted models (3.1x and 1.6x odds respectively for 4+ ACEs). No significant association with social media use in binary model, though dose-dependent relationship in continuous model."
+  },
+  {
+    "paper_id": "178",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study special issue introduction; mentions US ABCD Study and 21 recruitment sites across United States"
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "Introduction/editorial paper; does not report primary empirical data on SM/smartphone variables. Mentions 'screen time' in overview but no specific qualifying SM or smartphone measure analyzed in this paper itself"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "This is an editorial/introduction paper, not a primary research article. No inferential statistical tests of SM or smartphone associations reported in this paper itself"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric coefficients or statistics reported; editorial/overview document only"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "This is an editorial/introduction paper (Health Psychology special issue introduction), not a research article. Per B14/FT-EC3, editorials are NOT MET for IC5. The paper describes other ABCD studies but does not conduct original empirical analysis itself."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original editorial introduction (Health Psychology 2023); not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable; paper is an editorial/introduction that does not conduct original empirical analysis on SM or screen use outcomes. EC7 criteria require SM-as-DV analysis, which is not present in this editorial.",
+    "binding_rules_applied": [
+      "B14",
+      "FT-EC3"
+    ],
+    "notes": "This is an editorial introduction to a special issue on ABCD research. It provides overview of papers addressing adolescent health behaviors including screen time, but does not itself report original SM or smartphone analyses. Does not meet FT-IC5 criteria as it is an editorial/commentary, not a research article with original analysis."
+  }
+]

@@ -1,0 +1,66 @@
+SYSTEMATIC REVIEW — 2L FULL-TEXT SCREENING (v5 — tightened with B1–B20 binding rules)
+
+You are an independent AI coder. For ONE paper, decide MET / NOT_MET / UNKNOWN for each of FT-IC1 through FT-IC6, PLUS decide whether FT-EC7 applies. Evidence required for each. APPLY THE BINDING RULES VERBATIM.
+
+================================================================
+FT-IC1 — Population: U.S. ABCD Study (any release, any sub-sample).
+  NOT_MET: Amsterdam/Dutch ABCD, NHANES, Generation R, INMA, MTF, MCS, or pooled analysis with no US-ABCD-only estimate.
+
+FT-IC2 — Exposure: at least one qualifying smartphone or social media variable. APPLY B1–B7:
+  Qualifying smartphone: smartphone ownership / age of acquisition; time on phone (self-report, parent-report, EARS); any app or app-category use (apps = smartphone); texting on phone; video chat on phone; bedtime phone use; MPIQ / PSMUS scales.
+  Qualifying social media: time on SM; platform-specific use (TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter/X, Reddit, Pinterest, etc.); SM accounts/secret accounts; online dating; SMAQ / SNS-A / Bergen SM scales.
+  Cyberbullying alone → NOT_MET (B3). Cyberbullying + separately-measured SM with own coefficient → MET (B4).
+  TV-only, console/PC gaming, unspecified-platform gaming, "internet use" without device/platform, RF-EMF, reading-on-screens, e-mail → NOT_MET (B5, B7).
+  Mobile/app gaming or gaming + SM with separate coefficients → MET (B6).
+  YSTS papers reporting separate β/OR for SM, texting, video chat, mobile phone, or app-category → MET (B1) regardless of whether TV/console-gaming are also in the same model.
+  YSTS papers reporting only summed/total screen time with no per-item breakdown anywhere → NOT_MET (B2).
+  SM in a latent score with only the latent's coefficient reported → NOT_MET (B11).
+
+FT-IC3 — Inferential test of SM ↔ non-SM.
+  MET: regression (any kind), SEM path, mediation indirect effect, moderation interaction, correlation, χ², Fisher, t-test, ANOVA, mixed-effects coefficient, network edge weight, Bayesian posterior, target-trial-emulation contrast. **Penalized regression β (Lasso/Ridge/elastic-net) counts.**
+  NOT_MET: only descriptive statistics; SM is covariate-only with no coefficient anywhere (B10); SM-vs-SM concordance/correlation only (B12).
+
+FT-IC4 — Numeric extractable.
+  MET: any β / OR / RR / HR / d / r / F / t / χ² / η² / R² / p / 95% CI / posterior / edge weight in main, table, labeled figure, or supplement.
+  ML rule (B8 / B9): MET if any traditional regression coefficient appears anywhere (main / supplement / sensitivity / robustness). NOT_MET if only SHAP / permutation / Gini / attention / feature ranks reported.
+
+FT-IC5 — Original empirical analysis.
+  MET: any original ABCD analysis. Measurement papers also reporting at least one SM↔non-SM coefficient → MET (B13).
+  NOT_MET: review, editorial, commentary, perspective, letter, protocol, resource/data paper (B14, FT-EC3). Pure measurement/concordance with no external outcome (B12, FT-EC5).
+
+FT-IC6 — Non-duplicate (default MET unless clear preprint/abstract/deposit duplicate).
+
+================================================================
+FT-EC7 — Longitudinal demographic-only → smartphone/SM (BINDING)
+
+FT-EC7 = TRUE ONLY when ALL THREE hold:
+  (a) Smartphone/SM is the DEPENDENT variable in EVERY analysis involving SM. The paper has NO SM → non-SM-outcome analysis.
+  (b) Every predictor of SM in the paper is in this CLOSED demographic-only set: sex/gender, race/ethnicity, age, household income, parental education, parental marital status, immigration status, urbanicity, neighborhood quality, school type, study site, family structure, geographic region.
+  (c) Every analysis predicting SM is LONGITUDINAL/PROSPECTIVE.
+
+Cross-sectional carve-out (B15): if ANY cross-sectional analysis with demographics → SM is reported, FT-EC7 does NOT apply.
+
+NOT EC7 (B17): any of these as predictors of SM disqualifies — ACEs, parenting, parental psychopathology, family conflict, sleep, depression, anxiety, ADHD, impulsivity, sensation-seeking, executive function, cognitive ability, neural features, polygenic scores, sexual orientation, gender identity, pet ownership, religious participation, school involvement.
+
+If paper has both SM-as-DV (long, demographic) AND SM-as-IV → outcome (B18): FT-EC7 does NOT apply.
+If bidirectional / cross-lagged (B20): FT-EC7 does NOT apply.
+Cross-sectional sociodemographic / identity / family / lifestyle → SM (B19): INCLUDE, NOT EC7.
+
+================================================================
+OUTPUT (strict JSON, one object per paper):
+
+{
+  "paper_id": "<id>",
+  "FT_IC1": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "..."},
+  "FT_IC2": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<which qualifying variable + applicable B-rule>"},
+  "FT_IC3": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<test type + cite>"},
+  "FT_IC4": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<cite numeric, including supplements>"},
+  "FT_IC5": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "<study design>"},
+  "FT_IC6": {"status": "MET|NOT_MET|UNKNOWN", "evidence": "..."},
+  "FT_EC7_applies": true|false,
+  "FT_EC7_reason": "<which §3.1 condition fails or is satisfied; cite carve-out if applicable>",
+  "binding_rules_applied": ["B1","B8",...],
+  "notes": "<anything else>"
+}
+
+No prose outside JSON. Save as a JSON ARRAY (one paper or multiple) to the designated results file using the Write tool.

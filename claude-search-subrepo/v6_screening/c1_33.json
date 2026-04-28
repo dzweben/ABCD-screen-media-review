@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "521",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline data from ABCD Study, 10,842 participants from 21 U.S. recruitment sites, ages 9-10 years."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis using propensity score matching and generalized linear models with GEE."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Frontiers in Pediatrics, 2023."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying SM/phone variables: passive screen time (TV/movies/videos), video gaming, social media/video chat, and texting. Paired with obesity (BMI, physical health trait). Methods state: \"passive viewing, playing video games, social media sites or video-chatting\" measured separately; obesity defined by CDC/WHO BMI criteria. All are individual-trait-level outcomes."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis: generalized linear models with propensity score matching; Poisson regression for screen time duration; logistic regression for obesity associations."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported: mean daily hours/minutes, prevalence ratios with 95% CI for obesity by screen time duration (e.g., passive screen time p=0.002; texting p=0.02), p-values, and ratio of means."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline data only). FT-EC7 requires longitudinal design, which is absent.",
+    "notes": "Paper directly examines associations between distinct screen time modalities (passive, gaming, social, texting) and obesity in ABCD participants. Includes gender-stratified analysis and autism-status comparisons."
+  },
+  {
+    "paper_id": "101",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from baseline (September 2016–October 2018) and 2-year follow-up (July 2018–January 2020), ages 9–11 years at baseline (M=119.28 months)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis of resting-state fMRI fronto-striatal connectivity and behavioral measures with mediation analysis."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Developmental Cognitive Neuroscience, 2023."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time exposure (Screen-Activity Proportion, SAP) measured via child self-report questionnaire, paired with fronto-striatal connectivity (neural, related to inhibitory control—an individual-trait cognitive/behavioral construct). Methods: \"screen time measured using a child self-report questionnaire consisting of 14 items\"; outcome is FPN-striatum connectivity reflecting development of inhibitory control system."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis using correlation, bootstrapping, mediation models, and group-level comparisons with robust hypothesis testing."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results: correlation coefficients (r = -0.040, r = -0.0933), Bayesian factors (BF10 = 13.10, BF10 = 428995.74), 95% bootstrap confidence intervals, independent t-tests (t(1571) = 3.043, p = 0.002), Cohen's d, and mediation indirect effects."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal, but screen time is the IV (predictor) in analyses, not the DV. SM predicts connectivity changes; does not qualify for exclusion.",
+    "notes": "Longitudinal study with baseline and year 2 data. Screen time operationalized as Screen-Activity Proportion (daily screen time relative to non-screen activities). Outcome is neural connectivity reflecting inhibitory control maturation, mediated by reward sensitivity (BAS)."
+  },
+  {
+    "paper_id": "160",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, baseline 2016–2018 and two-year follow-up 2018–2020, N=11,633 participants ages 9–11 years at baseline."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical prospective cohort study using logistic regression analysis to examine associations between baseline screen time and suicidal behaviors at 2-year follow-up."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Preventive Medicine, 2023."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying screen time modalities measured via ABCD Youth Screen Time Survey: texting, video chatting, watching videos, playing video games, and total screen time. All paired with suicidal behaviors (mental health outcome—individual-trait-level). Methods: \"Participants reported an average of 4.0 h of total screen time per day at baseline\" with modalities reported separately; outcomes measured via KSADS-5 assessing suicidal ideation and attempts."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis: logistic regression with adjusted odds ratios; results for both total screen time and specific modalities."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results extensively reported: adjusted odds ratios (aOR) with 95% CI for total screen time (aOR 1.09, 95% CI 1.03–1.14), texting (aOR 1.36, 95% CI 1.06–1.74), video chatting (aOR 1.30, 95% CI 1.03–1.65), watching videos (aOR 1.21, 95% CI 1.04–1.39), and playing video games (aOR 1.18, 95% CI 1.01–1.38)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal, but screen time is the IV (predictor of suicidal behaviors at follow-up), not the DV. Does not meet all three conditions for exclusion.",
+    "notes": "Prospective cohort study examining associations between baseline screen time modalities and suicidal behaviors 2 years later. Comprehensive assessment of specific screen types (TV/movies, videos, gaming, texting, video chat, social media) as distinct exposures."
+  }
+]

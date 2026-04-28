@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "26",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study (Year 2, 2018-2020, N=10,258/11,875)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying alone, no separate SM measure. B3 applies: 'Cyberbullying alone → NOT_MET'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression with prevalence ratios (PR) and 95% CI reported for cyberbullying → eating disorder symptoms"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "PR and 95% CI numeric values extracted: PR 2.41 (1.48–3.91), PR 2.08 (1.33–3.26), PR 1.95 (1.57–2.42), PR 1.95 (1.59–2.39), PR 2.64 (1.94–3.59) for victimization; PR 3.52 (1.19–10.37), PR 5.59 (2.56–12.20), PR 2.36 (1.44–3.87), PR 2.84 (1.47–5.49) for perpetration (Table 2)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: cross-sectional secondary data analysis from 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in International Journal of Eating Disorders 2023; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because cyberbullying is the INDEPENDENT variable (predictor), not the dependent variable. Eating disorder symptoms are the dependent variables. The paper tests cyberbullying → eating disorder outcome, not demographics → cyberbullying. Condition (a) fails.",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "Paper excluded because it measures cyberbullying without a separately measured SM variable. Cyberbullying questions mention 'social media (like Instagram or Snapchat)' but cyberbullying is treated as a single construct; no separate SM use measurement."
+  },
+  {
+    "paper_id": "394",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study prospective follow-up from baseline 2016-2018"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported and parent-reported) as qualifying smartphone exposure. B1 applies: 'time on phone (self-report, parent-report, EARS)'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects models to analyze associations between baseline screen time and mental health outcomes"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available; abstract only mentions 'mixed-effects models' but no numeric values (beta, p, CI) extractable from abstract"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: prospective follow-up with mixed-effects models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published prospective study; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because screen time is the INDEPENDENT variable predicting mental health (dependent variable). The paper tests screen time → mental health outcome, not demographics → screen time. Condition (a) fails.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Cannot fully assess without PDF. Based on abstract, meets IC1-3, IC5-6 but IC4 UNKNOWN due to lack of numeric values in abstract alone. Likely MET after full-text review if beta/coefficient values present in main text or tables."
+  },
+  {
+    "paper_id": "309",
+    "FT_IC1": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract mentions 'ABCD study' and 'ABCD-youth' but does not explicitly confirm US ABCD Study or clarify if this is using ABCD data vs. citation only. Requires full text confirmation."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic social media use and problematic gaming measured. Qualifying SM variable present. B6 likely applies: 'Mobile/app gaming or gaming + SM with separate coefficients → MET'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Bidirectional associations tested; likely mixed-effects or structural equation modeling implied by title reference to 'associations'"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "PDF available but abstract only provided in batch. Full text required to extract numeric values (beta, OR, correlation coefficients)"
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract suggests empirical analysis but unclear if original ABCD analysis or secondary analysis of existing data without new coefficients"
+    },
+    "FT_IC6": {
+      "status": "UNKNOWN",
+      "evidence": "No duplicate markers evident but insufficient information in abstract"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Title indicates bidirectional associations (B20): SM ↔ mental health. Bidirectional/cross-lagged models disqualify FT-EC7 per binding rule B20: 'If bidirectional / cross-lagged (B20): FT-EC7 does NOT apply.'",
+    "binding_rules_applied": [
+      "B6",
+      "B20"
+    ],
+    "notes": "Full-text review required to confirm: (1) uses original ABCD data (not just citation); (2) extraction of numeric coefficients for IC4; (3) confirmation of bidirectional design. PDF present but only abstract reviewed in batch data."
+  }
+]

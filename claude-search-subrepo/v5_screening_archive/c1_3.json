@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "2",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses US ABCD Study (EARS subsample, years 4-6, N=640 final sample)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone app usage categories assessed via EARS passive sensing; qualifying smartphone per B1 (app-category use = smartphone). Apps in social category (Instagram, TikTok, Snapchat, etc.) also reported."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Descriptive statistics and comparisons by demographic/app-category (characterization only in main). However, paper primarily descriptive; limited inferential testing reported in supplement."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted means (95% CI) reported in tables and text for screen time by app category (e.g. social 57.4 min average)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis characterizing smartphone use patterns during school hours"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate detected; published 2026, original EARS study"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphone is independent variable predicting outcomes (school day use examined in relation to descriptive characteristics). Not smartphone-as-DV-only with demographic predictors.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Primarily descriptive characterization of smartphone/app use in ABCD subsample with EARS passive sensing. Limited inferential statistics reported; mostly reporting use patterns by category, frequency distributions, and demographic breakdowns."
+  },
+  {
+    "paper_id": "36",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Years 2 (2018-2020, ages 11-12) and Year 4 (2020-2022, ages 13-14); N=5356"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported recreational screen time (comprehensive measure: TV, videos, games, texting, SM, video chat) measured via ABCD Youth Screen Time Survey. Qualifies as time on screen modality per FT-IC2; covers smartphones/SM per B1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Poisson regression (categorical & continuous models); linear regression for BMI percentile; interaction testing; dose-response analysis (p-values reported)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Risk ratios (95% CI), coefficients (B, 95% CI), p-values throughout Tables 2, Figures; e.g., RR 1.09 (1.02-1.16) for high screen time and overweight/obesity"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD analysis; 2-year follow-up with multiple regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published 2026 in Obesity"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is INDEPENDENT variable predicting BMI/overweight-obesity (SM → non-SM outcome), violating condition (a). Not smartphone/SM-as-DV.",
+    "binding_rules_applied": ["B1", "B7"],
+    "notes": "Prospective cohort with strong inferential testing. Screen time measured broadly (self-report) covering smartphones/apps but also TV, games, texting, SM, video chat combined. Meets FT-IC2 via qualifying smartphone/SM component. B7 applies: some 'internet use' framing but specifically operationalized into discrete modalities including SM/texting/video chat."
+  },
+  {
+    "paper_id": "67",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Years 3 (2019-2021) to Year 5 (2021-2023); N=7407 adolescents"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Video game use (mature-rated, problematic, weekend time); qualifies per B6 (mobile/app gaming). Outcomes measured: frequency of mature-rated games, VGAQ (problematic use), total weekend game time."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects ordinal logistic regression (mature-rated games); mixed-effects generalized linear models (problematic use, game time); adjusted odds ratios and betas with p-values reported; interaction testing by sex"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios (95% CI), beta coefficients (95% CI), p-values in Table 2; e.g., AOR 1.08 (1.02, 1.14) for parental screen time modeling and mature-rated game use"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD analysis; parenting practices → video game behaviors with 1- and 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published 2026 in World Journal of Pediatrics"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Video game use is DEPENDENT variable (outcome) predicted by parental media practices (SM → non-SM outcome analysis), violating condition (a). Not gaming-as-IV predicting SM or demographics alone.",
+    "binding_rules_applied": ["B6"],
+    "notes": "Prospective cohort examining media parenting practices (screen time modeling, mealtime/bedroom screen use, monitoring, limits) as predictors of adolescent video game behaviors. B6 applies: mobile/app gaming assessed and is qualifying exposure per framework."
+  }
+]

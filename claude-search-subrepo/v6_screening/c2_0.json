@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "431",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicit statement: 10,588 participants from the Adolescent Brain Cognitive Development Study; baseline ages 9-10; mixed-effects logistic regression at 2-year follow-up (N=10,588) and 3-year follow-up (N=3,486)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: three separate mixed-effects logistic regression analyses testing associations of smartphone ownership, age of first acquisition, and recent smartphone acquisition with health outcomes (depression, obesity, insufficient sleep)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Pediatrics, 2026; DOI 10.1542/peds.2025-072941"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership (yes/no) and age of first smartphone acquisition serve as IVs paired with individual-trait-level outcomes: depression (KSADS-5 diagnosis), obesity (BMI-based), and insufficient sleep (<9 hours per American Academy of Sleep Medicine recommendation)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported for smartphone ownership: OR 1.31 (95% CI 1.05-1.63) for depression, OR 1.40 (95% CI 1.20-1.63) for obesity, OR 1.62 (95% CI 1.46-1.79) for insufficient sleep at age 12; for age of acquisition: OR 1.09 (95% CI 1.02-1.16) and OR 1.08 (95% CI 1.02-1.12)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis performed: mixed-effects logistic regression with p-values <.001 reported throughout; Analysis 3 shows OR 1.57 (95% CI 1.12-2.20) and OR 1.50 (95% CI 1.26-1.77) for smartphone acquisition by age 13"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design includes both cross-sectional (Analysis 1 at age 12) and longitudinal (Analysis 3 with smartphone acquisition as IV predicting age 13 outcomes). Smartphone is IV in at least one analysis (age of acquisition predicts outcomes), so EC7 exclusion does not apply.",
+    "notes": "Cross-sectional and longitudinal mixed analyses; smartphone exposure measured by caregiver report; strong health outcome associations across multiple domains and statistical adjustments"
+  },
+  {
+    "paper_id": "122",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study explicitly named; 11,875 participants from the Adolescent Brain Cognitive Development Study; baseline ages 10, 11, and 12 years; U.S. study with 21 recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: confirmatory factor analysis of Child Behavior Checklist items to extract psychiatric dimensions; linear mixed models testing prospective longitudinal associations between neurodevelopmental spectrum (age 10) and psychiatric outcomes (ages 11-12); mediation models examining environmental and lifestyle factors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAACAP Open, 2026; DOI 10.1016/j.jaacop.2025.11.011"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use is mentioned only as a lifestyle mediator in the mediation models (Methods: 'lifestyle (eg, sleep problems, screen use) factors at age 11 mediated these associations'), not as an IV or DV. The paper's primary relationship is neurodevelopmental spectrum → psychiatric outcomes, with screen use, sleep, and other factors tested as potential mediators only. No analysis pairs a qualifying smartphone/SM variable with an individual-trait outcome as IV or DV."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC2 failed; cascade halted",
+    "notes": "Paper is about neurodevelopmental transdiagnostic dimensions predicting psychiatric outcomes; screen use is only a tested mediator, not a primary IV or DV; does not meet FT-IC2 qualifying exposure requirement"
+  },
+  {
+    "paper_id": "306",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study explicitly named in abstract: 'Using data from the Adolescent Brain Cognitive Development Study (N=10,075, age 9-10 years at baseline)'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: latent growth mixture models to characterize PLE trajectories; multinomial logistic regressions examining associations between baseline lifestyle behaviors (screen time, physical activity, caffeine intake, sleep disturbances, recreational activities) and PLE trajectories"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Child Psychology and Psychiatry and Allied Disciplines, 2026; DOI 10.1111/jcpp.14179"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported screen time (baseline) serves as IV paired with individual-trait-level outcome: psychotic-like experiences (PLE) distress trajectory. Abstract states: 'baseline lifestyle behaviors (including self-reported screen time...and parent-reported sleep disturbances and recreational activities) and PLE trajectories'; screen time qualifies as device-use measure"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: 'individuals in the Persistent Elevated Distress trajectory spent more time using screens (adjusted Odds Ratio [OR] 2.27, 95% confidence interval [CI] 2.03-2.53)'; also reported for total PLE scores"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential multinomial logistic regression analysis with numeric estimates (OR, 95% CI) reported; p-values reported as statistically significant"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline behaviors measured at age 9-10, associated with trajectory membership identified from prospective follow-up data). Cross-sectional designs are exempt from FT-EC7 exclusion rule regardless of SM directionality.",
+    "notes": "No PDF available; screening based on abstract only; screen time measured via self-report; design characterizes trajectories of PLEs over time with baseline lifestyle predictors; strong association between screen time and Persistent Elevated Distress trajectory"
+  }
+]

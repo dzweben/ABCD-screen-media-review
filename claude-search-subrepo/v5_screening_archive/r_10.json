@@ -1,0 +1,59 @@
+[
+  {
+    "paper_id": "202",
+    "resolver_decisions": [
+      {
+        "crit": "FT_EC7_applies",
+        "status": false,
+        "evidence": "Methods: Mixed-effects linear modeling with cumulative ACEs score (Y1) as predictor and PSMU (Y3) as outcome. Results: 'After adjusting for socio-demographic covariates, a significant positive association was found between adolescent cumulative ACEs score at 10–12 years and higher PSMU at 12–14 years: relative to adolescents with low (<2) ACEs, those with high (≥4) ACEs reported higher PSMU (β = 1.5, p < 0.001).'",
+        "binding_rules_cited": ["B17"],
+        "rationale": "B17 explicitly states: 'Paper's SM-as-DV analyses include any non-demographic predictor (ACEs, parenting, parental psychopathology, sleep, depression, anxiety, ADHD, impulsivity, sensation-seeking, executive function, neural, genetic, sexual orientation, gender identity, pet ownership, religious participation, etc.) → FT-EC7 does NOT apply.' ACEs are psychosocial/family predictors (§3.2), not demographic-only. C2 incorrectly classified ACEs as 'demographic (adversity)'; the criteria explicitly exclude ACEs from the demographic set. FT-EC7 requires ALL predictors to be demographic-only; presence of ACEs disqualifies it."
+      }
+    ]
+  },
+  {
+    "paper_id": "205",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Table 2 reports adjusted odds ratios (AOR) with 95% confidence intervals for screen time and family involvement outcomes (e.g., 'AOR=1.167, 95% CI: 0.957–1.424'). Table 3 reports McFadden's Pseudo R², F-statistics, and β coefficients with 95% CIs for screen time as outcome variable.",
+        "binding_rules_cited": ["§2.6.2"],
+        "rationale": "FT-IC4 requires at least one numeric value for the SM ↔ non-SM association: β / OR / RR / HR / Cohen's d / r / F / t / χ² / η² / R² / p-value / 95% CI. Tables 2–3 explicitly report numeric coefficients (ORs, β, 95% CIs) for screen time. C2's hesitation about 'screen time values not clearly extracted' is unfounded; Tables present numeric estimates directly. MET per §2.6.2."
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "status": false,
+        "evidence": "Paper analyzes pet ownership (and demographic covariates) as predictors of screen time (the dependent variable) in a longitudinal design. No analysis reports screen time as an exposure predicting a non-SM outcome. Screen time appears only as an outcome variable, not as an exposure in the SM → non-SM direction.",
+        "binding_rules_cited": ["FT-IC2", "§6 hierarchical algorithm"],
+        "rationale": "FT-EC7 applies only if SM is the **dependent variable in EVERY reported analysis** AND predictors are demographic-only AND analyses are longitudinal. However, this paper fundamentally fails FT-IC2: it does not measure a qualifying smartphone/SM variable as an **exposure** (independent variable). The paper analyzes SM/screen time only as an outcome. Per the hierarchical exclusion algorithm (§6), papers that fail FT-IC2 are excluded on FT-EC2, not FT-EC7. C1 correctly identified that the paper fails FT-IC2. C2 incorrectly invoked FT-EC7 as the exclusion path, but the correct exclusion is on FT-EC2 (no qualifying exposure). FT-EC7 does NOT apply because the paper does not meet the structural criteria of FT-EC7 (SM must also appear as an exposure in at least one analysis for FT-EC7 to be the decision rule; here SM appears only as outcome)."
+      }
+    ]
+  },
+  {
+    "paper_id": "215",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Methods: 'Screen time was treated as a continuous variable, representing the weighted average in hours. Total recreational screen time was categorized using 4-hour intervals, based on studies linking 24 hours/day to obesity and poor mental health among adolescents. Screen time was grouped into three categories: 0–4 hours/day (low; reference), >4–8 hours/day (medium), and >8 hours/day (high).' Results (Table 2): Reports β coefficient for 'Screen time (continuous): B = 0.32; 95% CI: 0.19, 0.45; p < 0.001' and categorical analyses. Nowhere in results, tables, figures, or supplements are reported separate estimates for individual YSTS items (texting, social media, video chat, app use).",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 (BINDING): 'Paper uses YSTS but reports only a summed total screen time estimate (or a single composite) with no per-modality breakdown anywhere → FT-IC2 = NOT_MET.' This paper analyzes YSTS (Youth Screen Time Survey) but reports only composite 'total screen time' across all modalities (TV, gaming, videos, texting, social media combined) with no extractable per-item coefficients for any single qualifying item. B1 does not apply because B1 requires 'reports a separate β/OR for at least one of: social media, texting, video chat, mobile phone, or app-category'—this paper reports none. C2's citation of B1 is incorrect; the paper does not satisfy B1. Exclusion code: FT-EC2."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "As FT-IC2 = NOT_MET, FT-IC3 is moot per hierarchical algorithm. However, note: paper does report inferential tests (weighted multivariable linear regression with B coefficients, 95% CIs, p-values), which would satisfy §2.6.1 if the exposure were qualifying.",
+        "binding_rules_cited": ["§6 hierarchical algorithm", "FT-IC2 NOT_MET"],
+        "rationale": "Hierarchical exclusion (§6): If FT-IC2 = NOT_MET, the paper is excluded on FT-EC2 before FT-IC3 is evaluated. The paper fails on the exposure criterion and is excluded at that stage."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "As FT-IC2 = NOT_MET, FT-IC4 is moot per hierarchical algorithm. However, note: paper does report numeric values (β = 0.32, 95% CI: 0.19–0.45; separate categorical ORs), which would satisfy §2.6.2 if the exposure were qualifying.",
+        "binding_rules_cited": ["§6 hierarchical algorithm", "FT-IC2 NOT_MET"],
+        "rationale": "Hierarchical exclusion (§6): Paper fails FT-IC2 and is excluded on FT-EC2. The presence of numeric reporting is irrelevant when the exposure does not qualify."
+      }
+    ]
+  }
+]

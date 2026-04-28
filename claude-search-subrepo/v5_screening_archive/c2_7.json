@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, USA, 1,036 participants (Mage=12.0, 60.7% male) at two-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Problematic gaming (VGAQ) is unspecified-platform gaming, excluded per B5. No qualifying smartphone or social media variables present."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis using connectome-based predictive modeling (CPM) on MIDT fMRI data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2026 publication, not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 not applicable; paper fails FT_IC2 (no qualifying SM/smartphone variables)",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "EXCLUDE: unspecified-platform gaming does not qualify as smartphone or social media exposure per criteria B5. Paper focuses on neural predictors of gaming severity, not SM/smartphone ↔ outcome associations."
+  },
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, USA, ~10,000 children aged 9-10 years (Data Release 5.0)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as total aggregate across unspecified platforms (television, videos, video games, texting, video chat) without separate per-item coefficients in main analyses. Main results report only total screen time β; represents internet use without device/platform specificity per B5. Fails B2 (only summed/total screen time, no per-item breakdown in main results)."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis using linear mixed-effects models on baseline/~9-10 year data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2026 publication, not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 not applicable; paper fails FT_IC2 (unspecified-platform screen time, B2/B5 violations)",
+    "binding_rules_applied": [
+      "B2",
+      "B5"
+    ],
+    "notes": "EXCLUDE: Main analyses report only total screen time (no per-item breakdown) and lack platform specificity, violating both B2 and B5. Supplementary Table S1 shows device-specific results but main reported outcome is total ST only. Mediation analysis with putamen volume does not rescue IC2."
+  },
+  {
+    "paper_id": "475",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, USA, 1,186 participants (mean age 11.96 years, 46.5% female) at 2-year and 4-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization alone is the independent variable. Per B3 binding rule: Cyberbullying alone → NOT_MET. No separately-measured social media variable with its own coefficient (B4 carve-out does not apply). Single cyberbullying question is the only exposure; no qualifying SM platform use."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; criterion not evaluated"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis using linear mixed models on fMRI stop signal task and Child Behavioral Checklist data from T1 (2-year) and T2 (4-year follow-up)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original 2026 publication, not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 not applicable; paper fails FT_IC2 (cyberbullying alone, B3 binding rule)",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "EXCLUDE: Cyberbullying victimization is the only exposure measured; no qualifying smartphone or social media variable. Per B3, cyberbullying alone does not meet FT_IC2. B4 carve-out (cyberbullying + separately-measured SM) does not apply."
+  }
+]

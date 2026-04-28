@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "541",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study, 21 U.S. sites, N=10,712, ages 9-10 years baseline cross-sectional data"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using latent profile analysis (LPA) with multilevel logistic regression to examine associations between family typologies and movement behavior recommendations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in International Journal of Environmental Research and Public Health, 2021"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is not isolated as a qualifying SM/phone variable paired with an individual-trait-level outcome. Screen time is bundled with physical activity and sleep into a composite outcome (number of movement behavior recommendations met). Family environment variables (parental acceptance, monitoring, conflict) on the other side are family/parenting characteristics, not individual-trait-level traits of the child. Paper examines family typologies in relation to guideline adherence, not SM/phone use paired with neural/behavioral/health/cognitive/well-being outcomes."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "FT-IC2 NOT_MET: screen time measured as part of composite movement behavior outcome (PA + screen time + sleep), not isolated phone/SM variable"
+  },
+  {
+    "paper_id": "295",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, U.S. multisite, N=9,718 school-age children, ages 9-11 years baseline"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using machine learning framework with large battery of measures to identify factors associated with fluid cognitive functioning (FCF); algorithm explained 14.74% variance in FCF"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Child Development, 2021"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity measured from youth-reported screen time items (weekday and weekend) on different media types; appears as IV in ML model predicting FCF, which is an individual-trait-level cognitive outcome. Screen media activity is separately measured and isolates phone/SM activity."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning analysis identifies screen media activity as one of novel and potentially modifiable contributors to FCF; model reports feature importance and variable importance metrics for associations with FCF"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: algorithm explained 14.74% of variance in FCF; variable importance and feature importance metrics computed for screen media activity's relation to FCF"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (baseline data only); FT-EC7 applies only to longitudinal studies where SM is DV-only in every analysis",
+    "notes": "Paper examines screen media activity as IV predicting cognitive functioning outcome (FCF) in cross-sectional ML framework"
+  },
+  {
+    "paper_id": "24",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, 21 U.S. sites, N=11,025 participants, ages 9-10 years at baseline"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective cohort design with logistic regression analyses estimating associations between baseline child-reported screen time (exposure) and parent-reported binge-eating disorder (outcome) at one-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in International Journal of Eating Disorders, 2021"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Baseline child-reported screen time measured separately by six modalities: social networking, texting, video chat, TV/movies, videos (YouTube), and video games. Social networking and texting are SM-specific measures; TV/movies and videos are screen-based phone/device activities. Paired with binge-eating disorder (parent-reported, DSM-5 diagnostic criteria via KSADS-5), an individual-trait-level behavioral/mental health outcome. Methods explicitly isolate different screen time modalities rather than bundling into a composite."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Prospective association between baseline screen time modalities and incident binge-eating disorder at one-year follow-up"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported for SM/screen modalities paired with binge-eating disorder outcome: aOR 1.62 (95% CI 1.18–2.22) for social networking; aOR 1.40 (95% CI 1.08–1.82) for texting; aOR 1.39 (95% CI 1.14–1.69) for TV/movies; total screen time aOR 1.11 (95% CI 1.05–1.18)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design confirmed (baseline to one-year follow-up), but screen time is IV (exposure), not DV; binge-eating disorder is DV (outcome). FT-EC7 applies only when SM is DV in every analysis and no SM-as-IV analysis exists anywhere.",
+    "notes": "Prospective study with SM/screen time as IV predicting binge-eating disorder as DV; specific screen modalities (social networking, texting) reported separately"
+  }
+]
