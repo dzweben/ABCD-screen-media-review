@@ -1,0 +1,52 @@
+[
+  {
+    "paper_id": "116",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper uses Amsterdam Born Children and their Development (Dutch ABCD), not U.S. ABCD Study. Fails at FT-IC1 level. All downstream criteria are moot.",
+        "binding_rules_cited": ["FT-IC1"],
+        "rationale": "FT-IC1 (population criterion) is hierarchically binding. Paper analyzes 3102 children from 'the Amsterdam Born Children and their Development (ABCD) study, in the Netherlands' per Methods section. This is the Dutch ABCD cohort, not U.S. ABCD. The exclusion is binding per criteria §2.1 which explicitly lists 'Amsterdam Born Children and their Development (Dutch ABCD)' as NOT_MET. C1 correctly identified this critical exclusion; C2 evaluated downstream criteria without checking population eligibility."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Paper fails FT-IC1 (Dutch ABCD cohort, not U.S. ABCD). Population exclusion is hierarchically binding.",
+        "binding_rules_cited": ["FT-IC1"],
+        "rationale": "Population eligibility (FT-IC1) is the first hierarchical filter. While the paper does report numeric ORs and CIs (e.g., TV ≥1.5 h/day OR 3.13, 95%CI 1.43-6.82), the cohort is ineligible. C1 correctly applied hierarchical exclusion logic; C2 evaluated reporting criteria without checking population."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "NOT_MET",
+        "evidence": "Paper describes study design as cross-sectional with emotional/behavioral outcomes measured via teacher and maternal report from the Strengths and Difficulties Questionnaire. However, the cohort is the Dutch ABCD (Amsterdam Born Children and their Development), not U.S. ABCD.",
+        "binding_rules_cited": ["FT-IC1"],
+        "rationale": "FT-IC1 exclusion (Dutch ABCD, not U.S. ABCD) is hierarchically binding and renders all other criteria not applicable. C1 correctly applied the population exclusion first."
+      }
+    ]
+  },
+  {
+    "paper_id": "121",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper uses U.S. ABCD (release 5.1) with 4,754 youth measured at baseline (ages 9-10) and year 4 (ages 12-15). Baseline measurements: impulsivity facets (UPPS-P), motivation, psychopathology, cognitive ability. Year 4 outcomes: average daily video game hours, average daily social media hours, smartphone/smartwatch ownership (Table 1). All screen time/PSU variables are DEPENDENT VARIABLES (outcomes being predicted), not independent variables (exposures). Results section tests whether baseline personality traits PREDICT screen time/PSU at year 4. No analysis reports a separately-measured smartphone/SM variable as the independent variable predicting a non-SM outcome.",
+        "binding_rules_cited": ["FT-IC2", "Directionality §3"],
+        "rationale": "FT-IC2 requires 'at least one of the following is measured AND enters a statistical analysis' where SM/smartphone is the exposure entering the analysis predicting non-SM outcomes. Here, screen time and problematic screen use are the OUTCOMES being predicted by baseline personality traits. The causal direction is reversed: baseline psychology→future screen use, not screen use→outcomes. While the paper measures video games, social media, and smartphones at year 4, these are dependent variables in mediation/moderation analyses testing personality predictors, not independent variables testing SM associations with non-SM outcomes. C1 correctly identified the exposure-outcome directionality problem. C2 mistakenly cited B1 (separate estimates reported) but B1 applies only when SM is the independent variable with extractable coefficients; here SM is the outcome. Directionality rule §3 requires SM as predictor of non-SM outcome (any timeframe) for INCLUDE; this paper has the inverse: psychology→SM outcome longitudinally, which is INCLUDE per §3 but does NOT satisfy FT-IC2's requirement that SM enters analysis as the exposure being tested against non-SM outcomes."
+      }
+    ]
+  },
+  {
+    "paper_id": "122",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Methods section specifies environmental and lifestyle factors 'as potential mediators' including 'duration of screen use (distinguishing between social media, social engagement, passive watching, and active gaming)'. Mediation models test: neurodevelopmental spectrum (age 10) → lifestyle/environmental mediators (age 11) → psychiatric dimensions (ages 11-12). Screen use appears only as a path variable in mediation analyses. Results report indirect effects (mediation pathways) but no standalone coefficient for screen use as an independent variable predicting psychiatric outcomes separately from the mediation model structure.",
+        "binding_rules_cited": ["B10", "FT-IC2"],
+        "rationale": "FT-IC2 requires SM 'enters a statistical analysis' (regression, correlation, or network edge) predicting non-SM outcomes. While the paper distinguishes social media from other screen modalities in measurement, screen use (including social media) only appears as a mediator variable in mediation models, not as a separately-estimated independent variable. B10 states: 'SM appears in the covariates list but no coefficient for SM is reported anywhere → FT-IC3 NOT_MET (FT-EC4)'. Similarly here, screen use appears in the mediation structure but the paper does not report a direct coefficient for screen use predicting psychiatric outcomes independently; instead, it is embedded as a mediating path where neurodevelopmental traits→screen use→outcomes. The paper reports mediation indirect effects (a×b products) for the full pathway but not a standalone 'screen use coefficient' as an IV. C2 noted surface-level inclusion of 'social media' in the measurement distinctions, but FT-IC2 requires the variable to function as an independent variable with extractable estimate, not merely as a measured mediator. C1 correctly applied the principle that a measured variable must have its own reported coefficient to satisfy FT-IC2."
+      }
+    ]
+  }
+]

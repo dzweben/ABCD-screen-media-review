@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "11",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US-based Adolescent Brain Cognitive Development (ABCD) Study; nationally representative sample; data from June 1, 2016 to October 15, 2018"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use (Youth Screen Time Survey) is a mediator/covariate only in mediation analyses; screen use is not an exposure/IV with its own coefficient in primary analyses examining parental factors→sleep outcomes. B10 applies: SM is covariate-only with no coefficient"
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; cannot proceed"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; cannot proceed"
+    },
+    "FT_IC5": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT_IC2 NOT_MET; cannot proceed"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; preregistered prospective cohort study; no preprint/abstract duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC2 NOT_MET; does not meet basic inclusion criteria",
+    "binding_rules_applied": ["B10"],
+    "notes": "Paper focuses on parental factors (warmth, monitoring, conflict, psychopathology) predicting adolescent sleep outcomes. Screen use and emotional regulation are tested as mediators but do not meet FT_IC2 as independent exposures. Screen use is measured but in covariate/mediator role only."
+  },
+  {
+    "paper_id": "121",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study (Release 5.1); participants ages 9-10 at baseline, ages 12-15 at year 4; large longitudinal US cohort"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone/app and social media variables. Screen time operationalized as separate measurements: average daily video game hours, average daily social media hours, smartphone/smartwatch ownership. B1 applies: YSTS paper with separate β/OR for video games, social media, and smartphone measured independently with own coefficients reported (Table 3 and Table 4)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models testing predictors of ST and PSU; coefficients (β), standard errors, p-values reported for all screen activities (video games, social media, smartphones)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with SE and p-values reported in Table 3 and Table 4 for main effects across all domains and screen activities; additional model results in Table S1"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis using baseline (ages 9-10) and year 4 (ages 12-15) data; longitudinal prospective study predicting ST and PSU trajectories"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original analysis; published in JAACAP Open; no preprint/duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/phone/gaming are INDEPENDENT VARIABLES predicting ST/PSU outcomes (non-SM outcomes). Paper does NOT analyze SM/phones as dependent variables. B18 applies: paper has SM-as-IV→outcome analysis; FT-EC7 does not apply",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper analyzes baseline individual differences (impulsivity, motivation, psychopathology, cognition) predicting later screen time and problematic screen use across video games, social media, and smartphones. Screen activities are outcomes/DVs, not predictors; demographic and psychosocial characteristics are IVs. Longitudinal design with 4-year follow-up."
+  },
+  {
+    "paper_id": "90",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) dataset; N=9,337 individuals with baseline social media use and diffusion-weighted MRI data; ages 9-10 at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media variable: daily social media consumption operationalized as two groups (<30 min/day vs >30 min/day); continuous measure of SM use assessed at baseline"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regressions examining effects of social media consumption on fractional anisotropy (FA) across 34 white matter tracts; odds ratios assessing influence of demographic/neighborhood characteristics on SM use"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios (OR > 1.5) with p-values reported in results; regression results examining SM effects on white matter FA; abstract and methods indicate statistical testing (p < 0.05)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis; cross-sectional examination of 9,337 baseline participants from ABCD cohort with measured social media use and structural brain imaging"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original analysis; published in Biological Psychiatry 2025; no preprint/duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media consumption is an INDEPENDENT VARIABLE predicting white matter FA outcomes (non-SM neuroimaging outcomes). B18 applies: paper has SM-as-IV→outcome analysis; FT-EC7 does not apply",
+    "binding_rules_applied": [],
+    "notes": "Paper examines relationship between social media use, demographics, neighborhood characteristics, and white matter structure using baseline ABCD data. SM is measured as IV; white matter FA (neuroimaging) is outcome. Results indicated that demographic and socioeconomic variables were more critical than SM use itself for white matter health after adjustment."
+  }
+]

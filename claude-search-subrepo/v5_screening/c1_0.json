@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "431",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study participants (N=10,588) from baseline and follow-up waves; explicitly stated in abstract and methods."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone ownership (caregiver-reported) and age of first smartphone acquisition. Qualifies per B1 (smartphone ownership, age of acquisition are explicitly listed in prompt as qualifying variables)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects logistic regression models testing associations of smartphone ownership and age of smartphone acquisition with health outcomes (depression, obesity, insufficient sleep); models include ORs and 95% CIs. Stated in abstract: 'Mixed-effects logistic regression models tested associations...'"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: ORs with 95% CIs reported in abstract for all three outcomes (e.g., OR 1.31, 95% CI 1.05–1.63 for depression). Models include coefficients, confidence intervals, p-values."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD Study data. Analyses conducted by authors on primary dataset with smartphone exposure → health outcome associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate. Published in Pediatrics 2026, DOI 10.1542/peds.2025-072941, full paper format (not preprint or abstract)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply (B18 condition). Paper includes SM/smartphone as independent variable predicting health outcomes (depression, obesity, insufficient sleep), not as dependent variable. Smartphone is the IV; health outcomes are DVs. Therefore FT-EC7 binding rule disqualifies this paper.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Paper is prospective/longitudinal per abstract (ages measured at baseline, 1-year, and 2-year follow-up). Clear causal directionality from smartphone exposure to outcomes."
+  },
+  {
+    "paper_id": "122",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, 11,875 participants at baseline (age 10), with follow-ups at ages 11 and 12 (N=11,219, N=10,972 respectively). Explicitly stated in methods."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper lists 'screen use' as a lifestyle mediator variable, measured as 'duration of screen use (distinguishing between social media, social engagement, passive watching, and active gaming)'. However, screen use is unspecified-platform generic internet time without breakdown to smartphone/app OR social media specifically as IV. Per B5 (unspecified-platform 'internet use' without device/platform → NOT_MET) and B7 (generic screen time without specific SM/smartphone focus → NOT_MET). Neurodevelopmental traits are the IV; psychiatric outcomes are DVs. Screen use is tested as a MEDIATOR (path), not as the primary IV. No standalone SM↔outcome coefficient reported; screen use only appears in mediation analyses. Does not meet exposure criterion for this review."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models testing longitudinal associations between neurodevelopmental factor and psychiatric dimensions; mediation models with bootstrap estimation to test indirect effects. Coefficients reported: β = 0.417–0.641, p < .001. Stated: 'Using linear mixed models, we tested prospective associations...'"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: β coefficients, standard errors, and p-values reported in Table 2 for all main outcomes (e.g., β = 0.641, SE = 0.007, p < .001 for externalizing at age 11). Proportion mediated percentages (12%–29%) in results."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. ABCD Study confirmatory factor analysis and longitudinal mediation models run on primary data. Novel analysis of transdiagnostic neurodevelopmental spectrum → psychiatric outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate. Published in JAACAP Open (journal) 2025, DOI 10.1016/j.jaacop.2025.11.011, full research article."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Neurodevelopmental traits are the independent variable; psychiatric outcomes (externalizing, internalizing, detachment, somatoform) are dependent variables. Screen use is a mediator, not the exposure of interest. Paper focuses on neurodevelopmental predictors of psychiatric outcomes, not SM/smartphone as the IV.",
+    "binding_rules_applied": [
+      "B5",
+      "B7"
+    ],
+    "notes": "EXCLUDE from this review. While ABCD study and FT-IC1, FT-IC3, FT-IC4, FT-IC5, FT-IC6 are MET, FT-IC2 is NOT_MET due to unspecified-platform screen time used only as a mediator, not as a qualifying SM/smartphone exposure per binding rules."
+  },
+  {
+    "paper_id": "306",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, N=10,075, ages 9–10 at baseline. Abstract explicitly states 'Adolescent Brain Cognitive Development Study (N=10,075, age 9-10 years at baseline)'."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract mentions 'baseline lifestyle behaviors (including self-reported screen time, physical activity and caffeine intake...)' and results show 'individuals in the Persistent Elevated Distress trajectory spent more time using screens (adjusted Odds Ratio [OR] 2.27, 95% confidence interval [CI] 2.03-2.53)'. Screen time is unspecified-platform generic measure. Per B5 (unspecified-platform 'internet use' without device specification → NOT_MET) and B7 ('reading-on-screens, e-mail' and generic screen time without SM/smartphone breakdown → NOT_MET). No mention of smartphone ownership, app use, social media, or texting as qualifying exposures."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multinomial logistic regressions examining associations between baseline lifestyle behaviors and psychotic-like experience (PLE) trajectories. ORs and 95% CIs reported in abstract: 'Compared with the No Distress trajectory, individuals in the Persistent Elevated Distress trajectory...had odds of reporting...'"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: ORs with 95% CIs reported in abstract (e.g., OR 2.27, 95% CI 2.03–2.53 for screen time; OR 1.62, 95% CI 1.28–2.04 for caffeine). Statistical tests and measures reported."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. ABCD Study latent growth mixture modeling of PLE trajectories and multinomial logistic regression testing lifestyle factor associations with trajectories."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate. Published in Journal of Child Psychology and Psychiatry 2026, DOI 10.1111/jcpp.14179, full research article."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Psychotic-like experiences (PLE) are the outcome variable; lifestyle factors including screen time are predictors. Screen time is the independent variable (not SM/smartphone-as-DV). Paper structure is opposite of FT-EC7 binding condition.",
+    "binding_rules_applied": [
+      "B5",
+      "B7"
+    ],
+    "notes": "EXCLUDE from this review. FT-IC2 NOT_MET due to unspecified-platform screen time with no breakdown to smartphone ownership, apps, or social media per B5/B7 binding rules. Does not meet qualifying exposure criteria."
+  }
+]

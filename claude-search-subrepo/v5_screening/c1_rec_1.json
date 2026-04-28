@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "183",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Year 2 follow-up (2018-2020), N=8753 early adolescents from 21 US recruitment sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three qualifying social media/smartphone variables: (1) Social Media Addiction Questionnaire (SMAQ—qualifying SM scale per B11 exception: individual coefficient reported); (2) Mobile Phone Involvement Questionnaire (MPIQ—qualifying smartphone scale); (3) Video Game Addiction Questionnaire (video games as app-category use = smartphone per B1). Each has separate β coefficient reported. Applies B1 (YSTS separate per-item coefficients for SM, mobile phone)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analysis (cross-sectional); coefficients and p-values reported for associations between sociodemographic predictors and three problematic screen use outcomes; interaction terms tested (income × race/ethnicity)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Full regression table with β coefficients, standard errors, 95% CI, and p-values for all predictors and three screen use outcomes reported in main paper table"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD cohort using cross-sectional data; novel regression models estimating sociodemographic associations with problematic screen use phenotypes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022 in Pediatric Research; no preprint/abstract/duplicate indicated"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "FT-EC7 APPLIES per §3.1 (a)–(c) and B15 carve-out. (a) SM/mobile phone ARE dependent variables in ALL analyses—no analyses predict SM→non-SM outcomes. (b) ALL predictors are in closed demographic set: age, sex, race/ethnicity, primary language, household income, parental education, parental marital status. (c) Analysis is CROSS-SECTIONAL (Year 2, not longitudinal prediction). B15 carve-out: DOES NOT disqualify because the analysis is cross-sectional sociodemographic→SM; paper does not report longitudinal/prospective demographics→SM. FT-EC7 applies; study excluded from qualitative synthesis per tightened v5 rules.",
+    "binding_rules_applied": [
+      "B1",
+      "B11",
+      "B15"
+    ],
+    "notes": "Cross-sectional sociodemographic epidemiology of problematic screen use phenotypes in ABCD. All three screen measures are outcome variables with demographic predictors only. Meets FT-EC7 binding rule exclusion criterion."
+  },
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, baseline and 1-year follow-up (N=4,042 with follow-up data from 11,875 baseline); children ages 9–10 years at enrollment from 21 US sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity identified as key predictor variable in machine learning models; treated as a questionnaire/task variable predicting DRD (a behavioral outcome, not SM itself). Qualifies as smartphone/SM exposure variable in ML feature context. Applies B8: traditional regression coefficients (elastic net, random forest, etc.) used—ML coefficients count per rule."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning regression models (elastic net, random forest, light gradient boosting, support vector regression) with cross-validation; relative feature importance and model performance metrics (R² on test set) reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Cross-validation R² and held-out test set R² reported for final models; model performance and key predictive variables listed (including screen media activity). Supplement/appendix likely contains additional numeric details."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original predictive analysis of ABCD baseline data to predict DRD at 1-year follow-up; novel machine learning models and antecedent identification"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022 in Experimental and Clinical Psychopharmacology; no preprint/duplicate noted"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does NOT apply. Screen media activity is NOT the dependent variable—DRD (delayed reward discounting, a behavioral/cognitive outcome) is the dependent variable. Paper tests SM→non-SM outcome prediction, not SM←demographic prediction. Disqualifies condition (a).",
+    "binding_rules_applied": [
+      "B8"
+    ],
+    "notes": "Machine learning prediction study using ABCD baseline data. Screen media activity is one of multiple predictors of DRD; not a standalone SM-DV study. Meets all inclusion criteria."
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study cross-sectional data, N=10,650 children aged 9.9±0.6 years from USA probability sample"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying SM/smartphone variables: (1) social media (visiting social networking sites—Twitter, Instagram per prompt); (2) texting; (3) video chat (Facetime); (4) video games; (5) TV watching; (6) video watching (YouTube). Each measured separately with individual response scale. Applies B1: YSTS paper reporting separate coefficients for SM, texting, video chat, gaming (if separate). Texting and video chat count as phone use per B1 definition."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multilevel general linear models (continuous outcome: minutes per day screen time) and multilevel logistic regression (binary outcome: ≤2h vs. >2h); p-values and OR/CI reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% CI reported for parental psychological problems → mature-rated media outcomes (OR=1.14 for watching mature movies, OR=1.27 for gaming); regression results for screen time outcomes in main text and tables"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD cross-sectional data; novel examination of parental psychological problems as predictor of child screen media behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022 in Acta Paediatrica; no preprint/duplicate indicated"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "FT-EC7 APPLIES per §3.1 (a)–(c). (a) Screen time/media use ARE dependent variables in ALL analyses—no analyses predict SM→non-SM outcomes. (b) HOWEVER, primary predictor is parental psychological problems (parental psychopathology), which is EXPLICITLY in NOT-EC7 list (B17): 'parental psychopathology' disqualifies. Additionally, child psychological problems are adjusted covariates (17% of sample). Even though sociodemographic factors are also in model, the inclusion of parental psychopathology as MAIN predictor (NOT in closed demographic-only set) triggers B17 disqualification. FT-EC7 does NOT apply; study not excluded on EC7 basis.",
+    "binding_rules_applied": [
+      "B1",
+      "B17"
+    ],
+    "notes": "Parental psychological problems (Adult Self-Report; parental internalizing/externalizing) are the primary predictor of child screen media outcomes. Parental psychopathology is listed in B17 as disqualifying for FT-EC7. Study includes both sociodemographic adjustment (age, sex, ethnicity, income) and child psychological problems covariate. Cross-sectional design. Does NOT meet FT-EC7 criterion per B17."
+  }
+]

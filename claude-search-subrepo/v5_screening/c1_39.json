@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US Adolescent Brain Cognitive Development Study 2016-2021; N=11,869 ABCD participants with non-missing screen use data"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "B2 rule: only summed/total screen time reported (TV + videos + games + social media + video chat + texting combined as 'average daily screen use'); no per-item breakdown with separate coefficients anywhere in paper"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT_IC2; no separate inference tests on SM variables"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT_IC2; no extractable coefficients for individual SM measures"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: growth mixture modeling with standardized total screen use as outcome, identifying 2 trajectory classes (Drastically Increasing N=1,333; Gradually Increasing N=10,336)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article, not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails FT_IC2 binding rule (B2); screen use is DV (not IV) but only aggregated summed measure available; even if SM were IV, cross-sectional perception of discrimination measure (year 1) mixed with longitudinal trajectory violates longitudinal-only requirement for FT-EC7",
+    "binding_rules_applied": ["B2"],
+    "notes": "Excluded due to B2 rule: summed screen time with no per-item breakdown. Despite this being ABCD study with longitudinal trajectories, the measurement approach does not meet FT-IC2 qualifying threshold."
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US Adolescent Brain Cognitive Development Study; ABCD N=11,815 children at baseline (mean age 119 months), 3 waves examined; independent validation in HCP-D (N=652)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "B1 rule: SMA patterns identified include separate per-item breakdown (watching TV/movies, playing video games, online video/streaming, social media use, texting, video chatting). K-means clustering identified video-centric higher-frequency SMA pattern (26.7%) vs lower-frequency (73.3%). Multiple qualifying variables: video entertainment (TV, movies, gaming), social communication (texting, social media, video chat) reported as separate pattern components"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed effects modeling with false discovery rate (FDR) correction examining SMA pattern associations with neurocognitive performance, behavioral problems, psychotic-like experiences, impulsivity, sensitivity to punishment/reward, and resting-state brain functional connectivity (RSFC). Regression coefficients reported for SMA patterns predicting behavioral developmental measures and brain functional connectivity"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients with 95% CIs and FDR-corrected p-values reported: β=−.12 [−0.08, −0.16] for neurocognition (FDR p<.001); β=.13 [0.09, 0.18] for behavioral problems (FDR p<.001); β=.31 [0.27, 0.36] for psychotic-like experiences (FDR p<.001); RSFC edge weights and connectivity measures; model performance metrics (partial r values)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: K-means clustering to identify SMA patterns in baseline data, validation in independent HCP-D sample and ABCD follow-up waves, linear mixed effects models predicting developmental outcomes at baseline and longitudinally"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in peer-reviewed journal, no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is independent variable (IV) predicting non-SM outcomes (neurocognitive performance, behavioral problems, brain connectivity). FT-EC7 requires SM as dependent variable only; this paper examines SM→outcome associations, which disqualifies FT-EC7 applicability",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE paper: meets all FT-IC criteria (1-6). Original ABCD study with rich SMA pattern phenotyping and multiple developmental outcome measures. SMA patterns are IV; various developmental outcomes are DV."
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US Adolescent Brain Cognitive Development Study; diverse sample of 10,000+ youth ages 9-10 at baseline across 21 US sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "B5 rule: 'screen time' mentioned only as a covariate/feature in machine learning models predicting ADHD symptoms. Screen time is one of many demographic and child characteristic inputs (alongside neurocognition, sex, impulsivity, parental monitoring, etc.) used in predictive models. No separate smartphone or social media exposure analysis; no independent investigation of SM↔non-SM outcomes. Screen time is included as one of multiple features but is not the focus of exposure investigation"
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT_IC2; screen time is treated as a feature in predictive model, not as independent variable in inferential test of SM associations"
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Fails FT_IC2; no extractable coefficients specific to screen time as primary exposure of interest"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis using cross-validated machine learning models (PCR, LASSO, elastic-net) to predict ADHD symptoms from neurocognitive abilities, demographics, and child/family characteristics"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in peer-reviewed journal"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails FT_IC2; paper does not meet inclusion criteria due to screen time being treated as a secondary covariate rather than primary exposure of interest",
+    "binding_rules_applied": ["B5"],
+    "notes": "EXCLUDE: Fails FT_IC2 (B5 rule). Although this is an ABCD study with original analysis, screen time is mentioned only as one of many features in a predictive model for ADHD (Translational Psychiatry statement: 'Screen time' was one feature among multiple domains). The paper does not investigate smartphone/SM as a primary exposure with separate coefficient estimating its association with an outcome."
+  }
+]

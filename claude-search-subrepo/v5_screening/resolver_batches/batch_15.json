@@ -1,0 +1,73 @@
+[
+  {
+    "paper_id": "403",
+    "title": "Social epidemiology of online dating in U.S. early adolescents.",
+    "authors": "",
+    "year": "2024",
+    "doi": "10.1186/s13104-024-06777-w",
+    "abstract": "OBJECTIVE: To investigate the prevalence and sociodemographic associations of online dating in a demographically diverse U.S. national cohort of early adolescents. METHODS: We analyzed cross-sectional data from the Adolescent Brain Cognitive Development Study (Year 2, 2018-2020, ages 11-12; N\u00e2\u0080\u0089=\u00e2\u0080\u008910,157). Multivariable logistic regression analyses were employed to estimate associations between sociodemographic factors (e.g., age, sex, race/ethnicity, sexual orientation, household income, parental education) and early adolescent-reported online dating behaviors. RESULTS: Overall, 0.4% (n\u00e2\u0080\u0089=\u00e2\u0080\u008938) of participants reported ever using a dating app. Males (AOR 2.72, 95% CI 1.11-6.78) had higher odds of online dating compared to females, and sexual minority identification (e.g., lesbian, gay, or bisexual; AOR 12.97, 95% CI 4.32-38.96) was associated with greater odds of online dating compared to heterosexual identification. CONCLUSION: Given the occurrence of online dating among early adolescents despite age restrictions, interventions might address age misrepresentation. Adolescent sexual health education may consider incorporating anticipatory guidance on online dating, especially for males and sexual minorities. Future research could further investigate online dating patterns from early to late adolescence and associated health effects.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1186_s13104-024-06777-w.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_EC7_applies",
+        "c1_status": "TRUE",
+        "c1_evidence": "All three FT-EC7 conditions hold: (a) Online dating is the DEPENDENT variable in every analysis (demographics \u2192 SM); no SM \u2192 non-SM-outcome analysis present. (b) All predictors are demographic-only (sex, race/ethnicity, age, household income, parental education, sexual orientation). (c) Cross-sectional data only (Year 2, 2018-2020). B15 carve-out does not apply (no longitudinal/prospective analysis present). FT-EC7 = TRUE.",
+        "c2_status": "FALSE",
+        "c2_evidence": "Cross-sectional analysis with demographic predictors of SM (online dating), but FT-EC7 requires LONGITUDINAL analyses only (condition c fails). Also does not meet condition (a): SM is IV (predictor) of outcomes, not DV. Paper tests sociodemographic \u2192 online dating associations, not a longitudinal demographic-only \u2192 SM study. Per B15: cross-sectional carve-out applies."
+      }
+    ]
+  },
+  {
+    "paper_id": "429",
+    "title": "24-Hour Movement Behaviors and Impulsivity.",
+    "authors": "",
+    "year": "2019",
+    "doi": "10.1542/peds.2019-0187",
+    "abstract": "BACKGROUND: The objective of this study was to examine individual and concurrent associations between meeting the Canadian 24-Hour Movement Guidelines for Children and Youth (9-11 hours of sleep per night, \u00e2\u0089\u00a42 hours of recreational screen time (ST) per day, and at least 60 minutes of moderate to vigorous physical activity per day) and dimensions of impulsivity. METHODS: Data from this cross-sectional observational study were part of the first annual curated release of the Adolescent Brain Cognitive Development Study. Participants included 4524 children between the ages of 8 and 11 years. RESULTS: In analyses, it was shown that adherence to individual movement behavior recommendations as well as combinations of adherence to movement behavior recommendations were associated with each dimension of impulsivity. Meeting all 3 movement behavior recommendations was associated with lower positive urgency (95% confidence interval [CI]: -0.12 to -0.05), negative urgency (95% CI: -0.04 to -0.08), Behavioral Inhibition System (95% CI: -0.08 to -0.01), greater perseverance (95% CI: 0.09 to 0.15), and better scores on delay-discounting (95% CI: 0.57 to 0.94). Meeting the ST and sleep recommendations was associated with less impulsive behaviors on all dimensions of impulsivity: negative urgency (95% CI: -0.20 to -0.10), positive urgency (95% CI: -0.16 to -0.08), perseverance (95% CI: 0.06 to 0.15), Behavioral Inhibition System (95% CI: -0.15 to -0.03), Behavioral Activation System (BAS) reward responsiveness (95% CI: -0.04 to -0.05), BAS drive (95% CI: -0.14 to -0.06), BAS fun-seeking (95% CI: -0.15 to -0.17), and delay-discounting task (95% CI: 0.68 to 0.97). CONCLUSIONS: Findings support efforts to determine if limiting recreational ST while promoting adequate sleep enhances the treatment and prevention of impulsivity-related disorders.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1542_peds.2019-0187.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "MET",
+        "c1_evidence": "Recreational screen time (ST) measured via Youth Screen Time Survey. Screen time measured as continuous variable in hours. Meets B1: ST as independent variable with regression coefficient reported. Also assesses sleep (9\u201311 hours per night recommendation) and physical activity (\u226560 min/day) in relation to impulsivity dimensions.",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "Screen time measured as recreational ST (\u22642 hours/day guideline recommendation) but NOT reported with separate qualifying coefficients. ST is bundled into combined movement behavior recommendation categories (PA+ST+sleep, ST+sleep, etc.). No individual ST coefficient reported independently. Violates B1 requirement for separate per-item breakdown. Screen time appears only as component of aggregate behavior recommendation compliance, not as separately analyzed qualifying variable."
+      }
+    ]
+  },
+  {
+    "paper_id": "434",
+    "title": "Sociodemographic Associations With Early Smartphone Ownership in US Adolescents",
+    "authors": "",
+    "year": "",
+    "doi": "10.1542/peds.2025-073891/206084",
+    "abstract": "\u00e2\u0080\u00a6 This cutoff was based on prior studies showing youth receive smartphones near the age of 10 years on average.Analyses applied Adolescent Brain Cognitive Development (ABCD) \u00e2\u0080\u00a6",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1542_peds.2025-073891_206084.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC3",
+        "c1_status": "MET",
+        "c1_evidence": "Multivariable logistic regression model examining associations between sociodemographic predictors and early smartphone ownership (<10 years) as binary outcome; odds ratios calculated",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "Abstract snippet provided is extremely limited (truncated to ~20 words). Based on title and abstract context, study appears to examine sociodemographic associations WITH smartphone ownership (demographics \u2192 smartphone), not smartphone \u2192 outcome. No test of smartphone \u2194 non-SM outcome mentioned in available text. Likely not an inferential test of SM effect on a distal outcome."
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "MET",
+        "c1_evidence": "Multiple OR and 95% CI reported in Table 2: e.g., Female OR=1.38 (95% CI 1.19\u20131.60); Black OR=2.78 (95% CI 2.07\u20133.64); Single parent OR=2.01 (95% CI 1.67\u20132.44); Parental education <Bachelor's OR=1.70 (95% CI 1.40\u20132.06)",
+        "c2_status": "UNKNOWN",
+        "c2_evidence": "No numeric data (\u03b2, OR, p, CI) in available abstract excerpt. PDF would be required to assess."
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "c1_status": "FALSE",
+        "c1_evidence": "Cross-sectional logistic regression design (B15 carve-out applies: FT_EC7 does NOT apply when ANY cross-sectional analysis with demographics \u2192 SM is reported). Paper uses cross-sectional multivariable logistic regression, not longitudinal/prospective analysis.",
+        "c2_status": "TRUE",
+        "c2_evidence": "All three FT-EC7 conditions likely met: (a) Smartphone is DV (demographics \u2192 early SM ownership), no SM\u2192outcome analysis; (b) Predictors appear to be sociodemographics (sociodemographic associations); (c) Longitudinal structure inferred from 'early ownership' framing in ABCD prospective cohort. Applies B17 check\u2014no disqualifying psychosocial/behavioral predictors evident in abstract. No cross-sectional/cross-lagged/bidirectional indicators. FT-EC7 = TRUE."
+      }
+    ]
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "441",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; n=4,641 ages 9-12 at baseline, Year 1, Year 2 follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) = self-reported hours on non-school screen time (includes TV, videos, gaming, texting, video chatting, social networking). Qualifies as smartphone/app use + social media per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-Lagged Panel Models (CLPMs) with regression coefficients; bidirectional associations tested. E.g., β = -0.10 [95%CI: -0.16, -0.03], p = 0.004 for SMA → sleep duration"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients with 95% CIs reported throughout: SMA-sleep (β = -0.10, -0.11), externalizing-sleep (β = 0.11), externalizing-SMA (β = 0.07), mediation indirect effect (0.032 [95%CI: 0.003, 0.067])"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; longitudinal CLPMs with discovery (n=2,359) and replication (n=2,282) samples"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full-length report; not a preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA is independent variable (IV) predicting sleep and psychopathology (non-SMA outcomes); not SMA-as-DV. Violates condition (a). Cross-lagged models are bidirectional per B20, which disqualifies EC7",
+    "binding_rules_applied": [
+      "B1",
+      "B20"
+    ],
+    "notes": "Bidirectional CLPMs show sleep → SMA and SMA → sleep; externalizing symptoms mediate thalamus-PFC-brainstem covariation to SMA. Study examines complex temporal dynamics across three time points"
+  },
+  {
+    "paper_id": "136",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; N=10,828 youth (47.8% female), mean age 9.9 years at baseline, 10.9 years at follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time: self-reported hours/day on six screen types (streaming TV/movies, streaming videos, videogames, texting, video chatting, social networking sites) on weekdays and weekend days separately. Dichotomized as >2 vs ≤2 hours/day. Qualifies as smartphone use (texting, video chat) + social media per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multilevel logistic regression with study site as random effect; odds ratios (ORs) with 95% CIs reported. E.g., OR 1.6 (95% CI 1.1–2.2) for weekend screen time → withdrawn/depressed symptoms in females"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric ORs with 95% CIs throughout tables: female sleep → withdrawn/depressed OR 0.6 (95% CI 0.4–0.8); female weekend screen time → withdrawn/depressed OR 1.6 (95% CI 1.1–2.2)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical longitudinal analysis; one-year prospective design from baseline to follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full-length original article; not preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is IV predicting internalizing symptoms (non-SM outcomes). Condition (a) fails: paper has SM → non-SM-outcome analysis, not SM-as-DV only",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Longitudinal associations unidirectional (behavior → internalizing symptoms); gender-stratified analyses show associations in females only for weekend screen time and withdrawn/depressed symptoms"
+  },
+  {
+    "paper_id": "400",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; N=10,544 U.S. youth, baseline mean age 9.9 (0.03) years; 48.9% female, 45.4% non-White; one-year follow-up (2017–2018 to 2018–2019)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time: self-reported daily minutes of streaming, gaming, and socializing on weekdays and weekend days separately. Three distinct screen types with separate coefficients reported. Socializing qualifies as social media use per B1; gaming + social media as separate coefficients per B6"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Isotemporal substitution regression models and Compositional Data Analysis (CoDA). Regression β coefficients with 95% CIs reported. E.g., in females: replacing 30 min socializing with 30 min physical activity β = -0.03 [95% CI -0.05, -0.002]"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with 95% CIs throughout: females replacing socializing with PA β = -0.03 [-0.05, -0.002], replacing streaming β = -0.03 [-0.05, -0.01], replacing gaming β = -0.03 [-0.06, -0.01]; males CoDA β = 0.05 [0.02, 0.08]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical longitudinal analysis; baseline (2017–2018) and one-year follow-up (2018–2019) with sex-stratified isotemporal substitution and CoDA models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full-length original research article; not preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is IV predicting BMI z-score (non-SM outcome). Condition (a) fails: paper contains screen-time → BMI analyses, not SM-as-DV only",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "Sex-stratified analyses using two complementary statistical methods (isotemporal substitution and CoDA); results differ somewhat by method; different screen types show different associations with BMI"
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "85",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, secondary analysis, n=10,907 youth, ages 11-14 years across 21 US sites."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Binary variables for mobile phone ownership and social media account (yes/no at age 11-12). Qualifies under B1: separate smartphone and social media variables with own coefficients."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal logistic regression using GEE method (Liang & Zeger 1986) with separate models for each predictor-outcome combination. Six models total testing phone/SM against alcohol, nicotine/tobacco, cannabis."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Tables 2-3 report odds ratios with 95% confidence intervals for mobile phone ownership and social media use effects. Coefficients (β) also reported with standard errors."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD Study data examining prospective associations between phone/SM at ages 11-12 and substance use over next 18 months."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Addictive Behaviors 2025. No indication of prior preprint, abstract, or duplicate publication."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): Smartphone/social media are INDEPENDENT variables predicting substance use outcomes (alcohol, nicotine/tobacco, cannabis), not dependent variables. Paper has SM → outcome analyses, not demographic-only → SM.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Longitudinal design with clear prospective direction (phone/SM at T1 → substance use at T2-T4). Sensitivity analyses restrict to substance-naive youth at baseline (n=9,628)."
+  },
+  {
+    "paper_id": "168",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Year 2 time point, ages 11-12 years, N=10,052 youth from 21 sites representing diverse US demographics."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media time per day (parent & youth report, hours/day) and Problematic Media Use Scale (9-item parent report). Qualifies as qualifying SM variables under standard usage-based measures."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multilevel regression models predicting clinical concerns (CBCL internalizing/externalizing, BPM, NSSI, suicidal ideation). Table 2 reports unstandardized coefficients (β) and standard errors."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports standardized β coefficients for screen media use and problematic media use predicting each clinical outcome (CBCL total, internalizing, externalizing; BPM total, internalizing, externalizing)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining relations between screen media behaviors and clinical concerns (internalizing, externalizing, suicidal ideation, NSSI) by race/ethnicity and sex."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Development and Psychopathology 2025. No evidence of duplicate from prior preprint or abstract."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): Screen time and problematic media use are INDEPENDENT variables predicting clinical outcome variables (internalizing/externalizing problems, suicidal ideation, NSSI), not dependent variables. Paper examines media-use → clinical concerns, not demographics → media-use.",
+    "binding_rules_applied": [],
+    "notes": "Cross-sectional analysis at Year 2. Examines how problematic media use and screen time predict concurrent clinical concerns. Findings indicate problematic media use is a stronger predictor of clinical outcomes than screen time alone."
+  },
+  {
+    "paper_id": "10",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, release 5.1, N=4,289 adolescents (ages 11-12 to 13-14 years across 3 waves, January 2018 to December 31, 2022)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Video game playing/video game addiction (Video Game Addiction Questionnaire). No smartphone ownership, social media use, texting, app use, or other qualifying SM/smartphone variables. Gaming-only without platform specification or app-based qualifier does not meet FT-IC2 (B5, B7)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel models (CLPMs) and hierarchical mixed-effects models testing bidirectional associations between psychopathology and gaming disorder across 3 time points, with β coefficients reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Figure 2 and text report unstandardized β coefficients, 95% confidence intervals, and p-values for psychopathology → gaming disorder pathways (e.g., β=0.03, p=.003 from 2-year to 3-year follow-up)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining directional longitudinal associations between psychopathology (depression, ADHD, anxiety, social problems, conduct) and gaming disorder using theoretical framework (I-PACE model)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in JAMA Network Open 2025. No evidence of prior preprint or abstract duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply—paper fails FT-IC2. Gaming disorder without smartphone/app-based qualifier and without qualifying social media exposure/use variables.",
+    "binding_rules_applied": ["B5"],
+    "notes": "EXCLUDED from review: does not qualify on FT-IC2. Paper focuses on bidirectional psychopathology ↔ gaming-disorder pathways, with gaming measured via Video Game Addiction Questionnaire (DSM-5 internet gaming disorder criteria). No qualifying smartphone or social media variables present."
+  }
+]

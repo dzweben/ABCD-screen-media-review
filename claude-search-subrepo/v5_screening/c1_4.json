@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "83",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US cohort of 8,446 adolescents ages 9-10 at baseline (2016-2018) with 2-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time outcome measured as 'total screen time, particularly higher television/movie watching, video game playing, and video streaming.' TV-only and unspecified-platform gaming disqualify (B5, B7). Predictors are neighborhood indices (COI, SVI, ADI), not qualifying SM/smartphone variables."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Fails FT_IC2; no further evaluation"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Fails FT_IC2"
+    },
+    "FT_IC5": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Fails FT_IC2"
+    },
+    "FT_IC6": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Fails FT_IC2"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC2 inclusion criterion",
+    "binding_rules_applied": ["B5", "B7"],
+    "notes": "EXCLUDE — Paper does not qualify on FT_IC2. Screen time exposure lacks device/platform specificity; TV and unspecified gaming do not meet qualifying variable criteria."
+  },
+  {
+    "paper_id": "86",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study; prospective cohort from US with N=8,119 at Year 2 (ages 11-12, 2018-2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three qualifying exposures: (1) Mobile Phone Involvement Questionnaire (qualifies as smartphone/mobile phone use), (2) Social Media Addiction Questionnaire (qualifies as social media time), (3) Video Game Addiction Questionnaire (qualifies as mobile/app gaming). Each reported with separate β coefficients. Applies B1: YSTS papers with separate coefficients per item = MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear and logistic regression models; coefficients reported in Figures 1-2 and supplementary tables for associations between problematic SM, mobile phone, video game use (Year 2) and mental health, sleep, substance use outcomes (Year 3)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients extracted throughout: β, 95% CI, p-values, and OR with 95% CI. Figure 1 reports linear regression β for all continuous outcomes; Figure 2 reports adjusted odds ratios (AORs) for binary outcomes. Example: 'Problematic mobile phone use... (B = 0.31; 95% CI not shown in abstract but p<.05 in main text).' Full results in main text and appendices."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD Study empirical analysis. Prospective design with measurement of problematic screen use (Year 2) and mental/behavioral outcomes including depressive, somatic, attention/deficit, oppositional defiant, conduct problems scores; suicidal behaviors; sleep disturbance; alcohol/tobacco/marijuana initiation (Year 3)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published research article; no evidence of duplicate or preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/phone/gaming are independent variables predicting mental health and substance use outcomes, not dependent variables. Condition (a) fails: SM is not the DV in every analysis. Paper reports SM → outcome associations, not demographic → SM associations. Applies B18 (SM-as-IV analysis reported).",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Meets all FT_IC1-6 criteria. Qualifies on FT_IC2 via B1 (YSTS paper with separate coefficients reported for mobile phone, SM, video game variables). Prospective design with multiple inferential tests and extractable numeric coefficients."
+  },
+  {
+    "paper_id": "144",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study; prospective cohort N=7,528 (baseline 2016-2018, Year 2 2018-2020); ages 8-13 at baseline; 51.1% male, 41.8% non-White; US-based"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (platform-specific: Instagram, Facebook, Twitter, etc.); measured as self-reported hours/day on social media at baseline, Year 1, Year 2. Qualifies as 'time on SM' per eligible SM use variable (B1). Group-based trajectory modeling identified three trajectories of daily social media use."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models testing associations between social media time trajectories (baseline-Year 2) and cognitive outcomes (RAVLT Initial Trials, Retroactive Interference, Long Delay Recall; Little Man Task accuracy) at Year 2. Inferential tests with β coefficients, 95% CI, p-values reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients fully extractable: β, 95% CI, p-values. Table 2 reports all associations. Examples: Low increasing SM use vs reference: 'B: −1.38; 95% CI: −1.82, −0.94; P < 0.001' (RAVLT Initial Trials). High increasing: 'B: −1.90; 95% CI: −2.76, −1.04; P < 0.001' (RAVLT Initial Trials); 'B: −0.03; 95% CI: −0.05, −0.01; P = 0.004' (LMT Accuracy)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD Study empirical analysis; prospective cohort design with group-based trajectory modeling of social media use patterns and cognitive performance measured via Rey Auditory Verbal Learning Test (verbal encoding, learning, memory recall) and Little Man Task (visuospatial attention, perspective-taking, mental rotation)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published research article in Lancet Regional Health - Americas (2026); no evidence of duplicate or preprint"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is the independent variable predicting cognitive outcomes, not the dependent variable. Condition (a) requires SM as DV in every analysis; this paper reports SM trajectories (IV) → cognitive performance (DV). Applies B18 (SM-as-IV analysis reported).",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Meets all FT_IC1-6 criteria. Qualifies on FT_IC2 as qualifying SM use variable (self-reported platform-specific social media time). Prospective design with trajectory-based modeling, large sample, multiple cognitive outcome measures with fully extractable numeric coefficients and p-values."
+  }
+]

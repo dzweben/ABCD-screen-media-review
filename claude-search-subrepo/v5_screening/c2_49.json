@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "128",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "N=11,875 U.S. youth (9–11 years) from ABCD study baseline (release 2.0). Large nationally representative cross-sectional sample from 21 data collection sites across the United States."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone/screen time variable: recreational screen time measured via Youth Screen Time Survey, including TV watching, video watching (YouTube), video game playing, texting on cellphone/tablet/computer, visiting social media sites, and video chat (page 3). Applies B1 (separate coefficient for screen time) and B5 (screen time measured separately from unspecified internet/gaming)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Negative binomial regression with prevalence ratios (PR), 95% CIs, and p-values. Example: meeting screen time recommendation alone PR=.89 (95% CI .82–.97, p=.011) for total problems (Table 2). Inferential test with coefficient reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric data extracted: PR, 95% CI, p-values reported in main tables. Tables 2–4 show prevalence ratios with confidence intervals for all movement behavior combinations and outcomes (total, internalizing, externalizing problems)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: negative binomial regression examining associations of meeting 24-hour movement guideline combinations (physical activity, screen time, sleep) with behavioral outcomes (CBCL total, internalizing, externalizing problem scores) in ABCD sample."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate detected. Published original article in Journal of Adolescent Health 2021; DOI: 10.1016/j.jadohealth.2020.09.003."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Paper examines movement behaviors (physical activity, screen time, sleep) as INDEPENDENT variables predicting behavioral outcomes (internalizing/externalizing), NOT as dependent variables. Screen time and sleep are predictors of behavioral problems, not outcomes being predicted by demographics. Fails condition (a) of FT-EC7.",
+    "binding_rules_applied": [
+      "B1",
+      "B5"
+    ],
+    "notes": "Cross-sectional design. Screen time measured as part of 24-hour movement behaviors framework, including TV, video, gaming, texting, social media, video chat. Sleep and physical activity also measured. Primary outcome is behavioral problems (CBCL-derived internalizing/externalizing scores)."
+  },
+  {
+    "paper_id": "543",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "N=15,022 American children aged 9–11 years from ABCD study baseline. Longitudinal study design with 1-year follow-up. Data from the Adolescent Brain Cognitive Development (ABCD) study."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying screen time variable: screen time as continuous dependent variable measured in hours. Text states 'The dependent variable, screen time, was a continuous variable.' Measured as outcome of interest predicted by family income and race/ethnicity."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal analysis with demographic predictors (family income, race/ethnicity interaction). Statistical test documented: 'significant statistical interaction between race and family income on children's screen time.' Interaction term reported as significant."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Abstract and methods provided but no numeric coefficients, effect sizes, or confidence intervals extracted from the paper text. Results section absent from provided content. Cannot verify whether β, OR, p-values, or CI are reported in main text or tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal examination of association between family income and children's screen time, stratified by race/ethnicity, using ABCD baseline data followed over 1-year period."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate detected. Published article in Information (Basel) 2020; DOI: 10.3390/info11110538."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "FT-EC7 APPLIES (all three conditions met per §3.1). (a) Screen time IS the dependent variable in every analysis—no SM→non-SM-outcome analysis present. (b) Every predictor is in the closed demographic-only set: family income (economic resource), race/ethnicity (demographic). (c) Longitudinal/prospective design: 1-year follow-up. No cross-sectional carve-out (B15) applies. No disqualifying predictors from NOT EC7 list (B17). No bidirectional/cross-lagged design (B20).",
+    "binding_rules_applied": [
+      "B15",
+      "B17"
+    ],
+    "notes": "Longitudinal study, 1-year follow-up. Screen time is outcome predicted by family income and race/ethnicity (Minorities' Diminished Returns theory framework). Examines differential association of income with screen time by race."
+  },
+  {
+    "paper_id": "126",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "N=11,670 U.S. participants (5,594 females, aged 9–10 years, 63.5% white) from ABCD study national sample. Longitudinal analyses conducted for subset (n=4,951). Data Release 2.0."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "No qualifying smartphone or social media variable. Independent variables are sleep disturbance (Sleep Disturbance Scale: disorders of initiating/maintaining sleep, sleep-wake transition, excessive somnolence) and total sleep time (parent-report). Covariates include 'typical screen time' but screen time is NOT an independent variable of interest. Applies B5 (screen time as covariate only, not primary exposure) and note that sleep is not a qualifying SM/smartphone variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analyses reported: 'At baseline, greater sleep disturbance and shorter total sleep time were associated with greater internalizing, externalizing, and depression scores.' Prospective associations tested: 'baseline sleep disturbance significantly predicted depression and internalizing and externalizing scores at 1-year follow-up.' Interaction with sex reported (p<.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric data: 95% confidence intervals reported in results. Example: 'interaction with sex indicated that the association between disorders of excessive somnolence and depression 1 year later was steeper for girls, compared with boys (p < .001; 95% confidence interval 1.04–3.45).' Statistical significance and CI provided."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal study examining associations between sleep disturbances and mental health outcomes (depression, internalizing, externalizing behaviors) in ABCD sample with 1-year follow-up."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate detected. Published article in Journal of Adolescent Health 2020; DOI: 10.1016/j.jadohealth.2019.12.005."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Paper focuses on sleep disturbance and total sleep time as independent variables predicting mental health outcomes (depression, internalizing, externalizing behaviors), NOT screen time or social media as dependent variables. No SM/smartphone-as-DV analysis. Screen time mentioned only as covariate. Fails condition (a) of FT-EC7.",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Longitudinal design with 1-year follow-up (subset n=4,951). Primary exposures are sleep disturbance (parent-report) and sleep duration. Screen time included as covariate but not as primary exposure of interest. Outcomes: depression, internalizing, externalizing behaviors from CBCL."
+  }
+]

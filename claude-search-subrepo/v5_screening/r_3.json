@@ -1,0 +1,73 @@
+[
+  {
+    "paper_id": "91",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Latent profile analysis of fMRI brain activation (MID, SST, EN tasks). Screen time is measured as a covariate and reported in descriptive profile comparisons (ANOVA, F=6.80, p<.0001 comparing profiles on screen time), but is not an independent variable in any regression or primary analysis predicting outcomes. No separate coefficient (β/OR/r) for screen time.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 specifies that reporting only composite/comparative screen time without per-modality or primary independent variable status → FT_IC2 NOT_MET. C1 correctly identified this as demographic comparison rather than exposure measurement. C2 misinterpreted F-test reporting as equivalent to primary exposure analysis."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Screen time appears only in demographic/profile comparisons (F-tests by latent class membership). No inferential test of screen time predicting a non-SM outcome. Brain activation patterns (the actual DV) are not analyzed as predicted by screen time; screen time characteristics are only compared across identified brain-based profiles.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "Per criteria §2.6.1 and B10, SM as a comparison/covariate-only characteristic with no reported coefficient → FT-IC3 NOT_MET. The ANOVA/χ² tests comparing profiles do not constitute a screen→outcome test. C1 correct; C2 conflated descriptive profile comparisons with inferential SM↔outcome tests."
+      }
+    ]
+  },
+  {
+    "paper_id": "98",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper is titled 'Current, future and potential use of mobile and wearable technologies and social media data in the ABCD study.' Abstract and all sections discuss prospective use cases, pilot studies, and recommended approaches for future data collection. No primary ABCD analysis of measured smartphone or SM variables from existing cohort data. No extractable exposure variables analyzed.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 identifies resource/technology description papers as non-empirical. Paper outlines 'potential' approaches (iPads, Fitbit, wearable sensors, geolocation, biosensors, social media platforms) but does not report any original SM/smartphone exposure measurement or analysis in ABCD data. This is a review/resource description (FT-EC3), not a measurement paper. C1 correct; C2 misread discussion of technologies as equivalent to primary measurement."
+      }
+    ]
+  },
+  {
+    "paper_id": "100",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "MET",
+        "evidence": "Paper measures and analyzes: (1) SMAQ (6-item Bergen Social Media Addiction Scale adapted Year 2); (2) Time on social media; (3) Online social activity; (4) VGAQ (8-item Bergen Video Game Addiction Questionnaire); (5) Video gaming time. Methods section describes 'Youth Screen Time Survey' items including social media and video gaming. Results report comparisons of these variables by sex, race/ethnicity, and time point with p-values and test statistics.",
+        "binding_rules_cited": ["B1", "B6"],
+        "rationale": "B1 applies: Paper reports separate estimates (p-values, means, t/χ²) for qualifying SM items (social media time, SMAQ). B6 also applies: Gaming is measured alongside SM with separate coefficients. Both rules → FT_IC2 MET. C2 incorrectly applied B12 (measurement-only); but the paper does report SM as predictor/IV in analyses testing associations with demographic outcomes."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "MET",
+        "evidence": "Results section reports: t-tests comparing SMAQ/VGAQ by sex (girls higher SMAQ p<.001, boys higher VGAQ p<.001); chi-square tests for social media platform use by race; CFA/factor invariance χ² tests across sex/race with p-values; mixed-effects models testing effects of sex, race, age on screen time outcomes.",
+        "binding_rules_cited": ["B1"],
+        "rationale": "Per criteria §2.6.1, qualifying inferential tests include t-test, chi-square, regression coefficient, mixed-effects model. Paper reports all of these linking SM variables (SMAQ, VGAQ, screen time) to non-SM variables (sex, race/ethnicity, age). C1 correct; C2 incorrectly claimed only 'SM-vs-SM concordance' (factor invariance) was tested, missing the between-groups comparisons of SM across demographics."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Tables 4 and 5 report factor fit indices (χ², RMSEA, CFI, SRMR) for SMAQ/VGAQ across groups. Results text reports t-values, p-values (p<.001 for multiple comparisons). Figures 1-3 show proportions with 95% CIs. All numeric values (χ², p, RMSEA, CFI, t) are extractable from main text and tables.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "B8 specifies that any traditional regression coefficient OR inferential test numeric value (t, χ², p, RMSEA, CFI, F) qualifies. Paper reports all of these. C1 correct; C2 mistakenly conflated factor-structure test statistics with 'no extractable numeric SM↔outcome coefficient,' ignoring that p-values, t-values, and fit indices ARE numeric values per the criteria."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "MET",
+        "evidence": "Paper describes original empirical ABCD analysis: (1) Screen usage questionnaire development and adaptation (methods); (2) Psychometric analyses of SMAQ/VGAQ (factor structure, measurement invariance) across sex, race/ethnicity, age; (3) Descriptive longitudinal changes in screen use (baseline Year 1, Year 2) with inferential tests (t-tests, mixed-effects models) comparing groups on SM outcomes.",
+        "binding_rules_cited": ["B13"],
+        "rationale": "B13 states: 'Measurement paper...that ALSO reports at least one SM↔non-SM coefficient' → FT_IC5 MET. This paper validates SMAQ/VGAQ scales AND reports SM associations with demographics (sex differences in SMAQ/VGAQ scores, race differences in screen time). Per §2.5 borderline rule, measurement papers with criterion validity (SM↔outcome) qualify. C1 correct; C2 applied B12 (measurement-only with zero external outcome) incorrectly, missing the demographic outcome associations."
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "status": false,
+        "evidence": "Paper analyzes SM (SMAQ, VGAQ, screen time) as outcomes predicted by demographics (sex, race/ethnicity, age). Analyses include both: (1) Baseline Year 2 comparisons (cross-sectional); (2) Longitudinal changes from baseline to Year 1 to Year 2. Per §3.1(c), if ANY cross-sectional analysis of SM-as-DV with demographic predictors exists, the cross-sectional carve-out applies → FT-EC7 does NOT apply.",
+        "binding_rules_cited": ["B15"],
+        "rationale": "B15 explicitly states: 'Paper has any cross-sectional analysis where SM is DV and demographics are predictors' → FT-EC7 does NOT apply. This paper includes both cross-sectional (Year 2 baseline comparisons) and longitudinal (Year 1, Year 2 follow-ups) analyses of SM outcomes by demographics. The cross-sectional carve-out in B15 disqualifies the EC7 exclusion. C1 misidentified whether longitudinal-only vs. mixed designs apply; B15 resolves this by negating EC7 entirely when any cross-sectional SM-as-DV analysis exists."
+      }
+    ]
+  }
+]

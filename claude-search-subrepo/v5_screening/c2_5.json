@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "150",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, U.S. national sample, Year 2 (2018-2020, ages 10-13), 7,614 participants with structural MRI"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (hours per day) + Social Media Addiction Questionnaire; both qualifying SM variables per B1 (separate SM coefficients reported)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analysis with mixed-effects (vertexwise FEMA, ROI analysis). Standardized beta coefficients reported for SM ↔ brain morphology (cortical thickness, surface area, volume)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients extracted: Table 2 reports standardized beta values (β = -1.916 for social media use, p < 0.001 in left hemisphere; similar for addiction, ROI analyses). Fig. 1 visualizes brain regions with Q < 0.05"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: secondary analysis of cross-sectional neuroimaging data examining association between SM use/addiction and brain morphology with inference testing"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate: original research, published in NeuroImage 2026"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is NOT the dependent variable; SM is independent variable, brain morphology is outcome (cortical thickness/area/volume). Violates condition (a) — paper analyzes SM → non-SM-outcome. NOT EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "B1 applies: YSTS paper with separate SM coefficients (hours/day separately from SMAQ addiction). Mixed-effects regression with adjustments for demographics, SES, genetic ancestry, scanner features. Cortical morphology outcome demonstrates SM ↔ neurobiological outcome relationship."
+  },
+  {
+    "paper_id": "287",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, U.S. sample, N=8,292 with longitudinal data Years 2–4 (2018–2022, mean age 12.0 at Year 2)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media time (hours per day, Year 2); qualifies as SM per B1 (separate SM coefficient in GSEM pathway reported)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized structural equation modeling (GSEM) with mediation indirect effect. Direct effect (SM → nicotine experimentation) and indirect effects through smoking expectancies (Year 3 mediators) reported with p-values and 95% CI"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2: B = 0.138 (SE 0.029, 95% CI 0.081–0.196, p < .001) direct effect; B = 0.009 (SE 0.003, 95% CI 0.003–0.014, p = .002) indirect effect; proportion mediated 5.97% (95% CI 1.27%–10.67%, p = .013)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: longitudinal prospective cohort study with inference testing (GSEM)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate: original research, published 2026, prospective mediation analysis not preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is independent variable, nicotine experimentation is dependent variable (SM → outcome). Violates condition (a). Additionally, mediators include smoking expectancies (beliefs), which are NOT in the closed demographic-only set per condition (b). NOT EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "B1 applies: YSTS paper with separate SM coefficient (social media time) in mediation model. Longitudinal prospective design, mediation pathway via smoking expectancies explicitly tested and reported with indirect effects."
+  },
+  {
+    "paper_id": "404",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, U.S. sample, N=11,530 (post-imputation), ages 13–16 at Year 5 (2021–2023)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online dating app use (lifetime, yes/no); qualifies as SM per binding rule — online dating is explicitly listed as qualifying SM platform use in prompt (FT-IC2 section: 'online dating')"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression with cluster-robust standard errors. Standardized beta coefficient (ß) reported for dating app use → depression symptoms association"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2: Adjusted ß = 0.42 (95% CI 0.08–0.76, p = 0.017); unadjusted ß = 0.47 (95% CI 0.12–0.82, p = 0.009). Sensitivity analyses also reported (Appendix D: ß = 0.44, 95% CI 0.03–0.85, p = 0.035)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: cross-sectional observational study with inference testing (regression)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Non-duplicate: original research, published BMC Research Notes 2026, novel analysis of underage dating app use and depression"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Dating app use is independent variable, depression symptoms is dependent variable (app use → outcome). Violates condition (a). Additionally, confounders include non-demographic factors (cyberbullying victimization, screen time, relationship status), violating condition (b). NOT EC7.",
+    "binding_rules_applied": [],
+    "notes": "Cross-sectional design, adjusted for sociodemographic factors (age, sex, race/ethnicity, household income, parent education, study site) and additional covariates (screen time, cyberbullying, pubertal status, parental monitoring, sleep, relationship status). Multiple imputation used to address missing data. Heteroskedasticity-robust clustered standard errors."
+  }
+]

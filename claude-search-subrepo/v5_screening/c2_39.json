@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study explicitly uses ABCD Study (2016-2021) US-based cohort with N=11,869 participants"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying screen use variable: average daily screen use calculated as sum of self-reported hours of television, videos, video games, social media, video chat, and texting (Bagot et al., 2018). Applies B5 (total screen time summed) but includes separate components. Growth mixture modeling examines trajectories of screen use as primary outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Growth mixture modeling used to identify subgroups with different screen use trajectories, with statistical comparisons of class membership by sociodemographic characteristics and perceived racism/discrimination outcomes. Inferential tests: ANOVA/regression testing differences between trajectory groups."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric values reported: N values for trajectory groups (N=1,333 Drastically Increasing; N=10,336 Gradually Increasing), percentages for racial/ethnic composition and perceived discrimination experiences (e.g., 70% vs 45% racial/ethnic minorities, 8% vs 3% perceived unfair treatment by teachers), presented in Table 1 and main text."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: growth mixture modeling identifies and characterizes screen use trajectories longitudinally from ages 10-14 with outcomes measured at year 1 (perceived racism/discrimination)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2023 peer-reviewed journal article (Preventive Medicine Reports) with no evidence of prior preprint or duplicate publication"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "SATISFIES FT-EC7: (a) Screen use is the DEPENDENT variable in all analyses (growth mixture modeling identifies trajectory groups as outcome); no analyses with screen use as predictor of developmental outcomes. (b) Predictors of trajectory group membership are exclusively demographic: race/ethnicity, parental education, household income—all within the closed demographic-only set. (c) All analyses are LONGITUDINAL (prospective trajectories from age 10-14 with year-1 perceived discrimination outcome). No cross-sectional carve-out applies (B15).",
+    "binding_rules_applied": [
+      "B5",
+      "B18"
+    ],
+    "notes": "Paper meets all criteria as a longitudinal screen-use-as-DV study with only demographic predictors. Trajectory modeling is inferential test. Screen use outcome measured at baseline and follow-up waves; perceived racism/discrimination outcome at year 1."
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline data examined: 11,876 children at baseline, ages 9-10. Independent validation in HCP-D (n=652, ages 5-21). Primary analyses use ABCD as US-based cohort."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying screen media activity (SMA) variables: K-means clustering identifies SMA patterns across 14 items including video entertainment, social communication, messaging; youth-reported SMA. Applies B1: paper reports separate patterns and distinct types of SMA with their own coefficients in linear mixed effects models."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed effects modeling with false discovery rate (FDR) correction; comparisons between SMA pattern groups (video-centric higher-frequency vs lower-frequency) and outcomes including neurocognitive performance, behavioral problems, psychotic-like experiences, impulsivity, sensitivity to punishment/reward, and resting-state brain functional connectivity (RSFC). Multiple regression coefficients reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Extensive numeric data extracted: sample sizes (n=11,815 at baseline, n=3,151 video-centric [26.7%], n=8,664 lower-frequency [73.3%]), regression coefficients (β values with 95% CI), p-values (FDR-corrected p<.001), effect sizes. Examples: neurocognitive performance β=−.12 [−0.08, −0.16], behavioral problems β=.13 [0.09, 0.18], psychotic-like experiences β=.31 [0.27, 0.36]. RSFC results in supplementary materials."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis: K-means clustering identifies SMA patterns at baseline; linear mixed effects models test associations with behavioral and brain (RSFC) outcomes; longitudinal persistence examined at 1-year and 2-year follow-up. Analysis reports actual ABCD outcome data with coefficients."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2023 in Journal of the American Academy of Child & Adolescent Psychiatry, peer-reviewed. No preprint or duplicate evidence found."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does NOT apply. SMA is the INDEPENDENT variable in all analyses (predictor of neurocognitive, behavioral, and brain outcomes); NOT the dependent variable. Violates condition (a) of FT-EC7 which requires SM to be ONLY the dependent variable. B18 applies: paper has both SMA-as-IV → outcomes AND (implicitly) pattern assignment as a characterization; the primary analyses examine SMA patterns predicting non-demographic outcomes.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Clear case of SM→outcome, not EC7. SMA patterns (clustering on 14 items) are predictors of neurocognitive, behavioral, and brain measures. Longitudinal follow-up shows pattern stability and persistence of associations. HCP-D validation demonstrates generalizability across independent sample."
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data explicitly used: sample drawn from Adolescent Brain Cognitive Development Study with over 10,000 youth (ages 9-10 at baseline) across 21 U.S. sites. Models trained on baseline and evaluated at 1-year and 2-year follow-up."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time included as a predictor variable in machine learning models. Methods section states: 'Features from multiple domains contributed meaningfully to prediction, including neurocognition, sex, self-reported impulsivity, parental monitoring, and screen time.' Screen time is a qualifying smartphone/device use variable (self-reported hours of engagement). Applies B8: machine learning with traditional regression baseline validation (PCR and LASSO models both used)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning predictive models (Lasso/Ridge penalized regression, PCR with multiple imputation) predict ADHD symptoms at 1-year and 2-year follow-up. Traditional regression coefficients also reported as baseline comparisons. Multiple cross-validated model evaluations with quantified prediction accuracy (r values, correlation coefficients between predicted and actual ADHD scores)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Extensive numeric results: predictive model explained 15-20% of variance in 1-year ADHD symptoms (PCR r=0.46, CI 0.42-0.47; LASSO r=0.45, CI 0.42-0.48), 12-13% in 2-year symptoms. Figure 1 displays r-values for multiple model iterations. Figure 3 shows feature weights. Supplementary material includes detailed model coefficients and comparison statistics."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: develops and validates machine learning models using ABCD baseline neurocognitive, demographic, and child/family characteristics data to predict parent- and teacher-reported ADHD symptoms at prospective follow-up timepoints (1-year and 2-year)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2023 in Translational Psychiatry (Nature), peer-reviewed original research article. No preprint or duplicate evidence."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does NOT apply. Screen time is a PREDICTOR of ADHD symptom outcomes, not a dependent variable. Violates condition (a) of FT-EC7. Paper includes multiple non-demographic predictors (neurocognitive abilities, impulsivity, parental monitoring, family conflict indicators) that disqualify under FT-EC7 condition (b). Applies B10: screen time is included as a covariate/feature among many in a multivariate prediction model, not analyzed as a standalone SM↔outcome relationship.",
+    "binding_rules_applied": [
+      "B8",
+      "B10"
+    ],
+    "notes": "Screen time is one of multiple feature domains in machine learning models predicting ADHD. Primary analysis uses penalized regression (Lasso), with PCR as comparison. Models demonstrate high generalizability across ABCD study sites with minimal performance loss in held-out data. Not an EC7 paper: screen time is covariate/predictor only, never dependent variable."
+  }
+]

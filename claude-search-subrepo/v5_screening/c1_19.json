@@ -1,0 +1,99 @@
+[
+  {
+    "paper_id": "384",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, N=10,054, Year 3 (2019–2021), ages 12–13 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Parental screen time practices (bedroom screen use, mealtime screen use, parental monitoring) constitute smartphone/screen-based device use exposure; applies B1 (YSTS papers reporting separate coefficients for distinct screen behaviors)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Ordinal logistic regression models with adjusted odds ratios for associations between media parenting practices and R-rated movies/mature video games"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios (95% confidence intervals) reported in Table 2, e.g., AOR 1.44 [1.36–1.53] for bedroom screen use and R-rated movies"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis examining associations between parental media practices and adolescent mature-content consumption"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025, original peer-reviewed article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper examines media parenting practices (screen use) as PREDICTORS of R-rated movie and mature game consumption (outcomes), not demographics predicting smartphone/SM use. Fails condition (a): smartphone/SM is not the sole dependent variable.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Exposes qualifying smartphone variables (screen-based device use) as independent variables predicting mature content outcomes."
+  },
+  {
+    "paper_id": "385",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, N=9,519, baseline (2016–2018, ages 9–10) to Year 3 (2019–2021, ages 12–13)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time disaggregated into TV shows/movies, video games (single/multi-player), and digital socializing (texting, video chatting, social media); qualifies as smartphone/app use and social media variables"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Compositional data analysis using mixed-effects models with time as continuous independent variable; isometric log-ratio transformations and bootstrap confidence intervals"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 and Figure 1 report mean hours/day with 95% confidence intervals for screen time, sleep, sports/exercise, and other activities across four assessments"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis of ABCD Study data examining changes in screen time and related behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025, original peer-reviewed article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time (smartphone/social media use) is the OUTCOME/dependent variable, not the sole predictor. Age and pandemic period are primary independent variables. Fails condition (a): smartphone/SM examined as outcome, not predictor of demographics.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Longitudinal trends analyzed for three separate screen time categories with sex-stratified results showing differential patterns by gender (boys: higher video game increase; girls: higher digital socializing increase)."
+  },
+  {
+    "paper_id": "444",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, N=2,749, Years 2, 3, and 4 follow-up data (Mage=11.9 at Year 2)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Gaming duration and problematic gaming (VGAQ) measured at Year 2; gaming qualifies as smartphone/app use exposure"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Causal mediation analysis using R package for mediation; reports indirect effects (gaming→caffeine→sleep), direct effects, and total effects with bootstrap confidence intervals"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Figure 1 displays path coefficients with 95% confidence intervals for indirect effect of caffeine (e.g., indirect effect = 0.023 [0.004, 0.049] for gaming hours→sleep difficulties)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical mediation analysis of ABCD Study data examining caffeine as mediator in gaming-sleep relationship"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025, original peer-reviewed article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Gaming is the primary exposure/independent variable (not outcome). Sleep is the outcome. Caffeine is the mediator. Not a demographics→smartphone/SM structure. Fails condition (a): smartphone/SM not sole dependent variable; gaming is predictor.",
+    "binding_rules_applied": [],
+    "notes": "Mediation analysis demonstrates caffeine partially mediates relationship between gaming and sleep; indirect effects are small but statistically significant."
+  }
+]

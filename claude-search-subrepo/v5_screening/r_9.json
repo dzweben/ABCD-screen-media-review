@@ -1,0 +1,73 @@
+[
+  {
+    "paper_id": "179",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Abstract lists 'screen media activity' as a key predictive variable in machine learning models, but does not specify which screen time items or modalities were separately analyzed. Methods describe elastic net, random forest, light gradient boosting, and support vector regression on 'questionnaire/task variables' without breaking out screen modalities. No separate coefficient reported for any specific smartphone or social media variable.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "B2 applies: paper uses screen time/media activity as a summed or composite feature within machine learning models with no per-modality breakdown and no extractable separate estimate for any qualifying smartphone or social-media item. C2 is correct; C1 incorrectly assumed 'screen media activity' alone satisfies FT_IC2."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "UNKNOWN",
+        "evidence": "Abstract mentions elastic net regression, random forest, light gradient boosting, and support vector regression were tested, but does not provide numeric β values, OR, or other reportable statistics in the abstract. B8 rule requires 'any traditional regression coefficient...in any analysis (main, supplementary, sensitivity)' but the abstract does not show these coefficients.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "B8 states traditional regression coefficients (including penalized/elastic net β) anywhere in the paper count as MET for FT_IC4. The abstract is insufficient to determine if coefficients appear in full paper/supplement. Marked UNKNOWN pending full-text review; if full paper reports elastic net or other model coefficients, FT_IC4 becomes MET."
+      }
+    ]
+  },
+  {
+    "paper_id": "181",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "MET",
+        "evidence": "Methods section explicitly measures 'screen time (hours/day)' as a separate continuous variable in Cox proportional hazards models. ABCD Youth Screen Time Survey provides per-day modality data; paper analyzes screen time as independent variable with its own coefficient.",
+        "binding_rules_cited": ["B1"],
+        "rationale": "B1 applies when a qualifying smartphone/SM variable is separately measured with its own coefficient reported. Screen time is directly analyzed (not composite), making FT_IC2 MET. C1 incorrectly deferred based on perceived FT_IC2 failure; C2 correctly identified the criterion as MET."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "MET",
+        "evidence": "Cox proportional hazards regression models explicitly reported with hazard ratios (HR), 95% confidence intervals (CI), and p-values for prospective associations of screen time with BMI transition (Table 2; main text). Standard inferential test linked to qualifying exposure-outcome pair.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "Cox proportional hazards is a qualifying inferential test per FT-IC3 definition. Screen time ↔ BMI transition meets the SM-as-predictor ↔ non-SM-outcome criterion. C2 is correct; C1 incorrectly marked as NOT_MET based on misplaced concern about FT_IC2."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Table 2 reports hazard ratios (HR: 0.99, 95% CI 0.96–1.02 for overall; stratified by sex with separate HRs and CIs). Table 3 provides sensitivity analyses with additional numeric estimates. P-value for trend (p = 0.003) and p-values for sex-stratified analyses also reported.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "FT_IC4 requires at least one numeric value (β, OR, HR, 95% CI, p-value, etc.). Multiple HRs and CIs are explicitly reported in tables and text. C2 is correct; C1 incorrectly marked as NOT_MET."
+      }
+    ]
+  },
+  {
+    "paper_id": "185",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Abstract and methods describe machine learning models (Lasso, PCR) that include 'screen time' as one of multiple features (alongside neurocognition, sex, impulsivity, parental monitoring, demographics). No separate coefficient for screen time is reported in the abstract; screen time is treated as a feature weight in a composite predictive model. Methods note 'features from multiple domains contributed meaningfully to prediction, including...screen time' but do not extract or report a standalone SM coefficient.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "B10 applies: screen time appears in the model but no coefficient for screen time is reported anywhere in the abstract or methods. Screen time is feature-only with no own coefficient extracted. This violates FT_IC2 per rule B10, making FT-EC4 applicable. C1 is correct; C2 incorrectly assumed screen time's presence in the model suffices for FT_IC2 MET."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Screen time is listed as a feature in machine learning models (LASSO/PCR) used to predict ADHD symptoms, but no inferential test linking screen time independently to ADHD outcome is reported. Screen time is a covariate/feature with no separately reportable coefficient or test statistic for the SM↔non-SM association.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "B10 specifies: covariate-only screen time with no reported coefficient anywhere → FT_IC3 NOT_MET (FT-EC4). Since FT_IC2 is NOT_MET, FT_IC3 is moot, but independently fails per B10/B9 (feature importance/SHAP-only with no traditional coefficient)."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "No numeric coefficient (β, OR, HR, etc.) is reported for screen time as an independent variable. Feature weights shown in Figure 3 are visualization of relative importance across a composite model, not extractable SM-outcome association statistics. Model performance metrics (r, correlation) are reported for ADHD prediction overall, but not for screen time separately.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "B10 and B9 apply: screen time reported only as a feature weight in LASSO/PCR models with no traditional regression coefficient. Feature importance/weights are not extractable numeric estimates per the SM↔non-SM criterion (FT_IC4 requires β, OR, HR, r, etc. for the association). FT_IC4 NOT_MET."
+      }
+    ]
+  }
+]

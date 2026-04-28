@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "1",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data, U.S. prospective cohort baseline 2016-2018, ages 9-10 years at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (time spent on social media daily, hours per day) measured via trajectory modeling; qualifying SM variable per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses with robust SEs estimating association between SM trajectories and cognitive performance; regression coefficients reported (e.g., ORRT β=-1.39, 95% CI -2.10 to -0.68)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients extracted: β values with 95% CIs for all cognitive subtests and composite score; reported in Table and main text"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis examining prospective associations between SM trajectories and cognitive outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published letter in JAMA December 2025; no preprint or prior duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is the INDEPENDENT variable predicting cognitive OUTCOME (not DV). Paper examines SM→cognitive performance, not demographics→SM. Violates condition (a) of FT-EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Short JAMA letter format; trajectory modeling approach captures distinct longitudinal SM usage patterns; covariate adjustment included age, sex, race/ethnicity, household income, parental education, ADHD symptoms, depression, baseline cognition, other screen time, study site."
+  },
+  {
+    "paper_id": "8",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data from 21 study sites, October 2016 to October 2018 baseline, ages 9-10 years at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use measured as self-reported time spent on SM (hours per day) across 4 waves; qualifying SM variable per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal cross-lagged structural equation panel models (RI-CLPM) with within-person and between-person associations; regression coefficients reported (e.g., year 1→year 2: β=0.07, 95% CI 0.01-0.12, P=.01)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients with 95% CIs and p-values for cross-lagged paths, autoregressive paths, and residual covariances; model fit indices (CFI, TLI, RMSEA, SRMR) reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD secondary analysis examining bidirectional longitudinal associations between SM use and depressive symptoms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in JAMA Network Open May 21, 2025; no identified preprint or duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is the INDEPENDENT variable predicting depressive symptoms outcome (not DV). Paper examines bidirectional SM↔depression, not demographics→SM only. Violates condition (a) of FT-EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "RI-CLPM isolates within-person temporal dynamics from between-person differences; covariates include sex, race/ethnicity, household income, parental education, ACEs, parental monitoring, family conflict, study site; large diverse sample (N=11,876 baseline); longitudinal prospective design across 4 waves."
+  },
+  {
+    "paper_id": "49",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study prospective cohort data from 21 study sites, baseline 2017-2019, ages 10-11 years in Year 1"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time measured as daily hours for six subtypes including social media (B1). Analyses examine total screen time and subtype-specific associations; social media and other SM-like variables (texting, videos, video games) qualify per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses with robust SEs; mediation analyses using generalized structural equation models with maximum likelihood estimation; cross-lagged associations reported (e.g., social media Year 1→manic symptoms Year 3: B=0.20, 95% CI 0.09, 0.32, p=0.001)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients (B values) with 95% CIs and p-values for total and subtype screen time; indirect effects with bootstrap 95% CIs; model fit and mediation percentages reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD analysis examining associations between screen time and manic symptoms with mediation pathways"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Social Psychiatry and Psychiatric Epidemiology February 19, 2025; no preprint or duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time (including SM) is the INDEPENDENT variable predicting manic symptoms outcome (not DV). Paper examines screen time→manic symptoms with mediators (problematic use, sleep), not demographics→SM only. Violates condition (a) of FT-EC7.",
+    "binding_rules_applied": ["B1", "B6"],
+    "notes": "Prospective design (Year 1→Year 3) with mediation mechanisms tested at Year 2; separate coefficients for SM, texting (SMS), video games, videos—all distinct screen subtypes per B1; video games+SM combined in some analyses per B6 rationale; covariates include age, sex, race/ethnicity, household income, parental education, study site, baseline manic/ADHD/depressive symptoms, data collection timeframe; mediation analysis with propensity weighting."
+  }
+]

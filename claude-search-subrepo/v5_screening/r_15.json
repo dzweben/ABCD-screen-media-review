@@ -1,0 +1,52 @@
+[
+  {
+    "paper_id": "403",
+    "resolver_decisions": [
+      {
+        "crit": "FT_EC7_applies",
+        "status": false,
+        "evidence": "Cross-sectional analysis (Year 2, 2018-2020, ages 11-12). All predictors are demographic-only: sex, race/ethnicity, age, household income, parental education, sexual orientation. Online dating (a qualifying SM variable) is the dependent variable. Multivariable logistic regression with adjusted odds ratios reported in Table 2.",
+        "binding_rules_cited": ["B15"],
+        "rationale": "C1 incorrectly applied FT-EC7. Although conditions (a) and (b) appear satisfied (SM as DV, demographic-only predictors), condition (c) fails because the analysis is cross-sectional, not longitudinal. B15 (cross-sectional carve-out) is binding: 'Paper has any cross-sectional analysis where SM is DV and demographics are predictors → FT-EC7 does NOT apply.' The cross-sectional design disqualifies FT-EC7 application entirely. C2 correctly identified the cross-sectional design."
+      }
+    ]
+  },
+  {
+    "paper_id": "429",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper measures recreational screen time via Youth Screen Time Survey (YSTS). Results section and Tables 3-5 report associations with impulsivity dimensions for combined movement behavior recommendations: 'ST + sleep recommendations' (β = -0.12), 'PA + ST + sleep' (β = -0.09), etc. No standalone coefficient for ST as an independent variable extracted. ST appears only as a component of aggregate behavior recommendation categories. Methods state ST calculated as 'weighted average of the weekday screen time,' but no per-item YSTS breakdown reported separately.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "C1 incorrectly interpreted ST as meeting FT-IC2 criteria. Although ST is measured via YSTS, the reported results bundle ST into composite 'movement behavior recommendation combinations' without a separately extractable per-modality coefficient for ST alone. B2 is binding: 'Paper uses YSTS but reports only a summed total screen time estimate (or a single composite) with no per-modality breakdown → FT-IC2 = NOT_MET.' The paper reports ST only within combined behavior indices (ST+sleep, PA+ST+sleep), not as an independent variable with its own coefficient. C2 correctly identified this bundling violates B1 (which requires separate per-item estimates)."
+      }
+    ]
+  },
+  {
+    "paper_id": "434",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "MET",
+        "evidence": "Methods section states: 'cross-sectional multivariable logistic regression model to examine associations between key sociodemographic predictors (sex, race/ethnicity, household income, household structure, and parental education) and first smartphone ownership age.' Table 2 reports adjusted odds ratios with 95% confidence intervals for each predictor. Logistic regression is explicitly listed as a qualifying inferential statistical test in 2.6.1.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "C1 correctly identified logistic regression as a qualifying inferential test. Logistic regression is listed in 2.6.1 as a qualifying test: 'Qualifying tests: regression (OLS, logistic, Poisson, multilevel...).' The paper tests associations between sociodemographic variables and smartphone ownership (a qualifying SM variable). C2 was confused by the directionality (demographics → SM rather than SM → outcome) and mischaracterized the analysis as non-qualifying. However, per 2.3 (Directionality), SM as a dependent variable in cross-sectional analyses is acceptable ('Non-SM predictor → smartphone/SM, cross-sectional: INCLUDE'). The logistic regression is a valid inferential test linking demographics to a qualifying SM variable."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Table 2 (cross-sectional multivariable logistic regression) reports adjusted odds ratios with 95% confidence intervals for each sociodemographic predictor: Female OR = 1.38 (95% CI 1.19–1.60); Black OR = 2.78 (95% CI 2.07–3.64); Hispanic OR = 1.36 (95% CI 1.10–1.69); Living with partner OR = 1.90 (95% CI 1.41–2.56); Single parent OR = 2.01 (95% CI 1.67–2.44); <Bachelor's degree OR = 1.70 (95% CI 1.40–2.06). All with p-values reported (marked with significance symbols).",
+        "binding_rules_cited": ["B8"],
+        "rationale": "C1 correctly identified that numeric values (ORs and 95% CIs) are reported in Table 2. Per 2.6.2 (FT-IC4), 'The paper reports at least one numeric value for the qualifying SM ↔ non-SM association: β / OR / RR / HR / Cohen's d / r / F / t / χ² / η² / R² / p-value / 95% CI.' The ORs and CIs are extractable numeric values. C2 marked as UNKNOWN due to truncated abstract in batch metadata, but the PDF clearly contains Tables 1 and 2 with complete numeric data. With PDF access, FT-IC4 = MET."
+      },
+      {
+        "crit": "FT_EC7_applies",
+        "status": false,
+        "evidence": "Cross-sectional multivariable logistic regression design. All predictors are sociodemographic: sex, race/ethnicity, household income, parental marital status, parental education. Smartphone ownership is the dependent variable. Data from baseline/Year 2 enrollment (2016-2018), not prospective follow-up. This is a one-time snapshot, not a longitudinal/prospective analysis.",
+        "binding_rules_cited": ["B15"],
+        "rationale": "C2 incorrectly applied FT-EC7. Although conditions (a) [SM as DV] and (b) [demographic-only predictors] appear met, condition (c) requires 'every reported analysis predicting smartphone/SM is longitudinal/prospective. Baseline demographic predicts a later-wave smartphone/SM outcome.' C2 inferred a longitudinal structure from 'early ownership' framing, but the methods clearly state 'cross-sectional... at baseline.' B15 (cross-sectional carve-out) is binding and explicit: 'Paper has any cross-sectional analysis where SM is DV and demographics are predictors → FT-EC7 does NOT apply.' The cross-sectional design is fatal to FT-EC7 application. C1 correctly identified this via the B15 carve-out."
+      }
+    ]
+  }
+]

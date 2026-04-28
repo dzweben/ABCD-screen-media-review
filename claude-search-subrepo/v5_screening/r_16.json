@@ -1,0 +1,66 @@
+[
+  {
+    "paper_id": "473",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper reports Pearson correlations (r=0.49 between self-report and passive sensing) and ANOVA for demographic differences in app use. These are SM-SM correlations (concordance testing) and descriptive comparisons, not SM ↔ non-SM outcome tests. No inferential test links passive/self-reported smartphone use to an external outcome variable.",
+        "binding_rules_cited": ["B12"],
+        "rationale": "B12 explicitly states: 'EARS vs self-report concordance (or any SM-vs-SM measurement comparison) is the only analysis reported' → FT-IC3 = NOT_MET (FT-EC4). This is a measurement/feasibility paper focused on validating the passive sensing method against self-report, not on testing SM associations with health or behavioral outcomes."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "NOT_MET",
+        "evidence": "Paper is a pilot substudy demonstrating feasibility and acceptability of passive sensing methodology. No SM → non-SM outcome association is reported. Results show app use types and prevalences, correlations between measurement modalities, and participant acceptability rates. Zero external outcome validation.",
+        "binding_rules_cited": ["B12", "B13"],
+        "rationale": "B13 states measurement papers qualify (FT-IC5=MET) only if they 'ALSO report any SM ↔ non-SM coefficient.' This paper has zero such coefficients. B12 also applies: measurement-only paper with no external outcome → FT-IC5 = NOT_MET (FT-EC5). The paper is a measurement validation study with no criterion validity assessment against a health or behavioral outcome."
+      }
+    ]
+  },
+  {
+    "paper_id": "534",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "MET",
+        "evidence": "Linear mixed-effects regression model reports association between ADHD diagnosis (predictor at Year 2) and VGAQ scores (outcome at Year 4): β = 1.3 points (p < 0.001). Mediation analysis includes indirect effects of psychosocial mediators. Both are inferential statistical tests per 2.6.1 criteria.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "B8 states: 'Paper reports any traditional regression coefficient for the SM variable in any analysis (main, supplementary, sensitivity)' → FT-IC3 = MET. ADHD is the exposure, gaming addiction (VGAQ) is the DV. The paper reports a traditional regression coefficient (β=1.3, p<0.001) linking ADHD to gaming addiction, satisfying the inferential test requirement."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "MET",
+        "evidence": "Table 3 and supplementary results report β = 1.29 [95% CI: 0.97, 1.61], p < 0.0001 for ADHD on VGAQ; mediation model reports indirect effects (7.4% for prosocial peer involvement, 5.8% for school involvement, 5.1% for family conflict) with 95% CIs. Numeric values fully extractable.",
+        "binding_rules_cited": ["B8"],
+        "rationale": "B8 confirms that reporting any traditional regression coefficient (β with CI and p-value) satisfies FT-IC4 = MET. The paper reports complete numeric estimates for the ADHD → VGAQ association and mediated pathways."
+      }
+    ]
+  },
+  {
+    "paper_id": "541",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper reports logistic regression models with family typologies (P1–P5) predicting meeting movement behavior recommendations (physical activity, screen time, sleep). Screen time is an outcome variable (part of 'movement behavior recommendations met'), not an exposure/predictor of a non-SM outcome. No SM ↔ non-SM association test is performed.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "The paper does not test any smartphone/SM variable as a predictor. Family functioning variables (parental acceptance, monitoring, conflict) are the exposures; combined movement behaviors (including screen time) are the outcome. Screen time appears as a component of the outcome, not as an independent variable analyzed for its association with an external outcome. This does not satisfy FT-IC3 because no SM is entered as a predictor in any model."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Odds ratios and 95% CIs are reported for family typologies predicting movement behavior recommendations (Table 3), but these are estimates for family typology effects, not for a smartphone/SM variable. No numeric value is extractable for a qualifying SM exposure variable.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "FT-IC4 requires 'at least one numeric value for the qualifying SM ↔ non-SM association.' Since no SM variable is analyzed as an exposure, there is no SM coefficient to extract. The reported ORs quantify family typology effects, not SM effects."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "MET",
+        "evidence": "Original empirical ABCD analysis using latent profile analysis on baseline cross-sectional data to examine associations between family typologies and movement behavior outcomes (physical activity, screen time, sleep). Multilevel logistic regression models with reported estimates.",
+        "binding_rules_cited": [],
+        "rationale": "This is an original ABCD empirical study with a valid design (cross-sectional LPA + logistic regression). Although no qualifying SM variable is analyzed per FT-IC2, the study design itself (original analysis, inferential tests with numeric outputs) meets the FT-IC5 criterion for study design. The failure is in FT-IC2 (no qualifying SM exposure), not in study design."
+      }
+    ]
+  }
+]

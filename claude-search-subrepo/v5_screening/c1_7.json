@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, two-year follow-up data from 1,036 participants aged ~12 years from 21 US sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Problematic gaming severity is the outcome variable; no qualifying smartphone or social media exposure variable. Connectome-based predictive modeling of problematic gaming (Bergen Facebook Addiction Scale score) predicts FROM neural connectivity, not from SM/smartphone exposure. Applies B5 (unspecified gaming without separate SM coefficient)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modelling (CPM) with 10-fold cross-validation, correlation between predicted and observed VGAQ scores (r = 0.12, p = 0.002), permutation testing with 1,000 iterations"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "r = 0.12, p = 0.002; edge weights reported for predictive networks"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis using connectome-based predictive modeling of problematic gaming"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Full-length report published 2026, no indication of preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Criterion not applicable. Gaming severity is the dependent variable, but no qualifying smartphone/SM exposure is an independent variable (B5 - unspecified gaming alone).",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "FT_IC2 fails: paper examines neural predictors of problematic gaming (outcome), not SM/smartphone predictors. Gaming without separate SM or app-category breakdown does not meet qualifying exposure definition."
+  },
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, 5.0 release, nearly 10,000 children aged 9-10 years from 21 US research sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (total and by digital device: television, videos, video games, texting, video chat) as independent variable. Meets B1 (total screen time reported; also examined by device). Applies B1 rule."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models with each cognitive domain as dependent variable; mediation analysis via bootstrap with 10,000 resamples; multiple t-tests for indirect/total effects"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients reported (e.g., executive function b = -0.212, 95% CI = -0.301 to -0.122, p < .001; indirect effects β = -0.015, 95% CI = -0.028 to -0.005, p = .016 for mediation); FDR-adjusted p-values in main text and tables"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data examining association between screen time and cognitive function with putamen volume as mediator"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2026 in Acta Psychologica, full-length article, no indication of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Screen time is the independent variable (IV), not dependent variable. Paper examines screen time → cognitive function with putamen as mediator (B18 carve-out: has SM-as-IV → outcome analysis, so FT-EC7 does not apply).",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "All FT-IC criteria met. Cross-sectional design limits causal inference but meets screening criteria."
+  },
+  {
+    "paper_id": "475",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, two-year longitudinal cohort (T1 and T2), 1,186 participants aged 9-10 years at baseline, recruited from 21 US sites with school-based probability sampling"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization is the independent/predictor variable, not a qualifying smartphone or social media exposure. Cyberbullying alone without separately measured SM with own coefficient does not meet criteria (B3). Social media use mentioned in covariates/table but paper investigates cyberbullying victimization → mental health/neural outcomes."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models (LMMs) with longitudinal associations; t-tests for cyberbullying at T1 predicting outcomes at T2; mediation analysis via bootstrap with 5,000 resamples and inverse probability weighting"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients and 95% CIs reported (e.g., cyberbullying → externalizing problems β = 0.25, 95% CI 0.06-0.45, p = .01; brain activation contrasts β = 0.36, 95% CI 0.10-0.61, p = .01); F-statistics, p-values with FDR adjustment"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal neuroimaging analysis of ABCD data examining cyberbullying victimization associations with inhibitory control, neural activation, and mental health"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2026 in Journal of Medical Internet Research, full-length original paper, no indication of preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Criterion not applicable. Cyberbullying victimization (not a qualifying SM/smartphone exposure) is the independent variable; FT_IC2 fails.",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "FT_IC2 fails: cyberbullying alone without separately measured SM coefficient does not qualify as a qualifying smartphone or social media exposure variable (B3). While the paper is longitudinal and uses ABCD data, the exposure of interest is not SM/smartphone."
+  }
+]

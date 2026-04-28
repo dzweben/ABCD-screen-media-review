@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "124",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD baseline study, N=11,780, 9-10 year-olds from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying SM variables: texting, social media use (Facebook, Twitter, Instagram, etc.), video chat. Also gaming, video watching measured separately. Meets B1 (separate β/OR per activity)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Relative risk (RR) and adjusted relative risk (ARR) regression models with 95% CI (Tables 2-3). Separate analyses by gender and screen media type"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "RR, ARR, 95% CI reported in Tables 2-3 for all screen time activities and internalizing outcomes (depressive disorders, anxiety, suicidal ideation, self-harm)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis. First-wave cross-sectional baseline data analyzed"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication, no evidence of preprint/abstract/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is NOT the sole dependent variable. Paper examines SM/screen time → internalizing outcomes (depressive disorders, anxiety, self-harm, suicidal ideation), not demographics → SM. FT-EC7 does not apply (condition a fails)",
+    "binding_rules_applied": [
+      "B1",
+      "B5"
+    ],
+    "notes": "Cross-sectional design. Separate coefficients for texting, SM, gaming, videos, TV, video chat. TV-only excluded from 'digital media' composite but included in total screen time per B5. Strong associations found: girls with 2+ h/day SM vs <2 h were 2.00x more likely to have depressive disorders (ARR 1.96-2.00 across models)"
+  },
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, 4,262 children with genetic data, ages 9-11 years, European ancestry (U.S. sites)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Child-reported daily screen time (continuous hours). Qualifies as smartphone/screen exposure. Meets B7 (time on phone is qualifying)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models. Screen time associated with attention problems (β=0.10 SD, 95% CI 0.07-0.13 SD) and internalizing problems (β=0.03 SD, 95% CI 0.003-0.06 SD). Genetic sensitivity analyses also reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with 95% CI reported for screen time and psychiatric outcomes. Also reported heritability estimates and genetic confounding quantification"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis using genetic sensitivity analysis model (Gsens) incorporating polygenic risk scores and heritability estimates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed JAMA publication, published November 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is predictor (IV), not dependent variable. Outcomes are psychiatric problems (attention, internalizing), not SM. Additionally, polygenic risk scores (PRS) are predictors alongside screen time; these are non-demographic (genetic) variables that disqualify FT-EC7 per B17 (genetic/neural features)",
+    "binding_rules_applied": [
+      "B7",
+      "B17"
+    ],
+    "notes": "Longitudinal analysis 2016-2019 baseline → 1-year follow-up. Uses Gsens model to quantify genetic confounding. PRSs for television watching, ADHD, depression incorporated as covariates. Conclusion: genetic confounding explains most of attention-screen association and 42.7% of internalizing association"
+  },
+  {
+    "paper_id": "440",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, N=5,166 with baseline and 2-year follow-up structural imaging, ages 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Baseline screen media activity (SMA) - measured as hours/day across multiple types (TV, videos, gaming, texting, SM, video chat). Qualifies as smartphone/SM exposure. Meets B1 (multiple SM activities measured)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear mixed-effect models with mediation analysis. Baseline SMA associated with internalizing psychopathology at year 2 (β=0.020, SE=0.008, P=0.014). SMA associated with brain structural co-development pattern (β=0.015, SE=0.007, P=0.029). Indirect effect reported (indirect effect=0.020, P=0.043)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients, SE, p-values, and indirect effects reported for baseline SMA → internalizing outcome pathway and mediation through brain structural pattern"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD longitudinal analysis with mediation analysis using JIVE and linear mixed-effect models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed Journal of Behavioral Addictions publication, 2023"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA is predictor (IV), not dependent variable. Paper examines SMA → brain development → internalizing outcomes. Additionally, brain structural features (neural/imaging measures) are mediators, which disqualify FT-EC7 per B17 (neural features as predictors/mediators)",
+    "binding_rules_applied": [
+      "B1",
+      "B17"
+    ],
+    "notes": "Longitudinal 2-year prospective design with mediation analysis. JIVE identified brain co-development pattern explaining ~20% of total variance across 221 brain features. SMA partially mediated by cortical-brainstem circuitry (proportion mediated 2.24%). Reports small effect sizes but statistically significant associations"
+  }
+]

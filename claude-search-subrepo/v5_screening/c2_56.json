@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "59",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study baseline to 2-year follow-up (4.0 release), 8,085 US participants ages 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying assessed as single-item measure; no separately-measured SM variable with independent coefficient. Applies B3: cyberbullying alone does not qualify."
+    },
+    "FT_IC3": {
+      "status": "NOT_EVALUABLE",
+      "evidence": "Not evaluated; fails FT-IC2"
+    },
+    "FT_IC4": {
+      "status": "NOT_EVALUABLE",
+      "evidence": "Not evaluated; fails FT-IC2"
+    },
+    "FT_IC5": {
+      "status": "NOT_EVALUABLE",
+      "evidence": "Not evaluated; fails FT-IC2"
+    },
+    "FT_IC6": {
+      "status": "NOT_EVALUABLE",
+      "evidence": "Not evaluated; fails FT-IC2"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not meet FT-IC2; cyberbullying alone is not a qualifying SM/smartphone variable",
+    "binding_rules_applied": ["B3"],
+    "notes": "Paper focuses on ACEs and bullying victimization predicting mental health outcomes. Cyberbullying is measured as single item within broader bullying construct; does not qualify as standalone SM variable. No social media time, platform use, or SM accounts measured separately."
+  },
+  {
+    "paper_id": "436",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data release 5.0, 8,324 US children ages 9-10 years at baseline, followed annually for 4 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (time spent on Facebook, Instagram, etc.) measured via Youth Screen Time Survey; qualifies as platform-specific SM use. Separate coefficients estimated for social media vs. gaming vs. TV/videos. Applies B1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models with two-way interaction (DM use × time) testing longitudinal association with ADHD symptoms; three-way interaction (DM use × time × PGS-ADHD) testing moderation. Table 2 reports standardized β coefficients and P-values."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients (SE) reported in Table 2 for social media × time interaction (β [SE], 0.03 [0.01]; P < .001) and cumulative effect (β [SE], 0.15 [0.03]; P < .001). Additional coefficients in text and supplementary tables."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD longitudinal cohort examining associations between digital media use and ADHD-related symptoms over 4 years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original research article published 2026 in Pediatrics Open Science; no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply. Social media is the independent variable (IV) predicting ADHD inattention symptoms (non-SM outcome), not the dependent variable. Paper includes SM → non-SM outcome analysis (B18 applies: SM-as-IV, not SM-as-DV). FT-EC7 requires SM exclusively as DV.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Study examined longitudinal associations between three DM categories (social media, gaming, TV/videos) and ADHD symptoms. Social media use specifically associated with increased inattention symptoms over time (β = 0.03/year, cumulative 0.15 over 4 years). Video games and TV/videos not associated. Cross-lagged models confirmed unidirectional association (SM use → inattention, not reverse). Effect remained after controlling for genetic predisposition (PGS-ADHD) and SES."
+  },
+  {
+    "paper_id": "303",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study (referenced in abstract and methods)"
+    },
+    "FT_IC2": {
+      "status": "UNKNOWN",
+      "evidence": "No PDF available. Abstract mentions 'screen time' as predictor of depression symptoms but does not specify whether it includes qualifying SM variables or only TV/gaming. Cannot determine if separate SM coefficient exists."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Not evaluable without PDF; presumed regression analysis based on abstract"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Not evaluable without PDF"
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "Not evaluable without PDF"
+    },
+    "FT_IC6": {
+      "status": "UNKNOWN",
+      "evidence": "Not evaluable without PDF"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cannot determine without full PDF access",
+    "binding_rules_applied": [],
+    "notes": "Paper inaccessible (no PDF). Abstract indicates multi-level predictors of depression in ABCD study with screen time mentioned. Would require full paper to evaluate FT-IC2 (whether screen time includes qualifying SM variables with separate coefficients) and other criteria. Likely excludes if screen time is unspecified/aggregated without per-platform breakdown (B7, B2)."
+  }
+]

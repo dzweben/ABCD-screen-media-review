@@ -1,0 +1,66 @@
+[
+  {
+    "paper_id": "380",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Abstract states \"Demographic and socioeconomic variables, sleep-related variables and physical activity levels, screen time use, and psychopathology were examined as correlates.\" Numeric data (aOR, p-values) are provided for demographic, financial, psychiatric, and sleep correlates; however, no coefficient is extracted or reported for the screen time variable itself in any results table or supplementary material.",
+        "binding_rules_cited": ["B10"],
+        "rationale": "Per B10: \"SM appears in the covariates list but no coefficient for SM is reported anywhere\" → FT_IC3 = NOT_MET (FT-EC4). Since screen time was listed as an examined correlate but no numeric estimate (β, OR, RR, HR, etc.) is provided for the screen time → ED association, FT_IC4 = NOT_MET. C1's UNKNOWN is incorrect; C2's NOT_MET is correct per B10. The paper's numeric results focus on demographics and psychiatric disorders as predictors of ED, not screen time."
+      }
+    ]
+  },
+  {
+    "paper_id": "384",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper analyzes associations between parental media practices (bedroom screen use, family mealtime screen use, parental screen time modeling, parental monitoring, limiting screen time) as exposures and two outcomes: consumption of R-rated movies and frequency of playing mature-rated video games. No smartphone-specific variables (e.g., smartphone ownership, time on smartphone, app use), social media platform-specific variables (e.g., TikTok use, Instagram use, texting, social media time), or separately-measured per-modality screen time estimates are reported. All results tables (Table 2, Appendices D–G) report ORs for parental practices only, with no separately-extracted coefficients for any qualifying smartphone or SM variable.",
+        "binding_rules_cited": ["B5"],
+        "rationale": "Per B5: \"Paper analyzes only console/PC video games or unspecified-platform video games\" → FT_IC2 = NOT_MET (FT-EC2). The paper's exposure variables are parental media practices and parenting behaviors (not device-use measures), and the outcomes are consumption of mature-rated video games and R-rated movies. Video games are not specified as mobile/app gaming. Per B6, gaming qualifies only if it is \"mobile/app gaming specifically\" OR \"measured alongside another qualifying SM variable with separate coefficients.\" Neither condition is met. Per B1, IC2 requires \"separate estimate (β / OR / RR…) for any one of the qualifying smartphone or social-media YSTS items.\" This paper reports no such estimates. C1 incorrectly applied B1 to parental practices, which are not qualifying exposures. C2's NOT_MET is correct."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Although the paper reports ordinal logistic regression models with adjusted odds ratios linking parental media practices to R-rated movie consumption and mature video game frequency, these tests link parenting behaviors (the exposure) to mature-content outcomes (the dependent variables). No inferential statistical test links a qualifying smartphone/SM variable to a non-SM outcome.",
+        "binding_rules_cited": ["FT_IC2"],
+        "rationale": "FT_IC3 is contingent on FT_IC2 being MET. Since FT_IC2 = NOT_MET per B5, the paper fails to meet FT_IC3 (i.e., there is no qualifying SM → non-SM association). The regression models analyze parental practices, not smartphone/SM exposure."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Although numeric values (adjusted odds ratios, 95% CIs) are reported extensively in Table 2 (e.g., AOR 1.44 [1.36–1.53]), these are numeric estimates for parental media practice predictors, not for a qualifying smartphone/SM variable predicting a non-SM outcome.",
+        "binding_rules_cited": ["FT_IC2"],
+        "rationale": "FT_IC4 requires numeric values for a qualifying SM ↔ non-SM association. Since no qualifying SM variable is present in the analysis (FT_IC2 = NOT_MET), FT_IC4 = NOT_MET. Numeric reporting of parental practices does not satisfy FT_IC4."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "MET",
+        "evidence": "The paper conducts an original empirical ABCD analysis examining associations between parental media practices and adolescent mature-content consumption using ordinal logistic regression models. Data are from Year 3 of the ABCD Study (N = 10,054, ages 12–13). The study is cross-sectional and reports statistical tests.",
+        "binding_rules_cited": [],
+        "rationale": "Per 2L-criteria.md §2.5, FT_IC5 = MET for \"Original empirical ABCD analysis: cross-sectional, longitudinal, mediation, moderation, ML, causal inference, target-trial emulation, network analysis, factor models with reported pathway estimates.\" This study is an original cross-sectional ABCD analysis with reported pathway estimates (ORs). FT_IC5 = MET."
+      },
+      {
+        "crit": "FT_IC6",
+        "status": "MET",
+        "evidence": "Published peer-reviewed article in BMC Pediatrics (2025), volume 25, article 90. DOI: 10.1186/s12887-024-05367-w. Not a duplicate, preprint, or conference abstract.",
+        "binding_rules_cited": [],
+        "rationale": "Paper is a peer-reviewed publication from 2025. FT_IC6 = MET."
+      }
+    ]
+  },
+  {
+    "paper_id": "397",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "The paper measures \"recreational screen time\" as a single composite variable: self-reported total hours per day spent \"watching television, playing video games, texting, social media, and video chat.\" Participants are categorized into low (0–4), medium (>4–8), or high (>8) hours/day screen time. The results section (Table 2, Supplemental Tables S1–S6) reports adjusted linear and Poisson regression models associating categorical screen time groups with cardiovascular outcomes. NO separate estimates (β, OR, mean difference, RR) are provided for any individual modality: no texting coefficient, no social media time coefficient, no video chat coefficient, no gaming breakdown by platform. The paper states: \"Screen time was self-reported and categorized as low (0–4), medium (>4–8), or high (>8) hours/day.\" Only these categorical composite estimates are analyzed and reported.",
+        "binding_rules_cited": ["B2"],
+        "rationale": "Per B2: \"Paper uses YSTS but reports only a summed total screen time estimate (or a single composite) with no per-modality breakdown anywhere\" → FT_IC2 = NOT_MET (FT-EC2). Per §2.2.1: \"NOT_MET if the only exposure variable analyzed is a summed/composite total screen time (or total recreational screen use, weighted average screen hours, lifestyle factor that includes screen) with no extractable per-item estimate for any qualifying smartphone or social-media item — even when the underlying survey items would have allowed a breakdown.\" The paper measures total recreational screen time without extracting separate coefficients for social media, texting, or video chat. Per B1, qualifying SM variables require \"separate estimate (β / OR / RR / HR / IRR / r / mean difference…) for any one of the qualifying smartphone or social-media YSTS items.\" This paper has none. C1's NOT_MET is correct; C2's MET (citing B1) misapplies B1 by conflating survey item inclusion with reported per-item estimates. B1 explicitly requires separate extracted estimates."
+      }
+    ]
+  }
+]

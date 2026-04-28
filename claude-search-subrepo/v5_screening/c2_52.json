@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "55",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, 9-11 year-olds from 21-site US study, baseline survey/interview data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Electronic media use via Screen Time Questionnaire: TV, videos, video games, texting, social networking, video chat. Each reported separately with own coefficient. Applies B1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear mixed models, regression coefficients for EMU predicting child anxiety and depression controlling for depression/anxiety respectively"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports coefficients, t-values, 95% CIs for anxiety and depression outcomes with EMU predictors"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining differential relationships of anxiety and depression to child and parent report of electronic media use"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/duplicate; original peer-reviewed publication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Electronic media/SM are independent variables predicting anxiety/depression outcomes, not dependent variables. Analysis is SM→outcome, not outcome→SM. Does not satisfy condition (a) of FT-EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper demonstrates differential effects of specific EM types on anxiety vs depression, with video gaming and chatting associated with anxiety while video watching related to depression."
+  },
+  {
+    "paper_id": "398",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study baseline (2016-18), 9-10 year-olds, cross-sectional data from broadly US representative sample (n=11,875)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time types (television/movies, videos, video games, social media) measured via Youth Screen Time Survey with separate coefficients per type and content. Mature-rated video games and R-rated movies also assessed. Applies B1 (separate β per ST type/content)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Negative binomial structural equation modeling with regression coefficients and mediation/indirect effects testing. Direct effects in Table 2, indirect effects in Table 3."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Incidence rate ratios (IRRs), 95% confidence intervals, p-values, and β coefficients reported in Tables 2 and 3 for both direct and indirect effects"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining associations between ST types/content and problem behaviors, with sleep duration as mediator"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; original peer-reviewed publication in International Journal of Behavioral Nutrition and Physical Activity (2019)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time/social media are independent variables predicting problem behaviors (externalizing/internalizing outcomes), not dependent variables. This is ST→outcome analysis, not outcome→SM structure required for FT-EC7.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Comprehensive analysis of 4 ST types + 2 content categories predicting 8 CBCL syndrome scales. Sleep mediated effects are small but significant for several ST-behavior associations."
+  },
+  {
+    "paper_id": "429",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD first annual curated release, cross-sectional baseline, 4524 children ages 8-11 years, US study"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured as recreational ST (≤2 hours/day guideline recommendation) but NOT reported with separate qualifying coefficients. ST is bundled into combined movement behavior recommendation categories (PA+ST+sleep, ST+sleep, etc.). No individual ST coefficient reported independently. Violates B1 requirement for separate per-item breakdown. Screen time appears only as component of aggregate behavior recommendation compliance, not as separately analyzed qualifying variable."
+    },
+    "FT_IC3": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT-IC2 not met; criterion 3 not evaluated"
+    },
+    "FT_IC4": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT-IC2 not met; criterion 4 not evaluated"
+    },
+    "FT_IC5": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT-IC2 not met; criterion 5 not evaluated"
+    },
+    "FT_IC6": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "FT-IC2 not met; criterion 6 not evaluated"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper screened out at FT-IC2; FT-EC7 not evaluated",
+    "binding_rules_applied": ["B2"],
+    "notes": "Screen time treated as part of 24-hour movement guideline compliance (combined PA+ST+sleep recommendations) rather than as separately-analyzed smartphone/SM variable. Tables 3-4 report paths for movement behavior combinations and impulsivity dimensions, but ST has no independent coefficient. Applies B2: summed/total behavior recommendation without per-item breakdown."
+  }
+]

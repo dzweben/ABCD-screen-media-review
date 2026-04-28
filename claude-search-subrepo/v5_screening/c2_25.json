@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "193",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S.-based ABCD Study, ages 9-10, n=1415 participants with passive smartphone use data via EARS application"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone variables: smartphone ownership/app-category use (apps are smartphone per B1); keyboard use on phone; time on phone (passive EARS data and self-report). Social media use measured (texting apps, social media apps comprised nearly half of use). B1 applies."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation analysis: r=0.33 (keyboard and app use); r=0.21-0.35 (passive vs self-report smartphone use). Also Pearson correlations between passive measures reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: r values (0.33, 0.21-0.35); means and SDs for daily smartphone use (5.1 hours passive vs self-report); confidence intervals provided in tables and main text."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with measurement validation component. Describes and validates passively-sensed smartphone keyboard and app use measures with correlations to self-report outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2024 in Scientific Reports. No evidence of preprint/abstract/deposit duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): paper examines SM/smartphone as INDEPENDENT variable (predictor of outcomes), not as dependent variable. Reports SM and texting apps as components of total use, with demographic and sex differences as outcomes. This is SM→outcome analysis, not SM←demographic analysis.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Measurement validation paper with original ABCD analysis. Validates EARS passive sensing measures. Qualifies under B1 for having separate per-item breakdowns (app categories, keyboard use) as smartphone measurement."
+  },
+  {
+    "paper_id": "103",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Describes ABCD Study involving over 11,000 youth and families"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper is a resource hub describing support infrastructure for ABCD researchers. No smartphone or social media data analysis. Discussion board mentions SM in a live feed from Twitter but does not report SM or smartphone measurements or variables in original analysis. B14 applies."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Paper reports no inferential statistical tests on SM or smartphone data. Descriptive resource paper only."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric SM or smartphone coefficients, correlations, or test statistics reported"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "FT-EC3 / B14 applies: this is a resource/protocol paper, not an empirical analysis. Describes infrastructure, discussion board, tutorials, and communication tools. No original data analysis reported."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2024 in Developmental Cognitive Neuroscience. No evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_IC5 NOT_MET; does not qualify for EC7 assessment. Paper fails on IC5 (resource/protocol paper per B14).",
+    "binding_rules_applied": [
+      "B14"
+    ],
+    "notes": "EXCLUDE: resource hub paper describing ABCD infrastructure, not an empirical study. Does not conduct original SM or smartphone analysis. Mentions SM in Twitter feeds but does not analyze or measure SM as outcome or predictor."
+  },
+  {
+    "paper_id": "140",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, N=11,868 participants, ages approximately 9/10 to 13/14 across US sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying smartphone and social media variables: social media use (hours/day, self-report); texting on cell phone (hours/day); video chat (hours/day); video games (not qualifying, but included). B1 applies: separate β/OR reported for SM, texting, video chat as individual technology subtypes with own coefficients."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multilevel logistic regression: odds ratios (OR) with 95% CI for each technology subtype predicting >2 hr/day use. Example: social media OR=3.34 (95% CI: 3.14, 3.55) per study wave; texting OR=2.22 (95% CI: 2.07, 2.39). Mixed-effects models with subject-specific random intercepts and slopes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: ORs with 95% CIs for all technology subtypes (TV, video game, YouTube, texting, video chat, social media) across multiple covariates in Table 2. Includes subject-specific odds of >2 hr/day: social media 25%-234% increase per year; males vs females ORs (e.g., female social media OR=2.41)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis: longitudinal multilevel logistic regression examining technology use patterns (TV/movies, video games, YouTube, social media, video chat, texting) across 5 waves (ages 9/10 to 13/14)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2024 in Journal of Adolescent Health. No evidence of preprint/abstract/deposit duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): paper examines technology subtypes (including social media, texting, video chat) as INDEPENDENT variables (IVs) predicting odds of >2 hr/day use categories, with sociodemographics as outcomes of SM use. This is SM↔sociodemographic-outcome analysis, not SM←demographic-only analysis. Condition (a) requires SM always as DEPENDENT variable with NO SM→non-SM-outcome analysis; this paper has the reverse structure.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "INCLUDE. Meets all FT_IC1-6. Original ABCD longitudinal study with separate coefficients (ORs) reported for each technology subtype. Examined technology use trajectories and associations with sociodemographics. EC7 does not apply because SM and texting are IVs predicting use categories, not DVs predicted by demographics."
+  }
+]

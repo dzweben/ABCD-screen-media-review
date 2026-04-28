@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "1",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, baseline 2016-2018, ages 9-10 years, N=6554"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media time (hours per day) measured prospectively from baseline to year 2 using self-report; qualifies as time on SM per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression with robust standard errors estimating association between social media trajectories and year 2 cognitive performance; β coefficients reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with 95% CI reported in Table and text: ORRT β=-1.39 [95% CI -2.10 to -0.68], PSMT β=-2.03 [95% CI -2.91 to -1.15], PVT β=-2.09 [95% CI -2.78 to -1.41], composite β=-0.85 [95% CI -1.30 to -0.40]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD prospective analysis; social media use (baseline to year 2) predicting cognitive performance (year 2)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate (preprint, abstract, or deposit duplicate); published in JAMA December 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 condition (a) not met: Social media is the INDEPENDENT variable (predictor of cognitive outcomes), not the dependent variable. Paper has SM→cognitive outcome analysis, not demographics→SM analysis",
+    "binding_rules_applied": ["B1"],
+    "notes": "Three trajectory groups identified: no/very low SM use (57.6%), low increasing SM use (36.6%), high increasing SM use (5.8%). All analyses adjusted for covariates including age, sex, race/ethnicity, income, parent education, ADHD symptoms, depression, baseline cognitive score, other screen time, study site"
+  },
+  {
+    "paper_id": "8",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, baseline October 2016-October 2018, ages 9-10 years at baseline, N=11,876 at baseline (N=10,093-11,199 across waves)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Self-reported time spent on social media measured at baseline to 3-year follow-up; qualifies as time on SM per B1"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal random-intercept cross-lagged structural equation panel models (RI-CLPM); SEM path analysis with cross-lagged coefficients testing reciprocal associations between SM use and depressive symptoms"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with 95% CI: Year 1→Year 2 SM→depression β=0.07 [95% CI 0.01-0.12, p=.01]; Year 2→Year 3 SM→depression β=0.09 [95% CI 0.04-0.14, p<.001]; model fit indices (CFI 0.977, TLI 0.968, RMSEA 0.031)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD prospective longitudinal analysis; within-person associations between social media use and depressive symptoms across 4 waves (baseline, year 1, year 2, year 3)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published in JAMA Network Open May 21, 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 fails on multiple grounds: (a) SM is IV not DV (within-person increases in SM predicted depressive symptoms, not vice versa); (b) predictors include ACEs, parental monitoring, family conflict—disqualifying per B17; (c) bidirectional/cross-lagged design explicitly tested per B20 ('reciprocal associations'), which disqualifies FT-EC7",
+    "binding_rules_applied": ["B1", "B20"],
+    "notes": "Cross-lagged panel analysis tested directionality: SM→depression (significant) but depression→SM (not significant). Between-person covariance of latent random intercepts: β=-0.01 [95% CI -0.04 to 0.02, p=.46]. Autoregressive effects significant for both SM and depression. At-wave residual covariance at year 3: r=0.07 [p<.001]"
+  },
+  {
+    "paper_id": "49",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, baseline 2017-2019 (ages 10-11 in Year 1), N=9,243 after exclusions"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Six screen subtypes including social media time (hours/day) measured in Year 1; also texting, videos, video games, TV, video chat. Qualifying SM and smartphone variables per B1 with separate coefficients reported for each subtype"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses with robust standard errors; mediation analyses using generalized SEM with maximum likelihood estimation testing indirect effects through problematic use and sleep duration"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients (Model 1 unadjusted, Model 2 adjusted) with 95% CI: overall screen B=0.05 [0.03, 0.07, p<0.001]; SM B=0.20 [0.09, 0.32, p=0.001]; texting B=0.18 [0.08, 0.28, p<0.001]; videos B=0.14 [0.08, 0.19, p<0.001]; video games B=0.09 [0.04, 0.14, p=0.001]. Indirect effects: SM→manic via problematic SM use 47.7% [95% CI 23.3%, 72.0%], video game→manic via problematic VG use 58.0% [95% CI 31.0%, 85.0%]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD prospective cohort analysis; screen time Year 1 predicting manic symptoms Year 3 with mediation pathways through Year 2 mechanisms"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published online February 19, 2025 in Social Psychiatry and Psychiatric Epidemiology"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 condition (a) not met: Screen/SM time is the INDEPENDENT variable (predictor), not the dependent variable. Paper examines screen time→manic symptoms, not demographics→screen use. Also predictors include ADHD, depressive symptoms, and manic symptoms in Year 1 (per B17 exclusion criteria)",
+    "binding_rules_applied": ["B1"],
+    "notes": "Prospective design with 2-year lag (Year 1→Year 3). Mediation analyses tested three pathways: SM time→problematic SM use (Year 2)→mania (Year 3); VG time→problematic VG use (Year 2)→mania (Year 3); total screen time→sleep duration (Year 2)→mania (Year 3). Sleep duration mediated 9.0% [95% CI 0.02%, 16.0%, p=0.016]. Mean screen time Year 1: 4.6±3.5 h/day; Year 3: 8.4±8.2 h/day"
+  }
+]

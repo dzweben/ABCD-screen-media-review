@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "521",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses baseline data from ABCD Study (10,842 participants); explicitly states 'Baseline data from 10,842 participants in the Adolescent Brain Cognition Development Study'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM: social media visiting (Facebook, Instagram, video-chatting) separately measured; qualifying smartphone: video games, texting separately measured. B1 applies: YSTS with separate β for each activity (passive viewing, video games, social media sites/video chat, texting). All reported as distinct per-item coefficients."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Poisson regression (generalized linear models with generalized estimation equations) comparing screen time by autism status and gender; prevalence ratios with 95% CI reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Tables 2-5 report ratio of means (95% CI), prevalence ratios (95% CI), and p-values. Example: Table 2 shows boys with autism 2.9h vs 2.3h TV (p<0.001); girls with autism 64.4 vs 37.9 min video games (p=0.03)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis comparing screen time patterns by autism status and gender; propensity score matched analysis"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published journal article; no evidence of preprint/abstract duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is not the dependent variable in all analyses; screen time is predictor of obesity (obesity is outcome in Tables 3-5). Analysis includes non-demographic predictors (autism status) and outcome relationships that violate EC7 condition (a). Not a demographic→SM longitudinal analysis. B18 carve-out does not apply; SM not dual-role.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Strong ABCD Study paper with detailed screen time breakdowns. Propensity score matching employed for autism status. Gender-stratified analyses included."
+  },
+  {
+    "paper_id": "101",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes 8,324 children (9-11 years) from ABCD Study baseline and year 2 follow-up (2016-2018 baseline, 2018-2020 year 2)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone: 'daily screen time' measured as Screen-Activity Proportion (SAP). B1 applies: reporting separate screen time exposure (qualified as smartphone variable) with distinct coefficient in models predicting inhibitory control network"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Correlation analysis (Pearson r with bootstrap 50,000 resampling); mediation analysis (bootstrapping); Bayesian posterior inference; group-level t-tests comparing high vs low SAP groups"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Correlation coefficients (r), 95% bootstrap CI, BF10 (Bayes factors), t-statistics, p-values reported. Figure 1 and text report r=-0.040 (95% CI [-0.0605, -0.0186]), BF10=13.10; year 2: r=-0.0933 (95% CI [-0.1231, -0.0635]), BF10=428995.74; mediation indirect effect: B=-6.920e-5, p<0.001"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD Study analysis examining association between screen time and inhibitory control network development over 2-year period"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Developmental Cognitive Neuroscience (2023); no duplicate evidence"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable predicting neurobiological outcome (fronto-striatal connectivity), not dependent variable. Analysis includes non-demographic predictors (reward sensitivity/BAS scores) and outcome relationships. Not demographic-only→SM framework. B18/B20 not applicable.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Longitudinal fMRI connectivity study with robust statistical approaches (Bayesian + Bootstrap). Screen time (SAP) measured as proportion relative to activity time. Mediation analysis shows SAP mediates BAS→IC network relationship."
+  },
+  {
+    "paper_id": "160",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes prospective cohort data from ABCD Study; baseline 2016-2018, two-year follow-up 2018-2020; N=11,633 at baseline"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone: texting, video chatting, watching videos, playing video games all separately measured. Qualifying SM: social media separately reported. B1 applies: multiple distinct screen modalities reported with separate coefficients (aOR for texting, video chat, videos, video games all reported separately)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression examining prospective associations between baseline screen time and suicidal behaviors at 2-year follow-up; multiple logistic regression models adjusted for covariates"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios (aOR) with 95% CI reported for all screen time modalities. Total screen time: aOR 1.09 (95% CI 1.03-1.14); texting: aOR 1.36 (95% CI 1.06-1.74); video chatting: aOR 1.30 (95% CI 1.03-1.65); videos: aOR 1.21 (95% CI 1.04-1.39); video games: aOR 1.18 (95% CI 1.01-1.38)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD Study analysis linking baseline screen time to suicidal behaviors at 2-year follow-up using KSADS-5 assessment"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Preventive Medicine (2023); no evidence of duplicate preprint/abstract"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable (exposure) predicting suicidal behaviors (outcome), not dependent variable. Non-demographic confounders included (baseline major depressive disorder, parental psychopathology, family history). Not demographic-only→SM framework. B18/B20 not applicable.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Large prospective cohort study with 1.38% reporting suicidal behaviors at follow-up. Sensitivity analyses excluding baseline suicidal behaviors reported. Specific screen modalities most strongly associated: texting, video chat, videos, video games."
+  }
+]

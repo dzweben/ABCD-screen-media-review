@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "234",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper measures mature-rated video game playing (yes/no) and R-rated movie watching frequency as dependent variables (outcomes predicting sleep patterns). These are content-type measures, not qualifying smartphone/SM variables. Methods and Results show sleep → mature screen usage, not smartphone/SM exposure measured.",
+        "binding_rules_cited": ["B5"],
+        "rationale": "B5 explicitly excludes 'mature-rated movie content alone' from qualifying exposures (2L-criteria.md §2.2 'Does NOT qualify'). The paper operationalizes mature content consumption as the dependent variable, not as a separately-measured smartphone or social-media variable with its own coefficient. Mature-rated games and R-rated movies are content categories, not device/platform/time modalities that qualify per FT-IC2. C1 correct; C2 misapplied B1 by treating content-type as equivalent to device-modality coefficients."
+      }
+    ]
+  },
+  {
+    "paper_id": "239",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Methods state: 'Cross-sectional study in children of 9-11 years old (n=2,952) and adolescents of 17-18 years old (n=261), from the Dutch ABCD Study and the Spanish INMA Project.' Primary exposure variable is radiofrequency electromagnetic fields (RF-EMF dose in joules/kg/day to the brain), not a qualifying smartphone or SM variable.",
+        "binding_rules_cited": ["B5"],
+        "rationale": "RF-EMF is not a qualifying smartphone or SM variable per §2.2.2 ('Does NOT qualify: RF-EMF exposure measures'). Although screen devices were assessed as part of the RF-EMF dose calculation, the main independent variable of interest is RF-EMF, not screen time or SM use. The criteria state FT-IC2 is met only if 'at least one [qualifying variable] is measured AND enters a statistical analysis.' Here, screen time is a covariate in the RF-EMF dose model, not the primary exposure. B5 equivalent applies. Note: Paper also fails FT-IC1 (Dutch ABCD, not U.S. ABCD), but FT_IC2 NOT_MET is the correct resolution for the disagreement on IC2."
+      }
+    ]
+  },
+  {
+    "paper_id": "248",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Article is explicitly a review: PURPOSE OF REVIEW states 'To review recent literature based on Adolescent Brain and Cognitive Development (ABCD) Study data.' No PDF available; abstract indicates this is a literature review synthesizing findings from multiple ABCD studies, not reporting original numeric estimates from the authors' own analyses.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14: 'Editorial, commentary, special-issue introduction, perspective, or letter with no original ABCD analysis → FT_IC5 = NOT_MET (FT-EC3).' This is a review article (FT-EC3 applies). Per §2.5, reviews without new ABCD analysis are excluded. FT_IC4 assessment is secondary to FT_IC5 = NOT_MET. The paper summarizes numeric findings from other studies but does not report original coefficients from its own analyses. C2's claim that it 'Summarizes numeric findings from ABCD analyses' conflates reporting others' findings with performing original analysis. C1's UNKNOWN is more defensible than C2's MET, but the correct determination is NOT_MET via FT-EC3 classification."
+      }
+    ]
+  }
+]

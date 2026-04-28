@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "541",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline data from 21 U.S. sites, 10,712 children aged 9-10 years"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper examines only screen time and sleep/physical activity as movement behaviors. Screen time is outcome variable (dichotomous: meets guideline vs. not), not predictor of non-screen outcome. No smartphone/social media as exposure variable predicting external outcome. B5 applies: TV/screen time only without qualifying SM variable."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression models with OR, 95% CI for family typologies predicting movement behavior recommendations met (Table 3, p. 6)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% CI reported in Table 3 (p. 6). Example: Family typology P2 OR=0.54, 95% CI 0.39-0.76 for meeting all three recommendations"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis using latent profile analysis on baseline cross-sectional data to examine family typologies and movement behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article, not preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Screen time is outcome variable (B2 carve-out), not IV predicting outcomes. No SM->outcome analysis present.",
+    "binding_rules_applied": ["B5"],
+    "notes": "EXCLUDE. Screen time treated as outcome measure (dichotomized against guideline), not as qualifying exposure variable. Study focuses on family environment (parental acceptance, monitoring, conflict) as predictors of movement behaviors including screen time. No smartphone or social media variable as independent predictor of external outcome."
+  },
+  {
+    "paper_id": "295",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, 9,718 school-age children from U.S., baseline data from 21 research sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) measured as hours per day on weekday and weekend, weighted average. Includes social network sites, texting, TV shows/movies, videos, video games, video chat. B1 applies: machine learning model reports feature importance for screen media activity as separate predictor alongside extracurricular involvement and sleep duration (Figure S5)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Machine learning framework identifies variables associated with fluid cognitive functioning (FCF). Variables with highest importance determined via stacking ensemble methods and variable importance (VI) metrics computed across models (Figure 1, page 2044). Linear mixed effects (LME) models report F-statistics for associations between screen media activity and FCF."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "F-statistics reported in Table 2 and Figure 2 for screen media activity (weekday: F(1,9,670)=27.86, p<.001; weekend: F(1,9,670)=-71.86, p<.001). Machine learning model R2=14.74% variance explained, 95% CI [14.53, 14.88]"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis using machine learning framework to identify factors associated with fluid cognitive functioning"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Child Development, not preprint/abstract duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Study examines screen media activity as IV predicting FCF (outcome), not SM as DV. Predictors include environmental, socioeconomic, and child-specific factors beyond demographics alone (e.g., extracurricular involvement, parental education, family conflict, trauma exposure, impulsivity).",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Screen media activity qualifies as qualifying SM variable (includes social network sites, texting). Machine learning reports screen media activity as separate feature with variable importance. Original ABCD analysis with SM as IV predicting non-SM outcome (FCF)."
+  },
+  {
+    "paper_id": "24",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, N=11,025 children ages 9-10 years, baseline and 1-year follow-up, recruited from 21 U.S. sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying screen time variables: social networking (aOR 1.62, 95% CI 1.18-2.22), texting (aOR 1.40, 95% CI 1.08-1.82), watching/streaming television shows/movies (aOR 1.39, 95% CI 1.14-1.69). Social networking and texting are qualifying SM variables per B1. B1 applies: separate coefficient reported for each screen modality."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses conducted to estimate associations between baseline screen time (exposure) and binge-eating disorder (outcome) at 1-year follow-up. Multiple logistic regression with adjusted odds ratios (aOR) and 95% CI."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted odds ratios with 95% CI reported in Table 2 (p. 890). Total screen time aOR=1.11 (95% CI 1.05-1.18, p=.001); social networking aOR=1.62 (95% CI 1.18-2.22, p=.003); texting aOR=1.40 (95% CI 1.08-1.82, p=.011); television aOR=1.39 (95% CI 1.14-1.69, p=.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Prospective cohort study design with baseline screen time exposure and parent-reported binge-eating disorder outcome at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in International Journal of Eating Disorders, 2021, not preprint/abstract duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Study examines SM/screen time as IV predicting binge-eating disorder outcome, not SM as DV. Predictors include demographics (race/ethnicity, sex, household income, parent education, BMI percentile, site) plus baseline binge-eating disorder as covariate.",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Social networking (SM platform) and texting (SM-related) qualify as SM variables per B1. Prospective cohort design with separate coefficients for each screen modality. Original ABCD analysis with SM as IV predicting non-SM outcome (binge-eating disorder)."
+  }
+]

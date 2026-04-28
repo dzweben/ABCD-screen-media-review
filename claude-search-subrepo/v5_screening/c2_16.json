@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "81",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Cross-sectional analysis of ABCD Study year 3 (2019-2021), ages 11-14, US national sample of 9989 adolescents"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization only; no separately-measured social media variable with own coefficient. Applies B3: cyberbullying alone does not qualify"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses with odds ratios (OR) and 95% CI reported; Table 2 shows associations between gender identity and cyberbullying victimization"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "ORs with 95% CIs reported in Table 2: transgender OR 2.24 (95% CI 1.22-4.10), gender-questioning OR 1.91 (95% CI 1.05-3.47)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD Study cross-sectional data; logistic regression examining associations between gender identity and cyberbullying"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Full journal publication; no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not qualify screening criteria (FT_IC2 NOT_MET); cyberbullying-only study with no SM→outcome or SM-as-DV analysis",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "Paper focuses on cyberbullying victimization as outcome. Cyberbullying alone is insufficient exposure per B3 unless paired with separately-measured SM variable. No SM variable with independent coefficient; therefore excluded at FT_IC2."
+  },
+  {
+    "paper_id": "82",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Cross-sectional analysis of ABCD Study year 3 (2019-2021), ages 11-15, US national sample of 10,092 adolescents"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Platform-specific social media use (TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter, Reddit, Pinterest); time on SM; secret SM account status. Qualifies as social media use per B1, B6, B7"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Chi-square tests and t-tests for comparisons across demographic characteristics; descriptive proportions and statistical tests comparing groups by age and sex"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Percentages, proportions, mean hours/day, Chi-square p-values, and t-test p-values reported in Table 1 and text"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Pure descriptive/prevalence study; no SM↔non-SM-outcome analysis. Applies B14: descriptive data collection on platform use and prevalence patterns only. No inferential test of SM predicting an external outcome."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Full journal publication; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not qualify screening criteria (FT_IC5 NOT_MET); pure prevalence/descriptive study with no external outcome or mediating analysis",
+    "binding_rules_applied": [
+      "B14"
+    ],
+    "notes": "Descriptive epidemiological study of social media platform usage patterns in early adolescents. Reports prevalence of accounts, platform preferences, underage use rates, and sex/age differences. No inferential test of SM predicting non-SM outcomes (e.g., depression, substance use). Meets FT_IC1-IC4 but fails FT_IC5 (original empirical analysis with external outcome)."
+  },
+  {
+    "paper_id": "106",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Prospective cohort analysis of ABCD Study year 2→year 3 follow-up (2018-2021), ages 11-12 at year 2, US national sample of 8006 adolescents"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (hours/day), texting (hours/day), video chatting (hours/day). All three are qualifying SM/smartphone variables. Separate coefficients reported for each. Applies B1: distinct coefficients for SM, texting, video chat as screen modalities"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses evaluating prospective associations between screen time (year 2) and substance use experimentation (year 3); AORs with 95% CIs reported in Figure 1 and text for alcohol, nicotine, cannabis, and any substance use"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "AORs with 95% CIs reported: social media AOR 1.20 (95% CI 1.14-1.26); texting AOR 1.18 (95% CI 1.12-1.24); video chatting AOR 1.09 (95% CI 1.03-1.16); substance-specific ORs in Figure 1"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis of ABCD Study; logistic regression testing associations between screen time modalities and subsequent substance use experimentation"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Full journal publication; no evidence of preprint/abstract/deposit duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/smartphone is independent variable (predictor), not dependent variable; prospective analysis with substance use experimentation as outcome; does not meet FT_EC7 criteria (which requires SM as DV with demographics-only predictors)",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Prospective study examining screen use modalities as predictors of substance use in early adolescents. Social media, texting, and video chatting each had separate coefficients and were independently associated with substance use. Meets all FT_IC criteria. FT_EC7 does not apply because SM is IV, not DV."
+  }
+]

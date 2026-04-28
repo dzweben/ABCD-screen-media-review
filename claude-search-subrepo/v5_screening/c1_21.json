@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "202",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study (ABCD Study, baseline through 3-year follow-up, ages 10-14 years)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic Social Media Use (PSMU) measured via SMAQ; qualifies per B4 (cyberbullying + separately-measured SM with own coefficient; dysregulation moderation)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression; ACEs score (Y1) × PSMU (Y3) with emotional/behavioral dysregulation as moderator; β=1.5, p<0.001"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β=1.5 [95% CI not explicitly stated but p<0.001 reported]; relative risk for high vs. low ACEs; main text and supplemental tables"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD analysis: ACEs at Y1 predicting PSMU at Y3"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/abstract/deposit duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "ACEs (adverse childhood experiences) is an explicit disqualifier per B17 (parental psychopathology, family conflict, ACEs, etc. as predictors of SM). Additionally, SM is not the dependent variable; rather, PSMU is outcome being predicted by ACEs.",
+    "binding_rules_applied": ["B4", "B17"],
+    "notes": "Study examines ACEs → PSMU pathway with emotional/behavioral dysregulation as potential moderator. PSMU operationalized as SMAQ continuous variable. Dysregulation (BPM scores) did not moderate the association."
+  },
+  {
+    "paper_id": "435",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; 8,324 children followed annually for 4 years (baseline ages 9-10 years, 21 U.S. sites)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (hours/day), playing video games, watching television/videos all measured via Youth Screen Time Survey; separate coefficients reported for each (SM: β=0.03, Games: not significant, TV: not significant). Qualifies per B1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression with random intercepts and slopes; SM × time interaction β=0.03 [SE 0.01], P<0.001; SM × time × PGS-ADHD three-way interaction tested"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple β coefficients and standard errors reported: SM × time β=0.03 [SE 0.01], cumulative effect β=0.15 [SE 0.03], cross-lagged β=0.03 [SE 0.01]; Table 2 and supplemental tables"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical ABCD analysis examining SM → ADHD inattention symptoms over 4 years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/abstract duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "PGS-ADHD (polygenic risk score) is a disqualifying predictor per B17 (neural features, polygenic scores). Additionally, SM is IV; ADHD symptoms are outcome (not SM-as-DV scenario).",
+    "binding_rules_applied": ["B1", "B17"],
+    "notes": "Longitudinal prospective design; SM use specifically (not just time) associated with inattention. Gaming and TV were not associated. Cross-lagged panel models confirmed unidirectional SM → inattention (not reverse)."
+  },
+  {
+    "paper_id": "35",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; 1,940 participants aged 11-12 years at Wave 1, analyzed over three annual waves (Waves 1-3)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media addiction (SMA) scores via 6-item Bergen Facebook Addiction Scale adapted for SM platforms; time spent on social media (SMT) via self-report questionnaires. Both are qualifying SM variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression with robust error variance; cross-sectional prevalence ratios (PR) at Wave 1 and 3; prospective relative risks (RR) for Wave 1 SM → Wave 3 binge eating; latent class trajectory modeling"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "RR=1.90 [95% CI 1.10-3.27] for addiction SMA group (Table 3); RR=3.01 [95% CI 2.07-4.37] for consistently high SMA trajectory (Table 4); PR values in cross-sectional analyses; all with confidence intervals"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD longitudinal analysis examining SM variables (SMA, SMT) predicting binge eating symptoms at follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/abstract/deposit duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Binge eating (BE) is the dependent variable; SM is the independent variable (IV → outcome), not SM-as-DV scenario. Additionally, moderation analyses tested BMI and sex, but SM is not isolated as DV with demographic-only predictors.",
+    "binding_rules_applied": [],
+    "notes": "Study distinguishes between SMA (addictive SM behaviors) and SMT (time on SM); only SMA prospectively predicted BE. Latent class trajectory analysis identified four SMA groups; consistently high SMA group showed strongest association with follow-up BE. Moderation by sex and BMI percentile."
+  }
+]

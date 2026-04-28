@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "389",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US national cohort (N=9,008), Year 2 assessment (2018-2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic social media use measured via Social Media Addiction Questionnaire (SMAQ) - qualifying social media variable per B1 (separately-measured SM with own coefficient). Also includes time on social media as separate predictor."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression with adjustment for confounders. Models report β coefficients for problematic SM use → positive alcohol expectancies (B=0.045, 95% CI 0.020-0.069) and negative alcohol expectancies (B=0.072, 95% CI 0.043-0.101)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: B coefficients with 95% CIs and p-values reported in main text and Table 2 for both positive and negative alcohol expectancies outcomes."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Cross-sectional study examining associations between SM use and non-SM outcome (alcohol expectancies)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; original peer-reviewed publication in BMC Public Health 2023."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): SM is the independent variable predicting non-SM outcome (alcohol expectancies), not the dependent variable. Paper has SM→non-SM-outcome analysis, so FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper uses SMAQ (6-item scale) for problematic SM; SMAQ is Bergen Facebook Addiction Scale adaptation. Separately includes time on social media in Model 3. Cross-sectional design; adjustment for race/ethnicity, sex, household income, parent education, sexual orientation, parental marital status, study site."
+  },
+  {
+    "paper_id": "390",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US national cohort (N=9,673 after exclusions), Baseline and Year 2 assessment (2018-2020)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic social media use measured via Social Media Addiction Questionnaire (SMAQ) - qualifying social media variable per B1 (separately-measured SM with own coefficient). Also includes problematic video game use and mobile phone use measured separately."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized logistic mixed effects models and generalized linear mixed effects models. Report odds ratios (ORs) with 95% CIs for associations between ACEs and problematic SM use. Adjusted logistic models show OR for ACE score ≥4 on problematic SM: 1.52 (95% CI 0.83-2.79, not significant)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: ORs with 95% CIs reported in Table 2 (Panels A and B); p-values reported for all estimates. Supplemental analyses report continuous scores with β coefficients."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Prospective study examining associations between baseline ACE score (predictor) and Year 2 problematic screen use outcomes (SM, video game, mobile phone)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; original peer-reviewed publication in BMC Public Health 2023."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): SM is the dependent variable in some analyses (problematic SM use as outcome), but paper also has non-demographic predictors (ACEs - which includes family trauma/abuse factors, explicitly excluded per B17: ACEs, parenting, parental psychopathology, family conflict). ACEs is not in the closed demographic-only set per FT-EC7 condition (b).",
+    "binding_rules_applied": ["B1", "B17"],
+    "notes": "Prospective design with 2-year follow-up. Uses SMAQ (6-item scale adapted from Bergen Facebook Addiction Scale) for SM. Also measured Video Game Addiction Questionnaire (VGAQ) and Mobile Phone Involvement Questionnaire (MPIQ). Main analysis restricted to youth who reported screen use (n=9,673). Adjusted for age, sex, race/ethnicity, household income, parent education, anxiety, depression, ADHD, study site, twin status. Multiple imputation for missing data."
+  },
+  {
+    "paper_id": "178",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "This is an introduction/editorial to a special issue, not a research article analyzing ABCD data. Discusses multiple papers in the special issue but does not itself report original ABCD analyses."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Not applicable - this is a commentary/introduction paper, not an empirical research study."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "Not applicable - no inferential testing conducted in this paper."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "Not applicable - no numeric data extraction required."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Paper is a review/introduction to special issue, not original empirical analysis. Falls under FT-EC3 (editorial, perspective) and B14 (review/commentary type)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original publication; no duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable - paper does not qualify as FT screening candidate (fails FT-IC5).",
+    "binding_rules_applied": ["B14", "FT-EC3"],
+    "notes": "This is an introduction to a Health Psychology special issue on ABCD research. Provides overview of empirical reports in the special issue addressing adolescent health behavior (screen time, caffeine, sleep, substance use, physical health, brain development, neighborhood/environmental factors). Does not report original data analysis and is therefore NOT_MET for FT-IC5 per criteria B14 and FT-EC3 (editorial/perspective/introduction)."
+  }
+]

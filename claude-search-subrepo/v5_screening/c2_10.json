@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "167",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, Baseline N=11,878 from Adolescent Brain Cognitive Development study."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying smartphone variable: smartphone ownership (age of acquisition). Applies B1 (smartphone ownership measured separately)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analysis testing smartphone ownership → parent-child informant discrepancy in internalizing problems (b = -0.21, SE = 0.042, p < 0.001, 95% CI [-0.29, -0.23])."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients and statistics reported: regression β and SE for main effect; Figure 1 shows multi-group latent growth curve analyses with coefficients (β = 29**, β = -24*, etc.) and p-values."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD longitudinal data across 4 waves (Years 1-4) examining smartphone ownership impact on parent-child discrepancy."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Development and Psychopathology (2025); no evidence of preprint/abstract duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphone is NOT the dependent variable. The dependent variable is parent-child informant discrepancy of internalizing problems. Smartphone is the independent variable. This is SM/smartphone → non-SM-outcome analysis, so FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Clear longitudinal design with smartphone ownership as predictor and internalizing problem discrepancy as outcome. Multi-group models test moderation by smartphone ownership status."
+  },
+  {
+    "paper_id": "175",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study, T1 N=11,787 US adolescents followed longitudinally."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying electronic media variables: overall electronic media use + specific types including social electronic media (social SM). Applies B1 (separate β for overall and SM-specific types)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Longitudinal regression examining bidirectional associations between electronic media use and family conflict across 3 years using cross-lagged panel model."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients reported in results and supplementary materials; model fit indices provided (CFI, TLI, RMSEA, SRMR)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD longitudinal data (T1–T4) examining electronic media use ↔ family conflict associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Journal of Family Psychology (2025); no evidence of preprint/abstract duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Electronic media/social media is used as both IV (predicting family conflict) and as a DV in cross-lagged models (B20 — bidirectional/cross-lagged design). FT-EC7 does not apply per B20 rule. Additionally, family conflict is a non-demographic outcome, so even SM→family conflict analysis alone would disqualify FT-EC7.",
+    "binding_rules_applied": [
+      "B1",
+      "B20"
+    ],
+    "notes": "Bidirectional associations tested; electronic media use → family conflict was significant, but reverse was not. Gender differences examined (girls' social media use patterns especially disruptive)."
+  },
+  {
+    "paper_id": "310",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, Baseline N~12,000, age M=9.9; representative US sample (White=52.0%, Hispanic=20.3%, Black=15.0%, Asian=2.1%, Other=10.5%)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media variable: time on social media (measured across 4 years). Applies B1 (SM measured with separate coefficient in growth models)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Parallel process latent growth curve models testing association between social media use trajectory and cognitive performance trajectories (crystallized abilities, inhibitory control/attention, processing speed). Path coefficients estimated."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients and model fit statistics reported in tables (Table 1: univariate growth models with β, SE, p-values; Table 2: bivariate correlations). Model fit indices: CFI, TLI, SRMR, RMSEA."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ABCD longitudinal data over 4 years examining social media use ↔ cognitive performance trajectory coupling."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in Journal of Research on Adolescence (2025); no evidence of preprint/abstract duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media is the IV (predicting cognitive performance trajectories), not the DV. Analysis examines SM ↔ non-SM-outcome (cognitive abilities). FT-EC7 does not apply because SM is not modeled as a dependent variable predicted by demographics alone.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Parallel process latent growth curve design; social media trajectory negatively coupled with crystallized abilities and inhibitory control/attention trajectories, positively coupled with processing speed trajectory."
+  }
+]

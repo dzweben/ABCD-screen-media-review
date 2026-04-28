@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "116",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) study, Netherlands. Not US-ABCD Study."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "RF-EMF (radiofrequency electromagnetic fields) is primary exposure; screen time is secondary. RF-EMF is not a qualifying smartphone/social media variable per B7 (RF-EMF excluded). TV and computer/video game use mentioned but not the primary focus."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression models conducted; adjusted ORs with 95% CIs reported for RF-EMF sources and screen time exposures vs emotional/behavioral outcomes (Tables 2-3)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Adjusted OR, 95% CI reported in Tables 2-3 for mobile phone base stations, cordless phone, WiFi, mobile/cordless phone calls, and screen time exposure associations with teacher/maternal-reported emotional and behavioral problems."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of 3102 children from the cohort with multiple exposure and outcome measurements."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/duplicate found."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails FT_IC1 (not US-ABCD); EC7 evaluation moot. However, if IC1 were met: analyses include both SM/screen time as predictor (→ behavioral outcomes) but also include non-demographic predictors (parental depression, anxiety, stress via DASS; maternal BMI, smoking, alcohol use, child characteristics). Condition (b) fails (B17: parental psychopathology, parental characteristics disqualify).",
+    "binding_rules_applied": ["B7", "B14"],
+    "notes": "Paper fails inclusion at FT_IC1 level due to non-US ABCD population. Excluded from full-text screening."
+  },
+  {
+    "paper_id": "146",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study, US multi-site longitudinal neuroimaging study. First cross-sectional data release (N=4277 of 4524 with usable structural imaging and SMA data)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen Media Activity (SMA): youth self-reported engagement in watching television/videos, playing video games, using social media. Multiple qualifying screen time variables assessed via questionnaire (B1: separate measurement of different SMA types with individual coefficients reported in mixed models)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized linear mixed-effect models (GLMM) used to investigate associations between SMA-related Group Factor Analysis (GFA) latent variables and internalizing/externalizing psychopathology, fluid and crystallized intelligence. Mixed model regression coefficients reported."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Cohen's d effect sizes (ES 0.04–0.1) reported for SMA-related GFA associations with externalizing psychopathology and cognitive performance. Variance explained (37% by four SMA-related GFAs) reported in main text and supplemental Figures 1-5 showing factor loadings with 95% credible intervals."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical ABCD analysis with multivariate Group Factor Analysis approach applied to first cross-sectional data release to test maturational coupling hypothesis linking SMA to cortical thickness, sulcal depth, and gray matter volume."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published in NeuroImage 2019; no evidence of preprint/abstract/prior duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA is an INDEPENDENT VARIABLE (predictor) with outcomes being brain structure (cortical thickness, sulcal depth, GMV) and psychopathology/cognition. Condition (a) fails: paper explicitly tests SMA → non-SM outcomes (brain structure, behavior, cognition), NOT SM-as-dependent-variable-only. Condition (b) is irrelevant given (a) fails. Therefore FT_EC7 does not apply per binding rule B18 (mixed SM-as-IV and SM-as-DV logic; here SM is purely IV).",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Strong quantitative evidence with multiple inferential tests, mixed model framework, and clear effect size reporting. SMA treated as multivariate predictor of brain structure and mental health outcomes."
+  },
+  {
+    "paper_id": "98",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study explicitly mentioned as the context for discussion of mobile and wearable technologies and social media data collection methods."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Mobile phone use, smartphone technologies, wearable devices (accelerometers, Fitbit), social media data, and passive sensing methods discussed as current/future data collection approaches in ABCD."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "This is a methods/perspective paper describing technologies and measurement approaches; no original inferential tests of SM ↔ non-SM relationships reported. References to other studies' findings but no novel statistical tests in this paper."
+    },
+    "FT_IC4": {
+      "status": "NOT_MET",
+      "evidence": "No numeric extractable coefficients, effect sizes, p-values, or test statistics reported from original analyses. Paper is descriptive/narrative in structure."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Resource/methods paper (B14). Discusses potential use of mobile and wearable technologies and social media data within ABCD but does not report original empirical analysis. Sections 1.1-1.3 describe current/future technologies; no SM↔outcome empirical analysis conducted by authors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published primary journal article; no evidence of duplicate."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper fails FT_IC5 (not original empirical analysis); EC7 evaluation moot. Excluded at inclusion criterion level.",
+    "binding_rules_applied": ["B14"],
+    "notes": "EXCLUDE. Fails FT_IC3, FT_IC4, and FT_IC5. This is a perspective/resource paper describing measurement technologies and methods for future ABCD data collection, not a full-text empirical screening study. No inferential statistics or original data analysis reported."
+  }
+]

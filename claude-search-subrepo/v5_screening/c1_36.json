@@ -1,0 +1,41 @@
+[
+  {
+    "paper_id": "30",
+    "FT_IC1": {"status": "MET", "evidence": "US ABCD Study, longitudinal baseline 2016-2018 (ages 9-10) to Year 2 follow-up, N=10,317"},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Cyberbullying alone as exposure; no separately-measured qualifying smartphone/SM variable with own coefficient. B3 applies."},
+    "FT_IC3": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC4": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC5": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC6": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 not met; cyberbullying alone does not qualify per B3.",
+    "binding_rules_applied": ["B3"],
+    "notes": "Paper reports associations between ACEs (predictor) and cyberbullying victimization (outcome), but cyberbullying is not a qualifying SM/smartphone variable per B3. Study excluded at FT-IC2."
+  },
+  {
+    "paper_id": "78",
+    "FT_IC1": {"status": "MET", "evidence": "US ABCD Study Year 2, cross-sectional (2018-2020), N=9,443 early adolescents (10-14 years)"},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Cyberbullying victimization/perpetration (outcome), adjusting for screen time (covariate). No qualifying SM/smartphone as primary exposure. B3 applies—cyberbullying alone."},
+    "FT_IC3": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC4": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC5": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_IC6": {"status": "NOT_REACHED", "evidence": "FT-IC2 not met"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 not met; cyberbullying alone as exposure does not qualify per B3.",
+    "binding_rules_applied": ["B3"],
+    "notes": "Screen time included as covariate, not as primary exposure. Cyberbullying is dependent variable. Excluded at FT-IC2."
+  },
+  {
+    "paper_id": "87",
+    "FT_IC1": {"status": "MET", "evidence": "US ABCD Study, cross-sectional Year 2 (2018-2020), N=10,339 early adolescents (10-14 years)"},
+    "FT_IC2": {"status": "MET", "evidence": "Multiple qualifying screen/SM variables as outcomes: total recreational screen time, texting, social media, video chat, single-player gaming, multi-player gaming, video game addiction (VGAQ), social media addiction (SMAQ), mobile phone involvement (MPIQ). B1 satisfied: separate coefficients reported for SM, texting, video chat, app-category gaming."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple linear regression with sexual orientation (sexual minority, possible sexual minority vs. heterosexual) as predictor; regression β coefficients and 95% CIs reported for associations with screen time and problematic use measures."},
+    "FT_IC4": {"status": "MET", "evidence": "β coefficients with 95% confidence intervals reported in Tables 2 and 3 for all screen time outcomes and problematic use measures. Effect sizes with CIs extractable from main results tables."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using ABCD cohort; multiple linear regression examining associations between sexual minority status and screen use outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Not a preprint, duplicate, or secondary analysis of published design; published in Annals of Epidemiology 2023, peer-reviewed."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Sexual orientation is NOT in the demographic-only closed set. Per coder_prompt NOT EC7 clause: 'sexual orientation, gender identity' disqualifies. Also B19 applies: cross-sectional sociodemographic/identity analysis. Paper has SM as dependent variable with sociodemographic/identity predictor but does not meet FT-EC7 criteria due to non-demographic predictor.",
+    "binding_rules_applied": ["B1", "B19"],
+    "notes": "INCLUDE. Multiple qualifying SM/smartphone variables with separate coefficients. Inferential tests (regression) with extractable estimates. Original ABCD analysis. Does not meet FT-EC7 due to sexual orientation predictor (excluded from demographic-only set)."
+  }
+]

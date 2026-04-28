@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "150",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 2 (2018-2020), N=7,614 participants ages 10-13"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media variable: time on SM (hours per day) + Social Media Addiction Questionnaire (SMAQ). Applies B1 (SM with own coefficient reported separately)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Regression analysis (generalized additive mixed models with ROI and vertexwise analysis); medians/associations with β coefficients reported in Table 2 and Figure 1"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients reported for SM use and addiction across ROI regions in Table 2; standardized beta coefficients visualized in Figure 1; p-values and significance indicators provided"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining SM↔brain morphology association with numerical outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Primary publication in NeuroImage 2026; no evidence of preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is NOT the dependent variable only. Paper examines SM→brain structure (outcome), not demographics→SM. Thus condition (a) fails. FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Cross-sectional design. Social media use measured as hours per day and SMAQ addiction scale. Main analyses adjusted for demographics, socioeconomic factors, genetic ancestry, non-SM screen time, scanner features."
+  },
+  {
+    "paper_id": "287",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, longitudinal data Year 2 (N=8,292; mean age 12.0 years 2018-2020) through Year 4"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media variable: social media time (Year 2). Applies B1 (SM with separate coefficient in mediation model)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized structural equation modeling with mediation indirect effects testing; mediation pathway SM time → positive smoking expectancies → nicotine experimentation"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Mediation indirect effect (95% CI: 1.27%-10.67%, p=.013); association coefficient and confidence intervals reported in text and abstract"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with prospective mediation structure examining SM exposure→outcome pathway"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Primary publication in The American Journal on Addictions 2026; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is NOT the dependent variable in all analyses. Paper examines SM (predictor)→nicotine experimentation (outcome). Condition (a) fails: paper has SM→non-SM-outcome analysis. FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Prospective longitudinal design across 3 years (Year 2→Year 3→Year 4). Social media time at Year 2 predicts nicotine experimentation at Year 4; positive smoking expectancies at Year 3 mediate this association."
+  },
+  {
+    "paper_id": "404",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 5 (2021-2023), N=11,530 adolescents ages 13-16"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media variable: dating app use (online dating platform-specific use). Applies B1 (SM exposure with separate coefficient reported)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression with cluster-robust standard errors; dating app use coefficient (standardized β) reported with 95% CI and p-value"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β=0.42 (95% CI 0.08-0.76, p=0.017) for association between dating app use and depression symptoms in adjusted model"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining dating app use↔depression symptoms association"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Primary publication in BMC Research Notes 2026; no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Dating app use is NOT the dependent variable. Paper examines dating app use (predictor)→depression symptoms (outcome). Condition (a) fails: paper has SM→non-SM-outcome analysis. FT-EC7 does not apply.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Cross-sectional design. Adjusted for sociodemographic covariates (age, sex, race/ethnicity, household income, parental education) and study site. Low prevalence: 0.9% reported ever using dating app."
+  }
+]

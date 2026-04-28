@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "187",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, baseline n=10,116, 2-year follow-up n=7,880"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (self-reported, total hours on weekdays/weekends for video games + TV watching) qualifies under B7 carve-out as integrated measure; applies B1 (screen time has separate coefficient from brain structure outcomes)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models testing screen time against ADHD symptoms (β=0.032, p=0.001 at baseline) and cortical thickness outcomes; mediation analysis using bias-corrected bootstrap; multiple inferential tests across brain regions"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple extractable coefficients: screen time→ADHD (β=0.032, p=0.001); cortical thickness effects (right temporal pole β=-0.036 FDR p=0.020; left superior frontal gyrus β=-0.028 FDR p=0.020; left rostral middle frontal gyrus β=-0.030 FDR p=0.020); mediation effect (β=0.001, p=0.023)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining screen time associations with ADHD symptoms and brain structure development"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No indication of duplicate/preprint; published 2025 in Translational Psychiatry"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is the INDEPENDENT variable predicting ADHD symptoms (non-SM outcome) and brain structure; FT-EC7 only applies when SM/smartphone is the DEPENDENT variable in ALL analyses with demographic-only predictors. This paper has SM/screen-as-IV→outcome direction, disqualifying FT-EC7.",
+    "binding_rules_applied": [
+      "B1",
+      "B7"
+    ],
+    "notes": "Linear mixed-effects model employed; longitudinal design with residualized change regression; mediation analysis with 10,000 bootstrap samples; FDR multiple-comparison correction applied"
+  },
+  {
+    "paper_id": "238",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study data analyzed (adolescent sample from multiple US sites)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (bedtime/evening use on weekdays and weekends) qualifies under B7; measured separately with own coefficients in SEM model (Cohen's d effect sizes reported for SM use contrasts)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Structural equation modeling (SEM) examining screen time associations with chronotype, social jet lag, and sleep duration; t-tests for group contrasts (Hispanic vs. non-Hispanic); SEM path coefficients for predictor relationships"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple extractable numeric coefficients: Cohen's d values for screen time differences (weekday evenings d=0.27, weekend evenings d=0.35); SEM model variance explained (chronotype 12.9%, social jet lag 10.5%, sleep duration 6.2%); t-test statistics reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis of screen time and sleep outcomes with demographic covariates"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Sleep Advances; no indication of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is an INDEPENDENT variable predicting sleep outcomes (non-SM outcomes: chronotype, social jet lag, weekday sleep duration); additional non-demographic predictors included (peer network health, school environment, stress, depression, anxiety). FT-EC7 requires SM as DV with demographic-only predictors—this paper has screen time as IV with behavioral/psychological predictors, disqualifying FT-EC7.",
+    "binding_rules_applied": [
+      "B7"
+    ],
+    "notes": "SEM with demographic covariates and additional behavioral/psychological predictors; Hispanic ethnicity moderation tested; paper notes methodological limitations including low caffeine use and assessment timing variability"
+  },
+  {
+    "paper_id": "3",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study cohort study, baseline n=4,285 (subset of 11,868), ages 9-10 years, 21 US sites, 4-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Addictive use of social media (SMAQ), mobile phones (MPIQ), and video games (VGAQ)—all qualify as smartphone/SM variables per B1. Separate coefficients reported for each platform and trajectory. Binding rule B1 applies: SMAQ/MPIQ/VGAQ papers with separate β/OR/RR reported regardless of total screen time also measured."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Latent class linear mixed models to identify trajectories; Poisson regression models estimating risk ratios (RRs) for suicidal behaviors/ideation; generalized linear models for internalizing/externalizing symptoms; multiple-comparison FDR correction"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple extractable RR coefficients: increasing SM addictive use RR=2.14 [95% CI 1.61-2.85] for suicidal behaviors; high-peaking SM RR=2.39 [95% CI 1.66-3.43]; high video game trajectory T-score difference 2.03 [95% CI 1.45-2.61] for internalizing symptoms; increasing SM T-score difference 1.05 [95% CI 0.54-1.56] for externalizing symptoms"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical longitudinal analysis (years 2-4 follow-up) examining addictive use trajectories and mental health outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in JAMA; no indication of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Social media/mobile phones are INDEPENDENT variables predicting suicidal behaviors, suicidal ideation, and internalizing/externalizing symptoms (non-SM outcomes); FT-EC7 requires SM as the DEPENDENT variable in EVERY analysis. This paper has SM→outcome direction (inverse of FT-EC7 requirement), disqualifying it. Additionally, clinical covariates (baseline suicidal behaviors, suicidal ideation, internalizing/externalizing symptoms) beyond demographics are included in models, further disqualifying FT-EC7.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Latent class linear mixed models based on age and quadratic age terms; trajectories identified for social media (3 classes: high-peaking 9.6%, increasing 31.3%, low 59.1%), mobile phones (3 classes), and video games (2 classes); E-values computed for sensitivity to unmeasured confounding; FDR multiple-test correction via Benjamini-Hochberg"
+  }
+]

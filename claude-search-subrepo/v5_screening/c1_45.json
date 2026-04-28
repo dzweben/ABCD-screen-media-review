@@ -1,0 +1,101 @@
+[
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, data 2016-2020 from 3.0 data release, 6749 participants aged 12-13"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time qualifying variable (self-reported hours across 7 modalities: gaming, texting, social media, video chat, internet browsing, streaming video). Applies B2 (per-item breakdown of screen time reported, not summed-only)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression analyses with ACE score predictor and screen time outcome; multiple t-tests, correlation coefficients reported (Table 2, Figure 1)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients with 95% CI reported in Table 2 for ACE-screen time associations (e.g., unadjusted β=0.54 [0.36,0.71], adjusted β=0.44 [0.26,0.62]); p-values (<.001)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; linear regression examining associations between ACEs and screen time/physical activity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022, no indication of duplicate; unique study examining ACE-screen time association during COVID-19 pandemic"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is NOT the dependent variable in all analyses. Paper examines ACEs→screen time AND ACEs→physical activity as outcomes. Also, ACEs include parental psychopathology and family conflict (e.g., 'household mental illness', 'substance abuse in household'), which are explicitly disqualifying per B17 (non-demographic predictors of SM). Fails condition (a) and (b).",
+    "binding_rules_applied": [
+      "B2"
+    ],
+    "notes": "Paper clearly focuses on examining ACEs as a risk factor for elevated screen time/sedentary behavior. Screen time measured as total hours across 7 modalities (per-item, not summed-only). Simple linear regression with demographic covariates."
+  },
+  {
+    "paper_id": "190",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD dataset, 9855 children ages 9-10 at baseline with 2-year follow-up; intelligence measured at baseline and 2-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three qualifying screen time modalities: watching (TV/videos), socializing (video chat/social media), gaming (mobile/app gaming). Applies B6 (gaming + socializing with separate coefficients in same model; reported separately at baseline and follow-up)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Latent change score models with structural equation modeling; standardized β coefficients reported for screen time types predicting change in intelligence (Figure 1); also correlations at baseline (Table 1), mediation analyses with lack of perseverance as mediator"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients reported for latent change models (e.g., Watching β=-0.10, p<0.001; Gaming β=+0.17, p<0.001; Socializing β=-0.10, p<0.001 at baseline; Figure 1, Figure 2); r correlations; p-values throughout"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining screen time types' associations with intelligence change over 2 years; latent change score modeling"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022 in Scientific Reports; no indication of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is NOT the dependent variable. Paper examines screen time→intelligence (SM/screen time as IV, intelligence as DV). Condition (a) requires SM as DV in every analysis. Fails condition (a).",
+    "binding_rules_applied": [
+      "B6"
+    ],
+    "notes": "Longitudinal study with three screen time types modeled separately in latent change score framework. Controls for cogPGS, SES, and family environment. Mediation analyses test indirect effects through lack of perseverance. Mobile/app gaming and social media separately measured; meets B6."
+  },
+  {
+    "paper_id": "110",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort with 11,000+ children aged 9-11; cross-sectional and longitudinal analyses using genetic, neuroimaging, and behavioral data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time utilization (STU) as qualifying variable, measured as self-reported time using electronic devices (weekday and weekend days). Total STU and daily average reported. Applies B2 (per-item breakdown available: 's/7 × hours STU in typical weekday')"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional and longitudinal associations tested via regression; correlation coefficients between PRS^ADHD and STU (r=-0.12, p<0.001); linear regression models; mediation analyses with indirect effect testing via bootstrap; multiple independent variables tested"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients reported for mediation models (e.g., path AB for PRS^ADHD-FA-STU mediation: β=0.008, p=0.156; indirect effect); correlations (r=-0.12 between PRS^ADHD and STU, p<0.001); 95% CIs for paths; p-values and FDR-corrected significance"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; cross-sectional and longitudinal examination of associations between polygenic risk score for ADHD, screen time utilization, and white matter microstructure"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2022 in EBioMedicine; no indication of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper examines both STU as dependent variable (demographics → STU) AND STU as independent variable (STU → ADHD symptoms via white matter mediation). Condition (a) requires SM as DV in EVERY analysis with no SM→outcome analysis. Paper has bidirectional/cross-lagged relationships between ADHD and STU (Figure 4 shows bidirectional paths). Fails condition (a) and applies B20 (bidirectional/cross-lagged disqualifies).",
+    "binding_rules_applied": [
+      "B20"
+    ],
+    "notes": "Complex longitudinal mediation study with multiple pathways: PRS^ADHD → white matter (FA) → STU; and bidirectional ADHD scale ↔ STU relationships. Both baseline cross-sectional and 1/2-year follow-up analyses. White matter tracts include inferior frontal-striatal, inferior frontal-occipital fasciculus, superior longitudinal fasciculus, corpus callosum (all with FDR<0.05 correlations)."
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "92",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study data used; baseline (Y0; ages 9-10) to year two follow-up (Y2; ages 11-12)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Addictive phone use, addictive social media use, addictive videogaming, and composite measure of ASU reported as separate variables. Applies B1 (YSTS with separate β for SM, phone, videogaming) and B6 (mobile app gaming/videogaming with separate coefficients)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects regression with mixed-effects regressions conducted for both cortical connectomic maturation (AFC) and reward pathway (NAc anticipatory activation) as predictors of addictive screen use measures. Permutation p-values reported for AFC analyses; Holm-Bonferroni correction applied"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients reported for all analyses: AFC vs cross-domain ASU β_M1 = -.056, CI [-.083, -.027], p < .001; addictive videogaming β_M1 = -.060, CI [-.087, -.031], p < .001; addictive phone use β_M1 = -.039, CI [-.069, -.008], p = .035; NAc activation β_uae = -.023, CI [-.045, -.006], p = .029. Indirect effects reported via 1000 bootstrapped mixed-effects regressions"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal ABCD analysis predicting Y2 addictive screen use from Y0 brain measures (cortical connectomic maturation, reward activation)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; original published article (accepted 11 March 2026)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Addictive screen use is the DEPENDENT variable, but FT-EC7 does NOT apply because: (a) predictor variables include neural features (cortical connectomic maturation, NAc activation) which are explicitly NOT in the demographic-only set per FT-EC7(b); violates B17 exclusion (neural features as predictors disqualify). Analysis is longitudinal but includes non-demographic predictors, so FT-EC7 condition (b) fails",
+    "binding_rules_applied": [
+      "B1",
+      "B6"
+    ],
+    "notes": "All three ASU domains (videogaming, social media, phone) analyzed with separate coefficients. Study uses Anchored Functional Connectomic maturation score (AFC) and MID task-based NAc activation—neurobiological predictors, not demographic. Cortical maturation association survives control for total screen time, attention problems, and general psychopathology, showing independent contribution"
+  },
+  {
+    "paper_id": "445",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; n=6,467 youth (39.2% female) ages 12 at baseline assessed at ages 12-13"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic gaming measured at years 2 and 3 using Video Game Addiction Questionnaire (Bagot et al., 2022). Applies B1 (YSTS reporting separate coefficient for problematic gaming as IV with other environmental predictors)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models with hierarchical regression to examine associations between problematic gaming (year 2) and psychotic-like experiences (year 3). Moderation analysis testing interaction of problematic gaming with peer/school/family environment variables"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Estimates reported (95% CI) for main associations and moderation models: association between problematic gaming at Y2 and PLEs at Y3 (estimate [95% CI] = 0.13 [0.09, 0.17], p < 0.001). Moderation coefficients for school and family environment interactions provided in tables (Fig. 2)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective longitudinal ABCD analysis examining problematic gaming at age 12 predicting psychotic-like experiences at age 13"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published original research (accepted 7 December 2025); no evidence of preprint/duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Problematic gaming is the INDEPENDENT VARIABLE predicting psychotic-like experiences (the outcome/DV). FT-EC7 applies only when gaming/SM is the DV; this paper analyzes gaming → PLE, not gaming as outcome. Additionally, the analysis includes non-demographic predictors (peer environment, school environment, family environment), violating FT-EC7(b) demographic-only criterion. Condition (a) fails: gaming is not the DV",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Paper uses affordance theory framework to examine whether environmental factors moderate the problematic gaming-PLE association. Peer environment (number of close friends) was not associated with PLE; school and family environments were protective against problematic gaming but did NOT attenuate the gaming-PLE link. All analyses adjusted for age, sex, parental education, income-to-needs, ethnicity, family history of psychosis, parental separation"
+  },
+  {
+    "paper_id": "149",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; 2,294 participants (Mage=10.03, 50.6% female) at baseline with resting-state fMRI at baseline and PUSM scores at four-year follow-up"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic use of social media (PUSM) measured at four-year follow-up using 6-item Social Media Addiction Questionnaire (SMAQ). Applies B1 (YSTS/ML reporting coefficient for SM-specific measure as outcome, independent of other screen use domains)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling (CPM) with machine learning; Pearson's r correlation between observed and predicted SMAQ scores used to assess model performance with permutation testing (1000 permutations for statistical significance)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "CPM successfully predicted PUSM severity: combined positive and negative networks r=0.055, p=0.016 (when controlling for covariates); permutation testing p=0.02. Edge-level analyses identified 2,507 edges (1,212 positive, 1,295 negative) comprising predictive networks. Functional connectivity coefficients reported for resting-state correlation matrices"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: longitudinal ABCD analysis using CPM on baseline rs-fMRI data (age 9-10) to predict PUSM severity at four-year follow-up (age 13-14)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published original research in NeuroImage (accepted 22 February 2026); no evidence of duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "PUSM is the DEPENDENT VARIABLE being predicted. However, FT-EC7 does NOT apply because: (a) the predictors are neural features (whole-brain resting-state functional connectivity patterns), NOT demographics. FT-EC7(b) requires predictors be exclusively in the demographic-only closed set; neural connectivity violates this per B17 (neural features as predictors disqualify). Condition (b) fails explicitly",
+    "binding_rules_applied": [
+      "B1",
+      "B8"
+    ],
+    "notes": "Machine learning approach (CPM) using penalized methodology; B8 applies (traditional regression coefficients appear—r/p values and connectivity edge weights). Two key neural systems identified: (i) cognitive control/self-regulation system (DMN, medial frontal, frontoparietal networks) with decreased connectivity predictive of PUSM; (ii) perceptual-motor integration system (visual area 1, sensorimotor networks) with increased connectivity predictive of PUSM. Covariates controlled: age, sex, race/ethnicity, parental marital status, parental education, family income, mean frame-wise displacement"
+  }
+]

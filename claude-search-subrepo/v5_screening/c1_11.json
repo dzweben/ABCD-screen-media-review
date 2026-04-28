@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "172",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Pooled analysis combining ABCD (N=8,699) with Generation R (Dutch cohort, N=3,739). No US-ABCD-only estimates reported. Per binding rule: pooled analysis with no US-ABCD-only subset fails FT-IC1."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time (ST) measured at age 10, primary exposure. Qualifies under B5 exclusion scope: while TV is mentioned, ST is measured as general screen time inclusive of multiple activities including video/media. Paper reports ST as qualifying exposure for internalizing outcomes analysis."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Target trial emulation (TTE) with causal inference; regression coefficients reported (e.g., β = 0.10–0.16 SDs for ST on internalizing symptoms). Meets definition of inferential test."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized effect sizes (β in SDs) reported: ST guidelines adherence → internalizing symptoms changes 0.10–0.16 SDs (0–1 hr), 0.07–0.09 SDs (3–4 hr) vs. 2 hr baseline."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis using target trial emulation methodology to estimate causal effects of modifiable factors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No indication of preprint/duplicate status."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not meet FT-EC7 criteria because: (a) ST is treated as independent variable predicting internalizing symptoms (SM-as-IV → outcome), not as dependent variable; (b) confounders include not just demographics but sleep duration and physical activity (lifestyle factors outside closed demographic set per binding rule B17); (c) at least one analysis is prospective with non-demographic predictors.",
+    "binding_rules_applied": ["B5"],
+    "notes": "DISQUALIFIED at FT-IC1 (pooled analysis). Do not screen further."
+  },
+  {
+    "paper_id": "50",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study only (N=11,819 youth at baseline, 9.92 years old); multisite longitudinal study from 21 U.S. sites (ABCD 5.0 release)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online social activity (OSA) time measured as qualifying SM variable combining texting + visiting social networking sites + video chatting (B1 applies: YSTS paper reporting separate coefficients for texting, video chatting, and social media engagement). Meets B1 binding rule."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Random-intercepts cross-lagged panel models (RI-CLPMs) examining bidirectional longitudinal associations between OSA time and ADHD problems over 4 waves. Cross-lagged regression coefficients count as inferential test."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Cross-lagged regression coefficients and 95% CIs reported for within-person OSA→ADHD effect (T2–T4); random intercepts and variance estimates (σ²) provided. Moderation analyses with group-level comparisons reported."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; RI-CLPM design examining longitudinal bidirectional associations."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025; pre-registered at OSF (https://doi.org/10.17605/OSF.IO/KXYZP); no duplicate indicated."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not meet FT-EC7 criteria because: (a) OSA is the independent variable predicting ADHD problems (SM-as-IV → outcome), not the dependent variable; (b) confounders include age, sex, race, ethnicity, parental education, family income, parental marital status, AND time spent on non-social screen activities (video-centric activity covariate), which includes TV/gaming—outside closed demographic set per B17; (c) bidirectional associations examined (B20 applies: cross-lagged model tests both directions, so FT-EC7 does not apply).",
+    "binding_rules_applied": ["B1", "B20"],
+    "notes": "INCLUDE. Meets all IC1–IC6 and reports original US-ABCD longitudinal SM→ADHD associations. FT-EC7 does not apply due to SM-as-IV design and bidirectional modeling."
+  },
+  {
+    "paper_id": "115",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study only (N=4,557 adolescents, mean age 9.955±0.164 years at baseline); multisite study with data from ABCD release 4.0 (baseline 2017–2018, 2-year and 3-year follow-ups). No pooling with non-US cohorts."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) includes social media measured at baseline and 3-year follow-up as one of six SMA types (TV, video games, texting, video viewing, video chat, social media). Paper reports separate β coefficients for social media (β=0.037, pfdr=0.007 for stress) and video watching; social media variable qualifies under B1 (separate coefficient reported)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Two-wave cross-lagged panel models examining longitudinal associations between SMA (including social media) and mental health outcomes (internalizing, externalizing, stress problems) from baseline to 3-year follow-up. Linear mixed models also used. Regression coefficients reported (β for cross-lagged paths)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized regression coefficients (β) with SEs and false-discovery-rate adjusted p-values reported: overall SMA→internalizing (β=0.030, SE=0.012, pfdr=0.016), SMA→stress (β=0.026, SE=0.012, pfdr=0.037); social media alone predicted stress (β=0.037, pfdr=0.007); video watching→internalizing (β=0.061, pfdr<0.001), externalizing (β=0.033, pfdr=0.035), stress (β=0.060, pfdr<0.001)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining longitudinal associations between baseline SMA and 3-year mental health outcomes using cross-lagged panel models and mediation analyses with brain functional connectivity mediators."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025; no preprint/duplicate indicated."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not meet FT-EC7 criteria because: (a) social media/SMA is the independent variable predicting mental health outcomes (SM-as-IV → outcome), not the dependent variable; (b) confounders and analytical covariates include demographics (age, sex, race, ethnicity, parental education, family income, parental marital status) AND scanner type and motion parameters, which are study-design covariates, not in the closed demographic set; (c) brain developmental features (structural and functional MRI metrics) are explicitly tested as mediators—these are not demographics; (d) analyses are prospective/longitudinal but include mediating pathways beyond demographics per binding rule B17 (neural features disqualify).",
+    "binding_rules_applied": ["B1", "B13"],
+    "notes": "INCLUDE. Meets all IC1–IC6. Original US-ABCD longitudinal analysis with social media and video watching as separate IV with reported coefficients predicting internalizing, externalizing, and stress outcomes. Mediation by brain functional connectivity included. FT-EC7 does not apply."
+  }
+]

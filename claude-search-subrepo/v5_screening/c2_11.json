@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "172",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data explicitly mentioned; pooled analysis with ABCD and Generation R, but paper reports ABCD-specific estimates separately per target trial emulation framework"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is summed/total construct only; paper measures ST, PA, sleep, social support but does not break down qualifying smartphone/social media variables with own coefficients. ST is measured as composite with no per-item breakdown. Applies B2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Target trial emulation with G-formula; regression-based causal inference method per Table 1 and analytical framework described in Methods"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "G-formula results reported with β coefficients and 95% CIs in text; e.g., 'adhering to more stringent ST guidelines (0–1 hr) decreased internalizing symptoms by 0.10–0.16 SDs' and 'following more lenient guidelines (3–4 hr) increased them by 0.07–0.09 SDs'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of ABCD data using target trial emulation methodology"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published 2025 in Journal of Consulting and Clinical Psychology"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): Screen time is the DEPENDENT variable conceptually but the paper examines SM/ST → internalizing symptoms (outcomes), not the reverse. The analysis also includes other non-demographic predictors (PA, sleep, social support) per condition (b), and B18 applies: paper has both SM-as-DV analyses (longitudinal, demographic) AND SM-as-IV → outcome analyses",
+    "binding_rules_applied": [
+      "B2",
+      "B18"
+    ],
+    "notes": "Paper uses ABCD + Generation R pooled data but reports ABCD-specific target trial emulations. Screen time is composite with no separate smartphone/social media coefficient reported, triggering B2 NOT_MET for FT_IC2."
+  },
+  {
+    "paper_id": "50",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; 11,819 youth participants from US sites; confirmed in Methods: 'The ABCD Study is a multisite, longitudinal study with 11,868 participants enrolled at baseline from 21 U.S. sites'"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Online social activity (OSA) time is qualifying social media variable; measured as composite of texting + visiting social networking sites + video chatting, with separate coefficient reported for OSA. Applies B1: qualifying social media with own regression coefficients."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Random-intercepts cross-lagged panel models (RI-CLPMs); mixed-effects regression with cross-lagged coefficients reported in Fig. 1 and Tables S2–S3; meets 'mixed-effects coefficient' criterion"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients with 95% CIs reported throughout; e.g., Fig. 1 shows cross-lagged paths (β = 0.078, 0.273***, 0.461***), and Table 3 provides detailed cross-lag parameters with β and 95% CI for females and males"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis of ABCD data; four waves of data with bidirectional within-person RI-CLPM"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published 2025 in European Child & Adolescent Psychiatry; pre-registered at https://doi.org/10.17605/OSF.IO/KXYZP"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): OSA is the INDEPENDENT variable in majority of analyses (OSA → ADHD cross-lags); paper also reports the reverse direction (ADHD → OSA). Applies B20: bidirectional/cross-lagged model means FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B1",
+      "B20"
+    ],
+    "notes": "Clear bidirectional longitudinal relationship; OSA time measured as summed construct (texting + SM + video chat) with separate coefficient, meeting B1 and qualifying for inclusion."
+  },
+  {
+    "paper_id": "115",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; explicitly stated: 'Data from 4557 adolescents (mean age = 9.955 ± 0.164 years) in the Adolescent Brain Cognitive Development (ABCD) study'; 21 US sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen media activity (SMA) includes qualifying social media variables: TV watching, video watching reported separately with own coefficients (β = 0.054, β = 0.061–0.060). Applies B1: separate coefficients for SMA and sub-types including video and TV."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-lagged panel models (CLPMs) and linear mixed models with longitudinal β coefficients reported; mediation analyses with indirect effects (e.g., 'RSFC between CON and RTN mediated the effects of SMA on externalizing' with β and p values)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients with pfdr values and SEs reported throughout; e.g., 'Higher baseline SMA associated with increased internalizing (β = 0.030, SE= 0.012, pfdr = 0.016), and stress problems (β = 0.026, SE = 0.012, pfdr = 0.037) three years later'; mediation β = 0.002, pfdr = 0.042"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal analysis of ABCD data; four time points with linear mixed models, cross-lagged panel models, and mediation analyses"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published 2025 in International Journal of Clinical and Health Psychology; original research article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Fails condition (a): SMA is the INDEPENDENT variable in analyses; paper examines SMA → mental health outcomes (internalizing, externalizing, stress problems), not the reverse. Fails condition (b): predictors include neural mediators (brain function, RSFC), not just demographics, per B17 (neural features disqualify FT-EC7).",
+    "binding_rules_applied": [
+      "B1",
+      "B17"
+    ],
+    "notes": "Strong mediation study with brain imaging; screen media measured with separate coefficients for TV, video, and total SMA, meeting B1 criteria for qualifying variables."
+  }
+]

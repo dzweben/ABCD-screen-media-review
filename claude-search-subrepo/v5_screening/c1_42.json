@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "91",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study, wave 1 release; 6758 individuals from multiple US sites"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper reports screen time as a comparative variable but does NOT use qualifying smartphone/SM exposure as primary variable. Screen time is measured and compared by demographic profiles, but there is no separate measurement of smartphone ownership, app use, texting, SM platforms, or qualifying scales (MPIQ, PSMUS, SMAQ, SNS-A, Bergen). Per B5, general screen time without device/platform specificity does not meet FT-IC2. Measurement is latent profile analysis of fMRI brain activation in reward, inhibition, and emotion regulation domains."
+    },
+    "FT_IC3": {
+      "status": "NOT_MET",
+      "evidence": "No SM ↔ non-SM inferential tests. The paper is a latent profile analysis (LPA) of brain activation patterns. Screen time is included as a covariate in demographic comparisons (ANOVA, χ² tests) but is not the primary exposure in any analysis testing associations with behavioral or clinical outcomes. Brain activation is the DV; demographics and screen time are characteristics of profiles."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric values reported: F=6.80, p<.0001 for screen time differences across profiles (abstract); additional statistics in results (χ² tests, means, SDs, p-values throughout tables)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; latent profile analysis of fMRI-derived neurodevelopmental phenotypes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No clear evidence of duplicate; published in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging (2022)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC2 NOT_MET; therefore FT-EC7 assessment does not apply. Additionally, SM/smartphone is not a DV; brain activation is the primary outcome.",
+    "binding_rules_applied": [
+      "B5"
+    ],
+    "notes": "Paper 91 fails at FT-IC2: screen time is measured as a descriptive/comparative variable but is not a qualifying smartphone or social media exposure (no app-category, platform, texting, SM accounts, or recognized scales). LPA design focuses on brain activation phenotypes, not SM-outcome associations."
+  },
+  {
+    "paper_id": "12",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Paper does not explicitly state ABCD study membership in title or abstract. Text indicates data are from 'May 2020 COVID-19 Rapid Response Research Release' and references the ABCD Study, but the letter format and phrasing ('This cross-sectional study reviews findings from...') suggests secondary analysis of ABCD data, not primary ABCD participation by these authors. The study is published as a Letter in JAMA Pediatrics, not a full ABCD study report. Per FT-IC1, must be original ABCD analysis or clear US ABCD sub-sample work; this reads as a selective reporting letter rather than an ABCD consortium or ABCD-participating team analysis."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying smartphone and screen time variables: texting, social media, multiple-player gaming, single-player gaming, video chatting, streaming movies/videos/TV. Per B1, paper reports separate screen use for multiple modalities including SM, texting, video chatting, gaming. These are qualifying variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models testing associations between mental health/resilience factors and total screen use. Table 2 presents regression coefficients (B, 95% CI) and p-values for models comparing mental health, stress, social support, coping behaviors against screen time."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients reported: B=0.29 (95% CI 0.06-0.52, p=.01) for mental health; B=0.67 (95% CI 0.43-0.91, p<.001) for stress; additional results in Table 1 (means, SDs) and Table 2 (regression output)"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Paper is a Letter (not full research article) and explicitly states 'This cross-sectional study reviews findings from the Adolescent Brain Cognitive Development (ABCD) Study.' This is secondary analysis/reporting of ABCD data, not original ABCD empirical analysis by ABCD team. Per B14, letter/review format combined with secondary reporting fails FT-IC5."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplicate; published in JAMA Pediatrics (January 2022)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-IC5 NOT_MET (Letter format, secondary reporting); therefore FT-EC7 does not apply. Additionally, paper includes SM and other non-demographic predictors of screen time, and would not qualify under FT-EC7 (a) regardless.",
+    "binding_rules_applied": [
+      "B1",
+      "B14"
+    ],
+    "notes": "Paper 12 fails FT-IC1 and FT-IC5. While it analyzes ABCD data and includes qualifying SM/phone exposures, it is a published Letter reviewing ABCD findings, not an original ABCD study report or analysis by ABCD investigators. FT-IC1 requires original ABCD analysis from ABCD-participating teams."
+  },
+  {
+    "paper_id": "75",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US ABCD Study; national prospective cohort of 5335 US adolescents ages 10-14 collected May 2020 from US sites"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Multiple qualifying smartphone and social media variables: texting, social media, multiplayer gaming, video chatting, streaming movies/videos. Per B1, paper reports separate coefficients for each modality with own β/OR reported in results and regression models (Table 4)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models with paired t-tests and analysis of variance (ANOVA). Table 2 and Table 4 present regression coefficients (B, 95% CI) and p-values testing associations between screen time categories and sociodemographic predictors."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients in tables: Table 2 presents t-values, p-values, and ICCs (e.g., t=10.58, p<.001 for total screen time; Table 4 presents β coefficients with 95% CIs and p-values for all sociodemographic associations)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; full research article analyzing parent-adolescent discrepancies in screen time reporting using ABCD data with original statistical comparisons and regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No clear evidence of duplicate; published in Academic Pediatrics (April 2022, Vol 22, No 3)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/smartphone are NOT the dependent variable. SM and screen time are measured as characteristics of adolescents and compared by sociodemographic predictors (age, sex, race, income, education, marital status). Per FT-EC7(a), SM must be the DEPENDENT variable in EVERY analysis for FT-EC7 to apply. Here, screen time categories are outcomes being compared by demographics, not predictors. FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Paper 75 meets all FT-IC criteria (FT-IC1 through FT-IC6). FT-EC7 does not apply because the paper tests sociodemographic predictors of screen time reporting discrepancies, not demographic prediction of SM use as dependent variable."
+  }
+]

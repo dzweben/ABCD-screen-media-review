@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "107",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, US longitudinal cohort (N=7691, ages 9-10 at baseline, assessed Year 2-4)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Daily social media time measured via ABCD Youth Screen Time Survey; participants reported typical hours per day on social media (Facebook, Instagram, Twitter/X) with weighted average calculation. Qualifies as time on SM per binding rule B1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Sequential modeling approaches using generalized structural equation modeling (GSEM) to estimate direct and indirect effects; mediation analysis testing cannabis expectancies as mediator of social media→cannabis experimentation pathway"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Direct effect B=0.18 (95% CI: 0.13–0.24, p<0.001) for social media time→cannabis experimentation. Indirect effects reported: positive expectancies B=0.05 (95% CI: 0.03–0.06), negative expectancies B=0.03 (95% CI: 0.02–0.04)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis examining prospective association between social media time (Year 2) and cannabis experimentation (Year 4) with cannabis expectancies (Year 3) as mediator"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/duplicate. Published online 25 October 2025 in Drug and Alcohol Dependence"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is independent variable predicting cannabis experimentation (outcome), not dependent variable. Paper does NOT meet FT_EC7 criteria: (a) fails because SM→outcome analysis is present (not SM as sole DV), and (b) includes confounders beyond demographics (friends' cannabis use)",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Strong prospective design with large diverse ABCD sample. Mediation pathway clearly demonstrates SM→expectancies→cannabis use mechanism."
+  },
+  {
+    "paper_id": "143",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, US prospective cohort (N=9799, ages 11-12 years at Year 2)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization is the primary exposure variable, measured via Cyberbullying Scale items on social media platforms (Instagram, Snapchat). However, cyberbullying alone without separately-measured SM with its own coefficient fails FT_IC2. Binding rule B3 explicitly states: 'Cyberbullying alone → NOT_MET'. No separate standalone SM variables or SM time measurements with independent coefficients are reported."
+    },
+    "FT_IC3": {
+      "status": "UNKNOWN",
+      "evidence": "Not assessed due to FT_IC2 NOT_MET status"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Not assessed due to FT_IC2 NOT_MET status"
+    },
+    "FT_IC5": {
+      "status": "UNKNOWN",
+      "evidence": "Not assessed due to FT_IC2 NOT_MET status"
+    },
+    "FT_IC6": {
+      "status": "UNKNOWN",
+      "evidence": "Not assessed due to FT_IC2 NOT_MET status"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable due to FT_IC2 failure",
+    "binding_rules_applied": ["B3"],
+    "notes": "EXCLUDE. Fails FT_IC2 because cyberbullying is measured as the sole digital/SM exposure. B3 binding rule explicitly excludes cyberbullying without separately-measured SM variables. This study does not qualify as a smartphone/SM screening because it treats cyberbullying victimization (online harm) as the only digital exposure of interest."
+  },
+  {
+    "paper_id": "158",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, US cross-sectional analysis at Year 3 follow-up (N=10,305, ages 12-13 years)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Bedtime screen use behaviors measured via 11-item questionnaire assessing electronic media use while in bed including: watching movies/videos/TV shows, playing video games, playing music, talking on phone or texting, spending time on social media, browsing internet, using computer/laptop for studying. Multiple platforms/activities qualify as smartphone/SM use. Qualifies per B1 (time on SM) and bedtime phone use explicitly listed as qualifying exposure."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression (sleep disturbance outcome) and multivariable linear regression (sleep duration outcome) with interaction testing for effect modification by sociodemographic factors"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple coefficients and odds ratios reported: Bedtime screen use mean score→sleep disturbance OR=1.36 (95% CI: 1.23–1.50, p<0.001); bedtime screen use mean score→sleep duration B=−0.43 (95% CI: −0.52, −0.34, p<0.001). Individual modalities: social media OR=1.08 (95% CI: 1.02–1.15, p=0.007) for sleep disturbance; B=−0.25 (95% CI: −0.29, −0.20, p<0.001) for sleep duration"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis examining cross-sectional associations between bedtime screen use behaviors and sleep outcomes (sleep disturbance and sleep duration)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of preprint/abstract/duplicate. Published online 2025 in Sleep Health: Journal of the National Sleep Foundation"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/screen use is independent variable predicting sleep outcomes (sleep disturbance and sleep duration), not dependent variable. Paper does NOT meet FT_EC7 criteria: (a) fails because screen use→outcome analysis is present throughout (not screen use as sole DV); includes non-demographic predictors of sleep outcomes beyond SM; structure is fundamentally SM as IV, not SM as DV",
+    "binding_rules_applied": ["B1"],
+    "notes": "INCLUDE. Large nationally-representative ABCD sample (N=10,305) with well-validated measures. Demonstrates prospective associations between bedtime screen use and sleep outcomes with clear coefficient reporting. Sociodemographic stratification analyses strengthen evidence."
+  }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "paper_id": "202",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US sample (n=6,779 adolescents, ages 10-14 years at baseline through 3-year follow-up)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic social media use (PSMU) operationalized via SMAQ questionnaire. Qualifies as social media variable per B3 (PSMU is distinct from cyberbullying alone). Social media accounts and platforms explicitly measured."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects linear regression models with cumulative ACEs score (IV) and PSMU (DV) at Y3. Inferential test: β coefficient with 95% CI and p-values reported (Table 2: β=1.5, p<0.001 for high ≥4 ACEs). Moderation analysis with BPM T scores tested interaction (ACEs × BPM)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients reported: Table 2 shows β=1.5 (95% CI: 1.09–1.88) for high (≥4) ACEs at Y1 predicting PSMU at Y3; p<0.001. F statistics, p-values, and confidence intervals throughout."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Secondary analysis of prospective cohort data examining association between cumulative ACEs and PSMU with moderation by emotional/behavioral dysregulation."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published manuscript (November 26, 2025). No evidence of duplicate/preprint/deposit."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "FT_EC7 = TRUE. All three conditions met: (a) PSMU is the DEPENDENT variable in all analyses (ACEs → PSMU model); (b) Predictors are demographic-only: cumulative ACEs (childhood adversity exposure), age, gender, race/ethnicity, parent marital status, parent education, household income—all in closed demographic set per B15 criterion; (c) All analyses are LONGITUDINAL (Y1 ACEs predicting Y3 PSMU with 3-year prospective follow-up). No SM-as-IV → outcome analysis present. No cross-sectional demo→SM reported. No ACE confounders (parenting, psychopathology, sleep, depression, anxiety, etc.) excluded per B17. Cross-sectional carve-out (B15) does not apply—all analyses are prospective. Condition (b) satisfied: ACEs are demographic (adversity), not psychological mechanisms.",
+    "binding_rules_applied": [
+      "B3",
+      "B15",
+      "B17"
+    ],
+    "notes": "Moderation test (BPM T scores × ACEs on PSMU) performed but no significant interaction found. FT_EC7 applies despite moderation analysis; moderation by dysregulation does not disqualify EC7 status since the core relationship remains demographic-only → SM (PSMU)."
+  },
+  {
+    "paper_id": "435",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US sample (n=8,324 children, ages 9–10 years at baseline, followed annually for 4 years across 21 US data collection sites)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media use (hours/day) self-reported via Youth Screen Time Survey (items 4+5+6: visiting social networking sites, texting, video chat). Qualifies as qualifying social media per B1 (platform-specific use, time on SM, texting, video chat separately measured with own coefficients). Applied B1 rule: separate β reported for SM, gaming, TV."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models with random intercept and slopes. Two-way interaction (DM use × time) and three-way interaction (DM use × time × PGS-ADHD) tested longitudinal effects. Inferential tests: β coefficients with SE and p-values. Cross-lagged panel models confirmed directionality (Figure 3)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients: Table 2 reports social media × time: β=0.03 (SE 0.01), p<0.001 for inattention; cumulative 4-year β=0.15 (SE 0.03, p<0.001) in Figure 2B. Cross-lagged: β=0.03 (SE 0.01), p=0.004 (Figure 3)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Longitudinal cohort study examining prospective associations between digital media categories (social media, gaming, TV) and ADHD-related symptoms over 4 years."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published original research (2025, Pediatrics Open Science). No duplicate/preprint/deposit evidence."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 = FALSE. Fails condition (a): SM is the INDEPENDENT variable (IV), not the dependent variable. The analysis examines SM use → ADHD symptoms (outcome), not demographic predictors of SM. Therefore does not meet FT_EC7 definition (demographic-only → SM model). This is an SM-as-IV → non-SM-outcome analysis (ADHD symptoms), which violates the FT_EC7 requirement that SM must be the dependent variable.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Paper satisfies FT_IC1-6 inclusion criteria. Excluded from FT_EC7 category because SM is IV, not DV. Genetic liability (PGS-ADHD) included as covariate but does not disqualify inclusion or change FT_EC7 status."
+  },
+  {
+    "paper_id": "35",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, US sample (n=1,940 participants aged 11–12 years at Wave 1, analyzed over three annual waves through age 13–14 years)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media addiction (SMA) scores via 6-item questionnaire (adapted Bergen Facebook Addiction Scale) + time spent on social media (SMT) from self-report. Both qualify: SMA is problematic use (addictive behaviors, compulsive use per B3 threshold); SMT is time-on-SM variable. Separate coefficients reported for SMA and SMT (Table 2, Table 3) per B1 rule."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Modified Poisson regression with relative risks (RR) and prevalence ratios (PR). Cross-sectional at Waves 1 and 3; prospective Wave 1 → Wave 3. Latent class trajectory modeling to identify SMA groups; RR with 95% CI reported (Table 3, Table 4). Stratified and sensitivity analyses."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 (Wave 3 cross-sectional): Addiction SMA group PR=3.45 (95% CI: 1.83–6.49). Table 3 (prospective): Addiction SMA RR=1.90 (95% CI: 1.10–3.27). Table 4 (trajectory): Consistently high SMA RR=3.01 (95% CI: 2.07–4.37). All with confidence intervals and p-values."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Longitudinal cohort study examining prospective and concurrent relationships between social media usage (SMA and SMT) and binge eating symptoms."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published original research (2025, Obesity). No duplicate/preprint/deposit evidence."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 = FALSE. Fails condition (a): SM is the INDEPENDENT variable (IV), not the dependent variable. Analysis examines SM use/addiction → binge eating (outcome), not demographic predictors of SM. Therefore does not meet FT_EC7 requirement that SM must be DV. This is SM-as-IV → non-SM-outcome (eating behavior), violating FT_EC7 definition.",
+    "binding_rules_applied": [
+      "B1"
+    ],
+    "notes": "Paper satisfies FT_IC1-6 inclusion criteria. Excluded from FT_EC7 category because SM/SMA is IV, not DV. Moderation by sex and BMI does not change FT_EC7 status. FT_EC7 not applicable as defined per v5 screening rules."
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "11",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "US-based Adolescent Brain Cognitive Development (ABCD) Study, data from 3,419 adolescents, ages 9-11 at wave 1 through ages 13-14 at wave 3"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use is designated as a MEDIATOR variable (wave 2), not the primary exposure. Exposures are parental factors (parental warmth, monitoring, family conflict, parental psychopathology at wave 1). Outcome is adolescent sleep (wave 3). This is a parental factors → sleep outcomes analysis, not a smartphone/SM → outcome analysis."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models with mediation analysis; indirect effects for screen use as mediator reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "β coefficients, 95% CI, p-values reported in main text (e.g., parental monitoring → sleep quality: β=0.04, 95% CI 0.01-0.07, P=.04)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD cohort analysis with longitudinal sleep outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Not a duplicate; published 2025, preregistered study"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because: (1) Smartphone/SM is NOT the dependent variable (outcome is sleep); (2) parental factors are predictors, which include non-demographic variables (family conflict, parental psychopathology — falls under B17 disqualifiers: parenting, parental psychopathology, family conflict)",
+    "binding_rules_applied": [],
+    "notes": "Paper fails FT_IC2 (exposure criterion) — screen use is a mediator, not the primary exposure. Paper does not meet criteria for inclusion in the systematic review."
+  },
+  {
+    "paper_id": "121",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study (data release 5.1), baseline and year 4 waves, N=4,754 youth ages 9-10 to 12-15"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time (ST) and problematic screen use (PSU) are DEPENDENT VARIABLES (outcomes being predicted), not exposures. The paper examines whether baseline impulsivity, motivation, psychopathology, and cognitive ability PREDICT screen time/PSU in mid-adolescence, not the reverse."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects regression models with independent models for each screen activity (video games, social media, smartphones)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients with statistics reported (though specific numeric values would need full text review; abstract indicates F-values and p-values reported)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective ABCD empirical analysis predicting screen use outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Not a duplicate; published 2025"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because: (1) Smartphone/SM is the DEPENDENT variable, not predictor of demographics (reversed causal direction); (2) B18 applies: paper has SM-as-DV (screen time/PSU predicted from baseline traits), so FT-EC7 exclusion applies",
+    "binding_rules_applied": ["B18"],
+    "notes": "Paper fails FT_IC2 (exposure criterion) — screen use/PSU are outcomes, not exposures. This is a reverse-causal analysis (what predicts screen use), not an analysis of screen use predicting outcomes. Does not meet criteria for inclusion."
+  },
+  {
+    "paper_id": "90",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, N=9,337 individuals with baseline social media use and diffusion-weighted MRI data"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Social media consumption as exposure variable (grouped by daily consumption: <30 min/day vs >30 min/day), qualifying SM variable per B1 (platform-agnostic time on SM)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regressions examining effects of social media consumption on white matter fractional anisotropy (FA) across 34 tracts; odds ratios assessing influence of demographic and neighborhood characteristics on SM use"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios with p-values (<0.05) reported for predictors of SM use; linear regression results for FA associations reported (though associations became non-significant after adjusting for race and SES)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis examining SM consumption → white matter health (white matter FA outcomes)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Not a duplicate; 2025 presentation/publication in Biological Psychiatry dataset"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because: Social media is the INDEPENDENT variable (exposure/predictor), not the dependent variable. The paper examines SM consumption → white matter outcomes, not demographics → SM use. This is a forward causal analysis (SM as exposure predicting outcomes), not the demographic-only → SM longitudinal pattern that FT-EC7 targets.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper meets all FT_IC1–IC6 criteria. FT_EC7 does not apply (SM is exposure, not outcome). Qualifies for inclusion in systematic review."
+  }
+]

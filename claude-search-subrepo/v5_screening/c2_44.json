@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "183",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, Year 2 (2018-2020), N=8753, US-based"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Three qualifying scales: Social Media Addiction Questionnaire (SMAQ) for SM use; Video Game Addiction Questionnaire (VGAQ) for video game use; Mobile Phone Involvement Questionnaire (MPIQ) for mobile phone use. Applies B1 (named scales for SM and phone/app use)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses examining associations between sociodemographic predictors and problematic screen use outcomes (video game, social media, mobile phone). Regression is qualifying inferential test."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression coefficients (β/B) with 95% CIs reported throughout. Example: 'B = 0.32 (95% CI 0.18–0.45)' for black vs white adolescents on video game use. Tables and main text report numeric estimates."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data using multiple linear regression"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Single peer-reviewed publication; no preprint or duplicate identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphones/SM are DEPENDENT variables (predicted by sociodemographics). Predictors are exclusively demographic: sex, race/ethnicity, age, household income, parental education, parental marital status. However, the analysis is cross-sectional (B15 carve-out: cross-sectional demographics → SM means FT_EC7 does NOT apply per binding rule B15)",
+    "binding_rules_applied": ["B1", "B15"],
+    "notes": "Paper measures three separate problematic screen use constructs (video game, social media, mobile phone) as dependent variables with demographic predictors. Cross-sectional design with propensity weighting applied."
+  },
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, baseline data, N=4,042, US-based"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Abstract mentions 'screen media activity' as a key predictive variable but does not specify whether this is a qualifying smartphone or SM measure. No named scale or specific platform mentioned. Insufficient detail to confirm FT_IC2 without full paper text; likely refers to screen time aggregation rather than specific SM or smartphone variable per B2 (summed screen time without per-item breakdown)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Uses machine learning models (elastic net regression, random forest, light gradient boosting, support vector regression). Elastic net is penalized regression which qualifies as inferential per B8 (penalized regression β counts as inferential test)"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Abstract does not provide numeric model coefficients or performance metrics. Requires full paper/supplement to confirm whether β values from elastic net or other numeric statistics are reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD machine learning analysis predicting delayed reward discounting at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Single peer-reviewed publication; no obvious duplication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT_EC7 structure does not apply because: (a) SM/smartphone is not the dependent variable (DRD is the outcome being predicted, not SM); (b) FT_EC7 requires SM/smartphone as DV, which this study does not have",
+    "binding_rules_applied": ["B8"],
+    "notes": "Machine learning study predicting DRD. SM status uncertain due to vague 'screen media activity' reference in abstract; full text review needed to determine if FT_IC2 qualifies. FT_IC4 status requires full paper"
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) Study, nationally representative US sample, N=10,650 children"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Children reported use of social media (explicitly stated: 'Children reported their use of TV, videos, video games, social media and mature-rated media'). Social media is a qualifying variable per FT_IC2 definition"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cross-sectional associations tested with statistical inference. Abstract reports odds ratios (OR = 1.14, OR = 1.27) with 95% confidence intervals, indicating logistic or similar regression models. Inferential test present."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Odds ratios and 95% confidence intervals reported: 'parental internalising problems were associated with children watching mature-rated movies (OR = 1.14, 95% CI = 1.00, 1.30)' and 'playing mature-rated games (OR = 1.27, 95% CI = 1.11, 1.45)'"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis of ABCD data examining association between parental psychological problems and children's screen behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Single peer-reviewed publication; no duplication identified"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Parental psychological problems is a predictor of screen time/SM. This violates the CLOSED demographic-only set required by FT_EC7(b). Per B17, parental psychopathology is an explicitly disqualifying predictor: 'parental psychopathology' is listed in NOT EC7 disqualifiers. FT_EC7 does NOT apply.",
+    "binding_rules_applied": ["B17"],
+    "notes": "Study examines parental psychological problems as predictor of children's screen time and media use. Parental psychopathology is explicitly disqualifying for FT_EC7 under binding rule B17. SM is measured as part of broader screen behavior assessment."
+  }
+]

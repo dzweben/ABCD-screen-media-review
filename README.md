@@ -46,7 +46,7 @@ README.md                       This file
 
 ---
 
-## PRISMA flow (current)
+## PRISMA flow (current — v5 tightened criteria)
 
 | Stage | Records |
 |---|---:|
@@ -54,14 +54,13 @@ README.md                       This file
 | **Deduplication**: Unique records | 620 |
 | **Stage 1 (title/abstract)**: Advanced to full-text | 171 |
 | **Stage 1 excluded (by code)**: EC1–EC5 | 449 |
-| **Stage 2 (full-text)**: Included in synthesis | **94** |
-| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **61** |
-| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 4 |
+| **Stage 2 (full-text)**: Included in synthesis | **107** |
+| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **62** |
+| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 6 |
 | &nbsp;&nbsp;&nbsp;FT-EC2 (no smartphone/SM variable) | 48 |
-| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical) | 5 |
-| &nbsp;&nbsp;&nbsp;FT-EC4 (no smartphone/SM ↔ non-SM test) | 2 |
-| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal demographic → SM epidemiology) | 2 |
-| **Stage 2 UNSURE** (pending retrieval) | 16 |
+| &nbsp;&nbsp;&nbsp;FT-EC4 (no smartphone/SM ↔ non-SM test or no extractable estimate) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal demographic → SM epidemiology) | 3 |
+| **Stage 2 NA_FOR_NOW** (no PDF; criteria unverifiable) | 2 |
 
 ---
 
@@ -74,7 +73,12 @@ Each of the 171 Stage-1 includes is screened atomically against six criteria (FT
 3. **Resolver** — independent AI pass only on criteria where C1 ≠ C2
 4. **Algorithmic aggregation** — hierarchical exclusion codes; no subjective judgment
 
-**C1 vs C2 agreement (pre-resolver):** 74.9%, Cohen's κ = 0.51 (moderate). Resolver adjudicated 43 papers with at least one criterion-level disagreement.
+**C1 vs C2 agreement (v5, pre-resolver):**
+- Pooled criterion-level: 88.4% agreement, Cohen's κ = **0.77** (substantial)
+- Paper-level full agreement: 69.6% (119/171)
+- Resolver adjudicated 52 papers with at least one criterion-level disagreement
+
+The v5 criteria (with 20 binding borderline rules B1–B20) substantially improved IRR over v4 (κ=0.51 → 0.77).
 
 See `02-L2/2L-criteria.md` for full criteria and edge-case rules (E1–E18).
 

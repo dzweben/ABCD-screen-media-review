@@ -1,0 +1,104 @@
+[
+  {
+    "paper_id": "92",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, baseline (Y0; ages 9-10) and year two follow-up (Y2; ages 11-12); US-based longitudinal study"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Addictive screen use composite measure including addictive videogaming, additive social media use, and addictive phone use; qualifies under B1 (separate coefficients for multiple platform/app-category measures)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects regression with site and familyID as random intercepts; AFC (Anchored Functional Connectomic maturation score) predicting ASU composite, addictive videogaming, addictive social media use, and addictive phone use separately; regression coefficients reported"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Beta coefficients reported: AFCvs.max-ASU (β_M1 = -.056, CI [-.083, -.027], p < .001), AFCvs.addictive videogaming (β_M1 = -.060, CI [-.087, -.031], p < .001), AFCvs.addictive phone use (β_M1 = -.039, CI [-.069, -.008], p = .035); NAc activation (β_WE = -.023, CI [-.045, -.000], p = .029)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis; longitudinal neuroimaging (fMRI) predicting behavioral outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Journal pre-proof (not a duplicate); original published manuscript"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply because ASU is the DEPENDENT variable, but the analysis includes non-demographic predictors (neural features: cortical connectomic maturation, NAc anticipatory reward activation, cognitive task performance, total screen time, attention problems, general factor of psychopathology). Per B17/FT-EC7, inclusion of ADHD (attention), general psychopathology, and neural features disqualifies FT-EC7.",
+    "binding_rules_applied": [
+      "B1",
+      "B17"
+    ],
+    "notes": "Strong longitudinal neuroimaging study with SM as DV alongside other ASU measures; predicted from neural risk factors. Satisfies all IC criteria but EC7 does not apply due to non-demographic predictors."
+  },
+  {
+    "paper_id": "445",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study, U.S.-based, ages 12-13 (year 2 and year 3 follow-up)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic gaming measured at age 12; qualifies under B6 (gaming + separate coefficients for environmental predictors); includes measurement of problematic gaming as SM/gaming measure with separate statistical modeling"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear mixed models examining associations between problematic gaming at year 2 and PLEs at year 3; interaction tests between problematic gaming and environmental variables (peer, school, family); moderation analysis conducted"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression estimates with 95% CIs provided in Figure 2 and main text: School environment main effect (estimate -0.15, 95% CI [-0.21, -0.10]); Family environment main effect (estimate -2.37, 95% CI [-2.69, -2.05]); Interaction effects for problematic gaming x school environment and problematic gaming x family environment reported"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis; prospective cohort study with problematic gaming as predictor of PLEs outcome"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published full-length report; no indication of duplicate (preprint/abstract)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply because problematic gaming is the INDEPENDENT/PREDICTOR variable (not DV), with PLEs as outcome. EC7 requires SM/gaming as DV only. Per B18, when paper has SM-as-IV→outcome analysis, FT-EC7 does not apply.",
+    "binding_rules_applied": [
+      "B6",
+      "B18"
+    ],
+    "notes": "Longitudinal study using affordance theory framework. Problematic gaming is predictor; school/family environment and PLEs are outcomes. Clear IV-DV structure disqualifies EC7."
+  },
+  {
+    "paper_id": "149",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development study, U.S.-based; 2,294 participants, baseline (ages 9-10) to four-year follow-up (ages 13-14)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Problematic use of social media (PUSM) measured via Social Media Addiction Questionnaire (SMAQ, 6-item); qualifies as qualifying SM variable per definition (SMAQ/SNS-A/Bergen SM scales explicitly listed)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling (CPM) with 10-fold cross-validation; linear regression of SMAQ scores on functional connectivity edge weights; Pearson correlation between observed and predicted scores; permutation testing (1000 permutations)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Pearson r correlations reported: combined positive and negative networks (r = 0.066, p = 0.003 unadjusted; r = 0.055, p = 0.016 controlling for covariates); permutation p = 0.02; connectivity edge counts: 2507 edges total (1212 positive, 1295 negative); full network anatomical descriptions and edge weights provided"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD analysis; machine-learning neuroimaging study predicting PUSM severity from baseline resting-state fMRI connectivity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published NeuroImage article; not a duplicate"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Does not apply because while PUSM is the DV, the predictors include neural features (resting-state functional connectivity from CPM), which is not in the closed demographic-only set per FT-EC7 (b). Per B17, neural features disqualify EC7.",
+    "binding_rules_applied": [
+      "B8",
+      "B17"
+    ],
+    "notes": "Machine-learning CPM study using whole-brain functional connectivity to predict PUSM. Includes traditional regression coefficients (counts as penalized regression equivalent per B8). Neural predictors disqualify EC7."
+  }
+]

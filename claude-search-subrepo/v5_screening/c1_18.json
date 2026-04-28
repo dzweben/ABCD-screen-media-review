@@ -1,0 +1,102 @@
+[
+  {
+    "paper_id": "184",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study Year 3 (2019-2022), US sample of 10,048 adolescents aged 12-13 years"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM variables: time on social media (SMAQ), platform-specific use measured separately. Qualifying smartphone: mobile phone involvement (MPIQ). Screen time measures include texting, video chat, social media, video games. Applies B1 (YSTS papers reporting separate β for SM, texting, video chat, mobile phone with own coefficients → MET)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple linear regression analyses with coefficients for each parenting practice predicting screen use outcomes. Example: parental monitoring β = -0.83 (95% CI: -1.05, -0.60) for total screen time; β = -1.58 (95% CI: -1.83, -1.34) for problematic social media use"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 3 reports β coefficients with 95% CIs and p-values for all associations. Examples: mealtime screen use β = 1.24 (95% CI: 1.01, 1.47) for total screen time; bedroom screen use β = 1.91 (95% CI: 1.71, 2.11) for problematic social media; parental monitoring β = -0.86 (95% CI: -1.04, -0.68) for problematic social media"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis; reports associations between SM/smartphone use (DV and IV contexts) and parenting practices (IV) with mental/behavioral outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Pediatric Research; no evidence of preprint/abstract duplication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Paper includes SM→outcome analyses (problematic social media use, video game use, mobile phone use as outcomes predicted by parenting practices). Condition (a) fails: SM/smartphone are NOT solely dependent variables; they are outcome variables with other (parenting practice) predictors, and parenting practices → SM/smartphone outcomes are measured. Paper is cross-sectional (condition c fails per B15 carve-out)",
+    "binding_rules_applied": [
+      "B1",
+      "B15"
+    ],
+    "notes": "Cross-sectional design. Parenting practices (including parental screen time modeling, mealtime/bedroom screen use, monitoring, limiting) are predictors of adolescent SM/smartphone use outcomes. Multiple separate coefficients reported for different SM/smartphone modalities and total screen time."
+  },
+  {
+    "paper_id": "248",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study; review of literature based on ABCD data of over 11,000 participants aged 9-15 years in the US"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying SM variables: time on SM, platform-specific use (social media, video games, video chat, videos, texting). Per B1 (YSTS papers with separate coefficients for SM, texting, video chat)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Paper reviews cross-sectional and 1-2-year follow-up data showing associations with mental health outcomes. Cites regression analyses and prospective associations"
+    },
+    "FT_IC4": {
+      "status": "UNKNOWN",
+      "evidence": "Review article; does not directly report numeric coefficients from the paper's own analyses. References other ABCD studies with coefficients but does not present original analyses with extractable statistics. Full text not provided for all sections; abstract states it reviews 'current ABCD Study data' but review format typically does not include original numeric reporting"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "This is a review article (PURPOSE OF REVIEW stated in abstract). Per B14, review/editorial/commentary/perspective = NOT_MET for FT-IC5. Does not report original empirical analyses"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Current Opinion in Pediatrics; no evidence of duplication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Paper is a review, not an original empirical analysis. FT-EC7 criteria require (c) LONGITUDINAL/PROSPECTIVE analyses, but this is a narrative review synthesizing existing literature",
+    "binding_rules_applied": [
+      "B14"
+    ],
+    "notes": "Fails FT-IC5 (review article). Per screening logic, paper is excluded at FT-IC5 regardless of other criteria."
+  },
+  {
+    "paper_id": "292",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data from period 2 follow-up (2018-2020) to period 3 follow-up (2019-2021). Sample of 9095 adolescents aged ~12 years (10-13 range) in US"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Exposure is cyberbullying victimization (yes/no binary measure). Cyberbullying alone is NOT a qualifying SM/smartphone variable per B3. Paper includes total screen time as a covariate but NOT as the primary exposure or with a separate coefficient of interest. Per B3: 'Cyberbullying alone → NOT_MET'. The paper does not analyze SM/smartphone use as a separate variable with coefficient reporting"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable linear regression models estimating associations between cyberbullying (exposure) and manic symptoms (outcome). Lifetime cyberbullying β = 0.41 (95% CI 0.18-0.65, p=0.001); past 12-month cyberbullying β = 0.38 (95% CI 0.11-0.66, p=0.007)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Table 2 reports adjusted and unadjusted β coefficients with 95% CIs and p-values for both lifetime and past 12-month cyberbullying associations with manic symptoms"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD prospective cohort analysis examining longitudinal association between cyberbullying (period 2) and manic symptoms (period 3)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published 2025 in Acta Paediatrica; no evidence of preprint/abstract/deposit duplication"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Not applicable. Paper fails FT-IC2 (cyberbullying alone is not a qualifying SM/smartphone variable per B3), making it ineligible for full-text screening criteria",
+    "binding_rules_applied": [
+      "B3"
+    ],
+    "notes": "Fails FT-IC2 (binding rule B3: cyberbullying alone → NOT_MET). While paper includes screen time as a covariate, the primary exposure and study focus is cyberbullying victimization, not SM/smartphone use. Screen time is not the focus variable with separate coefficient reporting."
+  }
+]

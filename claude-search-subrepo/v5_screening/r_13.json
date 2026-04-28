@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "306",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Abstract states 'baseline lifestyle behaviors (including self-reported screen time, physical activity and caffeine intake...)' and results report 'individuals in the Persistent Elevated Distress trajectory spent more time using screens (adjusted Odds Ratio [OR] 2.27, 95% CI 2.03-2.53)'. The variable is 'screen time' with unspecified platform and no breakdown by smartphone, app, social media, texting, or video chat.",
+        "binding_rules_cited": ["B5", "B7"],
+        "rationale": "B5 and B7 specify that generic 'screen time' without device/platform specification or per-modality breakdown does NOT qualify. No smartphone ownership, app use, social media, texting, or video chat measured separately. This is total/unspecified screen time only → FT_IC2 NOT_MET."
+      }
+    ]
+  },
+  {
+    "paper_id": "309",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC1",
+        "status": "NOT_MET",
+        "evidence": "PDF title page and Methods section confirm: 'Department of Psychology, University of Amsterdam' (multiple author affiliations). Methods explicitly state: 'The community sample consisted of 2663 Dutch adolescents (54% girls). Their data were retrieved from the Amsterdam Born Children and their Development (ABCD) cohort study (Van Eijsden et al., 2003)' and 'This study started in 2003–2004 when pregnant women living in Amsterdam were invited to participate in the cohort study.' This is the Dutch ABCD (Amsterdam Born Children and their Development), not the U.S. ABCD Study.",
+        "binding_rules_cited": [],
+        "rationale": "C1 correctly identified this as the Dutch ABCD cohort. The 2L-criteria FT-IC1 rule explicitly lists 'Amsterdam Born Children and their Development (Dutch ABCD)' as a NOT_MET case (FT-EC1). This is not the U.S. ABCD Study; it is a distinct Dutch longitudinal cohort. Resolver agrees with C1."
+      }
+    ]
+  },
+  {
+    "paper_id": "377",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Full text (pages 1–5 reviewed) and abstract describe a SEM analysis of traumatic stress exposure → dual systems model development (impulse control, sensation-seeking) via deviant peer association mediation. The entire study focuses on trauma exposure, peer association, and cognitive/behavioral constructs. No mention of smartphone ownership, app use, social media, texting, video chat, gaming on phone, or any qualifying smartphone/SM variable in Methods, Results, or Discussion.",
+        "binding_rules_cited": [],
+        "rationale": "This paper uses ABCD data but analyzes no qualifying smartphone or social media variable. The exposures are traumatic stress and peer association; the outcomes are impulse control and sensation-seeking. FT_IC2 requires that 'at least one' qualifying smartphone or SM variable 'enters a statistical analysis.' No such variable is present. Although the paper is an original ABCD analysis (FT_IC5 MET), it fails the exposure criterion → EXCLUDE FT-EC2."
+      }
+    ]
+  }
+]

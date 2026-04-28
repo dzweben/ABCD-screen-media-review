@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "181",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, ages 9-11 years, n=3498 with overweight/obesity at baseline or Year 1"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time measured but shows no significant association (HR: 0.99, 95% CI 0.96-1.02). Paper focuses on sleep duration as the main exposure linked to BMI outcome. Screen time alone without separate coefficients for qualifying SM/phone variables. Applies B5: screen-time-only without qualifying smartphone/SM variables measured as exposures with independent coefficients."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Cox proportional hazards regression; HRs with 95% CIs and p-values reported for prospective associations with BMI transition"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Hazard ratios, 95% confidence intervals, p-values, and trend tests reported in Table 2 and main text; standardized estimates in sensitivity analyses (Table 3)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with longitudinal design (median 657 days follow-up); Cox models examining prospective associations"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No preprint/abstract/deposit duplicate detected; published article"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper does not examine smartphone/SM as dependent variable; sleep duration and screen time are independent variables predicting BMI transition (outcome). Not a demographics→SM-as-DV analysis.",
+    "binding_rules_applied": ["B5"],
+    "notes": "Paper primarily examines sleep duration (significant predictor) and screen time (null predictor) in relation to BMI transition. Screen time variable alone does not meet FT_IC2 qualification per binding rules."
+  },
+  {
+    "paper_id": "215",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, ages 9-10 years at baseline (2016-2018), n=7445 (47.3% female)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Screen time is qualifying smartphone exposure measured in hours/day (continuous and categorical: 0-4, >4-8, >8 hours/day). Self-reported average daily time on screens. Separate β coefficients reported for categorical screen time variables (Table 2: B=0.32 continuous, separate models for medium/high categories). Applies B1: ABCD paper reporting separate coefficients for screen time (smartphone-related measure) as exposure."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Weighted multivariable linear regression models; B coefficients with 95% CIs and p-values for independent associations; joint associations tested with categorical groupings"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "B coefficients (0.32, 0.40, etc.), 95% confidence intervals, p-values reported in Tables 2-3 for screen time and sleep associations with BMI and WC"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with longitudinal prospective design (2-year follow-up from baseline); weighted regression models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published article; different outcome measures (BMI and WC) than paper 181"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time is independent variable predicting BMI/WC (outcomes); not a demographics-only→SM-as-DV analysis. Paper examines SM/screen as IV, not DV.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper examines independent and joint associations of screen time and sleep with BMI and WC. Screen time significant predictor overall (B=0.32 for BMI, B=0.40 for WC, p<0.001). Satisfies FT_IC2 via B1 rule with separate coefficients."
+  },
+  {
+    "paper_id": "154",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, n=791 participants, mean age 14.12 years, 53% female; over 3-week assessment period"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Smartphone application use measured via passive sensing (EARS app); bedtime phone use examined with separate coefficients for daytime/evening (6:00AM-7:59PM), late-evening (8:00PM-9:59PM), and late-night (10:00PM-5:59AM) usage. Standardized β reported separately for each time period. Applies B1: separate standardized β coefficients for smartphone usage categories."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects models with standardized β coefficients and p-values; within-person and between-person analyses; prospective hourly-level associations tested"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Standardized β coefficients (range -0.21 to 0.07, -0.05 to 0.02, -0.16 to 0.27), p-values (<0.001, ≤0.002) reported in Results section for all time-of-day smartphone use associations"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis using passive sensor data (EARS smartphone app, Fitbit device); daily-level mixed-effects models"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No duplicate; published article; distinct substudy using passive sensing technology"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphone use is independent variable predicting sleep and physical activity outcomes; not a demographics→SM-as-DV analysis.",
+    "binding_rules_applied": ["B1"],
+    "notes": "Paper uses objective sensor-based measures rather than self-report. Examines smartphone application use by time-of-day with separate coefficients meeting B1 qualification. Significant within-person associations found for late-night use predicting reduced sleep (β=-0.16 to -0.27)."
+  }
+]

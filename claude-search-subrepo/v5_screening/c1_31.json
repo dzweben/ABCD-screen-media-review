@@ -1,0 +1,95 @@
+[
+  {
+    "paper_id": "192",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study cohort, US-based, 6,469 children aged 9-11 years at baseline, followed for 4 years with brain imaging and behavioral data collected at multiple timepoints."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Qualifying social media: 'using social media' measured via Youth Screen Time Survey at all visits (T1, T2, T3, T4). Qualifying smartphone: digital media use categorized by device/platform (social media, video games, television/videos). B1 rule applies — paper reports separate β coefficients for individual DM usage types including social media."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quadratic mixed-effects modeling; regression coefficients (β) reported for associations between digital media usage (social media, video games, television/videos) and brain outcomes (cortex, striatum, cerebellum) with statistical significance testing and p-values throughout Tables 2 and supplementary analyses."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients and p-values extracted and reported in main text and Table 2. For example: social media usage x time interaction with cerebellum (β = 0.02, p = 0.02); social media usage x time² (β = −0.02); playing video games x time² (β = 0.01). Supplement includes sensitivity analyses with full coefficient reporting."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Prospective longitudinal study with repeated brain imaging (MRI) and self-reported digital media usage collected at baseline and annual follow-up visits over 4 years; quadratic mixed-effects modeling applied to examine developmental trajectories."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Scientific Reports (2024); no indication of duplicate (abstract, preprint, or prior published version)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Social media is the INDEPENDENT variable predicting brain development outcomes (global cortical surface area, striatum, cerebellum volumes), not the dependent variable. Condition (a) is not satisfied because the paper analyzes SM → non-SM-outcome relationships, which disqualifies EC7 application per the binding rules.",
+    "binding_rules_applied": ["B1"],
+    "notes": "High-quality longitudinal ABCD analysis with separate coefficients for individual DM types. Social media usage found to have weak associations with cerebellum development (β = 0.02, p = 0.02 for linear term; β = −0.02 for quadratic), with effect sizes and accumulated effects described as 'only β = −0.03, which was considered insignificant' per abstract. Authors call for longer follow-ups."
+  },
+  {
+    "paper_id": "79",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study participants, US-based cohort of 10,410 eligible adolescents aged 9–10 at baseline, recruited from 21 sites across the US with longitudinal follow-up at years 1 and 2."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying victimization alone is the outcome/dependent variable, not the exposure. B3 binding rule: cyberbullying alone → NOT_MET. The paper examines family environment (parental monitoring, family conflict) and cyberbullying victimization, but does NOT include any qualifying smartphone or social media variable as an independent exposure variable. No measurement of SM usage, platform use, time on social media, or related variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multivariable logistic regression analyses. OR and 95% CI reported for associations between parental monitoring and family conflict at Year 1 and cyberbullying victimization at Year 2 (e.g., OR = 0.61, 95% CI 0.50–0.75 for parental monitoring; OR = 1.10, 95% CI 1.04–1.16 for family conflict)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric extractable: OR, 95% CI, and p-values reported in Tables 2 and 3 for both mean scores and individual survey items. Example: parental monitoring OR = 0.61 (0.50, 0.75); family conflict OR = 1.10 (1.04, 1.16). Secondary analyses with individual items also include coefficients and CIs."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis with prospective longitudinal design. Data collected at Year 1 (family environment measures) and Year 2 (cyberbullying victimization outcome), with 10,410 participants included in analyses."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Academic Pediatrics (2024); no evidence of duplication."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply. Paper does not meet condition (a) because smartphone/social media is NOT the dependent variable. The dependent variable is cyberbullying victimization; the independent variables are family environment (parental monitoring, family conflict)—neither are qualifying SM/smartphone variables. FT-IC2 fails (no qualifying SM/smartphone exposure), making this paper ineligible regardless of EC7 status.",
+    "binding_rules_applied": ["B3"],
+    "notes": "EXCLUDED at FT-IC2 per B3 rule. Cyberbullying victimization is addressed but cyberbullying alone without separately-measured SM is NOT_MET per v5 screening criteria. Family environment is the exposure; cyberbullying is the outcome. No qualifying smartphone or social media measurement as independent variable."
+  },
+  {
+    "paper_id": "377",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data analyzed; participants recruited across 21 U.S. sites; 11,880 youth aged 9–10 at baseline with longitudinal follow-up across Waves 1, 3, and 5 (and deviant peer association measured at Wave 4)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "No qualifying smartphone or social media variable. The paper examines traumatic stress exposure as a predictor of dual systems model constructs (sensation-seeking, impulse control) with deviant peer association as a mediator. Neither traumatic stress, deviant peer association, impulse control, nor sensation-seeking are qualifying SM/smartphone variables per FT-IC2 definition. B5 rule applies: non-qualifying constructs (psychological/neuropsychological traits without SM/smartphone measurement)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Structural equation modeling (SEM) with path coefficients and indirect effects reported. Example: traumatic stress exposure → deviant peer association → impulse control mediation pathway; coefficient for mediated effect reported as 'accounting for about 25% of this relationship' with significance testing (p-values and confidence intervals provided in Tables 2 and 3)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric coefficients and p-values extracted from SEM analyses. Tables 2 and 3 report standardized regression coefficients, 95% confidence intervals, and p-values for all direct and indirect effects examined (e.g., coefficient = .339, p < .001 for sensation-seeking model; coefficient = .142, p = .028 for impulse control)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original ABCD empirical analysis. Prospective longitudinal SEM examining direct and indirect effects of traumatic stress exposure on dual systems model constructs using data from Waves 1, 3, 4, and 5."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published article in Crime & Delinquency (2024); no evidence of duplication."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply because FT-IC2 is not met (no qualifying SM/smartphone exposure variable). Additionally, EC7 condition (b) is not satisfied: the paper includes traumatic stress exposure (an adverse experience/psychosocial risk factor) as a predictor, which is explicitly listed in the NOT EC7 section (B17: 'ACEs, parenting, parental psychopathology, family conflict, sleep, depression, anxiety, ADHD, impulsivity, sensation-seeking, executive function...'). Traumatic stress is in this disqualifying list.",
+    "binding_rules_applied": ["B5", "B17"],
+    "notes": "EXCLUDED at FT-IC2. No qualifying smartphone or social media exposure variable. Paper focuses on traumatic stress exposure and deviant peer association as predictors of impulse control and sensation-seeking (dual systems model constructs). While SEM and original ABCD analysis criteria are met, the absence of SM/smartphone measurement at the exposure level fails the core inclusion criterion for this systematic review."
+  }
+]

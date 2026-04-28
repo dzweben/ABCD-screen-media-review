@@ -1,0 +1,52 @@
+[
+  {
+    "paper_id": "103",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper is a resource hub describing support infrastructure for ABCD researchers, discussing NowIKnowMyABCD website and discussion board. No original measurement or analysis of smartphone or social media variables. Discussion board mentions live feed from social media (Twitter) but does not report any SM or smartphone data.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 applies: editorial, commentary, perspective, or resource paper with no original ABCD analysis → FT_IC5 = NOT_MET (FT-EC3). By extension, no qualifying SM/smartphone variables are measured. This is a documentation paper, not a data analysis paper. FT_IC2 = NOT_MET."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper is descriptive and informational only. Reports no inferential statistical tests linking any SM or smartphone variable to a non-SM outcome. No regression, correlation, group comparison, or other test reported.",
+        "binding_rules_cited": ["B14"],
+        "rationale": "B14 applies to resource/documentation papers. No empirical analysis; purely descriptive documentation. FT_IC3 = NOT_MET (no inferential test)."
+      }
+    ]
+  },
+  {
+    "paper_id": "105",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_MET",
+        "evidence": "Paper measures cyberbullying victimization only (lifetime history and past-12-month exposure). Tests: multivariable logistic regression predicting substance initiation at Year 2 (cross-sectional) and Year 3 (longitudinal). No separately-measured smartphone or social-media variable analyzed. ORs: 2.17 [1.68, 2.81] for lifetime cyberbullying; 2.31 [1.71, 3.12] for past-12-month; 2.22 [1.68, 2.93] and 2.34 [1.68, 3.26] for longitudinal. All coefficients are for cyberbullying ↔ substance initiation, not SM ↔ non-SM.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "B3: Paper measures cyberbullying as the only screen-adjacent variable → FT_IC2 = NOT_MET (FT-EC2). Cyberbullying alone does not satisfy FT-IC2 per criteria §2.2.2: requires cyberbullying PLUS a separately-measured smartphone/SM variable with its own coefficient. Since FT_IC2 fails under B3, the paper has no qualifying SM variable to test. Therefore, FT_IC3 = NOT_MET: no inferential test linking a qualifying SM variable to a non-SM outcome."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_MET",
+        "evidence": "Numeric values reported (ORs and 95% CIs) are for cyberbullying ↔ substance use associations only, not SM ↔ non-SM associations. No coefficient for a separately-measured smartphone or social-media variable is reported.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "FT_IC4 requires a numeric value for a qualifying SM ↔ non-SM association. Under B3, cyberbullying is the only screen-adjacent variable; no separately-measured SM variable exists. Therefore, FT_IC4 = NOT_MET."
+      }
+    ]
+  },
+  {
+    "paper_id": "112",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC1",
+        "status": "NOT_MET",
+        "evidence": "Paper explicitly states: 'This study was embedded in the Amsterdam Born Children and their Development (ABCD) Study' (page 3, 2. Material and methods, 2.1. Study population). Study population: n=2354 children aged 5–6 years from the Netherlands. This is the Dutch ABCD cohort, not the U.S. ABCD Study.",
+        "binding_rules_cited": [],
+        "rationale": "FT-IC1 criterion: 'Paper analyzes data from the U.S. ABCD Study.' Criteria §2.1 exclusion rule: NOT_MET (FT-EC1) applies to 'Amsterdam Born Children and their Development (Dutch ABCD)... or any non-U.S.-ABCD cohort.' This paper uses the Dutch ABCD, not the U.S. ABCD. Therefore, FT_IC1 = NOT_MET (FT-EC1). Paper fails at population eligibility."
+      }
+    ]
+  }
+]

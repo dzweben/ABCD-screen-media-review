@@ -1,0 +1,73 @@
+[
+  {
+    "paper_id": "128",
+    "title": "24-Hour Movement Behaviors and Internalizing and Externalizing Behaviors Among Youth.",
+    "authors": "",
+    "year": "2020",
+    "doi": "10.1016/j.jadohealth.2020.09.003",
+    "abstract": "Abstract\nPurpose: The Canadian 24-Hour Movement Guidelines for Children and Youth (\u00b360 minutes of moderate-to-vigorous physical activity per day, \u00b22 hours of recreational screen time per day, and 9-11 hours of sleep per night for 5-13 years old) are associated with better physical health, but less is known about how these behaviors are related to mental health. This study examined the association of meeting these guideline recommendations with internalizing and externalizing behaviors among youth.\n\nMethods: A large and broadly representative cross-sectional sample of 9- to 11-year-old U.S. youth (N = 11,875) from the Adolescent Brain and Cognitive Development study was analyzed. Internalizing and externalizing behaviors were measured using the Child Behaviour Checklist. Associations were examined using negative binomial regression adjusted for several confounders.\n\nResults: Compared to meeting none of the recommendations, meeting recommendations for screen time and sleep but not physical activity was associated with a lower prevalence ratio of total, internalizing, and externalizing behaviors. Meeting two or all three recommendations was more strongly associated with these outcomes than meeting one recommendation or none. The prevalence ratio of the group meeting all three recommendations was .77 (95% confidence interval [CI]: .68-.86) for total problem scores, .78 (95% CI: .68-.89) for internalizing problem scores, and .79 (95% CI: .68-.91) for externalizing problem scores.\n\nConclusions: Meeting the 24-hour movement guidelines was associated with a lower risk of internalizing and externalizing behaviors in youth. These associations were mainly explained by meeting the screen time and sleep duration recommendations.\n\nKeywords: Epidemiology; Externalizing behavior; Internalizing behavior; Physical activity; Sedentary behavior; Sleep.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1016_j.jadohealth.2020.09.003.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Screen time measured as recreational screen-based activities (TV, video watching, video gaming, texting, social media, video chat) but NOT qualifying as smartphone/social media exposure per binding rules. Paper groups screen time with physical activity and sleep as a composite health guideline metric, not examining SM or smartphone use independently as a qualifying variable. Texting and social media are included in a summed screen-time measure but no separate per-item coefficient reported (B2 rule applies\u2014total/summed screen time only, no per-item breakdown).",
+        "c2_status": "MET",
+        "c2_evidence": "Qualifying smartphone/screen time variable: recreational screen time measured via Youth Screen Time Survey, including TV watching, video watching (YouTube), video game playing, texting on cellphone/tablet/computer, visiting social media sites, and video chat (page 3). Applies B1 (separate coefficient for screen time) and B5 (screen time measured separately from unspecified internet/gaming)."
+      }
+    ]
+  },
+  {
+    "paper_id": "130",
+    "title": "The Pandemic's Toll on Young Adolescents: Prevention and Intervention Targets to Preserve Their Mental Health.",
+    "authors": "",
+    "year": "2022",
+    "doi": "10.1016/j.jadohealth.2021.11.023",
+    "abstract": "PURPOSE: Adolescence is characterized by dramatic physical, social, and emotional changes, making teens particularly vulnerable to the mental health effects of the COVID-19 pandemic. This longitudinal study identifies young adolescents who are most vulnerable to the psychological toll of the pandemic and provides insights to inform strategies to help adolescents cope better in times of crisis. METHODS: A data-driven approach was applied to a longitudinal, demographically diverse cohort of more than 3,000 young adolescents (11-14\u00c2\u00a0years) participating in the ongoing Adolescent Brain Cognitive Development Study in the United States, including multiple prepandemic visits and three assessments during the COVID-19 pandemic (May-August 2020). We fitted machine learning models and provided a comprehensive list of predictors of psychological distress in individuals. RESULTS: Positive affect, stress, anxiety, and depressive symptoms were accurately detected with our classifiers. Female sex and prepandemic internalizing symptoms and sleep problems were strong predictors of psychological distress. Parent- and youth-reported pandemic-related psychosocial factors, including poorer quality and functioning of family relationships, more screen time, and witnessing discrimination in relation to the pandemic further predicted youth distress. However, better social support, regular physical activities, coping strategies, and healthy behaviors predicted better emotional well-being. DISCUSSION: Findings highlight the importance of social connectedness and healthy behaviors, such as sleep and physical activity, as buffering factors against the deleterious effects of the pandemic on adolescents' mental health. They also point to the need for greater attention toward coping strategies that help the most vulnerable adolescents, particularly girls and those with prepandemic psychological problems.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1016_j.jadohealth.2021.11.023.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC2",
+        "c1_status": "NOT_MET",
+        "c1_evidence": "Mentions 'screen time' as predictor of youth distress (Results, Figure 2), and 'time spent on social media' in Results. However, no qualifying smartphone or platform-specific social media variable with separate coefficient is reported. Screen time without device/platform specification (B5) and generic 'screen time' do not meet criteria. Unclear whether social media use is measured separately or bundled in aggregate screen time.",
+        "c2_status": "MET",
+        "c2_evidence": "Screen time (pandemic-era) as predictor. Reported in feature importance: 'screen time variables' (e.g., 'watching news related to coronavirus', 'playing single-player video games', 'browsing the internet'). Qualifies under smartphone/SM use as predictor variable."
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "MET",
+        "c1_evidence": "Reports SHAP values (mean absolute SHAP) for feature importance (Figures 1\u20134). Per B8: traditional regression coefficients appear in linear mixed-effects models and GBT outputs. Supplementary materials include AUC values, p-values",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "B8/B9 (ML rule): Only SHAP feature importance values reported (mean absolute SHAP values for top 20 features per outcome model). No traditional regression coefficient (\u03b2, OR, RR, t, \u03c7\u00b2, p-value) anywhere in main text or supplement for individual screen time variables predicting outcomes. SHAP values are feature importance rankings, not comparable coefficients. No sensitivity analysis or supplement reporting traditional regression."
+      }
+    ]
+  },
+  {
+    "paper_id": "132",
+    "title": "Adherence to 24-Hour Movement Recommendations and Health Indicators in Early Adolescence: Cross-Sectional and Longitudinal Associations in the Adolescent Brain Cognitive Development Study.",
+    "authors": "",
+    "year": "2023",
+    "doi": "10.1016/j.jadohealth.2022.10.019",
+    "abstract": "PURPOSE: Adherence to 24-hour movement guidelines of \u00e2\u0089\u00a560\u00c2\u00a0minutes of physical activity, \u00e2\u0089\u00a42 hours of screen time, and 9-11 hours of sleep has been shown to benefit cognitive, physical, and psychosocial health in children and young adolescents aged 5-13 years. However, these findings have mostly been based on cross-sectional studies or relatively small samples and the associations between adherence to guidelines and brain structure remain to be evaluated. METHODS: Data from the Adolescent Brain Cognitive Development\u00e2\u0084\u00a0 (ABCD) study of 10,574 early adolescents aged 9-14 years from September 2016 to January 2021 were used to examine whether adherence to 24-hour movement guidelines benefits cognition (general cognitive ability, executive function, and learning/memory assessed by the National Institutes of Health Toolbox neurocognitive battery), body mass index, psychosocial health (internalizing, externalizing, and total problems from the parent-reported Child Behavior Checklist), and magnetic resonance imaging-derived brain morphometric measures at baseline (T1), \u00e2\u0088\u00bc2\u00c2\u00a0years later (T2), and longitudinally from T1 to T2 (T2-T1). Multivariable linear mixed models were used, with adjustments for sociodemographic confounders. Time elapsed and T1 outcome measures were also controlled for in longitudinal models. RESULTS: Better cognitive scores, fewer behavioral problems, lower adiposity levels, and greater gray matter volumes were observed in those who met both sleep and screen time recommendations compared to those who met none. Longitudinal follow-up further supports these findings; participants who met both recommendations at T1 and T2 evidenced better outcome measures than those who met none. DISCUSSION: These findings support consideration of integrated rather than isolated movement recommendations across the day in early adolescence for better cognitive, physical and psychosocial health. Although the associations between physical activity and health indicators were less consistent in this study, the significant findings from sleep and screen time demonstrate the importance of considering movement recommendations in an integrated rather than isolated manner for adolescent health. It is recommended that movement behaviors be simultaneously targeted for better developmental outcomes.",
+    "pdf_path": "claude-search-subrepo/data/pdfs_include/10.1016_j.jadohealth.2022.10.019.pdf",
+    "has_pdf": true,
+    "disagreed_criteria": [
+      {
+        "crit": "FT_IC3",
+        "c1_status": "MET",
+        "c1_evidence": "Linear mixed-effects regression models comparing adherence categories to cognitive, psychosocial, and morphometric outcomes; cross-sectional (T1) and longitudinal (T1-T2) analyses reported with regression coefficients.",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "No SM-specific inferential test; only categorical adherence groups (met/not-met combinations) compared via multilevel linear models; SM not treated as separate exposure variable"
+      },
+      {
+        "crit": "FT_IC4",
+        "c1_status": "MET",
+        "c1_evidence": "Standardized regression coefficients (\u03b2), 95% CIs, and p-values reported in main text (Figure 2, Tables); multiple coefficients for different 24-hour movement combinations.",
+        "c2_status": "NOT_MET",
+        "c2_evidence": "No numeric extraction possible for SM; categorical grouping only (not individual coefficient for SM \u2194 outcome)"
+      }
+    ]
+  }
+]

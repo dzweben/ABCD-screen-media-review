@@ -1,0 +1,80 @@
+[
+  {
+    "paper_id": "59",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper measures cyberbullying (single-item question about online/text/social media bullying) and traditional bullying (Peer Experiences Questionnaire) as independent variables. NO separately-measured smartphone or social media variable with own coefficient. Cyberbullying alone without accompanying SM variable does not meet criteria.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "Per 2.2.2 cyberbullying borderline rule and B3: cyberbullying counts only if ALSO paired with a separately-measured qualifying smartphone or SM variable with its own reported coefficient. This paper measures bullying victimization only (cyberbullying + traditional bullying). Zero measurement of texting frequency, social media time, app use, or any other qualifying SM/phone variable. C1 evaluated downstream criteria (IC3-IC6) as MET because they assumed IC2 was met; C2 correctly identified IC2 NOT_MET. IC2 is prerequisite; paper fails at exposure stage."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "IC3 is only evaluated if IC2 (qualifying exposure variable) is met. Since paper fails IC2, IC3 and downstream criteria cascade to NOT_EVALUABLE per adjudication algorithm (§6, final-decision-algorithm)."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "IC4 is only evaluated if IC2 (qualifying exposure variable) is met. Since paper fails IC2, IC4 cascades to NOT_EVALUABLE."
+      },
+      {
+        "crit": "FT_IC5",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "IC5 is only evaluated if IC2 (qualifying exposure variable) is met. Since paper fails IC2, IC5 cascades to NOT_EVALUABLE."
+      },
+      {
+        "crit": "FT_IC6",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B3"],
+        "rationale": "IC6 is only evaluated if IC2 (qualifying exposure variable) is met. Since paper fails IC2, IC6 cascades to NOT_EVALUABLE."
+      }
+    ]
+  },
+  {
+    "paper_id": "67",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper analyzes video game use (outcome measures: mature-rated game frequency, VGAQ problematic use scale, weekend game time) with NO separate measurement of smartphone time, social media time, apps, texting, or any other qualifying SM/phone variable. Video gaming platform is not specified (could be console, PC, mobile, or mixed). Paper does not break down gaming by modality (mobile gaming separately vs. console-only) anywhere in results, tables, or supplements.",
+        "binding_rules_cited": ["B5"],
+        "rationale": "Per 2.2.3 gaming borderline rule and B5: gaming-only papers meet FT_IC2 only if gaming is measured as MOBILE/APP gaming specifically OR if gaming is paired with a separately-measured qualifying SM variable. This paper measures unspecified video gaming (no platform breakdown) as sole exposure, predicting parental media parenting practices. Gaming platform is not distinguished. No SMS/phone variable reported. B5 applies: 'Paper analyzes only console/PC video games or video gaming with platform unspecified' → FT_IC2 = NOT_MET. C1 incorrectly invoked B6 (which requires mobile/app gaming specificity or non-gaming SM variable); C2 correctly applied B5 (unspecified gaming alone)."
+      }
+    ]
+  },
+  {
+    "paper_id": "77",
+    "resolver_decisions": [
+      {
+        "crit": "FT_IC2",
+        "status": "NOT_MET",
+        "evidence": "Paper predictor: ACE score (adverse childhood experiences). Paper outcome: screen time (measured as hours of use on typical day across 7 modalities: multiplayer gaming, single-player gaming, texting, social media, video chatting, internet browsing, streaming). No analysis reports any qualifying SM/phone variable as predictor of a non-SM outcome. Screen time is entirely the dependent variable; ACEs are the independent variable. No reverse analysis (SM → outcome) reported.",
+        "binding_rules_cited": ["B7"],
+        "rationale": "Per §2 PECOS, FT_IC2 (Exposure) requires: 'at least one [of qualifying smartphone/SM variables] is measured AND enters a statistical analysis.' FT_IC2 requires the qualifying variable to function as EXPOSURE (predictor/independent variable), not outcome. This paper analyzes ACEs → screen time (7 modalities combined). While the paper MEASURES screen time across qualifying modalities (texting, social media, video chat), these are the OUTCOMES, not exposures. The directionality is inverted from inclusion criteria. Paper does not analyze any SM/phone variable as predictor. Criteria require smartphone/SM to enter analysis AS EXPOSURE. Per §3.2, cross-sectional demographic → SM is INCLUDE; but this is ACEs (partially demographic, partially psychosocial adversity) → screen time measured, not SM → outcome. The paper violates core exposure directionality: SM/phone must predict non-SM outcomes (or be tested in longitudinal non-demographic predictor context). C1 incorrectly applied B2 (assumes per-modality breakdown = FT_IC2 met); B2 requires separate SM/phone variable AS EXPOSURE with its own coefficient, not as outcome. C2 correctly identified directional mismatch."
+      },
+      {
+        "crit": "FT_IC3",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B7"],
+        "rationale": "IC3 requires qualifying SM/phone exposure variable (IC2). Paper fails IC2 (directionality reversed: SM as DV not IV). IC3 cascades to NOT_EVALUABLE per adjudication algorithm."
+      },
+      {
+        "crit": "FT_IC4",
+        "status": "NOT_EVALUABLE",
+        "evidence": "Not evaluated due to FT_IC2 NOT_MET.",
+        "binding_rules_cited": ["B7"],
+        "rationale": "IC4 requires qualifying SM/phone exposure variable (IC2). Paper fails IC2. IC4 cascades to NOT_EVALUABLE."
+      }
+    ]
+  }
+]
