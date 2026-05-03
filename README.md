@@ -54,13 +54,13 @@ README.md                       This file
 | **Deduplication**: Unique records | 620 |
 | **Stage 1 (title/abstract)**: Advanced to full-text | 171 |
 | **Stage 1 excluded (by code)**: EC1–EC5 | 449 |
-| **Stage 2 (full-text)**: Included in synthesis | **50** |
-| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **82** |
-| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 4 |
-| &nbsp;&nbsp;&nbsp;FT-EC2 (no qualifying smartphone/SM ↔ individual-trait analysis) | 67 |
-| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical: review, commentary, protocol, resource paper) | 6 |
-| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal SM-as-DV-only with no SM-as-IV analysis) | 5 |
-| **Stage 2 UNSURE** (C1≠C2 substantive disagreement; awaiting human review) | 24 |
+| **Stage 2 (full-text)**: Included in synthesis | **69** |
+| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **87** |
+| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC2 (no qualifying smartphone/SM ↔ individual-trait analysis) | 71 |
+| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical: review, commentary, protocol, resource paper) | 5 |
+| &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal SM-as-DV-only with no SM-as-IV analysis) | 6 |
+| **Stage 2 UNSURE** (C1≠C2 substantive disagreement; awaiting human review) | 1 |
 | **Stage 2 NA_FOR_NOW** (no PDF; pre-tagged, never sent to coders) | 15 |
 
 ---
@@ -77,23 +77,21 @@ The v6 criteria removed the resolver entirely. Tighter criteria (conceptual smar
 
 **C1 vs C2 agreement, by version:**
 
-| Version | Pooled κ | Paper-level full agreement | Substantive disagreements |
-|---|---:|---:|---:|
-| v4 | 0.51 (moderate) | — | — |
-| v5 (B1–B20 binding rules + resolver) | 0.77 (substantial) | 69.6% (119/171) | 52 papers |
-| v6 (conceptual + cascade-DEFERRED, no resolver) | 0.90 (almost perfect) | 83.6% (143/171) | 21 papers |
-| **v7 (mechanical 2-step IC2, no-PDF papers pre-tagged)** | **0.87 (almost perfect)** | **80.1% (125/156)** | **31 papers (out of 156 PDFs)** |
+| Version | Coder model | Pooled κ | Paper-level full agreement | Substantive disagreements |
+|---|---|---:|---:|---:|
+| v4 | Haiku | 0.51 (moderate) | — | — |
+| v5 (B1–B20 binding rules + resolver) | Haiku | 0.77 (substantial) | 69.6% (119/171) | 52 papers |
+| v6 (conceptual + cascade-DEFERRED, no resolver) | Haiku | 0.90 (almost perfect) | 83.6% (143/171) | 21 papers |
+| v7 (mechanical 2-step IC2, no-PDF pre-tagged) | Haiku | 0.87 | 80.1% (125/156) | 31 papers |
+| **v7 (same criteria, Sonnet coders)** | **Sonnet** | **0.996** | **99.36% (155/156)** | **1 paper** |
 
-Per-criterion v7 agreement (n=156 PDF-having papers):
-- FT-IC1 κ=0.89 (99% agreement)
-- FT-IC3 κ=1.00 (100%)
-- FT-IC4 κ=1.00 (100%)
-- FT-IC5 κ=0.83 (99%)
-- FT-IC6 κ=1.00 (100%)
-- FT-EC7 κ=0.30 (93% raw agreement; low κ due to base-rate imbalance — FALSE >> TRUE)
-- FT-IC2 κ=0.67 (83%) — the persistent bottleneck
+Per-criterion v7-Sonnet agreement (n=156 PDF-having papers):
+- FT-IC1, IC2, IC3, IC4, IC6, EC7: **all κ=1.00 (100%)**
+- FT-IC5 κ=0.91 (99.3%, single 1-paper disagreement)
 
-v7 added a mechanical two-step IC2 lookup, an explicit FT-EC7 cross-sectional carve-out, and pre-tagged 15 no-PDF papers as NA_FOR_NOW (so coders never see abstract-only ambiguity). Stricter IC2 reduced INCLUDE from v6's 71 to 50 by correctly excluding multi-device aggregated screen time, gaming-only, and demographic/contextual-only "other side" pairings.
+The single biggest IRR improvement came from switching the coder model from Haiku to Sonnet — the v7 criteria were sound; Haiku's reading comprehension was the bottleneck. Sonnet reads PDFs reliably enough that two independent passes converge on identical answers for every paper except one borderline empirical-vs-perspective call.
+
+v7-Sonnet final flow: 69 INCLUDE / 87 EXCLUDE / 1 UNSURE / 15 NA_FOR_NOW.
 
 See `02-L2/2L-criteria.md` for full v6 criteria.
 

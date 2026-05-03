@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "397",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods state: \"This study included 4,443 adolescents from the Adolescent Brain Cognitive Development (ABCD) Study collected at Year 2 (2018–2020) and Year 4 (2020–2022).\" U.S. ABCD Study confirmed."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis. Multivariable linear and Poisson regression models examining associations between Year 2 screen time and step count with Year 4 CVD risk factors (blood pressure, cholesterol, hemoglobin A1c)."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in BMC Public Health (2026), no evidence of duplication or preprint status."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 passes: \"recreational screen time\" is a phone/SM-specific variable (Table 1: 6.1±5.1 hours/day of screen use). Paired with individual-trait cardiovascular outcomes: diastolic blood pressure percentile, hypertensive-range blood pressure, HDL cholesterol, non-HDL cholesterol. Table 2 shows β estimates (e.g., high screen time 0.25 point increase in diastolic BP percentile; ARR 1.88 for hypertensive-range BP). Table 3 shows ARR 1.88 (95% CI 1.42–2.56, p<0.001) for high screen time and hypertensive-range BP."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple quantitative results reported: adjusted β coefficients with 95% CI in Table 2 (e.g., diastolic BP percentile β=2.65, p=0.007 for medium screen time; adjusted RR reported for hypertensive-range outcomes)."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results throughout. Tables 2–3 report β, 95% CI, p-values, and ARR for screen time associations with all CVD outcomes."
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional carve-out applies. Although design is prospective (Year 2 exposure → Year 4 outcome), the analysis is fundamentally cross-sectional at Year 4 (screen time categories and CVD outcomes both measured at single waves). FT-EC7 requires longitudinal design with SM as DV-only; this paper has SM as IV with multiple outcomes measured cross-sectionally.",
-    "notes": "Strong qualifier. Screen time is self-reported recreational use; individual traits are objectively measured CVD biomarkers (blood pressure via Omron device, lipid panel from blood draw, hemoglobin A1c). All analyses adjusted for covariates (age, sex, race, income, BMI, parental education, COVID-19 timing). No resolver disagreement anticipated."
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, Year 2 (2018-2020) and Year 4 (2020-2022), data release 6.0, N=4,443 adolescents recruited from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: longitudinal cohort study using adjusted linear and Poisson regression models examining Year 2 exposures predicting Year 4 cardiovascular outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed publication in BMC Public Health (2026); no indication of prior duplicate in corpus."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific numeric estimate found. The sole exposure is 'total recreational screen time' (Screen Time Questionnaire), which per methods (p.3) bundles 'watching television and videos, playing video games, texting, social media, and video chat' into a single composite hours/day score. Tables 2 and 3 report only this composite; no per-modality breakout (e.g., separate social media or texting coefficient) appears anywhere in main tables, supplementary tables S2-S6, or sensitivity analyses. Step 2: The composite includes TV/video-viewing and video games — non-phone/non-SM ingredients without a separate breakout — so it fails Step 2. NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Composite 'recreational screen time' includes TV, video games, texting, social media, video chat — no per-modality breakout in any analysis. Fails FT-IC2 Step 1 (no phone/SM-specific estimate) and Step 2 (composite contains non-phone/non-SM items)."
   },
   {
     "paper_id": "167",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods state: \"We used four waves of longitudinal data (Years 1-4) from the Adolescent Brain Cognitive Development (ABCD; Baseline N = 11,878; White = 52.0%, Hispanic = 20.3%, Black = 15.0%, Asian = 2.1%, Other = 10.5%; Female = 47.8%).\" U.S. ABCD Study confirmed."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis. Multi-level models examining parent-child informant discrepancy in youth internalizing problems by age of smartphone ownership across 4 longitudinal waves."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Development and Psychopathology (2025), no evidence of duplication."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 passes: \"smartphone ownership\" (binary yes/no; age of acquisition) is a phone-specific variable (Methods: \"parents were asked several questions regarding their child's smartphone ownership\"). IV paired with individual-trait DV: parent-child informant discrepancy in youth internalizing problems (measured via parent-report vs. youth-report on Child Behavior Checklist/Youth Self-Report). Figure 1 and Table 3 show numeric estimates: β=.29*** for smartphone ownership effect on internalizing problems in 9&10 group; significant informant discrepancy effect emerges post-acquisition (β=-.21, SE=.042, p<.001 for interaction)."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple quantitative results: β coefficients, SE, p-values throughout Tables 3–4 and Figure 1. Example: Table 3 shows β=-.85 (SE=.08, p<.001) for Time × Informant interaction in 8&under group."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results for all models. Tables 3–4 report β, SE, and p-values for direct and indirect effects; Figure 1 shows path coefficients with significance markers."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, Baseline N=11,878, data release 5.1, four waves (Years 1-4). Multisite U.S. cohort aged 9-10 at baseline."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: multi-level longitudinal models (MLM) and latent growth curve analysis examining smartphone ownership age and informant discrepancy of internalizing problems across 4 waves."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed publication in Development and Psychopathology (2025); no indication of prior duplicate in corpus."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1: Smartphone ownership (age of first smartphone, categorized as 8&under, 9&10, 11&12, 13&14, No Phone) is the qualifying SM/phone variable. Table 3 reports multi-level model estimates pairing smartphone ownership group with internalizing problems (the individual-trait outcome): e.g., Informant effect (beta_2) in 8&under group b = -0.85, SE = .08, p < .001; 9&10 group b = -0.68, SE = .04, p < .001. These are numeric estimates (b, beta, SE, p) where smartphone ownership is IV and youth internalizing problems (anxious/depressed, withdrawn/depressed) is the individual-trait-level outcome. FT-IC2 MET at Step 1."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative results reported: MLM coefficients (b, beta, SE, p-values) in Table 3 and Table 4, latent growth curve slopes, and chi-square difference tests across smartphone ownership age groups."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analysis pairing smartphone ownership (qualifying phone variable) with youth internalizing problems (individual-trait outcome) with reported numeric results. Criterion MET jointly with IC3."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Smartphone ownership is IV, not DV-only. Longitudinal design, but smartphone ownership predicts informant discrepancy (direction is IV→DV), so FT-EC7's SM-as-DV-only criterion is not met.",
-    "notes": "Strong qualifier. Smartphone ownership is objectively operationalized (parental report of yes/no and age acquired); internalizing problems are individual-trait outcome (parent-child psychosocial discrepancy measured via validated instruments CBCL and YSR). All multi-level models adjust for covariates and account for within-person and between-person variance."
+    "FT_EC7_reason": "Smartphone ownership serves as IV (predictor/grouping variable) throughout; internalizing problems is the DV. FT-EC7 requires SM/phone to be DV in every analysis with no SM-as-IV analysis anywhere — here SM/phone is the IV. EC7 does not apply.",
+    "notes": "Smartphone ownership age as IV predicting parent-child informant discrepancy of internalizing problems as outcome. Longitudinal design across 4 waves. INCLUDE."
   },
   {
     "paper_id": "175",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods state: \"We used data from the Adolescent Brain Cognitive Development (ABCD) Study to address study aims. The ABCD Study recruited over 11,500 adolescents aged 9–10 across 21 sites beginning in 2015 with follow-up data collection planned every 6 months for a total of 10 years.\" U.S. ABCD Study confirmed."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis. Longitudinal, bidirectional cross-lagged panel models examining associations between electronic media use (total EMU and specific types: social EMU, video games, video viewing) and family conflict across T1, T2, T3, T4."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Journal of Family Psychology (2025), no evidence of duplication."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 passes: \"electronic media use\" (measured via Screen Time Questionnaire at T1, T2, T3; includes social media, video games, video viewing) is a phone/SM-specific composite variable. Paired with individual-trait outcome: family conflict (measured via Family Environment Scale 9-item conflict subscale; individual-trait intra-family behavioral construct). Methods state youth reported daily EMU via multiple items (\"How often on you use: Text on a phone, tablet, or computer (i.e., Kik, Whatsapp, etc.)?\"; \"Play social games on a computer, console, phone, or other device?\"; \"Watch videos (Such as YouTube)?\"). Results show numeric associations: Total EMU → Family Conflict (best fitting model β=0.88, p<.05 in Table); Social EMU → Family Conflict in girls (Figures 3–4 show path coefficients with significance). Table reports β estimates ranging from -0.59 to 0.39 with p-values."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple quantitative results: path coefficients (β) with SE and p-values throughout. Tables 1 and Figures 1–4 report β, 95% CI, and p-values for direct/indirect effects of EMU on family conflict across timepoints."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results. Structural equation models report path coefficients, comparative fit indices, and standardized estimates. Example: Table 1 shows correlations and means; Figures 1–4 show path models with β estimates and significance (β values displayed directly on arrows, p<.001 marked with ***)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, T1 N=11,787, ABCD cohort aged 9-10 at baseline, recruited across 21 U.S. sites, longitudinal data across 4 waves."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: random-intercept crosslagged panel models (RI-CLPM) examining bidirectional associations between electronic media use and family conflict across 4 annual waves."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed publication in Journal of Family Psychology (2025); no indication of prior duplicate in corpus."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1: Social EMU composite (defined in methods as 'social media + texting') has its own separate crosslagged path estimates reported for boys (Figure 3) and girls (Figure 4), with numeric path coefficients (e.g., girls: L_EB->L_E1 = -0.42***, L_E1->L_F2 = 0.27***) and text-reported values (p.1032: t1-t2 b = -0.59, beta = -.18, SE = .02, p < .001 for girls; t2-t3 b = 0.13, beta = .08, SE = .03, p < .001). Social EMU is exclusively social media + texting — phone/SM-specific items — paired with family conflict (an individual-trait/family-functioning outcome). FT-IC2 MET at Step 1."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative results reported: crosslagged path coefficients (b, beta, SE, p-values) for total EMU, social EMU, video-viewing EMU, and video game EMU across Figures 1-5 and supporting text."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential RI-CLPM analysis pairing social EMU (qualifying phone/SM variable) with family conflict (individual-trait family-functioning outcome) with reported numeric results. Criterion MET jointly with IC3."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design, but electronic media use appears as IV in bidirectional cross-lagged models (EMU→Family Conflict and Family Conflict→EMU). FT-EC7 requires SM-as-DV-only with no SM-as-IV analysis; this paper has both directions tested.",
-    "notes": "Strong qualifier. Electronic media use is self-reported via Screen Time Questionnaire; family conflict is individual-trait outcome (intra-family behavioral construct measured via validated Family Environment Scale). Bidirectional models allow for tests of both directions. All analyses adjusted for income, parental education, and youth sex; multiple-group models tested for gender differences. Tables and figures provide comprehensive numeric results."
+    "FT_EC7_reason": "Bidirectional RI-CLPM design: social EMU (and total EMU) appears as both IV (predicting later family conflict) and DV (family conflict predicting later EMU). SM/phone is IV in analyses, so FT-EC7 does not apply.",
+    "notes": "Social EMU (social media + texting) as qualifying variable in bidirectional crosslagged model with family conflict as individual-trait outcome. Social EMU is exclusively phone/SM items. INCLUDE."
   }
 ]

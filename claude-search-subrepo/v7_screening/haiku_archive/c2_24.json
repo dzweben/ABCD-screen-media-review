@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "521",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline data from 10,842 participants in the Adolescent Brain Cognition Development Study; U.S. ABCD with 21 study sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; cross-sectional comparison of screen time patterns by autism status and gender, with propensity score matching and GLM analyses."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Frontiers in Pediatrics."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: paper reports separate estimates for phone/SM-specific variables paired with individual-trait outcome. Passive viewing (TV/movies/videos), video games, social media/video chat, and texting hours per day each paired with obesity status (health outcome). Obesity prevalence increased significantly with passive screen time (p = 0.002), video games (p = 0.05), and texting (p = 0.04)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric results reported: prevalence ratios with 95% confidence intervals for each screen time category vs. reference. Example: passive screen time 4+ hours vs. <2 hours, PR = 2.15 (95% CI 1.40-3.31, p < 0.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric quantification: logistic and Poisson GLM models with prevalence ratios, 95% CIs, and p-values for SM/phone variables and obesity outcomes."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (baseline data only); EC7 requires longitudinal design. Cross-sectional carve-out applies: no longitudinal SM-as-DV-only pattern present.",
+    "notes": "Paper compares screen time patterns between children with autism and typically developing peers, with stratified analyses by gender. All screen modalities measured separately and paired with obesity (individual-trait health outcome)."
+  },
+  {
+    "paper_id": "101",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; 8,324 children at baseline (9-11 years, Sept 2016-Oct 2018), 3,891 at year 2 follow-up (July 2018-Jan 2020)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; two-year longitudinal study examining resting-state fMRI fronto-striatal connectivity as a function of baseline screen exposure, with mediation by reward sensitivity."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Developmental Cognitive Neuroscience."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: Screen-Activity Proportion (SAP) is a screen time variable (proportion of daily time on screens vs. non-screen activities). Paired with individual-trait neural outcome (fronto-striatal connectivity, inhibitory control network). Baseline SAP negatively associated with FPN-Striatum connectivity at baseline (r = -0.040, 95% CI [-0.0605, -0.0186], BF10 = 13.10) and year 2 (r = -0.0933, 95% CI [-0.1231, -0.0635], BF10 = 428995.74)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric results: Pearson correlation coefficients, 50,000 bootstrap confidence intervals, Bayes factors (BF10), and independent t-tests comparing high vs. low SAP groups on fronto-striatal connectivity."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with multiple quantitative results: correlation analyses, group comparisons (t-tests with Cohen's d), mediation analysis with indirect effect estimates, and bootstrapped CIs."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design, but screen time is analyzed as IV (predictor), not exclusively as DV. Paper examines how screen exposure predicts neural development. EC7 requires SM-as-DV-only in every analysis; this fails that condition.",
+    "notes": "Paper uses two-year follow-up ABCD data with resting-state fMRI. Screen time measured via child self-report (Youth Screen Time Survey). Primary outcome is fronto-striatal connectivity change. Mediation analysis tests indirect effect of SAP on FPN-Striatum connectivity through reward sensitivity (BAS score)."
+  },
+  {
+    "paper_id": "160",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; N = 11,633 participants at baseline (2016-2018, ages 9-11 years), analyzed at two-year follow-up (2018-2020)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; prospective cohort study with logistic regression examining baseline screen time associations with two-year suicidal behaviors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article in Preventive Medicine."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: paper reports separate estimates for phone/SM-specific modalities paired with individual-trait mental health outcome. Texting (aOR 1.36, 95% CI 1.06-1.74), video chatting (aOR 1.30, 95% CI 1.03-1.65), watching videos (aOR 1.21, 95% CI 1.04-1.39), and playing video games (aOR 1.18, 95% CI 1.01-1.38) each associated with suicidal behaviors. Suicidal behaviors (psychiatric symptom, mental health outcome) is individual-trait-level."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric results reported: adjusted odds ratios with 95% confidence intervals for baseline screen time modalities predicting suicidal behaviors at follow-up. Total screen time aOR 1.09 (95% CI 1.03-1.14) per additional hour."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with multiple logistic regression models yielding numeric quantification: adjusted odds ratios and 95% CIs for each screen modality and overall screen time."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design, but screen time is analyzed as IV (predictor of suicidal behaviors), not as DV. EC7 condition 2 (SM is DV in every analysis) fails; condition 3 (no SM-as-IV analysis) also fails. EC7 does not apply.",
+    "notes": "Prospective cohort study; baseline screen time measured via child self-report (Youth Screen Time Survey); outcome is suicidal behaviors assessed via KSADS-5 at two-year follow-up. Confounders controlled: age, sex, race/ethnicity, household income, parental education, baseline major depressive disorder, family history of psychopathology."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "86",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study participants, baseline Year 2 (2018-2020), ages 11-12 years, N=8119"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis, baseline Year 2 to Year 3 follow-up, multiple regression models with reported coefficients"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication, American Journal of Preventive Medicine, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 direct hit: MPIQ (Mobile Phone Involvement Questionnaire), SMAQ (Social Media Addiction Questionnaire), VGAQ (Video Game Addiction Questionnaire) as phone/SM-specific variables paired with individual-trait outcomes. Results show associations with depressive problems (β=0.31 phone, 0.42 SM, 0.32 video), attention/deficit problems (β=0.23 phone, 0.23 SM, 0.25 video), oppositional defiant (β=0.16 phone, 0.27 SM, 0.20 video), conduct problems (β=0.20 phone, 0.29 SM, 0.11 video), somatic problems (β=0.21 phone, 0.28 SM), suicidal behaviors (OR 1.57 phone, 1.86 SM, 1.54 video), sleep disturbance (OR 1.11 phone/SM, 1.19 video), and substance initiation (OR 1.23 phone, 1.24 SM). Other side meets individual-trait requirement (mental health, sleep, substance use)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear and logistic regression analyses with quantitative results throughout. Figures 1-2 report β coefficients, odds ratios, and 95% CIs for all outcomes"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported for all associations: regression coefficients with 95% CIs reported in text, tables, and figures for CBCL outcomes, suicidal behaviors, sleep disturbance, and substance use initiation"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (Year 2 to Year 3) but SM/phone variables function as IVs in all reported analyses, not DVs. Paper analyzes SM/phone use predicting outcomes, not outcomes predicting SM/phone use. SM-as-DV-only criterion does not apply",
+    "notes": "Strong candidate for inclusion. Multiple phone/SM-specific measures (MPIQ, SMAQ, VGAQ) paired with individual-trait outcomes across prospective follow-up. All three SM/phone variables show consistent associations with mental health, sleep, and substance use."
+  },
+  {
+    "paper_id": "144",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study participants, baseline 2016-2018 (ages 8-11), Year 2 2018-2020 (ages 10-13), N=7528"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis using group-based trajectory modeling (GBTM) across three time points (baseline, Year 1, Year 2) to predict cognitive outcomes at Year 2"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication, Lancet Regional Health Americas, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 direct hit: Youth-reported social media time (measured in hours per day, baseline through Year 2) is phone/SM-specific variable paired with individual-trait cognitive outcomes. Three trajectory groups identified: no/very low use (0.1 h/day), low increasing (0.8 h/day), high increasing (3.1 h/day). Associations reported with Rey Auditory Verbal Learning Test (RAVLT) Initial Learning Trials, Retroactive Interference, Long Delay Recall, and Little Man Task (LMT) accuracy. Other side meets individual-trait requirement (cognitive performance: memory, visuospatial attention)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Linear regression models with adjusted beta coefficients and 95% CIs reported in Table 2"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results throughout: Low increasing trajectory vs reference: RAVLT Initial (B: -1.38), Retroactive Interference (B: -0.38), Long Delay (B: -0.41). High increasing trajectory: LMT accuracy (B: -0.03), RAVLT Initial (B: -1.90), Retroactive Interference (B: -0.61), Long Delay (B: -0.55). All with 95% CIs and p-values"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (baseline to Year 2) but social media is IV (predictor) in trajectory models predicting cognitive outcomes at Year 2, not DV-only. Paper uses social media time to predict cognitive function, not outcomes predicting social media. SM-as-IV is present, disqualifying FT-EC7 application",
+    "notes": "Strong candidate for inclusion. Social media trajectory modeling across two years prospectively associated with cognitive performance at Year 2. Associations persist after adjustment for baseline cognition, sociodemographics, ADHD/depressive symptoms, and non-SM screen time."
+  },
+  {
+    "paper_id": "7",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study participants, baseline 2016-2019, ages 9-11, N=4262 with European ancestry genetic data"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using genetic sensitivity analysis (Gsens framework) to decompose genetic confounding in associations between screen time and psychiatric outcomes"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication, JAMA Network Open, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 fails: Exposure is generic \"child screen time\" (self-reported daily hours from Screen Time Questionnaire, range 0-4+ hours), not phone/SM-specific. Label does not meet phone/SM-specific items requirement (time on phone, SM use, texting, etc.). Step 2 not applicable (no composite reported). While paper reports numeric associations between screen time and attention problems (β=0.10 SD) and internalizing problems (β=0.03 SD), the exposure variable fails to meet FT-IC2 Step 1 phone/SM-specificity criterion. Screen time is generic, not smartphone or social media use. Paper's core scientific contribution is genetic confounding decomposition via PRS, not establishment of qualifying SM↔outcome association"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Excluded under FT-IC2. Exposure is generic screen time, not phone/SM-specific variable. Paper analyzes genetic confounding in the relationship between generic screen use and psychiatric outcomes using polygenic risk scores, but does not meet the phone/SM-specificity requirement for inclusion in this systematic review"
+  }
+]

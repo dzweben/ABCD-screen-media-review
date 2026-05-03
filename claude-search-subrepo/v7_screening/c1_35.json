@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "141",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline 2016-2018, n=10,755 participants ages 9-10 years from 21 recruitment sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis with multiple linear regression examining associations between sociodemographic factors and 6 screen time modalities"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in The Journal of Pediatrics"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific variable estimates found (no time on specific platforms, MPIQ, SMAQ, or other phone/SM measures reported as main variables). Step 2: Composite includes TV, video games, social media, texting, video chat—bundles TV (non-phone/non-SM) with phone/SM items without separate breakout. Other side: all predictors are demographic-only (sex, race/ethnicity, income, education), not individual-trait-level per §2.4 definition"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, baseline 2016-2018 (3.0 release), 10,755 children aged 9-10 from 21 U.S. recruitment sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis of ABCD baseline data using multiple linear regression."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in The Journal of Pediatrics (2022). No evidence of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Social networking, texting, and video chat are analyzed as DVs (hours/day) with sex, race/ethnicity, country of birth, household income, and parental education as IVs. Although SM/phone-specific variables (social networking, texting, video chat) appear with their own regression coefficients, the other side of every analysis is entirely demographic-only (sex, race/ethnicity, household income, parental education, country of birth). No individual-trait-level variable (behavioral, health, cognitive, well-being, etc.) appears on the other side in any analysis. Fails the other-side rule."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded at FT-EC2: composite screen time with demographic-only predictors"
+    "notes": "All analyses pair screen time modalities (including SM/phone) with demographic predictors only. No individual-trait outcome on the other side of any analysis."
   },
   {
     "paper_id": "152",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, December 2020 COVID-19 rapid response survey, n=4,106 adolescents ages 12-14"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis with modified Poisson regression examining associations between COVID-19 information sources and masking behaviors"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Preventive Medicine Reports"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Social media and television media are measured as information exposure frequency (predictors), not as qualifying phone/SM variables per Step 1 criteria (no time-on-SM, SMAQ, platform-specific items). Step 2: No composite of phone/SM use items formed. Other side: masking behavior is a health behavior outcome, not an individual-trait-level variable per §2.4. The relationship analyzed is information source exposure → protective health behavior, not SM/phone use paired with individual-trait variable"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded at FT-EC2: information exposure (not qualifying SM/phone variable) paired with health behavior outcome (not individual-trait variable)"
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, December 2020 COVID-19 rapid-response survey, 4,106 adolescents ages 12-14 from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis using modified Poisson regression on ABCD COVID-19 rapid-response data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in Preventive Medicine Reports (2022). No evidence of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Checking COVID-related social media activity (Facebook, Twitter, Instagram, TikTok, Snapchat) is measured as IV with its own adjusted risk ratio (ARR 1.09, 95% CI 1.00-1.19, p=0.049) predicting always-masking behavior. Masking behavior is a health behavior (individual-trait-level). Social media variable is SM-specific (named platforms listed). Other-side criterion met: masking behavior is a health/behavioral outcome."},
+    "FT_IC3": {"status": "MET", "evidence": "ARR = 1.09 (95% CI 1.00-1.19, p=0.049) reported for social media frequency -> always masking in adjusted Poisson regression model (Table 2)."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential Poisson regression analysis with numeric risk ratio reported for the SM-masking relationship."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires a longitudinal design. Not applicable.",
+    "notes": "Social media exposure as IV predicting masking behavior (health behavior). Clear SM-specific variable with individual-trait outcome on the other side."
   },
   {
     "paper_id": "183",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 2 follow-up 2018-2020, n=8,753 adolescents ages 10-14 from 21 recruitment sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis with multiple linear regression examining associations between sociodemographic factors and three problematic screen use measures (VGAQ, SMAQ, MPIQ)"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Pediatric Research"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Paper analyzes VGAQ (Video Game Addiction Questionnaire), SMAQ (Social Media Addiction Questionnaire), and MPIQ (Mobile Phone Involvement Questionnaire). Per §2.4 binding clarification (1): \"Problematic-use scales are SM/phone variables, not 'individual-trait' outcomes.\" All analyses pair sociodemographic predictors (age, sex, race/ethnicity, primary language, income, education, parent marital status)—demographic-only or family-structure (not individual-trait-level)—with VGAQ/SMAQ/MPIQ as dependent variables. Other side is demographic-only, not individual-trait-level per §2.4 definition"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, Year 2 follow-up 2018-2020 (4.0 release), N=8,753 from 21 U.S. recruitment sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis of ABCD Year 2 data using multiple linear regression."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in Pediatric Research (2022). No evidence of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Three DVs analyzed: VGAQ (Video Game Addiction Questionnaire), SMAQ (Social Media Addiction Questionnaire), and MPIQ (Mobile Phone Involvement Questionnaire). Per binding clarification, SMAQ and MPIQ are SM/phone variables, not individual-trait outcomes on the other side. The IVs are entirely demographic (age, sex, race/ethnicity, primary language, household income, parental education, parent marital status). Every analysis pairs SM/phone variables (SMAQ, MPIQ as DVs) with demographic-only predictors. The other side of every analysis is demographic-only. Fails the other-side rule."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded at FT-EC2: problematic-use scales (VGAQ, SMAQ, MPIQ) as DV with demographic-only predictors; per binding rule §2.4(1), scales measure SM/phone variables, not individual-trait outcomes"
+    "notes": "All DVs (SMAQ, MPIQ, VGAQ) are SM/phone/gaming variables per binding clarifications. All IVs are demographic. No individual-trait outcome on the other side of any analysis."
   }
 ]

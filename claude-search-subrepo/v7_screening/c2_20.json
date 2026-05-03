@@ -3,19 +3,19 @@
     "paper_id": "2",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, passive sensing data via EARS app on Android devices, Years 4, 5, and 6"
+      "evidence": "Supplement confirms EARS app data from ABCD Study participants (follow-up years 4, 5, and 6); 640 adolescents in final analytic sample from ABCD Study."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis of passive smartphone data using EARS app; statistical analysis in R with adjusted means calculated using emmeans package"
+      "evidence": "Original empirical analysis of ABCD EARS passive-sensing smartphone data; reports adjusted means of app-category time during school hours."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in JAMA (2026)"
+      "evidence": "Published in JAMA (2026); no indication of duplicate status."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Paper reports app category time (Instagram, TikTok, Snapchat, gaming, etc.) but is descriptive/characterization only. No analyses pair smartphone/SM variables with individual-trait-level outcomes (neural, behavioral, health, cognitive, well-being). Study characterizes app usage patterns during school hours with no association analyses presented"
+      "evidence": "Step 1: The only analyses reported are adjusted means of smartphone app-category time (minutes per school day) broken down by demographic groups (sex, race/ethnicity) and by SMAQ/MPIQ tertile. No numeric estimate pairs a phone/SM variable with an individual-trait-level outcome. Step 2 not needed. Other-side rule: The other side of all analyses is either (a) demographics (sex, race/ethnicity) — which are demographic-only and fail the other-side rule — or (b) SMAQ/MPIQ tertile groups — but SMAQ and MPIQ are themselves SM/phone variables (per binding clarification #1), not individual-trait outcomes. No individual-trait-level variable (mental health, cognition, behavior, etc.) appears on the other side of any analysis."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -27,25 +27,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Descriptive characterization of smartphone use during school hours; no outcome associations analyzed"
+    "notes": "PDF is supplement-only (eMethods + eReferences). Main paper (JAMA research letter) not available as full PDF but supplement provides sufficient detail to assess IC2. All analyses characterize smartphone app-category time during school hours by demographics and SMAQ/MPIQ tertile — no individual-trait outcome on the other side."
   },
   {
     "paper_id": "36",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 2 (2018–2020, ages 11–12) and Year 4 (2020–2022, ages 13–14), N=5356"
+      "evidence": "\"This study analyzed prospective data from 5356 US adolescents in the Adolescent Brain Cognitive Development (ABCD) Study, Year 2 (2018-2020, ages 11-12) and Year 4 (2020-2022, ages 13-14).\""
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective cohort analysis with Fitbit-derived step count and self-reported screen time; multivariable linear and Poisson regression models"
+      "evidence": "Original prospective empirical analysis; multivariable linear and Poisson regression of screen time and step count predicting BMI percentile and overweight/obesity risk."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Obesity (2026)"
+      "evidence": "Published in Obesity (2026); no indication of duplicate status."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Screen time composite bundles TV, videos (source unspecified), video games (platform unspecified), texting, social media, and video chat. Per binding rule: \"Multi-device aggregated time fails Step 2\" and composite includes non-phone/non-SM ingredients (TV, unspecified-platform gaming) without separate breakout. No per-device isolation for smartphone alone"
+      "evidence": "Step 1: No estimate in any results location (Table 2, Figure 1, or supplementary tables S1-S2) uses a phone/SM-specific variable label (e.g., time on phone, time on SM, texting, social media). The only exposure is total recreational screen time from the ABCD Youth Screen Time Survey. Step 2: Methods explicitly state the composite was derived by summing time across modalities including \"watching television and videos, playing video games, texting, social media, video chat.\" This composite bundles TV and console/unspecified video games alongside phone/SM items without any separate per-modality breakout in results. Per binding clarification, a composite including TV and unspecified video games fails Step 2. IC2 = NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -57,25 +57,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Prospective design but composite screen time variable fails FT-IC2 due to bundling TV and unspecified-platform gaming without device-level breakdown"
+    "notes": "BMI/overweight-obesity outcome is a qualifying individual-trait outcome. The paper fails IC2 solely because the screen time composite bundles TV and unspecified video games with phone/SM items and no per-modality breakout is provided anywhere in the paper."
   },
   {
     "paper_id": "67",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 3 (2019–2021) to Year 5 (2021–2023), N=7407 adolescents (51.6% male, age 12.9±0.6 years)"
+      "evidence": "\"We analyzed data from year 3 (2019-2021, 11-13 years old) to year 5 (2021-2023, 14-16 years old) of the Adolescent Brain Cognitive Development (ABCD) study\" with data from ABCD 6.0 release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective analysis with mixed-effects ordinal logistic regression and generalized linear models assessing media parenting practices as predictors of video game behaviors 1 and 2 years later"
+      "evidence": "Original prospective empirical analysis; mixed-effects ordinal logistic regression and generalized linear models of media parenting practices predicting video game outcomes at years 4 and 5."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in World Journal of Pediatrics (2026)"
+      "evidence": "Published in World Journal of Pediatrics (2026); no indication of duplicate status."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Paper measures unspecified-platform gaming (VGAQ-based outcomes: mature-rated games, problematic use, weekend game time) without isolating mobile/phone-based gaming. Per binding rule: \"Gaming alone (VGAQ, IGDS9-SF, console, PC, unspecified-platform, gaming addiction) fails IC2 unless explicitly mobile/phone-based OR paired with separately-measured phone/SM variable.\" IV side is parenting practices only (no phone/SM variable present). No qualifying phone/SM variable on either side of the association"
+      "evidence": "Step 1: Search of all results locations (Table 2, supplementary sex-stratified results, group-based trajectory models) finds no numeric estimate with a phone/SM-specific variable label. The IVs are media parenting practices (screen time modeling, mealtime screen use, bedroom screen use, use of screens to control behavior, monitoring, limiting) — not phone/SM variables. The DVs are video game outcomes: mature-rated video game frequency, problematic video game use (VGAQ), and weekend video game time. Step 2 not applicable since DVs are the screen variable side and no phone/SM variable is present on either side. Per binding clarification #2, gaming alone (VGAQ, generic video game time, mature-rated game frequency) does not qualify as a phone/SM variable unless explicitly mobile/phone-based or paired with a separately-measured phone/SM variable. No such pairing exists anywhere in the paper. IC2 = NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Gaming outcomes are unspecified-platform (VGAQ) with no separate phone-based gaming measure; parenting practices as predictors do not constitute a qualifying phone/SM variable per FT-IC2"
+    "notes": "Study focuses entirely on media parenting practices predicting video game behaviors. Gaming variables (VGAQ, mature-rated game frequency, weekend video game time) are not phone/SM variables per the binding gaming carve-out. No phone or social media variable appears anywhere in the analysis."
   }
 ]

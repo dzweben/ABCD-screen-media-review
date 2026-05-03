@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "429",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, baseline ages 8-11 years, cross-sectional curated release from first annual release; 4524 children analyzed"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: structural equation modeling relating movement behavior recommendations (including screen time) to impulsivity dimensions"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Pediatrics, 2019"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 success: screen time (ST) measured separately as weighted average of weekday/weekend hours, paired with individual-trait impulsivity outcomes (negative urgency, positive urgency, BIS, BAS dimensions, perseverance, delay-discounting). Direct quantitative estimates reported in Table 3 (e.g., β=-0.08 for ST on negative urgency)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported throughout: standardized β coefficients, 95% CIs, and p-values for ST↔impulsivity relationships (Table 3). Multiple significant pathways reported with numerical estimates."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results: structural equation modeling with standardized path coefficients; e.g., ST + sleep→negative urgency β=-0.12 (95% CI -0.20 to -0.10)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (explicitly stated: \"cross-sectional observational study\"). FT-EC7 applies only to longitudinal designs. Cross-sectional carve-out: paper contains no longitudinal analyses, so EC7 does not apply.",
+    "notes": "Paper analyzes Canadian 24-Hour Movement Guidelines but uses U.S. ABCD data. Screen time is measured independently, not aggregated with other media; paired with individual-trait impulsivity outcomes. INCLUDE."
+  },
+  {
+    "paper_id": "116",
+    "FT_IC1": {
+      "status": "NOT_MET",
+      "evidence": "Amsterdam Born Children and their Development (ABCD) study, in the Netherlands. This is the Dutch ABCD cohort, not the U.S. NIH-funded Adolescent Brain Cognitive Development Study. Non-U.S. ABCD initiative fails FT-IC1."
+    },
+    "FT_IC5": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC6": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC2": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "EXCLUDE under FT-EC1. Dutch ABCD cohort, not U.S. ABCD Study."
+  },
+  {
+    "paper_id": "146",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study; N=4277 of 4524 with usable structural imaging and SMA data; multi-site U.S. recruitment; baseline ages 9-10"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: Group Factor Analysis (GFA) on ABCD data relating screen media activity to cortical thickness, sulcal depth, and gray matter volume; downstream associations with psychopathology and cognition"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in NeuroImage, 2019"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: SMA is measured but reported as GFA-derived latent variables predicting brain structure, not as direct estimates paired with individual-trait outcomes. Direct SMA↔individual-trait coefficients not found. Step 2: Composite analysis. SMA per methods: \"watching television or videos, playing video games, or using social media.\" This composite bundles TV and video games with social media without separate breakout. TV and video games are explicitly disqualifying non-phone/non-SM ingredients. NOT_MET per Step 2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "EXCLUDE under FT-EC2. SMA composite includes TV and video games without separate breakout; does not isolate phone/SM items. Disqualifying non-phone/non-SM ingredients bundled without breakout."
+  }
+]

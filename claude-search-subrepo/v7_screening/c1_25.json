@@ -1,92 +1,38 @@
 [
   {
-    "paper_id": "105",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods section states: \"Using data from the Adolescent Brain Cognitive Development Study, we assessed the association between cyberbullying victimization and substance use initiation among adolescents.\""
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis with cross-sectional and longitudinal logistic regression examining cyberbullying victimization and substance initiation in ABCD Study participants (N=10,335 at year 2; N=6095 at year 3)."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Drug and Alcohol Dependence, 2023. No evidence of duplication."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Paper analyzes cyberbullying victimization (IV) and substance initiation (DV). Per BINDING clarification §2.4: \"Cyberbullying alone does not qualify.\" Paper contains no separately-measured phone/SM variable paired with cyberbullying. Cyberbullying is the sole exposure variable; no Step 1 phone/SM-specific estimate found, and Step 2 composite analysis not applicable."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "paper_id": "132",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study; 10,574 early adolescents aged 9-14 years from 21 recruitment sites across the U.S.; ABCD 4.0 data release cited."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional and longitudinal analysis using multivariable linear mixed models on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Adolescent Health; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific numeric estimate found anywhere. All results use composite 24-hour movement behavior categories (e.g., Sleep Only, Screen Time Only, Sleep & Screen Time, All). Step 2: The screen time composite is derived from the ABCD Youth Screen Time Survey covering six activities: internet browsing, texting, video chatting, social media use, single player video games, and multiplayer video games. This composite bundles phone/SM items (texting, video chatting, social media) with non-phone/non-SM items (internet browsing, single player games, multiplayer games on unspecified platform). No per-modality breakout is reported in main results, figures, or supplementary tables. Composite fails Step 2."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2. Paper does not qualify as containing a phone/SM variable per IC2 binding rules."
+    "notes": "Paper examines adherence to 24-hour movement guidelines (sleep + screen time + physical activity) and cognitive, psychosocial, BMI, and brain morphometric outcomes. The screen time component is a bundled composite including gaming and internet browsing alongside social media and texting; no separate phone/SM breakout in any results table or figure."
   },
   {
-    "paper_id": "132",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods: \"Data from the Adolescent Brain Cognitive Development (ABCD) study of 10,574 early adolescents aged 9-14 years from September 2016 to January 2021 were used...\""
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis with cross-sectional and longitudinal linear mixed models examining adherence to 24-hour movement guidelines (physical activity, screen time, sleep) and outcomes (cognition, psychosocial health, zBMI, gray matter volume)."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Journal of Adolescent Health, 2023. No evidence of duplication."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No isolated phone/SM-specific estimate found. The headline composite is 24-hour movement guidelines combining sleep, physical activity, and screen time with single coefficients per category, not separate per-modality breakouts. Step 2: Composite 24-MB includes sleep (9-11 hours), physical activity (≥60 min), and screen time (≤2 hours). Screen time qualifies as phone/SM, but it is bundled with non-phone/non-SM items (sleep duration, physical activity) without separate breakout for screen time alone. Per criteria: composite with TV/non-SM items bundled without breakout fails Step 2. NOT_MET."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "paper_id": "105",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study; multi-center prospective cohort enrolling 11,875 children aged 9-10 from 21 U.S. recruitment sites; Year 2 and Year 3 data used."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional and longitudinal analysis using multivariable logistic regression on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Drug and Alcohol Dependence; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The only exposure variable is cyberbullying victimization (lifetime history and past-12-month history), measured by the question about being cyberbullied online, in texts, or on social media. No phone/SM-specific variable (time on phone, time on social media, named platform use, texting frequency, etc.) appears anywhere in the paper with its own numeric estimate. Per binding clarification, cyberbullying alone fails IC2. Step 2 not reached. All numeric estimates (OR=2.17, 2.31, 2.22, 2.34, etc.) are for cyberbullying as predictor of substance initiation; no qualifying phone/SM variable is present."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2. Composite includes non-screen-time items (sleep, activity) without isolated screen-time coefficient. No phone/SM-specific variable qualifies per IC2 Step 1 or Step 2."
+    "notes": "Cyberbullying victimization is the sole exposure. Binding clarification states cyberbullying alone does not qualify for IC2 unless paired with a separately-measured phone/SM variable that has its own coefficient. No such variable exists in this paper."
   },
   {
     "paper_id": "177",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods: \"We analyzed data from the ABCD Study, a demographically diverse study of development across adolescence...including 11,875 children aged 9-10 from 21 sites in the United States.\""
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis using mixed-effect models examining associations between self-reported sleep and screen time (social media, video gaming) in ABCD participants across pre-pandemic and pandemic timepoints."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Health Psychology, 2023. No evidence of duplication."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Paper isolates phone/SM-specific variables in results. Methods state \"six screen activities (internet browsing, texting, video chatting, social media use, playing single player, and playing multiplayer video games).\" Results report \"time spent on social media platforms\" and \"time spent on single player video games\" as separate variables analyzed. Sleep (time in bed, bedtime, sleep onset latency) is individual-trait-level outcome. Main effects reported: \"time spent on social media platforms (χ²(1) = 114.56, p<.01)\" and \"time spent on single player video games (χ²(1) = 6.13, p = .013)\" significantly associated with time in bed. Phone/SM-specific variables paired with individual-trait sleep outcome. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results reported throughout. Examples: regression coefficients (slopes with p-values), χ² tests, confidence intervals for sleep measures (time in bed, bedtime, sleep onset latency). Results table S2-S7 provide multiple quantitative estimates for SM↔sleep relationships."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results present in main text and supplements. Mixed-effect models with unstandardized estimates and p-values reported. Example: social media × assessment interaction (χ²_social media × assessment(6) = 117.19, p < .01)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study; 5,027 adolescents at 21 sites; ABCD Study Year 2 pre-pandemic data and COVID-19 rapid-response surveys (2020-2021) used; 3.0 release and COVID releases cited."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal and cross-sectional analysis using linear mixed-effects models (LMM) and generalized mixed-effects models (GLMM) on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Health Psychology; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 finds qualifying estimates. The paper separates screen time into two distinct variables: 'time spent on social media platforms' and 'single player video game time.' Social media use is an IV with its own numeric estimates across multiple sleep outcomes: time in bed (chi2=114.56, p<.01; simple slopesPre-pandemic=-0.24 through March=-0.12 all p<.01); bedtime (chi2=456.52, p<.01; simple slopesPre-pandemic=0.19 through March=0.09 all p<.01); sleep onset latency (chi2=33.74, p<.01); number of awakenings (chi2=6.94, p=.008). Sleep outcomes (TIB, bedtime, sleep onset latency, awakenings) are individual-trait-level health variables. Step 1 MET; stop."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative estimates reported for social media use -> sleep outcomes: chi-square statistics, simple slopes (e.g., slopePre-pandemic=-0.24, p<.01 for social media ~ TIB), and confidence intervals throughout Tables S2-S7 and main results section."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential LMM/GLMM analyses with numeric results for the SM-sleep relationship reported."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Paper contains longitudinal design; however, screen time (SM/social media) appears as IV in analyses predicting sleep outcomes. Additionally, analyses include cross-sectional comparisons (e.g., pre-pandemic vs. pandemic assessments treated as separate cross-sectional snapshots). SM is not DV-only: the paper examines screen time as predictor of sleep changes. Condition (b) \"SM is DV in every analysis\" is not satisfied. FT-EC7 does not apply.",
-    "notes": "Paper qualifies for inclusion. IC2 MET via Step 1 (isolated social media and video game time as IVs paired with sleep outcomes). IC3-IC4 MET (quantitative results provided). FT-EC7 does not apply (SM serves as IV, not DV-only)."
+    "FT_EC7_reason": "Social media is IV (predictor) in every analysis, predicting sleep outcomes. EC7 requires SM to be DV in every analysis with no SM-as-IV analysis; that condition is not met here.",
+    "notes": "Paper examines pre-pandemic and pandemic-period associations between social media use (and video gaming) as predictors and sleep outcomes (TIB, bedtime, sleep onset latency, awakenings) as outcomes. Social media time is clearly phone/SM-specific and serves as IV paired with individual-trait sleep outcomes. INCLUDE."
   }
 ]

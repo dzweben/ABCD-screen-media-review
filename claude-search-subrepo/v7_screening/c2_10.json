@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "444",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Years 2-4 follow-up data, N = 2,749, baseline age 11.9 years"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: longitudinal mediation analysis with path coefficients examining relationship between gaming/caffeine use and sleep"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article, Journal of Behavioral Addictions, 2025"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Paper analyzes VGAQ (Video Game Addiction Questionnaire, generic video gaming scale) paired with sleep outcomes. VGAQ is generic gaming without explicit phone/mobile modality. Step 2: Not a composite. Per binding clarification #2, gaming alone without explicit mobile/phone modality fails IC2. No qualifying phone/SM-specific variable paired with individual-trait outcome."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, 21 research sites, baseline cohort age 9-10, NDA collection #2147 (DOI: 10.15154/8873-zj65), 5.1 data release explicitly cited in Methods."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal mediation analysis of ABCD Years 2, 3, and 4 data using causal mediation framework (lme4 and mediation R packages), N=2,749."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions, 14(2025)3, 1368-1379; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper. Exposures are gaming duration (self-reported hours/day of video gaming, platform unspecified) and problematic gaming measured by VGAQ (Video Game Addiction Questionnaire adapted from Bergen Facebook Addiction Scale). Per binding clarification #2, VGAQ and generic gaming duration without explicit mobile/phone modality do not qualify. No social media or smartphone variable appears in any main table, sensitivity, or appendix. Step 2 not reached. Gaming-only study with no qualifying phone/SM variable."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Gaming-only analysis without isolation of mobile/phone-based gaming. VGAQ is a generic video gaming addiction measure."
+    "notes": "Study examines caffeine use as mediator of gaming duration/VGAQ -> sleep outcomes. All variables are gaming, caffeine, and sleep; no smartphone or social media variable present anywhere in the paper."
   },
   {
     "paper_id": "534",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Years 2-4 data, approximately 7,260 participants, KSADS-COMP ADHD module and VGAQ administered"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed-effects models and parallel mediation model examining longitudinal association between ADHD diagnosis and VGAQ scores with nine psychosocial mediators"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article, Frontiers in Psychiatry, 2026"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Paper analyzes VGAQ (Video Game Addiction Questionnaire), a generic video gaming addiction scale without explicit phone/mobile modality. Per binding clarification #2, gaming alone fails IC2 unless explicitly mobile/phone-based or paired with separately-measured phone/SM variable. No phone/SM variable with separate coefficient exists in this paper. VGAQ is the gaming variable, not a phone/SM variable."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study (Adolescent Brain Cognitive Development), 21 U.S. sites, NIH-funded, 11,868 participants baseline age 9-10, NDA DOI: 10.82525/jy7n-g441, release 6.0 cited in Methods."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal analysis: multilevel linear regression (Years 2-4) plus parallel mediation model (Mplus 8.10) examining ADHD -> gaming addiction pathways, N~7,260-9,604."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Frontiers in Psychiatry, 17:1756782, published 06 March 2026; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper. The exposure is ADHD diagnosis (KSADS-COMP); the primary outcome is VGAQ score (Video Game Addiction Questionnaire). Per binding clarification #2, VGAQ is a gaming variable and does not qualify as a phone/SM variable. Mediators are psychosocial variables (family conflict, school involvement, prosocial peer involvement, parental monitoring, prosocial behavior, school disengagement, school environment, rule breaking, parent behavior inventory) - none are phone/SM. No smartphone or social media variable appears in any main table, supplementary table, or sensitivity analysis. Step 2 not reached. Gaming-only study with no qualifying phone/SM variable."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Analysis centers on VGAQ (generic video gaming addiction scale) as outcome, not a qualifying phone/SM variable. No isolation of mobile/phone-based gaming."
+    "notes": "Study examines ADHD -> gaming addiction (VGAQ) relationship with psychosocial mediators (prosocial peers, school involvement, family conflict). No smartphone or social media variable present anywhere in the paper."
   },
   {
     "paper_id": "395",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, participants aged 9-10 at baseline, N = 9,474, longitudinal data 2016-2022"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: group-based trajectory modeling (GBTM) for screen time and social media patterns; multivariable linear regression examining associations with anxiety/depression"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article, BMC Public Health, 2026"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Paper reports separate social media trajectory analyses (5 groups) paired with anxiety/depression outcomes (Table 4, Figure 1b). Social media qualifies as phone/SM-specific variable. Results show significant associations (e.g., Group 3 \"Increasing-then-Decreasing Use\" β = 1.44, 95% CI [0.75, 2.12] for anxiety; p < 0.001) with anxiety/depression (individual-trait-level mental health outcomes). Other-side requirement met."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric results reported for social media ↔ anxiety/depression relationship: linear regression coefficients with 95% CIs and p-values (Table 4). Main screen time groups also show significant associations with anxiety/depression (β ranging 0.55 to 1.44 for anxiety; p < 0.001)"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis: multivariable linear models with complex survey weights, group-based trajectory modeling, interaction terms examined. Numeric quantification throughout with p-values, CIs, and effect estimates reported."
-    },
-    "FT_EC7_applies": true,
-    "FT_EC7_reason": "Longitudinal design (baseline to Year 3 follow-up). Screen time and social media analyzed as DV in all analyses (no SM-as-IV analysis anywhere in paper). No cross-sectional SM-as-DV analysis present. All three conditions for FT-EC7 exclusion met.",
-    "notes": "Paper meets IC1-IC4 but is excluded by FT-EC7 longitudinal SM-DV-only rule. Social media trajectory groups (DV) paired with anxiety/depression (DV covariate structure), with alcohol/e-cigarette explored as moderator (not primary predictor structure). All analyses treat SM as outcome, not predictor."
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study (Adolescent Brain and Cognitive Development), 11,880 participants baseline age 9-10 across 21 research sites, ABCD Data Release 5.1 (January 2022) explicitly cited in Methods."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal analysis: group-based trajectory modeling (GBTM) of screen time and social media patterns plus multivariable linear regression of anxiety/depression outcomes, N=9,474, data from 2016-2022."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in BMC Public Health (2026) 26:262; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Social media use is measured and analyzed as a separate secondary exposure variable (hours per weekday/weekend, standardized across follow-ups), with its own GBTM trajectory groups and its own regression coefficients in Table 4, paired with anxiety and depression (individual-trait mental health outcomes) on the other side. Representative estimates: Group 2 (Gradual Increase to Moderate Use) vs Group 1: beta = -0.30 (95% CI: -0.58, -0.03, p=0.031) for anxiety; Groups 3, 4, 5 vs Group 1: significant betas for depression (e.g., Group 3 beta=1.03, 95% CI: 0.52, 1.55, p<0.001). Social media time is a qualifying phone/SM variable; anxiety/depression are qualifying individual-trait outcomes."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple regression beta coefficients with 95% CIs reported in Table 3 (screen time trajectories vs anxiety/depression) and Table 4 (social media trajectories vs anxiety/depression), all paired with individual-trait mental health outcomes."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results present: beta coefficients, 95% CIs, and p-values reported throughout Tables 3 and 4 for social media -> anxiety/depression relationships."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "FT-EC7 does not apply: social media is the IV (exposure/predictor) in the analyses, not the DV. Anxiety and depression are the DVs. Because SM is used as IV, condition (b) of FT-EC7 (SM as DV in every analysis) is not met.",
+    "notes": "Screen time (general, multi-device aggregate) also analyzed but social media is separately broken out with its own coefficients against anxiety/depression, providing the qualifying Step-1 hit for FT-IC2. INCLUDE."
   }
 ]

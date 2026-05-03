@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "429",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline ages 8-11 years, cross-sectional curated release from first annual release; 4524 children analyzed"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: structural equation modeling relating movement behavior recommendations (including screen time) to impulsivity dimensions"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Pediatrics, 2019"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 success: screen time (ST) measured separately as weighted average of weekday/weekend hours, paired with individual-trait impulsivity outcomes (negative urgency, positive urgency, BIS, BAS dimensions, perseverance, delay-discounting). Direct quantitative estimates reported in Table 3 (e.g., β=-0.08 for ST on negative urgency)."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results reported throughout: standardized β coefficients, 95% CIs, and p-values for ST↔impulsivity relationships (Table 3). Multiple significant pathways reported with numerical estimates."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results: structural equation modeling with standardized path coefficients; e.g., ST + sleep→negative urgency β=-0.12 (95% CI -0.20 to -0.10)"
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional (explicitly stated: \"cross-sectional observational study\"). FT-EC7 applies only to longitudinal designs. Cross-sectional carve-out: paper contains no longitudinal analyses, so EC7 does not apply.",
-    "notes": "Paper analyzes Canadian 24-Hour Movement Guidelines but uses U.S. ABCD data. Screen time is measured independently, not aggregated with other media; paired with individual-trait impulsivity outcomes. INCLUDE."
+    "FT_IC1": {"status": "MET", "evidence": "Participants from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, first annual curated release, N=4524 children ages 8-11, 21 sites throughout the United States."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis of ABCD baseline data using structural equation modeling (Mplus 8.2) to test associations between movement behavior guideline adherence and dimensions of impulsivity."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatrics (2019); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No per-modality phone/SM-specific coefficient found anywhere in the paper. All results (Tables 3-5) report movement-behavior-combination categories (Only ST, ST+sleep, PA+ST+sleep, etc.) as binary predictors, not individual screen modalities. Step 2: The screen time (ST) composite is measured by the Youth Screen Time Survey (12 items) described as assessing hours in 'screen-based activities (eg, watching shows and movies, texting)' — this composite bundles TV/movie watching (non-phone/non-SM items) together with phone-based activities (texting) with no separate per-modality breakout anywhere in the paper. Composite is not exclusively phone/SM/digital-socializing items."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "ST variable is a composite from the Youth Screen Time Survey including television/movies and texting with no modality-level breakout. Fails IC2 Step 2 because TV/movies (non-phone items) are bundled in without separate breakout."
   },
   {
     "paper_id": "116",
-    "FT_IC1": {
-      "status": "NOT_MET",
-      "evidence": "Amsterdam Born Children and their Development (ABCD) study, in the Netherlands. This is the Dutch ABCD cohort, not the U.S. NIH-funded Adolescent Brain Cognitive Development Study. Non-U.S. ABCD initiative fails FT-IC1."
-    },
-    "FT_IC5": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC6": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC2": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "NOT_MET", "evidence": "Study population is from the Amsterdam Born Children and their Development (ABCD) study in the Netherlands (www.abcd-study.nl), a Dutch birth cohort of children born 2003-2004 in Amsterdam. This is not the U.S. NIH-funded Adolescent Brain Cognitive Development Study. Methods explicitly state: 'This study was embedded in the Amsterdam Born Children and their Development (ABCD) Study... ABCD is a community-based prospective cohort study... Between January 2003 and March 2004, 8266 pregnant women living in Amsterdam were enrolled.'"},
+    "FT_IC5": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "EXCLUDE under FT-EC1. Dutch ABCD cohort, not U.S. ABCD Study."
+    "notes": "Dutch ABCD cohort, not U.S. ABCD. Excluded at FT-IC1 (FT-EC1)."
   },
   {
     "paper_id": "146",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Adolescent Brain Cognitive Development (ABCD) study; N=4277 of 4524 with usable structural imaging and SMA data; multi-site U.S. recruitment; baseline ages 9-10"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: Group Factor Analysis (GFA) on ABCD data relating screen media activity to cortical thickness, sulcal depth, and gray matter volume; downstream associations with psychopathology and cognition"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in NeuroImage, 2019"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: SMA is measured but reported as GFA-derived latent variables predicting brain structure, not as direct estimates paired with individual-trait outcomes. Direct SMA↔individual-trait coefficients not found. Step 2: Composite analysis. SMA per methods: \"watching television or videos, playing video games, or using social media.\" This composite bundles TV and video games with social media without separate breakout. TV and video games are explicitly disqualifying non-phone/non-SM ingredients. NOT_MET per Step 2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study (abcdstudy.org), held in the NIMH Data Archive. N=4277 participants with usable structural imaging and SMA data from baseline (before September 2017), ages 9-10, 21 sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: Group Factor Analysis (GFA) relating screen media activity (SMA) to cortical thickness, sulcal depth, and gray matter volume, followed by generalized linear mixed-effects models (GLMM) predicting CBCL internalizing/externalizing psychopathology and NIH Toolbox fluid and crystallized intelligence from SMA-related GFA scores."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in NeuroImage (2019); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific per-modality coefficient is reported anywhere in the paper. All GLMM results (Figs. 5-8) use SMA_GFA1 through SMA_GFA4 as predictors — these are latent variables derived from all SMA activities combined; no individual activity (e.g., social media time, texting time) has its own reported coefficient. Step 2: The SMA composite includes: (1) Watch TV shows or movies, (2) Watch videos (YouTube), (3) Play video games on computer, console, phone, or other device (platform unspecified/mixed), (4) Text on a cell phone, tablet, or computer, (5) Visit social networking sites, (6) Video chat, plus mature-rated video games and R-rated movies. This composite includes TV watching and platform-unspecified/console/PC gaming alongside phone/SM items; it is not exclusively phone/SM/digital-socializing items and no per-modality breakout is provided in any table or supplement. NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "EXCLUDE under FT-EC2. SMA composite includes TV and video games without separate breakout; does not isolate phone/SM items. Disqualifying non-phone/non-SM ingredients bundled without breakout."
+    "notes": "SMA composite bundles TV, YouTube, platform-unspecified gaming, texting, social networking, and video chat into GFA latent variables; no phone/SM-specific estimate is isolated anywhere in main or supplementary results. Fails IC2 Step 2."
   }
 ]

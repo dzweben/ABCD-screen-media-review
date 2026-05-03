@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "420",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, N=11,875, ages 9-10 years, 21 recruitment sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical cross-sectional analysis; correlation and regression analyses reported"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, PloS One 2021"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 2 composite-content check: Youth Screen Time Survey composite includes (1) TV watching, (2) video watching, (3) video games, (4) texting, (5) social media, (6) video chat. Composite bundles TV and unspecified-platform video games with phone/SM items; multi-device aggregated without per-item breakout."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Screen time composite includes TV, video games (platform unspecified), and video watching without separate per-item estimates or breakout."
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, 11,875 participants ages 9-10 from 21 U.S. sites, NIMH Data Archive DOI 10.15154/1519271."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis of ABCD baseline data; series of correlation and regression analyses."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in PLoS ONE 2021; no duplicate identified."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: the STQ breaks screen time into six types including 'texting on cellphone, tablet, or computer' and 'visiting social media sites.' Supplementary Tables S6-S18 (weekday) and S19-S31 (weekend) run separate regressions of each screen-type subcomponent on every outcome (depression, anxiety, internalizing, externalizing, ODD, conduct disorder, ADHD, academic performance, sleep, peer relationships) — all individual-trait-level outcomes. Texting and social media are phone/SM-specific variables paired with individual-trait outcomes, yielding qualifying coefficients."},
+    "FT_IC3": {"status": "MET", "evidence": "Standardized betas, t-statistics, and p-values reported across Tables 2-5 and S6-S31 for screen time predicting individual-trait outcomes."},
+    "FT_IC4": {"status": "MET", "evidence": "Multiple regression analyses report numeric estimates (standardized beta coefficients) throughout."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; EC7 requires longitudinal design, which is absent here.",
+    "notes": "Headline analyses use total screen time composite as IV; per-type breakouts (including texting and social media as separate predictors) are in supplement tables S6-S31. The per-type breakouts satisfy Step 1 of FT-IC2."
   },
   {
     "paper_id": "473",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD cohort substudy, N=67, ages 11-12 years, passive sensing pilot in 2019-2020"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; passive sensing protocol with descriptive statistics and correlation analyses"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, JMIR Mental Health 2021"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Pure psychometric/validation paper. Smartphone screen use measured via passive sensing app; results are descriptive (means, SDs, percentages of app-category time) and validation-focused (correlations between self-report and objective data: r=0.49 for overall screen time; ANOVA of app use by demographics). No coefficient for association between SM variable and individual-trait outcome; SM appears as measured variable only."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study cohort substudy; N=67 ABCD participants (ages 11-12) at year-2 follow-up from 4 geographically dispersed ABCD sites; ABCD Release 3.0 (DOI: 10.15154/1519007)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: descriptive statistics, ANOVA, and correlations on passively sensed smartphone app use data collected over 4 weeks."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in JMIR Mental Health 2021; no duplicate identified."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No numeric estimate found pairing a phone/SM-specific variable with an individual-trait-level outcome. All analyses either assess: (a) correlation between self-report and objective passive sensing (r=0.49) as a measurement-validity check — other side is not an individual-trait outcome but a measurement method; (b) ANOVA of app category use (streaming, communication, gaming, social media, SMS, reading) by demographic categories (sex, age, race/ethnicity, income, geographic location) — other side is demographic only; (c) pre/post self-report comparisons. No mental health, cognitive, behavioral, sleep, academic, or other individual-trait outcomes are analyzed. The other side of every analysis is either measurement validity or demographics. FT-IC2 NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Feasibility/validation study of passive sensing methods; no outcome variable paired with SM variable."
+    "notes": "Paper is a feasibility/descriptive study of passive smartphone sensing methodology in an ABCD subsample. No individual-trait outcomes analyzed in relation to phone/SM use."
   },
   {
     "paper_id": "128",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, N=11,875, ages 9-11 years, cross-sectional data from baseline (September 2016 - November 2018, release 2.0)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical cross-sectional analysis; negative binomial regression with prevalence ratios and 95% CIs reported"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, Journal of Adolescent Health 2021"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 2 composite-content check: Youth Screen Time Survey measures (1) TV watching, (2) video watching (e.g., YouTube), (3) video game playing, (4) texting, (5) social media, (6) video chat. Daily recreational screen time calculated as weighted average of these six items. Composite bundles TV, unspecified-platform video games, and non-phone devices without separate per-item breakout or sensitivity analyses isolating phone/SM components."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study release 2.0, N=11,875 youth ages 9-11 from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis; negative binomial regression of 24-hour movement guideline combinations on CBCL internalizing/externalizing outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Adolescent Health 2021; no duplicate identified."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No per-modality phone/SM-specific coefficient found anywhere in the paper. All regressions use an aggregate 'recreational screen time' composite as the exposure (measured in hours/day), categorized as meeting/not meeting the <=2h/day guideline. No separate estimate for texting, social media, video chat, or any phone-specific variable is reported in main tables or supplementary tables. Step 2: The composite recreational screen time is computed from the Youth Screen Time Survey and includes: (1) TV watching, (2) video watching (e.g., YouTube), (3) video game playing (platform unspecified), (4) texting on cellphone/tablet/computer, (5) visiting social media sites, (6) video chat. The composite bundles TV, unspecified-platform video games, and video watching alongside texting/SM/video chat — non-phone/non-SM ingredients (TV, unspecified-platform video games) are included without separate breakout. FT-IC2 NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Screen time composite includes TV, video games (unspecified platform), and video watching; multi-device aggregated time without per-device breakout or isolation of phone/SM-only estimate."
+    "notes": "Screen time is operationalized as a categorical guideline-meeting variable (yes/no for <=2h/day) from a composite including TV, unspecified video games, videos, texting, social media, and video chat. No per-modality breakout in any regression table."
   }
 ]

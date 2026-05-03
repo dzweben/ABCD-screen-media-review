@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "3",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes baseline through year 4 data from U.S. ABCD Study (21 recruitment sites, ages 9-10 baseline, n=4,285)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: latent class linear mixed models identifying addictive use trajectories, Poisson regression for suicidal outcomes, generalized linear models for mental health outcomes"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed paper published in JAMA 2025"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 PASS: Phone/SM-specific variables found (SMAQ, MPIQ, VGAQ—problematic use scales). Step 1 finds quantitative estimates (risk ratios for suicidal behaviors: RR 2.14-2.39 for social media; RR 2.17 for mobile phones; RR 1.54 for video games). Other side: suicidal ideation and behaviors (individual-trait mental health), internalizing/externalizing symptoms (individual-trait behavioral). Meets criteria."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results reported: risk ratios with 95% CIs for suicidal behaviors and ideation; mean differences for CBCL internalizing/externalizing symptoms"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric quantification throughout. Poisson regression models estimated risk ratios; generalized linear models estimated mean differences; all with p-values and CIs reported"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cohort study using ABCD Study release 5.1, longitudinal cohort of participants aged 9-10 at baseline, 21 US recruitment sites (2016-2022)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using latent class linear mixed models to characterize addictive use trajectories and Poisson regression models to estimate associations with suicidal behaviors and mental health outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed original investigation published in JAMA; no indication of duplicate or preprint."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: SMAQ (Social Media Addiction Questionnaire) and MPIQ (Mobile Phone Involvement Questionnaire) are qualifying SM/phone-specific variables used as exposures (IVs). Addictive use trajectories of social media and mobile phones predict suicidal behaviors (e.g., increasing SMAQ trajectory: RR=2.14, 95% CI 1.61-2.85), suicidal ideation (RR=1.46), and CBCL internalizing/externalizing symptoms (mean difference=1.27) — all individual-trait outcomes."},
+    "FT_IC3": {"status": "MET", "evidence": "Numerous numeric results reported: risk ratios with 95% CIs from Poisson regression (e.g., RR=2.39 for high-peaking SMAQ trajectory and suicidal behaviors) and mean differences for CBCL T-scores across trajectory groups."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analyses with quantitative results present throughout (Figure 3, Figure 4, Table); FDR-corrected p-values reported for all main estimates."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "EC7 does not apply: design is longitudinal with multiple time points, but SM/phone is IV (trajectories predict outcomes), not DV-only. No condition for EC7 exclusion met.",
-    "notes": "Paper measures addictive use of social media, mobile phones, and video games as independent variables predicting suicidal behaviors and mental health outcomes. Uses validated child-reported measures (SMAQ, MPIQ, VGAQ) capturing problematic use dimensions. Clear individual-trait outcomes on other side (suicidal ideation, psychiatric symptoms). Meets all criteria for inclusion."
+    "FT_EC7_reason": "SM/phone (SMAQ, MPIQ, VGAQ) are used as IVs (exposures in latent trajectory models predicting suicidal behaviors and mental health outcomes at year 4 follow-up), not as DVs. EC7 requires SM to be DV in every analysis; here SM is IV throughout.",
+    "notes": "Paper also includes VGAQ (video game addictive use), which on its own would not qualify under IC2 binding clarification 2, but the qualifying SM (SMAQ) and phone (MPIQ) variables independently satisfy IC2 Step 1. Total screen time included as a separate non-qualifying covariate analysis."
   },
   {
     "paper_id": "95",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Uses ABCD Study data: 543 participants with data at year 2 (ages 11-13) and year 4 (ages 13-15) follow-ups from 21 U.S. sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed models examining VGA and SMA interaction effects with time on neural responses to rewards and losses during monetary incentive delay task"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed paper published in Computers in Human Behavior 2025"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 PASS: Phone/SM-specific variables measured (VGAQ, SMAQ—problematic use scales). Quantitative estimates provided (e.g., VGA × time interaction on loss sensitivity in nucleus accumbens: b=0.11, p=0.001). Other side: neural activity during monetary incentive delay task (individual-trait neural response to reward/loss, measured via fMRI). Clear individual-trait outcome (neural reward circuit function). Meets criteria."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results: linear mixed model coefficients (standardized betas, 95% CIs) for VGA × time and SMA × time interactions on fMRI activation across ROIs"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric quantification: all models include statistical inference via linear mixed models with p-values, confidence intervals, and FDR corrections"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study longitudinal dataset, nearly 12,000 participants aged 9-10 at baseline from 21 US sites; final sample n=543 with year 2 and year 4 imaging data."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using linear mixed models (LMMs) to examine VGA x Time and SMA x Time interactions on fMRI beta-weights from MID task across two longitudinal waves (year 2 and year 4 follow-up)."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Computers in Human Behavior; no indication of duplicate or preprint."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: SMA (Social Media Addiction Questionnaire, SMAQ) is a qualifying SM-specific variable. SMA is included as an IV in every LMM predicting neural beta-weights (fMRI reward/loss sensitivity in nucleus accumbens, insula, ACC, amygdala, etc.) — individual-trait neural outcomes. SMA x Time interaction coefficients are reported in Table 3 for all 16 ROIs (e.g., SMA x Time on right insula loss contrast: b=-0.081, 95% CI [-0.15, -0.02], p=.017). The other side (fMRI beta-weights from MID task) is an individual-trait neural variable."},
+    "FT_IC3": {"status": "MET", "evidence": "Standardized beta coefficients, 95% CIs, uncorrected and FDR-corrected p-values reported in Table 3 (SMA x Time on neural outcomes) and Table 4 (neural sensitivity x Time on VGA/SMA). Pearson r correlations in Table 2."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential LMM analyses with quantitative numeric results (b, SE, 95% CI, p, pFDR) reported for SMA and VGA effects on neural reward/loss sensitivity."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "EC7 does not apply: design is longitudinal, but SM/phone (VGA, SMA) is IV, not DV-only. Analyses model how VGA/SMA predict neural outcomes. No condition for EC7 exclusion met.",
-    "notes": "Paper uses 6-item VGAQ and 6-item SMAQ (adapted from Bergen Facebook Addiction Scale) to assess addictive behaviors. Primary outcome is neural activity during reward/loss processing (individual-trait fMRI measure). VGA shows significant bidirectional relationships with loss sensitivity; SMA shows no significant long-term effects. Meets all criteria for inclusion."
+    "FT_EC7_reason": "SMA appears as IV in hypothesis 1 models (predicting neural outcomes) and as DV in hypothesis 2 models (predicted by neural beta-weights x Time interactions). This is a bidirectional design where SM is both IV and DV across models; EC7 explicitly does not apply to bidirectional designs.",
+    "notes": "Primary finding for SMA: no significant VGA/SMA x Time interaction effects on neural reward or loss sensitivity for SMA (all pFDR > 0.05). VGA shows significant bidirectional effects with neural loss sensitivity. SMA qualifies IC2 as the SM-specific IV; VGA alone (VGAQ) would not independently qualify under binding clarification 2, but SM qualification is sufficient."
   },
   {
     "paper_id": "443",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Uses ABCD Study Release 5.1: cross-sectional networks at T2 (ages 11-12, n=9,054) and T4 (ages 13-14, n=4,007); cross-lagged analyses with 3,954 youth"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: network analysis (Gaussian graphical models) identifying centrality of problematic screen use; cross-lagged panel network (CLPN) models examining temporal effects"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed paper published in Journal of Behavioral Addictions 2025"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 PASS: Phone/SM-specific measure found (problematic screen use, conceptualized as continuous measure of screen-related functional impairment, captured via Video Game Addiction Questionnaire, Social Media Addiction Questionnaire, Mobile Phone Involvement Questionnaire). Quantitative estimates provided in network analyses and cross-lagged models. Other side: adolescent development outcomes (family conflict, peer involvement, school participation; psychopathologies and environmental conditions). All are individual-trait or psychosocial-level (not demographic-only or contextual-only). Meets criteria."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results: centrality indices (strength, expected influence, bridge strength) reported; cross-lagged coefficients presented with standardized estimates"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric quantification: network estimation via EBIC-guided Gaussian graphical models; cross-lagged panel network models with autoregressive and cross-lagged coefficients"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cohort data from ABCD Study Release 5.1; participants at 2-year follow-up (T2, ages 11-12, n=9,054) and 4-year follow-up (T4, ages 13-14, n=4,007); multisite US longitudinal study."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using Gaussian graphical models for cross-sectional networks (T2 and T4) and cross-lagged panel network (CLPN) analyses (T2 to T4) to examine centrality of problematic screen use indicators relative to screen time measures."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed full-length report in Journal of Behavioral Addictions; no indication of duplicate or preprint."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: SMAQ (Problematic Social Media, node A2) and MPIQ (Problematic Mobile Phone, node A3) are qualifying SM/phone-specific variables. In CLPN models, A2 and A3 appear as IVs with cross-lagged edges to individual-trait outcomes: e.g., A2 (problematic social media) predicts somatic complaints C3 (B=0.302), behavioral activation BAS (B=0.179), delinquent peer involvement E3 (B=0.108), thought problems C5 (B=-0.251); A3 (problematic mobile phone) predicts impulsivity UPPS (B=0.219), behavioral activation BAS (B=0.194), behavioral inhibition BIS (B=0.108). Cross-sectional network edge weights also reported for SM/phone nodes connected to psychopathology and behavioral tendency nodes (individual-trait outcomes)."},
+    "FT_IC3": {"status": "MET", "evidence": "Quantitative results reported: CLPN edge coefficients (B values) in text and Figure 3; network centrality indices (strength, EI, bridge strength) with 95% CIs from bootstrapping in Figure 2 and Figure 4; e.g., problematic social media vs. social media time strength difference (T2 Female: 0.89 vs. 0.64, 95% CI=[0.141, 0.353])."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential CLPN and cross-sectional network analyses with quantitative edge weights and bootstrapped 95% CIs reported throughout results section."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "EC7 does not apply: paper includes both cross-sectional network analyses (T2 and T4 networks) and longitudinal cross-lagged panel network models. Cross-sectional analyses alone disqualify EC7 (cross-sectional carve-out). Additionally, problematic screen use functions as both antecedent and outcome across analyses. Meets inclusion criteria.",
-    "notes": "Paper measures problematic screen use (functional impairment) as a continuous construct, distinguishing it from total screen time and checking behavior. Outcomes include psychopathology, behavioral tendencies, and environmental factors (family, peer, school). Central finding: problematic use showed greater centrality and predictive effects than self-reported screen time on adolescent well-being. Meets all criteria for inclusion."
+    "FT_EC7_reason": "The CLPN is a bidirectional cross-lagged design: SM/phone nodes (A2, A3) predict outcomes at T4 (SM as IV) AND are predicted by T2 nodes (SM as DV). Additionally, cross-sectional networks at T2 and T4 include SM/phone nodes as DVs (receiving edges from behavioral tendency and psychopathology nodes). EC7 explicitly does not apply to bidirectional/cross-lagged designs, and the cross-sectional carve-out also applies.",
+    "notes": "Study includes VGAQ (video game time A1, problematic video game A1) and TV time alongside SM/phone measures. The SM (SMAQ) and phone (MPIQ) nodes independently satisfy IC2. The screen time measures (B1 video game time, B2 social media time) are generic activity-duration variables but the problematic use scales (SMAQ, MPIQ) are the qualifying variables."
   }
 ]

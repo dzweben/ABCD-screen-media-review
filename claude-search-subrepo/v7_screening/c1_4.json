@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "10",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes ABCD Study data, release 5.1, with 4289 U.S. adolescents ages 11-14 years"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: cross-lagged panel models (CLPM) testing directional associations between psychopathology and gaming disorder across 3 waves"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in JAMA Network Open, July 2025"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Gaming measured via Video Game Addiction Questionnaire (VGAQ), which is gaming-only without explicit phone/SM modality isolation. No separately-measured phone/SM variable with own coefficient reported in main or supplementary analyses."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study dataset release 5.1; U.S. sample of 4289 adolescents at 21 NIH recruitment sites, ages 11-14 across 3 waves (2018-2022)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: cross-lagged panel models (CLPMs) and hierarchical mixed-effects models (HMEMs) examining directional associations between psychopathology and gaming disorder across 3 time points."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in JAMA Network Open 2025; no indication of duplicate or preprint of an already-included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper. The sole screen-related variable is gaming disorder measured via the Video Game Addiction Questionnaire (VGAQ), plus minutes gaming per week (Table 2). VGAQ is a generic video-game variable with no explicit mobile/phone modality specified. Per binding clarification 2, VGAQ and generic gaming hours fail IC2 unless explicitly mobile/phone-based or paired with a separately-measured phone/SM variable. No MPIQ, SMAQ, social media time, phone time, or other qualifying phone/SM variable appears anywhere (main tables, Figure 2, Figure 3, or methods). Step 2: not applicable — no composite examined; the variable is VGAQ/gaming hours, which is gaming-only. IC2 = NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines gaming disorder as DV and psychopathology as IV in bidirectional CLPM. Despite quantitative results (β = 0.03 to 0.07), the exposure variable is gaming-addiction only, not phone/SM-specific, failing FT-IC2 Step 1 and Step 2."
+    "notes": "Paper examines psychopathology (CBCL: depression, ADHD, anxiety, social problems, conduct disorder) <-> gaming disorder (VGAQ) using CLPM. No phone or social media variable present. Excluded under FT-EC2."
   },
   {
     "paper_id": "11",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Prospective cohort study using ABCD Study data, release 5.1, with 3419 U.S. adolescents ages 9-11 at baseline"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed-effects models with mediation analyses testing prospective associations between parental factors and sleep outcomes"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in JAMA Network Open, September 2025"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Screen use measured via Youth Screen Time Survey as total daily screen time (weighted mean across weekdays and weekends). Methods state no explicit breakout of phone/SM items vs. TV, streaming, or other non-phone devices. Multi-device aggregation without separate phone/SM coefficient. Other side (parental factors: warmth, monitoring, conflict, psychopathology) includes family/contextual variables; sleep outcomes are individual-trait. However, Step 2 composite test fails: screen use composite lacks exclusive phone/SM-digitalizing documentation; likely includes non-phone screen time."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study data release 5.1, U.S. sample, 3 waves (ages 9-11, 12-13, 13-14); N up to 3419."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical prospective cohort analysis: linear mixed models testing parental factors -> sleep outcomes, with path-analytic mediation models and moderation analyses."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in JAMA Network Open 2025; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Screen use (assessed as total daily screen time hours via Youth Screen Time Survey at wave 2) appears exclusively as a mediator in mediation analyses — e.g., parental monitoring -> screen use -> sleep quality (indirect beta = 0.004); family conflict -> screen use -> sleep chronotype (indirect beta = 0.01). Screen use is never the IV or DV of a primary analysis; all primary models regress sleep outcomes on parental factors (warmth, monitoring, family conflict, parental psychopathology). Per binding clarification 7, SM/screen as covariate/mediator/moderator-only fails IC2. No analysis pairs a phone/SM variable as IV or DV with an individual-trait outcome or predictor. Step 2: not applicable. IC2 = NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Prospective design with screen use as mediator, not IV/DV in the primary parental factor→sleep pathway. Screen use composite appears to be generic screen time without phone/SM isolation per Step 2 mechanics."
+    "notes": "Screen use is a mediator (wave 2) between parental factors (wave 1) and sleep outcomes (wave 3). It is never IV or DV in a primary analysis. Excluded under FT-EC2 (SM mediator-only)."
   },
   {
     "paper_id": "121",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Secondary analysis of ABCD Study data, release 5.1, with 4754 U.S. youth at baseline (ages 9-10) and year 4 (ages 12-15)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed-effects regression models testing prospective associations between baseline individual differences and screen time / problematic screen use at year 4"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in JAACAP Open, December 2025"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 succeeds: Table 3 reports separate main effects for video game hours, social media hours, and smartphone use, each paired with individual-trait baseline predictors (impulsivity domains, motivation, psychopathology, cognitive ability). For example, video game use predicted by urgency (β = +0.07, p < .001), reward sensitivity (β = +0.04, p < .001), general cognitive ability (β = -0.10, p < .001). Social media hours predicted by urgency (β = +0.06, p < .001), externalizing (β = +0.01, p < .017). Smartphone use similarly analyzed. Each screen activity measured separately with own coefficients."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple quantitative results reported: linear regression β coefficients in Table 3 for predictors of screen time (video games, social media, smartphones) and in Table 4 for problematic screen use (VGAQ, SMAQ, MPIQ scores)"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Numeric results for relationships between individual-trait variables and phone/SM use: β estimates, standard errors, p-values throughout. Examples: impulsivity urgency→video game ST (β = +0.07), urgency→smartphone PSU (MPIQ), reward sensitivity→VGAQ (β higher at year 4)."
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional at baseline (ages 9-10 predicting year 4 ages 12-15) with SM/phone time and PSU as dependent variables; no bidirectional or SM-as-IV analysis. However, cross-sectional carve-out does not apply (design is prospective/longitudinal with SM as DV only). EC7 would apply only if all three conditions held: longitudinal, SM always DV, no SM-as-IV anywhere. Since SM is only DV and no cross-sectional SM-as-DV analysis breaks the rule, FT-EC7 applies—EXCLUDE.",
-    "notes": "Longitudinal design (baseline→year 4), screen activities as DVs (video games, social media, phones, PSU scales), baseline predictors on IV side (all individual-trait: impulsivity, motivation, psychopathology, cognition). No SM-as-IV analysis anywhere. Meets FT-EC7 all-three conditions."
+    "FT_IC1": {"status": "MET", "evidence": "Uses ABCD Study (Release 5.1), 21 U.S. sites, N=4,754, baseline ages 9-10, year 4 ages 12-15."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: independent linear mixed-effects regression models prospectively testing whether individual-difference predictors (impulsivity, motivation, psychopathology, cognition) at ages 9-10 predict screen time and problematic screen use of video games, social media, and smartphones at ages 12-15."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in JAACAP Open 2025; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1: Multiple phone/SM-specific estimates found. Table 3 reports beta coefficients for predictors of social media hours (SM-specific DV): urgency beta=+.06 (p<.001), reward sensitivity beta=+.08 (p<.001), externalizing beta=+.04 (p=.008), general cognitive ability beta=-.08 (p<.001), learning/memory beta=-.06 (p<.001). Table 4 reports beta coefficients for SMAQ (Social Media Addiction Questionnaire) as DV: urgency beta=+.05 (p<.001), punishment sensitivity beta=+.04 (p<.001). Table 4 also reports beta coefficients for MPIQ (Mobile Phone Involvement Questionnaire) as DV: urgency beta=+.10 (p<.001), reward sensitivity beta=+.08 (p=.003), externalizing beta=+.05 (p=.040), punishment sensitivity beta=+.06 (p<.001). Predictors on the other side are individual-trait-level variables (impulsivity facets, motivation/reward sensitivity, psychopathology, cognitive ability). IC2 = MET."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative beta coefficients, SE, and p-values reported in Tables 3 and 4 for social media hours, SMAQ, and MPIQ as DVs. Inferential linear mixed-effects models with numeric results throughout."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analyses (linear mixed-effects regression) report numeric estimates (beta, SE, p) for all SM/phone variables as DVs predicted by individual-difference traits. MET jointly with IC3."},
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three EC7 conditions hold: (a) longitudinal design — baseline ages 9-10 predicting year 4 outcomes; (b) SM/phone variables (social media hours, SMAQ, MPIQ) are DV in every analysis; (c) no analysis anywhere in the paper uses SM/phone as IV — individual-difference traits are always predictors and screen/SM/phone use outcomes are always DVs. No cross-sectional SM-as-DV analysis found (all analyses are prospective with baseline predictors and year-4 outcomes). Cross-sectional carve-out does not apply. EC7 exclusion applies.",
+    "notes": "Paper prospectively predicts social media ST, SMAQ, MPIQ, video game ST, and VGAQ from baseline traits. Qualifying SM/phone variables (social media hours, SMAQ, MPIQ) are always DV; individual-difference traits are always IV. Fully longitudinal, no SM-as-IV analysis. Excluded under FT-EC7."
   }
 ]

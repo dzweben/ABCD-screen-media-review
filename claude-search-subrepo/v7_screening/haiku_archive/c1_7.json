@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "82",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 3 (2019-2021), N=10,092, ages 11-15 years"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Descriptive/prevalence study only. Methods: \"using Chi-square and t-tests, we compared social media use patterns across demographic characteristics.\" Reports percentages of platform use, underage use, sex differences; no regression coefficients, no quantitative associations linking SM to individual-trait outcomes."
+    },
+    "FT_IC6": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC2": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC5 NOT_MET; not evaluated",
+    "notes": "Exclusion code: FT-EC3 (non-empirical)"
+  },
+  {
+    "paper_id": "106",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 2 (2018-2020) and Year 3 follow-up, N=8006, ages ~12 years (mean 12.1, SD=0.7)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective logistic regression of screen time (eight modalities, Year 2) predicting substance use experimentation (alcohol, nicotine, cannabis, Year 3)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article, Drug and Alcohol Dependence 266 (2025): 112504, published online 14 November 2024"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Social media (IV) paired with individual-trait outcome. Main results: \"Each additional hour spent on social media (AOR 1.20; 95% CI 1.14–1.26)...associated with higher odds of any substance experimentation. Social media use and texting were also associated with higher odds of alcohol, cannabis, and nicotine experimentation.\" Substance use experimentation is individual-trait-level health/behavioral outcome. IC2 MET; stop."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: AOR with 95% CI for social media and all substance outcomes (alcohol: AOR 1.15 [1.10–1.21]; nicotine: AOR 1.23 [1.14–1.32]; cannabis: AOR 1.22 [1.13–1.33]; any substance: AOR 1.20 [1.14–1.26])"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results present; satisfies requirement for numeric result on SM↔individual-trait-level relationship"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is IV (predictor), not DV-only; condition 2 of EC7 fails",
+    "notes": "Decision: INCLUDE"
+  },
+  {
+    "paper_id": "107",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 2 (2018-2020), Year 3 (2019-2021), Year 4 (2020-2022) follow-up, N=7691, ages ~12 years (mean 12.0, SD=0.7)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: sequential generalized structural equation modeling (GSEM) with mediation pathway analysis; social media time (Year 2) → cannabis expectancies (Year 3) → cannabis experimentation (Year 4)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed journal article, Drug and Alcohol Dependence 277 (2025): 112947, published online 25 October 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Social media time (IV) paired with individual-trait outcome. Main result: \"Social media time (Year 2) was significantly associated with cannabis experimentation (Year 4) (B=0.18, 95% CI: 0.13–0.24, p<0.001).\" Cannabis experimentation is individual-trait-level health/behavioral outcome. IC2 MET; stop."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: B coefficients with 95% CI for direct effect (B=0.18 [0.13–0.24]) and indirect effects via positive expectancies (B=0.05 [0.03–0.06]) and negative expectancies (B=0.03 [0.02–0.04]); also reported percent mediated (19.8% positive, 13.6% negative)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Quantitative results present; satisfies requirement for numeric result on SM↔individual-trait-level relationship"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is IV (predictor) in mediation pathway, not DV-only; condition 2 of EC7 fails",
+    "notes": "Decision: INCLUDE"
+  }
+]

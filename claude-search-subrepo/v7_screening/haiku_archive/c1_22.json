@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "192",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study cohort; 6,469 children at T1 (baseline ages 9-11 years); enrolled from 21 recruitment sites across U.S.; data release 5.0"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; prospective longitudinal cohort with quadratic mixed-effect modeling to examine effects of individual DM usage (social media, video games, television) on brain development (cortex, striatum, cerebellum) over 4 years"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper; Scientific Reports (2024); original full-text manuscript"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Found phone/SM-specific estimates paired with neural outcome. Social media usage (labeled \"Using social media\") with cerebellum volume: linear term β = 0.02 (p = 0.02), quadratic term β = −0.02 (Table 2). Playing video games with cerebellum: linear β = 0.01 (p = 0.01), quadratic β = 0.01 (Table 2). Both are phone/SM variables paired with individual-trait neural outcomes. MET on Step 1."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: β coefficients, 95% confidence intervals, p-values in Table 2 and Figure 3 for social media and video game usage effects on global cortical surface area, striatum volume, and cerebellum volume"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with quantitative results for SM/video-game ↔ brain outcome relationships; SEM extended model with interaction terms and mediation effects calculated via bootstrap resampling"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal; however, smartphone/social media and video games appear as IV (predictors) in analyses with brain volumes as DV (outcomes), not as DV-only. FT-EC7 applies only when SM/phone is DV in all analyses with no SM-as-IV anywhere.",
+    "notes": "Paper reports individual effects of digital media types (social media, video games, TV separately). Finding: high SM usage associated with statistically significant change in developmental trajectory of cerebellum volumes (β = −0.03 accumulated effect, but authors note effect size clinically small); playing video games showed weak positive interaction with cerebellum development."
+  },
+  {
+    "paper_id": "79",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; 10,410 eligible participants with data from year 1 (2017-2019) and year 2 (2018-2020) follow-ups; 21 U.S. recruitment sites; baseline ages 9-10"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; longitudinal design; multivariable logistic regression to assess association between parental monitoring and family conflict at year 1 and subsequent cyberbullying victimization at year 2"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper; Academic Pediatrics (2024); original full-text manuscript"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No qualifying phone/SM-specific variable found. Exposures are parental monitoring score (PMS) and family conflict score (FCS)—neither is a phone/SM variable. Outcome is past 12-month cyberbullying victimization. Step 2: No composite variable. Per binding clarification (§2.4): \"Cyberbullying alone does not qualify.\" The paper measures cyberbullying victimization as outcome, with family environment (parental monitoring, family conflict) as predictors—neither side is a phone/SM variable. Does not meet IC2 requirement of pairing phone/SM with individual-trait outcome."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper documents significant associations: parental monitoring (OR 0.61, 95% CI 0.50-0.75) and family conflict (OR 1.10, 95% CI 1.04-1.16) with cyberbullying victimization. However, no phone/SM exposure variable; fails FT-IC2."
+  },
+  {
+    "paper_id": "377",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; multi-wave longitudinal data (waves 1-5); participants from 21 U.S. sites; baseline ages 9-10; structural equation modeling using first five waves"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis; longitudinal structural equation modeling to examine direct and indirect effects of traumatic stress exposure on impulse control and sensation-seeking (dual systems model constructs), with deviant peer association as mediator"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper; Crime & Delinquency (2024); original full-text manuscript"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No qualifying phone/SM-specific variable. IV is traumatic stress exposure (Wave 3); mediator is deviant peer association (Wave 4); outcomes are impulse control and sensation-seeking (Wave 5)—all individual-trait constructs. No phone/SM variable appears as IV or composite. Step 2: No composite. Per criteria, paper must pair a qualifying phone/SM variable with individual-trait-level variable on the other side. This paper pairs trauma exposure (not phone/SM) with cognitive/behavioral outcomes. Does not meet IC2 requirement."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper reports significant mediation: deviant peer association significantly mediated relationship between traumatic stress exposure and impulse control (accounting for ~25% of relationship). However, no phone/SM exposure variable; fails FT-IC2."
+  }
+]

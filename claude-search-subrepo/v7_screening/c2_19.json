@@ -3,49 +3,49 @@
     "paper_id": "208",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. Adolescent Brain Cognitive Development Study (ABCD), N=7514, ages 9-10 years at baseline (2016-2018), 21 research sites across U.S."
+      "evidence": "U.S. ABCD Study explicitly identified: N=7514, ages 9-10 at baseline (2016-2018), 21 research sites across the U.S., 5.0 data release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Prospective cohort analysis (Years 1-3) using modified Poisson regression to estimate associations between social media time (Year 1) and alcohol sipping (Year 3), with problematic social media use (Year 2) tested as mediator."
+      "evidence": "Original prospective cohort analysis using modified Poisson regression and generalized structural equation modeling (GSEM) on ABCD data across Years 1-3."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original empirical publication in Substance Use & Misuse journal."
+      "evidence": "Published peer-reviewed article in Substance Use & Misuse (2024); no indication of being a duplicate of an already-included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: Qualifying SM-specific estimate found. \"Social media time (Year 1) was prospectively associated with 1.31 (95% confidence interval 1.20-1.43) times higher risk of new-onset sipping (Year 3).\" Other side is alcohol sipping (substance use, individual-trait outcome)."
+      "evidence": "Step 1 hit: social media time (hours/day, Year 1) as IV paired with alcohol sipping (Year 3) as DV; Table 2 Model 1 reports RR=1.31 (95% CI 1.20-1.43), p<0.001. Alcohol sipping is an individual-trait-level substance use outcome."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple quantitative results reported: RR=1.31 (95% CI 1.20-1.43) for social media time; RR=1.03 (95% CI 1.03-1.05) for problematic social media use; indirect effect B=0.011 (95% BC CI 0.007-0.016) with 25.0% mediation (p=0.001)."
+      "evidence": "Multiple quantitative estimates reported: risk ratios in Table 2 (RR=1.31 for social media time -> sipping), path coefficients and indirect effects in Table 3 (B=0.011, BC 95% CI 0.007-0.016, p<0.001 for indirect effect through SMAQ)."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Direct and indirect effects quantified with 95% confidence intervals and p-values across three models; mediation analysis with bias-corrected bootstrap confidence intervals."
+      "evidence": "Inferential analysis performed; numeric results reported throughout Tables 2 and 3 with confidence intervals and p-values."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Social media appears as IV (independent variable) in main model (social media time → sipping). Although design is longitudinal and sipping is DV, SM-as-IV analysis exists, so FT-EC7 does not apply.",
-    "notes": "Strong prospective evidence for SM time associated with increased alcohol sipping, partially mediated by problematic SM use."
+    "FT_EC7_reason": "Social media time is the IV (predictor) in Models 1 and 3 predicting alcohol sipping (DV). EC7 requires SM to be DV in every analysis; here SM is IV, so EC7 does not apply.",
+    "notes": "Prospective cohort design (Years 1-3). Social media time (IV) -> alcohol sipping (DV), partially mediated by SMAQ (problematic SM use). SMAQ serves only as mediator, not the primary SM variable in IC2 assessment. Clear INCLUDE."
   },
   {
     "paper_id": "392",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study, N=4,718 adolescents aged 10-15 years, 2018-2021, 21 demographic sites."
+      "evidence": "U.S. ABCD Study explicitly identified: N=4,718, ages 10-15 years (2018-2021), 21 demographically diverse sites, 4.0 data release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Prospective cohort analysis (Year 2-3) examining joint associations of screen time and physical activity (steps per day) with CVD risk factors using multivariate linear and logistic regression."
+      "evidence": "Original empirical cross-sectional analysis of ABCD Study data using multivariable linear and logistic regression examining associations of screen time and steps with CVD risk factors."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original empirical publication in BMC Public Health."
+      "evidence": "Published peer-reviewed article in BMC Public Health (2024); no indication of being a duplicate of an already-included paper."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific isolated estimates found. Step 2: Composite check. Screen time composite includes \"television shows, movies, videos, video chat, single and multi-player video games, social media, and texting.\" This bundles non-phone/non-SM items (TV, movies, unspecified gaming) with phone/SM items (texting, video chat, social media) without separate per-item breakouts in primary results tables. Composite with non-phone ingredient without per-device breakdown → NOT_MET per binding clarification on multi-device aggregation."
+      "evidence": "Step 1: No phone/SM-specific estimate found anywhere in main tables or supplementary. The sole exposure variable is total recreational screen time (composite). Step 2: The composite is built from television shows/movies, videos, video chat, single and multi-player video games, social media, and texting (Methods p.3). This bundle includes TV, video games, and YouTube/videos alongside social media and texting -- non-phone/non-SM items are not separately broken out. Composite fails Step 2 because it includes TV and video games without per-modality breakout."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -57,36 +57,36 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper analyzes broad \"recreational screen time\" aggregate without isolating phone/SM components in primary analyses."
+    "notes": "Screen time composite explicitly contains TV shows/movies, videos (YouTube), video games, video chat, social media, and texting -- a mixed bundle. No per-modality (phone/SM-specific) estimate reported anywhere. Excluded under FT-EC2."
   },
   {
     "paper_id": "393",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. Adolescent Brain Cognitive Development (ABCD) Study, N=9,538 adolescents (9-10 years at baseline 2016-2018) with 2 years follow-up, 21 recruitment sites."
+      "evidence": "U.S. ABCD Study explicitly identified: N=9,538, ages 9-10 at baseline (2016-2018), 21 recruitment sites, 4.0 data release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Prospective cohort analysis (baseline to Year 2 follow-up) using mixed-effects models to examine associations between baseline self-reported screen time and parent-reported mental health symptoms on Child Behavior Checklist."
+      "evidence": "Original longitudinal empirical analysis using mixed-effects models examining associations between baseline screen time (total and by modality) and CBCL mental health symptom outcomes at Years 1 and 2 follow-up."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original empirical publication in BMC Public Health."
+      "evidence": "Published peer-reviewed article in BMC Public Health (2024); no indication of being a duplicate of an already-included paper."
     },
     "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No isolated phone/SM-specific coefficient found in primary results. Main results table (Table 2) reports only continuous aggregate \"total screen time\" (B=0.10, 95% CI 0.06, 0.13) and categorical screen time (0 to 4 h, >4-8, >8 h). Text mentions \"video chat, texting, videos, and video games\" had greatest associations, but these modality-specific estimates are not reported with separate coefficients in primary analyses. Step 2: Composite structure includes TV, movies, video streaming (non-phone), video chat, texting, video games (platform unspecified), and social media as aggregate. \"Videos\" and \"video games\" without platform specification fail criteria (gaming alone without explicit phone/mobile platform specification fails FT-IC2). Composite bundles non-phone/non-SM (TV, movies, unspecified gaming) with phone/SM without per-item breakout → NOT_MET."
+      "status": "MET",
+      "evidence": "Step 1 hit: Table 2 (Model 2, adjusted) reports separate numeric estimates for social media (hours/day) as IV paired with each CBCL DSM-oriented mental health symptom scale (individual-trait outcomes). Example: social media -> depressive symptoms B=0.222 (95% CI -0.002, 0.47), p=0.071; social media -> conduct symptoms B=0.222 (95% CI -0.002, 0.47). Additionally, texting B=0.35 (95% CI 0.14, 0.57), p=0.002 and video chat B=0.07 (95% CI -0.19, 0.33) are reported as separate SM/phone-adjacent modalities. Social media is a named SM platform-type variable with its own coefficient paired with mental health outcomes (individual-trait level)."
     },
     "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Multiple quantitative regression coefficients with 95% CIs reported throughout Tables 2 and 3: e.g., total screen time -> depressive symptoms B=0.10 (95% CI 0.06, 0.13), p<0.001; social media -> conduct B=0.222, p=0.071; texting -> depressive B=0.35 (95% CI 0.14, 0.57), p=0.002."
     },
     "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Inferential longitudinal analysis with numeric results throughout Tables 2 and 3 and race/ethnicity-stratified Table 3."
     },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines aggregate screen time composite including TV and unspecified gaming without isolation of phone/SM modality in primary analyses."
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time (total and modality-specific including social media) is the IV at baseline predicting mental health outcomes (DV). SM is IV, not DV, so EC7 does not apply.",
+    "notes": "Prospective longitudinal design; baseline screen time (including social media as a separately reported modality) predicts CBCL mental health symptom scores at 1- and 2-year follow-up. Social media modality has its own coefficient in adjusted models (Table 2). Clear INCLUDE."
   }
 ]

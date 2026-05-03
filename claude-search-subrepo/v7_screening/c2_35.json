@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "141",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Cross-sectional baseline (2016-2018) data from Adolescent Brain Cognitive Development Study; n=10,755; U.S. ABCD population confirmed."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: \"Multiple linear regression analyses were conducted to estimate associations between sociodemographic factors and 6 contemporary forms of screen time.\""
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Journal of Pediatrics (2022; 240:213-20)."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "All analyses pair screen time modalities (TV, videos, video games, social networking, texting, video chat) exclusively with demographic-only predictors (sex, race/ethnicity, country of birth, household income, parental education). No individual-trait-level variables (behavioral, health, cognitive, well-being, personality, substance use, sleep, academic, psychiatric, ACEs, parenting, family functioning) on either side. Criteria explicitly require other-side to be individual-trait-level; demographic-only fails FT-IC2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional baseline (2016-2018) data from the Adolescent Brain Cognitive Development (ABCD) Study, n=10,755, 21 U.S. recruitment sites, ages 9-10 years."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis; multiple linear regression estimating associations between sociodemographic factors and six screen time modalities."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in The Journal of Pediatrics (2022); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Social networking, texting, and video chat each have separate regression coefficients in Table III. However, the only variables on the other side of every analysis are sociodemographic predictors (sex, race/ethnicity, country of birth, household income, parental education). Demographic-only predictors do not qualify as individual-trait-level per FT-IC2 other-side rule. No individual-trait-level variable (health, behavioral, cognitive, well-being, etc.) appears on either side of any analysis. FT-IC2 = NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper is a sociodemographic correlates study of screen time prevalence. No connection to individual-trait outcomes."
+    "notes": "Paper is purely a sociodemographic epidemiology of screen time paper; IVs are all demographic, DVs are screen time modalities including SM/texting/video chat. Other side of the SM relationship is demographic-only throughout."
   },
   {
     "paper_id": "152",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "December 2020 COVID-19 survey from Adolescent Brain Cognitive Development Study; n=4,106 U.S. adolescents ages 12-14."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: \"Modified Poisson regression analyses with coefficients transformed to risk ratios were used to estimate the associations between COVID-19 information and masking behaviors.\""
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Preventive Medicine Reports (2022; 28:101900)."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Independent variables are contextual-only information sources (frequency of checking COVID-19 information on social media, internet, television; parental counseling). Dependent variable is masking behavior (health behavior compliance). Criteria state \"Contextual-only...on the other side → NOT_MET.\" Information/media exposure and parental counseling are contextual sources, not individual-trait characteristics. Paper is about media exposure → behavioral compliance, not SM/phone use paired with individual-trait outcomes."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Study examines impact of COVID information sources on masking behavior; information exposure is contextual, not individual-trait-level outcome."
+    "FT_IC1": {"status": "MET", "evidence": "Data from the Adolescent Brain Cognitive Development (ABCD) Study, December 2020 COVID-19 Rapid Response Research Release; N=4,106 U.S. adolescents ages 12-14."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using modified Poisson regression on December 2020 COVID-19 survey data from ABCD."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Preventive Medicine Reports (2022); no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Checking COVID-related social media (e.g., Facebook, Twitter, Instagram, TikTok, Snapchat) is an IV with a separate numeric estimate (ARR 1.09, 95% CI 1.00-1.19, p=0.049) predicting 'always masking' behavior (Table 2). Masking behavior is a health protective behavior -- an individual-trait-level health outcome. SM variable is the IV; health behavior is the DV. IC2 = MET."},
+    "FT_IC3": {"status": "MET", "evidence": "Modified Poisson regression reports adjusted risk ratios (ARR) with 95% CIs and p-values for the social media → masking relationship (ARR 1.09, 95% CI 1.00-1.19, p=0.049)."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric quantitative results reported (ARRs, 95% CIs, p-values) for the SM-masking relationship."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (December 2020 survey); SM is IV (not DV-only). EC7 does not apply.",
+    "notes": "Social media is measured as frequency of checking COVID-related information on social media, used as IV predicting masking behavior. Cross-sectional analysis only."
   },
   {
     "paper_id": "183",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Cross-sectional data from Adolescent Brain Cognitive Development Study Year 2 (2018-2020); n=8,753 children ages 10-14; U.S. ABCD confirmed."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: \"Multiple linear regression analyses were used to estimate associations between sociodemographic factors and adolescent-reported problematic video game (VGAQ), social media (SMAQ), and mobile phone use (MPIQ).\""
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Pediatric Research (2022; 92:1443-1449)."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "BINDING clarification §2.4: \"Problematic-use scales are SM/phone variables, not 'individual-trait' outcomes. SMAQ, MPIQ, VGAQ...are SM/phone variables. When the only analysis is sociodemographic predictor → SMAQ/MPIQ as DV, the other side is still demographic — FT-IC2 = NOT_MET.\" Paper analyzes sociodemographic predictors (age, sex, race/ethnicity, primary language, household income, parental education, parent marital status) paired with VGAQ, SMAQ, and MPIQ scores as dependent variables. These scales are classified as SM/phone variables, not individual-trait outcomes. The other side is demographic-only."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from ABCD Study Year 2 (2018-2020, 4.0 release); N=8,753; 21 U.S. recruitment sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis; multiple linear regression estimating sociodemographic correlates of problematic video game, social media, and mobile phone use."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatric Research (2022); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The DVs across all analyses are VGAQ (Video Game Addiction Questionnaire), SMAQ (Social Media Addiction Questionnaire), and MPIQ (Mobile Phone Involvement Questionnaire). Per binding clarification, SMAQ and MPIQ are SM/phone variables, not individual-trait outcomes on the other side. The IVs are exclusively sociodemographic (age, sex, race/ethnicity, primary language, household income, parental education, parent marital status) -- demographic-only predictors. No analysis pairs a qualifying SM/phone variable with an individual-trait-level variable on the other side. The only analyses are demographics → SMAQ/MPIQ/VGAQ. FT-IC2 = NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines sociodemographic correlates of problematic screen use scales (VGAQ, SMAQ, MPIQ). Problematic-use scales are classified as SM/phone variables, not individual-trait outcomes; demographic predictors fail FT-IC2."
+    "notes": "All three DVs (VGAQ, SMAQ, MPIQ) are SM/phone variables per binding clarifications. IVs are all sociodemographic (demographic-only). No individual-trait-level variable appears on either side of any analysis."
   }
 ]

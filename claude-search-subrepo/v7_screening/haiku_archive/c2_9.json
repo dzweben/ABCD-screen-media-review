@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "292",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly states analysis of \"Adolescent Brain Cognitive Development study from the period 2 follow-up (2018-2020) to the period 3 follow-up (2019-2021)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Prospective cohort study with linear regression models estimating associations between cyberbullying victimisation and manic symptoms across two follow-up periods"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original research article published in Acta Paediatrica, 2025"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Cyberbullying is the primary exposure (yes/no victimisation). Per §2.4 binding clarification, \"Cyberbullying alone does not qualify.\" Paper includes \"total screen time\" as a covariate but does not isolate a qualifying phone/SM variable (e.g., time on phone, time on social media, named platform use, texting). No Step 1 phone/SM-specific estimate found; no composite phone/SM variable being analyzed."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper addresses cyberbullying (online harm) as exposure and manic symptoms as outcome. While the study population is ABCD and design is prospective, cyberbullying does not meet the definition of a qualifying phone/SM variable per v7 binding rules."
+  },
+  {
+    "paper_id": "384",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study utilizes data from \"Adolescent Brain Cognitive Development (ABCD) Study (N=10,054, 12–13 years, Year 3, 2019–2021)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using ordinal logistic regression models to assess associations among media parenting practices and R-rated movies or mature-rated video game use"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original research published in BMC Pediatrics, 2025"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Independent variable is parental media practices (bedroom screen use, mealtime screen use, parental monitoring, limiting screen time), not phone/SM use by the adolescent. Dependent variables are R-rated movie consumption and mature-rated video game use. Per §2.4 binding clarifications: \"Mature-rated / R-rated content alone does not qualify\" and \"Gaming alone does not qualify unless it is explicitly mobile/phone-based.\" No per-modality phone/SM variable on the exposure side; outcomes are content rating and game type, not qualifying phone/SM variables. Step 1 finds no phone/SM-specific estimate. Step 2 not applicable (no composite phone/SM variable)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines parental media practices as predictors of adolescent consumption of R-rated movies and mature video games. While ABCD study, cross-sectional design, neither the exposure (parenting practices) nor the outcomes (content consumption, not SM modality use) qualify under IC2."
+  },
+  {
+    "paper_id": "385",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Data from \"Adolescent Brain Cognitive Development (ABCD) Study (N=9,519) from baseline (2016–2018, ages 9–10) to Year 3 (2019–2021, ages 12–13)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis of longitudinal trends using compositional data analysis and mixed-effects modeling over four annual assessments"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original research published in BMC Pediatrics, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Screen time measured and analyzed in three modalities: TV shows/movies, video games, and \"digital socializing\" (texting, video chatting, social media). Digital socializing qualifies as a phone/SM-specific variable per §2.4 (texting, video chat, social media are listed phone/SM variables). Paired with individual-trait-level variables on the other side: sleep duration (health/physiological) and sports/exercise activity (behavioral/health), both of which meet the definition of individual-trait-level outcomes. Numeric estimates provided (mean hours/day and change-from-baseline in hours/day with 95% CI)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Mixed-effects models report quantitative results for associations: screen time increased 0.23 h/day baseline to Year 1, 1.58 h/day to Year 2, 3.28 h/day to Year 3; digital socializing increased 0.98 h/day baseline to Year 3; sleep decreased slightly (7.5 min over 3 years); sports/exercise activity initially decreased then increased (net 0.18 h/day increase by Year 3)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results reported in Table 2 and text for all movement behaviors: hours/day with bootstrap 95% CI; mean differences and change-from-baseline estimates with CI across all four assessments"
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three EC7 conditions are met: (a) design is longitudinal (baseline 2016-2018 to Year 3 2019-2021, four annual assessments); (b) SM/screen time is the DV in every analysis (outcomes include screen time, digital socializing, TV, video games, as well as sleep and sports/exercise); (c) no analysis anywhere in the paper treats screen time or digital socializing as an IV predicting another outcome. Therefore FT-EC7 applies and the paper is EXCLUDED.",
+    "notes": "Longitudinal study examining time-use trends in 24-hour movement behaviors. While IC2 is met (digital socializing as phone/SM variable paired with individual-trait sleep and exercise outcomes) and IC3/IC4 are met (quantitative results), the paper is excluded under FT-EC7 because it adopts a DV-only structure for SM throughout (screen time as outcome predicted by age and pandemic period, not as predictor of other traits or behaviors)."
+  }
+]

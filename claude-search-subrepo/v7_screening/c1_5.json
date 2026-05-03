@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "90",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study; baseline enrollment of 9,337 individuals with social media use and diffusion-weighted MRI data from ages 9-10 years."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; cross-sectional examination of social media consumption and white matter fractional anisotropy across 34 white matter tracts."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Biological Psychiatry (2025)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Identified phone/SM-specific variable 'social media consumption' (<30 min/day vs >30 min/day) paired with individual-trait neural outcome (fractional anisotropy of white matter tracts). Qualifies as SM variable paired with individual-trait outcome."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple linear regressions examining effects of social media consumption on FA across 34 white matter tracts; reported β coefficients and p-values for each tract."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Numeric results throughout: odds ratios for demographic/contextual associations (OR > 1.5), linear regression estimates for FA associations. Results presented in text and supplementary materials."
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design; EC7 applies only to longitudinal studies where SM is DV-only. This study uses cross-sectional design with SM as IV.",
-    "notes": "Associations between social media consumption and white matter FA became non-significant after adjustment for race and socioeconomic status. Study emphasizes importance of demographic and socioeconomic variables over SM use for white matter health in this age group."
+    "FT_IC1": {"status": "MET", "evidence": "Abstract explicitly states \"data from the ABCD dataset\" (Adolescent Brain Cognitive Development), baseline ages 9-10, U.S. multi-site cohort with 9,337 individuals."},
+    "FT_IC5": {"status": "NOT_MET", "evidence": "The PDF is a conference symposium/plenary abstract published in the Biological Psychiatry supplemental abstracts issue (SOBP 2025, vol. 97:S1-73). It is a short abstract of a conference talk, not an original peer-reviewed empirical paper with full methods, results tables, or statistical reporting beyond summary statements."},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Conference abstract only (SOBP 2025 plenary/symposium abstract supplement). Study examines social media consumption and white matter FA in ABCD; may have a peer-reviewed full paper elsewhere, but this document itself is non-empirical under FT-IC5."
   },
   {
     "paper_id": "94",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study Release 4.0; primary analysis focused on year 2 data with 3,037 youths (ages 11-12 years) from 21 sites with complete sleep and neuroimaging data."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; cross-sectional examination using graph theory and component-based predictive modeling to examine sleep duration associations with brain architecture."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed archival report in Biological Psychiatry: Global Open Science (2025)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Identified phone/SM-specific variable 'screen time' (longer screen times measured as key developmental context) paired with individual-trait neural outcome (somatomotor network disconnection, cognitive performance, externalizing symptoms). Screen time explicitly measured and analyzed as predictor of brain architecture (β = 0.13, p = 2.6 × 10⁻¹⁹)."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multivariate predictive modeling using principal component regression; reported multivariate correlations (r = 0.23, p < .001 for sleep-brain relationship; r = 0.15 for dominant component). Linear regressions predicting contextual/phenotypic variables from somatomotor disconnection."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Comprehensive numeric results: multivariate correlations (rCV = 0.230, rCV = 0.215), standardized regression coefficients (β = -0.13, p = 2.1 × 10⁻⁹ for somatomotor disconnection and sleep), multiple linear regression β coefficients for context and phenotype associations (e.g., screen time: β = 0.13, p = 2.6 × 10⁻¹⁹)."
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design; EC7 applies only to longitudinal designs where SM is DV-only with no SM-as-IV analysis. This study analyzes screen time as IV predicting brain and behavioral outcomes.",
-    "notes": "Somatomotor network disconnection represents a novel neural signature of shorter sleep; strongly associated with longer screen times, socioeconomic disadvantage, and reduced cognitive/academic performance. Relationships remained significant after controlling for related contexts and phenotypes."
+    "FT_IC1": {"status": "MET", "evidence": "\"We leveraged the ABCD (Adolescent Brain Cognitive Development) Study, a population-based consortium study of early adolescents\" — ABCD Release 4.0, 22 U.S. sites, baseline ages 9-10."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical archival report using principal component regression predictive modeling and graph theory on ABCD resting-state fMRI data (n=3037 year-2 participants with complete sleep and neuroimaging data)."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed archival report in Biological Psychiatry: Global Open Science (2025). Note acknowledges a bioRxiv preprint exists but this is the published version."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The paper reports a numeric estimate for 'screen time' as a DV predicted by somatomotor disconnection (beta=0.13, p=2.6x10^-19, Figure 3A). However, the variable label is simply 'screen time' without phone/SM-specific labeling. Step 2: The methods never define the composition of the 'screen time' variable — it is listed alongside neighborhood disadvantage, household income, and parental education as a 'socioenvironmental context' variable, citing Twenge et al. (2017). ABCD's general screen time composite at this release bundles multiple device types (TV, computer, tablet, phone) without a per-device breakout. No phone-specific or SM-specific breakout is reported anywhere in the paper or supplement. This multi-device aggregated composite fails Step 2 (binding clarification: multi-device aggregated time fails IC2 unless a per-device breakout exists)."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Primary focus is sleep duration -> somatomotor brain network disconnection. Screen time appears as a secondary contextual variable (DV in exploratory regressions: somatomotor disconnection predicts screen time). The screen time measure is not defined as phone/SM-specific in the methods, consistent with ABCD's multi-device composite. FT-EC2 applies."
   },
   {
     "paper_id": "1",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study; analytic sample of 6,554 adolescents with prospectively collected data at baseline (2016-2018, ages 9-10 years), year 1 (2017-2019), and year 2 (2018-2020)."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; longitudinal group-based trajectory modeling of social media use over 2 years paired with cognitive performance outcomes assessed at year 2 follow-up."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed letter in JAMA (December 2, 2025; Volume 334, Number 21)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Identified phone/SM-specific variable 'social media time' (hours per day, measured via group-based trajectory modeling) as IV paired with individual-trait cognitive outcomes (NIH Toolbox Cognition Battery subtests: oral reading recognition, picture sequence memory, picture vocabulary, flanker test, pattern comparison processing speed, composite score). Qualifies as SM variable paired with individual-trait outcome."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple linear regression analyses with robust standard errors examining associations between three trajectory groups (no/very low, low increasing, high increasing social media use) and year 2 cognitive performance across five cognitive subtests and composite score."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Comprehensive numeric results reported: adjusted mean differences (95% CI) for all cognitive measures across trajectory groups. Examples: low increasing social media use vs reference: ORRT -1.39 (95% CI, -2.10 to -0.68, p < .001), PSMT -2.03 (95% CI, -2.91 to -1.15, p < .001), composite -0.85 (95% CI, -1.30 to -0.40, p < .001). High increasing: ORRT -1.68 (95% CI, -3.08 to -0.28, p = .02), PSMT -4.51 (95% CI, -6.48 to -2.54, p < .001), composite -1.76 (95% CI, -2.72 to -0.81, p < .001)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "\"Prospectively collected data from the ABCD study were analyzed from 3 time points: baseline (2016-2018, ages 9-10 years), year 1 (2017-2019), and year 2 (2018-2020).\" U.S. ABCD Study confirmed."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis of ABCD data using group-based trajectory modeling and multiple linear regression (n=6554 adolescents) examining social media time trajectories and cognitive performance outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed letter/research correspondence in JAMA (December 2025, Vol. 334, No. 21). No indication this is a duplicate of a prior paper."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: 'Social media time (hours per day)' is explicitly the IV in all regression analyses, paired with individual-trait cognitive outcomes (NIH Toolbox Cognition Battery subtests and composite). Numeric estimates reported in Table: e.g., high increasing vs. no/very low SM use: PSMT difference -4.51 (95% CI -6.48 to -2.54), PVT difference -3.85 (95% CI -5.34 to -2.37), total composite -1.76 (95% CI -2.72 to -0.81). Social media time is phone/SM-specific (named 'social media time' with hours/day measurement). Cognitive performance (ORRT, PSMT, PVT, composite) qualifies as individual-trait on the other side."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative regression estimates (mean differences with 95% CIs and p-values) reported for SM trajectories vs. cognitive outcomes in the Table. E.g., low increasing SM vs. reference: ORRT -1.39 (95% CI -2.10 to -0.68, p<.001); composite -0.85 (95% CI -1.30 to -0.40, p<.001)."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analysis confirmed: multiple linear regression with robust standard errors, adjusted models, p-values and 95% CIs reported. All criteria for inferential quantitative analysis met."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Social media use is IV (predictor) in primary analyses; EC7 requires SM-as-DV-only with no SM-as-IV analysis anywhere in the paper. This paper explicitly uses SM trajectories to predict cognitive outcomes.",
-    "notes": "Longitudinal trajectory analysis identifies three distinct patterns of social media use from ages 9-13. Both low and high increasing social media use trajectories significantly associated with lower cognitive performance at year 2, particularly on oral reading recognition, picture sequence memory, and picture vocabulary tests."
+    "FT_EC7_reason": "Social media time is the IV (predictor) in all regression analyses predicting cognitive performance. FT-EC7 requires SM to be DV in every analysis with no SM-as-IV analysis anywhere — the opposite holds here. EC7 does not apply.",
+    "notes": "Clean INCLUDE. Longitudinal ABCD study (baseline to year 2), social media time (h/d) trajectories as IV, NIH Toolbox cognitive outcomes as DV. Trajectory modeling (group-based) + multiple linear regression. N=6554."
   }
 ]

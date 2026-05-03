@@ -3,19 +3,19 @@
     "paper_id": "2",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "\"EARS app captures three weeks of passive sensing data on smartphone use in a subsample of adolescents in the Adolescent Brain Cognitive Development (ABCD) Study for follow-up years 4, 5, and 6.\""
+      "evidence": "Supplement states: \"The EARS (Effortless Assessment Research System) app captures three weeks of passive sensing data on smartphone use in a subsample of adolescents in the Adolescent Brain Cognitive Development (ABCD) Study for follow-up years 4, 5, and 6.\" U.S. ABCD Study confirmed."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis characterizing smartphone app usage during school hours in ABCD participants using passive sensing data and descriptive statistics."
+      "evidence": "Original empirical analysis of ABCD-EARS passive sensing data; reports adjusted means of smartphone app-category use during school hours in a final analytic sample of 640 participants."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in JAMA."
+      "evidence": "Published peer-reviewed article in JAMA (2026); no evidence of prior duplicate in corpus."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Supplementary materials show only eMethods and eReferences; no quantitative estimates linking smartphone/SM variables to individual-trait outcomes reported. Paper characterizes app usage categories (social, communication, games, etc.) during school hours but reports no associations with behavioral or health outcomes."
+      "evidence": "Step 1: The PDF provided is the supplementary-only document; no main article body is present. The supplement reports only adjusted means of smartphone app-category use (social, communication, games, etc.) broken down by demographic subgroups (sex, race/ethnicity). No numeric estimate (beta, OR, r, mean difference, etc.) pairing a phone/SM variable with an individual-trait-level variable (health, mental health, cognitive, behavioral, etc.) appears anywhere in the supplement. The abstract confirms the paper \"characterize[s] smartphone app usage during school hours\" — the other side of any comparison is demographic only (sex, race/ethnicity). Problematic SM use (SMAQ) and problematic phone use (MPIQ) are measured as descriptive variables, not as outcomes paired with individual-trait predictors in an inferential analysis. Step 2 not reached. Other-side rule: all comparisons are demographic-only; FT-IC2 = NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -27,25 +27,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2. Paper reports app usage characterization without outcome associations."
+    "notes": "PDF is supplementary-only (eMethods + eReferences); main article body absent. Paper characterizes passive-sensed smartphone app-use during school hours by demographic subgroup. No individual-trait-level outcome analyzed in any inferential model. SMAQ and MPIQ described in methods but no inferential pairing with individual-trait outcome visible in supplement or inferable from abstract."
   },
   {
     "paper_id": "36",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "\"This study analyzed prospective data from 5356 US adolescents in the Adolescent Brain Cognitive Development (ABCD) Study, Year 2 (2018–2020, ages 11–12) and Year 4 (2020–2022, ages 13–14).\""
+      "evidence": "\"This study analyzed prospective data from 5356 US adolescents in the Adolescent Brain Cognitive Development (ABCD) Study, Year 2 (2018-2020, ages 11-12) and Year 4 (2020-2022, ages 13-14).\" U.S. ABCD Study confirmed."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective empirical analysis using Poisson and linear regression models examining associations between screen time and BMI outcomes."
+      "evidence": "Original prospective empirical analysis of ABCD Study data using multivariable linear and Poisson regression models; N=5356."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Obesity journal."
+      "evidence": "Published peer-reviewed article in Obesity (2026); no evidence of prior duplicate in corpus."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Screen time is multi-device aggregated (\"total screen use weighted average...watching television and videos, playing video games, texting, social media, video chat\") without separate phone/SM breakout. Per criteria, multi-device aggregated time fails IC2 unless per-device breakout exists. The composite includes TV and unspecified gaming (non-phone items) without isolation."
+      "evidence": "Step 1: Searched all results tables (Table 2, Figure 1) and methods. The sole exposure variable is \"total recreational screen time\" from the ABCD Youth Screen Time Survey, described in methods as: \"watching television and videos, playing video games, texting, social media, video chat\" — a composite summed across modalities. No per-modality (phone-specific or SM-specific) estimate with its own coefficient appears anywhere in the paper, including supplementary tables (S1, S2 noted but contain only sample characteristics). Step 2: The composite is NOT exclusively phone/SM/digital-socializing items — it explicitly includes television, videos (TV/streaming), and video games (platform unspecified). This bundles non-phone/non-SM activities (TV, console/unspecified gaming) without a separate breakout. FT-IC2 = NOT_MET per binding clarification #5 (multi-activity composite) and the Step 2 rule."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -57,25 +57,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2. Screen time measure bundles TV, streaming, generic gaming, phone/SM without breakout."
+    "notes": "Screen time composite explicitly includes TV, video games (unspecified platform), texting, social media, and video chat per the ABCD Youth Screen Time Survey description. No per-modality breakout exists. Outcome (BMI percentile, overweight/obesity) is individual-trait-level, but the SM/phone variable fails Step 2 of IC2 because the composite bundles non-phone/non-SM activities."
   },
   {
     "paper_id": "67",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "\"We analyzed 7407 adolescents (51.6% male, age: 12.9±0.6 years) from the Adolescent Brain Cognitive Development Study (year 3: 2019–2021 to year 5: 2021–2023).\""
+      "evidence": "\"We analyzed 7407 adolescents (51.6% male, age: 12.9+/-0.6 years) from the Adolescent Brain Cognitive Development Study (year 3: 2019-2021 to year 5: 2021-2023).\" U.S. ABCD Study confirmed."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective empirical analysis using mixed-effects ordinal logistic regression and generalized linear models."
+      "evidence": "Original prospective empirical analysis of ABCD Study data using mixed-effects ordinal logistic regression and generalized linear models; N=7407."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in World Journal of Pediatrics."
+      "evidence": "Published peer-reviewed article in World Journal of Pediatrics (2026); no evidence of prior duplicate in corpus."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Paper measures video game behaviors (VGAQ problematic use, mature-rated game frequency, weekend gaming time) as DVs. Gaming alone without explicit phone/SM modality fails IC2. Per criteria: \"Gaming alone does not qualify unless it is explicitly mobile/phone-based, OR the paper also separately measures a qualifying phone/SM variable with its own coefficient...all fail IC2 unless paired with a separately-measured phone/SM variable.\" No separately-measured phone/SM IV is reported."
+      "evidence": "Step 1: Searched all results (Table 2, sex-stratified supplementary analyses). Exposures are six media parenting practice scales (screen time modeling, mealtime screen use, bedroom screen use, use of screens to control behavior, parental monitoring, limiting screen time). Outcomes are: (1) mature-rated video game frequency, (2) VGAQ (Video Game Addiction Questionnaire) problematic gaming score, (3) total weekend video game time. None of these are phone/SM-specific variables per the Step 1 list. No phone/SM-specific variable (time on phone, time on SM, named SM platform, texting, SMAQ, MPIQ, etc.) appears as IV or DV with its own coefficient anywhere in the paper. Step 2 not applicable — there is no composite to evaluate. Binding clarification #2 applies: gaming alone (VGAQ, mature-rated games, unspecified-platform video game time) fails IC2 unless the paper also separately measures a qualifying phone/SM variable with its own coefficient — which it does not. Mature-rated content alone also fails per binding clarification #4. FT-IC2 = NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2. Outcomes are video gaming behaviors only; gaming alone without phone/SM pairing fails IC2 per binding clarification."
+    "notes": "All exposures are media parenting practices; all outcomes are video gaming outcomes (mature-rated game frequency, VGAQ problematic gaming, weekend game time). No phone/SM-specific variable (phone time, SM time, named platform, texting, SMAQ, MPIQ) appears anywhere as IV or DV. Gaming (platform unspecified, console/PC) without a separately-measured phone/SM variable fails IC2 per binding clarification #2."
   }
 ]

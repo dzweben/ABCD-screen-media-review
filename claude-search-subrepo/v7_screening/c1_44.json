@@ -3,7 +3,7 @@
     "paper_id": "239",
     "FT_IC1": {
       "status": "NOT_MET",
-      "evidence": "\"Cross-sectional study in children of 9-11 years old (n=2,952) and adolescents of 17-18 years old (n=261), from the Dutch ABCD Study and the Spanish INMA Project.\" Uses Dutch ABCD and Spanish INMA, not U.S. ABCD Study."
+      "evidence": "Methods section states: \"Cross-sectional study in children of 9-11 years old (n=2,952) and adolescents of 17-18 years old (n=261), from the Dutch ABCD Study and the Spanish INMA Project.\" The Dutch ABCD Study (Amsterdam Born Children and their Development) is explicitly excluded by FT-IC1; this is not the U.S. NIH-funded ABCD Study."
     },
     "FT_IC5": {
       "status": "DEFERRED",
@@ -27,66 +27,66 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded under FT-EC1 (not U.S. ABCD Study)"
+    "notes": "Conference abstract published in Environmental Epidemiology. Cohort is explicitly the Dutch ABCD Study (Amsterdam Born Children and their Development) combined with the Spanish INMA Project — neither is the U.S. ABCD Study. FT-EC1 exclusion."
   },
   {
     "paper_id": "55",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "\"survey and interview data collected for 9- to 11-year-olds from the 21-site adolescent brain cognitive development study\" - confirms U.S. ABCD."
+      "evidence": "Methods: \"Data from a sample of 4524 children in the ABCD study were used... survey and interview data collected for 9- to 11-year-olds from the 21-site adolescent brain cognitive development study.\" NDA Data Archive referenced (https://doi.org/10.15154/1412097). Confirms U.S. ABCD Study."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis using generalized linear mixed models examining relationships between electronic media use and anxiety/depression measured by CBCL."
+      "evidence": "Original empirical analysis using generalized linear mixed models on ABCD cross-sectional baseline data examining EMU categories (texting, social networking, video chatting, video games, TV, videos) in relation to anxiety and depression symptoms."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Child Psychiatry & Human Development (2019)."
+      "evidence": "Published peer-reviewed article in Child Psychiatry and Human Development (2019) 50:907-917. No evidence of being a duplicate or preprint of another included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 identifies qualifying phone/SM-specific estimates paired with individual-trait outcomes. Methods state analysis of \"video gaming and video chatting\" paired with child anxiety and depression (CBCL). Table 2 reports coefficients for child-reported weekday and weekend EMU paired with anxiety and depression outcomes (e.g., child reported weekday use with anxiety: β=0.055, p=.001)."
+      "evidence": "Step 1 hit: Tables 3, 4, and 5 report separate numeric coefficients (β, t-values, 95% CIs) for phone/SM-specific variables — texting (β=0.081, t=3.418, p=0.001 in boys; Table 3), social networks (β=0.061, t=2.574, p=0.010 in boys), and video chatting (β=0.069, t=3.131, p=0.002 in boys) — each paired with anxiety (individual-trait outcome). Weekday social networks β=0.031, t=2.014, p=0.044 predicting anxiety (Table 4). These are phone/SM-specific variables with their own coefficients paired with mental health individual-trait outcomes."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Quantitative results reported throughout: Table 2 contains multiple coefficients, t-values, significance levels, and 95% CIs for EMU-anxiety and EMU-depression relationships."
+      "evidence": "Numeric β coefficients, t-values, and 95% CIs reported throughout Tables 2-5 for EMU-anxiety and EMU-depression relationships. Generalized linear mixed models with quantitative results."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Generalized linear mixed models with reported inferential statistics (coefficients, t-values, p-values, CIs) for SM/phone variables paired with individual-trait outcomes."
+      "evidence": "Inferential analysis (generalized linear mixed models) performed associating phone/SM-specific EMU categories with individual-trait outcomes (anxiety, depression symptoms). Numeric results reported throughout."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional, not longitudinal; EC7 does not apply. Cross-sectional carve-out confirmed.",
-    "notes": "INCLUDE - meets all FT-IC criteria; EC7 does not apply to cross-sectional analysis."
+    "FT_EC7_reason": "Cross-sectional design. FT-EC7 requires longitudinal design as one of its conditions; this paper uses baseline cross-sectional ABCD data only. EC7 does not apply.",
+    "notes": "Paper uses ABCD STQ data with specific categories including texting, social networking sites (Twitter, Instagram), and video chatting (FaceTime) as separate predictors of anxiety and depression. These qualify as phone/SM-specific variables under Step 1 of FT-IC2. INCLUDE."
   },
   {
     "paper_id": "398",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "\"Parents and children provided cross-sectional baseline data (2016-18) as part of the Adolescent Brain Cognitive Development study, a broadly US representative sample of 11,875 children aged 9 to 10 years.\""
+      "evidence": "Methods: \"We used baseline (cross-sectional) data (2016-18) from the Adolescent Brain Cognitive Development (ABCD) study, a US representative sample of 11,875 children aged 9 to 10 years... data will be collected... across 21 sites throughout the United States.\" NIMH Data DOI: 10.15154/1412097 cited."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis using negative binomial structural equation modeling to examine mediation by sleep duration."
+      "evidence": "Original empirical analysis using negative binomial structural equation modeling (SEM) to examine associations between screen time types/content and problem behaviors, with sleep duration as mediator, on ABCD cross-sectional baseline data."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in International Journal of Behavioral Nutrition and Physical Activity (2019)."
+      "evidence": "Published peer-reviewed article in International Journal of Behavioral Nutrition and Physical Activity (2019) 16:105. No evidence of being a duplicate or preprint."
     },
     "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 finds no phone/SM-specific estimate isolated from other screen types. Step 2 composite-content check fails: headline analysis uses composite \"screen time\" defined as \"ST types (television/movies, videos, video games, and social media)\" per methods. Composite bundles television/movies (non-phone/non-SM activity, §2.4 binding rule) with phone/SM items without separate breakout in main tables. Per criteria: \"if the composite includes any non-phone/non-SM ingredient (TV...) without separate breakout → NOT_MET.\""
+      "status": "MET",
+      "evidence": "Step 1 hit: \"Social media\" is defined in methods as texting + visiting social networking sites (e.g., Twitter, Instagram) + video chat (e.g., FaceTime) — exclusively phone/SM items. Table 2 reports separate IRR estimates for social media as IV: social media → rule-breaking behavior B=0.08, p<.001, IRR=1.084 (95% CI 0.046, 0.115); social media → aggressive behavior B=0.06, p<.001, IRR=1.062 (95% CI 0.029, 0.053). These phone/SM-specific estimates are paired with individual-trait behavioral outcomes (CBCL problem behaviors)."
     },
     "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Numeric IRR estimates (exponentiated B values), B coefficients, p-values, and 95% CIs for the SM-to-problem-behavior relationships reported in Tables 2 and 3."
     },
     "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Inferential negative binomial SEM with quantitative IRR results for social media (phone/SM-specific composite) predicting individual-trait problem behavior outcomes. Mediation indirect effects also reported quantitatively in Table 3."
     },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "EXCLUDE under FT-EC2 - composite includes TV without separate breakout; fails mechanical Step 2 of FT-IC2 two-step test."
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (baseline ABCD data). FT-EC7 requires longitudinal design; this condition is not met. EC7 does not apply.",
+    "notes": "Social media variable = texting + social networking sites + video chat (collapsed due to low use), all phone/SM items — qualifies under Step 1 of FT-IC2. SM is IV predicting CBCL problem behaviors. INCLUDE."
   }
 ]

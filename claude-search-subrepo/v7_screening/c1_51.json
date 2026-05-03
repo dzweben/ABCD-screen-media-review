@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "135",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Study uses data from the National Institute of Mental Health (NIMH) Data Archive Adolescent Brain Cognitive Development (ABCD) collection; analyzed 6,830 children from ABCD baseline."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis using exploratory factor analysis and regression models on test and validation sets to identify risk factors for maladaptive behaviors."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Journal of Adolescent Health (2025)."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Screen time is one component of a six-factor composite (fat/sugar intake, screen time, prenatal alcohol exposure, parental aggressiveness, hyperactivity, family violence). Step 1: No isolated phone/SM-specific estimate reported. Step 2: Composite includes non-phone/non-SM items (prenatal alcohol exposure, parental aggressiveness) without separate breakouts. NOT_MET."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses NIMH Data Archive ABCD collection release 4.0 (DOI: 10.15154/1,523,041); 21 U.S. recruitment sites; participants aged 9-10 at baseline."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: exploratory factor analysis on test set (n=3,415) and linear mixed-effect regression models examining associations between risk groups and behavioral/neural outcomes at 2-year follow-up."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Adolescent Health; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No numeric estimate in any results location where the variable label is phone/SM-specific (e.g., time on phone, time on SM, texting, video chat) paired with an individual-trait outcome. Screen time (weekday and weekend) appears only as one component within the Factor 5 composite. Step 2: The composite risk variable bundles fat/sugar intake, prenatal alcohol/caffeine exposure, parental aggressiveness, ADHD, family violence, family income, parental education, BMI z-score, and screen time into a single score. This composite contains non-phone/non-SM ingredients (nutrition, prenatal exposure, family environment, SES) with no separate phone/SM breakout in the results. NOT_MET under Step 2 composite-bundling rule."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Composite-only approach with mixed ingredients (behavioral, nutritional, prenatal) fails FT-IC2 Step 2 due to non-phone/non-SM bundling."
+    "notes": "Screen time is Factor 5 in a six-factor composite risk variable. All inferential analyses use this composite risk-group variable (low/medium/high) as the IV; screen time never appears as a standalone IV or DV with its own coefficient against an individual-trait outcome."
   },
   {
     "paper_id": "181",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Analyzed data from 3,498 U.S. adolescents aged 9-11 years from the Adolescent Brain Cognitive Development (ABCD) Study baseline and follow-up assessments."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original prospective cohort analysis using Cox proportional hazards models examining associations of sleep duration and screen time with BMI transition over median 657 days."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in International Journal of Obesity (2025)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Screen time measured as hours per day (continuous and categorical: low 0-4, medium >4-8, high >8 h/day) - qualifying phone/SM variable. Other side: BMI transition from overweight/obesity to normal BMI percentile - individual-trait-level health outcome. Estimates reported: HR 0.99 (95% CI 0.96, 1.02) for continuous screen time. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Inferential analysis performed: Cox proportional hazards models with numeric results reported for screen time and sleep duration associations with BMI transition."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Numeric quantitative results reported: screen time HR 0.99 (95% CI 0.96, 1.02), sleep duration HR 0.60 (95% CI 0.44, 0.82) for 7-8 hours vs 9-11 hours, with p-values and confidence intervals throughout."
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Screen time functions as IV in the analysis (predicts BMI transition outcome); design is longitudinal but SM/phone is not DV-only. FT-EC7 does not apply.",
-    "notes": "Clear qualifying SM variable (screen time) paired with health outcome (BMI); longitudinal design with SM as predictor."
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes longitudinal ABCD Study data; 21 U.S. sites; baseline 2016-2018; ages 9-11 years; n=3,498."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: Cox proportional hazards regression models examining prospective associations of sleep duration and screen time with BMI transition from overweight/obesity to normal."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in International Journal of Obesity; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The only screen-time variable analyzed is 'total screen time (hours/day)' — no numeric estimate exists where the variable label is phone/SM-specific (texting, social media, video chat, time on phone, named platform, etc.) paired with an individual-trait outcome. Step 2: The composite 'total screen time' is the ABCD Youth Screen Time Survey aggregate including: viewing/streaming TV shows or movies, watching/streaming videos (e.g., YouTube), playing video games, texting, video chatting (e.g., Skype, FaceTime), and using social media (e.g., Facebook, Instagram, Twitter). This composite includes TV, YouTube streaming, and platform-unspecified video games alongside phone/SM items, with no separate per-modality breakout reported anywhere in this paper. NOT_MET under Step 2 bundling rule."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Screen time is IV predicting BMI transition (HR 0.99, 95% CI 0.96-1.02), but the composite bundles TV, YouTube, video games, texting, video chat, and social media. No per-modality estimates are reported in main tables or any supplementary/sensitivity analyses in this paper."
   },
   {
     "paper_id": "215",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Analyzed prospective data from 7,445 adolescents (47.3% females) aged 9-10 years at baseline (2016-2018) in the Adolescent Brain Cognitive Development Study."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original prospective cohort analysis using weighted multivariable linear regression models examining independent and joint associations of screen time and sleep with BMI and waist circumference over 2-year follow-up."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Childhood Obesity (2025)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Screen time measured as hours per day (continuous and categorical: 0-4 low, >4-8 medium, >8 high) - qualifying phone/SM variable. Other side: BMI and waist circumference - individual-trait-level health outcomes. Numeric estimates reported: B = 0.32 (95% CI 0.19, 0.45) for BMI; B = 0.40 (95% CI 0.23, 0.56) for WC. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Inferential analysis: weighted multivariable linear regression models with hypothesis testing examining screen time and sleep associations with BMI and WC."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Numeric quantitative results reported: screen time B = 0.32 (95% CI 0.19, 0.45) for BMI; B = 0.40 (95% CI 0.23, 0.56) for WC; sleep disturbance B = 1.23 (95% CI 0.14, 2.33) in males; all with p-values and confidence intervals."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes ABCD Study data; n=7,445 participants; ages 9-10 at baseline (2016-2018); 21 U.S. sites; prospective longitudinal design."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: weighted multivariable linear regression models examining independent and joint prospective associations of screen time and sleep with BMI and waist circumference at 2-year follow-up."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Childhood Obesity; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: The paper reports separate analyses of screen time subtypes including 'socializing (texting, video chatting, and social media)' vs. BMI and WC (Supplementary Tables S6 and S7). The 'socializing' subtype is composed exclusively of phone/SM/digital-socializing items (texting + video chatting + social media). These modality-specific analyses yield numeric regression coefficients (B) pairing the phone/SM-specific socializing subtype with BMI and waist circumference — both individual physical-health-level outcomes. Methods state: 'We also examined associations of screen time subtypes (TV/movies, video games, socializing) with BMI and WC, adjusting for confounders.' FT-IC2 = MET under Step 1."},
+    "FT_IC3": {"status": "MET", "evidence": "Regression coefficients (B with 95% CI and p-values) reported for screen time (continuous and categorical) vs. BMI (B=0.32; 95% CI: 0.19, 0.45; p<0.001) and WC (B=0.40; 95% CI: 0.23, 0.56; p<0.001) in main Tables 2 and 3, plus subtype-specific results in Supplementary Tables S6-S7."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative numeric results reported throughout: regression coefficients, 95% CIs, and p-values for all main and supplementary analyses. Multiple inferential tests reported for screen time subtypes, joint combinations with sleep, and sex-stratified models."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Screen time functions as IV (predicts BMI and WC outcomes); longitudinal design but SM/phone is not DV-only. FT-EC7 does not apply.",
-    "notes": "Clear qualifying SM variable (screen time in hours/day) paired with health outcomes (BMI and waist circumference); prospective design with SM as independent variable."
+    "FT_EC7_reason": "Screen time is the IV (predictor) in all analyses, with BMI and WC as the DVs. EC7 only applies when SM/phone is DV-only; here it is IV-only. EC7 does not apply.",
+    "notes": "Total screen time composite (TV + video games + socializing) would fail Step 2, but the paper separately reports modality-specific analyses including a 'socializing' subtype (texting + video chatting + social media) which is exclusively phone/SM, rescuing IC2 via Step 1."
   }
 ]

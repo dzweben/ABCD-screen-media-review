@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Uses ABCD Study data from 2016-2021, baseline 9-10 years old, U.S. sample with 11,869 participants"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using growth mixture modeling to identify screen use trajectories from ABCD data"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Preventive Medicine Reports, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Composite screen use outcome defined as sum of television, videos, video games, social media, video chat, and texting — includes non-phone/non-SM items (TV, unspecified platform gaming) without separate breakout. Step 1 finds no phone/SM-specific variable isolated with individual-trait outcome. Step 2: composite fails because it bundles TV and unspecified gaming without per-modality separation"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Exclusion code: FT-EC2. Paper uses multi-item screen composite as predictor of screen use trajectory groups (demographics and perceived discrimination as outcomes); composite itself fails FT-IC2 Step 2"
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study baseline wave, N = 11,815 children, mean age 119 months, baseline 2016-2018"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: K-means clustering to identify SMA patterns, linear mixed effects models testing associations with behavioral and neurocognitive outcomes and resting-state brain functional connectivity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of the American Academy of Child & Adolescent Psychiatry, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "SMA composite based on 14-item ABCD Youth Screen Time Questionnaire covering 6 types: watching TV/movies, playing video games, social media, video chat, texting, and other online activities. Composite explicitly includes TV (non-SM) and unspecified platform video games (fails Step 2). Step 1 finds no separate phone/SM-specific variable (e.g., social media time or texting) isolated with its own coefficient. All primary results use SMA pattern clusters which include TV and gaming without breakout"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Exclusion code: FT-EC2. Paper reports associations between SMA patterns (video-centric higher-frequency vs lower-frequency) and neurocognitive performance, behavioral problems, psychotic-like experiences; but the SMA composite includes TV and unspecified gaming without isolated phone/SM estimate"
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study data, baseline ages 9-10, N > 10,000, recruited across 21 U.S. sites, ABCD 4.0 release"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original machine learning analysis: PCR and LASSO models predicting parent- and teacher-reported ADHD symptoms at 1-year and 2-year follow-up using neurocognitive tests, demographics, and child/family characteristics"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Translational Psychiatry, 2023"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper includes \"screen time\" as a contributing feature in ML models but does not specify whether it is exclusively phone/SM or includes TV/gaming. ABCD Screen Time Questionnaire (14-item) covers 6 types including TV, video games, social media, etc. No separate phone/SM-specific variable (e.g., texting, social media time) reported with isolated coefficient or feature weight. Screen time feature label is generic/ambiguous and not confirmed as phone/SM-exclusive. Step 1 finds no per-modality estimate (β, SHAP, feature importance) for a named phone/SM variable. Step 2 would require composite to be exclusively phone/SM, but screen time likely includes TV and unspecified gaming per source questionnaire"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Exclusion code: FT-EC2. Paper predicts ADHD symptoms (individual-trait outcome, DV) using neurocognitive and demographic features including screen time (IV); but screen time is not isolated or confirmed as phone/SM-exclusive, and no per-modality coefficient is reported"
+  }
+]

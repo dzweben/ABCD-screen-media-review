@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "149",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"We included 2294 participants from the Adolescent Brain Cognitive Development study (Mage = 10.03, 50.6% female) who had resting-state functional magnetic resonance imaging (fMRI) data at baseline and PUSM scores at the four-year follow-up.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling (CPM) with 10-fold cross-validation and permutation testing (p = 0.02) applied to rs-fMRI and SMAQ scores; original empirical analysis."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in NeuroImage 329 (2026) 121829."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Outcome is PUSM (problematic use of social media) measured by the 6-item Social Media Addiction Questionnaire (SMAQ). Per binding clarification: SMAQ is a SM/phone variable, not an 'individual-trait' outcome. The relationship is neural connectivity (baseline rs-fMRI, individual-trait IV) → PUSM severity (SM scale DV). PUSM itself measures SM use severity and does not qualify as individual-trait-level outcome on the other side."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes U.S. ABCD data with longitudinal design (baseline fMRI predicts 4-year follow-up PUSM). DV is SMAQ, an addictive-use scale, not individual-trait."
+  },
+  {
+    "paper_id": "446",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"From the Adolescent Brain Cognitive Development study at the two-year follow-up, 1,036 participants (Mage = 12.0, 60.7% male) were studied.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Connectome-based predictive modeling with 10-fold cross-validation, permutation testing (1000 iterations), and task-based fMRI (reward-processing) and resting-state fMRI analyses."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions 15 (2026) 1, 305-319."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Outcome is problematic-gaming severity measured by Bergen Video Game Addiction Questionnaire (VGAQ). Per binding clarification 2: 'Gaming alone does not qualify unless it is explicitly mobile/phone-based, OR the paper also separately measures a qualifying phone/SM variable with its own coefficient.' Paper measures generic video gaming addiction (VGAQ) without explicit mobile/phone-based modality isolation or separate phone/SM variable reported with coefficient. No per-modality estimate in supplementary analyses; main analyses use VGAQ score only."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes ABCD gaming disorder with CPM. VGAQ is generic gaming addiction scale without phone-based specification. No separate phone/SM variable measured."
+  },
+  {
+    "paper_id": "84",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "\"Using data from the Adolescent Brain Cognitive Development study of nearly 10,000 children aged 9–10 years, screen time was assessed through self-report questionnaires, and cognitive function... was measured using the National Institutes of Health toolbox.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Linear mixed-effects models analyzing screen time and cognitive function; mediation analysis examining putamen volume as mediator; original empirical analysis."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Acta Psychologica 265 (2026) 106742."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No phone/SM-specific estimates reported. Methods: \"screen time was assessed through self-report questionnaires, including television, videos, video games, texting, and video chat.\" Results state \"only the total time was used\" for main mediation analyses. Step 2: Composite contains non-phone/non-SM items. Composite = TV + videos + video games (platform unspecified) + texting + video chat. Per criteria, TV and unspecified-platform gaming are disqualifying non-phone/non-SM ingredients without separate breakout. Supplementary Table S1 and Fig. S1 report per-device associations, but main and mediation analyses used aggregate total screen time only."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes screen time (aggregate composite including TV, gaming, texting, video chat) and cognitive function domains with putamen volume mediation. Composite not exclusively phone/SM due to TV and unspecified gaming bundling."
+  }
+]

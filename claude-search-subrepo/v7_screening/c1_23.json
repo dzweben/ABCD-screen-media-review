@@ -1,38 +1,92 @@
 [
   {
     "paper_id": "441",
-    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, n=4,641 ages 9-12 at baseline, Year 1 and Year 2 follow-up"},
-    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using Cross-Lagged Panel Models (CLPMs) investigating reciprocal predictive relationships between sleep duration/problems, SMA, and psychopathology symptoms over time"},
-    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed published article in Journal of Behavioral Addictions, 2024"},
-    "FT_IC2": {"status": "MET", "evidence": "Step 1 match: Screen media activity (SMA) is phone/SM-specific variable (youth self-reported hours spent on non-school SMA including TV, videos, gaming, texting, video chatting, social networking). Paired with individual-trait outcome (psychopathology: externalizing symptoms, internalizing symptoms). Fig. 1A shows bidirectional association between sleep duration and SMA (β = -0.10, p = 0.001 for SMA→sleep; β = -0.11, p < 0.001 for sleep→SMA). Externalizing symptoms at 10-11 years predicted higher SMA and sleep disturbances (β = 0.07, p = 0.014)"},
-    "FT_IC3": {"status": "MET", "evidence": "Multiple quantitative results reported: standardized path coefficients with 95% CIs throughout Figures 1-3 and Tables 1-2. Examples: β = -0.10 [95%CI: -0.16, -0.03], p = 0.001; β = -0.11 [95%CI: -0.18, -0.05], p < 0.001; indirect effect = 0.032 [95%CI: 0.003, 0.067], p = 0.030"},
-    "FT_IC4": {"status": "MET", "evidence": "Inferential analysis with quantitative results for SM↔outcome relationship confirmed via CLPM reporting"},
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Bidirectional cross-lagged design: SMA analyzed as both IV (predicting later sleep and psychopathology) and DV (predicted by earlier sleep and symptoms). SM is not DV-only; bidirectional causality model explicitly tests reverse directions",
-    "notes": "Paper analyzes discovery (n=2,359) and replication (n=2,282) sets. Results replicated. Temporal consistency observed in sleep patterns, SMA, and psychopathology symptoms over time"
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, ABCD 5.0 release, n=4,641 ages 9-12, 21 U.S. recruitment sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using Cross-Lagged Panel Models (CLPMs) on ABCD longitudinal data across baseline, Year 1, and Year 2 follow-up; mediation analyses also performed."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original article in Journal of Behavioral Addictions; no evidence of duplicate or preprint of an already-included paper."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper. The SMA measure is defined as 'total number of hours spent on non-school-related SMA on a typical day,' a composite that 'mainly included time spent watching TV shows/movies, watching videos, playing video games, texting on electronic devices, visiting social networking sites, and video-chatting' (Methods, SMA section). No per-modality breakout (e.g., separate coefficient for texting, SNS, or video chat) appears in main tables, Figs 1-3, or supplementary material. Step 2: The composite bundles TV/movies, video games, and phone/SM items without separate breakout of non-phone/non-SM ingredients (TV, gaming). Composite fails Step 2 because it includes TV and gaming without isolation."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "SMA composite explicitly includes TV shows/movies, videos (YouTube), video games, texting, social networking sites, and video-chatting. No per-modality estimates appear anywhere in the paper. Composite fails IC2 Step 2 because TV and gaming are bundled with phone/SM items without separate breakout."
   },
   {
     "paper_id": "136",
-    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, n=10,828 youth (47.8% female), baseline mean age 9.9 years, one-year follow-up to age 10.9 years"},
-    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: one-year longitudinal study using multilevel logistic regressions with screen time and sleep duration as simultaneous predictors of internalizing symptoms, plus reverse causality tests"},
-    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed published article in Journal of Adolescent Health, 2024"},
-    "FT_IC2": {"status": "MET", "evidence": "Step 1 match: Screen time is phone/SM-specific variable (youth self-reported weekday/weekend screen time on six types: TV, YouTube, videogames, texting, video chatting, social networking). Paired with individual-trait outcome (internalizing symptoms via CBCL withdrawn/depressed, anxious/depressed, somatic). Table 3 shows adjusted OR 1.6 (95% CI 1.1-2.2, p=0.0129) for weekend screen time >2 hrs/day predicting withdrawn/depressed symptoms in females"},
-    "FT_IC3": {"status": "MET", "evidence": "Quantitative results for SM↔outcome relationship: adjusted ORs with 95% CIs reported throughout Table 3. Example: OR 1.6 (95% CI 1.1–2.2) for weekend screen time and withdrawn/depressed symptoms in females"},
-    "FT_IC4": {"status": "MET", "evidence": "Inferential analysis confirmed with quantitative results (ORs, CIs, p-values) for SM↔outcome"},
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, ABCD Release 4.0 (September 2021), N=10,828 youth aged 9-11 at baseline."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical longitudinal study using multilevel logistic regression (SAS GLIMMIX) examining bidirectional associations between sleep duration, screen time, and internalizing symptoms over one year."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original article in Journal of Adolescent Health; no evidence of duplicate or preprint of an already-included paper."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Supplementary Table A7 reports exploratory associations between individual screen time categories on weekends and withdrawn/depressed symptoms, with separate estimates for each screen type including texting, video chatting, and social networking sites (phone/SM-specific variables). These are paired with withdrawn/depressed symptoms (internalizing outcome = individual-trait-level). Additionally, the main screen time variable is a sum of 6 types including texting, video chatting, and social networking sites; although the composite also includes TV/streaming and gaming, the paper reports per-category estimates in Table A7. At minimum, the texting, video chat, and SNS items from Table A7 constitute phone/SM-specific estimates paired with an individual-trait outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% CI reported for screen time associations with internalizing symptoms (e.g., Table 3: weekend screen time >2 hrs/day vs. ≤2 hrs/day associated with withdrawn/depressed symptoms in females, adjusted OR 1.6 [95% CI 1.1-2.2], p=.0129)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analyses performed using multilevel logistic regression with ORs and 95% CIs; association between screen time and internalizing symptoms reported in Tables 3 and 4 and supplementary tables."
+    },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design includes reverse causality tests (Table 4) examining whether baseline internalizing symptoms predict screen time and sleep at follow-up. Not SM-as-DV-only; both forward and reverse directions analyzed. Also gender-stratified analyses treat behaviors and outcomes symmetrically",
-    "notes": "Gender-stratified analyses; results in females only for weekend screen time. Longitudinal unidirectional associations found (behavior preceding symptoms, no reverse causality support in this data)"
+    "FT_EC7_reason": "Screen time is used as IV (predictor) in the primary analyses (baseline screen time predicting follow-up internalizing symptoms, Table 3), so condition (b) is not satisfied. EC7 does not apply when SM/screen time appears as IV in any analysis.",
+    "notes": "Screen time measure is total of 6 types (TV/streaming, YouTube, videogames, texting, video chatting, SNS). Individual screen type analyses exist in Table A7 (supplementary). Primary design is longitudinal with screen time as IV predicting internalizing symptoms, and reverse-causality models with internalizing as IV predicting screen time (Table 4). IC2 MET via Table A7 phone/SM-specific per-category estimates."
   },
   {
     "paper_id": "400",
-    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, n=10,544 youth baseline mean age 9.9 years, one-year follow-up 2018-2019"},
-    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using isotemporal substitution and compositional data analysis (CoDA) to examine associations between screen time, physical activity, sleep duration, and BMI"},
-    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed published article in International Journal of Behavioral Nutrition and Physical Activity, 2024"},
-    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1 search: Screen time variable includes three categories: 'streaming' (TV shows/movies, YouTube), 'gaming' (video games, platform unspecified), 'socializing' (texting, video chatting, social networking). Methods state composite includes 'viewing/streaming television shows or movies, watching/streaming videos [e.g., YouTube], playing videogames, texting, video chatting, and using social networking sites.' Step 2 composite check FAILS: composite bundles TV/non-phone video streaming + platform-unspecified gaming without separate phone-specific breakout. Gaming alone without explicit mobile/phone modality fails per §2.4 binding clarifications. TV/streaming video on non-phone devices disqualifies under Step 2 (non-phone/non-SM ingredient without separate breakout). No phone-specific or SM-specific estimate isolated"},
-    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
-    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Isotemporal substitution found replacing 30 min socializing/streaming/gaming with physical activity or sleep associated with lower BMI z-score, but SM variable definition does not isolate phone/SM from TV and platform-unspecified gaming"
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, ABCD Release 4.0, N=10,544 (isotemporal substitution sample), ages 9-11 at baseline (2017-2018)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using isotemporal substitution and compositional data analysis (CoDA) in a one-year longitudinal design; all analyses are original analyses of ABCD data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original article in International Journal of Behavioral Nutrition and Physical Activity; no evidence of duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: The 'socializing' screen time category is defined in the Methods as 'texting + video chatting + using social networking sites' — exclusively phone/SM/digital-socializing items. This variable has its own separate coefficient in all analyses. Table 2 (isotemporal substitution) reports: replacing 30 min of socializing with 30 min of physical activity associated with lower follow-up BMI z-score in females (β [95% CI] = -0.03 [-0.05, -0.002]) and males (β = -0.03 [-0.05, -0.01]). Table 6 (CoDA) reports: in males, greater proportion of socializing associated with higher BMI z-score (β = 0.05 [0.02, 0.08]). BMI z-score is a biological/physical health individual-trait variable. Step 1 is satisfied; stop."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric β estimates with 95% CI reported for socializing screen time in relation to BMI z-score across Tables 2 and 6 (e.g., females isotemporal: β = -0.03 [-0.05, -0.002]; males CoDA: β = 0.05 [0.02, 0.08])."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analyses conducted via sex-stratified isotemporal substitution linear regression and CoDA with β coefficients and 95% CIs; association between socializing screen time and BMI z-score quantified."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time (including socializing) is the IV predicting BMI z-score (outcome) in all analyses. Design is longitudinal but SM/screen is IV, not DV. FT-EC7 requires SM to be the DV in every analysis, which is not the case here.",
+    "notes": "Three screen time categories: streaming (TV + YouTube), gaming, and socializing (texting + video chat + SNS). Socializing is exclusively phone/SM items and has its own coefficient in all models. BMI z-score is the outcome. Paper INCLUDed under v7 criteria."
   }
 ]

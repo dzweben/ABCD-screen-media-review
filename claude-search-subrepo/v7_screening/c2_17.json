@@ -3,79 +3,79 @@
     "paper_id": "48",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzes data from the Adolescent Brain Cognitive Development Study; N=9,066 children primarily aged 9-10 at baseline and 1-year follow-up"
+      "evidence": "N=9,066 children from the Adolescent Brain Cognitive Development (ABCD) Study at baseline (ages 9-10) and 1-year follow-up; ABCD data release 4.0 used; 21 recruitment sites confirmed."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical longitudinal analysis; models assessed psychiatric symptoms as predictors of screen time and screen time as predictors of psychiatric symptoms"
+      "evidence": "Original empirical analysis: longitudinal cumulative logistic regression (VGAM package) modeling psychiatric symptoms as predictors of screen time one year later, and screen time as predictors of psychiatric symptoms."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Social Psychiatry and Psychiatric Epidemiology (2024)"
+      "evidence": "Published peer-reviewed article in Social Psychiatry and Psychiatric Epidemiology (2024) 59:2279-2290."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: Social screen time and nonsocial screen time are phone/SM-specific composites (measured as 'ordinally defined weekday and weekend time on social and nonsocial [e.g., YouTube] digital media'). Paired with individual-trait-level psychiatric symptoms (internalizing, externalizing, attention). Bidirectional results: psychiatric symptoms predict screen time (e.g., OR=1.22, 95% CI 1.22–1.23 for clinical problems predicting weekday nonsocial screen time) and screen time predicts psychiatric symptoms (e.g., higher social screen time associated with clinical externalizing, OR=1.14, 95% CI 1.13–1.15)"
+      "evidence": "Step 1 hit: social screen time composite is defined in methods as summing time spent texting, using social media, and video chatting — all phone/SM-specific items. Numeric ORs are reported for social screen time as DV paired with individual-trait psychiatric symptoms (e.g., clinical externalizing predicting weekday social screen time OR=1.15, 95% CI 1.14-1.15; internalizing predicting weekday social screen time OR=1.17, 95% CI 1.17-1.18). Psychiatric symptoms (internalizing, externalizing, attention via CBCL) are individual-trait-level outcomes on the other side."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple quantitative results reported: OR estimates with 95% CIs (e.g., OR=1.22, OR=1.10, OR=1.65) for associations between psychiatric symptoms and screen time categories across weekday and weekend social and nonsocial use"
+      "evidence": "Numerous OR estimates with 95% CIs reported throughout for psychiatric symptoms predicting social and nonsocial screen time, and for screen time predicting psychiatric symptoms."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Inferential longitudinal analysis with numeric results across multiple outcomes; controlled for baseline measures, demographic covariates (sex, age, race/ethnicity, income)"
+      "evidence": "Same as FT_IC3: quantitative results (ORs) reported for all key associations."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is longitudinal; however, SM/screen time is analyzed as both IV and DV in bidirectional models. Paper explicitly states bidirectionality: 'Comparable magnitude associations were observed for social and nonsocial media use predicting future psychiatric symptoms, suggesting bidirectionality.' When SM appears as IV in any analysis, FT-EC7 does not apply.",
-    "notes": "Paper reports bidirectional associations; psychiatric symptoms predict subsequent screen time patterns, and baseline screen time predicts future psychiatric symptoms. Both directions are supported by quantitative results."
+    "FT_EC7_reason": "SM/phone (social screen time) appears as DV in the primary analyses (psychiatric symptoms predicting screen time) but also as IV in the supplementary analyses (screen time predicting future psychiatric symptoms, e.g., weekday social screen time predicting clinical total psychiatric problems OR=1.11, 95% CI 1.10-1.12). Because SM appears as IV in at least one analysis, EC7 does not apply.",
+    "notes": "Bidirectional design with SM as both IV and DV across primary and supplementary analyses. Social screen time composite (texting + social media + video chatting) passes Step 1 directly. Nonsocial screen time (YouTube, TV, video games) would not qualify alone, but qualifying social screen time estimates exist throughout."
   },
   {
     "paper_id": "18",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Utilizes the Adolescent Brain Cognitive Development (ABCD) dataset with approximately 12,000 participants aged between 9 and 13 years old at baseline and 2-year follow-up"
+      "evidence": "Study explicitly uses the Adolescent Brain Cognitive Development (ABCD) dataset; approximately 12,000 participants aged 9-13; baseline n=7,107 and 2-year follow-up n=4,505; longitudinal multisite U.S. NIH-funded study confirmed."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis using causal inference methods (Mendelian randomization, LME models, forward and reverse MR analysis) with both cross-sectional and longitudinal designs"
+      "evidence": "Original empirical analysis: linear mixed-effects models (LME), one-sample Mendelian randomization, two-sample MR, and mediation/two-step MR analysis applied to ABCD data."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Advanced Science (2024)"
+      "evidence": "Published peer-reviewed article in Advanced Science (2024), DOI 10.1002/advs.202307540."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: Screen use is measured with phone/SM-specific breakouts by modality: TVM (watching television shows/movies), Video (watching videos), Game (playing video games), Text (texting on cell phone), SNS (visiting social networking sites), VC (video chatting). Paired with individual-trait-level variables including cognition (picture vocabulary, flanker, pattern comparison, picture sequence memory, oral reading recognition), behavior (anxiety/depressed, withdrawn/depressed, somatic complaints, social problems, thought problems, attention problems, rule-breaking behavior, aggressive behavior), and brain volume in multiple regions. Results show direct and indirect causal associations (e.g., 'adverse causal effects of screen use on language ability and specific behaviors')"
+      "evidence": "Step 1 hit: SNS (visiting social networking sites) and Text (texting on a cell phone, tablet, or computer) and VC (video chatting) are phone/SM-specific variables each with their own beta coefficients. SNS use is significantly associated with picture vocabulary (beta=-4.28 and -1.31 at two time points, p<10^-4) and picture sequence memory (beta=-3.36 and -1.33, p<10^-6) and rule-breaking behavior (beta=0.73 and 0.42, p<10^-4) — all individual-trait-level outcomes. VC use is negatively associated with picture vocabulary (beta=-2.11 and -2.64, p<10^-6) and picture sequence memory (beta=-1.46 and -1.90, p<0.001)."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Quantitative results from LME and MR analyses with β coefficients, p-values, and effect sizes reported. Table 1 shows associations between screen use types and cognitive/behavioral outcomes with correlations and p-values"
+      "evidence": "Beta coefficients from LME models and Mendelian randomization effect estimates reported throughout Table S1, Figure 2, Figure 3, and Table 2 for screen use variables (including SNS, Text, VC) paired with cognitive and behavioral outcomes."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Inferential causal analysis using Mendelian randomization and linear mixed effects models; reports numeric causal estimates with confidence intervals for direct and indirect effects of screen use on cognition, behavior, and brain volume"
+      "evidence": "Same as FT_IC3: quantitative beta coefficients, 95% CIs, p-values, and MR causal estimates reported."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design includes both cross-sectional analysis at baseline and longitudinal analysis at 2-year follow-up. Additionally, screen use is analyzed as IV in causal pathways (screen use → outcomes) as well as explored for reverse causation (outcomes → screen use). FT-EC7 does not apply when SM is IV in any analysis or when cross-sectional SM-as-DV analysis is present.",
-    "notes": "Paper employs bidirectional causal inference; reports screen use causally influences brain development and behavioral outcomes, while also identifying reverse causation for rule-breaking and aggressive behaviors"
+    "FT_EC7_reason": "Screen use variables (including SNS, VC, Text) serve as IV in primary LME and forward MR analyses predicting cognitive and behavioral outcomes. Additionally, reverse MR analysis has screen use as DV (cognitive/behavioral traits predicting screen use). Bidirectional design; SM/phone appears as IV in multiple analyses.",
+    "notes": "The six screen use types include TV/movies (TVM), Video, Game, Text, SNS, and VC. TVM and Game would not qualify alone, but SNS (social networking), Text (phone texting), and VC (video chatting) are phone/SM-specific with their own coefficients paired with individual-trait outcomes (cognitive scores, CBCL behavioral subscales). Step 1 is clearly met."
   },
   {
     "paper_id": "442",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzes data from the Adolescent Brain Cognitive Development (ABCD) Study; n=6,143 adolescents (mean age 12 years at year 2), data from years 2, 3, and 4"
+      "evidence": "Data from the Adolescent Brain Cognitive Development (ABCD) Study, years 2-4 visits, n=6,143 adolescents, 21 U.S. research sites, confirmed ABCD Study 5.1 data release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical longitudinal analysis using Bayesian hierarchical linear models to examine longitudinal associations between reward processing (year 2) and VGAQ scores over time"
+      "evidence": "Original empirical analysis: Bayesian hierarchical linear models examining longitudinal association between fMRI-derived reward processing (MID task ROI beta-weights) and VGAQ scores over years 2-4."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions (2024)"
+      "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions 13(4):1051-1063 (2024)."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "The paper measures Video Game Addiction Questionnaire (VGAQ) as the DV. Per v7 binding clarification: 'Problematic-use scales are SM/phone variables, not individual-trait outcomes.' VGAQ is a gaming addiction scale, not a smartphone or social media use variable. The paper does not isolate mobile/phone-based gaming, nor does it separately measure a qualifying phone/SM variable with its own coefficient. Binding rule states: 'Gaming alone does not qualify unless it is explicitly mobile/phone-based, OR the paper also separately measures a qualifying phone/SM variable with its own coefficient.' This paper measures gaming addiction scale only, paired with reward processing (neural activation in caudate nucleus). While reward processing is individual-trait-level, the exposure variable (VGAQ addiction scale) does not meet the FT-IC2 phone/SM requirement."
+      "evidence": "The only screen/media variable is the VGAQ (Video Game Addiction Questionnaire), which measures generic video game addiction symptoms. Per binding clarification: VGAQ is a gaming-addiction scale without explicit mobile/phone modality specification; the paper states participants played 'single-player or online multiplayer video games' with no restriction to phone-based gaming. No separate phone/SM variable is measured or analyzed anywhere in the paper. Gaming alone (VGAQ, unspecified platform) fails IC2 unless explicitly mobile/phone-based or paired with a separately-measured phone/SM variable. Neither condition is met."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines reward processing (fMRI activation in caudate during MID task) as predictor of gaming addiction symptoms (VGAQ). While the neuroimaging predictor is individual-trait-level, the absence of a qualifying phone/SM variable as the primary exposure disqualifies the paper at FT-IC2."
+    "notes": "Paper examines neural reward processing (caudate activation during MID task) predicting VGAQ scores over time. VGAQ is a video game addiction questionnaire with no explicit mobile/phone modality. Excluded under FT-EC2."
   }
 ]

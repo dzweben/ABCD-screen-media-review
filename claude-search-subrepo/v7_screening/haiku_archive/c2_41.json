@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "543",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper explicitly analyzes U.S. ABCD Study data at baseline (2016, 21 sites). Methods state: \"This secondary analysis borrowed data from the Adolescent Brain Cognitive Development (ABCD) study.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Mixed-effects regression models testing association between family income and children's screen time with covariate adjustment (Model 1 and Model 2 with interaction term)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published article (Information, 2020). No indication of preprint status or duplication."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is the dependent variable (outcome). Independent variables are family income (SES indicator, demographic) and race (demographic). Per binding clarification: demographic-only predictors paired with screen time as DV fails FT-IC2. The other side (income/race) is not individual-trait-level; it is demographic/SES only."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC2 failed; cascading DEFERRED",
+    "notes": "Paper measures generic screen time (average weekday hours), not phone/SM-specific. Design is longitudinal (1-year follow-up mentioned in methods); screen time is DV throughout. No SM-as-IV analysis. Meets all FT-EC7 design criteria but excluded by FT-IC2 failure."
+  },
+  {
+    "paper_id": "126",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes U.S. ABCD Study data. Methods state: \"Data are from a national sample of 11,670 U.S. participants (5,594 females, aged 9-10 years, 63.5% white) in the Adolescent Brain Cognitive Development study.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Longitudinal and cross-sectional GAMMs assessing associations between sleep disturbance and mental health outcomes (depression, internalizing, externalizing) with demographic covariates."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article (Journal of Adolescent Health, 2020). No evidence of preprint or duplication."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Sleep disturbance is the independent variable. The dependent variable is depression/mental health (internalizing/externalizing via CBCL). Sleep disturbance is not a qualifying phone or SM variable. The criterion requires a qualifying smartphone/SM variable paired with an individual-trait outcome. Sleep quality/disturbance itself does not constitute a phone/SM exposure measure per v7 definitions."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "FT-IC2 failed; cascading DEFERRED",
+    "notes": "No smartphone or social media variable anywhere in the study. Measures only sleep disturbance (SDSC), typical sleep time, and mental health (CBCL). Although longitudinal design exists and depression is outcome, the study contains zero phone/SM variables."
+  },
+  {
+    "paper_id": "150",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes U.S. ABCD Study data. Methods state: \"We performed a secondary analysis of cross-sectional data collected from 2018-2020, 10-13 years old of the ABCD Study (Year 2 data release).\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Cross-sectional generalized additive mixed models (GAMMs) and vertexwise FEMA examining associations between social media use (hours per day) and social media addiction (SMAQ) with brain morphology (cortical thickness, surface area, subcortical volume)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed article (NeuroImage, 2026). No indication of preprint status or duplication."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 search succeeds. Paper reports numeric estimates for social media use (hours per day, continuous) paired with individual-trait neural outcome (brain morphology). Abstract states: \"higher average daily social media use was significantly associated with lower total cortical thickness and volume\" with specific regional effects (prefrontal, temporal, occipital, parietal lobes). Table 2 provides beta coefficients for social media use and addiction across ROIs. Social media use and addiction are qualifying phone/SM variables; brain morphology (cortical thickness, surface area, volume, regional neural structure) is individual-trait-level (neural outcome)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported throughout. Main results: \"higher average daily social media use was significantly associated with lower total cortical thickness and volume.\" Table 2 provides beta coefficients with SEM for all ROI-based associations. Vertexwise FEMA analysis with Z-scores. Figure 2 shows surface projections with Z-score heatmaps. Specific examples: superior frontal b=-2.3, SEM=1.2, p<0.05; inferior parietal b=-4.8, SEM=1.2, p<0.001."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with quantitative results. Beta coefficients, standard errors, and p-values reported for associations between social media use/addiction and brain morphology across 50+ ROIs in Table 2. Vertexwise analysis identifies continuous Z-score maps of associations (Fig. 2A, C). Results adjusted for demographics, socioeconomic factors, genetic ancestry, non-social media screen time, and scanner features."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional. FT-EC7 requires longitudinal design (baseline predicts later wave). Paper explicitly states cross-sectional Year 2 data analysis; no baseline-to-follow-up prospective component. Cross-sectional carve-out does not apply (only applies to longitudinal papers with cross-sectional SM-as-DV analyses). SM-as-IV in cross-sectional context is not subject to FT-EC7.",
+    "notes": "Paper qualifies on FT-IC1 through FT-IC4. FT-EC7 does not apply due to cross-sectional design. Decision: INCLUDE."
+  }
+]

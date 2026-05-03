@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "292",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Periods 2-3 follow-up (2018-2021), 9095 ABCD adolescents ages 10-13"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: prospective linear regression models estimating associations between cyberbullying victimization and manic symptoms"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, Acta Paediatrica, 2025"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Cyberbullying alone fails IC2 per binding clarification; exposure is cyberbullying victimization (lifetime, past 12-month) not a qualifying phone/SM variable; no separate phone/SM variable with own coefficient reported"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data drawn from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, periods 2 and 3 follow-ups (2018–2021), 21 NIH-funded sites, n=9095 adolescents aged 10–13."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: two multivariable linear regression models estimating prospective associations of lifetime and past 12-month cyberbullying with manic symptom sum score 1 year later."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Acta Paediatrica (2025); no indication of duplicate or preprint of an already-included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific variable has its own coefficient anywhere in the paper. Total screen time (hours/day) appears only as a covariate in adjusted models — it is not an IV or DV with a reported coefficient for the SM↔outcome relationship (fails binding clarification: SM as covariate-only). The exposure variables are cyberbullying victimisation (lifetime and past 12-month yes/no). Step 2 not reached. Additionally, cyberbullying alone does not qualify as a phone/SM variable under binding clarification #3 (cyberbullying alone fails IC2 unless paired with a separately-measured phone/SM variable that has its own coefficient, which is absent here)."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper focuses on cyberbullying (online harm) as IV; cyberbullying does not qualify as a phone/SM variable per v7 binding rules"
+    "notes": "Exclusion code FT-EC2. Cyberbullying is the IV; manic symptoms is the DV. Screen time included only as a covariate. No phone/SM variable has its own coefficient in any result location."
   },
   {
     "paper_id": "384",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 3 (2019-2021), N=10,054, ages 12-13 years"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: ordinal logistic regression models assessing associations among media parenting practices and consumption of R-rated movies / mature-rated video games"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, BMC Pediatrics, 2025"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "R-rated content and mature-rated gaming alone fail IC2 per binding clarifications; no separate phone/SM variable with own coefficient reported; media parenting practices are covariates/predictors, not qualifying SM/phone exposures"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. ABCD Study Year 3 (2019–2021), N=10,054 adolescents aged 12–13, 21 research sites across the US."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: ordinal logistic regression models assessing associations between six media parenting practice categories and frequency of mature-rated video game use and R-rated movie consumption."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in BMC Pediatrics (2025); no indication of duplicate or preprint of an already-included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific variable (time on phone, time on SM, named platform, texting, etc.) has its own coefficient in any result location (main tables, appendices D–G). The DVs are R-rated movie consumption frequency and mature-rated video game frequency. Mature/R-rated content alone does not qualify as a phone/SM variable (binding clarification #4). The IVs are media parenting practices (parental screen time modeling, mealtime screen use, bedroom screen use, use of screens to control behavior, parental monitoring, limiting screen time) — these are parenting/contextual variables, not phone/SM variables. Step 2 not reached. No qualifying phone/SM ↔ individual-trait pairing exists anywhere in the paper."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Content rating (R-rated movies, mature-rated games) alone does not qualify; parenting practices predict mature content consumption, not SM/phone use"
+    "notes": "Exclusion code FT-EC2. DVs are content-rating categories (R-rated movies, mature video games), not qualifying phone/SM variables. IVs are parenting practices. No phone/SM-specific estimate paired with individual-trait variable exists anywhere in the paper."
   },
   {
     "paper_id": "385",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, longitudinal design, baseline 2016-2018 (ages 9-10) through Year 3 2019-2021 (ages 12-13), N=9,519"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: longitudinal mixed-effects modeling with compositional data analysis (CoDA) over four annual assessments"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article, BMC Pediatrics, 2026"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 identifies phone/SM-specific estimates (video games, digital socializing, TV/movies, total screen time; Table 2); however, other-side outcomes are time-use composition variables (sleep duration, sports/exercise activity, other activities) not individual-trait-level constructs; analysis examines displacement of activities within 24-hour composition, not associations between SM/phone use and neural, behavioral, health, or psychosocial traits"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. ABCD Study across four annual assessments (baseline 2016–2018 to Year 3 2019–2021), N=9,519, 21 study sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: compositional data analysis (CoDA) with isometric log-ratio transformations and mixed-effects models examining longitudinal changes in screen time subtypes (TV, video games, digital socializing), sleep, and sports/exercise activity over four annual assessments."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in BMC Pediatrics (2026 online); no indication of duplicate or preprint of an already-included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Digital socializing (texting + video chatting + social networking) has its own coefficient estimates (e.g., increased by 0.98 h/day from baseline to Year 3, 95% CI 0.51–1.45, p<0.001; sex-stratified: females 1.39 h/day, males 0.48 h/day). This is a qualifying phone/SM variable. However, the other side of the equation is time/wave (year) and COVID period as the IV in a growth-curve model — these are contextual/temporal variables, not individual-trait-level variables. Sex-stratified analyses use sex as the stratifying variable, which is demographic. No individual-trait-level variable (health outcome, behavioral outcome, cognitive measure, well-being, etc.) appears on the other side of any analysis involving digital socializing or any other phone/SM variable. The paper describes descriptive longitudinal trajectories only; no analysis pairs a phone/SM variable with an individual-trait-level outcome or predictor. Other-side rule: all predictors are time, age (time-varying covariate), COVID period, and baseline demographics — none qualify as individual-trait."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Screen time modalities qualify (video games, digital socializing, TV) on Step 1; other-side fails: sleep and sports/exercise are time-allocation measures, not individual-trait outcomes"
+    "notes": "Exclusion code FT-EC2. Paper describes longitudinal changes in screen time subtypes (including digital socializing, which qualifies as a phone/SM variable) but the only predictor is time/wave (contextual) and demographics — no individual-trait variable on the other side. The study does not pair a phone/SM variable with any individual-trait outcome or predictor."
   }
 ]

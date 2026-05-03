@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "475",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Uses ABCD data; U.S. adolescent sample from neuroimaging study"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original fMRI analysis examining neural activation during error processing as a function of cyberbullying victimization"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Distinct longitudinal neuroimaging study; non-duplicate"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Cyberbullying victimization alone fails IC2 per binding clarification. No separate phone/SM variable paired with cyberbullying. While the paper examines neural correlates (error processing, inhibitory control) and mental health outcomes, the exposure is cyberbullying victimization unlinked to a measured SM/phone variable."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses U.S. ABCD Study data (Data Release 5.1, 21 recruitment sites, baseline ages 9-10); methods state: \"This retrospective cohort study uses data from the ABCD study, which is an ongoing and 10-year longitudinal study of neurocognitive development in adolescents... the ABCD study used school-based probability sampling to recruit its baseline cohort between 2016 and 2018... enrolled adolescents aged 9-10 years from 21 sites across the United States.\""},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis of ABCD data using linear mixed models (LMMs) to examine longitudinal associations among cyberbullying victimization (T1), inhibitory control, fMRI ROI activation during error processing (T2), and mental health outcomes (T2); mediation analyses also conducted."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Medical Internet Research (2026); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No results table or supplementary table presents a numeric estimate (beta, OR, r, etc.) where the variable label is phone/SM-specific (time on SM, named platform, texting, video chat, app use, MPIQ, SMAQ, etc.) paired with an individual-trait variable. Social media use appears only as a covariate (Table 1 reports group means; methods state it was included as a covariate in all analyses). The primary exposure is cyberbullying victimization (yes/no), which is not a qualifying phone/SM variable per binding clarification 3: 'Cyberbullying alone does not qualify.' Step 2 not applicable (no composite screen-time variable). FT-IC2 = NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Study is longitudinal and uses ABCD fMRI data; examines inhibitory control and error processing neural activation as mediators between cyberbullying and mental health. However, binding rule explicitly excludes cyberbullying alone without measured phone/SM variable."
+    "notes": "Paper is about cyberbullying victimization as the primary exposure predicting fMRI neural activation and mental health outcomes. Social media is controlled for as a covariate, not analyzed as IV or DV with its own coefficient. Cyberbullying alone does not meet FT-IC2 per binding clarification."
   },
   {
     "paper_id": "381",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD study data; N=8,979 preadolescents with baseline mean age 9.5 years; U.S. sample"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original temporal network analysis using Graphical Vector Autoregressive Model to examine bidirectional associations between screen activities and irritability"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Novel temporal network approach to screen time and irritability; non-duplicate"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Screen time variables (video streaming, online chatting, TV, social media) are phone/SM-specific and paired with irritability (individual-trait outcome: parent-rated Child Behavior Checklist). Online chatting and social media are explicitly SM platforms; TV and video streaming are screen activities. Other side is irritability (emotion dysregulation), a behavioral/psychological trait."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results throughout: temporal network coefficients showing bidirectional associations (online chatting predicts decreases in irritability; irritability predicts increased online chatting time). TV and social media unidirectionally predict increased irritability."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential temporal network analysis with directed edges; Graphical Vector Autoregressive Model coefficients; results controlled for co-occurring ADHD, anxiety, depressive symptoms"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses U.S. ABCD Study data (Data Release 4.0); methods state: \"This study used data from the ABCD study (Data Release 4.0), an ongoing longitudinal study beginning in 2016 across 21 research sites in the US.\" Baseline mean age 9.5 years, N=8979."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using Gaussian Graphical Models (GGM) for cross-sectional networks and Graphical Vector Autoregressive Models (GVAR) for temporal networks on three waves of ABCD data (baseline, Year 1, Year 2)."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Child and Adolescent Psychopharmacology (2026); no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: The temporal network (GVAR) reports separate quantitative edge weights for social media use predicting irritability over time (edge weight = 0.12) and for online chatting (texting + video chat combined) predicting irritability (edge weight = -0.03), as well as irritability predicting online chatting (edge weight = 0.03). Social media is a qualifying phone/SM variable (named SM platform use); irritability is a qualifying individual-trait variable (behavioral/mental health). These are bidirectional analyses where SM appears as both IV and DV in the temporal model."},
+    "FT_IC3": {"status": "MET", "evidence": "Quantitative network edge weights reported throughout: e.g., social media -> irritability = 0.12 (temporal); online chat -> irritability = -0.03; irritability -> online chat = 0.03; cross-sectional GGM edge weight for irritability-video streaming = -0.03 at Year 2. Bootstrapped confidence intervals and stability checks also reported."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analyses performed using GGM and GVAR network models with numeric edge weights, bootstrapped accuracy checks, and centrality indices; results reported for SM and individual-trait associations."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional carve-out applies. Paper includes cross-sectional Gaussian Graphical Model analysis ('The cross-sectional Gaussian Graphical Model showed that irritability was negatively associated with time spent on video streaming at Year 2'). Per binding rule, if any cross-sectional analysis with SM as DV exists, EC7 does not apply regardless of longitudinal SM-as-DV analyses.",
-    "notes": "Longitudinal design (baseline, 1-year, 2-year follow-ups) with temporal network analysis. Screen time measured via ABCD Youth Screen Time Survey; irritability via parent-rated CBCL. Both cross-sectional and longitudinal analyses present."
+    "FT_EC7_reason": "FT-EC7 does not apply for two independent reasons: (1) the paper contains cross-sectional GGM analyses at each of three timepoints where SM/screen activities appear as nodes (cross-sectional carve-out applies); (2) the temporal GVAR model is bidirectional, with SM as both IV (social media -> irritability, online chat -> irritability) and DV (irritability -> online chat), so SM is not DV-only.",
+    "notes": "Screen time measured using ABCD Youth Screen Time Survey with six separate activities including texting, video chatting (combined as 'online chat'), and social media platforms (e.g., Instagram). Irritability is measured via CBCL items. SM-as-IV and SM-as-DV both present in bidirectional GVAR model; cross-sectional GGMs also present at each wave."
   },
   {
     "paper_id": "31",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD study data; baseline and 2-year follow-up, n=7,043; U.S. adolescent sample"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original linear mixed-effect models examining longitudinal associations of lifestyle factors (sleep, screen time, extracurricular activities) with cognitive development"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Distinct longitudinal cognitive development study; non-duplicate"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Screen time variables (passive watching, social media, social engagement) are phone/SM-specific and paired with cognitive functions (inhibitory control, attention, overall cognitive scores) as individual-trait outcomes. Other side comprises cognitive development measures (inhibitory control, attention, processing speed)—individual-trait neuropsychological outcomes."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results: longer sleep duration, greater time on nonphysical activities, shorter screen usage associated with greater increases in cognitive scores. Sex moderated associations; specific coefficients reported in mixed-effect models."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Linear mixed-effect models with inferential statistics; moderation analysis by sex (negative association between passive watching and inhibitory control/attention stronger in females)"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Uses U.S. ABCD Study data (Data Release 5.1); methods state: \"Participants were from the ongoing ABCD study (https://abcdstudy.org/; baseline assessment of ABCD [release 5.1]). This extensive longitudinal study has recruited over 11,500 children aged 9-11 years across 21 sites in the United States.\" Final sample n=7043."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using residual change score models and linear mixed-effects models (lmer) to assess longitudinal associations between modifiable lifestyle factors (including screen time) and cognitive development from baseline to 2-year follow-up."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Adolescence (2026); no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Social media is analyzed as a separate predictor with its own coefficient in Tables 3 and 4. E.g., Table 3: social media -> inhibitory control and attention (B = -0.50, SE = 0.21, p = 0.017, pFDR = 0.026*); social media -> information processing speed (B = -0.99, SE = 0.41, p = 0.015, pFDR = 0.039*); social media -> visuospatial sequencing and memory (B = -1.40, SE = 0.30, p < 0.001, pFDR < 0.001*). Table 4: social media -> verbal intellect (B = -0.79, SE = 0.15, p < 0.001, pFDR < 0.001*); social media -> reading and language ability (B = -0.28, SE = 0.11, p = 0.014, pFDR = 0.019*). Social media is a qualifying SM variable; cognitive outcomes (inhibitory control, processing speed, verbal intellect, reading ability) are individual-trait variables."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple regression B coefficients with SE, t values, p values, and pFDR correction reported in Tables 3, 4, and 5 for associations between social media and cognitive outcomes."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential regression analyses performed with linear mixed-effects models; numeric results reported including coefficients, standard errors, t-values, and FDR-corrected p-values for social media and cognitive development associations."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Screen time is the independent variable (IV); cognitive development is the dependent variable (DV). FT-EC7 only applies when SM/phone/screen time is the DV. Here, the design examines how screen time predicts cognitive development over time.",
-    "notes": "Longitudinal design with baseline and 2-year follow-up. Screen time broken down by activity type (passive watching, social media, social engagement). Sex moderates several associations. Linear mixed-effect models used for analysis."
+    "FT_EC7_reason": "FT-EC7 does not apply: SM (social media) is the IV predicting cognitive outcomes as DV throughout all analyses. SM is never the DV; cognitive scores are the DV. Condition (b) of FT-EC7 (SM as DV in every analysis) is not met.",
+    "notes": "Screen time measured using ABCD Study Screen Time Questionnaire with four separate categories: passive watching (TV/movies), gaming (computer/console/phone), social engagement (texting + video chat), and social media (Facebook, Twitter, Instagram, etc.). Each is analyzed separately as a predictor. Social media has its own coefficient in all main tables. Cognitive outcomes include NIH Toolbox tasks (FCF and CCF domains)."
   }
 ]

@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "295",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes data from the U.S. ABCD Study at baseline (ages 9-10) with n=9,718 children from 21 U.S. recruitment sites."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis using machine learning framework to identify factors associated with fluid cognitive functioning (FCF) in ABCD data."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Child Development (2021)."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Composite labeled \"screen media activity\" is analyzed. Step 2: Methods state composite includes social network sites, text/instant messages, TV shows/movies, R-rated movies, videos (YouTube), and video games. Composite bundles TV and video games (non-phone/non-SM items) without separate breakout. NOT_MET."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper fails FT-IC2 because composite screen media activity includes non-qualifying items (TV, video games) without separate modality breakout."
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, N=9,718, baseline data release 2.0.1, 21 recruitment sites, ages 9-10."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using machine learning (stacked ensemble) and follow-up LME analyses of ABCD baseline data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in Child Development; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Follow-up LME analyses in the Results section report separate F-statistics for individual screen-time modalities against fluid cognitive functioning (FCF): social media use F(1,9662)=6.79, p<.01; time spent texting F(1,9666)=7.99, p<.005; video chatting F(1,9666)=6.81, p<.01. These are phone/SM-specific variables paired with FCF (a cognitive/neural individual-trait outcome). Step 1 satisfied; stop."},
+    "FT_IC3": {"status": "MET", "evidence": "F-statistics with p-values reported for social media, texting, and video chat versus FCF in LME follow-up analyses (e.g., social media F(1,9662)=6.79, p<.01)."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results present: F-statistics, p-values, variable importance scores, and Spearman r values reported throughout Tables 2 and Figure 1."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design (authors state 'results are cross-sectional'); EC7 requires longitudinal design. Does not apply.",
+    "notes": "The headline ML analysis uses a composite 'screen media activity weekday (STQ)' that mixes SM, texting, TV, videos, video games, R-rated movies, etc. However, Step 1 is satisfied by separate per-modality LME estimates (social media, texting, video chat vs. FCF) reported in the follow-up analyses section."
   },
   {
     "paper_id": "24",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes prospective cohort data from the Adolescent Brain Cognitive Development (ABCD) Study with N=11,025 children ages 9-10 at baseline."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis using logistic regression to estimate associations between baseline screen time and binge-eating disorder at one-year follow-up."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in International Journal of Eating Disorders (2021)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 finds phone/SM-specific variables paired with individual-trait outcome. Results show: \"each additional hour of social networking (aOR 1.62, 95% CI 1.18–2.22), texting (aOR 1.40, 95% CI 1.08–1.82)...was significantly associated with binge-eating disorder.\" Social networking and texting are phone/SM-specific. Binge-eating disorder (DSM-5 criteria) is individual-trait-level mental health outcome. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Logistic regression analysis reports adjusted odds ratios (aOR) with 95% confidence intervals for all screen time variables paired with binge-eating disorder outcome."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Multiple numeric results reported: total screen time aOR 1.11 (95% CI 1.05–1.18), social networking aOR 1.62 (95% CI 1.18–2.22), texting aOR 1.40 (95% CI 1.08–1.82)."
-    },
-    "FT_EC7_applies": true,
-    "FT_EC7_reason": "Design is longitudinal (baseline to 1-year follow-up). Screen time is DV in every analysis. No SM as IV analysis anywhere in paper (all analyses use screen time as exposure predicting outcomes). No cross-sectional SM-as-DV analysis. All three EC7 conditions met.",
-    "notes": "Paper meets all IC criteria but is excluded under FT-EC7 longitudinal SM-as-DV-only rule."
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study prospective cohort, N=11,025, 21 U.S. sites, ages 9-10 baseline (2016-2018), ABCD 3.0 release."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: logistic regression of screen time modalities at baseline on binge-eating disorder at 1-year follow-up."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in Int J Eating Disorders; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Table 2 reports per-modality adjusted ORs against binge-eating disorder: social networking aOR 1.62 (95% CI 1.18-2.22, p=.003); texting aOR 1.40 (95% CI 1.08-1.82, p=.011); video chat aOR 1.32 (95% CI 0.99-1.76, p=.057). Social networking and texting are phone/SM-specific variables; binge-eating disorder is a clinical/health individual-trait outcome. Step 1 satisfied; stop."},
+    "FT_IC3": {"status": "MET", "evidence": "Adjusted ORs with 95% CIs and p-values reported in Table 2 for all screen-time modalities versus binge-eating disorder at 1-year follow-up."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results present: aOR values, 95% CIs, and p-values for all modalities in Table 2."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/phone variables are IV (exposures) predicting binge-eating disorder (DV); EC7 applies only when SM is DV in every analysis. Does not apply.",
+    "notes": "Longitudinal prospective cohort (baseline to 1-year follow-up). Screen time modalities (including social networking and texting) as IV; binge-eating disorder as DV. Clear IC2 pass at Step 1 via per-modality estimates."
   },
   {
     "paper_id": "302",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes prospective cohort data from the Adolescent Brain Cognitive Development (ABCD) Study with N=11,066 children ages 9-10 at baseline."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis using multiple linear regression to estimate associations between baseline screen time behaviors and BMI percentile at 1-year follow-up."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Pediatric Obesity (2021)."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 finds phone/SM-specific variables paired with individual-trait outcome. Results show: \"each additional hour of texting (B = 0.92, 95% CI 0.29–1.55), video chat (B = 0.72, 95% CI 0.09–1.36)...was significantly prospectively associated with higher BMI percentile.\" Texting and video chat are phone/SM-specific. BMI percentile is individual-trait-level physical health outcome. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple linear regression analysis reports unstandardized regression coefficients (B) with 95% confidence intervals for screen time variables predicting BMI percentile at follow-up."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Multiple numeric results reported: total screen time B=0.22 (95% CI 0.10–0.34), texting B=0.92 (95% CI 0.29–1.55), video chat B=0.72 (95% CI 0.09–1.36)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study prospective cohort, N=11,066, 21 U.S. sites, ages 9-10 baseline (2016-2018), ABCD 3.0 release."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: multiple linear regression of screen-time modalities at baseline on BMI percentile at 1-year follow-up."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed paper in Pediatric Obesity; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Table 2 reports per-modality B coefficients against BMI percentile: texting B=0.92 (95% CI 0.29-1.55, p=.004); video chat B=0.72 (95% CI 0.09-1.36, p=.025); social networking B=0.67 (95% CI -0.07-1.41, p=.075). Texting and video chat are phone/SM-specific variables paired with BMI percentile (a biological/physical-health individual-trait outcome). Step 1 satisfied; stop."},
+    "FT_IC3": {"status": "MET", "evidence": "B coefficients with 95% CIs and p-values reported for all screen-time modalities versus BMI percentile in Table 2 (fully adjusted model)."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results present: B coefficients, 95% CIs, and p-values for all modalities in Table 2; sensitivity analyses with BMI and BMI z-score in appendices."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is longitudinal but screen time is IV (exposure), not DV in all analyses. FT-EC7 does not apply when SM is IV.",
-    "notes": "Paper meets all criteria. Includes as qualifies on FT-IC2 with phone/SM-specific variables (texting, video chat) paired with individual-trait outcome (BMI percentile)."
+    "FT_EC7_reason": "SM/phone variables are IV (exposures) predicting BMI percentile (DV); EC7 applies only when SM is DV in every analysis. Does not apply.",
+    "notes": "Longitudinal prospective cohort (baseline to 1-year follow-up). Screen time modalities (including texting, video chat, social networking) as IV; BMI percentile as DV. Clear IC2 pass at Step 1 via per-modality estimates."
   }
 ]

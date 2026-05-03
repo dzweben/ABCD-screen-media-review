@@ -1,38 +1,92 @@
 [
   {
     "paper_id": "389",
-    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from U.S. ABCD Study Year 2 assessment (2018-2020), N=9,008 adolescents ages 10-14"},
-    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis; linear regression models conducted to examine associations between problematic social media use and alcohol expectancies"},
-    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed published article (BMC Public Health 2023)"},
-    "FT_IC2": {"status": "MET", "evidence": "Step 1 (phone/SM-specific estimate): SMAQ (Social Media Addiction Questionnaire) score paired with alcohol expectancies (individual-trait outcome). Model 3: problematic social media use B=0.045 (95% CI 0.020-0.069) for positive expectancies and B=0.072 (95% CI 0.043-0.101) for negative expectancies. Other side is individual-trait (behavioral/cognitive beliefs about alcohol effects)."},
-    "FT_IC3": {"status": "MET", "evidence": "Regression coefficients (β) with 95% confidence intervals reported in Table 2; positive and negative expectancies outcomes"},
-    "FT_IC4": {"status": "MET", "evidence": "Linear regression analysis with quantitative results (β coefficients) for SM-expectancies associations"},
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 2 assessment (2018-2020), N=9,008, 21 research sites, 4.0 data release."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original cross-sectional empirical analysis using adjusted linear regression to examine associations between SMAQ score / social media time and alcohol expectancies."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in BMC Public Health; no indication of being a duplicate or preprint of an already-included paper."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: Table 2 reports B=0.045 (95% CI 0.020-0.069, p<0.001) for SMAQ score (qualifying SM variable) predicting positive alcohol expectancies, and B=0.072 (95% CI 0.043-0.101, p<0.001) predicting negative alcohol expectancies. Social media time (hours/day) also has its own coefficient. Alcohol expectancies are individual-trait-level (beliefs/cognitions about alcohol effects). SMAQ is on the SM side; alcohol expectancies are on the individual-trait side."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple regression B coefficients with 95% CIs and p-values reported in Table 2 for six models."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results (B coefficients, 95% CIs, p-values) reported throughout Table 2 for SMAQ and social media time predicting both positive and negative alcohol expectancies."
+    },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design; FT-EC7 applies only to longitudinal studies. No longitudinal SM-as-DV-only condition met.",
-    "notes": "Decision: INCLUDE. All criteria met. Cross-sectional analysis of SMAQ (phone/SM variable) and alcohol expectancies (individual-trait) with numeric results."
+    "FT_EC7_reason": "Cross-sectional design; EC7 requires longitudinal design as first condition. Does not apply.",
+    "notes": "INCLUDE. SMAQ as IV predicting alcohol expectancies (individual-trait) in a cross-sectional ABCD Year 2 sample. Also includes social media time (hours/day) as a separate predictor."
   },
   {
     "paper_id": "390",
-    "FT_IC1": {"status": "MET", "evidence": "Prospective data from U.S. ABCD Study, Baseline and Year 2 (2018-2020), N=9,673 screen-using adolescents ages 11-12"},
-    "FT_IC5": {"status": "MET", "evidence": "Original prospective empirical analysis; generalized logistic mixed effects models and generalized linear mixed effects models examining associations between ACEs and problematic screen use"},
-    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed published article (BMC Public Health 2023)"},
-    "FT_IC2": {"status": "MET", "evidence": "Step 1 (phone/SM-specific estimates): VGAQ (Video Game Addiction Questionnaire), SMAQ (Social Media Addiction Questionnaire), and MPIQ (Mobile Phone Involvement Questionnaire) paired with ACEs (individual-trait-level predictor: trauma/adversity exposure). Table 2 adjusted model: problematic video game use OR=3.11 (95% CI 2.05-4.73) for ≥4 ACEs; problematic mobile phone use OR=1.57 (95% CI 1.22-2.03) for ≥4 ACEs. Qualifies as phone/SM variables."},
-    "FT_IC3": {"status": "MET", "evidence": "Odds ratios with 95% confidence intervals reported in Table 2; binary and continuous outcome scales"},
-    "FT_IC4": {"status": "MET", "evidence": "Logistic and linear mixed effects models with quantitative results (OR and continuous scale coefficients)"},
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Baseline (2016-2018) and Year 2 (2018-2020), N=9,673, 21 recruitment sites, 4.0 data release."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis using generalized logistic and linear mixed effects models to examine associations between ACE score and problematic screen use outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in BMC Public Health; no indication of duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: Table 2 reports ORs for ACE score (IV) predicting SMAQ-based problematic social media use (DV) and MPIQ-based problematic mobile phone use (DV). E.g., ACEs>=4 vs 0: OR=2.39 (95% CI 1.37-4.17) for problematic social media use (unadjusted). SMAQ and MPIQ are qualifying SM/phone variables. ACEs (adverse childhood experiences / trauma exposure) qualify as individual-trait-level on the other side per criteria. Supplemental Table 3 also reports continuous linear associations between ACE score and SMAQ score."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "ORs with 95% CIs reported in Table 2 for both bivariate and adjusted models across VGAQ, SMAQ, and MPIQ outcomes. Continuous beta coefficients reported in Supplemental Table 3."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric ORs, 95% CIs, and significance indicators reported throughout Table 2 and supplemental tables."
+    },
     "FT_EC7_applies": true,
-    "FT_EC7_reason": "All three EC7 conditions met: (a) longitudinal design (baseline → Year 2 follow-up), (b) SM/phone variables (VGAQ, SMAQ, MPIQ) are DV in analyses shown, (c) no SM-as-IV analysis anywhere in paper. Cross-sectional carve-out does not apply (no cross-sectional SM-as-DV analysis present). Paper excluded under FT-EC7.",
-    "notes": "Decision: EXCLUDE (FT-EC7). Longitudinal SM-as-DV-only study with no SM-as-IV analysis."
+    "FT_EC7_reason": "All three EC7 conditions met: (a) longitudinal design - baseline ACEs predict Year 2 screen use outcomes; (b) SM/phone variables (SMAQ, MPIQ, VGAQ) are DV in every analysis; (c) no analysis anywhere in the paper uses SM/phone as IV. No cross-sectional analysis with SM as DV is present to trigger the cross-sectional carve-out.",
+    "notes": "EXCLUDE under FT-EC7. Prospective design only; ACEs predict SM/phone-as-DV; no SM-as-IV or cross-sectional SM-as-DV analysis anywhere in paper."
   },
   {
     "paper_id": "178",
-    "FT_IC1": {"status": "MET", "evidence": "Introduction to special issue describing ABCD Study and papers analyzing U.S. ABCD data"},
-    "FT_IC5": {"status": "NOT_MET", "evidence": "Editorial introduction/overview article, not an original empirical analysis. Describes ABCD consortium research and summarizes other papers in the special issue without reporting new empirical findings or analyses."},
-    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
-    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
-    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
-    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Explicitly describes and introduces papers using U.S. ABCD Study data (abcdstudy.org, 21 sites, national consortium)."
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "This is an editorial introduction to a special issue of Health Psychology. It summarizes and contextualizes empirical papers by other authors but contains no original empirical analysis of ABCD data. The article explicitly identifies itself as an 'INTRODUCTION' and 'introduction to the special issue.'"
+    },
+    "FT_IC6": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC2": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Decision: EXCLUDE (FT-EC3). Non-empirical paper (editorial introduction to special issue)."
+    "notes": "EXCLUDE FT-EC3. Editorial introduction to Health Psychology special issue on ABCD. No original empirical analysis reported."
   }
 ]

@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "186",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD cohort, 7471 young adolescents (mean age 9.87±0.62 years) from the ABCD Study"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed-effects models examining intelligence-MRI associations, spatial correlation analysis, mediation analysis with MRI phenotypes and neurotransmitter density maps"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Translational Psychiatry"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific variable found in results tables. Step 2: Composite includes \"physical activities, screen use and sleep duration\" per methods—bundles screen use with non-phone/non-SM items (physical activity, sleep) without separate breakout. Multi-item bundling without phone/SM isolation fails IC2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Paper explicitly analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, Data Release 5.0, n=7471 participants aged 9.87 years from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using linear mixed-effect models (LME) on ABCD neuroimaging and lifestyle data; reports β-coefficients and mediation AMEs."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Translational Psychiatry (2025); no duplicate identified."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Screen use appears in mediation analyses (β=-0.509 fluid intelligence; β=-0.699 crystallized intelligence) but the screen use variable is defined as 'the average hours an adolescent used screen in a day' from the ABCD Screen Time Questionnaire (parent report) — a generic multi-device aggregate measure, not a phone/SM-specific variable. No separate phone-specific or SM-specific estimate with its own coefficient exists anywhere in the paper. Step 2: The composite is not exclusively phone/SM items; it is an undifferentiated daily screen hours measure bundling all device types. Fails IC2. Additionally, screen use appears only as a mediator (lifestyle → MRI → intelligence pathway), not as IV or DV with its own primary coefficient."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper analyzes lifestyle factors (physical activity, screen time, sleep) as mediators of intelligence-neural correlations. Screen use examined as part of broader lifestyle composite, not as isolated SM/phone variable."
+    "notes": "Screen use is measured as average daily screen hours (ABCD Screen Time Questionnaire, parent report) — a generic aggregate. It functions as a mediator variable in the lifestyle-intelligence mediation pathway. No phone-specific or SM-specific variable is reported anywhere in the paper."
   },
   {
     "paper_id": "194",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD study, 11,875 US adolescents at baseline, 8,125 with complete MRI and cognitive data (mean age 9.93 years); 21 recruitment sites across the United States"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: mixed-effects models examining reading/TV viewing associations with brain morphology (cortical area, thickness) and neurocognitive performance; ROI-based and vertexwise analyses with regional specific effects"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Scientific Reports"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific variable. Study analyzes daily hours spent reading books and daily hours spent television viewing—TV viewing alone does not qualify as smartphone or social media use per binding clarifications. Reading books is not a phone/SM activity. Step 2: Not applicable; no phone/SM composite present."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Paper analyzes data from 11,875 U.S. ABCD Study participants (NDA Release 3.0); 8,125 included after QC; baseline ages 9-11 recruited from 21 sites across the United States."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using generalized additive mixed models and linear mixed-effects models on ABCD neuroimaging and behavioral data; reports β-coefficients throughout."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Scientific Reports (2025); no duplicate identified."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate exists anywhere in the paper. The two exposures are (1) daily hours of pleasurable reading (books) and (2) daily hours of television viewing. Television viewing is explicitly TV/movies consumption — not smartphone, social media, texting, app use, or any phone/SM-specific activity. No separate phone or social media variable appears in any table, supplement, or sensitivity analysis. Step 2: Not applicable; neither exposure is a composite containing phone/SM items. The paper examines TV viewing and reading only — neither qualifies under FT-IC2."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper focuses on reading books and television viewing in relation to neurocognitive outcomes and brain structure. Neither reading nor TV viewing constitute smartphone or social media use as defined by the v7 criteria."
+    "notes": "Paper exclusively examines reading and television viewing habits in relation to neurocognition and brain morphology. No phone, smartphone, social media, texting, or app-use variable appears anywhere."
   },
   {
     "paper_id": "202",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD Study, prospective longitudinal cohort data from baseline through 3-year follow-up (Y3), adolescents aged 10–14 years, diverse US sample"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: mixed-effects linear regression models examining ACEs exposure (at Y1) and PSMU (at Y3) with socio-demographic covariates; moderation analysis with emotional and behavioral dysregulation"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Issues in Mental Health Nursing"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: PSMU (Problematic Social Media Use) measured via SMAQ at Y3 is a qualifying SM variable per binding list (Bergen/SMAQ-type scales are SM variables). Paired with individual-trait-level outcome: emotional and behavioral dysregulation (BPM Internalizing, Externalizing, Attention, Total Problems scales). Main finding: cumulative ACEs at Y1 associated with higher PSMU at Y3 (β=1.5, p<0.001), examined in relation to emotional/behavioral dysregulation."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric quantitative results reported: β=1.5, p<0.001 for high ACEs (≥4) vs. low (<2) on PSMU; mixed-effects linear modeling with 95% CI provided throughout; moderation interaction terms tested and reported"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with quantitative results: mixed-effects models, regression coefficients with p-values and confidence intervals for ACEs→PSMU association and moderation effects"
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional carve-out applies. Paper includes cross-sectional analyses at Y1 alongside longitudinal Y1→Y3 analyses. Design is predominantly longitudinal, but presence of any cross-sectional analysis with PSMU as DV disqualifies FT-EC7 per binding rule.",
-    "notes": "Paper reports ACEs exposure at Y1 associated with higher PSMU at Y3 (β=1.5, p<0.001). Emotional/behavioral dysregulation measured at Y1; moderation tested but not significant. Meets IC2 (qualifying SM variable PSMU paired with individual-trait outcome), IC3/IC4 (quantitative results), and does not meet FT-EC7 due to cross-sectional carve-out."
+    "FT_IC1": {"status": "MET", "evidence": "Paper analyzes prospective longitudinal cohort data from the U.S. ABCD Study (Data Release 5.1; 2016-2022), n=6,779 adolescents aged 9-10 at baseline recruited from 21 U.S. sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical secondary analysis using mixed-effects linear modeling on ABCD data from baseline through 3-year follow-up; reports regression coefficients (b), 95% CIs, and p-values."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Issues in Mental Health Nursing (2025); no duplicate identified."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1: PSMU (Problematic Social Media Use) measured via the SMAQ (6-item Social Media Addiction Questionnaire) is a qualifying SM variable (problematic/addictive SM scale). It appears as the dependent variable (DV) with its own reported coefficients throughout the paper (e.g., Table 2: High ACEs β=1.5, p<0.001 predicting SMAQ score at Y3). The other side of the relationship is ACEs (adverse childhood experiences / trauma exposure), which qualifies as individual-trait-level. FT-IC2 = MET."},
+    "FT_IC3": {"status": "MET", "evidence": "Inferential mixed-effects linear regression reported throughout; Table 2 reports b-coefficients, 95% CIs, and p-values for ACEs → PSMU relationship (e.g., High ACEs: b=1.49, 95% CI 1.09-1.88, p=0.001)."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric results reported: regression coefficients (b), 95% confidence intervals, and p-values for ACEs → PSMU association and moderation models in Tables 2 and 3."},
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three FT-EC7 conditions are met: (a) longitudinal design — ACEs measured at Y1 (ages 10-12) predict PSMU at Y3 (ages 12-14); (b) SM/PSMU is the DV in every analysis — ACEs and BPM dysregulation are predictors/moderators, PSMU is always the outcome; (c) no analysis anywhere in the paper uses SM/PSMU as IV. No cross-sectional analysis with SM as DV exists anywhere in the paper (cross-sectional carve-out does not apply). FT-EC7 applies → EXCLUDE.",
+    "notes": "Study is purely longitudinal: ACEs (IV) at Y1 predicting PSMU (DV) at Y3, with BPM dysregulation as moderator. PSMU/SMAQ is always the outcome. No SM-as-IV analysis and no cross-sectional SM-as-DV analysis anywhere. EC7 applies."
   }
 ]

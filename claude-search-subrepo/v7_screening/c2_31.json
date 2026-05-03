@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "86",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Analyzes data from Adolescent Brain Cognitive Development Study participants at 21 U.S. sites, ages 11-12 years at Year 2 (2018-2020)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical prospective cohort analysis using linear and logistic regression models to examine associations between exposures at Year 2 and outcomes at Year 3"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in American Journal of Preventive Medicine, 2026"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Paper measures problematic smartphone/SM-specific variables (MPIQ [Mobile Phone Involvement Questionnaire], SMAQ [Social Media Addiction Questionnaire], VGAQ [Video Game Addiction Questionnaire]) as exposures paired with individual-trait-level outcomes. MPIQ and SMAQ measure smartphone/SM use patterns and are paired with mental health outcomes (CBCL depressive, somatic, attention/deficit, oppositional defiant, conduct problems scales), suicidal behaviors, sleep disturbance, and substance use initiation. These satisfy Step 1 requirement."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Multiple regression analyses report quantitative results: β coefficients and odds ratios for associations between problematic screen use scores and mental health outcomes; e.g., MPIQ/SMAQ associated with higher depressive problems, suicidal behaviors, sleep disturbance, substance initiation"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Linear and logistic regression models report numeric estimates (β, OR) for SM/phone variables with individual-trait outcomes across main results tables"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Prospective analysis of U.S. ABCD Study (5.0 release), 21 sites, participants aged 11-12 at Year 2 (2018-2020), N=8,119."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: linear and logistic regression models on ABCD Year 2-Year 3 prospective cohort data."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in American Journal of Preventive Medicine; no duplicate flag."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: SMAQ (Social Media Addiction Questionnaire) score as IV has own regression coefficients paired with individual-trait outcomes (e.g., depressive problems β=0.42; AOR for suicidal behaviors=1.86). MPIQ (Mobile Phone Involvement Questionnaire) similarly paired with mental health/sleep/substance outcomes (β=0.31 depressive problems; AOR suicide=1.57). Both are qualifying phone/SM-specific variables; other side is individual-trait-level (psychiatric symptoms, suicidal behaviors, sleep disturbance, substance use initiation)."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple β coefficients and adjusted odds ratios (AORs) with 95% CIs reported in Figures 1 and 2 and Appendix Table 3 for SMAQ, MPIQ, and VGAQ associations with all outcomes."},
+    "FT_IC4": {"status": "MET", "evidence": "Same as FT-IC3; numeric results reported throughout."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design (Year 2 exposure → Year 3 outcome), but SM/phone problematic use is the IV (predictor), not DV-only. EC7 requires SM as DV in every analysis with no SM-as-IV analysis anywhere. Here SM is the IV. EC7 does not apply.",
-    "notes": "Paper examines prospective associations between problematic screen use (MPIQ, SMAQ, VGAQ) and mental/behavioral health outcomes in early adolescents. All three problematic-use measures are SM/phone variables paired with individual-trait outcomes meeting IC2."
+    "FT_EC7_reason": "Social media (SMAQ) and mobile phone (MPIQ) are IVs predicting mental health and substance use outcomes (DVs); EC7 requires SM to be DV-only with no SM-as-IV analysis anywhere, which is not the case here.",
+    "notes": "VGAQ (Video Game Addiction Questionnaire) also included as a third exposure. Paper qualifies via SMAQ and MPIQ alone regardless of VGAQ. Longitudinal design (Year 2 exposure, Year 3 outcome)."
   },
   {
     "paper_id": "144",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Analyzes Adolescent Brain Cognitive Development (ABCD) Study data from baseline (2016-2018) to Year 2 (2018-2020) follow-up. N=7528 adolescents at 21 U.S. sites."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original prospective cohort analysis using group-based trajectory modeling to estimate patterns of daily social media use from baseline to Year 2, with linear regression models examining associations with cognitive outcomes at Year 2"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Lancet Regional Health - Americas, 2026"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Paper measures daily social media time (hours/day spent on Instagram, Facebook, Twitter, etc.) assessed at baseline, Year 1, and Year 2. Trajectory modeling creates SM-specific exposure groups paired with individual-trait-level cognitive outcomes (Little Man Task accuracy, Rey Auditory Verbal Learning Test measures including initial learning, retroactive interference, long delay recall). Table 2 shows B coefficients for SM trajectory groups predicting cognitive performance. Phone/SM-specific variable with individual-trait outcome. MET."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Linear regression models report B coefficients with 95% CIs for social media trajectories predicting cognitive outcomes; e.g., low increasing SM use: B=-1.38 (95% CI: -1.82, -0.94) for RAVLT Initial Trials; high increasing: B=-1.90 (95% CI: -2.76, -1.04)"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Quantitative results reported for all cognitive outcome measures: regression B coefficients with confidence intervals and p-values for Little Man Task and RAVLT subtests"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes U.S. ABCD Study (5.1 release), baseline 2016-2018 to Year 2 2018-2020, 21 sites, N=7528."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: group-based trajectory modeling and linear regression on ABCD prospective cohort data."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Lancet Regional Health Americas; no duplicate flag."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: social media time trajectory (hours/day on social media specifically, e.g., Instagram, Facebook, Twitter) is the IV with own regression coefficients paired with cognitive outcomes (RAVLT, LMT). E.g., low increasing SM trajectory: RAVLT Initial Trials B=-1.38 (95% CI: -1.82, -0.94); high increasing SM: LMT accuracy B=-0.03 (95% CI: -0.05, -0.01). Social media is a qualifying phone/SM-specific variable; cognitive performance (verbal memory, visuospatial attention) is individual-trait-level."},
+    "FT_IC3": {"status": "MET", "evidence": "Table 2 reports β coefficients with 95% CIs and p-values for all social media trajectory group comparisons across four cognitive outcomes."},
+    "FT_IC4": {"status": "MET", "evidence": "Same as FT-IC3; numeric results fully reported in Table 2."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design (baseline to Year 2), but social media use is the IV (trajectory exposure variable), not DV. Cognitive performance is the DV. EC7 requires SM as DV in every analysis with no SM-as-IV anywhere. Here SM is the IV. EC7 does not apply.",
-    "notes": "Paper uses group-based trajectory modeling to identify three social media use patterns (no/very low, low increasing, high increasing) as predictors of cognitive performance. Social media is measured as hours/day on named platforms (Instagram, Facebook, Twitter) and serves as the independent variable."
+    "FT_EC7_reason": "Social media time is the IV (exposure) and cognitive performance is the DV (outcome); EC7 requires SM to be DV in every analysis with no SM-as-IV analysis anywhere, which is not the case here.",
+    "notes": "Non-social media screen time (TV, video games, texting, video chat) included as a covariate only, not as the main exposure. Social media time is measured separately and specifically as the qualifying IV."
   },
   {
     "paper_id": "7",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Cohort study analyzes data from Adolescent Brain Cognitive Development Study at 21 U.S. sites, baseline 2016-2019, ages 9-11 years, using ABCD Study release 5.0"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis performing genetic sensitivity analyses (Gsens) with structural equation models to estimate genetic confounding in associations between child screen time and psychiatric problems"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in JAMA Network Open, November 6, 2023"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 search: Primary exposure is \"child-reported daily screen time (in hours)\" without modality breakdown in main analysis. Step 2 composite check: The screen time measure aggregates TV/video watching and video gaming without isolating phone/SM components. Methods state GWAS used \"leisure television watching time\" as proxy for screen time; sensitivity analyses examine TV watching and gaming subtypes separately but main analysis pools modalities. Per binding clarification (§2.4): \"Multi-device aggregated time fails Step 2\" and the composite includes TV and console/PC gaming without separate per-modality estimates in primary analysis. This is generic screen time, not phone/SM-specific. NOT_MET."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes U.S. ABCD Study (release 5.0), children aged 9-11 at 21 U.S. sites, data from 2016-2019."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: linear regression and Gsens genetic sensitivity analysis using ABCD cohort data."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in JAMA Network Open; no duplicate flag."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No numeric estimate where the variable label is phone/SM-specific. The primary exposure is total child-reported daily screen time (14-item Screen Time Questionnaire). No separate phone-specific or SM-specific coefficient is reported anywhere in the main paper or supplement. Step 2: The composite screen time measure includes TV/video watching and video games (sensitivity analyses explicitly decompose it into 'watching television or videos' and 'playing video games' as the two most common subtypes; eFigure 4 in Supplement 1). The composite is NOT exclusively phone/SM/digital-socializing items; it bundles TV and console/video games without a phone-only or SM-only breakout with its own coefficient paired with an outcome. NOT_MET under Step 2 (non-phone/non-SM ingredients bundled in without separate breakout)."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines genetic confounding in associations between child screen time and psychiatric problems (attention and internalizing problems) using Gsens models with polygenic risk scores and heritability estimates. The primary screen time measure is a broad composite of TV/video and gaming without modality-specific breakdown in main analysis, failing FT-IC2."
+    "notes": "The Gsens model estimates genetic confounding in the screen time-psychiatric problems association. The two sensitivity subtypes examined are TV/videos and video games, neither of which is a phone/SM-specific variable. No social media or phone-specific estimate is reported anywhere in the paper."
   }
 ]

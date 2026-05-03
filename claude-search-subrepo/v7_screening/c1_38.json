@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "283",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Uses U.S. ABCD Study baseline data from 11,834 children ages 9-10"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Reports original empirical confirmatory factor analysis and regression analysis on ABCD data"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed conference paper (2021 IEEE International Conference on Bioinformatics and Biomedicine)"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific variable with coefficient found. Step 2: Composite p factor outcome (psychopathology latent variable) analyzed with screen time as contextual predictor alongside sleep, physical activity, household income, gender. Screen time appears only in mixed-effects model explaining variance in p factor; no per-modality phone/SM coefficient reported. Other side (p factor) is transdiagnostic composite, not individual-trait-level. No qualifying SM/phone-individual-trait pairing."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. Adolescent Brain and Cognitive Development (ABCD) Study, baseline visit, 11,834 children ages 9-10, 21 U.S. sites (NIMH Data Archive DOI: 10.15154/1503209)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: confirmatory factor analysis (CFA) to extract p-factor in a bifactor model, multiple linear regression, t-tests, Pearson correlations, and a mixed-effects model associating the p-factor with screen activity, sleep, physical activity, household income, and gender."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed conference paper (2021 IEEE BIBM); no indication of duplication."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper. The sole screen variable is 'Recreational Screen Time from the ABCD Youth Screen Time Survey,' described in Methods as 'number of hours performing screen-based activities (e.g., watching television, video games)' — a composite that explicitly includes TV and video games. The mixed-effects model reports a coefficient for 'Screen Activity' (beta = 0.116, t = 11.131) but this is the multi-activity composite, not a phone/SM-specific measure. Step 2: The composite includes television and video games alongside other screen activities — it is not built exclusively from phone/SM/digital-socializing items. NOT_MET under both steps."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2 (no qualifying smartphone/SM variable with individual-trait-level other side)"
+    "notes": "Primary study purpose is validating the p-factor construct across CFA models; screen time appears only as one of five covariates in an ad-hoc mixed-effects model. The screen composite covers TV and video games, not exclusively phone/SM activities."
   },
   {
     "paper_id": "129",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Discusses the U.S. ABCD Study, baseline ages 9-10, 21 U.S. recruitment sites"
-    },
-    "FT_IC5": {
-      "status": "NOT_MET",
-      "evidence": "Commentary/editorial paper labeled as such in journal header. Describes ABCD study architecture, data opportunities, and responsible data use. Does not report original empirical analyses."
-    },
-    "FT_IC6": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC2": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Discusses the U.S. ABCD Study (NIH-funded, ~12,000 youth aged 9-10, 21 U.S. sites) and cites ABCD data publications throughout."},
+    "FT_IC5": {"status": "NOT_MET", "evidence": "Paper is explicitly labeled 'Commentary' in the journal header. It describes the ABCD Study's design, scope, and open-science policy, and cites existing ABCD publications, but presents no original empirical analysis of ABCD data."},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC3 (non-empirical; commentary/editorial)"
+    "notes": "Non-empirical commentary describing the ABCD study's opportunities and responsible data use. Exclusion code FT-EC3."
   },
   {
     "paper_id": "541",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Baseline cross-sectional data from U.S. ABCD Study; 10,712 children ages 9-10 from 21 research sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical latent profile analysis and multilevel logistic regression on ABCD baseline data"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article (2021, International Journal of Environmental Research and Public Health)"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific variable with coefficient found in results. Step 2: Screen time is bundled as one of three components of a composite outcome (meeting 24-h movement behavior recommendations: physical activity ≥60 min/day + screen time ≤2 h/day + sleep 9-11 h/night) with no separate phone/SM breakout. Odds ratios reported for meeting ≥1, ≥2, or all 3 recommendations, but screen time not isolated. Other side (family typologies of parental acceptance, monitoring, conflict) are contextual/family environment variables, not individual-trait-level per §2.4. Contextual-only pairing fails FT-IC2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Baseline cross-sectional data from the U.S. ABCD study, 21 research sites across the United States, 10,712 children aged 9-10 (NIMH Data DOI: 10.15154/1412097)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: latent profile analysis (LPA) to identify family typologies, followed by multilevel logistic regression examining associations between family typologies and number of 24-h movement behavior recommendations met."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Int. J. Environ. Res. Public Health; no indication of duplication."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific coefficient found anywhere in the paper. Screen time is measured via the 'Youth Screen Time Survey (12 items)' and analyzed only as a composite daily screen time score (weighted average across weekday and weekend). No breakdown by modality (phone, social media, texting, etc.) appears in any table or supplementary material. Step 2: The composite covers 'different types of media (e.g., watching shows or movies, texting)' per Section 2.3 — it explicitly includes watching shows/movies (non-phone/non-SM) alongside other media. The composite is not built exclusively from phone/SM/digital-socializing items. The outcome variable is meeting movement behavior guidelines (a composite of physical activity + screen time + sleep), not a phone/SM variable. NOT_MET under both steps."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Exclusion code: FT-EC2 (screen time bundled in composite without isolation; other side is contextual/family functioning, not individual-trait-level)"
+    "notes": "Screen time is one of three components in a composite movement behavior outcome (physical activity + screen time + sleep); no phone/SM-specific variable is isolated at any point in the analysis. Exclusion code FT-EC2."
   }
 ]

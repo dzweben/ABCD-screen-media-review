@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "8",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study uses U.S. ABCD Study data (21 sites, ages 9-10 baseline, longitudinal follow-up through 2022)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective longitudinal cross-lagged structural equation panel model examining reciprocal associations between social media use and depressive symptoms across 4 waves"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in JAMA Network Open, 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Phone/SM-specific variable identified: \"time spent on social media\" (hours per day, continuous measure) as IV; paired with individual-trait outcome (depressive symptoms, CBCL raw score) as DV. Cross-lagged estimates found: β=0.07 (year 1→2, p=.01) and β=0.09 (year 2→3, p<.001)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: β coefficients with 95% CIs and p-values for within-person cross-lagged associations (e.g., β 0.07, 95% CI 0.01-0.12; β 0.09, 95% CI 0.04-0.14)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results: cross-lagged panel model with reported coefficients, fit indices (CFI 0.977, TLI 0.968, RMSEA 0.031)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design with cross-lagged structure: social media is IV in some paths (predicting depressive symptoms), thus not DV-only. Condition 3 (no SM-as-IV analysis) is not met.",
+    "notes": "Strong prospective design isolating within-person effects via random-intercept CLPM. Clear SM→depressive symptoms directionality."
+  },
+  {
+    "paper_id": "49",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study analyzes ABCD Study data from Year 1, Year 2, Year 3 follow-ups (ages 10-11 in Year 1, 2017-2019; N=9,243)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: prospective cohort study using linear regression to examine associations between typical daily screen time (Year 1) and manic symptoms (Year 3) with mediation analyses"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Social Psychiatry and Psychiatric Epidemiology, 2025"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Multiple phone/SM-specific variables identified with separate coefficients: social media (B=0.20, 95% CI 0.09-0.32, p=0.001); texting (B=0.18, 95% CI 0.08-0.28, p<0.001); videos (B=0.14, 95% CI 0.08-0.19, p<0.001); video games (B=0.09, 95% CI 0.04-0.14, p=0.001). All paired with individual-trait outcome (manic symptoms, 7 Up subscale)"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: B coefficients with 95% CIs and p-values for prospective associations (e.g., overall screen time B=0.05, 95% CI 0.03-0.07, p<0.001)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results: linear regression models with unstandardized and adjusted coefficients; mediation analyses with indirect effects and percent mediation (47.7%, 58.0%, 9.0%)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design but screen time/SM is the IV (predictor), not DV. Manic symptoms is DV. Condition 2 (SM is DV in every analysis) not met.",
+    "notes": "Prospective mediation analysis identifying problematic social media use, problematic video game use, and sleep duration as partial mediators of screen time→manic symptoms association."
+  },
+  {
+    "paper_id": "81",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study analyzes ABCD Study year 3 cross-sectional data (2019-2021, ages 11-14, N=9,989)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional logistic regression examining associations between gender identity and lifetime cyberbullying victimization"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Academic Pediatrics, 2025"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Independent variable is gender identity (transgender/gender-questioning status), not a phone/SM-specific variable. Dependent variable is lifetime cyberbullying victimization. Although cyberbullying occurs via digital platforms and social media, the paper does not isolate or measure phone/SM time or usage as a separate IV with its own coefficient (per binding clarification: \"Cyberbullying alone does not qualify unless paired with a separately-measured phone/SM variable that has its own coefficient\"). No Step 1 phone/SM-specific estimate found; Step 2 not applicable (cyberbullying is not a composite of phone/SM items)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines cyberbullying victimization as outcome; does not measure smartphone or social media use as a qualifying IV or DV. Fails FT-IC2 per binding rule on cyberbullying alone."
+  }
+]

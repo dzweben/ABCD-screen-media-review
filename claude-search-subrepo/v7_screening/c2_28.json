@@ -3,90 +3,90 @@
     "paper_id": "133",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzed prospective cohort data from the Adolescent Brain Cognitive Development study (n = 9,208), U.S. national sample, with baseline screen time exposure and 2-year follow-up OCD outcome."
+      "evidence": "\"We analyzed prospective cohort data from the Adolescent Brain Cognitive Development study (n = 9,208)\" recruited from 21 U.S. sites; ABCD 4.0 NDA release used."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: logistic regression on prospective cohort data examining associations between baseline self-reported screen time and OCD diagnosis at follow-up, excluding participants with baseline OCD."
+      "evidence": "Original prospective cohort analysis of ABCD data; logistic regression models estimating associations between baseline screen time and OCD at 2-year follow-up."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication in The Journal of Adolescent Health (2023); no evidence of duplicate or preprint."
+      "evidence": "Peer-reviewed publication in Journal of Adolescent Health (2023); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 succeeds: phone/SM-specific variables paired with individual-trait outcome. Main finding: \"Each additional hour of total screen time was prospectively associated with 1.05 higher odds of OCD\"; modality-specific estimates for \"playing video games\" (aOR 1.15) and \"watching videos\" (aOR 1.11) also paired with OCD (individual-trait behavioral/health outcome). Other side is individual-trait-level (OCD diagnosis, a mental health condition)."
+      "evidence": "Step 1 hit: Table 3 reports per-modality adjusted ORs for phone/SM-specific variables paired with OCD (individual-trait mental health outcome). Social media aOR 1.01 (0.81-1.27), texting aOR 1.13 (0.94-1.36) / 1.20 (1.00-1.44), video chat aOR 0.99 (0.80-1.22) in Models 2/3. These are phone/SM-specific variable labels with numeric estimates paired with OCD (psychiatric diagnosis). Step 1 satisfied."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple quantitative results reported: OR 1.05 (95% CI 1.01-1.09) for total screen time; aOR 1.15 (95% CI 1.03-1.28) for video games; aOR 1.11 (95% CI 1.01-1.23) for watching videos."
+      "evidence": "Adjusted odds ratios with 95% CIs reported in Table 3 for all screen time modalities vs OCD at 2-year follow-up."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "All quantitative estimates reported with 95% confidence intervals; logistic regression adjusted for race/ethnicity, sex, household income, parent education, family history, and study site."
+      "evidence": "Inferential logistic regression analyses conducted; numeric estimates (AOR, 95% CI, p-values) reported throughout Table 3."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Prospective design with SM as primary IV (exposure), not as sole DV across all analyses. FT-EC7 exclusion does not apply.",
-    "notes": "All three screen time modalities (total, video games, watching videos) meet FT-IC2 criteria. Paper clearly distinguishes platform modalities, meeting FT-IC2 specificity requirement."
+    "FT_EC7_reason": "Screen time (including phone/SM variables) serves as the IV; OCD is the DV. EC7 requires SM to be DV-only. Here SM/phone is IV, so EC7 does not apply.",
+    "notes": "Social media and texting were not statistically significant predictors of OCD in adjusted models, but video games and watching videos were. All six screen modalities (including social media, texting, video chat) have their own numeric estimates in Table 3, satisfying IC2 Step 1 for phone/SM-specific variables."
   },
   {
     "paper_id": "157",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Cross-sectional data from Adolescent Brain Cognitive Development Study (n = 10,280), Year 2, 2018-2020, U.S. national sample of early adolescents aged 10-14."
+      "evidence": "\"We analyzed cross-sectional data from 10,280 early adolescents aged 10-14 (48.8% female) in the Adolescent Brain Cognitive Development Study (Year 2, 2018-2020)\"; 21 U.S. research sites."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: regression analyses examining associations between self-reported bedtime screen use and self- and caregiver-reported sleep measures in early adolescents."
+      "evidence": "Original cross-sectional empirical analysis of ABCD Year 2 data; modified Poisson regression estimating associations between bedtime screen behaviors and sleep outcomes."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication in Sleep Health (2023); no evidence of duplicate or preprint."
+      "evidence": "Peer-reviewed publication in Sleep Health (2023); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 succeeds: multiple phone/SM-specific variables paired with individual-trait sleep outcome. Examples: \"television or Internet-connected electronic device in the bedroom\" (aRR 1.27, 1.15 for sleep disturbance); \"left their phone ringer activated overnight\" (associated with trouble falling/staying asleep and sleep disturbance); \"streaming movies, playing video games, listening to music, talking/texting on the phone, and using social media or chat rooms were all associated with trouble falling/staying asleep.\" Other side is individual-trait-level (sleep disturbance symptoms, a health/behavioral outcome)."
+      "evidence": "Step 1 hit: Table 3 reports adjusted risk ratios for phone/SM-specific variables paired with sleep outcomes (individual-trait health outcome). \"Talk on the phone or text\" ARR 1.16 (1.09-1.23) for trouble falling/staying asleep; \"Spend time online on social media\" ARR 1.16 (1.10-1.23) for trouble falling/staying asleep and ARR 1.06 (1.01-1.11) for sleep disturbance; \"Leave the ringer on\" ARR 1.23 (1.03-1.46) vs turning phone off. These are phone/SM-specific labels with their own numeric estimates paired with sleep (individual-trait health). Step 1 satisfied."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple quantitative results: aRR 1.27 (95% CI 1.12-1.44) for TV/Internet device in bedroom and trouble falling/staying asleep; aRR 1.15 (95% CI 1.06-1.25) for overall sleep disturbance; modality-specific associations with streaming, gaming, music, texting, and social media."
+      "evidence": "Adjusted risk ratios with 95% CIs and p-values reported in Table 3 for all bedtime screen behaviors vs sleep outcomes."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "All quantitative estimates reported as adjusted risk ratios (aRR) with 95% confidence intervals; regression adjusted for sex, race/ethnicity, household income, parent education, depression, data collection period, and study site."
+      "evidence": "Modified Poisson regression analyses conducted; numeric estimates (ARR, 95% CI, p-values) reported throughout."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design (binding carve-out: if any cross-sectional analysis with SM as DV exists, FT-EC7 does not apply). FT-EC7 exclusion criterion requires all analyses to be longitudinal; this study's cross-sectional design exempts it from FT-EC7.",
-    "notes": "Multiple bedtime screen use behaviors assessed, including device presence, phone activation, and specific modalities (streaming, gaming, texting, social media). All paired with sleep outcomes (individual-trait-level)."
+    "FT_EC7_reason": "Cross-sectional design; EC7 requires longitudinal design. EC7 does not apply.",
+    "notes": "Phone/SM variables (texting, social media, phone ringer behavior) are exposures (IV) and sleep outcomes are DVs. Multiple phone-specific bedtime behaviors have separate numeric estimates in Table 3."
   },
   {
     "paper_id": "304",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzed data from the Adolescent Brain Cognitive Development (ABCD) Study (N = 11,875), U.S. national cohort of 9-11-year-old children, with baseline screen time and 1-year follow-up behavioral outcomes."
+      "evidence": "\"We analyzed prospective data from the ABCD Study, a longitudinal study of brain development and adolescent health in 11,875 children recruited from 21 sites around the United States\"; ABCD 3.0 NDA release."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical prospective cohort analysis: Modified Poisson regression examining associations between baseline child-reported screen time (total and by modality) and parent-reported conduct and oppositional defiant disorder at 1-year follow-up."
+      "evidence": "Original prospective cohort analysis of ABCD data; modified Poisson regression estimating associations between baseline screen time modalities and conduct disorder / oppositional defiant disorder at 1-year follow-up."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication in Journal of Child Psychology and Psychiatry (2023); no evidence of duplicate or preprint."
+      "evidence": "Peer-reviewed publication in Journal of Child Psychology and Psychiatry (2023); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 succeeds: multiple phone/SM-specific variables paired with individual-trait outcomes. Modality-specific estimates: social media (PR 1.62, 95% CI 1.39-1.87 for conduct disorder); video chat (PR 1.21 for ODD); texting (PR 1.19 for ODD); television/movies (PR 1.17 for ODD); video games (PR 1.14 for ODD). All paired with individual-trait-level outcomes (conduct disorder and oppositional defiant disorder, both behavioral/psychiatric diagnoses)."
+      "evidence": "Step 1 hit: Tables 2 and 3 report per-modality prevalence ratios for phone/SM-specific variables paired with conduct disorder and ODD (individual-trait psychiatric outcomes). Social media PR 1.62 (1.39-1.87) for conduct disorder; texting PR 1.19 (1.07-1.33) for ODD; video chat PR 1.21 (1.06-1.37) for ODD. These are phone/SM-specific variable labels with their own numeric estimates paired with psychiatric diagnoses. Step 1 satisfied."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple quantitative estimates: total screen time PR 1.07 for conduct disorder, PR 1.05 for ODD; social media PR 1.62 (conduct); video chat PR 1.21 (ODD); texting PR 1.19 (ODD); TV/movies PR 1.17 (ODD); video games PR 1.14 (ODD). Threshold analysis: >4 hr/day associated with 69% higher prevalence of conduct disorder and 46% higher prevalence of ODD."
+      "evidence": "Adjusted prevalence ratios (PR) with 95% CIs reported in Tables 2 and 3 for all screen time modalities vs conduct disorder and ODD at 1-year follow-up."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "All quantitative results reported as prevalence ratios (PR) with 95% confidence intervals; Modified Poisson regression adjusted for potential confounders including race/ethnicity, sex, household income, parent education, and other baseline characteristics."
+      "evidence": "Modified Poisson regression analyses conducted; numeric estimates (PR, 95% CI, p-values) reported throughout Tables 2-4."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Prospective design with multiple SM-as-IV analyses (social media, video chat, texting, TV/movies, video games all as exposures predicting behavioral outcomes). FT-EC7 exclusion requires (a) longitudinal design AND (b) SM as DV in every analysis AND (c) NO SM-as-IV anywhere; this paper has SM consistently as IV across modalities, so FT-EC7 does not apply.",
-    "notes": "Strongest association between social media and conduct disorder (PR 1.62). Paper explicitly distinguishes contemporary screen time modalities with separate quantitative estimates for each, meeting FT-IC2 specificity requirement."
+    "FT_EC7_reason": "Screen time (including social media, texting, video chat) serves as IV; conduct disorder and ODD are DVs. EC7 requires SM to be DV-only with no SM-as-IV analysis. Here SM/phone is IV throughout, so EC7 does not apply.",
+    "notes": "Social media had the strongest association with conduct disorder (PR 1.62). All six screen modalities have separate numeric estimates. Prospective design with 1-year follow-up from ABCD baseline (ages 9-10) to follow-up (ages 10-11)."
   }
 ]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "186",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, 7,471 participants, mean age 9.87 ± 0.62 years"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with neuroimaging phenotypes, gene expression mapping, and mediation analysis linking lifestyle factors to fluid/crystallized intelligence"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Translational Psychiatry (2025)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No phone/SM-specific variable label found (no time on phone, SM platform names, texting, video chat, MPIQ, SMAQ, etc.). Step 2: 'Screen use' reported as lifestyle factor in Table 1 (mean 2.80 ± 1.95 hours) and analyzed in mediation, but no methods description isolating phone/SM items; multi-device composite including TV without breakout fails Step 2"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Multi-device aggregated time (computer + tablet + cellphone) without per-device breakout fails IC2 Step 2"
+  },
+  {
+    "paper_id": "194",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD cohort, 8,125 participants after quality control, ages 9-11 at baseline"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis examining associations between reading and TV viewing on brain morphology and neurocognitive performance"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Scientific Reports (2025)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Study analyzes reading and television viewing only. No phone, smartphone, social media, texting, video chat, or SM-specific variables present. TV viewing is non-phone, non-SM media. Step 1: No qualifying phone/SM-specific variable found. Step 2: N/A - no phone/SM composite analyzed. TV-only fails FT-IC2 per binding clarification"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "TV viewing and reading habits only; no smartphone or social media variables"
+  },
+  {
+    "paper_id": "202",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, n = 6,779 dyads at Y1 follow-up, ages 10-14 years, longitudinal data from baseline through 3-year follow-up (Y3)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using mixed-effects linear modeling with longitudinal adolescent/parent data from baseline through Y3 follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Issues in Mental Health Nursing (2025)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: SMAQ (Social Media Addiction Questionnaire) identified as qualifying SM variable. Methods: 'The SMAQ is a screening instrument without a universal cutoff score in the literature; PSMU was operationalized in the current study as SMAQ sum score (range 6-36, with higher scores indicating higher levels of PSMU)'. Results show significant positive association: cumulative ACEs score at Y1 predicts higher PSMU at Y3 (β = 1.5, p < 0.001). ACEs (adverse childhood experiences) is individual-trait-level (trauma exposure). SMAQ/PSMU paired with individual-trait variable on other side. MET"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Numeric result reported: regression coefficient β = 1.5 (95% CI: 1.09–1.88, p = 0.001) for ACEs predicting PSMU at Y3, adjusted for sociodemographic covariates"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Regression β coefficient with confidence interval and p-value reported for SM (PSMU) ↔ individual-trait (ACEs) relationship in main mixed-effects model"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal, but predictor (ACEs—individual-trait adversity) is not demographic-only. FT-EC7 applies only when all three conditions hold: (a) longitudinal, (b) SM is DV in every analysis, (c) no SM-as-IV analysis. Here (b) and (c) may hold, but FT-EC7's demographic-only carve-out and the individual-trait predictor status mean this paper does not trigger exclusion under FT-EC7",
+    "notes": "Clear SM variable (SMAQ as continuous PSMU score) measured at Y3 as outcome. ACEs at Y1 as individual-trait predictor. Emotional/behavioral dysregulation tested as moderator but was not significant. Paper qualifies on FT-IC2 Step 1"
+  }
+]

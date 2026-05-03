@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "403",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study, Year 2 (2018-2020), ages 11-12, N=10,157"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with multivariable logistic regression estimating associations between sociodemographic factors and online dating behavior"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published research note in BMC Research Notes, 2024"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Analyses pair only demographic/socioeconomic predictors (age, sex, race/ethnicity, sexual orientation, household income, parental education) with online dating app use as DV. No individual-trait-level outcomes on other side. Per §2.4: demographic-only or contextual-only on other side → NOT_MET"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Cross-sectional design examining sociodemographic/socioeconomic correlates of online dating app use in early adolescents. No individual-trait-level outcomes."
+  },
+  {
+    "paper_id": "291",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "References ABCD Study data and findings on smartphone use patterns and mental health disparities among minoritised groups"
+    },
+    "FT_IC5": {
+      "status": "NOT_MET",
+      "evidence": "Perspective/commentary article discussing findings from Carter et al. (2024) and other studies but reporting no original empirical analysis of ABCD data. Per §2.2: reviews, commentaries, perspectives → NOT_MET"
+    },
+    "FT_IC6": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC2": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Perspective piece on problematic smartphone use reduction strategies in adolescents. Cites ABCD Study but presents no original empirical analysis of ABCD data. Non-empirical contribution."
+  },
+  {
+    "paper_id": "196",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD Study, 2-year follow-up assessed 2019-2020, N=10,147, mean age 12.0 years, diverse national sample"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: exposome-wide association study (ExWAS) identifying 41 digital/SM exposure variables and their associations with mental health, followed by validation in independent testing subsample"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed research article published in NPP Digital Psychiatry and Neuroscience, 2024"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Multiple phone/SM-specific numeric estimates paired with individual-trait outcomes. ExWAS identified 35 FDR-corrected significant associations (β coefficients) for digital/SM exposures (weekday videogame screentime, secret social media accounts, addictive use, cyberbullying, TikTok/Instagram/Snapchat use, etc.) with BPM Total Problems T-scores and suicide attempt history. Other-side variables (psychopathology, mental health symptoms, suicide attempts) are individual-trait-level. Step 1 MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported across ExWAS and validation models: β coefficients from linear-mixed-effects models (estimate = 1.78, 95%CI = [1.58-1.98], t = 17.41, p < 0.001 for digital exposomic risk and BPM scores); odds ratios for suicide attempts (OR = 1.76, 95%CI = [1.39-2.23], z = 4.69, p < 0.001); variance explained (marginal R² = 15.61%)"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with extensive numeric quantification reported across Tables 2 and S1-S8: LME model coefficients, odds ratios, confidence intervals, t-statistics, and p-values for associations between digital exposures and mental health outcomes"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design with cross-sectional analyses of SM/digital variables as predictors and mental health outcomes as DVs. Per §2.6 binding carve-out: any cross-sectional SM-as-DV analysis disqualifies EC7 regardless of longitudinal analyses present. EC7 does not apply.",
+    "notes": "Data-driven exposome-wide approach identifying cumulative burden of digital risk exposures. 41 variables across five domains examined; 35 showed FDR-corrected significant associations with mental health. Comprehensive validation on independent testing subsample. Disparities in exposure and associations examined by race/ethnicity, sex, and SGM identity. Strong evidence for specificity of digital exposures beyond general screentime and non-digital adversity."
+  }
+]

@@ -3,19 +3,19 @@
     "paper_id": "234",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Uses U.S. ABCD Study at Year 2 and Year 3 follow-up; 3,687 early adolescents (mean age 11.96 years); NIH-funded multi-site cohort."
+      "evidence": "Data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, Data Release 5.0, 21 U.S. recruitment sites, baseline ages 9-10 years (Methods: \"Data were obtained from the ABCD Study® (Data Release 5.0.), an ongoing, multi-site longitudinal study with adolescents recruited from 21 sites across the United States\")."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective longitudinal analysis: Fitbit-measured sleep parameters at Year 2, sensation-seeking assessed at Year 2, mature screen usage assessed at Year 3; reports β coefficients and 95% CIs for prospective associations."
+      "evidence": "Original empirical analysis using structural equation modeling (SEM) in Mplus 7.4, prospectively associating sleep and sensation-seeking at Year 2 with mature screen usage at Year 3 in n=3687 ABCD participants."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original article published in Sleep journal, October 2024 advance access."
+      "evidence": "Peer-reviewed original article published in Sleep (2025); no indication this is a duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Outcome is mature-rated video games and R-rated movies (content rating), not phone/SM-specific modality. Per §2.4 BINDING clarification: \"Mature-rated / R-rated content alone does not qualify.\" Step 1 finds no phone-time or named-SM-platform estimates. Step 2: composite items are \"mature video games\" and \"R-rated movies\" — content rating is not modality and fails IC2."
+      "evidence": "Step 1: No phone/SM-specific variable (time on phone, time on SM, named platform, texting, video chat, app use, MPIQ, SMAQ, etc.) appears as IV or DV with its own numeric coefficient anywhere in the paper. The outcomes are mature-rated video game use and R-rated movie watching. Step 2 not reached. Per binding clarification #4, mature-rated/R-rated content alone does not qualify as a phone/SM variable; content rating is not modality. The IVs are sleep measures (objective Fitbit) and sensation-seeking (personality scale). No qualifying smartphone/SM variable is present in any analysis."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -27,66 +27,66 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper reports prospective associations between sleep, sensation-seeking, and mature screen use, but mature-content-only exposure fails IC2 regardless of other-side individual-trait measures."
+    "notes": "Excluded via FT-EC2. Paper examines sleep and sensation-seeking as predictors of mature-rated video gaming and R-rated movie watching. Neither the IVs nor DVs constitute a qualifying phone/SM variable. Mature/R-rated content criterion is the binding clarification that sinks this paper at IC2."
   },
   {
     "paper_id": "195",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Uses U.S. ABCD Study, Release 5.1, Year-4 follow-up; 495 adolescents with EARS app data from Android phones."
+      "evidence": "ABCD Study Release 5.1 data; 495 Android users from the Year-4 follow-up subsample (\"Individuals participated in the ABCD study. Release 5.1 data included 4754 participants at Year-4 follow-up\")."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: compares passive smartphone tracking (EARS app) with self-reported screen time and examines associations with externalizing/internalizing symptoms and SM/game addiction scales; reports β coefficients and 95% CIs."
+      "evidence": "Original empirical analysis comparing EARS-passively-sensed smartphone app usage with self-reported screen time, and examining associations with behavioral problems and problematic technology use in 495 ABCD participants."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original article in npj Mental Health Research, published online May 10, 2025."
+      "evidence": "Peer-reviewed original article in npj Mental Health Research (2025); no indication of duplication."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 success: Reports social media use paired with individual-trait outcomes. Main results: self-reported social media β = 0.06 (95% CI 0.01–0.11) with externalizing symptoms; EARS social media β = 0.07 (95% CI 0.03–0.12) with externalizing symptoms. Also social media correlated with SM addiction (SMAQ: self-report β = 0.15, 95% CI 0.10–0.20; EARS β = 0.06, 95% CI 0.01–0.11). Self-reported social media also correlated with internalizing symptoms (β = 0.05, 95% CI 0.01–0.09). Phone/SM variable qualifies: \"social media use\" (named platform, hours per day). Other-side qualifies: externalizing/internalizing behaviors (individual-trait mental health), not demographic."
+      "evidence": "Step 1 hit: EARS-logged social media use (passively sensed smartphone app time, a phone/SM-specific variable) is paired with externalizing symptoms (individual-trait behavioral outcome) with β=0.07 (95% CI: 0.03-0.12, p=0.002) and internalizing symptoms β=0.05 (95% CI: 0.01-0.09, p=0.028 for self-reported social media; Fig. 3 / Results section). Self-reported social media use is also paired with externalizing (β=0.06, 95% CI: 0.01-0.11) and internalizing symptoms. These are individual-trait-level outcomes (behavioral/mental health). The other side qualifies."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Quantitative results reported for SM↔individual-trait relationships across main text and figures: externalizing symptoms (β = 0.06–0.12), internalizing symptoms (β = 0.05), SM addiction (β = 0.05–0.15), video game addiction (β = 0.05)."
+      "evidence": "Multiple β coefficients and 95% CIs reported for the SM ↔ behavioral outcomes relationships (Fig. 3, Results section); OR estimates for logistic regressions also reported (Table 3a/b)."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Any quantitative result counts per §2.5. Multiple β coefficients reported with 95% CIs and p-values for SM↔behavioral/addiction outcomes in main results and supplementary analyses."
+      "evidence": "Inferential analyses performed (linear mixed models with family as random effect, logistic regression); numeric results reported throughout."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design: paper analyzes associations between SMA and behavioral problems/addiction at Year-4 follow-up without longitudinal SM-as-DV-only structure. Cross-sectional carve-out applies.",
-    "notes": "Paper directly measures social media use (self-report and objective EARS app) and correlates with externalizing, internalizing, and addiction outcomes. Includes additional gaming and vocabulary variables, but core SM↔trait relationship qualifies."
+    "FT_EC7_reason": "The primary design examining SM ↔ behavioral outcomes is cross-sectional (associations measured at Year-4 follow-up without SM predicting a future wave of outcomes). The cross-sectional carve-out applies: SM is DV in cross-sectional analyses (e.g., EARS SM use regressed on demographics; SM use correlated with CBCL outcomes cross-sectionally). EC7 does not apply.",
+    "notes": "Paper qualifies via EARS-logged social media use (phone-passively-sensed) paired with externalizing/internalizing symptoms. The measurement discrepancy focus is the paper's framing but it reports genuine SM ↔ individual-trait associations. INCLUDE."
   },
   {
     "paper_id": "290",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Uses U.S. ABCD Study, baseline to Year 2 follow-up (2016–2020); N = 10,757 children ages 10–14 years from 21 U.S. recruitment sites."
+      "evidence": "Longitudinal data from the U.S. ABCD Study (4.0 release), baseline 2016-2018, 21 recruitment sites, ages 10-14 years, N=10,757 (\"We utilised longitudinal data from baseline to Year 2 of the Adolescent Brain Cognitive Development (ABCD) Study (4.0 release)\")."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original prospective longitudinal analysis: mixed-effect models with robust standard errors examining associations between baseline parental monitoring and family conflict scores with repeated measures of total and modality-specific screen time at Years 1 and 2."
+      "evidence": "Original prospective empirical analysis using mixed-effects models to examine associations between baseline parental monitoring/family conflict and screen time outcomes at Year 1 and Year 2."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed original article in Acta Paediatrica, published 2024;113:2452–2458."
+      "evidence": "Peer-reviewed original article in Acta Paediatrica (2024); no indication of duplication."
     },
     "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific estimates reported (e.g., no \"time on Instagram\" or \"texting hours\"). Paper analyzes \"total screen time\" and six modalities separately (television, YouTube videos, video games, texting, video chat, social media). Step 2: Composite \"total screen time\" bundles television with phone/SM modalities. Per §2.4 BINDING: \"Multi-device aggregated time fails Step 2... unless a per-device breakout (cellphone alone) exists somewhere.\" Television is explicitly non-phone/non-SM (contextual screening device, not personal communication/social platform). Composite includes television without separate breakout; therefore fails Step 2. Additionally, other-side (parental monitoring, family conflict) are family-context/parenting-practice variables, NOT individual-trait-level per §2.2 definition."
+      "status": "MET",
+      "evidence": "Step 1 hit: Social media use (hours/day, a phone/SM-specific modality per the ABCD Screen Time Questionnaire) has its own separate B coefficient in Table 2 (Model 2, Family conflict row: B=0.008 [95% CI -0.003, 0.02]; Model 2, Parental monitoring row: B=0.007 [95% CI -0.04, 0.05]). The predictor variables are parental monitoring and family conflict, which qualify as individual-trait-level variables (parenting practices and family functioning are listed as qualifying individual-trait constructs). Although the social media coefficients are not statistically significant, numeric estimates are present. Additionally, texting (B coefficients in Table 2) and video chat also have separate estimates paired with the same individual-trait predictors."
     },
     "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "B coefficients and 95% CIs reported for all screen modalities in Table 2 (adjusted models); inferential statistics throughout."
     },
     "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Mixed-effects models with robust standard errors; numeric results reported for all modalities and predictors in Table 2."
     },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines parental monitoring and family conflict as predictors of screen time across six modalities. Fails IC2 on two grounds: (1) no phone/SM-specific variable isolated; (2) composite includes television (non-phone/SM) without breakout; (3) other-side is family-context/parenting (not individual-trait-level). Parenting practices and family conflict are contextual, not individual-trait outcomes per criteria."
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three EC7 conditions hold: (a) longitudinal design (baseline predictors, outcomes at Year 1 and Year 2 follow-up); (b) screen time including social media is the DV in every analysis; (c) no analysis anywhere in the paper uses social media or screen time as IV. Predictors are parental monitoring and family conflict (not SM). No cross-sectional analysis with SM as DV is reported with its own estimates (baseline screen time appears only as a covariate in the longitudinal models, not as a DV in a separately reported cross-sectional model). EC7 applies.",
+    "notes": "Paper is excluded under FT-EC7. Longitudinal design with SM/screen time as DV throughout; parental monitoring and family conflict are the predictors. No SM-as-IV analysis exists anywhere. No separate cross-sectional SM-as-DV analysis reported (baseline screen time is used only as a covariate adjustment variable)."
   }
 ]

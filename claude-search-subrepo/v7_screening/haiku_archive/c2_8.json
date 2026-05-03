@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "143",
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes U.S. ABCD Study data, Year 2 to Year 3, N=9799 early adolescents (11-12 years at baseline)"},
+    "FT_IC5": {"status": "MET", "evidence": "Prospective cohort study with original empirical analyses examining cyberbullying victimization predicting mental health and substance use outcomes"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Lancet Regional Health Americas (May 2025)"},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Cyberbullying victimization is the IV; it is not a SM/phone-specific variable. Per binding clarification §2.4: 'Cyberbullying alone does not qualify.' No separately-measured phone/SM variable with its own coefficient present. IV does not meet phone/SM exposure requirement."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Cyberbullying is a social-media-related outcome but does not qualify as a SM/phone exposure variable per v7 clarifications. The paper fails at FT-IC2 (exposure side)."
+  },
+  {
+    "paper_id": "158",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, Year 3, N=10,305 early adolescents (12-13 years)"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis examining associations between bedtime screen use and sleep outcomes"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Sleep Health Journal (2025)"},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1: Bedtime screen use mean score and individual modalities (phone/texting, social media, watching TV/movies) are phone/SM-specific variables with numeric estimates paired with sleep outcomes (sleep disturbance, sleep duration). Sleep disturbance (SDSC) and sleep duration are individual-trait-level (physical health/well-being). Table 4 reports: bedtime screen use mean score OR=1.36 (sleep disturbance), coefficient=-0.43 (sleep duration); individual modalities reported separately with own coefficients."},
+    "FT_IC3": {"status": "MET", "evidence": "Multivariable logistic regression (for sleep disturbance) and linear regression (for sleep duration) with numeric results reported throughout. Example: OR=1.36 (95% CI 1.23-1.50) for sleep disturbance; coefficient=-0.43 (95% CI -0.52 to -0.34) for sleep duration."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric results reported for all analyses: logistic regression ORs, linear regression coefficients, p-values, 95% CIs in Tables 4-7 and text."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 3 only); EC7 applies only to longitudinal designs. Cross-sectional carve-out not triggered (design itself is cross-sectional, not longitudinal SM-as-DV-only).",
+    "notes": "Qualifies as both individual-trait outcome (sleep) paired with phone/SM exposure (bedtime screen use). Meets all cascading criteria through IC4."
+  },
+  {
+    "paper_id": "184",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study, Year 3 (2019-2022), N=10,048 early adolescents (12-13 years)"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis examining associations between media parenting practices and adolescent screen time and problematic screen use"},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatric Research (2025)"},
+    "FT_IC2": {"status": "MET", "evidence": "Outcomes include total screen time (hours/day) and problematic SM/phone use scales (SMAQ, VGAQ, MPIQ). SMAQ, VGAQ, MPIQ are SM/phone-specific outcome variables measuring problematic use. Predictors (parental monitoring, limit-setting) are individual-trait-level behavioral parenting practices. Table 3 reports associations between media parenting practices and problematic social media, video game, and mobile phone use scores (e.g., parental monitoring: coefficient=-0.86 for SMAQ, coefficient=-1.12 for MPIQ)."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple linear regression analyses with numeric coefficients (B values) and 95% confidence intervals reported for all media parenting practices vs. screen time and problematic use outcomes (Table 3)."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric quantitative results throughout: linear regression coefficients, 95% CIs, p-values. Example: parental limiting of screen time B=-1.58 (95% CI -1.83 to -1.34) for problematic social media use, p<0.001."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 3 only); EC7 applies only to longitudinal designs where SM is DV-only. Cross-sectional analysis; EC7 does not apply.",
+    "notes": "Parenting practices (IV, individual-trait parental behaviors) predict SM/phone problematic use and screen time (DV, SM/phone-specific outcomes). Meets all cascade criteria through IC4."
+  }
+]

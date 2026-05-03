@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "176",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 3.0; baseline participants aged 9-10 years (M=9.9, SD=0.6); 11,878 at baseline, 6,571 at 2-year follow-up"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: bivariate multiple indicator latent change score models examining longitudinal relationships between lifestyle risk factors and brain volume from baseline to 2-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper in Health Psychology (2023); no evidence of duplication"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 (per-modality search): No isolated phone/SM-specific estimate paired with individual-trait outcome. Step 2 (composite check): Composite \"lifestyle risk factor domain\" bundles sleep, physical activity, BMI, and screen time as a single latent factor with no separate per-modality breakout. Methods state: \"Using confirmatory factor analysis, a single lifestyle risk factor domain (measured by sleep, physical activity, BMI, and screen time) was shown to fit the data well.\" Composite includes non-SM items (sleep, physical activity, BMI) without isolation. Fails Step 2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines clustered lifestyle risk factors (sleep, PA, BMI, screen time) as a unified domain predicting brain volume changes. While longitudinal with individual-trait outcome (brain structure), the SM/phone variable is inseparable from non-SM components in the composite, violating FT-IC2 Step 2 requirements."
+  },
+  {
+    "paper_id": "97",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study; participants aged 9-12 years from first two years of ABCD; 21 U.S. recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: generalized additive mixed models (GAMM) evaluating relationships between self-reported digital screen media activity (SMA) and functional brain organization (resting-state fMRI); network analysis of brain connectivity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper in Cortex (2023); Registered Report with pre-registered protocol"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 & Step 2: Paper reports no significant associations between screen media activity (SMA) and functional brain organization. Stated in abstract and results: \"Results did not support either of these predictions for SMA. Further, exploratory analyses predicting how screen media activity impacted neural trajectories showed no significant impact of SMA on neural maturation over a two-year period.\" No qualifying SM↔individual-trait association found. Additionally, outcome is neural/brain connectivity (brain network organization), not a behavioral, health, or cognitive individual-trait variable on the other side; brain connectivity as sole outcome does not meet the \"individual-trait-level\" requirement (neural structure without paired behavioral/health/cognitive outcome)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Study investigates whether SMA relates to functional brain organization (rs-fcMRI networks) and cognitive/behavioral outcomes. No significant SMA↔brain outcomes found. Paper explicitly states null result for primary hypotheses."
+  },
+  {
+    "paper_id": "5",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 4.0 (cross-sectional data from year 2, collected September 10, 2018 to September 29, 2020); participants aged 10-14 years; 5,797 adolescents from 21 racially and ethnically diverse U.S. sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional linear regression and modified Poisson regression models examining associations between screen time (categorical) and physical activity (categorical) with BMI percentile and overweight/obesity"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed published paper in JAMA Network Open (2023); followed STROBE reporting guidelines for observational studies"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 (per-modality search): Screen time as a phone/SM-specific variable (measured as average recreational screen time, categorized as 0-4 h/day, >4-8 h/day, >8 h/day) paired with BMI percentile (health/individual-trait outcome). Main results: \"medium (risk ratio [RR], 1.24; 95% CI, 1.12-1.37) and high (RR, 1.29; 95% CI, 1.16-1.44) screen time categories were associated with higher overweight or obesity risk compared with the low screen time category.\" Screen time qualifies as phone/SM variable; BMI percentile qualifies as individual-trait-level (physical health). MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: risk ratios (RR) with 95% confidence intervals for screen time categories and BMI percentile outcomes (Model 1: medium RR=1.24, 95% CI 1.12-1.37; high RR=1.29, 95% CI 1.16-1.44). Additional models include continuous and categorical variables with coefficients and CIs."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Same quantitative results as FT-IC3; multiple models (3 main models plus sensitivity analyses) report numeric estimates for SM↔BMI associations across all results locations"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 exclusion applies only to longitudinal designs. Paper uses cross-sectional data from ABCD year 2; carve-out condition met (cross-sectional analysis with SM as DV disqualifies EC7).",
+    "notes": "Study finds significant associations between screen time and BMI/overweight-obesity in cross-sectional ABCD data. Screen time measured objectively via self-report; BMI calculated from measured height and weight. Includes effect modification analysis and interaction testing between screen time and physical activity."
+  }
+]

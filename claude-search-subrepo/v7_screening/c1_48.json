@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "436",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper explicitly analyzes U.S. ABCD Study data (data release 5.0); N=8324 children enrolled ages 9-10, followed annually for 4 years (T0-T4)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed models with random intercepts/slopes examining longitudinal associations between digital media use and ADHD symptoms over 4 years"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Pediatrics Open Science, volume 2, issue 1, 2026; no indication of preprint status or duplication"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Social media use (time on social media + texting + video chat) is IV; ADHD inattention symptoms (parent-reported CBCL) is individual-trait-level outcome. Step 1 finds qualifying estimate: social media × time interaction β=0.03 (SE 0.01; P<.001) predicting inattention; main text Table 2 confirms. Social media qualifies as phone/SM-specific variable paired with behavioral health outcome"
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric quantitative result reported: social media × time interaction β [SE]=0.03 [0.01], P<.001 (Table 2). Cumulative 4-year effect β=0.15 (SE 0.03; P<.001). Multiple quantitative estimates reported (β, SE, p-values)"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results: linear mixed models with fixed effects (social media, time, covariates) and random intercepts; results reported as standardized β with p-values across multiple outcome domains (combined ADHD, inattention, hyperactivity-impulsivity)"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from U.S. Adolescent Brain Cognitive Development (ABCD) Study, data release 5.0, 21 data collection sites across the United States, children enrolled ages 9-10."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal analysis of ABCD participants followed annually for 4 years using linear mixed models and cross-lagged panel models."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatrics Open Science, Volume 2, Issue 1, 2026. No indication of duplicate or preprint status."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: social media use (items 4+5+6: texting + social networking sites + video chat) is a qualifying phone/SM-specific variable with its own beta coefficients throughout Table 2 (e.g., social media use x time for inattention: β [SE] = 0.03 [0.01], P<.001) and cumulative effect β=0.15 predicting ADHD inattention symptoms (individual-trait outcome). SM is IV; inattention/ADHD symptoms are individual-trait DV."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple standardized β coefficients with SEs and p-values reported throughout Table 2 and Figure 3 (cross-lagged panel models); cross-lagged β=0.03, p=.004 for SM→inattention."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analysis with quantitative results for the SM↔ADHD symptom relationship reported in main text and supplemental tables."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is longitudinal (Y0-Y4), but smartphone/SM is IV (not DV-only): social media use predicts inattention symptoms over time. EC7 applies only when SM is DV in ALL analyses with no SM-as-IV analysis anywhere. This paper has SM as IV → EC7 does not apply",
-    "notes": "Cross-lagged panel models (Figure 3) confirm unidirectional association: social media use → inattention (β=0.03, P=.004); inattention does NOT predict SM use (β=-0.002, P=.64). Robust across sensitivity analyses (at-term births, typically developing children, complete data only, restricted to T3)"
+    "FT_EC7_reason": "Social media use is the IV (predictor) in the main longitudinal analyses predicting ADHD/inattention symptoms (DV). EC7 requires SM to be DV in every analysis with no SM-as-IV analysis; that condition is not met here.",
+    "notes": "Social media composite = texting + social networking sites + video chat (items 4+5+6 of Youth Screen Time Survey). Video games and TV/videos analyzed separately and do not carry IC2 independently, but the SM composite alone meets IC2. Cross-lagged panel models additionally confirm SM as IV predicting inattention."
   },
   {
     "paper_id": "92",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper explicitly states use of ABCD Study resting-state and monetary incentive delay (MID) task fMRI data at baseline (Y0; ages 9-10) to predict outcomes at Y2 (ages 11-12)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: longitudinal fMRI study examining neural predictors (cortical connectomic maturation, NAc reward activation) of addictive screen use outcomes at Y2"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal pre-proof accepted March 11, 2026 for Biological Psychiatry: Cognitive Neuroscience and Neuroimaging; no indication of duplication or preprint of existing paper"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 search: No per-modality estimate (e.g., 'time on social media' OR 'time on phone' OR 'texting' with separate β) found in abstract or accessible sections. Step 2: Composite check. Methods state addictive screen use (ASU) composite includes 'addictive videogaming' [measured by task engagement/addiction items], 'addictive social media use' [measured by Social Media Addiction Questionnaire], and 'addictive phone use' [measured by phone use addiction scale]. Abstract confirms: 'predict addictive videogaming, addictive social media use, addictive phone use, and a composite measure of ASU.' The composite bundles (1) problematic gaming scale (VGAQ-type items), (2) SM addiction scale, (3) phone addiction scale. Per binding clarifications: SMAQ/MPIQ/VGAQ are SM/phone variables, NOT individual-trait outcomes; they measure use itself. Composite outcome conflates three addiction scales without isolating what each measures behaviorally. Problematic gaming alone (VGAQ items) fails unless explicitly mobile-based or paired with separately-measured SM/phone IV with its own coefficient. Composite construction does not satisfy Step 2 MET criterion: requires composite be built EXCLUSIVELY from phone/SM/digital-socializing items, but here the outcome itself is an addiction-severity scale (problematic use intensity), which is a different construct from use amount or modality"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "FT-IC2 failed; cascade halts",
-    "notes": "Paper measures neural risk factors predicting addiction severity (a psychological construct) rather than use amount or time on specific modalities. Addictive videogaming scale (VGAQ) is explicitly problematic-use measure, not phone/SM use. Study design: longitudinal, but SM/use is DV. If IC2 had passed, would assess EC7 (DV-only design noted in abstract)"
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study Release 5.1, 11,867 children recruited across 21 sites in the US, baseline ages 9-10 (Y0) and two-year follow-up (Y2; ages 11-12)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal neuroimaging analysis using resting-state and MID task fMRI from ABCD Study to predict addictive screen use outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Journal pre-proof accepted March 11, 2026 in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging. No indication this is a duplicate of an already-included peer-reviewed paper."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: addictive social media use (SMAQ-based questionnaire administered at Y2) and addictive phone use are analyzed separately with their own β coefficients (e.g., Figure 1: β_M1=-.030, N.S. for addictive SM use; β_M1=-.039, p=.035 for addictive phone use). These are qualifying SM/phone-specific variables (addictive SM use scale; addictive phone use scale). The other side of the relationship is neural (cortical connectomic maturation AFC score and NAc activation) which qualifies as individual-trait (neural)."},
+    "FT_IC3": {"status": "MET", "evidence": "Standardized β coefficients with 95% CIs and permutation-based p-values reported throughout (e.g., max-ASU: β_M1=-.056, CI=[-.083,-.027], p<.001; addictive videogaming: β_M1=-.060, CI=[-.087,-.031], p<.001; NAc→max-ASU: β_M2=-.023, CI=[-.045,-.000], p=.029)."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential regression and mediation analyses with numeric quantitative results reported throughout for SM/phone use outcomes."},
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three EC7 conditions hold: (a) longitudinal design (Y0 neural measures predict Y2 ASU outcomes); (b) SM/phone use (addictive social media use, addictive phone use) is the DV in every analysis involving these variables — neural variables are always IV and ASU measures are always DV; (c) there is no analysis anywhere in the paper with SM/phone as IV. There is also no cross-sectional analysis with SM as DV because ASU questionnaires were not administered at Y0 baseline in the ABCD Study — only longitudinal Y0→Y2 analyses are present. Cross-sectional carve-out does not apply.",
+    "notes": "Addictive videogaming (VGAQ-based) is the primary qualifying variable showing significant results; addictive social media use and addictive phone use are also separately analyzed with their own coefficients. All ASU measures are exclusively DV throughout. Paper explicitly notes ASU questionnaires were first available at Y2, confirming no cross-sectional ASU analyses are possible."
   },
   {
     "paper_id": "445",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper explicitly states: 'Participants were 6,467 youth (39.2% female) who reported playing digital games, from the Adolescent Brain Cognitive Development Study in the U.S.' Uses ABCD data version 5.1"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: mixed-effects regression examining association between problematic gaming at age 12 and PLEs at age 13, with moderation by peer/school/family environment variables"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed full-length report, Journal of Behavioral Addictions, 15(2026)1:320-331, accepted December 7, 2025; no indication of duplication"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Search for phone/SM-specific IV estimate. Measures show 'problematic gaming' (derived from Bergen Video Game Addiction Scale, VGAQ-type items, range 6-36) as IV; abstract and methods do not report separate coefficient for 'phone-based gaming' or 'mobile gaming.' No breakdown by gaming platform. Step 2: Not applicable; composite test does not apply (problematic gaming is a scale score, not a use-time composite). Per binding clarifications: 'Gaming alone does not qualify unless it is explicitly mobile/phone-based, OR the paper also separately measures a qualifying phone/SM variable with its own coefficient.' This paper reports only problematic gaming (VGAQ/Bergen items) without separate phone/SM variable estimate. Gaming platform (console vs. PC vs. mobile) is not disaggregated. Conclusion: FT-IC2 NOT_MET (gaming-only fails without explicit phone-based modality or separate SM/phone variable)"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from ABCD Study Version 5.1 (Garavan et al., 2018), population-based cohort of 11,868 children aged 9-10 at baseline, recruited from 22 research sites across the United States."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal analysis using ABCD Study follow-up data at years 2 and 3 (ages 12-13) using linear mixed models with random intercepts."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Behavioral Addictions, 15 (2026) 1, 320-331. No indication of duplicate status."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "The primary exposure is problematic gaming measured with the Video Game Addiction Questionnaire (adapted from Bergen Facebook Addiction Scale). Per binding clarification 2, gaming-only scales (VGAQ, problematic gaming without explicit mobile/phone modality) fail IC2 unless paired with a separately-measured phone/SM variable with its own coefficient. Problematic social media use (6-item SMAQ from Bagot et al., 2022) appears in the paper but only as a covariate/adjustment variable in sensitivity analyses testing robustness of the problematic gaming→PLEs association — it is added to the model as a covariate to control for overlap with gaming, not analyzed as IV or DV with its own primary coefficient table. The discussion notes problematic SMU was 'associated with higher PLEs at year 3' but this is from a sensitivity model where SMAQ adjusts the gaming effect, not a model where SMAQ is the focal IV with a separately reported coefficient meeting Step 1. No separate analysis reports a numeric estimate where SMAQ is the focal IV paired with an individual-trait outcome. Gaming-only exposure without a separately estimable phone/SM variable → NOT_MET."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "FT-IC2 failed; cascade halts",
-    "notes": "Study design: mixed ages 12-13; primary analysis age 12 → age 13 is quasi-longitudinal / cross-lagged. Problematic gaming (VGAQ, Bergen scale) measured at year 2, PLEs at year 3. DV is PLEs (individual-trait: psychotic-like experiences), which is appropriate, but IV is gaming-only without SM/phone isolation. Exclusion code: FT-EC2"
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Core focus is problematic gaming (VGAQ) → psychotic-like experiences (PLEs). Gaming alone fails IC2. Problematic SMU appears in the paper but as a covariate in sensitivity analyses testing whether gaming→PLEs persists after adjusting for SMAQ, and as an additional variable mentioned in discussion. The paper states analyses were conducted in 'the subsample of 3,129 participants who reported using social media' adjusting for SMAQ, but this is an adjustment covariate model, not a primary or supplementary model estimating SMAQ→PLEs as the focal relationship. No separate table or figure reports SMAQ as focal IV with its own numeric estimate."
   }
 ]

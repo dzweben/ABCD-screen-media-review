@@ -3,49 +3,49 @@
     "paper_id": "431",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzes 10,588 participants from U.S. Adolescent Brain Cognitive Development Study; mixed-effects logistic regression at 2-year follow-up (age 12)"
+      "evidence": "Paper analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, N=10,588, 21 U.S. recruitment sites, mixed-effects models on ABCD data across 2-year, 3-year, and 4-year follow-up waves."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: three separate analyses testing associations of smartphone ownership, age of first acquisition, and recent acquisition with health outcomes"
+      "evidence": "Original empirical analysis: three mixed-effects logistic regression analyses testing smartphone ownership and age of first smartphone acquisition with depression, obesity, and insufficient sleep outcomes."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication, Pediatrics 2026, 10.1542/peds.2025-072941"
+      "evidence": "Peer-reviewed article published in Pediatrics (2026); no indication of duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: Phone-specific IV (smartphone ownership, yes/no; age of first smartphone acquisition in years) paired with individual-trait health outcomes (depression diagnosis via K-SADS-5, obesity via BMI/CDC definition, insufficient sleep <9 hours). Main analysis reports OR 1.31 (95% CI 1.05-1.63) for smartphone ownership and depression; OR 1.40 (95% CI 1.20-1.63) for obesity; OR 1.62 (95% CI 1.46-1.79) for insufficient sleep."
+      "evidence": "Step 1 hit: smartphone ownership (yes/no) as IV paired with depression (OR=1.31), obesity (OR=1.40), and insufficient sleep (OR=1.62) as individual-trait outcomes (Table 1 in main paper). Age of first smartphone acquisition paired with obesity (OR=1.09 per year earlier) and sleep (OR=1.08). Acquiring smartphone in past year paired with clinical-level psychopathology (OR=1.57) and insufficient sleep (OR=1.50). All outcomes are individual-trait-level health constructs."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Quantitative results throughout: logistic regression ORs with 95% CIs for all health outcomes (depression, obesity, insufficient sleep) across three analyses; supplementary tables S3-11 contain additional models with continuous outcomes"
+      "evidence": "Multiple ORs with 95% CIs reported throughout the paper for smartphone ownership/acquisition vs. health outcomes."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Multiple numeric estimates reported: OR 1.31, 1.40, 1.62 (Analysis 1 at age 12); OR 1.09, 1.08 per year earlier acquisition (Analysis 2); OR 1.57, 1.50 for recent acquisition (Analysis 3). All with 95% CIs."
+      "evidence": "Inferential analyses conducted: mixed-effects logistic regression with ORs, 95% CIs, and p-values reported for all three analyses."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is mixed (cross-sectional and longitudinal across three analyses). Smartphone is IV in all analyses. Carve-out does not apply: FT-EC7 requires all three conditions (longitudinal design, SM DV-only in every analysis, no SM-as-IV anywhere). Here SM is IV throughout, so FT-EC7 does not apply.",
-    "notes": "Strong evidence of smartphone ownership→health outcomes associations. Three separate analyses demonstrate consistent adverse effects on depression, obesity, and sleep."
+    "FT_EC7_reason": "Smartphone is the IV (not DV) in all analyses. FT-EC7 requires SM to be DV in every analysis with no SM-as-IV analysis anywhere — that condition is not met here. EC7 is irrelevant.",
+    "notes": "Clean INCLUDE. Three analyses: (1) smartphone ownership at age 12 vs. health outcomes at age 12 (cross-sectional); (2) age of first acquisition vs. health outcomes among owners; (3) acquiring smartphone in past year vs. outcomes at next wave (longitudinal). Supplemental tables S3-S22 provide additional breakouts. MPIQ used only as sensitivity exclusion covariate, not as primary exposure."
   },
   {
     "paper_id": "122",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Analyzes 11,875 ABCD Study participants; baseline ages 9-10 years; longitudinal data from ages 10, 11, 12 years across 3 assessment waves"
+      "evidence": "Study analyzes N=11,875 children from the ABCD Study (ABCD 5.1 data release, https://doi.org/10.15154/z563-zd24), baseline ages 9-10, 21 U.S. sites."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: confirmatory factor analysis extracting neurodevelopmental, externalizing, internalizing, detachment, somatoform dimensions; linear mixed models testing longitudinal associations; mediation models testing environmental and lifestyle factors as mediators"
+      "evidence": "Original empirical analysis: longitudinal linear mixed models and single-mediation analyses (lavaan) testing neurodevelopmental spectrum at age 10 predicting psychiatric dimensions at ages 11 and 12, with environmental and lifestyle factors as mediators."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication, JAACAP Open 2025, 10.1016/j.jaacop.2025.11.011"
+      "evidence": "Peer-reviewed article published in JAACAP Open (advance online 2025); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Screen use (composite including social media, social engagement, passive watching, active gaming per methods page 3) appears only as mediator/covariate in mediation models. Primary analysis is neurodevelopmental spectrum (IV at age 10) → psychiatric dimensions (DV at ages 11, 12), with screen use and other environmental/lifestyle factors as mediators. Per criteria §2.4 binding rule: 'SM as covariate/mediator/moderator-only fails IC2.' Screen use has no direct coefficient as IV or DV; no phone/SM-specific per-modality estimate found in main or supplementary results. Composite does not qualify as it bundles gaming, social media, passive watching, and active engagement without separate breakout."
+      "evidence": "Screen use variables (\"social media,\" \"passive watching,\" \"active gaming,\" \"social engagement\") appear ONLY as candidate mediators in mediation models linking the neurodevelopmental spectrum (IV) to psychiatric dimensions (DV). In Figure 2, Figure 3, and Tables S2-S3, screen use is tested as mediator (path a: NDC -> screen use; path b: screen use -> outcome; path c': indirect effect). No analysis exists where a phone/SM variable is itself the IV or DV. Discussion confirms: \"measures of screen use showed nonsignificant mediating effects\" -- treated throughout as mediator only. Binding rule: SM as mediator-only fails FT-IC2."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -57,25 +57,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines neurodevelopmental spectrum→psychiatric outcomes; sleep problems emerge as strongest mediator (12-29% of associations). However, screen use does not qualify as a primary SM/phone variable in IC2 because it is used only as a mediator, not as IV or DV."
+    "notes": "EXCLUDE FT-EC2. Screen use (including social media, passive watching) functions exclusively as a candidate mediator in all analyses. The primary IV is the neurodevelopmental spectrum factor; the primary DVs are psychiatric dimensions. Screen use has no standalone analysis as IV or DV anywhere in main or supplementary material."
   },
   {
     "paper_id": "433",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Cross-sectional analysis of 9,475 ABCD Study participants (N=11,878 at baseline, mean age 9.9 years); parents reported smartphone ownership age at baseline and annual follow-ups"
+      "evidence": "Paper analyzes ABCD Study data (5.0 data release, NDA Collection #2573), N=9,475, baseline ages 9-10 years, 21 U.S. sites."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: cross-sectional multivariable logistic regression examining associations between sociodemographic predictors and first smartphone ownership age (binary outcome: <10 years vs ≥10 years)"
+      "evidence": "Original empirical analysis: cross-sectional multivariable logistic regression examining predictors of early smartphone ownership age (<10 years) in ABCD participants."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed publication, Pediatrics 2026, 10.1542/peds.2025-073891"
+      "evidence": "Peer-reviewed article published in Pediatrics (2026, Vol. 157, Issue 2); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Phone-specific IV (age of first smartphone acquisition, dichotomized as <10 vs ≥10 years) paired exclusively with demographic-only outcomes (sex, race/ethnicity, household income, household structure, parental education). Per criteria §2.4: 'Demographic-only (age, sex, race/ethnicity, household income, parental education, household composition, marital status, immigration status, urbanicity, study site) on the other side → NOT_MET regardless of whether the SM/phone variable itself qualifies.' No individual-trait-level outcomes (neural, behavioral, health, cognitive, well-being, personality, etc.) are analyzed; analyses examine only sociodemographic disparities in smartphone ownership timing. Table 2 logistic regression reports ORs for female (1.38), Black race (2.78), Hispanic (1.36), multiracial (1.69), single parent (2.01), living with partner (1.90), parental education <bachelor's (1.70) — all demographic/socioeconomic predictors, no psychological or health outcomes."
+      "evidence": "Smartphone ownership age (early <10 years, binary DV) is a qualifying phone variable. However, the other side consists exclusively of demographic predictors: sex (OR=1.38 female vs. male), race/ethnicity (OR=2.78 Black, OR=1.36 Hispanic, OR=1.69 multiracial), household income (<$75,000 OR=1.10), parental marital status (single parent OR=2.01, cohabiting OR=1.90), and parental education (<bachelor's OR=1.70). All predictors are demographic-only (sex, race/ethnicity, household income, household composition, parental education). Binding rule: demographic-only on the other side of the SM/phone variable -> FT-IC2 NOT_MET regardless of Step 1 qualification of the phone variable itself."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Descriptive and inferential study of sociodemographic disparities in early smartphone ownership timing. No association tested between phone use and individual-trait outcomes; focus is purely on demographic predictors of ownership age."
+    "notes": "EXCLUDE FT-EC2. The sole analysis pairs smartphone ownership age (qualifying phone DV) with demographic-only predictors (sex, race/ethnicity, income, household structure, parental education). No individual-trait-level variable appears on the other side anywhere in the paper."
   }
 ]

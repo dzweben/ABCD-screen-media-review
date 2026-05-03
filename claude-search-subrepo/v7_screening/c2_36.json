@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "179",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD Study explicitly named in title, methods describe recruitment of >10,000 children age 9-10, NIH-funded, 21 U.S. sites, data from NIMH Data Archive (NDA), release 2.0.1"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: machine learning models predicting DRD from baseline ABCD questionnaire and MRI data; elastic net, random forest, gradient boosting, support vector regression approaches; cross-validation and held-out test set"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article published in Experimental and Clinical Psychopharmacology (2022)"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Screen media activity (generic composite) paired with DRD (individual-trait outcome). Abstract states: 'Key predictive variables were neuropsychological test performance at baseline, socioeconomic status, screen media activity, psychopathology, parenting, and personality.' Results section (Table 3, Figure 3) shows 'Weekend Screen Time (parent report)' coefficient -1.66 (p=5.50E-11), 'Weekday Screen Time (youth report)' coefficient -1.14 (p=6.21E-13), 'Weekend Screen Time (parent report)' coefficient -0.98 (p=2.24E-06) as part of elastic net model. DRD is individual-trait-level outcome (behavioral, psychological characteristic linked to cognitive function and reward processing)"
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric results reported: elastic net regression coefficients for screen time variables (e.g., -1.66, -1.14, -0.98) with p-values and FDR-corrected p-values; R-squared values for model performance (e.g., R²=4.2% in cross-validation); feature importance metrics"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Full inferential analysis with quantitative results: machine learning elastic net models with numeric coefficients, p-values, R² metrics, and statistical significance testing reported in Table 3 and throughout results section"
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is baseline-to-1-year follow-up (longitudinal), but screen media time appears as a PREDICTOR (IV) of DRD outcome (DV), not screen media as DV. Cross-sectional carve-out does not apply; SM is consistently IV-side. FT-EC7 does not apply.",
-    "notes": "Paper meets all inclusion criteria. Screen time measured as both weekday and weekend, youth and parent report; DRD (delayed reward discounting) is behavioral/individual-trait outcome; substantial numeric results throughout with multiple feature importance coefficients and R² values"
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study data release 2.0.1; 21 U.S. sites; 9-10 year-old children at baseline; confirmed U.S. ABCD cohort throughout methods."},
+    "FT_IC5": {"status": "MET", "evidence": "Original ML predictive analysis using elastic net, random forest, gradient boosting, and SVR to predict delayed reward discounting (DRD) one year later from baseline ABCD data (N=4042)."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Experimental and Clinical Psychopharmacology; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Screen time is defined as 'weekly average hours a child typically spends on a computer, cellphone, tablet, or other electronic device' (p.17) — a multi-device aggregate bundling computer, tablet, and cellphone without per-device breakout anywhere in the paper. Step 1 finds no phone/SM-specific estimate (Table 3 lists 'Weekend Screen Time (parent report)', 'Weekday Screen Time (youth report)', 'Weekend Screen Time (parent report)' as multi-device aggregates). Step 2 fails: composite includes non-phone ingredients (computer, tablet) without separate breakout. FT-IC2 binding rule 5 applies."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Screen time measure explicitly defined as multi-device aggregate (computer + cellphone + tablet + other electronic device) per methods p.17, citing Paulus et al. 2019. No per-device or phone-only breakout found in main tables, Table 3, or discussion of supplementary analyses."
   },
   {
     "paper_id": "289",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Adolescent Brain Cognitive Development (ABCD) study explicitly named as source; methods state 'The participants were from the Adolescent Brain Cognitive Development study, recruited by probability sampling from the USA population'; ages 9.9±0.6 years; N=10,650 children"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: cross-sectional associations between parental psychological problems (measured via Adult Self-Report questionnaire) and children's screen media behaviors (TV, videos, video games, social media, mature-rated media) using logistic/linear regression"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article published in Acta Paediatrica (2022)"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 search: Abstract and results focus on TV watching, video watching, gaming, and social media consumption as DVs, but no phone/SM-specific IV with isolated coefficient found in Step 1. Step 2 composite check: Main analysis examines composite 'screen media' time (TV + videos + video games + social media) but does not isolate phone/SM modality separately. Parental psychological problems (IV) are demographic/family-contextual (not individual-trait-level for the child). Other-side rule violated: parental psychological problems are parental-level variables, and the paper does not pair phone/SM variables with child individual-trait outcomes. Results show parental problems → child screen time/mature media, but this is demographic/parental-contextual predictor → screen behavior, not phone/SM variable ↔ individual-trait child outcome"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper fails FT-IC2 on two grounds: (1) composite screen time bundles TV + video games + videos without phone/SM-specific isolation; (2) other-side of relationship (parental psychological problems) is parental-level, not child individual-trait-level. Exclusion code: FT-EC2"
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional baseline data from the ABCD study, n=10,650 children aged 9.9 years, recruited by probability sampling at 21 U.S. sites (2016-2018 data release)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis using multilevel general linear models and logistic regression examining parental psychological problems and children's screen media behaviors."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Acta Paediatrica 2022; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Table 3 reports separate numeric estimates (regression coefficients with 95% CI) for children's social media use (minutes/day) as DV, paired with parental externalizing/internalizing psychopathology (individual-trait-level parental psychopathology) as IV. E.g., internalizing model 1: coefficient=0.01 (95%CI -3.80, 3.77); externalizing model 1: coefficient=2.17 (95%CI -2.25, 6.59). Social media is a qualifying phone/SM variable; parental psychopathology is individual-trait-level on the other side."},
+    "FT_IC3": {"status": "MET", "evidence": "Numeric regression coefficients (with 95% CI) reported for social media use across all parental problem models in Table 3; additional logistic regression results for binary social media use reported in text (p-values 0.201-0.786)."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analyses conducted pairing parental psychopathology with children's social media use; numeric estimates reported (Table 3, Table 4, Table 2)."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires longitudinal design. This paper is entirely cross-sectional (explicitly stated in conclusion: 'This cross-sectional study was not able to examine causal associations'). FT-EC7 does not apply.",
+    "notes": "SM (social media time minutes/day) analyzed as separate DV in Table 3, with parental externalizing/internalizing/total problems as IV. No significant associations found but numeric estimates are present. The paper also reports separate analyses for TV, videos, games, mature-rated media as additional DVs."
   },
   {
     "paper_id": "77",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD study explicitly stated: 'Data (2016-2020) from the Adolescent Brain Cognitive Development (ABCD) study were analyzed'; ages 12-13 primarily; N=6,749; methods describe ACE score and screen time/physical activity measured in May 2020 during COVID-19 pandemic"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear regression analyses estimating associations between ACE score and screen time and physical activity; adjusted models controlling for confounders; cross-sectional analysis of pandemic-period data"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed journal article published in Academic Pediatrics (2022)"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 search: Abstract describes associations between ACE score (IV) and screen time (DV) but does not isolate phone/SM-specific components or report a phone/SM-specific labeled numeric estimate. No mention of 'smartphone use,' 'social media time,' 'texting,' or other phone/SM-specific modality. Step 2 composite check: Screen time measured as composite (daily hours) without internal breakdown of phone vs. TV vs. other devices reported in abstract. Most critically, other-side rule violation: ACEs (Adverse Childhood Experiences) are trauma/family-contextual variables, not individual-trait-level outcomes on the non-SM side. The relationship being tested is ACE score → screen time; screen time is the outcome (DV), but ACE is not an individual-trait outcome; instead, the paper pairs SM/screen time (IV conceptually, though authors frame it as DV) with ACE trauma exposure (contextual/family history, not individual-trait-level child characteristic like behavioral, cognitive, well-being, or personality trait)"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from ABCD Study release 3.0; 21 U.S. recruitment sites; N=6749 adolescents primarily aged 12-13; COVID RRR Survey 1 (May 2020) linked to baseline and follow-up data."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using linear regression to estimate associations between ACE score and screen time and physical activity during COVID-19 pandemic (May 2020)."},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article in Academic Pediatrics 2022; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Screen time is a sum of 7 modalities: 'multiple-player gaming, single-player gaming, texting, social media, video chatting, browsing the internet, and watching or streaming movies, videos, or television shows' (p.1295). Step 1: No phone/SM-specific estimate found; only the total composite is modeled as DV. Step 2 fails: composite includes TV/movie streaming, single-player gaming (unspecified platform), multiple-player gaming (unspecified platform), and internet browsing — all non-phone/non-SM ingredients bundled without separate breakout. FT-IC2 binding rule 5 applies (multi-device/multi-activity aggregate with no phone-specific isolation)."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper fails FT-IC2 on two grounds: (1) Screen time is not isolated to phone/SM modality; composite measure without internal breakdown reported. (2) Other-side (ACE score) is contextual/family-level trauma exposure, not individual-trait-level outcome (ACEs are classified as contextual-only per criteria §2.4). Exclusion code: FT-EC2"
+    "notes": "Although texting, social media, and video chatting are among the 7 components of the screen time composite, the composite also includes TV/movie streaming and unspecified-platform gaming, and no breakout coefficients for individual modalities are reported. ACEs (individual-trait) is the IV; composite screen time is the DV."
   }
 ]

@@ -1,81 +1,81 @@
 [
   {
-    "paper_id": "85",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Secondary analysis of ABCD Study data, methods confirm enrollment of youth aged 9-10 at baseline at 21 U.S. sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: longitudinal logistic regression (GEE method) testing associations between phone ownership/social media use at age 11-12 and substance use outcomes over 18 months"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Addictive Behaviors, 2025"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 identified: phone ownership (binary yes/no) and social media use (binary yes/no) are phone/SM-specific variables paired with individual-trait outcomes (alcohol, nicotine/tobacco, cannabis use). OR = 1.34 [95% CI 1.18, 1.51] for phone ownership → alcohol; OR = 1.71 [1.21, 2.40] for phone ownership → nicotine/tobacco; OR = 4.91 [2.84, 8.47] for social media use → cannabis"
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results reported: multiple odds ratios with 95% confidence intervals across all substance use outcomes (alcohol, nicotine/tobacco, cannabis)"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results: Table 2 (phone → alcohol OR 1.34), Table 3 (social media → alcohol interaction), Supplementary Tables 1-4 report logistic regression coefficients and odds ratios for all substance outcomes"
-    },
-    "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is longitudinal but SM/phone variables (phone ownership, social media use) are IVs predicting substance use outcomes (DV), not the reverse. EC7 carve-out does not apply because SM is not DV-only in all analyses",
-    "notes": "Strong candidate for inclusion; phone ownership and social media use measured at age 11-12 predict substance use 18 months later"
-  },
-  {
     "paper_id": "115",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "ABCD Study sample: 4557 adolescents (mean age 9.955±0.164 years) from NIH-funded U.S. Adolescent Brain Cognitive Development Study across baseline, 1-year, 2-year, and 3-year follow-ups"
+      "evidence": "Data from 4557 adolescents in the U.S. ABCD Study, NDA release 4.0, 21 recruitment sites in the United States, baseline ages 9-10 years."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed models and cross-lagged panel models examining associations between screen media activity and mental health with brain developmental patterns as mediators"
+      "evidence": "Original empirical analysis using linear mixed models, cross-lagged panel models, and mediation analyses on ABCD longitudinal data across baseline, 2-year, and 3-year follow-up."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in International Journal of Clinical and Health Psychology, 2025"
+      "evidence": "Published peer-reviewed article in International Journal of Clinical and Health Psychology 2025; no indication of duplication."
     },
     "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 found no phone/SM-specific variable with standalone coefficient. Step 2 composite analysis: 'Screen media activity' includes 6 types: television, videos, video games, texting, video chat, and social media. Composite bundles TV, video games (unspecified platform), and phone/SM items without separate breakout per methods (3 types of video, generic video games). Methods state 'SMA includes 6 types only bounded by hours on six distinct types of SMA spent on six different types of activity': TV, video games, texting, video chat, social media, and online dating. Multi-item composite includes TV and unspecified video games without isolation; therefore NOT_MET"
+      "status": "MET",
+      "evidence": "Step 1 hit: media-specific analyses in main results report separate regression coefficients for texting (beta=0.051, pfdr=0.003 predicting stress problems), social media (beta=0.032 predicting internalizing, beta=0.055 predicting externalizing, beta=0.055 predicting stress problems) as phone/SM-specific variables paired with mental health outcomes (internalizing, externalizing, stress problems -- individual-trait outcomes). See p. 6 results and Tables 4-5."
     },
     "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Multiple beta coefficients with SE and FDR-corrected p-values reported for SMA-mental health relationships throughout main tables and mediation tables."
     },
     "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Inferential analyses performed with quantitative results (beta, SE, pfdr, indirect effect estimates) for the SMA-mental health relationship."
     },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded due to FT-IC2 failure: composite screen media activity includes TV and video games without separate phone/SM isolation"
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SMA (including social media) is used as IV in longitudinal linear mixed models and cross-lagged panel models predicting mental health outcomes, and the cross-lagged model treats SMA as both IV and DV (bidirectional). EC7 does not apply because SM functions as IV in multiple analyses.",
+    "notes": "SMA composite includes TV, video games, texting, video chat, and social media. Step 1 passes because media-specific analyses report separate coefficients for social media and texting (phone/SM-specific) predicting mental health outcomes. The main composite analysis would have failed Step 2 (TV and gaming bundled in). EC7 irrelevant: SM is clearly IV in primary analyses."
+  },
+  {
+    "paper_id": "85",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Secondary analysis of the ABCD Study, nationally-representative multi-site longitudinal cohort, 21 sites in the United States, children initially aged 9-10 at enrollment; analytic sample n=10,907."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using GEE longitudinal logistic regression modeling associations between phone ownership/social media use at age 11-12 and substance use over 18 months."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Addictive Behaviors 2025; no indication of duplication."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 hit: mobile phone ownership (binary yes/no) and social media use (binary yes/no, at least one social media account) are phone/SM-specific variables used as IVs predicting substance use outcomes (alcohol, nicotine/tobacco, cannabis). OR=1.34 [1.18, 1.51] for phone ownership predicting alcohol use; OR=4.12 [2.70, 6.27] for social media use predicting nicotine/tobacco use. Substance use is an individual-trait outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Odds ratios with 95% CIs and regression coefficients reported for phone ownership and social media use predicting each substance use outcome in Tables 2, 3, and Supplementary Tables."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential GEE logistic regression analyses with quantitative OR and coefficient estimates for the phone/SM-substance use relationships."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Phone ownership and social media use are IVs (not DVs) in all analyses predicting substance use outcomes. EC7 requires SM to be DV in every analysis with no SM-as-IV analysis anywhere; here SM is IV throughout.",
+    "notes": "Clean inclusion. Mobile phone ownership and social media use (binary) as IVs predicting substance use (individual-trait outcomes) longitudinally. Sensitivity analyses in substance-naive subsample confirm results."
   },
   {
     "paper_id": "168",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "ABCD Study population: youth aged 11 to 12 years (N = 10,052) from the Adolescent Brain Cognitive Development Study"
+      "evidence": "Data from the ABCD Study data release 4.0, multisite study in the United States, ages 9-10 at enrollment, N=10,052 from the Year 2 assessment (age 11-12)."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: multilevel regression models predicting internalizing, externalizing, suicidal ideation, and non-suicidal self-injury from screen time and problematic media use"
+      "evidence": "Original empirical analysis using multilevel regression (lme4) and logistic regression predicting clinical outcomes from screen media use and problematic media use."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Development and Psychopathology, 2025"
+      "evidence": "Published peer-reviewed article in Development and Psychopathology 2025; no indication of duplication."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Step 1 found no phone/SM-specific variable. Step 2 composite analysis: Screen media activity and problematic media use are composites. Per methods, parents and youth reported 'how much time youth spend on six types of SMA spent on six different types of activity': watching/streaming TV shows or movies, watching/streaming videos, playing video games, texting, video chat, social media. Composite bundles TV, unspecified video games, and phone/SM items without separate breakout. TV and console/PC gaming are included in composite without isolation per methods description. NOT_MET"
+      "evidence": "Step 1: No phone/SM-specific variable with its own coefficient found anywhere in the paper. The two media predictors in all models are (a) 'parent-reported screen media use' -- a composite including TV/movies, streaming video, video games (computer/console/phone), texting, social networking sites, editing social media, internet browsing, and video chatting summed together -- and (b) 'problematic media use' measured by the Problematic Media Use Measure (PMUM), which assesses screen addiction behaviors broadly across all screen media, not specifically for phone/SM. No separate social media, phone ownership, texting, or named-platform coefficient is reported in main tables, supplementary tables, or sensitivity analyses. Step 2: The screen media composite includes TV, console/PC gaming, internet browsing alongside phone/SM items -- not exclusively phone/SM items. PMUM is not a phone/SM-specific scale (it is a generic screen addiction measure covering all screen media for children). FT-IC2 = NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Excluded due to FT-IC2 failure: composite screen time and problematic media use include TV and video games (unspecified platform) bundled without separate phone/SM isolation"
+    "notes": "The screen time composite bundles TV, console games, PC games, internet browsing, and social media without breakout. The PMUM is a general screen addiction measure, not phone/SM-specific. No separate phone or SM coefficient anywhere in the paper. Excluded under FT-EC2."
   }
 ]

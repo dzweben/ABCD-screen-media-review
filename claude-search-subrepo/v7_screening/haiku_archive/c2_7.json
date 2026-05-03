@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "82",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Year 3 (2019-2021), n=10,092 11-to-15-year-old adolescents from 21 geographically diverse U.S. sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original descriptive cross-sectional analysis of social media use patterns; Chi-square and t-tests comparing prevalence by demographic characteristics stratified by age and sex."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Academic Pediatrics, 2025."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper reports only descriptive prevalence and demographic breakouts of social media platform use (TikTok 67.1%, Instagram 66%, YouTube 64.7%) and SMAQ scores. No analysis pairs a smartphone/SM variable with an individual-trait outcome (neural, behavioral, health, cognitive, well-being, personality, substance use, sleep, academic). Demographic stratification (sex, age) is not an individual-trait outcome. No coefficient or estimate for an SM-individual-trait association is reported anywhere in main tables, supplementary tables, or appendices."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper 82 is purely descriptive (prevalence of SM use). It does not analyze associations between SM/phone use and individual-trait variables, and therefore fails FT-IC2. No downstream criteria scored."
+  },
+  {
+    "paper_id": "106",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Years 2 and 3 (2018-2020), n=8006 early adolescents from 21 sites; mean age 12.1 years at Year 2; 47.9% female, 41.6% racial/ethnic minority."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis using logistic regression to evaluate associations between eight screen time modalities in Year 2 and substance use experimentation (alcohol, nicotine, cannabis, any substance) in Year 3, adjusting for covariates."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Drug and Alcohol Dependence, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 match: Phone/SM-specific variables (social media, texting, video chatting) paired with individual-trait outcome (substance use experimentation, a behavioral/health outcome). Reported estimates: social media (AOR 1.20, 95% CI 1.14-1.26), texting (AOR 1.18, 95% CI 1.12-1.24), video chatting (AOR 1.09, 95% CI 1.03-1.16). Other screen modalities (TV/movies, videos, single-player games, multi-player games, internet) showed no significant associations, confirming the specificity of digital social connection modalities."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Logistic regression analyses report adjusted odds ratios for the association between screen time modalities and substance use experimentation, with 95% confidence intervals and p-values. Social media: AOR 1.20 (p<0.001); texting: AOR 1.18 (p<0.001); video chatting: AOR 1.09 (p<0.05)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results reported in Figure 1 and text: AORs with confidence intervals for each substance outcome (alcohol, nicotine, cannabis, any substance) and each screen modality. Results obtained after applying Benjamini-Hochberg false discovery rate correction."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM is the IV (screen modalities in Year 2), not the DV. Substance use experimentation is the DV. Therefore FT-EC7 does not apply.",
+    "notes": "Paper 106 is a well-designed prospective cohort study demonstrating that digital social connections (social media, texting, video chatting) are associated with substance use experimentation, independent of non-social screen time (TV, videos, gaming, generic internet)."
+  },
+  {
+    "paper_id": "107",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, Years 2, 3, and 4 (2018-2022), n=7691 early adolescents; mean age 12.0 years at Year 2; 47.9% female, 42.6% racial/ethnic minority; 21 geographically diverse U.S. sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective empirical analysis using generalized structural equation modeling (GSEM) to estimate direct and indirect (mediated) associations between social media time (Year 2) and cannabis experimentation (Year 4), with cannabis expectancies (Year 3) as mediator, adjusting for covariates including friends\\' cannabis use."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed short communication in Drug and Alcohol Dependence, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 match: Social media (a phone/SM-specific variable) paired with cannabis experimentation (a behavioral/health individual-trait outcome). Direct effect: B=0.18 (95% CI 0.13-0.24, p<0.001). Social media time is reported as a continuous variable (hours per day) from the ABCD Youth Screen Time Survey."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Generalized structural equation modeling reports direct path coefficient (B=0.18, 95% CI 0.13-0.24) for social media → cannabis experimentation association, with p<0.001."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: direct effect B=0.18; indirect effects via positive expectancies (B=0.05, 95% CI 0.03-0.06, p<0.001) and negative expectancies (B=0.03, 95% CI 0.02-0.04, p<0.001). Proportions mediated: positive expectancies 19.8% (95% CI 12.6%-27.0%), negative expectancies 13.6% (95% CI 8.4%-18.8%)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is prospective/longitudinal (Year 2 → Year 4). SM is the IV (social media time), not the DV. Cannabis experimentation is the DV. No analysis has SM as DV-only; therefore FT-EC7 does not apply.",
+    "notes": "Paper 107 demonstrates a prospective mediation pathway: social media use → cannabis expectancies (positive and negative) → cannabis experimentation. Both positive and negative expectancies partially mediate the association, indicating a nuanced mechanism involving beliefs about cannabis effects."
+  }
+]

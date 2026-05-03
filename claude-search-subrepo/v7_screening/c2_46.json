@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "98",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper describes the U.S. ABCD Study with U.S. recruitment sites and baseline ages 9-10 years"
-    },
-    "FT_IC5": {
-      "status": "NOT_MET",
-      "evidence": "Review/perspective paper outlining potential future technologies and methods for ABCD data collection; no original empirical analysis of ABCD data reported"
-    },
-    "FT_IC6": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC2": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Paper explicitly discusses the U.S. Adolescent Brain Cognitive Development (ABCD) Study, NIH-funded, with preliminary data from 3621 youth across sites and plans for future implementation at ABCD follow-up visits."},
+    "FT_IC5": {"status": "NOT_MET", "evidence": "Paper is a perspective/resource paper describing current, piloted, and future potential uses of mobile and wearable technologies in the ABCD study. It reports only feasibility pilot statistics (e.g., 88.5% found iPads easy to use) and proposes future data collection methods; it does not report an original inferential analysis of ABCD data examining associations between variables."},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Non-empirical paper discussing future incorporation of mobile/wearable/social media technologies into ABCD; no original data analysis"
+    "notes": "Exclusion code FT-EC3 (non-empirical). Paper is a technology review and prospective planning document for ABCD data collection methods."
   },
   {
     "paper_id": "112",
-    "FT_IC1": {
-      "status": "NOT_MET",
-      "evidence": "Cohort is the Amsterdam Born Children and their Development (ABCD) study, Netherlands (n=2354). This is the Dutch ABCD, not the U.S. ABCD Study. Methods state children were 5-6 years old from the Netherlands."
-    },
-    "FT_IC5": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC6": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC2": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "NOT_MET", "evidence": "Methods section explicitly states: \"This study was embedded in the Amsterdam Born Children and their Development (ABCD) Study (www.abcd-study.nl), a community-based prospective cohort study\" in the Netherlands (n=2354). This is the Dutch ABCD cohort, not the U.S. NIH-funded Adolescent Brain Cognitive Development Study."},
+    "FT_IC5": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Dutch ABCD cohort; radiofrequency-EMF exposure (RF-EMF) study with cell phone and cordless phone use measured; cognitive outcomes (speed of information processing, inhibitory control, cognitive flexibility, visuomotor coordination) are individual-trait but cohort is not U.S. ABCD"
+    "notes": "Exclusion code FT-EC1 (not U.S. ABCD). Cohort is the Amsterdam Born Children and their Development (Dutch ABCD) study from the Netherlands."
   },
   {
     "paper_id": "434",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, N=9475, baseline mean age 9.9 years; uses ABCD 5.0 data release; multisite longitudinal study"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: cross-sectional multivariable logistic regression examining associations between sociodemographic predictors and first smartphone ownership age"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Pediatrics, published February 2026"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Smartphone ownership (age of first smartphone, binary outcome <10 years vs. ≥10 years) qualifies as a smartphone variable on Step 1. However, all predictors are demographic-only: sex, race/ethnicity, household income, household structure, parental education. The criteria binding clarification states: \"If the only analyses pair the SM/phone variable with demographic-only or contextual-only on the other side, FT-IC2 = NOT_MET regardless of whether the SM/phone variable itself qualifies on Step 1 or Step 2.\""
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Paper uses U.S. ABCD Study data release 5.0, N=9475, 21 sites, baseline ages 9-10, NIH-funded. Acknowledgments cite ABCD NDA Collection #2573 and multiple U01DA award numbers."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: cross-sectional multivariable logistic regression examining sociodemographic predictors of early smartphone ownership age (<10 years) in ABCD participants."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatrics, Volume 157, Issue 2, February 2026. No indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The paper reports ORs for early smartphone ownership (<10 years old) as the DV in Table 2. The predictors are exclusively demographic variables: youth sex, race/ethnicity, household income (<$75,000 vs. ≥$75,000), parental marital status (single/living with partner/married), and parental education (<bachelor's vs. ≥bachelor's). Smartphone ownership qualifies as a phone/SM variable, but the other side of every analysis is demographic-only (sex, race/ethnicity, income, marital status, parental education). No individual-trait-level variable (behavioral, health, cognitive, mental health, etc.) appears on the other side of any analysis. FT-IC2 = NOT_MET under the other-side rule."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines sociodemographic correlates of early smartphone ownership using logistic regression with odds ratios reported. The individual-trait-level requirement is not met because only demographic variables appear on the other side of the relationship."
+    "notes": "Exclusion code FT-EC2. Paper examines sociodemographic correlates of early smartphone ownership age; the only predictors are demographic variables (sex, race/ethnicity, income, parental marital status, parental education). No individual-trait-level variable is paired with the smartphone variable in any analysis."
   }
 ]

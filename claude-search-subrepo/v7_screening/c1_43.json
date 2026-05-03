@@ -3,90 +3,90 @@
     "paper_id": "156",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline ages 9-10 across 21 sites, Release 2.0"
+      "evidence": "U.S. ABCD Study, Release 2.0, 11,000+ children age 9-10, 21 study sites, school-based recruitment. Methods: \"This study utilized the baseline cross-sectional survey administered within the Adolescent Brain Cognitive Development Study (ABCD; Release 2.0).\""
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis of ABCD data; cross-sectional baseline survey examining associations between screen media use and sleep-wake disturbances"
+      "evidence": "Original empirical cross-sectional analysis of ABCD baseline data examining associations between screen media use and sleep-wake disturbance symptom severity."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed paper in Sleep Health, 2020"
+      "evidence": "Published peer-reviewed article in Sleep Health (2020). No indication of duplicate."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 finds phone/SM-specific variables: TV use, video, video game, social media, texting, and video chat, each reported separately and paired with individual-trait sleep outcomes (sleep duration, sleep onset latency, insomnia, sleep-wake disturbance severity). Tables 2-3 report direct coefficients and mean differences for each media type."
+      "evidence": "Step 1 hit: Tables 2 and 3 report separate mean-difference estimates for weekday and weekend social media use (>=2 hrs vs. <2 hrs) paired with individual-trait sleep outcomes. Table 2: social media use weekday, d=-0.28 for sleep duration, d=0.19 for insomnia, d=0.12 for total sleep-wake disturbances. Table 4: relative risk of insufficient sleep for >=2 hrs weekday social media use = 1.56; weekend social media use = 1.50 (both p<.001). Texting and video chat use also reported separately with their own numeric estimates. Other side = individual-trait health outcomes (sleep duration, insomnia severity, excessive sleepiness, total sleep disturbance score)."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Extensive numeric results: logistic regressions with odds ratios (OR range 1.27-2.41), mean differences, adjusted coefficients throughout Tables 2-3. Example: TV use ≥2 hours vs <2 hours weekday OR=1.27 for sleep duration, OR=1.93 for sleep onset latency"
+      "evidence": "Mean differences with Cohen's d, relative risks, and odds ratios for SM/phone variables paired with sleep outcomes throughout Tables 2-5."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "All estimates are quantitative and reported for screen media↔sleep outcome relationships across main, supplementary, and sensitivity analyses"
+      "evidence": "Numeric results reported for SM-sleep relationships (e.g., RR=1.56 for weekday social media use and insufficient sleep; d=-0.28 for social media and sleep duration)."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional; EC7 applies only to longitudinal SM-as-DV-only papers",
-    "notes": "Strong paper with clear per-modality screen media estimates paired with individual-trait health outcomes; extensive supplementary results"
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires longitudinal design. Does not apply.",
+    "notes": "Paper reports separate estimates for TV, video, video games, texting, social media, and video chat, enabling per-modality extraction. Social media and video chat qualify as phone/SM variables under Step 1."
   },
   {
     "paper_id": "388",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, ages 9-10 years, n=9254 youth"
+      "evidence": "9254 youth from the Adolescent Brain Cognitive Development Study (ABCD), Data Release 2.0.1, 21 U.S. research sites, ages 9-10, 2016-2017 baseline."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis of ABCD data; cross-sectional baseline survey examining associations between screen media activity (SMA) and recreational activity endorsement"
+      "evidence": "Original empirical cross-sectional analysis using GLMM and Group Factor Analysis (GFA) of ABCD data to examine SMA and recreational activity endorsement."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed paper in BMC Public Health, 2020"
+      "evidence": "Published peer-reviewed article in BMC Public Health (2020). No indication of duplicate."
     },
     "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No per-modality phone/SM estimates reported as direct coefficients. Step 2 composite check: SMA composite is defined in methods as including \"TV shows or movies; videos; video games on a computer, console, phone or other device; messaging on a cell phone, tablet, or computer; social networking sites; video chat.\" This bundles TV, console/PC gaming, and generic computer use without separate breakouts. Per v7 binding rule: non-phone/non-SM ingredients (TV, console gaming, PC gaming, unspecified gaming, computer-only) without separate breakdown → NOT_MET"
+      "status": "MET",
+      "evidence": "Step 1 hit: Fig. 5 (full model forest plot) reports ORs for individual GF predictors of recreational activity endorsement. GF labels include \"Weekday social SMA\" (OR=0.96, 95% CI 0.87-1.05), \"Texting\" (OR=1.05, 95% CI 0.96-1.14), and \"Games vs social media\" (OR=0.83, 95% CI 0.76-0.89). The \"Games vs social media\" GF explicitly contrasts social media versus games. Methods describe SMA items including social networking sites and messaging on cell phone/tablet. These GFs load heavily on social media and texting items per Figs. 2-4. Outcome = recreational activity endorsement (extracurricular/behavioral individual-trait variable: sports, music, art)."
     },
     "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Adjusted ORs with 95% CIs reported for SMA group factors predicting recreational activity endorsement throughout Fig. 5 and supplementary figures 16-20."
     },
     "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
+      "status": "MET",
+      "evidence": "Numeric results reported (e.g., OR=0.83, 95% CI 0.76-0.89 for \"games vs social media\" GF; OR=0.96 for weekday social SMA GF)."
     },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper uses latent factor analysis with composite SMA variable; does not isolate phone/SM-specific modalities from TV and console/PC gaming"
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires longitudinal design. Does not apply.",
+    "notes": "SMA composite items include i) TV shows or movies, ii) videos, iii) video games on computer/console/phone/other device, iv) messaging on cell phone/tablet/computer, v) social networking sites, vi) video chat. Some GFs separate social/texting from games/movies, and separate GF estimates with ORs are reported for social-media-heavy and texting-heavy factors in main results."
   },
   {
     "paper_id": "57",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline ages 9-10 from 9986 families, baseline data 2016-2018"
+      "evidence": "U.S. ABCD Study, Curated Annual Release 2.0 (N=11,875), baseline data, ages 9-10, 9987 families. Methods: \"This study utilized the baseline data from the Adolescent Brain and Cognitive Development (ABCD) Study, Curated Annual Release 2.0.\""
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis of ABCD data; cross-sectional study examining relationships between mood symptoms and different types of screen time using network analysis"
+      "evidence": "Original empirical network analysis (mixed graphical models, MGM) and regression analyses of ABCD data examining screen time and mood symptoms."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed paper in Journal of Abnormal Child Psychology, 2020"
+      "evidence": "Published peer-reviewed article in Journal of Abnormal Child Psychology (2020). No indication of duplicate."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1 identifies phone/SM-specific screen-time variables analyzed separately: TV/movie, Video, Video game, Texting, Social media, Video chat. Methods report screen time assessed by combining behavioral questions on watching television/movies, videos, video games, social media sites, texting, and video chatting measured on typical weekday/weekend. Results report direct conditional dependencies between each screen-time node and mood symptom nodes (Depressive, Manic-like, Irritability, Anhedonia, Elevated mood, Decreased need for sleep). Key finding: age-inappropriate screen time (mature video games, R-rated movies) shows significant associations with mood symptoms independent from other screen types (Figure 1, Network Analysis section, Figure 2)"
+      "evidence": "Step 1 hit: Network analysis explicitly includes social media (\"SocMed\" = visiting social network sites) and texting (\"Text\") and video chatting (\"VidChat\") as separate nodes alongside mood symptom nodes (irritability, depressive mood, anhedonia, anger, elevated mood, decreased need for sleep). Network edge weights (conditional dependencies) are estimated via LASSO-regularized MGM with 1000 bootstraps. Fig. 1 shows the network including SocMed and VidChat connected to mood symptoms. Table 1 shows descriptive statistics for social media (M=0.08, SD=0.43) and texting (M=0.14, SD=0.55) as separate variables. These are qualifying SM/phone variables paired with individual-trait mood symptom outcomes on the other side."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Numeric results reported throughout: network edges with conditional dependencies, regression coefficients (β), t-statistics, and p-values. Examples from Results: \"Mature Video Games: irr=.006, t=2.382, p=.017\"; \"R-rated Movies: irr=.005, t=7.34, p<.001\"; logistic regression coefficients for age-inappropriate content associations with mood symptoms"
+      "evidence": "Network edge weights (bootstrapped, LASSO-regularized), regression coefficients (e.g., b=0.02, t=9.25, p<0.001 for mature video games and overall network connectivity; b=0.05, t=17.34, p<0.001 for R-rated movies), and node strength values reported throughout results and Fig. 2."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Quantitative results for screen time↔mood outcome relationships reported throughout network analyses, multiple regression tests, and bootstrapped network estimates"
+      "evidence": "Numeric results include network edge weights, bootstrapped stability statistics (edge stability 0.88/0.8 full sample), regression b-values with t-statistics and p-values for node strength analyses."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional; EC7 applies only to longitudinal SM-as-DV-only papers",
-    "notes": "Network analysis approach examining separate screen-time modalities paired with individual-trait mood symptom variables; supplementary materials provide detailed network statistics and sex-stratified analyses"
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 requires longitudinal design. Does not apply.",
+    "notes": "Primary finding is that age-inappropriate screen time (mature video games, R-rated movies) shows stable network edges with mood symptoms; common screen time types (including social media, texting, video chat) showed inconsistent/variable-selection edges. However, social media and texting are modeled as separate nodes with reported network edges, satisfying IC2 Step 1. The paper's strongest results concern mature video games and R-rated movies, which alone would fail IC2 (content-rating-only rule), but the simultaneous separate modeling of social media and texting with their own network edges provides the qualifying Step 1 hit."
   }
 ]

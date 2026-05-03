@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "26",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper analyzes cross-sectional data from 2-year follow-up of U.S. ABCD Study (Year 2, 2018–2020, N = 10,258 from 21 U.S. sites)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: modified Poisson regression examining associations between cyberbullying victimization/perpetration and eating disorder symptoms"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in International Journal of Eating Disorders, 2023"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Cyberbullying alone does not qualify per binding clarification §2.4. Paper assesses cyberbullying (\"Have you ever been cyberbullied...online, in texts, or group texts, or on social media\") as independent variable paired with eating disorder symptoms. No separate phone/SM-specific measurement (time on phone, time on named platforms, SMAQ, MPIQ, or other phone/SM variables) is reported. Cyberbullying qualifies only when paired with a separately-measured phone/SM variable. Other-side variables (eating disorder symptoms) are individual-trait-level, but the phone/SM variable is missing."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, Year 2 (2018-2020), ABCD 4.0 release, N=10,258 from 21 U.S. recruitment sites, baseline ages 9-10."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional secondary data analysis of ABCD Year 2 data using modified Poisson regression to examine associations between cyberbullying and eating disorder symptoms."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in International Journal of Eating Disorders (2023); no indication this is a duplicate or preprint of an already-included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: The sole exposure variable is cyberbullying victimization/perpetration (assessed as online/text/social-media bullying). No phone/SM-specific estimate (time on SM, named platform, texting frequency, SMAQ, MPIQ, etc.) appears in any table, supplementary, or sensitivity analysis with its own coefficient paired with an individual-trait outcome. Step 2 not needed. Binding clarification: cyberbullying alone fails IC2. The cyberbullying measure is not a measure of SM use time or a qualifying SM/phone construct."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper focuses on cyberbullying victimization and perpetration as exposures to eating disorder symptoms, not on smartphone or social media use as an exposure."
+    "notes": "Cyberbullying is the IV, eating disorder symptoms are the DV. Despite the cyberbullying measure referencing social media platforms by name (Instagram, Snapchat) in the question wording, the construct measured is victimization status (yes/no), not SM use. Under binding clarification 3, cyberbullying alone does not qualify for IC2."
   },
   {
     "paper_id": "309",
-    "FT_IC1": {
-      "status": "NOT_MET",
-      "evidence": "Paper uses Amsterdam Born Children and their Development (ABCD) cohort, a Dutch longitudinal study, not the U.S. ABCD Study. §2.1 states NOT_MET applies to 'Different cohort sharing the \"ABCD\" acronym—including Amsterdam Born Children and their Development (Dutch ABCD)'."
-    },
-    "FT_IC5": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC6": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC2": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "NOT_MET", "evidence": "The cohort is the Amsterdam Born Children and their Development (ABCD) study - a Dutch cohort started in 2003-2004 in Amsterdam, with 645 Dutch adolescents aged ~15.8 at T1 (2019-2021). This is the Dutch ABCD cohort, explicitly listed as NOT_MET in the criteria ('Amsterdam Born Children and their Development (Dutch ABCD)'). The paper explicitly states: 'data were retrieved from the Amsterdam Born Children and their Development (ABCD) cohort study (Van Eijsden et al., 2010).'"},
+    "FT_IC5": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC6": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC2": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Incorrect ABCD cohort. Despite title and methods mentioning problematic social media use (PSMU) and problematic gaming (PG), the underlying data source is the Dutch Amsterdam ABCD study, not the U.S. ABCD Study."
+    "notes": "This is the Dutch ABCD cohort (Amsterdam Born Children and their Development), not the U.S. NIH-funded ABCD Study. The shared acronym is coincidental. The cohort is Dutch, started 2003-2004, community sample from Amsterdam. FT-EC1 applies."
   },
   {
     "paper_id": "59",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Secondary data analysis of U.S. ABCD Study baseline (2016–2018, ages 9–10 years) through 2-year follow-up; N = 8,085 participants from 21 U.S. sites"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: regression models examining associations between cumulative ACEs, bullying victimization, and mental health problems (internalizing and externalizing)"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed article in Journal of Youth and Adolescence, 2024"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Paper examines ACEs and bullying victimization as predictors of mental health outcomes. Neither ACEs nor bullying victimization is a smartphone/social media variable. No phone/SM-specific measurement (time on phone, time on named platforms, SMAQ, MPIQ, etc.) appears anywhere in the paper. The analysis is ACEs + bullying → mental health, not phone/SM-based. Per binding clarifications, cyberbullying alone fails IC2 unless paired with separately-measured phone/SM variable; here cyberbullying is measured but no phone/SM variable is present. FT-IC2 requires a qualifying smartphone/SM variable paired with individual-trait-level outcome."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Analyzes data from the U.S. Adolescent Brain Cognitive Development (ABCD) Study, 4.0 release, baseline 2016-2018, 21 U.S. recruitment sites, ages 9-10 at baseline, N=8,085."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using linear regression and multiple imputation to examine associations between ACEs, bullying victimization, and internalizing/externalizing problems in ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Youth and Adolescence (2024); no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate (time on SM, named platform, texting, SMAQ, MPIQ, app use, etc.) appears in any table or supplementary analysis with its own coefficient. The bullying victimization variable is a composite of cyberbullying, overt bullying, relational bullying, and reputational bullying combined into a single dichotomous or cumulative score; no separate cyberbullying-alone coefficient is reported anywhere. Step 2 not needed. Binding clarification: cyberbullying alone fails IC2, and here cyberbullying is not even reported separately - it is one sub-component of a broader bullying composite. The main IVs are ACEs score and composite bullying victimization; neither qualifies as a phone/SM-specific variable."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper addresses cumulative adversity (ACEs + bullying) and mental health outcomes. Bullying is measured as dichotomous victimization (cyberbullying and traditional bullying combined) but no phone/SM exposure variable is present."
+    "notes": "The study examines ACEs and bullying victimization (a composite including cyberbullying, overt, relational, and reputational bullying) as predictors of internalizing/externalizing problems. Cyberbullying is never reported as a standalone variable with its own coefficient. Even if it were, cyberbullying alone does not qualify under IC2 binding clarification 3. FT-EC2 applies."
   }
 ]

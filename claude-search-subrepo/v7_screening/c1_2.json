@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "310",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Paper explicitly analyzes data from the ABCD Study; baseline N=12,000, ages 9-10 years, across 4 waves of longitudinal data"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis reported; parallel process latent growth curve models examining coupling of growth trajectories across early adolescence"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed empirical article in Journal of Research on Adolescence"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Social media use measured via Youth Screen Time Survey, summing time on texting, social networking sites, and video chatting. Paired with cognitive performance outcomes (crystallized abilities, inhibitory control/attention, processing speed) which are individual-trait-level. Parallel process models report associations between SM use trajectories and cognitive performance trajectories"
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric results reported throughout: growth trajectory slopes, intercept-slope covariances (e.g., for social media slope β=0.36, p<.001), correlations between composite variables, and indirect effects in parallel process models"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with quantitative results; parallel process latent growth curve models with significance tests on cross-construct associations; results table shows parameter estimates and p-values for all tested associations"
-    },
-    "FT_EC7_applies": true,
-    "FT_EC7_reason": "Design is longitudinal (4 waves across years). Social media use functions as DV in the parallel growth curve models (trajectories of SM use are the outcome being modeled). No analysis identified where SM is IV (predicting another variable); SM appears only as DV throughout. All three conditions met: longitudinal design, SM-as-DV-only, no SM-as-IV analysis",
-    "notes": "EXCLUDE code FT-EC7. Paper meets FT-IC1 through FT-IC4 but fails the EC7 exclusion criterion for longitudinal SM-as-DV-only designs"
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study 5.1 release, 21 U.S. sites, baseline N~12,000, ages 9-10; explicitly stated as U.S. ABCD Study throughout methods."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using parallel-process latent growth curve models on ABCD data across three time points (Y0, Y2, Y4)."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed empirical article in Journal of Research on Adolescence; no indication of duplication."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: social media hours (time on social networking sites, hours/day, self-reported) is a named SM variable. Numeric slope-slope path estimates reported: s_sm -> s_cryst: beta = -.36, p < .001; s_sm -> s_flanker: beta = -.09, p = .031; s_sm -> s_pattern: beta = .11, p = .001 (Table 3). Other side: crystallized ability, Flanker inhibitory control/attention, and Pattern Comparison processing speed -- all individual-trait cognitive constructs."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple standardized path coefficients (beta) with p-values and 95% CIs reported in Tables 2-3 for SM-hours <-> cognitive trajectory associations."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential parallel-process LGCMs with reported path coefficients, SEs, p-values, and CIs constitute a full quantitative inferential analysis."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Bidirectional parallel-process design: social media slope predicts cognitive slopes AND cognitive intercepts predict social media slope (e.g., i_cryst -> s_sm: beta = .01, p = .665; i_pattern -> s_sm: beta = .06, p = .001). SM appears as both IV and DV within the same models, so EC7 does not apply.",
+    "notes": "Study examines longitudinal coupling between social media hours trajectory and crystallized abilities, inhibitory control/attention, and processing speed trajectories using PP-LGCMs on ABCD 5.1 data across Y0-Y4."
   },
   {
     "paper_id": "172",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Data from the Adolescent Brain Cognitive Development (ABCD) Study; N=8,699 ABCD participants, ages 10 at baseline; ABCD-specific estimates reported separately in Table 2 alongside Generation R cohort"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; target trial emulation (TTE) framework with G-formula estimating hypothetical intervention effects on modifiable factors and internalizing symptoms"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed empirical article in Journal of Consulting and Clinical Psychology"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 finds generic \"screen time (hr/day)\" variable. Step 2 composite check: Methods describe screen time as one of multiple modifiable factors (ST, sleep, PA, social connections) but do not specify which screen activities comprise the composite. No breakdown provided of TV, gaming, social media, or other modalities. Multi-device aggregated time without per-device isolation. Paper does not isolate phone/SM from other screen modalities. Other side is internalizing symptoms (depression/anxiety), which is individual-trait, but phone/SM exposure fails isolation requirement"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study release 4.0, 21 U.S. sites, N=8,699, ages 9-10 at baseline; explicitly described as U.S. ABCD Study."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis applying target trial emulation (TTE) and G-formula to ABCD (and Generation R) observational data to estimate effects of hypothetical interventions on internalizing symptoms."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Consulting and Clinical Psychology; no indication of duplication."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No numeric estimate with a phone/SM-specific variable label found anywhere in the paper. The exposure throughout is undifferentiated \"recreational screen time\" (ST) measured as total daily hours of recreational screen use by parent report, with no breakdown by device or platform. Step 2: The ST composite is not exclusively phone/SM items -- the Discussion explicitly acknowledges 'screen time measurement is complex, and it is composed of different activities which may have distinct effects' (p. 263) and cites studies distinguishing computer use, TV use, and gaming. The ABCD measure bundles all recreational screen activities into a single daily-hours figure with no phone/SM isolable component. No per-device or per-platform breakout exists in main tables, supplementary tables, or sensitivity analyses. Fails Step 2 as multi-activity composite with non-phone/non-SM ingredients not separately broken out."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "EXCLUDE code FT-EC2. Fails FT-IC2 because screen time composite is not demonstrated to be exclusively phone/SM items; multi-device aggregated time without separate phone/SM breakout"
+    "notes": "Screen time operationalized as total recreational daily hours (parent report) without phone/SM isolation. Multi-cohort study (ABCD + Generation R). FT-IC2 fails at Step 2 due to undifferentiated multi-activity screen time composite."
   },
   {
     "paper_id": "50",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Data from Adolescent Brain Cognitive Development (ABCD) Study; 11,819 youth participants, baseline ages 9.92 years (SD=0.62); four waves of data from ABCD 5.0 release"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; random-intercepts cross-lagged panel models (RI-CLPMs) examining longitudinal bidirectional associations; multiple-group analyses for moderation by OSA content type and child sex"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed empirical article in European Child & Adolescent Psychiatry"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Online social activity (OSA) time is a phone/SM-specific variable. Methods state OSA measured via Youth Screen Time Survey, summing \"texting,\" \"visiting social networking sites,\" and \"video chatting.\" This composite is exclusively phone/SM/digital-socializing items. Paired with ADHD problems (individual-trait-level outcome assessing inattention, hyperactivity, impulsivity via CBCL). Results reported across all waves in RI-CLPM with numeric estimates. Meets both Step 1 and Step 2 criteria"
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Numeric results reported throughout: cross-lagged coefficients (e.g., OSA time T2→T3 to ADHD β=0.273***, p<.001), standardized path coefficients in Figure 1, Table 3 showing sex-stratified cross-lagged parameter estimates with 95% CIs, correlations in Table 2"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with quantitative results; RI-CLPM reports cross-lagged effects with significance testing; multiple-group analyses by sex with Satorra-Bentler chi-square tests; standardized coefficients and p-values for all associations"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "ABCD Study 5.0 release, 21 U.S. sites, N=11,819, baseline ages 9-10; explicitly stated as U.S. ABCD Study."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using random-intercepts cross-lagged panel models (RI-CLPMs) across 4 waves of ABCD data (T1-T4)."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in European Child and Adolescent Psychiatry; no indication of duplication."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: OSA (online social activity) time is constructed exclusively from \"texting\" + \"visiting social networking sites\" + \"video chatting\" -- all qualifying SM/phone items. Numeric cross-lagged path estimates reported: OSA time (T2->T3) -> ADHD problems beta = 0.058* (Fig. 1); OSA time (T3->T4) -> ADHD problems beta = 0.074** (Fig. 1); sex-stratified paths in Table 3 (e.g., females T2->T3: beta = 0.094, p = .023). Other side: ADHD problems measured by CBCL attention problems subscale T-scores -- an individual-trait behavioral/psychiatric construct."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple standardized path coefficients (beta), SEs, 95% CIs, and p-values reported in Figure 1, Table 2 (bivariate correlations), and Table 3 (sex-stratified cross-lagged estimates)."},
+    "FT_IC4": {"status": "MET", "evidence": "RI-CLPMs with full inferential statistics (MLR estimator, FIML) constitute a quantitative inferential analysis; numeric estimates for the OSA <-> ADHD relationship are reported throughout."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "FT-EC7 does not apply. Although design is longitudinal, the paper analyzes OSA time as both IV (predicting ADHD at later waves) and DV (predicted by ADHD at earlier waves) in cross-lagged panel structure. The presence of bidirectional/cross-lagged analysis (SM as both IV and DV in same model) disqualifies FT-EC7. Additionally, sex-moderated analyses reveal reverse effects (ADHD→OSA relationship differs by sex), confirming bidirectional structure",
-    "notes": "INCLUDE. Meets FT-IC1, FT-IC5, FT-IC6, FT-IC2, FT-IC3, FT-IC4. FT-EC7 does not apply due to bidirectional cross-lagged design"
+    "FT_EC7_reason": "Bidirectional cross-lagged design: OSA time predicts subsequent ADHD problems AND ADHD problems predict subsequent OSA time in the same RI-CLPM (e.g., ADHD T1->T2 -> OSA time beta = -0.006 females, -0.057 males; Table 3). SM/OSA appears as both IV and DV, so EC7 does not apply.",
+    "notes": "OSA composite (texting + social networking + video chatting) is exclusively phone/SM items. Bidirectional RI-CLPM across 4 ABCD waves. Sex moderates the OSA->ADHD effect (significant only for girls); no moderation by content type (video vs. image)."
   }
 ]

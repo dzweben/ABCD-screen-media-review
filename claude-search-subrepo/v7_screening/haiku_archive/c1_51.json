@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "135",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Study uses data from the National Institute of Mental Health (NIMH) Data Archive Adolescent Brain Cognitive Development (ABCD) collection; analyzed 6,830 children from ABCD baseline."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using exploratory factor analysis and regression models on test and validation sets to identify risk factors for maladaptive behaviors."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Adolescent Health (2025)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time is one component of a six-factor composite (fat/sugar intake, screen time, prenatal alcohol exposure, parental aggressiveness, hyperactivity, family violence). Step 1: No isolated phone/SM-specific estimate reported. Step 2: Composite includes non-phone/non-SM items (prenatal alcohol exposure, parental aggressiveness) without separate breakouts. NOT_MET."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Composite-only approach with mixed ingredients (behavioral, nutritional, prenatal) fails FT-IC2 Step 2 due to non-phone/non-SM bundling."
+  },
+  {
+    "paper_id": "181",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzed data from 3,498 U.S. adolescents aged 9-11 years from the Adolescent Brain Cognitive Development (ABCD) Study baseline and follow-up assessments."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective cohort analysis using Cox proportional hazards models examining associations of sleep duration and screen time with BMI transition over median 657 days."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in International Journal of Obesity (2025)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Screen time measured as hours per day (continuous and categorical: low 0-4, medium >4-8, high >8 h/day) - qualifying phone/SM variable. Other side: BMI transition from overweight/obesity to normal BMI percentile - individual-trait-level health outcome. Estimates reported: HR 0.99 (95% CI 0.96, 1.02) for continuous screen time. MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis performed: Cox proportional hazards models with numeric results reported for screen time and sleep duration associations with BMI transition."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results reported: screen time HR 0.99 (95% CI 0.96, 1.02), sleep duration HR 0.60 (95% CI 0.44, 0.82) for 7-8 hours vs 9-11 hours, with p-values and confidence intervals throughout."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time functions as IV in the analysis (predicts BMI transition outcome); design is longitudinal but SM/phone is not DV-only. FT-EC7 does not apply.",
+    "notes": "Clear qualifying SM variable (screen time) paired with health outcome (BMI); longitudinal design with SM as predictor."
+  },
+  {
+    "paper_id": "215",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzed prospective data from 7,445 adolescents (47.3% females) aged 9-10 years at baseline (2016-2018) in the Adolescent Brain Cognitive Development Study."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original prospective cohort analysis using weighted multivariable linear regression models examining independent and joint associations of screen time and sleep with BMI and waist circumference over 2-year follow-up."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Childhood Obesity (2025)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Screen time measured as hours per day (continuous and categorical: 0-4 low, >4-8 medium, >8 high) - qualifying phone/SM variable. Other side: BMI and waist circumference - individual-trait-level health outcomes. Numeric estimates reported: B = 0.32 (95% CI 0.19, 0.45) for BMI; B = 0.40 (95% CI 0.23, 0.56) for WC. MET."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis: weighted multivariable linear regression models with hypothesis testing examining screen time and sleep associations with BMI and WC."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric quantitative results reported: screen time B = 0.32 (95% CI 0.19, 0.45) for BMI; B = 0.40 (95% CI 0.23, 0.56) for WC; sleep disturbance B = 1.23 (95% CI 0.14, 2.33) in males; all with p-values and confidence intervals."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Screen time functions as IV (predicts BMI and WC outcomes); longitudinal design but SM/phone is not DV-only. FT-EC7 does not apply.",
+    "notes": "Clear qualifying SM variable (screen time in hours/day) paired with health outcomes (BMI and waist circumference); prospective design with SM as independent variable."
+  }
+]

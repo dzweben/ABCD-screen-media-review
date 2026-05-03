@@ -1,0 +1,38 @@
+[
+  {
+    "paper_id": "156",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study baseline data (Release 2.0), 21 recruitment sites, ages 9-10 at baseline"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis examining associations between screen media use and sleep disturbance symptoms"},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article published in Sleep Health journal"},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 pass: TV use, video use, video game use, texting, and social media are phone/SM-specific variables paired with sleep-wake disturbance outcomes (individual-trait level). Table 2 and Table 3 show estimates (odds ratios, Cohen's d) for each screen media type (TV, video, video game, texting, social media) with specific sleep disturbance outcomes (sleep duration, sleep onset latency, insomnia, sleep disordered breathing, arousal disturbances, excessive sleepiness, sleep hyperhydrosis)"},
+    "FT_IC3": {"status": "MET", "evidence": "Logistic regressions reported throughout Tables 2-3 with odds ratios and 95% confidence intervals; Cohen's d effect sizes reported; e.g., Table 4 shows relative risk estimates comparing children with >=2 hours vs <2 hours weekday TV use (RR=1.27, p<.001)"},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric quantitative results reported in main tables (odds ratios, relative risks, Cohen's d effect sizes) examining SM/phone variables as predictors of sleep disturbance outcomes"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline survey), not longitudinal; EC7 does not apply",
+    "notes": "Paper examines multiple screen media modalities separately (TV, video, video game, social media, texting) paired with multiple sleep-wake disturbance outcomes. Both weekday and weekend use assessed. All outcomes meet individual-trait criterion (sleep-related physiological and psychological symptoms)."
+  },
+  {
+    "paper_id": "388",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study baseline data, 9254 youth ages 9-10 from ABCD Data Release"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis using latent factors and mixed models"},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article published in BMC Public Health"},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Outcome is recreational activity endorsement (yes/no binary on 19 assessed activities including swimming, soccer, baseball, music, art). This is behavioral engagement/activity participation, not an individual-trait-level outcome (neural, behavioral health, cognitive, well-being, personality, substance use, sleep, academic, etc.). The paper pairs screen media activity with activity choice, which is contextual behavior/lifestyle, not within-person psychological/neurobiological/health construct. Methods state: 'binary variable was utilized which assessed any recreational activity involvement (yes/no)' and outcomes were 'any recreational activity endorsement' and specific activities like soccer, music, art. These are activity participation choices, not individual-trait variables."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines whether SMA displaces recreational activities. Outcomes are endorsement of specific recreational activities (sport, music, art), not individual-trait constructs. Other variables like cognition and psychopathology are also examined in the model, but the focal SM↔activity engagement association fails FT-IC2 because the outcome is activity choice, not individual-trait."
+  },
+  {
+    "paper_id": "57",
+    "FT_IC1": {"status": "MET", "evidence": "U.S. ABCD Study baseline data, 9986 families with children ages 9-10"},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using network analysis and mixed graphical models to examine relationships between screen time and mood symptoms"},
+    "FT_IC6": {"status": "MET", "evidence": "Peer-reviewed article published in Journal of Abnormal Child Psychology"},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 pass: age-inappropriate screen content, TV/movies, videos, video games, texting, and social media are phone/SM-specific variables paired with mood symptoms (individual-trait outcome). Methods state: 'screen time on a typical weekday and weekend day were measured separately' for TV/movie, video, video game, texting, social media, and video chatting. Results show specific screen time types (age-inappropriate content, mature video games, R-rated movies) associated with mood symptoms (irritability, depressive mood, anhedonia, elevated mood, anger, decreased need for sleep). Table 1 shows descriptive statistics for these screen time variables and mood symptoms. Figure 1 shows network diagram with edges representing conditional dependencies between screen time types and mood symptoms."},
+    "FT_IC3": {"status": "MET", "evidence": "Network analysis reports numeric estimates including: network edge weights (conditional dependencies), node strength values, permutation test statistics. Figure 2 shows node strength (sum of edge weights) with specific values (e.g., mature video games: b=.006, t=2.382, p=.017; anhedonia: b=.002, t=.643, p=.52). Multiple regressions reported for associations between screen time on mature video games, R-rated movies with mood symptoms."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results throughout: network edge weights, node strength estimates, regression coefficients (b values), t-statistics, p-values; Figure 2 displays associations between screen time variables and mood symptom node strengths with numeric parameters"},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (baseline data), not longitudinal; EC7 does not apply",
+    "notes": "Paper uses network analysis to examine complex relationships between different screen time modalities (age-inappropriate content, TV/movie, video, video game, texting, social media, video chatting) and multiple mood symptoms (irritability, depressive mood, anhedonia, elevated mood, anger, decreased need for sleep). Both general screen time and specific age-inappropriate content are examined. All mood outcomes are individual-trait psychological constructs."
+  }
+]

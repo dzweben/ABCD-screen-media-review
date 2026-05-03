@@ -3,19 +3,19 @@
     "paper_id": "193",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline ages 9-10, longitudinal design with EARS passive sensing substudy"
+      "evidence": "Explicitly U.S. ABCD Study (21-site longitudinal cohort, ages 9-10 at baseline, ABCD Data Release 5.0, NDA). Methods: \"The ABCD Study is a 21-site 10-year longitudinal study with 11,880 participants at baseline (ages 9-10), funded by the National Institutes of Health.\""
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: cross-sectional passive-sensed smartphone use data from ABCD Release 5.0, validated against self-report"
+      "evidence": "Original empirical analysis of ABCD EARS subsample (n=1,463 with usable ABCD-EARS data). Reports intraclass correlations, Pearson correlations, beta regressions, t-tests, and Bland-Altman plots examining validity and variability of passively-sensed smartphone keyboard and app-use measures and differences by sex and OS."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Scientific Reports 2024"
+      "evidence": "Published peer-reviewed article in Scientific Reports (2024); no indication of duplication."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Pure psychometric/validation paper. Measures phone-specific estimates (keystroke count: r=0.33 with app use; correlations 0.21-0.35 with self-report; mean 5 h/day smartphone use, females > males) but paired only with descriptive demographics (sex, income, education, race) and validation metrics. No individual-trait-level outcome variable (neural, behavioral, health, cognitive, psychiatric, sleep, academic, personality, etc.). Paper analyzes smartphone use measurement properties and trends, not associations between SM/phone use and within-person constructs."
+      "evidence": "Step 1: Phone/SM-specific variables are present (passive app use, keystrokes, social apps = texting + video chatting + social media, self-reported smartphone use). However, the other side of every analysis is exclusively demographic or contextual: biological sex (t-tests: females > males, t=6.9, p<0.001), race/ethnicity, household income, parental education, operating system. No individual-trait-level variable (neural, behavioral, health, cognitive, well-being, sleep, substance use, academic) appears on the other side of any analysis. The binding other-side rule requires the non-SM side to be individual-trait-level; demographic-only on the other side yields NOT_MET. The paper is a descriptive/validation study of EARS measures with sociodemographic group comparisons only."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -27,17 +27,17 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "FT-IC2 NOT_MET triggers cascade; all downstream DEFERRED. Paper validates EARS passive-sensing measures against self-report and describes smartphone use patterns by sex and OS, but does not analyze associations with individual-trait variables."
+    "notes": "Validation/descriptive paper for ABCD-EARS passive smartphone sensing. All inferential analyses pair smartphone use variables with demographic predictors only (sex, income, parental education, race/ethnicity, OS). Fails IC2 other-side rule."
   },
   {
     "paper_id": "103",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "Describes ABCD Study cohort (11,876 youth, 21 sites, ages 9-10 baseline); resource is dedicated to ABCD research community"
+      "evidence": "Paper is explicitly about the U.S. ABCD Study (11,876 children, ages 9-10, 21 data collection sites, NIH-funded). Introduction: \"The Adolescent Brain Cognitive Development Study is the largest and most comprehensive long-term study on brain development and child health in the United States.\""
     },
     "FT_IC5": {
       "status": "NOT_MET",
-      "evidence": "Non-empirical resource/methods paper. Describes development of NowIKnowMyABCD—a documentation website, discussion board, and Twitter feed for ABCD researchers. No original empirical analysis of ABCD participant data. Paper is a resource description, not a research study."
+      "evidence": "Paper introduces NowIKnowMyABCD, a community resource hub (GitHub discussion board + website) for ABCD researchers. No empirical analysis of ABCD data is reported. This is a resource/tool description paper equivalent to a study protocol or resource-availability paper. No statistical analyses, no outcomes, no participants analyzed."
     },
     "FT_IC6": {
       "status": "DEFERRED",
@@ -57,25 +57,25 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "FT-IC5 NOT_MET (non-empirical) triggers cascade. This is a resource/infrastructure paper, not a research article with original empirical analyses of ABCD data."
+    "notes": "Resource/tool paper describing a community platform (website + discussion board) for ABCD researchers. No empirical data analysis conducted. Exclusion code FT-EC3."
   },
   {
     "paper_id": "140",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, N=11,868 baseline, ages ~9/10 to ~13/14 across waves 0-4; 21 U.S. sites"
+      "evidence": "Explicitly ABCD Study: \"N = 11,868 participants in the Adolescent Brain Cognitive Development study followed from ages ~9/10 to ~13/14.\" ABCD data DOI 10.15154/z563-zd24 cited."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: descriptive statistics and multilevel logistic regression models of youth self-reported technology use (6 subtypes: TV/movies, video games, YouTube, social media, video chat, texting) across longitudinal waves"
+      "evidence": "Original empirical analysis using multilevel logistic regression, descriptive statistics, intraclass correlation coefficients, and Spearman correlations on ABCD data across 5 waves (ages 9/10 to 13/14)."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Published peer-reviewed article in Journal of Adolescent Health 2024"
+      "evidence": "Published peer-reviewed article in Journal of Adolescent Health (2024); no indication of duplication."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Step 1: Identifies phone/SM-specific variables with numeric estimates. Example: multilevel logistic regression OR for study wave (continuous): social media OR=3.34 (95% CI 3.14-3.55), texting OR=2.22 (2.07-2.39), video chat OR=1.79 (1.67-1.93), youtube OR=1.25 (1.16-1.35), video games OR=2.11 (2.04-2.18), TV OR=2.16 (2.09-2.23). Step 1 qualifies. BUT other-side rule fails: ALL analyses pair technology variables exclusively with demographic covariates only—biological sex, parent education (categorical: no college, Bachelor's, Master's, Doctoral/Professional), parent combined income (6 categories), and parent marital status (6 categories). No individual-trait-level outcome on other side (no neural, behavioral, health, cognitive, psychiatric, sleep, academic, personality, substance use, etc.). Demographic-only on other side triggers FT-IC2 NOT_MET per binding rule."
+      "evidence": "Step 1: Phone/SM-specific variables are present as DVs: social media hrs/day, texting hrs/day, video chat hrs/day are qualifying SM/phone variables. Table 2 reports ORs for predictors of >2 hrs/day use. However, all predictors (the other side) are exclusively demographic: biological sex (female vs. male OR=2.41, 95% CI: 2.21-2.62 for social media), parent education, combined parent income, parent marital status. Study wave (time) is contextual. No individual-trait-level variable (neural, behavioral, health, cognitive, well-being, sleep, substance use, academic, personality, etc.) appears on the other side of any analysis anywhere in the paper (main, supplementary, or sensitivity). The binding other-side rule requires the non-SM side to be individual-trait-level; demographic-only on the other side yields NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "FT-IC2 NOT_MET (demographic-only on other side) triggers cascade. Paper analyzes associations between technology subtypes and sociodemographic predictors, but lacks individual-trait-level outcomes (behavioral health, mental health, cognitive, academic, personality, etc.)."
+    "notes": "Descriptive epidemiology of technology subtypes (TV, social media, texting, video chat, video games, YouTube) mapped against sociodemographic covariates only. All analyses pair technology use with demographic predictors (sex, parental education, income, marital status). Fails IC2 other-side rule. Exclusion code FT-EC2."
   }
 ]

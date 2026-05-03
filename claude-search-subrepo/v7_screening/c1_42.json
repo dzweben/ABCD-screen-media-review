@@ -3,79 +3,79 @@
     "paper_id": "287",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline 9-10 year olds (2016-2018), N=8292 in analysis"
+      "evidence": "Longitudinal data from the Adolescent Brain Cognitive Development (ABCD) Study, 21 U.S. sites, baseline ages 9-10; N=8292 at Year 2 follow-up (2018-2020)."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: generalized structural equation modeling (GSEM) with mediation testing"
+      "evidence": "Original empirical analysis: longitudinal mediation model (GSEM) estimating associations between social media time (Year 2) and nicotine experimentation (Year 4) with smoking expectancies (Year 3) as mediators."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed published article, American Journal on Addictions, 2026"
+      "evidence": "Peer-reviewed article published in The American Journal on Addictions (2026); no indication of duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: 'social media time' (named SM variable, IV at Year 2) paired with 'nicotine experimentation' (individual-trait behavioral outcome at Year 4); direct effect β=0.138, 95% CI 0.081-0.196, p<.001 (Table 2)"
+      "evidence": "Step 1 hit: social media time (hours per day) is a phone/SM-specific variable with explicit numeric estimates paired with nicotine experimentation (substance use, an individual-trait outcome). Table 2: direct effect B=0.138 (95% CI 0.081-0.196, p<.001) in the positive-expectancy model and B=0.153 (95% CI 0.100-0.206, p<.001) in the negative-expectancy model."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Direct effect coefficient β=0.138 (p<.001) and indirect effect through expectancies β=0.009 (p=.002) reported"
+      "evidence": "Multiple quantitative results reported: direct path coefficients (B), indirect effects, proportion mediated with 95% CIs and p-values from GSEM (Table 2, Figure 1)."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Multiple quantitative results: direct β=0.138, indirect β=0.009, proportion mediated 5.97% (95% CI 1.27%-10.67%, p=.013)"
+      "evidence": "Inferential analysis (GSEM) performed on the SM-use to nicotine-experimentation relationship with numeric results throughout (Table 2)."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design (Years 2-4) with SM as IV (not DV-only); SM-as-IV analysis present in primary model, so EC7 does not apply",
-    "notes": "Mediation analysis identifies positive smoking expectancies as pathway; smoking expectancy measured at Year 3 as mediator"
+    "FT_EC7_reason": "Social media time is the IV (predictor) in all analyses; nicotine experimentation is the DV. EC7 requires SM to be DV-only, which is not the case here.",
+    "notes": "Longitudinal ABCD data (Years 2-4); SM-as-IV prospective design with mediation through smoking expectancies. Straightforward INCLUDE."
   },
   {
     "paper_id": "404",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 5 (2021-2023), N=11,530 after multiple imputation"
+      "evidence": "Cross-sectional data from Year 5 (2021-2023) of the ABCD Study (6.0 release); N=11,530; 21 demographically diverse U.S. sites, baseline ages 9-10."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: multivariable linear regression on cross-sectional data"
+      "evidence": "Original empirical analysis: multivariable linear regression estimating association between dating app use (IV) and depression symptoms (DV) in ABCD Year 5 data."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed published research note, BMC Research Notes, 2026"
+      "evidence": "Peer-reviewed article published in BMC Research Notes (2026); not identified as a duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: 'dating app use' (named social platform variable, IV) paired with 'depression symptoms' (individual-trait mental health outcome, CBCL DSM-5 Affective Problems Scale); adjusted β=0.42, 95% CI 0.08-0.76, p=0.017 (Table 2)"
+      "evidence": "Step 1 hit: dating app use is a qualifying SM/phone variable (online dating apps explicitly listed in IC2 criteria). It appears as IV with its own coefficient paired with depression symptoms (mental health = individual-trait). Table 2: adjusted standardized beta ß=0.42 (95% CI 0.08-0.76, p=0.017). Sensitivity analyses (Appendix D) also report ß=0.44 (95% CI 0.03-0.85, p=0.035)."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Standardized beta coefficient β=0.42 reported with 95% CI and p-value"
+      "evidence": "Quantitative results reported: standardized beta coefficients, 95% CIs, and p-values from multivariable linear regression (Table 2); sensitivity and parallel analyses also provide numeric results."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Quantitative result: adjusted β=0.42 (95% CI 0.08-0.76, p=0.017); sensitivity analyses also yielded β=0.44 (p=0.035) with additional covariates"
+      "evidence": "Inferential analysis (multivariable linear regression) performed on the dating-app-use to depression-symptoms relationship with numeric results (Table 2)."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Cross-sectional design (Year 5 only); cross-sectional carve-out applies—EC7 does not apply regardless of any other characteristics",
-    "notes": "Prevalence of dating app use was 0.9% in sample; sensitivity analyses included cyberbullying, sleep, pubertal status, screen time, parental monitoring, phone ownership age, relationship status"
+    "FT_EC7_reason": "Design is cross-sectional (Year 5 only), not longitudinal baseline-predicts-later-wave. EC7 requires a longitudinal design, which is absent here.",
+    "notes": "Cross-sectional ABCD Year 5 data; dating app use as IV, depression symptoms as DV. Clear INCLUDE."
   },
   {
     "paper_id": "166",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline (2016-2018), N=3847 after quality control (from 4524 enrolled)"
+      "evidence": "Data from the first wave of the ABCD study; large representative U.S. sample of 9-10 year olds across 21 sites; N=3847 after quality control."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical analysis: multiple machine learning regression approaches (ridge, LASSO, elastic net, linear regression)"
+      "evidence": "Original empirical analysis: multiple machine learning regression approaches (LASSO, ridge, elastic net, linear regression) to estimate relative importance of 43 variables for BMI (%BMIp95) in ABCD baseline data."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed published article, Psychological Medicine, 2020"
+      "evidence": "Peer-reviewed article published in Psychological Medicine (2020); no indication of duplicate."
     },
     "FT_IC2": {
       "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific estimate found (no estimates for time on phone, SM platform, texting, app use, etc.). Step 2: Composite 'screen time' defined in methods as 'average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device'—this is multi-device aggregated time without per-device breakout. Per binding rule §2.4 clarification 5, multi-device aggregated time fails IC2 unless cellphone-only breakout exists elsewhere. No separate cellphone or SM time estimate reported."
+      "evidence": "Step 1: searched all results locations (Figs 1-3 LASSO/elastic-net coefficients, full-sample linear regression, sex-stratified models, Hispanic and Black non-Hispanic subsamples). The only screen-time variable in every analysis is defined as 'average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device' -- a single multi-device aggregate with no per-device breakout anywhere in the paper. Step 2: this composite bundles computer, tablet, cellphone, and 'other electronic device' -- it is not exclusively phone/SM items. Per binding clarification, multi-device aggregated time fails Step 2. NOT_MET."
     },
     "FT_IC3": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Screen time coefficient was 1.17 (LASSO) and second-most significant in full sample linear regression (p=7.5×10-8), but the composite includes TV, console/PC gaming, computer, tablet, and cellphone—no isolation of phone/SM component"
+    "notes": "Screen time defined explicitly as computer + cellphone + tablet + other electronic device aggregate; no per-modality (phone-only) breakout in any table, figure, or supplementary material. Excluded under FT-EC2."
   }
 ]

@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "435",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods: \"This study included children from the Adolescent Brain Cognitive Development Study... from 21 data collection sites across the United States between 2016 and 2018.\""
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Methods reports original empirical analysis: longitudinal cohort design following 8324 children annually for 4 years with linear mixed models examining SM use and ADHD symptoms."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed original research published in Pediatrics Open Science, 2026; not a preprint, conference abstract, or duplicate."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: Phone/SM-specific estimate found. Results report β [SE] 0.03 [0.01]; P < .001 for social media use → inattention symptoms (individual-trait-level ADHD symptom domain). SM use measured separately from TV and gaming. Paired with within-person trait outcome."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Results report β coefficients with SEs and p-values for SM use predicting inattention (β 0.03 [0.01], P < .001) and cumulative 4-year effect (β 0.15, SE 0.03, P < .001)."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Multiple quantitative results reported: cross-sectional and longitudinal β estimates, cross-lagged panel model β coefficients (e.g., β 0.03 [0.01], P = 0.004)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from U.S. ABCD Study, data release 5.0, 21 U.S. recruitment sites, children enrolled ages 9-10 years; N=8324."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical longitudinal analysis using linear mixed-effects models and cross-lagged panel models over 4 annual waves."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Pediatrics Open Science; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: social media use (texting + social networking sites + video chat per YSTS, items 4+5+6) analyzed separately with its own coefficient in Table 2 (social media use x time: β=0.03 [SE 0.01], P<.001; social media use x time x PGS-ADHD: β=-0.04 [0.01]; cumulative β=0.15 [0.03]), paired with inattention and combined ADHD symptoms (individual-trait outcome)."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple β coefficients reported in Table 2 for social media x time interactions; cross-lagged path coefficients in Figure 3 (γ=0.03, P<.01 at each wave); cumulative effect β=0.15."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results reported throughout: Table 2 standardized betas with SEs, cross-lagged panel coefficients, cumulative effect estimates."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design (yes), but social media use is IV in analyses predicting ADHD symptoms as DV. EC7 requires SM as DV in every analysis with no SM-as-IV anywhere. Does not apply.",
-    "notes": "Qualifies on SM-specific exposure (social media use, not composite). Clear phone/SM-specific coefficient at Step 1. Individual-trait-level outcome (inattention symptoms). Longitudinal design with evidence of unidirectional association (SM→inattention, not reverse)."
+    "FT_EC7_reason": "Social media is IV (predicting ADHD/inattention symptoms as DV) in the primary longitudinal models; EC7 requires SM to be DV in every analysis, which is not the case here.",
+    "notes": "Social media use composite = texting + social networking + video chat (YSTS items 4+5+6), distinct from video games and TV/videos which are analyzed as separate categories. PGS-ADHD included as covariate/moderator."
   },
   {
     "paper_id": "35",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods: \"Data from the Adolescent Brain Cognitive Development (ABCD) Study, including 1940 participants aged 11 to 12 years at Wave 1, were analyzed over three annual waves.\""
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original longitudinal empirical analysis: 1940 participants followed over 3 waves with modified Poisson regression examining SMA scores and time on SM predicting binge eating."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed original publication in Obesity (Silver Spring), 2025; not a preprint or duplicate."
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: SM-specific exposure identified. Social Media Addiction (SMA) scores derived from 6-item questionnaire (Bergen Facebook Addiction Scale adapted). Paired with individual-trait-level outcome (binge eating symptoms via KSADS-5). Results show prospective RR 1.90 (95% CI 1.10-3.27) for addiction SMA group predicting BE at Wave 3. SMA is a problematic-use SM scale (qualifying per §2.4), and binge eating is individual-trait outcome (disordered eating behavior)."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Results report relative risk (RR) and prevalence ratio (PR) with 95% CIs for SMA predicting BE (e.g., RR 1.90, PR 2.17, PR 3.45)."
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Multiple quantitative estimates: cross-sectional PRs at Waves 1 and 3, prospective RRs, latent class trajectory model RRs (e.g., 3.01 [2.07-4.37] for consistently high SMA group)."
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from U.S. ABCD Study, data release 5.1, 21 U.S. sites, children recruited ages 9-10; analysis subsample N=1940 at ages 11-12 at Wave 1."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using modified Poisson regression and latent class trajectory modeling over three annual waves (Waves 1-3 of ABCD follow-up)."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Obesity (Silver Spring); no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: social media addiction (SMA) scale (6-item Bergen Facebook Addiction Scale adapted) is a qualifying SM variable (problematic/addictive SM scale); it has its own coefficient as IV paired with binge eating symptoms (psychiatric/behavioral health outcome, individual-trait level). Table 3: addiction SMA group vs. no symptoms, prospective RR=1.90 (95% CI: 1.10-3.27); Table 2 cross-sectional PR=2.17 (95% CI: 1.22-3.84). Time on social media (SMT) also separately analyzed with its own coefficients."},
+    "FT_IC3": {"status": "MET", "evidence": "PRs and RRs with 95% CIs reported in Tables 2, 3, and 4 for SMA and SMT associations with binge eating; trajectory group RRs in Table 4 (consistently high SMA: RR=3.01 [95% CI: 2.07-4.37])."},
+    "FT_IC4": {"status": "MET", "evidence": "Quantitative results throughout: prevalence ratios (Table 2), relative risks (Table 3), trajectory-based RRs (Table 4), stratified analyses in supplementary tables."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Longitudinal design (yes), but SMA is IV predicting BE as DV. No analysis where SMA is DV only. EC7 does not apply.",
-    "notes": "Qualifies on SM-specific addiction scale (SMA), which measures problematic SM use. Individual-trait outcome (binge eating disorder symptoms). Longitudinal associations persist after controlling for baseline BE."
+    "FT_EC7_reason": "Social media (SMA and SMT) is IV predicting binge eating as DV; SM is not DV in any analysis. EC7 requires SM to be DV in every analysis.",
+    "notes": "SMA is the Bergen Facebook Addiction Scale adapted — a qualifying problematic SM scale used as IV, not treated as individual-trait outcome. BE (binge eating) is the individual-trait outcome. Both cross-sectional and longitudinal analyses present."
   },
   {
     "paper_id": "187",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Methods: \"Data on screen time, ADHD symptoms (measured via the Child Behavior Checklist), and brain structure were extracted from 10,116 children at baseline (ages 9–10) and 7880 children at a two-year follow-up\" from ABCD Study."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original longitudinal empirical analysis: linear mixed-effects models and residualized change regression examining baseline screen time and changes in ADHD symptoms and brain structure over 2 years."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed original publication in Translational Psychiatry, 2025; not a preprint, review, or duplicate."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific estimate. Exposure labeled \"screen time,\" defined as total time on devices including gaming and TV. No per-device breakout reported. Step 2: Composite-content check required. Methods state composite includes \"playing video games and watching television\" with weighted formula (5/7 weekday + 2/7 weekend). This bundles gaming (console/PC/unspecified) and TV/video watching without separate per-device estimates anywhere in results. Per binding clarification §2.4.5: \"Multi-device aggregated time fails Step 2... 'Minutes per week on computer, tablet, cellphone...' bundles smartphone with non-phone devices. NOT_MET unless a per-device breakout exists somewhere.\" No per-device breakout found in paper. Fails Step 2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from U.S. ABCD Study, data release 5.0, 21 U.S. sites, children initially aged 9-10 years; N=10,116 at baseline."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using cross-sectional and longitudinal linear mixed-effects models and mediation analyses on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Translational Psychiatry; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific estimate found anywhere in the paper (main tables S2/S3, results text). Screen time is analyzed only as a single undifferentiated composite. Step 2: Methods explicitly state screen time was 'calculated as the total time spent using various devices, including playing video games and watching television' — the composite bundles TV and video games with any other device use; no separate breakout of social media, phone time, or texting exists anywhere in the paper. Fails Step 2 because non-phone/non-SM activities (TV, video games) are bundled in without a separate breakout."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Multi-device composite (gaming + TV/video) without per-device isolation. Does not qualify as phone/SM-specific variable under FT-IC2 Step 2. Excluded per binding rule on multi-device aggregated time."
+    "notes": "Screen time composite explicitly includes video games and TV watching per methods section; no decomposition into SM-specific or phone-specific components anywhere in the paper."
   }
 ]

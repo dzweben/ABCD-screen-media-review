@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "12",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "Cross-sectional data from ABCD Study COVID-19 Rapid Response Research Release, May 2020 survey; 5412 ABCD participants ages 12-13."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis of ABCD cross-sectional data; reports multiple linear regression associations between mental health/resiliency factors and total screen use."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed paper in JAMA Pediatrics."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1 identifies composite screen time (multiplayer gaming, single-player gaming, texting, social media, video chatting, browsing internet, streaming/watching) paired with individual-trait outcomes (mental health, stress, social support, coping). Step 2: composite includes TV/movies and generic gaming (unspecified platform) without separate per-modality breakout; fails composite-content check per binding rule."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from the U.S. ABCD Study COVID-19 Rapid Response Research Release (May 2020); N=5412 adolescents aged 10-14 from 21 recruitment sites; centralized IRB at UC San Diego."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis of ABCD COVID-19 rapid-response data; multiple linear regression of mental health and resiliency factors on total screen use."},
+    "FT_IC6": {"status": "MET", "evidence": "Distinct peer-reviewed letter published in JAMA Pediatrics January 2022; no evidence of being a duplicate of another included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Table 2 reports regression coefficients only for total screen time as DV; no separate per-modality (social media, texting, video chatting) regression estimate paired with an individual-trait IV appears anywhere in the paper. Step 2: The composite total screen use per methods = multiplayer gaming + single-player gaming + texting + social media + video chatting + browsing the internet + watching/streaming movies/videos/TV. This composite includes TV/streaming, unspecified-platform gaming, and internet browsing alongside phone/SM items, with no separate phone/SM-only breakout in any regression. Fails Step 2 due to non-phone/non-SM ingredients (TV, gaming, internet)."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper reports associations between mental health/resiliency and total screen use, but composite includes non-phone/non-SM items (TV, generic gaming) without isolation."
+    "notes": "Mental health/stress/social support/coping behaviors are individual-trait IVs but they are paired only with the disqualifying total screen time composite as DV. No per-modality SM or phone estimate appears in any regression table."
   },
   {
     "paper_id": "75",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD Study COVID-19 survey, May 2020; N=5335 parent-adolescent dyads, ages 10-14."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; reports parent vs. adolescent reports of recreational screen time and sociodemographic predictors of discrepancies."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed paper in Academic Pediatrics."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Paper measures and compares parent and adolescent reports of recreational screen time (multiplayer gaming, single-player gaming, texting, social media, video chatting, internet browsing, streaming) but reports NO association between screen time and any individual-trait-level outcome. Analysis is purely methodological (parent vs. adolescent concordance); no outcome variable is measured."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. ABCD Study (COVID-19 ABCD Survey 1, May 2020, ABCD Data Release 3.0); N=5335 adolescents ages 10-14; 21 US sites; centralized IRB at UC San Diego."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis: ICC, paired t-tests, linear regression to assess parent-adolescent discrepancies in recreational screen time."},
+    "FT_IC6": {"status": "MET", "evidence": "Distinct peer-reviewed article in Academic Pediatrics; not a duplicate of another included paper."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: Table 4 reports regression coefficients for sociodemographic predictors (age, sex, race/ethnicity, country of birth, primary language, parent marital status, parent education, household income) predicting absolute discrepancies in total recreational screen time, multiplayer gaming, texting, social media, and video chatting. Social media and texting are qualifying phone/SM-specific variables. However, the other side of every regression consists exclusively of sociodemographic predictors (age, sex, race, income, education, marital status, country of birth, language). Per the IC2 other-side rule, demographic-only or contextual-only on the other side → NOT_MET, regardless of whether the SM/phone variable qualifies. No individual-trait-level variable (behavioral, mental health, cognitive, etc.) appears on the other side of any regression in the paper."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Measurement agreement study; no outcome variable analyzed. Focus is on concordance between parent and adolescent reports during COVID-19."
+    "notes": "The paper examines parent-adolescent reporting discrepancies in screen time modalities including social media and texting, but all predictors are sociodemographic (age, sex, race, income, etc.). No individual-trait outcome or predictor is included in any analysis."
   },
   {
     "paper_id": "76",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "ABCD Study Year 2 (2018-2020), N=9429; ages predominantly 11-12 years."
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical cross-sectional analysis of ABCD data; multiple logistic regression of sociodemographic factors and screen time modalities with cyberbullying victimization and perpetration."
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Published peer-reviewed paper in Academic Pediatrics."
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Paper analyzes total screen time (and component modalities) with cyberbullying victimization/perpetration. Step 1: Total screen time composite includes TV/movies, single/multiplayer gaming (platform unspecified), texting, social media, video chat, internet. Step 2: Composite bundles TV, generic console/PC gaming, and phone/SM items without per-device breakout; fails composite-content check per binding rule: multi-device aggregated time fails IC2 unless device-specific breakout exists."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper reports associations between total/component screen time and cyberbullying, but primary analysis uses composite including TV and unspecified gaming without modality isolation."
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from the U.S. ABCD Study Year 2 (2018-2020, 4.0 release); N=9429; 21 US recruitment sites; centralized IRB at UC San Diego."},
+    "FT_IC5": {"status": "MET", "evidence": "Original cross-sectional empirical analysis; multiple logistic regression of sociodemographic factors and screen time modalities on cyberbullying victimization and perpetration."},
+    "FT_IC6": {"status": "MET", "evidence": "Distinct peer-reviewed article in Academic Pediatrics; not a duplicate of another included paper."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: Table 3 reports adjusted odds ratios for social media hours per day predicting cyberbullying victimization (AOR 1.21, 95% CI 1.15-1.27, p<.001) and cyberbullying perpetration (AOR 1.19, 95% CI 1.12-1.27, p<.001). Social media is a qualifying phone/SM-specific variable. Cyberbullying victimization and perpetration are behavioral/psychosocial individual-trait outcomes. The other-side individual-trait requirement is satisfied."},
+    "FT_IC3": {"status": "MET", "evidence": "Adjusted OR for social media predicting cyberbullying victimization = 1.21 (95% CI 1.15-1.27, p<.001); social media predicting cyberbullying perpetration = 1.19 (95% CI 1.12-1.27, p<.001). Quantitative inferential results reported for the SM-outcome relationship."},
+    "FT_IC4": {"status": "MET", "evidence": "Multiple logistic regression analyses conducted with social media as IV and cyberbullying victimization/perpetration as outcomes; numeric AORs with 95% CIs and p-values reported in Table 3."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 2 follow-up data analyzed cross-sectionally); FT-EC7 requires a longitudinal design. Cross-sectional design means FT-EC7 does not apply.",
+    "notes": "Social media is IV predicting cyberbullying outcomes (behavioral). Also texting (AOR 1.15 victimization, 1.15 perpetration) and other SM-adjacent modalities separately reported in Table 3. Paper INCLUDE."
   }
 ]

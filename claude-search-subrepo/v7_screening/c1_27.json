@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "30",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline 2016–2018, ages 9–10 years, N=10,317, Year 2 follow-up (longitudinal)"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; logistic regression examining associations between ACEs and cyberbullying victimization"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed published paper, Journal of Adolescence, 2023"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Cyberbullying victimization is the DV; cyberbullying alone does not qualify per binding clarification: 'Cyberbullying alone fails IC2.' No phone/SM-specific variable with its own coefficient paired with individual-trait IV (ACEs is individual-trait-level, but cyberbullying is not a phone/SM modality variable)"
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Longitudinal data from the Adolescent Brain Cognitive Development (ABCD) study, 10,317 participants, baseline 2016-2018, 21 U.S. recruitment sites, ages 9-10 at baseline, 4.0 data release."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using longitudinal logistic regression models examining associations between ACEs (baseline through Year 2) and cyberbullying victimization at Year 2."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Journal of Adolescence (2023); default presumption of non-duplicate applies."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: All numeric estimates in Tables 2 and 3 pair ACE scores/types with cyberbullying victimization. No phone/SM-specific variable (texting time, social media time, SMAQ, MPIQ, etc.) appears as IV or DV with its own coefficient anywhere in the paper, including supplementary tables. Step 2 not reached. Cyberbullying alone does not qualify per binding clarification #3 — cyberbullying fails IC2 unless paired with a separately-measured phone/SM variable that has its own coefficient."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines ACEs (trauma exposure) as predictor of cyberbullying victimization. Cyberbullying is a behavior/outcome, not a phone/SM use variable. IC2 binding rule: cyberbullying alone fails regardless of paired predictor type."
+    "notes": "Paper is entirely about ACEs -> cyberbullying victimization. Screen time is mentioned only narratively in Discussion as a potential mediating pathway (citing Jackson et al., 2021) but no screen time variable is analyzed or reported with a coefficient."
   },
   {
     "paper_id": "78",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 2 (2018–2020), ages 10–14 years, N=9,443, cross-sectional"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; modified Poisson regression examining associations between cyberbullying victimization/perpetration and sleep disturbance"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed published paper, Academic Pediatrics, 2023"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Cyberbullying (victimization and perpetration) is the IV; sleep disturbance is the DV. Cyberbullying alone fails IC2 per binding clarification: 'Cyberbullying alone fails IC2.' No phone/SM-specific variable with separate coefficient. Cyberbullying is not a phone/SM use variable."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from Year 2 of the ABCD Study (4.0 release), 9,443 adolescents, 21 U.S. recruitment sites, conducted 2018-2020."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis using modified Poisson regression to examine associations between cyberbullying and sleep outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Academic Pediatrics (2023); default presumption of non-duplicate applies."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: All main inferential analyses (Table 3, Models 1-3) pair cyberbullying victimization/perpetration (IV) with sleep outcomes (DV). Total recreational screen time appears only as a covariate in Model 3, not as an IV or DV with its own primary analysis. No phone/SM-specific variable appears as IV or DV with its own coefficient anywhere. The screen time variable ('sum of eight different screen modalities on a typical weekday and weekend') is a multi-device composite used as covariate only. Step 2 not reached. Cyberbullying alone fails IC2 per binding clarification #3; screen time as covariate-only also fails IC2 per binding clarification #7."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines cyberbullying victimization and perpetration as predictors of sleep disturbance (trouble falling/staying asleep, caregiver-reported sleep disturbance). Cyberbullying is a social behavior outcome, not a phone/SM use variable. IC2 binding rule applies."
+    "notes": "Total recreational screen time (8-modality composite including TV, gaming consoles, etc.) appears in Model 3 as a covariate alongside sociodemographics. Its RR is reported (RR 1.02 per hour) but it appears only as a control variable in models where cyberbullying is the IV and sleep is the DV. Screen time is not the focal IV or DV of any analysis."
   },
   {
     "paper_id": "87",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, Year 2 (2018–2020), ages 10–14 years, N=10,339, cross-sectional"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis; multiple linear regression examining associations between sexual orientation and screen use (time and problematic use)"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed published paper, Annals of Epidemiology, 2023"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: No phone/SM-specific estimate found. All results are on composite recreational screen time. Step 2 composite check: \"recreational screen time\" defined as sum of 8 modalities: multi-player gaming, single-player gaming, texting, social media, video chatting, browsing, watching/streaming movies/videos/TV. Composite includes TV (non-phone/SM ingredient) and unspecified video games without per-device/per-platform breakout. Methods state: \"Recreational screen use for the following modalities was determined using adolescents' self-reported hours of use on a typical weekday and weekend: multi-player gaming, single-player gaming, texting, social media, video chatting, browsing the internet, and watching/streaming movies, videos, or TV.\" No separate phone-only or SM-only estimate provided; composite bundles TV with SM/phone. Per IC2 binding rule: multi-device aggregated time fails Step 2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper examines sexual orientation (IV; identity variable = individual-trait per v7) and screen use/problematic use (DV; composite). Composite \"recreational screen time\" includes TV, unspecified gaming, and phone/SM items without isolation. IC2 Step 2 fails: non-phone/non-SM ingredient (TV) bundled without separate breakout."
+    "FT_IC1": {"status": "MET", "evidence": "Cross-sectional data from Year 2 of the ABCD Study (4.0 release), N=10,339, 2018-2020, ages 10-14 years, 21 U.S. recruitment sites."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical cross-sectional analysis using multiple linear regression to estimate associations between sexual minority identification and screen use outcomes."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article in Annals of Epidemiology (2023); default presumption of non-duplicate applies."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 finds qualifying estimates: Table 2 reports sexual minority identification (IV) associated with social media hours (B=0.46, 95% CI 0.25-0.67, p<0.001), texting hours (B=0.64, 95% CI 0.33-0.96, p<0.001), video chat hours (B=0.24, 95% CI 0.04-0.43, p=0.014), SMAQ score (B=0.46, 95% CI 0.32-0.60, p<0.001), and MPIQ score (B=0.56, 95% CI 0.41-0.70, p<0.001). Social media time, texting time, video chat time, SMAQ, and MPIQ are all qualifying phone/SM-specific variables. Sexual minority identification (sexual orientation) is an individual-trait variable explicitly classified as such under v7."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple linear regression analyses with B coefficients and 95% CIs reported throughout Tables 2 and 3 for the sexual orientation -> SM/phone use relationships."},
+    "FT_IC4": {"status": "MET", "evidence": "Numeric estimates (B coefficients, 95% CIs, p-values) reported for all SM/phone-specific outcomes in Tables 2 and 3."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 2 ABCD data only); FT-EC7 requires a longitudinal design as a precondition. EC7 does not apply.",
+    "notes": "Sexual orientation -> screen use study. Phone/SM-specific variables (social media hours, texting hours, SMAQ, MPIQ) are the DVs; sexual minority status is the IV. Sexual orientation is individual-trait per v7 explicit classification. Paper also reports VGAQ scores and gaming hours, but those do not affect the IC2 decision since qualifying SM/phone estimates are present in Step 1."
   }
 ]

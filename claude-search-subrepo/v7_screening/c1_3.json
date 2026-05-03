@@ -1,92 +1,38 @@
 [
   {
     "paper_id": "115",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, 4557 adolescents, baseline age 9.955±0.164 years, multimodal data across baseline, 1-year, 2-year, 3-year follow-ups"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: linear mixed models, cross-lagged panel models, mediation analysis with reported β coefficients"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in International Journal of Clinical and Health Psychology"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Main composite 'Total SMA' bundles television, videos, video games, social media, texting, video chat without complete separate breakout in primary structural pathway analyses. Mediation models (Table 3) use 'Total SMA' as predictor; media-specific estimates (TV, video) are in secondary sensitivity analyses. Multi-device aggregated time (TV + video + games + SM) without consistent per-modality isolation in main results = fails Step 2."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_EC7_applies": "DEFERRED",
-    "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper reports media-specific TV and video watching effects, but primary mediation pathway uses aggregate 'Total SMA' composite. Step 1 search for isolated phone/SM coefficient finds media-specific β estimates for TV/video, but composite qualification under Step 2 fails because 'Total SMA' includes TV (non-phone/non-SM ingredient) without separate item-level breakout."
+    "FT_IC1": {"status": "MET", "evidence": "Data from the U.S. ABCD Study, data release 4.0, n=4557 adolescents aged 9-10 at baseline, 21 U.S. recruitment sites (Casey et al., 2018; Volkow et al., 2018)."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis of ABCD data using linear mixed models, cross-lagged panel models, and mediation analyses."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article; no indication of being a duplicate or preprint of another included paper."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: media-specific analyses report separate β coefficients for social media (e.g., β=0.032 internalizing, β=0.055 externalizing, pfdr<0.05) and texting (β=0.051 stress, pfdr=0.003), each paired with individual-trait-level mental health outcomes (internalizing, externalizing, stress problems). Social media and texting are qualifying phone/SM-specific variables with their own coefficients in Tables 4 and 5 and associated text."},
+    "FT_IC3": {"status": "MET", "evidence": "Multiple β coefficients with FDR-corrected p-values reported for SM and texting predicting mental health outcomes in main tables and media-specific analyses."},
+    "FT_IC4": {"status": "MET", "evidence": "Inferential analyses include linear mixed models and cross-lagged panel models with numeric estimates throughout."},
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "SM/phone variables (texting, social media, total SMA) appear as IV in multiple analyses predicting mental health outcomes. The CLPM is bidirectional. FT-EC7 does not apply.",
+    "notes": "SMA composite includes TV, video games, texting, video chat, social media. Headline composite would fail IC2 Step 2 (TV included), but media-specific analyses with separate social media and texting coefficients provide a Step 1 MET hit. Paper qualifies."
   },
   {
     "paper_id": "85",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, 10,907 participants from overall ABCD cohort, baseline age 11–12 (Year 2 annual assessment), longitudinal follow-up through age 13–14"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: longitudinal logistic regression via GEE (generalized estimating equations) with autoregressive covariance structure, separate models for each predictor-outcome pair"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Addictive Behaviors"
-    },
-    "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1 identifies phone/SM-specific variables: (1) 'Do you have your own mobile phone?' (binary IV, OR=1.34 for alcohol use, OR=1.71 for nicotine/tobacco use); (2) 'Do you have at least one social media account?' (binary IV, OR=1.06–1.22 for alcohol/nicotine/tobacco, OR=4.91 for cannabis use). Both paired with individual-trait-level health outcomes (substance use: alcohol, nicotine/tobacco, cannabis). Other-side variables qualify as individual-trait-level (substance use = health behavior)."
-    },
-    "FT_IC3": {
-      "status": "MET",
-      "evidence": "Quantitative results reported: odds ratios (OR), 95% confidence intervals, p-values for all six associations (phone×alcohol, phone×tobacco, phone×cannabis, SM×alcohol, SM×tobacco, SM×cannabis); logistic regression coefficients (β) with standard errors"
-    },
-    "FT_IC4": {
-      "status": "MET",
-      "evidence": "Inferential analysis with numeric results: main effects and interaction terms reported; sensitivity analyses in substance-use-naïve subsample (n=9,628) show sustained associations"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Secondary analysis of U.S. ABCD Study data, nationally representative, 21 sites, youth enrolled aged 9-10; n=10,907 with substance use data."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical secondary analysis using longitudinal logistic regression (GEE) on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article; no indication of duplicate."},
+    "FT_IC2": {"status": "MET", "evidence": "Step 1 hit: mobile phone ownership (yes/no) and social media use (yes/no, ≥1 account) each have explicit OR and b coefficients paired with individual-trait outcomes (substance use: alcohol, nicotine/tobacco, cannabis). E.g., phone ownership b=0.29, OR=1.34 for alcohol (Table 2); social media use b=1.59, OR=4.91 for cannabis (Supplementary Table 4). Both are qualifying phone/SM-specific variables on the IV side."},
+    "FT_IC3": {"status": "MET", "evidence": "OR and b coefficients with 95% CIs reported for all six predictor-outcome combinations across Tables 2, 3 and Supplementary Tables 1-4."},
+    "FT_IC4": {"status": "MET", "evidence": "Longitudinal logistic regression (GEE) with numeric estimates for SM-substance use associations reported throughout."},
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is longitudinal, but SM/phone variables are IVs (predictors), not DVs (outcomes). SM-as-IV analysis present throughout → FT-EC7 does not apply.",
-    "notes": "Both phone ownership and social media use are straightforward phone/SM-specific binary variables predicting substance use prospectively over 18 months. No composite issues; no SM-as-mediator-only; meets all criteria."
+    "FT_EC7_reason": "Phone ownership and social media use are the IVs predicting substance use outcomes. SM is not the DV. FT-EC7 does not apply.",
+    "notes": "Clean INCLUDE. Phone ownership and SM use as IVs predicting alcohol, nicotine/tobacco, and cannabis use over 18 months."
   },
   {
     "paper_id": "168",
-    "FT_IC1": {
-      "status": "MET",
-      "evidence": "U.S. ABCD Study, 10,052 youth ages 11–12, Year 2 data from 4.0 data release"
-    },
-    "FT_IC5": {
-      "status": "MET",
-      "evidence": "Original empirical analysis: multilevel regression models predicting clinical concerns (CBCL, BPM, SI, NSSI) from screen media use and problematic media use, stratified by race/ethnicity and sex"
-    },
-    "FT_IC6": {
-      "status": "MET",
-      "evidence": "Peer-reviewed publication in Development and Psychopathology"
-    },
-    "FT_IC2": {
-      "status": "NOT_MET",
-      "evidence": "Step 1: Screen media time is multi-device aggregated ('computer + cell phone + tablet + iPad or other electronic device' per methods, no per-device breakout reported). Multi-device aggregated time fails IC2 unless per-device (cellphone alone) exists. Step 2: Problematic media use is a behavior scale (9-item measure), not a modality-specific composite. Items measuring 'behaviors around screens' (not itemized in abstract) do not qualify as phone/SM-specific per criteria; scale is generic 'problematic media' not exclusive phone/SM/digital-socializing items. Neither predictor qualifies."
-    },
-    "FT_IC3": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
-    "FT_IC4": {
-      "status": "DEFERRED",
-      "evidence": "prior criterion failed; not evaluated"
-    },
+    "FT_IC1": {"status": "MET", "evidence": "Data from the ABCD Study 4.0 data release, multisite U.S. study, n=10,052 youth aged 10-13 at Year 2 assessment."},
+    "FT_IC5": {"status": "MET", "evidence": "Original empirical analysis using multilevel regression (lme4) on ABCD data."},
+    "FT_IC6": {"status": "MET", "evidence": "Published peer-reviewed article; no indication of duplicate."},
+    "FT_IC2": {"status": "NOT_MET", "evidence": "Step 1: No phone/SM-specific variable with its own coefficient found anywhere in the paper. The screen media use measure is a multi-device aggregate: parents/youth report total time on 'a computer, cell phone, tablet, iPod, or other electronic device' as a single summed quantity — no per-device breakout. Step 2: The composite bundles cell phone with computer, tablet, iPod, and other devices without a separate cellphone/phone-only estimate, failing the multi-device aggregation rule (§2.4 binding clarification 5). Problematic media use (Domoff IT-CPU scale, 9-item parent-report) is a general screen/media behavior construct covering all screen media, not specific to phone or SM; its items reference 'screen media' broadly and do not isolate phone or SM. No separate phone/SM estimate exists in main analyses, supplement, or sensitivity tables."},
+    "FT_IC3": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
+    "FT_IC4": {"status": "DEFERRED", "evidence": "prior criterion failed; not evaluated"},
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Primary predictors are overall screen media time (multi-device, fails multi-device aggregation rule) and problematic media use (generic behavior scale, not phone/SM-specific composite). Paper reports effects by race/ethnicity and sex, but core IC2 qualification is not met."
+    "notes": "Excluded at IC2. Screen media use is a multi-device aggregate (computer+cell phone+tablet+iPod). Problematic media use scale (Domoff IT-CPU) is a generic screen/media behavior measure, not phone/SM-specific. No per-platform or per-device breakout anywhere in the paper."
   }
 ]

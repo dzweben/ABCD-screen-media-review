@@ -3,71 +3,71 @@
     "paper_id": "440",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study, baseline + 2-year follow-up structural imaging (N=5,166; ages 9-10)"
+      "evidence": "Analyzes ABCD Study Release 3.0 data, N=5,166 participants aged 9-10 years at baseline, recruited from 21 U.S. sites (Volkow et al., 2018)."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical longitudinal analysis with mediation models examining SMA, brain co-development pattern, and internalizing outcomes"
+      "evidence": "Original empirical analysis: longitudinal linear mixed-effects models (LMMs), JIVE decomposition of brain co-development, and mediation analysis using ABCD baseline and two-year follow-up data."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed journal article (Journal of Behavioral Addictions, 2023)"
+      "evidence": "Peer-reviewed article in Journal of Behavioral Addictions; no indication of being a duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
-      "status": "MET",
-      "evidence": "Step 1: baseline screen media activity (SMA, hours/day) is a phone/SM-specific variable with numeric estimate (β=0.020, p=0.014) paired with internalizing psychopathology at year 2 (individual-trait outcome). Additional analyses show SMA→brain co-development pattern→internalizing (indirect effect=0.020, p=0.043)"
+      "status": "NOT_MET",
+      "evidence": "Step 1: All results tables (Table A2, Fig. 2B mediation diagram, text) report only the composite 'baseline total screen time' (or 'SMA') variable — no separate per-modality coefficient for phone/SM-specific items (social media, texting, etc.) appears anywhere in main text, appendix, or supplementary. Step 2: Per the methods, the SMA composite explicitly includes 'watching TV shows/movies, watching videos, playing video games, texting on an electronic device, visiting social networking sites, and video-chatting' — it bundles TV and video games with phone/SM items, and no separate breakout of phone/SM-only items is provided. The composite therefore includes non-phone/non-SM ingredients (TV, video games) without a separate phone/SM-specific estimate, failing Step 2."
     },
     "FT_IC3": {
-      "status": "MET",
-      "evidence": "Reported β coefficients (baseline SMA on internalizing: β=0.020; SMA on co-development: β=0.015) and indirect effects (0.020, p=0.043) via mediation analysis"
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
     },
     "FT_IC4": {
-      "status": "MET",
-      "evidence": "Quantitative results: multiple β coefficients, indirect effects, and p-values reported for SMA associations with internalizing and brain patterns"
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
     },
-    "FT_EC7_applies": true,
-    "FT_EC7_reason": "Design is longitudinal (baseline T0 predicts 2-year follow-up T2). SMA is DV in all analyses (baseline SMA predicts later internalizing and brain patterns). No analysis with SMA as IV (or bidirectional). No cross-sectional analysis reported. All three EC7 conditions met → EXCLUDE",
-    "notes": "Paper tests whether baseline SMA predicts future brain development and internalizing outcomes; SMA does not appear as a predictor/IV of other variables"
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "SMA composite explicitly includes TV/movies, video games, texting, social networking sites, and video-chat; no per-modality breakout in any results location. Fails IC2 Step 2 due to non-phone/non-SM ingredients bundled without separate breakout."
   },
   {
     "paper_id": "124",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study baseline, n=11,780 youth ages 9-10"
+      "evidence": "Uses ABCD Study Release 2.0 baseline data, n=11,780 youth aged 9-10 years, multi-site U.S. sample (Volkow et al., 2018)."
     },
     "FT_IC5": {
       "status": "MET",
-      "evidence": "Original empirical cross-sectional analysis examining associations between screen time modalities and DSM-5 internalizing disorder diagnoses via K-SADS-5 clinical interview"
+      "evidence": "Original empirical cross-sectional analysis: relative risk (RR) and adjusted relative risk (ARR) models examining associations between screen media activities and DSM-5 internalizing disorder diagnoses from K-SADS-5."
     },
     "FT_IC6": {
       "status": "MET",
-      "evidence": "Peer-reviewed journal article (Journal of Affective Disorders, 2022)"
+      "evidence": "Peer-reviewed article in Journal of Affective Disorders; no indication of being a duplicate or preprint of an already-included paper."
     },
     "FT_IC2": {
       "status": "MET",
-      "evidence": "Step 1: Multiple phone/SM-specific variables with numeric estimates: social media (RR/ARR reported by gender and outcome), gaming (RR/ARR reported), texting (RR/ARR reported), online videos (RR/ARR reported). Also 'digital media' composite (social media + gaming + texting + online videos; TV and video chat explicitly excluded per methods). Other side: internalizing disorder diagnoses (depressive, anxiety, suicidal ideation/attempt, self-harm) measured via K-SADS-5 = individual-trait outcomes. IC2 MET"
+      "evidence": "Step 1 hit: Table 3 reports separate ARR estimates for social media use (girls: ARR=2.20, 95% CI 1.13-4.30 for depressive disorders; boys: ARR=2.94, 95% CI 1.59-5.42) and texting (boys: ARR=2.30, 95% CI 1.34-3.97 for depressive disorders) — phone/SM-specific variables paired with clinical DSM-5 internalizing disorder diagnoses (individual-trait mental health outcomes). Text also reports social media user vs. non-user comparisons with ARR for depressive disorders and suicidal ideation."
     },
     "FT_IC3": {
       "status": "MET",
-      "evidence": "Multiple RR and adjusted RR (ARR) reported: e.g., depressive disorders girls 2+ hrs screen (2.9% vs 5.8%, ARR=2.00 [1.48, 2.70]); digital media anxiety girls (ARR=1.26 [0.75, 2.12]); suicidal ideation girls (ARR=1.65 [1.32, 2.05]); self-harm girls (ARR=1.45 [1.09, 1.93]), and parallel analyses by gender and outcome type"
+      "evidence": "Quantitative ARR and 95% CI reported throughout Tables 2 and 3 for social media, texting, video chat, and other screen modalities against K-SADS-5 DSM-5 diagnoses."
     },
     "FT_IC4": {
       "status": "MET",
-      "evidence": "Quantitative results provided for all SM modalities and outcomes: RR/ARR with 95% CI across Tables 2 and 3"
+      "evidence": "Inferential analysis performed: general linear model with adjusted relative risk estimates for SM and texting against clinically-assessed internalizing disorder outcomes."
     },
     "FT_EC7_applies": false,
-    "FT_EC7_reason": "Design is cross-sectional (baseline only). FT-EC7 requires longitudinal design. Cross-sectional carve-out: paper contains cross-sectional SM-as-DV analysis → FT-EC7 does NOT apply",
-    "notes": "Paper excludes TV and video chat from 'digital media' composite (methods: TV is older tech, video chat similar to phone calling, not strictly digital media). Composite of social media + gaming + texting + online videos qualifies as exclusively phone/SM/digital items per Step 2 logic"
+    "FT_EC7_reason": "Cross-sectional design; FT-EC7 does not apply. SM/phone variables appear as IV (predictors of internalizing disorder diagnoses).",
+    "notes": "Clear Step 1 hit: Table 3 has separate ARR coefficients for social media use and texting (phone/SM-specific) paired with DSM-5 internalizing disorder diagnoses. Cross-sectional ABCD baseline data."
   },
   {
     "paper_id": "100",
     "FT_IC1": {
       "status": "MET",
-      "evidence": "U.S. ABCD Study baseline and Year 2 follow-up, ~12,000 children ages 9-10"
+      "evidence": "Analyzes ABCD Study data (NIMH Data Archive DOI 10.15154/1519007), 11,871 participants aged 9-10 years from 21 U.S. research sites."
     },
     "FT_IC5": {
       "status": "NOT_MET",
-      "evidence": "Paper is primarily a psychometric/methods paper: describes screen questionnaire development, demonstrates longitudinal changes in screen usage, presents data harmonization across years, and analyzes factor structure and measurement invariance of SMAQ and VGAQ. Does not report associations between phone/SM variables and individual-trait outcomes. Core purpose is establishing validity of measurement tools, not analyzing substantive relationships."
+      "evidence": "This is a measurement/methods paper describing development of the ABCD screen use questionnaire, longitudinal descriptive changes in screen usage, and psychometric analyses (CFA, measurement invariance) of the SMAQ and VGAQ scales. All inferential analyses are psychometric model comparisons (chi-square, CFI, RMSEA, factor loadings) and descriptive sex/race mean comparisons on screen use and addiction scale scores. No external individual-trait outcome (health, mental health, cognitive, behavioral, neural) is analyzed. The paper is a measurement resource/instrument description, not an original empirical analysis examining associations with an outcome."
     },
     "FT_IC6": {
       "status": "DEFERRED",
@@ -87,6 +87,6 @@
     },
     "FT_EC7_applies": "DEFERRED",
     "FT_EC7_reason": "prior criterion failed; not evaluated",
-    "notes": "Paper reports descriptive statistics and psychometric properties (factor structure, invariance testing, alpha coefficients, prevalence) but does not analyze substantive relationships between screen use and outcomes. FT-EC3 exclusion code applies (non-empirical per v6/v7 definition: measurement/validation paper without external outcome analysis)."
+    "notes": "Measurement/psychometric paper: describes screen use questionnaire development, SMAQ and VGAQ factor structure/invariance, and longitudinal descriptive screen use trends. No external health or behavioral outcome analyzed. Excluded under FT-EC3."
   }
 ]
