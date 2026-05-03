@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "133",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes U.S. ABCD Study data (n=9,208); baseline screen time and OCD at 2-year follow-up."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with prospective cohort logistic regression on ABCD baseline/follow-up data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published article; not a preprint, conference abstract, or duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 MET: phone/SM-specific IV (total screen time, video games, watching videos per hour per day) paired with individual-trait DV (OCD diagnosis via KSADS). Video games aOR=1.15 (95% CI 1.03-1.28); watching videos aOR=1.11 (95% CI 1.01-1.23)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: adjusted odds ratios (aOR) with 95% confidence intervals for total screen time and modality-specific associations with OCD."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis using logistic regression; odds ratios with 95% CIs reported; p-values and statistical significance documented."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Prospective longitudinal design, but SM/screen time is IV (predictor), not DV. FT-EC7 applies only when SM is DV in every analysis with no SM-as-IV anywhere. This paper has screen time as IV throughout, so FT-EC7 does not apply.",
+    "notes": "Strong prospective evidence; screen time (especially video games and videos) is predictor of OCD onset. Confounders adjusted: race/ethnicity, sex, household income, parent education, family history, study site."
+  },
+  {
+    "paper_id": "157",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes ABCD Study data (n=10,280, ages 10-14, Year 2, 2018-2020)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with cross-sectional regression on ABCD Year 2 data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published article; not a preprint, conference abstract, or duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 MET: phone/SM-specific IV (bedtime screen use behaviors including streaming movies, video games, music, talking/texting on phone, social media/chat rooms; phone in bedroom; phone ringer activated overnight) paired with individual-trait DV (sleep disturbance symptoms and trouble falling/staying asleep). Device in bedroom aRR=1.27 (95% CI 1.12-1.44) for trouble falling/staying asleep; aRR=1.15 (95% CI 1.06-1.25) for overall sleep disturbance."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: adjusted risk ratios (aRR) with 95% confidence intervals."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis using regression; risk ratios with 95% CIs and p-values reported."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design. Although SM/screen time is DV (sleep outcomes are the outcome), this is cross-sectional, not longitudinal. FT-EC7 requires longitudinal design AND SM as DV in every analysis. The binding cross-sectional carve-out explicitly states any cross-sectional analysis disqualifies FT-EC7.",
+    "notes": "Cross-sectional analysis of bedtime screen behaviors and sleep outcomes. Multiple modalities examined. Sleep disturbance is the outcome (individual-trait); screen use is predictor (phone/SM-specific). Confounders: sex, race/ethnicity, household income, parent education, depression, data collection period (pre- vs. during COVID-19), study site."
+  },
+  {
+    "paper_id": "304",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Analyzes ABCD Study data (N=11,875, ages 9-11)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis with prospective cohort modified Poisson regression on ABCD baseline/1-year follow-up data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original published article; not a preprint, conference abstract, or duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 MET: phone/SM-specific IV (total screen time, social media per day, video chat per day, texting per day, television/movies per day, video games per day) paired with individual-trait DV (conduct disorder and oppositional defiant disorder via KSADS-5 at 1-year follow-up). Social media PR=1.62 (95% CI 1.39-1.87) for conduct disorder; video chat PR=1.21 (95% CI 1.06-1.37) for oppositional defiant disorder; texting PR=1.19 (95% CI 1.07-1.33) for ODD; television/movies PR=1.17 (95% CI 1.10-1.25) for ODD; video games PR=1.14 (95% CI 1.07-1.21) for ODD."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: prevalence ratios (PR) with 95% confidence intervals."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis using modified Poisson regression; prevalence ratios with 95% CIs and p-values reported."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Prospective longitudinal design, but screen time/SM modalities are IV (predictor), not DV. FT-EC7 applies only when SM is DV in every analysis with no SM-as-IV anywhere. This paper has screen time modalities as IV throughout, so FT-EC7 does not apply.",
+    "notes": "Strong prospective evidence; multiple screen time modalities examined as predictors of conduct disorder and oppositional defiant disorder. Social media shows strongest association with conduct disorder (62% higher prevalence per hour). Confounders adjusted: age, sex, race/ethnicity, household income, parent education, baseline psychiatric diagnosis, and other factors."
+  }
+]

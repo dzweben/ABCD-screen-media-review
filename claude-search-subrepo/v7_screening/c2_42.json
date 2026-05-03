@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "287",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, N=8292 (9-10 year olds at baseline, 2016-2018), Years 2-4 follow-up data used. Methods: \"longitudinal data from the Adolescent Brain Cognitive Development (ABCD) Study (N = 8292; mean age 12.0 years at Year 2; 2018–2020)\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Methods: \"Generalized structural equation modeling (GSEM) was used to assess the mediating effect of nicotine smoking expectancies on the relationship between time spent on social media and nicotine experimentation.\" Reports direct, indirect, and mediation pathways with numeric estimates."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article. American Journal on Addictions, 2026 (published online 21 January 2026)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 match: social media time (labeled IV) at Year 2 paired with nicotine experimentation (DV) at Year 4. Phone/SM-specific variable: \"Adolescents reported their usual daily time spent on social media, in hours and minutes, separately for weekdays and weekends\". Other side is individual-trait behavioral outcome: nicotine experimentation assessed via Timeline Follow-Back (TLFB), \"whether children had ever tried a puff of a nicotine product\". Table 2: \"Social media time at Year 2 was associated with nicotine experimentation at Year 4 (coefficient [B] = 0.14, 95% CI: 0.08–0.20, p < .001)\"."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis reported. Table 2 shows direct effects: SM time → nicotine experimentation B=0.138-0.153; indirect effects through mediators with confidence intervals. All p-values reported. Methods: \"generalized structural equation modeling (GSEM)\""
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: regression coefficients (B), 95% confidence intervals, p-values, proportions mediated. Direct effect of SM on nicotine: B=0.14 (p<.001); positive expectancies mediation: 5.97% (95% CI: 1.27%-10.67%, p=.013)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is longitudinal (Years 2-4) but SM is NOT DV-only. SM time (Year 2) is IV predicting nicotine experimentation (Year 4) as DV, with smoking expectancies (Year 3) as mediator. Cross-lagged/mediation structure means SM appears as both predictor and pathway component. EC7 requires SM as DV in every analysis with no SM-as-IV anywhere; this paper has SM as IV.",
+    "notes": "Paper directly examines prospective association between social media use (IV) and nicotine experimentation (DV) in early adolescence using longitudinal mediation model. Meets all inclusion criteria."
+  },
+  {
+    "paper_id": "404",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, N=11,530 (ages 13-16 at Year 5). Methods: \"cross-sectional data from Year 5 (2021–2023) of the ABCD Study (6.0 release)...In 2016–2018 (baseline; Year 0), 11,875 children were recruited from 21 demographically diverse sites.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Methods: \"Multivariable linear regression analyses using cluster-robust (heteroskedasticity-consistent) standard errors were used to estimate the association between dating app use and depression symptoms, adjusting for potential confounders.\""
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed research note. BMC Research Notes, 2026 (Published online 21 January 2026)."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 match: dating app use (SM-specific variable: online dating app platform use) as IV paired with depression symptoms as DV. Measures: \"Dating app use was evaluated as lifetime use based on adolescents' response to the following question: 'Have you ever used a dating app?' (yes, no, don't know what that is)\". Other side is individual-trait mental health outcome: \"DSM-Oriented Affective Problems Scale of the parent/caregiver-reported Child-Behavior Checklist (CBCL)\". Table 2: \"Dating app use was associated with higher depression symptoms (standardized beta coefficient [ß] 0.42; 95% confidence interval [CI] 0.08–0.76; p=0.017)\"."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Inferential analysis performed with numeric results. Table 2 reports unadjusted and adjusted regression coefficients (ß), standard errors, 95% CIs, and p-values for association between dating app use and depression symptoms."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported: standardized beta coefficients (ß 0.42), confidence intervals (95% CI 0.08–0.76), p-values (p=0.017), standard errors. Sensitivity analyses also reported adjusted ß 0.44 (95% CI 0.03–0.85; p=0.035)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 5 data), not longitudinal. EC7 applies only to longitudinal designs with SM as DV in every analysis. Cross-sectional carve-out does not apply because EC7 only triggers in longitudinal designs.",
+    "notes": "Paper examines cross-sectional association between dating app use (SM-specific variable: online dating platforms) and depression symptoms in 13-16 year old adolescents. Meets all inclusion criteria for full-text screening."
+  },
+  {
+    "paper_id": "166",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, N=3847 (after quality control from 4524 baseline). Methods: \"Participants were derived from the first wave of the ABCD study (Garavan et al., 2018)...The first wave of data was released in 2018 and included 4524 participants...9–10 year olds...from 21 sites nationwide.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Methods: \"Multiple machine learning regression approaches were employed to estimate the relative importance of 43 demographic, psychological, behavioral, and cognitive variables previously associated with BMI in youth...ridge regression, least absolute shrinkage and selection operator (LASSO) regression, elastic net regression, and linear regression.\""
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article. Psychological Medicine, 2020 (published online 10 July 2019, first published online 10 July 2019)."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 fails: no SM/phone-specific estimate found as primary analysis. Step 2 composite check: paper defines screen time as \"the average minutes per week a child typically spends on a computer, cellphone, tablet, or other electronic device\" - this is MULTI-DEVICE AGGREGATED TIME without per-device breakout elsewhere. Per criteria: \"Multi-device aggregated time fails Step 2. 'Minutes per week on computer, tablet, cellphone, or other electronic device' reported as a single number bundles smartphone with non-phone devices. NOT_MET unless a per-device breakout (cellphone alone) exists somewhere.\" Outcome (BMI) is physical/biological measure (body mass index), not individual-trait-level: per criteria individual-trait requires \"behavioral · health · cognitive · well-being...\" BMI is a biomarker/physical health status measure, not a within-person behavioral or psychological trait. Paper explicitly states analytic goal: \"assess their relative associations with body mass index (BMI; kg/m2) in a nationally representative sample of youth\" modeling demographic, psychological, behavioral, cognitive factors against BMI as outcome."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes correlates of BMI using machine learning on 43 variables. While screen time is identified as one positive correlate (Table 1, Fig. 1), the exposure is multi-device aggregated time (computer + cellphone + tablet + other electronic device) without per-device isolation, failing FT-IC2 Step 2. Additionally, BMI as outcome does not meet individual-trait-level requirement for the other side of the SM↔trait relationship. EXCLUDE: FT-EC2."
+  }
+]

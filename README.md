@@ -46,7 +46,7 @@ README.md                       This file
 
 ---
 
-## PRISMA flow (current — v6 conceptual criteria)
+## PRISMA flow (current — v7 mechanical IC2 + cross-sectional EC7 carve-out)
 
 | Stage | Records |
 |---|---:|
@@ -54,14 +54,14 @@ README.md                       This file
 | **Deduplication**: Unique records | 620 |
 | **Stage 1 (title/abstract)**: Advanced to full-text | 171 |
 | **Stage 1 excluded (by code)**: EC1–EC5 | 449 |
-| **Stage 2 (full-text)**: Included in synthesis | **71** |
-| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **73** |
-| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 5 |
-| &nbsp;&nbsp;&nbsp;FT-EC2 (no qualifying smartphone/SM ↔ individual-trait analysis) | 58 |
-| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical: review, commentary, protocol, resource paper) | 5 |
+| **Stage 2 (full-text)**: Included in synthesis | **50** |
+| **Stage 2 excluded with reason**: FT-EC1–FT-EC7 | **82** |
+| &nbsp;&nbsp;&nbsp;FT-EC1 (not U.S. ABCD) | 4 |
+| &nbsp;&nbsp;&nbsp;FT-EC2 (no qualifying smartphone/SM ↔ individual-trait analysis) | 67 |
+| &nbsp;&nbsp;&nbsp;FT-EC3 (non-empirical: review, commentary, protocol, resource paper) | 6 |
 | &nbsp;&nbsp;&nbsp;FT-EC7 (longitudinal SM-as-DV-only with no SM-as-IV analysis) | 5 |
-| **Stage 2 UNSURE** (C1≠C2 substantive disagreement; awaiting human review) | 21 |
-| **Stage 2 NA_FOR_NOW** (no PDF; criteria unverifiable) | 6 |
+| **Stage 2 UNSURE** (C1≠C2 substantive disagreement; awaiting human review) | 24 |
+| **Stage 2 NA_FOR_NOW** (no PDF; pre-tagged, never sent to coders) | 15 |
 
 ---
 
@@ -77,13 +77,23 @@ The v6 criteria removed the resolver entirely. Tighter criteria (conceptual smar
 
 **C1 vs C2 agreement, by version:**
 
-| Version | Pooled κ | Paper-level full agreement |
-|---|---:|---:|
-| v4 | 0.51 (moderate) | — |
-| v5 (B1–B20 binding rules + resolver) | 0.77 (substantial) | 69.6% (119/171) |
-| **v6 (conceptual + cascade-DEFERRED, no resolver)** | **0.90 (almost perfect)** | **83.6% (143/171)** |
+| Version | Pooled κ | Paper-level full agreement | Substantive disagreements |
+|---|---:|---:|---:|
+| v4 | 0.51 (moderate) | — | — |
+| v5 (B1–B20 binding rules + resolver) | 0.77 (substantial) | 69.6% (119/171) | 52 papers |
+| v6 (conceptual + cascade-DEFERRED, no resolver) | 0.90 (almost perfect) | 83.6% (143/171) | 21 papers |
+| **v7 (mechanical 2-step IC2, no-PDF papers pre-tagged)** | **0.87 (almost perfect)** | **80.1% (125/156)** | **31 papers (out of 156 PDFs)** |
 
-Per-criterion v6 agreement: FT-IC1 κ=1.00, FT-IC3/IC4 κ=1.00, FT-IC6 κ=1.00, FT-IC5 κ=0.83, FT-EC7 κ=0.79, FT-IC2 κ=0.70 (the only remaining bottleneck).
+Per-criterion v7 agreement (n=156 PDF-having papers):
+- FT-IC1 κ=0.89 (99% agreement)
+- FT-IC3 κ=1.00 (100%)
+- FT-IC4 κ=1.00 (100%)
+- FT-IC5 κ=0.83 (99%)
+- FT-IC6 κ=1.00 (100%)
+- FT-EC7 κ=0.30 (93% raw agreement; low κ due to base-rate imbalance — FALSE >> TRUE)
+- FT-IC2 κ=0.67 (83%) — the persistent bottleneck
+
+v7 added a mechanical two-step IC2 lookup, an explicit FT-EC7 cross-sectional carve-out, and pre-tagged 15 no-PDF papers as NA_FOR_NOW (so coders never see abstract-only ambiguity). Stricter IC2 reduced INCLUDE from v6's 71 to 50 by correctly excluding multi-device aggregated screen time, gaming-only, and demographic/contextual-only "other side" pairings.
 
 See `02-L2/2L-criteria.md` for full v6 criteria.
 

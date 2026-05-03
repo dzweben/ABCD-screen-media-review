@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "10",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, release 5.1, analyzing 4289 adolescents in the US who played video games and completed 3 waves of data collection (ages 11-12, 12-13, and 13-14 years)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using cross-lagged panel models (CLPMs) to examine directional associations between psychopathology and gaming disorder across 3 time points."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Network Open, July 29, 2025."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper analyzes only gaming disorder (Video Game Addiction Questionnaire, VGAQ) as outcome and psychopathology/personal core characteristics as predictors. No phone/SM-specific variable identified in Step 1. Step 2: VGAQ is gaming-only measure with no explicit phone/mobile modality and no separately-measured phone/SM variable paired with it. Per binding clarification: gaming alone (VGAQ, IGDS9-SF, unspecified platform) fails IC2 unless explicitly mobile/phone-based or paired with separately-measured phone/SM variable."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper excluded due to FT-IC2 NOT_MET: gaming-only exposure without phone/SM qualification."
+  },
+  {
+    "paper_id": "11",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, release 5.1, analyzing 3419 youths with sleep data from 3 waves (ages 9-11, 12-13, 13-14 years) between June 1, 2016 and October 15, 2018."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed models to examine prospective associations between parental factors (baseline) and sleep outcomes at wave 3, with mediation analyses testing emotional regulation and screen use as mediators."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAMA Network Open, September 11, 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Screen use (youth-reported Youth Screen Time Survey measured as weighted mean daily hours) identified as mediator in association between parental factors and sleep outcomes. Screen use is a phone/SM-specific variable. Other side: parental factors (warmth, monitoring, conflict, psychopathology) are individual-trait-level variables (family/parental functioning). Figure 2 reports mediation pathways with coefficients for screen use paths (e.g., Path C: indirect effects through screen use)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple numeric results reported for screen use associations with sleep outcomes: standardized β estimates with 95% CIs and p-values (e.g., indirect association of parental monitoring with sleep quality mediated through screen use, β=0.004, 95% CI 0.002-0.008; family conflict mediated through screen use, β=−0.003, 95% CI −0.006 to −0.001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results including β coefficients, 95% confidence intervals, and p-values throughout main text and Figure 2 mediation diagrams."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional carve-out applies: paper includes cross-sectional associations (Figure 1 reports associations between parental factors and sleep outcomes) alongside longitudinal mediation analyses, disqualifying FT-EC7.",
+    "notes": "Paper INCLUDED: meets all criteria. Design is prospective-longitudinal with mediation pathways. Screen use is neither purely mediator-only (it has direct links in paths with quantified coefficients) and appears alongside a cross-sectional analysis (Figure 1), triggering the cross-sectional carve-out."
+  },
+  {
+    "paper_id": "121",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, release 5.1, analyzing 4754 youth with available data at baseline (ages 9-10) and year 4 (ages 12-15) waves."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using linear mixed-effects regression models to test whether baseline individual differences (impulsivity, motivation, psychopathology, cognitive ability) predict screen time (ST) and problematic screen use (PSU) of 3 screen activities (video games, social media, smartphones) at year 4."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in JAACAP Open, December 2025."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Phone/SM-specific estimates identified. Table 3 reports separate coefficients for 'Video Game Use,' 'Social Media Use,' and separate PSU measures for 'Problematic Video Game Use,' 'Problematic Social Media Use,' and 'Problematic Phone Use' (MPIQ score). These are modality-specific screen-time variables. Other side: baseline individual differences in impulsivity (urgency, sensation-seeking, lack of planning, lack of perseverance), motivation (reward sensitivity, punishment sensitivity), psychopathology (internalizing, externalizing), and cognitive ability (general cognitive ability, executive functioning, learning/memory) are all individual-trait-level variables."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Extensive numeric results throughout: Table 3 reports β (standardized), SE, and p-values for predictors of video game ST, social media ST, and modality-specific PSU. Table 4 reports detailed results for predictors of problematic video game use, problematic social media use, and problematic phone use (MPIQ)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Numeric results with β coefficients, standard errors, and p-values for all SM↔individual-trait associations in Tables 3 and 4."
+    },
+    "FT_EC7_applies": true,
+    "FT_EC7_reason": "All three FT-EC7 conditions hold: (a) design is longitudinal (baseline at ages 9-10 predicts screen use at year 4, ages 12-15); (b) smartphone/SM use (ST and PSU) is the DV in every analysis; (c) there is no analysis anywhere in the paper with SM as IV (individual differences are IVs, SM is always DV). No cross-sectional SM-as-DV analysis is evident in main results or supplementary materials. FT-EC7 exclusion applies.",
+    "notes": "Paper EXCLUDED: meets IC1-IC4 but triggers FT-EC7 (longitudinal SM-as-DV-only design). No cross-sectional analysis with SM as DV disqualifies the carve-out exception."
+  }
+]

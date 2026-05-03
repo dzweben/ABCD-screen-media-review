@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "179",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study (ABCD); baseline N=4,042; ages 9-10; 21 U.S. recruitment sites"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original machine learning predictive analysis using elastic net regression, random forest, gradient boosting, and support vector regression on ABCD baseline questionnaire and MRI data to predict DRD at 1-year follow-up"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "No evidence of duplication; original empirical analysis reported in Experimental and Clinical Psychopharmacology (2022)"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 search identified screen media activity as numeric predictor in elastic net model (Table 3). Screen time variables (child weekday screen time, child weekend screen time, parent weekday screen time, parent weekend screen time) reported with elastic net coefficients (range -1.14 to -1.66) and univariate p-values. Paired with delayed reward discounting (DRD), an individual-trait outcome (behavioral/cognitive measure). Abstract: 'high levels of screen time were predictors of higher DRD'"
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: elastic net coefficients for all features (Table 3, page 32); R² values for cross-validation (2.9% for questionnaire/task variables full sample); univariate correlations and p-values for each feature"
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis conducted: 5-fold cross-validation with held-out 'lockbox' test set; elastic net regression with feature importance interpretation; significance testing reported (p-values in Table 3)"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional design at baseline: all predictors measured at baseline (mean age 9.9 years); DRD measured at 1-year follow-up. Baseline-to-follow-up prospective prediction is not longitudinal analysis with SM as DV in equation. No SM-as-DV longitudinal exclusion applies.",
+    "notes": "Paper uses 'screen media activity' as a composite including television, video games, computers, and smartphones per discussion; screen time is a multi-device aggregate. However, paper explicitly reports separate weekday and weekend screen time as key predictors (Table 3), and these are paired with DRD as individual-trait outcome, satisfying Step 1 of IC2 mechanical test. Control models using MRI data alone failed to predict DRD (R² ≤ 0.0%), supporting questionnaire/task data superiority."
+  },
+  {
+    "paper_id": "289",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development Study (ABCD); N=10,650 children ages 9.9±0.6 years; U.S. nationally representative sample with probability sampling"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional logistic and linear regression of parental psychological problems (Adult Self-Report) on children's screen media behaviors"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original analysis published in Acta Paediatrica (2022); no evidence of duplication"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 failure: DVs include TV watching, video watching, gaming, social media use, and mature-rated media. No phone/SM-specific variable paired with individual-trait outcome. Step 2 composite analysis: children's 'screen media behaviours' composite explicitly includes TV (non-phone/non-SM), unspecified video games (console or platform unspecified), and mature-rated media. Per binding clarification §2.4: multi-device aggregated time (TV + video + games + social media) without separate phone/SM breakout fails IC2; gaming alone without mobile/phone-specificity fails IC2; mature-rated content alone fails IC2. The parental predictor is psychological problems (individual-trait, acceptable) but composite DV violates IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper's composite outcome ('screen media behaviours') includes unspecified gaming (likely console-based per ABCD measurement), TV (non-digital-social), and mature-rated media rating (content-only, not phone/SM-specific). Meeting recommendation (≤2 hours daily) is assessed across mixed modalities. IV (parental psychological problems) qualifies as individual-trait, but composite DV fails Step 2 per binding exclusions."
+  },
+  {
+    "paper_id": "77",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Adolescent Brain Cognitive Development (ABCD) study; N=6,749 adolescent respondents ages 12-13 primarily; U.S. data collection May 2020"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: linear regression of ACE score on screen time and physical activity with adjusted models controlling for confounders"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Original analysis published in Academic Pediatrics (2022); no evidence of duplication"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1 search: 'screen time' reported as DV but variable is not phone/SM-specific. Methods describe 'screen media activity' measured via questionnaire but do not specify exclusion of TV, console gaming, or other non-phone/non-SM modalities. Step 2 composite analysis: 'screen time' composite per ABCD measurement protocol includes television, video games, computers, and smartphones without separate phone/SM breakout. Per binding clarification §2.4: multi-device aggregated time (TV + console gaming + computer + smartphone) without separate phone/SM item isolation fails IC2. No evidence of phone-only or SM-only variable reported."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper uses 'screen time' as composite outcome without specification of phone/SM-only content. ACE score is individual-trait-level predictor (qualifying per IC2 other-side rule), but DV fails IC2 Step 2 composite requirement due to unspecified multi-device aggregation. Abstract notes 'screen time' in context of TV watching, video games, and social media use without separate breakout."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "543",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study baseline data, 15,022 children aged 9-11, data from 21 U.S. sites, NIH-funded"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: mixed-effects regression models predicting children's screen time from family income and race"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Information (Basel), 2020"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Other-side variable (household income, race, covariates) is demographic-only. Step 1: no phone/SM-specific estimate found. Step 2: screen time composite includes TV, movies, computer, tablet, phone without separate breakout (Methods: \"average weekdays...measured in hours\"). Multi-device aggregated time fails IC2 without per-device isolation."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Family income is purely demographic (socioeconomic indicator). Screen time is reported as undifferentiated composite without modality-specific breakdown."
+  },
+  {
+    "paper_id": "126",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study baseline and 1-year follow-up data, 11,670 baseline participants (5,594 females, ages 9-10), 4,951 longitudinal subset"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: generalized additive mixed models (GAMMs) examining associations between sleep disturbance/total sleep time and mental health outcomes (depression, internalizing, externalizing)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in Journal of Adolescent Health, 2020"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper does not analyze smartphone or social media use as IV or DV. Primary IVs are sleep disturbance subscales (DIMS, DOES, SWTD) and total sleep time. DVs are depression/internalizing/externalizing from CBCL. Screen time included as covariate only (not as IV or DV in any qualifying analysis). No phone/SM variable on either side of any core relationship."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper focuses on sleep-depression association. Screen time mentioned in context ('links between greater electronic device use and poor sleep') but not analyzed as a primary predictor. Does not meet scope (no qualifying smartphone/SM variable)."
+  },
+  {
+    "paper_id": "150",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Year 2 data (2018-2020), ages 10-13, 7,614 participants with high-quality structural MRI and complete covariates"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: generalized additive mixed models (gamma4 package) examining associations between social media use/addiction and brain morphology (cortical thickness, surface area, volume)"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed article in NeuroImage, 2026"
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Social media use (\"hours per day\" continuous measure, Methods: \"Minutes and hours per day spent using social media\") and Social Media Addiction Questionnaire (SMAQ, Berg et al. 2012) are phone/SM-specific variables. Both paired with individual-trait-level outcome (neural: cortical thickness, surface area, volume). Directly meets Step 1 criteria; no need to proceed to Step 2."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: regression β coefficients for social media use with cortical thickness/surface area/volume across regions (Table 2, main text), standardized beta coefficients, p-values, and confidence intervals (e.g., superior frontal β=-3.1 ± 1.2, caudal anterior cingulate β=-1.3 ± 1.2). Vertexwise FEMA analysis with surface maps and heat maps provided."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric quantification: region-of-interest (ROI) mixed-effects models with β coefficients and 95% confidence intervals across 45+ brain regions; vertexwise analysis with Z-scores and statistical maps showing significant associations at Q < 0.05; effect sizes and p-values throughout"
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional (Year 2 snapshot data), not longitudinal. FT-EC7 applies only to longitudinal designs. Additionally, social media is analyzed as IV (predictor of brain morphology), not as DV-only.",
+    "notes": "Paper meets all inclusion criteria. Clear phone/SM-specific exposure (daily SM use hours, SMAQ addiction scale) paired with neural individual-trait outcomes (brain morphology). Cross-sectional design precludes FT-EC7."
+  }
+]

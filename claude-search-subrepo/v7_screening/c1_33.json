@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "4",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Baseline ABCD 2.0.1 release, 9-10 year old children from 21 U.S. sites (2019), 2217 children analyzed (mean age 9.91 years)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-sectional case-control study with fMRI task-based functional imaging (stop signal task, n-back task); compares video gamers vs non-video gamers on cognitive performance"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed original investigation in JAMA Network Open (2022)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: Exposure is 'video gaming hours per week' (platform unspecified; neither explicitly phone-based nor paired with separate phone/SM variable with own coefficient). Step 2 N/A (single gaming variable, not composite). Per binding rule: 'Gaming alone (VGAQ, IGDS9-SF, console, PC, unspecified-platform, generic gaming hours) fails IC2 unless explicitly mobile/phone-based OR paired with separately-measured phone/SM variable.' This is unspecified-platform gaming as sole exposure; DV is cognitive performance (BOLD signal, response inhibition, working memory)."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes video gaming (platform unspecified) and cognitive outcomes. Gaming could include console, PC, or phone-based; no explicit phone/smartphone isolation. Does not meet FT-IC2 threshold for qualifying SM/phone variable."
+  },
+  {
+    "paper_id": "130",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Longitudinal ABCD study cohort, 3,000+ young adolescents (11-14 years), 21 U.S. research sites, prepandemic visits (Year 2) + COVID-19 pandemic surveys (May-August 2020)"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: machine learning models (XGBoost/GBT) fitted to identify predictors of psychological distress (anxiety, depression, stress) and positive affect during pandemic; feature importance ranked via SHAP values"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed original article in The Journal of Adolescent Health (2022)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: 'Screen time' appears as a pandemic-related predictor variable in ML models with SHAP feature importance reported. However, no isolated phone/SM-specific numeric estimate (β, OR, r, path coefficient) with own coefficient paired with individual-trait outcome found in main or supplementary results. Step 2: 'Screen time' in pandemic surveys bundled multiple modalities (social media, video chat, texting, gaming, etc.) without per-device breakout; meets multi-device aggregation criterion. Per binding rule: 'Multi-device aggregated time fails IC2 unless per-device breakout exists elsewhere.' No separate phone-only or SM-only coefficient reported."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper reports screen time as a predictor of psychological distress via machine learning feature importance. However, screen time is a bundled multi-modality measure without isolated phone/SM-specific coefficients, failing FT-IC2 Step 1 and Step 2 composite check."
+  },
+  {
+    "paper_id": "91",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "ABCD study wave 1 release, 6,758 individuals (49.4% female, mean age 9.94 years), cross-validated latent profile analysis on fMRI data from baseline assessment"
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis: cross-validated latent profile analysis identifying seven distinct neurodevelopmental profiles using fMRI functional activation; profiles replicated in held-out test sample"
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed original article in Biological Psychiatry: Cognitive Neuroscience and Neuroimaging (2022)"
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Paper identifies neurodevelopmental profiles and describes group differences in screen time (F=6.80, p<.0001) and other characteristics across profiles. However, no inferential analysis pairs a phone/SM variable (as IV or DV with own reported coefficient/estimate) with an individual-trait outcome. Screen time is reported as a descriptive characteristic differing across profiles, not as a predictor or outcome in a formal regression/association model. This is a characterization/profile paper; SM/phone variables are not analyzed in a hypothesis-driven SM↔trait-outcome relationship."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper reports screen time as a characteristic of latent neurodevelopmental profiles but does not analyze an explicit SM/phone variable in an inferential relationship with an individual-trait outcome. Screen time is mentioned in descriptive profile comparisons, not as a formal predictor or outcome with its own coefficient."
+  }
+]

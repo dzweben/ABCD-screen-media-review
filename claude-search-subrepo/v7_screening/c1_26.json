@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "176",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 3.0; baseline ages 9-10, 2-year follow-up ages 11-12; 21 U.S. recruitment sites; clear ABCD cohort identity."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using bivariate multiple indicator latent change score models with structural MRI data and lifestyle risk factor measurements."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Health Psychology, Vol. 42, No. 12, 2023."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Composite includes four non-phone/non-SM behavioral items: sleep, physical activity, BMI, and screen time (Methods: \"single lifestyle risk factor domain measured by sleep, physical activity, BMI, and screen time\"). Step 1: No per-modality phone/SM estimate found. Step 2: Composite bundles sleep + physical activity (neither phone nor SM) with BMI and screen time without separate per-component breakout. Per §2.4 binding clarifications, multi-behavior aggregates without isolation fail IC2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper analyzes clustered lifestyle risk factors (sleep, physical activity, BMI, screen time) as a single latent domain. While screen time is measured as \"average weekly screen time (hours)\", it is inseparable from sleep, physical activity, and BMI in all analyses. No isolated phone/SM coefficient reported."
+  },
+  {
+    "paper_id": "97",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study Data Release 4.0; ages 9-12 years; 21 sites; clear recruitment description (Garavan et al., 2018)."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using group factor analysis (GFA), generalized additive mixed models (GAMM), and network analysis on ABCD structural and functional MRI data."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Cortex, Vol. 169, 2023."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen media activity (SMA) composite defined in Methods (Section 2.1.1) as six activities: \"watching TV shows or movies\", \"watching videos\", \"video games (single player and multiplayer)\", \"texting\", \"social media\", \"video chat\". The composite explicitly bundles TV + movies + video games + phone/SM items without separation. Per §2.4: non-phone/non-SM ingredients (TV, movies, generic video games) bundled without per-modality breakout → NOT_MET. Step 1: No isolated phone/SM coefficient. Step 2: Composite fails because it includes TV, movies, and unspecified gaming."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper studies functional brain organization related to SMA. Though methods name multiple screen activities, the SMA composite includes TV, movies, video games of unspecified platform, alongside phone/SM items. No separate coefficient for phone/SM alone reported."
+  },
+  {
+    "paper_id": "5",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "U.S. ABCD Study, wave 2 cross-sectional data (September 10, 2018 to September 29, 2020); 5797 adolescents aged 10-14 years from 21 U.S. sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical cross-sectional analysis with linear regression models and modified Poisson regression examining associations between screen time and physical activity with BMI percentile and overweight/obesity."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in JAMA Network Open, Vol. 6, No. 2, February 9, 2023."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Paper reports numeric estimates (RR, 95% CI) for screen time (phone/SM-specific variable) paired with BMI percentile and overweight/obesity (individual-trait health outcome). Methods define screen time as \"self-reported screen time hours per day\" categorized as low, medium, high. Table 2 reports: medium screen time RR 1.24 (95% CI, 1.12-1.37); high screen time RR 1.29 (95% CI, 1.16-1.44) for overweight/obesity. Screen time as IV with BMI/obesity as DV qualifies."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Quantitative results reported: Risk ratios (RR), 95% confidence intervals, and effect estimates throughout Table 2 and Results section for all screen time and step count categories vs. BMI percentile and overweight/obesity outcomes."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric quantification: modified Poisson regression models with RR (95% CI) estimates for associations between screen time/step count categories and overweight/obesity. Also continuous associations with BMI percentile reported (β, 95% CI)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Design is cross-sectional, not longitudinal. FT-EC7 requires all three conditions (longitudinal design, SM as DV in every analysis, no SM-as-IV analysis). This paper's cross-sectional design disqualifies FT-EC7.",
+    "notes": "Paper examines associations between screen time categories (independent variable) and BMI outcomes (dependent variable). Both univariate models (screen time alone) and multivariate models (screen time + step count) are reported. Design is cross-sectional only; no longitudinal follow-up."
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "153",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes Adolescent Brain Cognitive Development Study (ABCD) data from 2016-2021, U.S. sample with baseline ages 9-10."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using growth mixture modeling to identify subgroups of adolescents with similar screen use trajectories."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Preventive Medicine Reports."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen use is the DV; predictors are sociodemographic only (race/ethnicity, parental education, perceived racism/discrimination). No qualifying phone/SM variable as IV paired with individual-trait-level outcome. Shao et al. characterize trajectories by demographic/contextual variables only, failing the \"individual-trait-level on the other side\" requirement."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper examines screen use trajectories over time but only analyzes associations with demographic and contextual predictors, not with individual-trait outcomes."
+  },
+  {
+    "paper_id": "119",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes ABCD data (11,815 children at baseline, ages 9-10) across 22 U.S. sites. Also independently validates with HCP-D sample."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis using K-means clustering to identify SMA patterns, with cross-sectional and longitudinal associations to behavioral/brain outcomes."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Journal of the American Academy of Child & Adolescent Psychiatry."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Qualifies on multiple estimates. SMA pattern (video-centric vs. lower-frequency) paired with individual-trait-level outcomes: β = -0.12 (neurocognitive performance), β = 0.13 (behavioral problems), β = 0.31 (psychotic-like experiences), higher impulsivity, altered RSFC across multiple brain networks. Each outcome is individual-trait-level (behavioral, cognitive, neural, personality-related)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: standardized β coefficients for neurocognitive composite (β = -0.12, 95% CI [-0.16, -0.08], FDR-corrected p < 0.001), total behavioral problems (β = 0.13, 95% CI [0.09, 0.18], FDR-corrected p < 0.001), psychotic-like experiences (β = 0.31, 95% CI [0.27, 0.36], FDR-corrected p < 0.001), RSFC coefficients across 38 significant features."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Paper reports quantitative results including standardized regression coefficients (β), confidence intervals, and FDR-corrected p-values for all major associations. Results persist in longitudinal analyses."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Paper contains cross-sectional analyses with SMA patterns as (effectively) predictor of behavioral/cognitive outcomes. Cross-sectional carve-out applies: even though longitudinal analyses are also present, presence of any cross-sectional SM-as-DV analysis disqualifies FT-EC7.",
+    "notes": "Strong paper meeting all criteria. SMA patterns identified via unsupervised clustering; associations with behavioral, cognitive, neuroimaging outcomes examined both cross-sectionally and longitudinally. Video-centric higher-frequency SMA pattern shows poorer developmental outcomes."
+  },
+  {
+    "paper_id": "185",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Paper analyzes ABCD Study data (11,530 at baseline, 10,933 at 1-year follow-up; ages 9-10 baseline) across 21 U.S. sites."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis developing and testing cross-validated machine learning models (PCR and LASSO) for predicting ADHD symptoms."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Published peer-reviewed paper in Translational Psychiatry."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Screen time appears as one feature in a machine learning model predicting ADHD symptoms, but it is not analyzed as a standalone IV in an inferential association with a single outcome. Screen time is a covariate/feature in a multi-domain predictive model (alongside neurocognition, demographics, impulsivity, parental monitoring). The paper does not report a direct coefficient for screen time ↔ ADHD relationship; screen time's contribution is embedded within the feature importance weights of the larger predictive framework. This fails FT-IC2's requirement for a qualifying phone/SM variable paired with an individual-trait outcome in an inferential analysis with its own reported estimate."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Paper is a machine learning prediction study; screen time is included as a feature but not as a standalone predictor variable with its own reported association coefficient. This is fundamentally different from reporting an inferential estimate (β, OR, r) for screen time as an IV or DV."
+  }
+]

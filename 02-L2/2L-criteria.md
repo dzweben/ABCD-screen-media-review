@@ -1,4 +1,4 @@
-# 2L Criteria — Full-Text Eligibility (PRISMA 2020) — v6
+# 2L Criteria — Full-Text Eligibility (PRISMA 2020) — v7
 
 **Stage:** Level 2 — full-text eligibility review.
 
@@ -58,48 +58,63 @@ If FT-IC6 = NOT_MET → exclusion code **FT-EC6**.
 
 ---
 
-### 2.4 FT-IC2 — Qualifying smartphone/SM exposure (CONCEPTUAL)
+### 2.4 FT-IC2 — Qualifying smartphone/SM exposure (MECHANICAL TWO-STEP TEST)
 
 **FT-IC2 is direction-agnostic.** A qualifying smartphone or social-media variable can appear as **IV** or **DV** of an analysis. It does not qualify if it appears *only* as a mediator, moderator, or covariate.
 
 The paper must, in at least one analysis, pair a qualifying smartphone/SM variable with an **individual-trait-level** variable on the other side of the relationship.
 
-#### What qualifies as "smartphone use"
-Any operationalization of phone-specific activity:
-- Time on phone (self-report, parent-report, EARS passive sensing)
-- Smartphone ownership (yes/no), age of first smartphone
-- Problematic / addictive smartphone use scales (MPIQ, PSMUS, mobile-phone-checking)
-- Phone-specific items: texting (on phone), video chat (on phone), bedtime phone use
-- App use, app-category time, notification volume, passive-sensed app data
+#### The IC2 test has two steps. Run them in order; stop as soon as Step 1 returns a hit.
 
-#### What qualifies as "social media use"
-Any operationalization of SM-platform activity:
-- Time on social media (self-report, parent-report, passive)
-- Platform-specific use: TikTok, Instagram, Snapchat, YouTube, Facebook, Twitter/X, Reddit, Pinterest, Tumblr, Discord, BeReal
-- Number of SM accounts; secret/private accounts; platform-membership indicators
-- Online dating apps / hookup apps
-- Problematic / addictive SM scales (SMAQ, Bergen SM/Facebook Addiction Scale, SNS-A)
+**Step 1 — broad search for a phone/SM-specific estimate.**
+
+Search **every results location** in the paper — main tables, supplementary tables, appendices, sensitivity analyses, robustness checks, alternative specifications, sub-group breakouts — for at least one numeric estimate (β / OR / RR / HR / IRR / r / mean diff / SHAP value / feature importance / path coefficient (direct, indirect, total) / network edge weight / Bayesian posterior) where the variable label is one of these phone/SM-specific items:
+
+- time on phone · smartphone ownership (yes/no) · age of first smartphone · phone time
+- time on social media · time on a named SM platform (TikTok / Instagram / Snapchat / YouTube / Facebook / Twitter / X / Reddit / Pinterest / Tumblr / Discord / BeReal)
+- texting · video chat · video calling
+- app use · app-category time · notification volume · passive-sensed phone/app time
+- problematic / addictive phone scales (MPIQ, PSMUS, mobile-phone-checking)
+- problematic / addictive SM scales (SMAQ, Bergen SM/Facebook Addiction Scale, SNS-A)
+- online dating apps / hookup apps · number of SM accounts · secret/private SM accounts
+
+**If you find any such estimate paired with an individual-trait variable on the other side (see below) → FT-IC2 = MET. Stop.** The paper's headline analysis being on a composite does not disqualify the paper if a per-modality estimate exists in a supplement or sensitivity table.
+
+**Step 2 — composite-content check (only if Step 1 finds nothing).**
+
+Identify the composite/sum variable being analyzed. **The variable's label is irrelevant** — "screen time," "screen media activity," "digital socializing," "recreational screen use," "media use," etc. all need the same test. What matters is **what items the methods say are inside the composite**:
+
+- **MET** if the composite is built **exclusively** from phone/SM/digital-socializing items. Examples: "digital socializing = texting + video chat + social media"; "phone-based media time = SM + texting + video chat + app use"; "smartphone use composite = social media + texting + phone time."
+- **NOT_MET** if the composite includes **any** non-phone/non-SM activity that is not separately broken out elsewhere in the paper. Disqualifying non-phone/non-SM ingredients include: TV, movies on TV, video streaming on a non-phone device, console video games, PC video games, unspecified-platform video games, reading on screens, computer-only time, "music" listening, "internet browsing" generic.
 
 #### What qualifies as "individual-trait-level" on the other side
-Neural · behavioral · physical health · mental health · cognitive · well-being · personality · substance use · sleep · academic · psychiatric symptom · genetic / polygenic · biological (BMI, puberty, biomarker) · clinical diagnosis · ACEs / trauma exposure · parenting practices / parental psychopathology · pet ownership · religious participation · school engagement · any other within-person construct.
 
-#### What does NOT qualify
-- **Other side is demographic-only** (age, sex, race/ethnicity, household income, parental education, household composition) — paper-level NOT_MET if no individual-trait-level analysis exists anywhere
-- **Other side is contextual-only** (neighborhood, school district, region, season, COVID timing) — paper-level NOT_MET if no individual-trait-level analysis exists anywhere
-- TV-only · console/PC-gaming-only · unspecified-platform-gaming-only · generic "internet use" without device specificity · radio · podcasts · RF-EMF exposure
-- Multi-device aggregated time bundling smartphone with non-smartphone devices ("minutes on computer + tablet + cellphone") with no per-device breakdown
-- Composite "screen time" totals that bundle TV/console/phone with no per-modality breakdown isolating phone or SM
-- Cyberbullying alone (without a separately-measured smartphone or SM variable)
-- Mature-rated content / R-rated content variables alone (content rating ≠ phone/SM modality)
-- SM as covariate-only / mediator-only / moderator-only with no IV-or-DV role anywhere
+Neural · behavioral · physical health · mental health · cognitive · well-being · personality · substance use · sleep · academic · psychiatric symptom · genetic / polygenic · biological (BMI, puberty, biomarker) · clinical diagnosis · ACEs / trauma exposure · parenting practices · parental psychopathology · family functioning · sexual orientation · gender identity · sexual minority status · transgender / gender-questioning status · religious participation · pet ownership · peer associations · school engagement · extracurricular activities · any other within-person psychosocial / identity / behavioral construct.
 
-#### Conceptual judgment for borderline labels
+Identity variables (sexual orientation, gender identity, transgender/gender-questioning status) and psychosocial lifestyle variables (religious participation, pet ownership, peer associations) qualify as individual-trait on the other side — they are NOT classified as demographic for this rule.
 
-The author's chosen variable label is not authoritative — judge what was conceptually measured.
+#### What does NOT qualify on the other side
 
-- A paper labeling its variable "screen time" *qualifies* if the methods make clear the construct is phone/SM-based time (e.g., "time on smartphone-based media"). It *does not qualify* if the methods describe a multi-device or multi-activity composite that bundles TV, console, and phone with no breakdown isolating phone or SM.
-- A paper labeling its variable "screen media activity" *qualifies* if the methods or results isolate phone or SM activity within the composite. Otherwise it does not.
-- A pure psychometric/validation paper (factor structure of SMAQ, reliability of MPIQ, EARS-vs-self-report concordance) does not pair the SM variable with an external individual-trait-level variable as IV or DV → **NOT_MET**. (FT-IC5 may also fail; either route is fine.)
+- **Demographic-only** (age, sex, race/ethnicity, household income, parental education, household composition, marital status, immigration status, urbanicity, study site)
+- **Contextual-only** (neighborhood quality, school district, region, season, COVID-timing, year-of-survey)
+
+If the only analyses pair the SM/phone variable with demographic-only or contextual-only on the other side, FT-IC2 = NOT_MET regardless of whether the SM/phone variable itself qualifies on Step 1 or Step 2.
+
+#### Critical clarifications (BINDING)
+
+1. **Problematic-use scales are SM/phone variables, not "other-side individual-trait" outcomes.** SMAQ, MPIQ, VGAQ, PSMU, Bergen SM/Facebook Addiction, SNS-A all measure smartphone or SM use. When the only analysis is sociodemographic predictor → SMAQ/MPIQ as DV, the other side is still demographic — **FT-IC2 = NOT_MET**. The scale is the SM variable; it cannot also serve as the non-SM other-side variable.
+
+2. **Gaming alone does not qualify** unless it is explicitly mobile/phone-based, OR the paper also separately measures a qualifying phone/SM variable with its own coefficient. This includes: VGAQ (Bergen Video Game Addiction Questionnaire), IGDS9-SF, generic "video gaming hours," "gaming duration," problematic-gaming scales without explicit mobile/phone modality, console gaming, PC gaming, "video games" with platform unspecified, "gaming addiction." If the paper measures only gaming and does not isolate phone-based gaming or pair it with phone/SM, **FT-IC2 = NOT_MET**.
+
+3. **Cyberbullying alone does not qualify.** Cyberbullying counts only when paired with a separately-measured phone/SM variable that has its own coefficient.
+
+4. **Mature-rated / R-rated content alone does not qualify.** Content rating is not modality. "Mature-rated video games" or "R-rated movies" qualify only if the paper also reports a separate phone/SM variable with its own coefficient.
+
+5. **Multi-device aggregated time fails Step 2.** "Minutes per week on computer, tablet, cellphone, or other electronic device" reported as a single number bundles smartphone with non-phone devices. NOT_MET unless a per-device breakout (cellphone alone) exists somewhere.
+
+6. **Pure psychometric/validation papers fail.** Factor structure of SMAQ, reliability of MPIQ, EARS-vs-self-report concordance with no external outcome → FT-IC2 NOT_MET (they may also fail FT-IC5; either route is fine).
+
+7. **SM as covariate / mediator / moderator-only fails.** The qualifying variable must appear as IV or DV in at least one analysis where it has its own reported coefficient or estimate.
 
 If FT-IC2 = NOT_MET → exclusion code **FT-EC2**.
 
@@ -124,16 +139,21 @@ FT-EC7 applies if **all three** are simultaneously true:
 
 1. The design is **longitudinal** (baseline predicts later wave).
 2. Smartphone/SM is the **DV** in every analysis involving smartphone/SM in the paper.
-3. There is **no analysis anywhere in the paper** with smartphone/SM as IV.
+3. There is **no analysis anywhere in the paper** with smartphone/SM as IV (or as both IV and DV in a bidirectional/cross-lagged model).
 
 If all three hold → exclusion code **FT-EC7**.
 
-FT-EC7 does **not** apply (paper kept) when any of these is true:
-- Design is cross-sectional (regardless of which side SM is on)
-- Smartphone/SM is IV in any analysis (any topic, anywhere in the paper)
-- Bidirectional / cross-lagged design (SM is both IV and DV)
+#### Cross-sectional carve-out (BINDING)
 
-The predictor type is **not** part of the FT-EC7 rule. Demographic, individual-trait, family, lifestyle — none of it matters. What matters is design (longitudinal) and SM-side-of-the-equation (DV-only with no IV analysis).
+If the paper contains **any** cross-sectional analysis where smartphone/SM is the DV — with the same predictors as in the longitudinal analyses, or with any other predictors — FT-EC7 does **NOT** apply. This holds regardless of how many longitudinal SM-as-DV-only analyses are also present in the paper. Evidence of any cross-sectional SM-as-DV analysis anywhere in the paper (main, supplementary, sensitivity) disqualifies FT-EC7.
+
+#### FT-EC7 does NOT apply when any of these is true
+
+- The design is cross-sectional, **OR** the paper has any cross-sectional SM-as-DV analysis (cross-sectional carve-out, above)
+- Smartphone/SM is IV in any analysis anywhere in the paper, on any topic
+- Bidirectional / cross-lagged design (SM is both IV and DV in the same model)
+
+The predictor type is **not** part of the FT-EC7 rule. Demographic, individual-trait, family, lifestyle, ACEs, parental psychopathology — none of it matters. What matters is (a) design (longitudinal) and (b) SM side of the equation (DV-only with no IV analysis anywhere). Predictor-type judgments belong at FT-IC2 (other-side individual-trait requirement), not at FT-EC7.
 
 ---
 
@@ -211,15 +231,29 @@ One row per Stage-1 include (n = 171). Columns:
 
 ---
 
-## 7. Protocol deviations from v5
+## 7. Protocol deviations
 
-v6 replaces v5's twenty binding rules (B1–B20) with conceptual criteria that hinge on what the paper actually measured and analyzed, not on which YSTS items were named or which scale was cited:
+### v7 (current) — five fixes targeting v6's residual UNSURE cluster
 
-- **FT-IC2 is now conceptual.** Composite "screen time" qualifies if the construct isolates phone/SM use; does not qualify if it bundles TV/console/phone with no breakdown. Mature/R-rated content alone, multi-device aggregated time alone, and SM-as-covariate/mediator/moderator-only all fail FT-IC2. The other side of the SM relationship must be individual-trait-level.
+v6 produced 21 papers with substantive C1≠C2 disagreement (out of 171). A forensic audit of those 21 identified five specific sources of remaining ambiguity. v7 makes each one mechanical:
+
+- **FT-IC2 reframed as a two-step mechanical test.** Step 1: search every results location (main, supplementary, sensitivity, appendix) for a numeric estimate where the variable label is phone/SM-specific — if found, MET, stop. Step 2 (only if Step 1 fails): check what items make up the composite per the methods. Composite labeled "screen time" or "screen media activity" qualifies only if its items are exclusively phone/SM/digital-socializing. Any TV / console / PC / unspecified-gaming / music / non-phone item bundled in without a separate breakout → NOT_MET. The label is irrelevant; what's inside the composite is what matters.
+- **Problematic-use scales clarified.** SMAQ, MPIQ, VGAQ, PSMU, Bergen, SNS-A are SM/phone variables, not "individual-trait" outcomes on the other side. Sociodemographic → SMAQ-as-DV alone still fails FT-IC2 (the other side is demographic).
+- **Identity variables explicitly classified as individual-trait.** Sexual orientation, gender identity, transgender/gender-questioning status, religious participation, pet ownership, peer associations, school engagement, extracurricular activities are individual-trait — NOT classified as demographic for the FT-IC2 other-side rule.
+- **Gaming carve-out made salient.** VGAQ, IGDS9-SF, generic "gaming hours," "gaming duration," problematic-gaming scales without explicit mobile/phone modality, console gaming, PC gaming, "video games" with platform unspecified — all fail FT-IC2 unless paired with a separately-measured phone/SM variable.
+- **FT-EC7 cross-sectional carve-out made explicit.** Any cross-sectional analysis with SM as DV anywhere in the paper (main, supplementary, sensitivity) disqualifies FT-EC7, regardless of how many longitudinal SM-as-DV analyses are present.
+
+All five v7 changes are clarifications of v6 intent — no new logic, no new scope. They replace interpretive judgment with mechanical lookups so that C1 and C2 converge by construction.
+
+### v6 — conceptual rewrite (replaces v5 B1–B20)
+
+v6 replaced v5's twenty binding rules (B1–B20) with conceptual criteria that hinge on what the paper actually measured and analyzed, not on which YSTS items were named or which scale was cited:
+
+- **FT-IC2 conceptual.** Composite "screen time" qualifies if the construct isolates phone/SM use; does not qualify if it bundles TV/console/phone with no breakdown. Mature/R-rated content alone, multi-device aggregated time alone, and SM-as-covariate/mediator/moderator-only all fail FT-IC2. The other side of the SM relationship must be individual-trait-level.
 - **FT-IC3 + FT-IC4 collapsed and broadened.** Any quantitative result counts: traditional regression coefficients, ML feature importance, SHAP values, R², AUC, Bayesian posteriors, etc.
 - **FT-EC7 simplified.** Drops the v5 "demographic-only predictor" qualifier. EC7 now hinges on design (longitudinal) and SM side of the equation (DV-only with no SM-as-IV analysis), nothing else.
 - **Cascade reordered.** FT-IC5 (empirical) and FT-IC6 (non-duplicate) are tested before FT-IC2, so reviews/commentaries/preprints don't generate spurious FT-IC2 disagreements.
 - **Cascade-DEFERRED convention.** Once a criterion fails, all downstream are marked DEFERRED, eliminating cascade-stage coding artifacts that produced false IRR splits in v5.
 - **No resolver.** Criteria are tightened so that C1 and C2 converge by construction. Residual disagreements route to UNSURE for human review.
 
-All Stage-2 screening prior to v6 is superseded; v6 results overwrite v5 in `02-L2/2L-scoring.csv`. Earlier passes remain in git history.
+All Stage-2 screening prior to v7 is superseded; v7 results overwrite v6 in `02-L2/2L-scoring.csv`. Earlier passes remain in git history.

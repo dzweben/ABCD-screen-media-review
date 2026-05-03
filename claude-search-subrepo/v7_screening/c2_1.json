@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "397",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods state: \"This study included 4,443 adolescents from the Adolescent Brain Cognitive Development (ABCD) Study collected at Year 2 (2018–2020) and Year 4 (2020–2022).\" U.S. ABCD Study confirmed."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Multivariable linear and Poisson regression models examining associations between Year 2 screen time and step count with Year 4 CVD risk factors (blood pressure, cholesterol, hemoglobin A1c)."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in BMC Public Health (2026), no evidence of duplication or preprint status."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 passes: \"recreational screen time\" is a phone/SM-specific variable (Table 1: 6.1±5.1 hours/day of screen use). Paired with individual-trait cardiovascular outcomes: diastolic blood pressure percentile, hypertensive-range blood pressure, HDL cholesterol, non-HDL cholesterol. Table 2 shows β estimates (e.g., high screen time 0.25 point increase in diastolic BP percentile; ARR 1.88 for hypertensive-range BP). Table 3 shows ARR 1.88 (95% CI 1.42–2.56, p<0.001) for high screen time and hypertensive-range BP."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: adjusted β coefficients with 95% CI in Table 2 (e.g., diastolic BP percentile β=2.65, p=0.007 for medium screen time; adjusted RR reported for hypertensive-range outcomes)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results throughout. Tables 2–3 report β, 95% CI, p-values, and ARR for screen time associations with all CVD outcomes."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Cross-sectional carve-out applies. Although design is prospective (Year 2 exposure → Year 4 outcome), the analysis is fundamentally cross-sectional at Year 4 (screen time categories and CVD outcomes both measured at single waves). FT-EC7 requires longitudinal design with SM as DV-only; this paper has SM as IV with multiple outcomes measured cross-sectionally.",
+    "notes": "Strong qualifier. Screen time is self-reported recreational use; individual traits are objectively measured CVD biomarkers (blood pressure via Omron device, lipid panel from blood draw, hemoglobin A1c). All analyses adjusted for covariates (age, sex, race, income, BMI, parental education, COVID-19 timing). No resolver disagreement anticipated."
+  },
+  {
+    "paper_id": "167",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods state: \"We used four waves of longitudinal data (Years 1-4) from the Adolescent Brain Cognitive Development (ABCD; Baseline N = 11,878; White = 52.0%, Hispanic = 20.3%, Black = 15.0%, Asian = 2.1%, Other = 10.5%; Female = 47.8%).\" U.S. ABCD Study confirmed."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Multi-level models examining parent-child informant discrepancy in youth internalizing problems by age of smartphone ownership across 4 longitudinal waves."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Development and Psychopathology (2025), no evidence of duplication."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 passes: \"smartphone ownership\" (binary yes/no; age of acquisition) is a phone-specific variable (Methods: \"parents were asked several questions regarding their child's smartphone ownership\"). IV paired with individual-trait DV: parent-child informant discrepancy in youth internalizing problems (measured via parent-report vs. youth-report on Child Behavior Checklist/Youth Self-Report). Figure 1 and Table 3 show numeric estimates: β=.29*** for smartphone ownership effect on internalizing problems in 9&10 group; significant informant discrepancy effect emerges post-acquisition (β=-.21, SE=.042, p<.001 for interaction)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results: β coefficients, SE, p-values throughout Tables 3–4 and Figure 1. Example: Table 3 shows β=-.85 (SE=.08, p<.001) for Time × Informant interaction in 8&under group."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results for all models. Tables 3–4 report β, SE, and p-values for direct and indirect effects; Figure 1 shows path coefficients with significance markers."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Smartphone ownership is IV, not DV-only. Longitudinal design, but smartphone ownership predicts informant discrepancy (direction is IV→DV), so FT-EC7's SM-as-DV-only criterion is not met.",
+    "notes": "Strong qualifier. Smartphone ownership is objectively operationalized (parental report of yes/no and age acquired); internalizing problems are individual-trait outcome (parent-child psychosocial discrepancy measured via validated instruments CBCL and YSR). All multi-level models adjust for covariates and account for within-person and between-person variance."
+  },
+  {
+    "paper_id": "175",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods state: \"We used data from the Adolescent Brain Cognitive Development (ABCD) Study to address study aims. The ABCD Study recruited over 11,500 adolescents aged 9–10 across 21 sites beginning in 2015 with follow-up data collection planned every 6 months for a total of 10 years.\" U.S. ABCD Study confirmed."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original empirical analysis. Longitudinal, bidirectional cross-lagged panel models examining associations between electronic media use (total EMU and specific types: social EMU, video games, video viewing) and family conflict across T1, T2, T3, T4."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed publication in Journal of Family Psychology (2025), no evidence of duplication."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1 passes: \"electronic media use\" (measured via Screen Time Questionnaire at T1, T2, T3; includes social media, video games, video viewing) is a phone/SM-specific composite variable. Paired with individual-trait outcome: family conflict (measured via Family Environment Scale 9-item conflict subscale; individual-trait intra-family behavioral construct). Methods state youth reported daily EMU via multiple items (\"How often on you use: Text on a phone, tablet, or computer (i.e., Kik, Whatsapp, etc.)?\"; \"Play social games on a computer, console, phone, or other device?\"; \"Watch videos (Such as YouTube)?\"). Results show numeric associations: Total EMU → Family Conflict (best fitting model β=0.88, p<.05 in Table); Social EMU → Family Conflict in girls (Figures 3–4 show path coefficients with significance). Table reports β estimates ranging from -0.59 to 0.39 with p-values."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results: path coefficients (β) with SE and p-values throughout. Tables 1 and Figures 1–4 report β, 95% CI, and p-values for direct/indirect effects of EMU on family conflict across timepoints."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Inferential analysis with numeric results. Structural equation models report path coefficients, comparative fit indices, and standardized estimates. Example: Table 1 shows correlations and means; Figures 1–4 show path models with β estimates and significance (β values displayed directly on arrows, p<.001 marked with ***)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design, but electronic media use appears as IV in bidirectional cross-lagged models (EMU→Family Conflict and Family Conflict→EMU). FT-EC7 requires SM-as-DV-only with no SM-as-IV analysis; this paper has both directions tested.",
+    "notes": "Strong qualifier. Electronic media use is self-reported via Screen Time Questionnaire; family conflict is individual-trait outcome (intra-family behavioral construct measured via validated Family Environment Scale). Bidirectional models allow for tests of both directions. All analyses adjusted for income, parental education, and youth sex; multiple-group models tested for gender differences. Tables and figures provide comprehensive numeric results."
+  }
+]

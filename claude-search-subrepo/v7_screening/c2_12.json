@@ -1,0 +1,92 @@
+[
+  {
+    "paper_id": "435",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods: \"This study included children from the Adolescent Brain Cognitive Development Study... from 21 data collection sites across the United States between 2016 and 2018.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Methods reports original empirical analysis: longitudinal cohort design following 8324 children annually for 4 years with linear mixed models examining SM use and ADHD symptoms."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original research published in Pediatrics Open Science, 2026; not a preprint, conference abstract, or duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: Phone/SM-specific estimate found. Results report β [SE] 0.03 [0.01]; P < .001 for social media use → inattention symptoms (individual-trait-level ADHD symptom domain). SM use measured separately from TV and gaming. Paired with within-person trait outcome."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Results report β coefficients with SEs and p-values for SM use predicting inattention (β 0.03 [0.01], P < .001) and cumulative 4-year effect (β 0.15, SE 0.03, P < .001)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative results reported: cross-sectional and longitudinal β estimates, cross-lagged panel model β coefficients (e.g., β 0.03 [0.01], P = 0.004)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (yes), but social media use is IV in analyses predicting ADHD symptoms as DV. EC7 requires SM as DV in every analysis with no SM-as-IV anywhere. Does not apply.",
+    "notes": "Qualifies on SM-specific exposure (social media use, not composite). Clear phone/SM-specific coefficient at Step 1. Individual-trait-level outcome (inattention symptoms). Longitudinal design with evidence of unidirectional association (SM→inattention, not reverse)."
+  },
+  {
+    "paper_id": "35",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods: \"Data from the Adolescent Brain Cognitive Development (ABCD) Study, including 1940 participants aged 11 to 12 years at Wave 1, were analyzed over three annual waves.\""
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis: 1940 participants followed over 3 waves with modified Poisson regression examining SMA scores and time on SM predicting binge eating."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original publication in Obesity (Silver Spring), 2025; not a preprint or duplicate."
+    },
+    "FT_IC2": {
+      "status": "MET",
+      "evidence": "Step 1: SM-specific exposure identified. Social Media Addiction (SMA) scores derived from 6-item questionnaire (Bergen Facebook Addiction Scale adapted). Paired with individual-trait-level outcome (binge eating symptoms via KSADS-5). Results show prospective RR 1.90 (95% CI 1.10-3.27) for addiction SMA group predicting BE at Wave 3. SMA is a problematic-use SM scale (qualifying per §2.4), and binge eating is individual-trait outcome (disordered eating behavior)."
+    },
+    "FT_IC3": {
+      "status": "MET",
+      "evidence": "Results report relative risk (RR) and prevalence ratio (PR) with 95% CIs for SMA predicting BE (e.g., RR 1.90, PR 2.17, PR 3.45)."
+    },
+    "FT_IC4": {
+      "status": "MET",
+      "evidence": "Multiple quantitative estimates: cross-sectional PRs at Waves 1 and 3, prospective RRs, latent class trajectory model RRs (e.g., 3.01 [2.07-4.37] for consistently high SMA group)."
+    },
+    "FT_EC7_applies": false,
+    "FT_EC7_reason": "Longitudinal design (yes), but SMA is IV predicting BE as DV. No analysis where SMA is DV only. EC7 does not apply.",
+    "notes": "Qualifies on SM-specific addiction scale (SMA), which measures problematic SM use. Individual-trait outcome (binge eating disorder symptoms). Longitudinal associations persist after controlling for baseline BE."
+  },
+  {
+    "paper_id": "187",
+    "FT_IC1": {
+      "status": "MET",
+      "evidence": "Methods: \"Data on screen time, ADHD symptoms (measured via the Child Behavior Checklist), and brain structure were extracted from 10,116 children at baseline (ages 9–10) and 7880 children at a two-year follow-up\" from ABCD Study."
+    },
+    "FT_IC5": {
+      "status": "MET",
+      "evidence": "Original longitudinal empirical analysis: linear mixed-effects models and residualized change regression examining baseline screen time and changes in ADHD symptoms and brain structure over 2 years."
+    },
+    "FT_IC6": {
+      "status": "MET",
+      "evidence": "Peer-reviewed original publication in Translational Psychiatry, 2025; not a preprint, review, or duplicate."
+    },
+    "FT_IC2": {
+      "status": "NOT_MET",
+      "evidence": "Step 1: No phone/SM-specific estimate. Exposure labeled \"screen time,\" defined as total time on devices including gaming and TV. No per-device breakout reported. Step 2: Composite-content check required. Methods state composite includes \"playing video games and watching television\" with weighted formula (5/7 weekday + 2/7 weekend). This bundles gaming (console/PC/unspecified) and TV/video watching without separate per-device estimates anywhere in results. Per binding clarification §2.4.5: \"Multi-device aggregated time fails Step 2... 'Minutes per week on computer, tablet, cellphone...' bundles smartphone with non-phone devices. NOT_MET unless a per-device breakout exists somewhere.\" No per-device breakout found in paper. Fails Step 2."
+    },
+    "FT_IC3": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_IC4": {
+      "status": "DEFERRED",
+      "evidence": "prior criterion failed; not evaluated"
+    },
+    "FT_EC7_applies": "DEFERRED",
+    "FT_EC7_reason": "prior criterion failed; not evaluated",
+    "notes": "Multi-device composite (gaming + TV/video) without per-device isolation. Does not qualify as phone/SM-specific variable under FT-IC2 Step 2. Excluded per binding rule on multi-device aggregated time."
+  }
+]
