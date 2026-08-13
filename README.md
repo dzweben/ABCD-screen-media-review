@@ -2,12 +2,14 @@
 
 A PRISMA 2020 systematic review of publications using U.S. Adolescent Brain Cognitive Development (ABCD) Study data that examine associations involving youth **smartphone** or **social media** use.
 
+**➡ [FINAL-PAPERS.md](FINAL-PAPERS.md) — the 69 papers in the final synthesis, with DOI links and extraction status.**
+
 ---
 
 ## Repository structure
 
 ```
-00-search/         Phase 0 — database searches, deduplication
+00-search/          Phase 0 — database searches, deduplication
   search-terms-platforms.md      Exact Boolean queries per database
   search-results.md              Per-platform yield summary
   deduplication.md               Dedup logic and counts
@@ -24,24 +26,32 @@ A PRISMA 2020 systematic review of publications using U.S. Adolescent Brain Cogn
   deduplicated.csv               620 unique records after dedup
   prisma_counts.json             Historical PRISMA flow counts
 
-01-L1/             Phase 1 — Title/abstract screening
+01-L1/              Phase 1 — Title/abstract screening
   1L-criteria.md                 Stage 1 eligibility criteria
   1L-scoring.csv                 620 papers × (metadata + Coder1 + Coder2 + L1_decision)
 
-02-L2/             Phase 2 — Full-text eligibility
-  2L-criteria.md                 Stage 2 criteria (smartphone/SM scope, FT-EC7 directionality)
-  2L-scoring.csv                 171 Stage-1 includes × per-criterion C1/C2/Resolver/FINAL
-  2L-INCLUDE.csv                 Slim list: 94 included papers
-  2L-EXCLUDE.csv                 Slim list: 61 excluded papers with codes
-  2L-UNSURE.csv                  Slim list: 16 papers pending retrieval/clarification
+02-L2/              Phase 2 — Full-text eligibility (v7-Sonnet final)
+  2L-criteria.md                 Stage 2 criteria (FT-IC1..IC6, FT-EC7 directionality)
+  2L-scoring.csv                 156 PDF-having papers × per-criterion decisions
 
-claude-search-subrepo/          AI processing artifacts (not part of PRISMA output)
-  v4_screening/                  Per-coder JSON outputs (C1, C2, resolver), batch inputs
-  ai_validation/                 Earlier AI-only screening passes (pre-PRISMA)
-  ...                            (old dashboards, logs, intermediate CSVs)
+03-model-extraction/  Phase 3 — Per-paper model extraction (in progress)
+  3L-extraction-guidelines.md    What counts as "a model", which spec to extract,
+                                 derived-Cohen's-d rule for cross-paper comparison
+  3L-models.html                 Interactive per-paper model cards + results matrices
+                                 (open locally in a browser; GitHub does not render
+                                 inline JS/CSS)
+  scripts/                       Effect-size pipeline (unit-tested Python)
+    effect_sizes.py                B / OR / RR / d / β_std -> Cohen's d
+    test_effect_sizes.py           22 unit tests against published references
+    paper_<id>.json                Per-paper extracted estimates as inputs
+    build_matrices.py              Reads JSON, computes d, emits HTML matrix snippets
+    out/                           Generated snippets pasted into 3L-models.html
+    README.md                      Pipeline docs, formulas, references
 
-METHODS.md                      Overall methods overview
-README.md                       This file
+FINAL-PAPERS.md                  The 69 included papers, DOI-linked, with
+                                 extraction-status checkmarks
+METHODS.md                       Overall methods overview
+README.md                        This file
 ```
 
 ---

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ABCD Smartphone/SM Review — Model Extraction</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --card: #ffffff; --ink: #1a1a1a; --muted: #5f5f5f; --line: #d8d8d4;
+    --accent: #0b6e4f; --accent-soft: #d6ece3;
+    --null: #aa3a3a; --null-soft: #f6dada;
+    --sig: #0b6e4f; --sig-soft: #d6ece3;
+    --eq-bg: #fbfaf6;
+    --tl-iv: #d9e6f8; --tl-iv-ink: #1d4282;
+    --tl-dv: #d6ece3; --tl-dv-ink: #0b6e4f;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--bg); font-size: 14px; line-height: 1.55; }
+  .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; }
+  aside { background: #ececea; border-right: 1px solid var(--line); padding: 16px 12px; position: sticky; top: 0; max-height: 100vh; overflow-y: auto; }
+  aside h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 4px 0 12px; font-weight: 600; }
+  .paper-card { padding: 10px; border-radius: 6px; margin-bottom: 4px; cursor: pointer; border: 1px solid transparent; line-height: 1.35; }
+  .paper-card:hover { background: #e2e2df; }
+  .paper-card.active { background: var(--card); border-color: var(--line); }
+  .paper-card .pid { font-size: 11px; color: var(--muted); }
+  .paper-card .pt { font-size: 13px; font-weight: 500; }
+  .paper-card .pmeta { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .paper-card .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 10px; padding: 1px 6px; border-radius: 8px; margin-top: 4px; font-weight: 600; }
+  main { padding: 28px 36px 80px; max-width: 1300px; }
+  h1 { font-size: 24px; margin: 0 0 6px; line-height: 1.25; }
+  .citation { color: var(--muted); margin: 0 0 4px; font-size: 13px; }
+  .doi { font-family: ui-monospace, "SF Mono", monospace; font-size: 12px; color: var(--muted); margin: 0 0 24px; }
+  .paper-section { display: none; }
+  .paper-section.active { display: block; }
+
+  .model { background: var(--card); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 22px; overflow: hidden; }
+  .model-header { padding: 18px 26px; background: #fafaf7; border-bottom: 1px solid var(--line); }
+  .model-id { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+  .model-h2 { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.3; }
+  .model-sub { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+  .model-body { padding: 22px 26px; }
+
+  .section { display: grid; grid-template-columns: 150px 1fr; gap: 14px 20px; align-items: start; padding: 18px 0; border-bottom: 1px dashed var(--line); }
+  .section:last-of-type { border-bottom: none; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; padding-top: 4px; }
+  .section-content { font-size: 14px; line-height: 1.6; }
+  .section-content strong { color: var(--ink); }
+  .section-content p { margin: 0 0 10px; }
+  .section-content p:last-child { margin-bottom: 0; }
+
+  .timeline { display: flex; gap: 0; margin: 10px 0 0; }
+  .tl-step { flex: 1; padding: 12px 16px; line-height: 1.4; }
+  .tl-step.iv { background: var(--tl-iv); color: var(--tl-iv-ink); }
+  .tl-step.dv { background: var(--tl-dv); color: var(--tl-dv-ink); }
+  .tl-step.both { background: linear-gradient(90deg, var(--tl-iv) 0%, var(--tl-dv) 100%); color: var(--ink); }
+  .tl-step .wave { display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; opacity: 0.85; }
+  .tl-step .what { font-size: 13px; font-weight: 500; }
+
+  .var-block { background: var(--eq-bg); border: 1px solid var(--line); border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+  .var-block h4 { margin: 0 0 6px; font-size: 13px; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+  .var-block h4 .role { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; background: var(--accent); color: white; padding: 2px 6px; border-radius: 3px; font-weight: 700; }
+  .var-block h4 .role.dv { background: var(--tl-dv-ink); }
+  .var-block h4 .role.cov { background: var(--muted); }
+  .var-block p { margin: 0 0 4px; font-size: 13px; color: var(--ink); }
+  .var-block .detail { font-size: 12px; color: var(--muted); }
+
+  .eq-table { background: var(--eq-bg); border: 1px solid var(--line); border-radius: 6px; padding: 14px 18px; overflow-x: auto; }
+  .eq-table table { border-collapse: collapse; font-family: ui-monospace, "SF Mono", monospace; font-size: 13px; }
+  .eq-table td { padding: 3px 0; vertical-align: top; }
+  .eq-table .focal { background: #fff3a8; padding: 1px 5px; border-radius: 3px; font-weight: 700; color: #5c4500; }
+  .eq-table .lhs { color: var(--accent); font-weight: 600; }
+  .eq-table .slot { background: #e7e3d4; border: 1px dashed #b3a96a; padding: 0 5px; border-radius: 3px; font-style: italic; color: #5c4500; }
+  .eq-table .annotate { color: var(--muted); font-size: 11px; font-style: italic; padding-left: 14px; font-family: -apple-system, system-ui, sans-serif; }
+  .eq-table .annotate.focal-note { color: var(--accent); font-weight: 600; font-style: normal; }
+
+  .excluded-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .excluded-table th, .excluded-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .excluded-table th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+
+  .matrix-wrap { background: #fafaf7; border-top: 2px solid var(--line); padding: 18px 26px 24px; }
+  .matrix-wrap .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; margin-bottom: 4px; }
+  .matrix-wrap .label-meta { color: var(--muted); font-size: 12px; margin-bottom: 14px; }
+  table.matrix { width: 100%; border-collapse: separate; border-spacing: 4px; font-size: 12px; }
+  table.matrix th { text-align: left; padding: 8px 6px; }
+  table.matrix th.col-head { text-align: center; color: var(--ink); font-size: 11px; font-weight: 600; padding: 4px 4px; line-height: 1.2; }
+  table.matrix td.row-head { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 8px 10px; font-weight: 600; color: var(--ink); font-size: 12px; width: 130px; vertical-align: middle; line-height: 1.3; }
+  table.matrix td.row-head .iv-meta { font-weight: 400; color: var(--muted); font-size: 10px; margin-top: 2px; }
+  table.matrix td.cell { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 6px 4px; text-align: center; font-family: ui-monospace, "SF Mono", monospace; line-height: 1.25; vertical-align: middle; min-width: 60px; }
+  table.matrix td.cell.sig { background: var(--sig-soft); border-color: var(--sig); }
+  table.matrix td.cell .native { display: block; }
+  table.matrix td.cell .b { font-weight: 700; font-size: 12px; }
+  table.matrix td.cell.sig .b { color: var(--sig); }
+  table.matrix td.cell .ci { display: block; color: var(--muted); font-size: 10px; }
+  table.matrix td.cell .p { display: block; font-size: 10px; color: var(--muted); font-weight: 600; }
+  table.matrix td.cell.sig .p { color: var(--sig); }
+  /* Derived Cohen's d — shown beneath the native metric. Common scale across papers. */
+  table.matrix td.cell .derived { display: block; margin-top: 4px; padding-top: 4px; border-top: 1px dotted var(--line); color: #7a4a99; font-size: 10px; }
+  table.matrix td.cell .derived .d-val { font-weight: 700; }
+  table.matrix td.cell .derived .d-ci { display: block; opacity: 0.75; font-size: 9px; }
+  table.matrix td.cell.sig .derived { border-top-color: var(--sig); }
+
+  /* For paper 156 wide matrix */
+  table.matrix.compact td.row-head { font-size: 11px; width: 110px; padding: 6px 8px; }
+  table.matrix.compact td.cell .b { font-size: 11px; }
+  table.matrix.compact td.cell { min-width: 55px; padding: 5px 3px; }
+  table.matrix.compact td.cell .derived { font-size: 9px; }
+  table.matrix.compact td.cell .derived .d-ci { font-size: 8px; }
+</style>
+</head>
+<body>
+<div class="layout">
+
+<aside>
+  <h2>Papers (2 of 69)</h2>
+  <div class="paper-card" data-paper="394">
+    <div class="pid">#394</div>
+    <div class="pt">Screen time and mental health: a prospective analysis of the ABCD Study</div>
+    <div class="pmeta">Nagata et al. · 2024 · BMC Public Health</div>
+    <div class="badge">1 model · 18 estimates</div>
+  </div>
+  <div class="paper-card active" data-paper="156">
+    <div class="pid">#156</div>
+    <div class="pt">Screen media use and sleep disturbance symptom severity in children</div>
+    <div class="pmeta">Hisler et al. · 2020 · Sleep Health</div>
+    <div class="badge">2 models · 66 estimates</div>
+  </div>
+  <div style="color:var(--muted); font-size:12px; padding:10px; line-height:1.4;">
+    <em>(67 more papers to add)</em>
+  </div>
+</aside>
+
+<main>
+
+<!-- ====================================================================
+     PAPER 394 — Nagata 2024 BMC Public Health
+==================================================================== -->
+<section class="paper-section" data-paper="394">
+<h1>Screen time and mental health: a prospective analysis of the ABCD Study</h1>
+<p class="citation">Nagata JM, Al-Shoaibi AAA, Leong AW, Zamora G, Testa A, Ganson KT, Baker FC. <em>BMC Public Health</em> (2024) 24:2686.</p>
+<p class="doi">DOI: <a href="https://doi.org/10.1186/s12889-024-20102-x" target="_blank">10.1186/s12889-024-20102-x</a></p>
+
+<article class="model">
+
+  <header class="model-header">
+    <div class="model-id">Extracted model · 18 phone/SM estimates</div>
+    <h2 class="model-h2">Mixed-effects linear regression of CBCL DSM-oriented symptom t-scores on baseline phone/SM modalities, fully adjusted</h2>
+    <p class="model-sub">A single regression specification fit independently for every combination of 3 phone/SM IVs (texting, video chat, social media) × 6 mental-health DVs (depressive, anxiety, somatic, ADHD, ODD, conduct CBCL DSM-oriented scales) = 18 estimates of β₁. Identical sample, covariates, software, weighting, and equation across all 18; only the IV and DV change.</p>
+  </header>
+
+  <div class="model-body">
+
+    <div class="section">
+      <div class="section-label">Design</div>
+      <div class="section-content">
+        <p>Prospective longitudinal cohort with repeated outcome measurement. Participants were assessed at baseline (Year 0) and again at one-year (Year 1) and two-year (Year 2) follow-up visits as part of the ABCD Study's normal annual data-collection schedule.</p>
+        <p>Baseline phone/SM exposure (and the baseline CBCL t-score for whichever scale serves as the DV) is the predictor. The CBCL t-score at Year 1 and Year 2 is the outcome. Both follow-up scores enter the regression as separate rows in a long-format dataset (one row per child × follow-up wave); the model treats them as repeated measurements of the same outcome variable. The Y1 and Y2 follow-up data-collection period (2018–2020) overlapped with the COVID-19 pandemic, which is captured by the <code>covid_period</code> covariate.</p>
+        <p>The regression does not include a wave × IV interaction term, so β₁ is estimated as a single coefficient that is constrained to be the same at Year 1 and Year 2. β₁ therefore characterizes the texting (or video chat / social media) → CBCL relationship pooled across the two-year follow-up window, not separately at each wave.</p>
+        <div class="timeline">
+          <div class="tl-step iv">
+            <span class="wave">Year 0 — baseline (2016–2018)</span>
+            <span class="what">Phone/SM hours/day measured (texting, video chat, social media — separately) · CBCL DSM-oriented baseline t-score for each scale measured (used as covariate)</span>
+          </div>
+          <div class="tl-step dv">
+            <span class="wave">Year 1 + Year 2 — follow-up (2017–2020)</span>
+            <span class="what">CBCL DSM-oriented symptom t-score (parent-reported) for each of the 6 scales: depressive, anxiety, somatic, ADHD, oppositional defiant, conduct. Each child contributes one Y1 measurement and one Y2 measurement; both enter the long-format dataset as separate rows of the outcome variable.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Sample</div>
+      <div class="section-content">
+        <p><strong>Source cohort:</strong> ABCD Study Release 4.0; baseline data collected 2016–2018 across 21 U.S. recruitment sites coordinated by the National Institutes of Health. The full ABCD baseline includes 11,875 children aged 9–10 years.</p>
+        <p><strong>Analytic sample N = 9,538.</strong> Restricted to participants with complete data on baseline screen-time measures, baseline covariates, and the CBCL outcome at both Year 1 and Year 2. Excluded N = 2,337 (19.7% of baseline) for missing data on those variables (Appendix A of the paper compares included vs. excluded participants on demographics).</p>
+        <p><strong>Demographics of the analytic sample:</strong> mean age 9.9 years (SD 0.6) at baseline; 48.8% female; 52.4% non-Hispanic White, 20.1% Latino/Hispanic, 17.3% non-Hispanic Black, 5.5% non-Hispanic Asian, 3.2% Native American, 1.5% Other.</p>
+        <p><strong>The same N = 9,538 sample is used for every one of the 18 IV × DV estimates.</strong></p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Independent variable (IV)</div>
+      <div class="section-content">
+        <div class="var-block">
+          <h4>Baseline phone/SM hours per day <span class="role">FOCAL</span></h4>
+          <p>Three separately-modeled predictors — one phone/SM modality per estimate. Each runs as the focal IV in its own model fit; the other two modalities are not included in the same regression as covariates.</p>
+          <p class="detail">Instrument: ABCD Youth Screen Time Survey — administered to youth at baseline. Asks how many hours per weekday and per weekend day they spent on each of six screen modalities (excluding school use). The three phone/SM-relevant items are <strong>texting</strong>, <strong>video chatting</strong> (e.g., Skype, FaceTime), and <strong>social media</strong> (e.g., Facebook, Instagram, Twitter).</p>
+          <p class="detail">For each modality, weighted average daily hours computed as <code>(weekday × 5 + weekend × 2) / 7</code>. Continuous (hours/day units), self-reported.</p>
+          <p class="detail">Baseline distribution in analytic sample (M ± SD): texting 0.2 ± 0.6 h/day · video chat 0.3 ± 0.7 h/day · social media 0.1 ± 0.1 h/day. Floor effects expected — most children at age 9–10 are below the 13+ minimum age for most SM platforms.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Dependent variable (DV)</div>
+      <div class="section-content">
+        <div class="var-block">
+          <h4>CBCL DSM-oriented symptom t-score, repeated measures at Y1 and Y2 <span class="role dv">DV</span></h4>
+          <p>Six separately-modeled outcomes — one CBCL DSM-oriented scale per estimate.</p>
+          <p class="detail">Instrument: Child Behavior Checklist (CBCL/4–18) — parent-report. 113 items rated 0–2. Items aggregate into six DSM-oriented scales: depressive, anxiety, somatic, ADHD, oppositional defiant, conduct. Raw scores converted to t-scores (mean 50, SD 10).</p>
+          <p class="detail">Year 1 and Year 2 follow-up t-scores enter the model. Baseline (Year 0) t-score on the same scale is included as a covariate. Each child contributes two follow-up t-score rows to the long-format dataset.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Covariates</div>
+      <div class="section-content">
+        <div class="var-block"><h4>Baseline value of the outcome scale <span class="role cov">cov</span></h4><p class="detail">For every estimate, the baseline (Year 0) CBCL t-score on the <em>same</em> scale that serves as the DV is included as a covariate. Autoregressive control — lets β₁ be interpreted as the association of baseline phone/SM use with <em>change</em>-style follow-up symptoms net of baseline symptom level.</p></div>
+        <div class="var-block"><h4>Age (years) <span class="role cov">cov</span></h4><p class="detail">Continuous, measured in years at baseline.</p></div>
+        <div class="var-block"><h4>Sex <span class="role cov">cov</span></h4><p class="detail">Binary (female / male).</p></div>
+        <div class="var-block"><h4>Race / ethnicity <span class="role cov">cov</span></h4><p class="detail">5 categories: non-Hispanic White (reference), Latino/Hispanic, non-Hispanic Black, non-Hispanic Asian, Native American/Other. Entered as a set of dummy variables.</p></div>
+        <div class="var-block"><h4>Household income <span class="role cov">cov</span></h4><p class="detail">6 brackets: < $25K through ≥ $200K. Entered as a set of dummy variables.</p></div>
+        <div class="var-block"><h4>Parent education <span class="role cov">cov</span></h4><p class="detail">Binary: high school or less vs. college or more.</p></div>
+        <div class="var-block"><h4>Data-collection period <span class="role cov">cov</span></h4><p class="detail">Binary: pre vs. during COVID-19 (March 13, 2020 cutoff).</p></div>
+        <div class="var-block"><h4>Study site <span class="role cov">cov (random intercept)</span></h4><p class="detail">21 ABCD recruitment sites across 17 U.S. states. Entered as a random intercept.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">The full model</div>
+      <div class="section-content">
+        <div class="eq-table">
+          <table>
+            <tr><td><span class="lhs"><span class="slot">CBCL_DV</span><sub>i,wave</sub></span></td><td>=</td><td>β₀</td><td class="annotate">overall intercept</td></tr>
+            <tr><td></td><td>+</td><td><span class="focal">β₁ · <span class="slot">phone/SM_IV</span><sub>i</sub></span></td><td class="annotate focal-note">FOCAL — β₁ is what we extract</td></tr>
+            <tr><td></td><td>+</td><td>β₂ · <span class="slot">CBCL_DV_baseline</span><sub>i</sub></td><td class="annotate">baseline value of the outcome scale (autoregressive)</td></tr>
+            <tr><td></td><td>+</td><td>β₃ · age<sub>i</sub></td><td class="annotate">years at baseline</td></tr>
+            <tr><td></td><td>+</td><td>β₄ · sex<sub>i</sub></td><td class="annotate">female / male</td></tr>
+            <tr><td></td><td>+</td><td>β₅..₈ · race<sub>i</sub></td><td class="annotate">5 race/ethnicity categories (4 dummies)</td></tr>
+            <tr><td></td><td>+</td><td>β₉..₁₃ · income<sub>i</sub></td><td class="annotate">6 income brackets (5 dummies)</td></tr>
+            <tr><td></td><td>+</td><td>β₁₄ · parent_ed<sub>i</sub></td><td class="annotate">high school or less vs. college or more</td></tr>
+            <tr><td></td><td>+</td><td>β₁₅ · covid_period<sub>i</sub></td><td class="annotate">pre vs. during COVID-19</td></tr>
+            <tr><td></td><td>+</td><td><em>u</em><sub>site(i)</sub></td><td class="annotate">random intercept by study site</td></tr>
+            <tr><td></td><td>+</td><td>ε<sub>i,wave</sub></td><td class="annotate">residual (one per child × follow-up wave)</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Estimation choices</div>
+      <div class="section-content">
+        <div class="var-block"><h4>Statistical software</h4><p class="detail">Nagata used <code>Stata 18.0</code>, fit via Stata's <code>mixed</code> procedure for mixed-effects regression.</p></div>
+        <div class="var-block"><h4>Estimation method</h4><p class="detail">Maximum likelihood — picks the parameter values that make the observed outcome data most probable under the model.</p></div>
+        <div class="var-block"><h4>Sample weighting (ACS propensity weights)</h4><p class="detail">Propensity-style weights anchored to the American Community Survey (ACS), the U.S. Census Bureau's nationwide demographic survey. With these weights, β₁ approximates the texting → CBCL relationship in a U.S.-representative sample of 9–10-year-olds.</p></div>
+        <div class="var-block"><h4>Random intercept for study site</h4><p class="detail">A single random intercept term for study site (21 sites). Soaks up site-level differences so β₁ reflects within-site relationships and the standard error correctly accounts for site clustering.</p></div>
+        <div class="var-block"><h4>Significance threshold (α)</h4><p class="detail">α = 0.05.</p></div>
+        <div class="var-block"><h4>Multiple-comparison correction</h4><p class="detail">None reported. With 18 tests at α = 0.05, roughly one false positive would be expected even if no associations existed.</p></div>
+        <div class="var-block"><h4>Effect-modification (interaction) testing</h4><p class="detail">Sex interactions all p &gt; 0.05 (no sex-stratified estimates reported). Race/ethnicity interactions significant for some outcomes — but stratified results in Table 3 are total screen time only, not per-modality.</p></div>
+        <div class="var-block"><h4>Sensitivity analysis</h4><p class="detail">Appendix B re-fits the 18 models adding sleep duration and physical activity. Results were "similar but slightly attenuated" but per-modality numbers were not printed.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Models considered but not extracted</div>
+      <div class="section-content">
+        <table class="excluded-table">
+          <thead><tr><th>Model</th><th>Where</th><th>Why not extracted</th></tr></thead>
+          <tbody>
+            <tr><td>Model 1 (unadjusted)</td><td>Table 2, left columns</td><td>Reported for transparency to demonstrate covariate-driven attenuation; the paper anchors no claim to it. Adds no new information about the phone/SM ↔ trait relationship.</td></tr>
+            <tr><td>Race-stratified Model 2</td><td>Table 3</td><td>Reports stratified estimates for total screen time only, not per modality. No phone/SM-specific stratified estimates exist.</td></tr>
+            <tr><td>Sensitivity adding sleep + PA</td><td>Appendix B</td><td>Per-modality estimates were not printed.</td></tr>
+            <tr><td>Interaction tests</td><td>In-text</td><td>Tests of whether the slope differs across subgroups — produce p-values for the interaction, not new phone/SM estimates.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matrix-wrap">
+    <div class="label">Estimated effects of β₁ (focal) — 3 IVs × 6 DVs = 18 estimates</div>
+    <div class="label-meta"><strong style="color: var(--ink);">Contrast:</strong> derived d is the effect of a 1-SD-of-IV continuous change on the CBCL t-score. <em>Not directly comparable to derived d's from papers using a different contrast (e.g., paper 156's ≥2 hr vs &lt;2 hr group difference).</em><br><br>Source: Table 2, fully adjusted Model 2. Each cell reports two effect sizes: the native metric (B [95% CI], p) on top, and a derived Cohen's d [95% CI] below the dotted line in purple. The derived d is computed as β<sub>std</sub> = B · SD<sub>IV</sub> / SD<sub>DV</sub>, then d = 2β<sub>std</sub> / √(1 − β<sub>std</sub>²) (Borenstein et al. 2009 eq 7.1). SD<sub>DV</sub> = 10 by construction (CBCL t-score). SD<sub>IV</sub> per modality is shown in the row label. Cells shaded green indicate p &lt; .05. Built by <code>scripts/build_matrices.py</code> from <code>scripts/paper_394.json</code>.</div>
+    <table class="matrix compact">
+  <thead><tr>
+    <th></th>
+    <th class="col-head">Depressive</th>
+    <th class="col-head">Anxiety</th>
+    <th class="col-head">Somatic</th>
+    <th class="col-head">ADHD</th>
+    <th class="col-head">ODD</th>
+    <th class="col-head">Conduct</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="row-head">Texting<div class="iv-meta">M = 0.2 h/day, SD = 0.6</div></td>
+      <td class="cell sig"><div class="native"><span class="b">B = 0.26</span><span class="ci">[0.09, 0.44]</span><span class="p">p = .005</span></div><div class="derived"><span class="d-val">d &asymp; 0.031</span><span class="d-ci">[0.011, 0.053]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.10</span><span class="ci">[-0.07, 0.27]</span><span class="p">p = .231</span></div><div class="derived"><span class="d-val">d &asymp; 0.012</span><span class="d-ci">[-0.008, 0.032]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.19</span><span class="ci">[-0.04, 0.42]</span><span class="p">p = .101</span></div><div class="derived"><span class="d-val">d &asymp; 0.023</span><span class="d-ci">[-0.005, 0.050]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.18</span><span class="ci">[-0.02, 0.39]</span><span class="p">p = .080</span></div><div class="derived"><span class="d-val">d &asymp; 0.022</span><span class="d-ci">[-0.002, 0.047]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.12</span><span class="ci">[-0.04, 0.28]</span><span class="p">p = .151</span></div><div class="derived"><span class="d-val">d &asymp; 0.014</span><span class="d-ci">[-0.005, 0.034]</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">B = 0.10</span><span class="ci">[0.05, 0.16]</span><span class="p">p = .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.012</span><span class="d-ci">[0.006, 0.019]</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Video chat<div class="iv-meta">M = 0.3 h/day, SD = 0.7</div></td>
+      <td class="cell sig"><div class="native"><span class="b">B = 0.35</span><span class="ci">[0.19, 0.51]</span><span class="p">p &lt; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.049</span><span class="d-ci">[0.027, 0.071]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.12</span><span class="ci">[-0.06, 0.30]</span><span class="p">p = .189</span></div><div class="derived"><span class="d-val">d &asymp; 0.017</span><span class="d-ci">[-0.008, 0.042]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.05</span><span class="ci">[-0.21, 0.31]</span><span class="p">p = .683</span></div><div class="derived"><span class="d-val">d &asymp; 0.007</span><span class="d-ci">[-0.029, 0.043]</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">B = 0.22</span><span class="ci">[0.03, 0.41]</span><span class="p">p = .022</span></div><div class="derived"><span class="d-val">d &asymp; 0.031</span><span class="d-ci">[0.004, 0.057]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.11</span><span class="ci">[-0.09, 0.33]</span><span class="p">p = .246</span></div><div class="derived"><span class="d-val">d &asymp; 0.015</span><span class="d-ci">[-0.013, 0.046]</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">B = 0.33</span><span class="ci">[0.11, 0.56]</span><span class="p">p = .006</span></div><div class="derived"><span class="d-val">d &asymp; 0.046</span><span class="d-ci">[0.015, 0.078]</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Social media<div class="iv-meta">M = 0.1 h/day, SD = 0.1</div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.14</span><span class="ci">[-0.09, 0.33]</span><span class="p">p = .230</span></div><div class="derived"><span class="d-val">d &asymp; 0.003</span><span class="d-ci">[-0.002, 0.007]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.004</span><span class="ci">[-0.24, 0.25]</span><span class="p">p = .971</span></div><div class="derived"><span class="d-val">d &asymp; 0.000</span><span class="d-ci">[-0.005, 0.005]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.11</span><span class="ci">[-0.16, 0.38]</span><span class="p">p = .421</span></div><div class="derived"><span class="d-val">d &asymp; 0.002</span><span class="d-ci">[-0.003, 0.008]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.04</span><span class="ci">[-0.31, 0.39]</span><span class="p">p = .805</span></div><div class="derived"><span class="d-val">d &asymp; 0.001</span><span class="d-ci">[-0.006, 0.008]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.07</span><span class="ci">[-0.19, 0.33]</span><span class="p">p = .617</span></div><div class="derived"><span class="d-val">d &asymp; 0.001</span><span class="d-ci">[-0.004, 0.007]</span></div></td>
+      <td class="cell"><div class="native"><span class="b">B = 0.22</span><span class="ci">[-0.02, 0.47]</span><span class="p">p = .071</span></div><div class="derived"><span class="d-val">d &asymp; 0.004</span><span class="d-ci">[0.000, 0.009]</span></div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</article>
+</section>
+
+
+<!-- ====================================================================
+     PAPER 156 — Hisler 2020 Sleep Health
+==================================================================== -->
+<section class="paper-section active" data-paper="156">
+
+<h1>Screen media use and sleep disturbance symptom severity in children</h1>
+<p class="citation">Hisler GC, Hasler BP, Franzen PL, Clark DB, Twenge JM. <em>Sleep Health</em> (2020) 6:731–742.</p>
+<p class="doi">DOI: <a href="https://doi.org/10.1016/j.sleh.2020.07.002" target="_blank">10.1016/j.sleh.2020.07.002</a></p>
+
+<!-- ============== MODEL 1: linear regression / Cohen's d ============== -->
+<article class="model">
+
+  <header class="model-header">
+    <div class="model-id">Model 1 of 2 · 54 phone/SM estimates</div>
+    <h2 class="model-h2">Linear regression of continuous sleep variables on dichotomized phone/SM use, fully adjusted (Cohen's d effect size)</h2>
+    <p class="model-sub">A single regression specification fit independently for every combination of 6 phone/SM IVs (3 modalities × 2 day-types) × 9 sleep DVs = 54 estimates. Each fit is an OLS linear regression of the continuous sleep variable on the dichotomized phone/SM IV (≥2 hours vs. &lt;2 hours), adjusted for the same 7 covariates, with Cohen's d computed from the adjusted group means as the reported effect size. Same sample, covariates, and equation across all 54 estimates; only the IV and DV change.</p>
+  </header>
+
+  <div class="model-body">
+
+    <div class="section">
+      <div class="section-label">Design</div>
+      <div class="section-content">
+        <p>Cross-sectional analysis of a single ABCD timepoint — baseline (Release 2.0). Both the IV (phone/SM use) and DVs (sleep variables) were measured at the same baseline visit. There is no longitudinal component: each participant contributes one observation, and the regression has no time/wave structure.</p>
+        <p>The analyses were pre-registered (hypotheses H1–H7 specified before data examination). Per the original pre-registration the IVs were going to be continuous, but data skew on the screen-time variables forced a switch to dichotomization at the AAP-recommended &lt;2 vs ≥2 hours threshold.</p>
+        <div class="timeline">
+          <div class="tl-step both">
+            <span class="wave">ABCD baseline (single cross-section, ages 9–10)</span>
+            <span class="what">Phone/SM hours per day on weekdays and weekend days (IV) and 9 sleep-disturbance variables (DVs) all measured at the same visit. One observation per child.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Sample</div>
+      <div class="section-content">
+        <p><strong>Source cohort:</strong> ABCD Study Release 2.0; baseline (2016–2018), 21 U.S. recruitment sites. The full ABCD baseline includes 11,878 participants ages 9–10.</p>
+        <p><strong>Analytic sample:</strong> N varies between 10,666 and 10,676 across analyses depending on which variables are missing for which children (listwise deletion). The "≥2 hours" group sizes for the phone/SM IVs are small relative to the "&lt;2 hours" group, because phone/SM use was uncommon in the 9–10-year-old sample:</p>
+        <ul style="margin: 0 0 8px 20px; font-size: 13px;">
+          <li><strong>Weekday texting:</strong> N=10,385 (&lt;2 hr) vs. N=291 (≥2 hr) — 2.8% high users</li>
+          <li><strong>Weekend texting:</strong> N=10,264 (&lt;2 hr) vs. N=410 (≥2 hr) — 3.8%</li>
+          <li><strong>Weekday social media:</strong> N=10,516 vs. N=160 — 1.5%</li>
+          <li><strong>Weekend social media:</strong> N=10,438 vs. N=236 — 2.2%</li>
+          <li><strong>Weekday video chat:</strong> N=10,448 vs. N=223 — 2.1%</li>
+          <li><strong>Weekend video chat:</strong> N=10,322 vs. N=344 — 3.2%</li>
+        </ul>
+        <p><strong>Demographics:</strong> mean age 9.91 years (SD 0.62); 52% female; 53% White, 20% Hispanic/Latinx, 18% Black, 5% Asian, 2% Indigenous American. Middle to upper class on average (mean parent education 16.61 years; mean family income $103,309; 69% with currently employed parent).</p>
+        <p>Some children in the sample were siblings or twins; sensitivity analyses with vs. without siblings/twins yielded similar findings, so the paper presents results in the full sample.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Independent variable (IV)</div>
+      <div class="section-content">
+        <div class="var-block">
+          <h4>Phone/SM use, dichotomized at ≥2 vs. &lt;2 hours/day <span class="role">FOCAL</span></h4>
+          <p>Six separately-modeled binary predictors — one per (modality × day-type) combination. Each runs as the focal IV in its own regression fit; the other five are not in the same regression as covariates.</p>
+          <p class="detail">Instrument: 12-item ABCD screen-time questionnaire administered at baseline. Six modalities (TV, videos like YouTube, video games, texting, social media, video chat) × 2 day-types (typical weekday, typical weekend) = 12 raw items. Response options: "none" (0), "&lt;30 minutes" (0.25), "30 minutes" (0.5), "1 hour" (1), "2 hours" (2), "3 hours" (3), "4+ hours" (4). The three phone/SM-relevant modalities (texting, social media, video chat) generate 6 phone/SM-qualifying IVs.</p>
+          <p class="detail">Continuous responses were dichotomized into 0 (&lt;2 hours) and 1 (≥2 hours), based on the American Academy of Pediatrics recommendation to limit recreational screen use to ≤2 hours/day. Dichotomization was a deviation from the pre-registered plan to use continuous predictors; the authors switched because the continuous variables were severely right-skewed (most children reported very little phone/SM use at age 9–10).</p>
+          <p class="detail">β₁ in the regression therefore represents a <em>group difference</em> (≥2 hr group vs. &lt;2 hr group), not a per-hour slope. The reported effect size (Cohen's d) is computed from the adjusted group means and pooled SD.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Dependent variables (DVs)</div>
+      <div class="section-content">
+        <p style="font-size: 13px; margin-bottom: 10px;">Nine continuous sleep variables, each modeled as its own DV in a separate regression. All come from parent-reported instruments at baseline.</p>
+        <div class="var-block"><h4>Sleep duration (hours) <span class="role dv">DV</span></h4><p class="detail">Single item from the Sleep Disturbance Scale for Children (SDSC): "How many hours of sleep does your child get on most nights?" Response options recoded into approximate hours: 9–11 hr → 10, 8–9 → 8.5, 7–8 → 7.5, 5–7 → 6, &lt;5 → 2.5. Sample mean = 9.00 (SD 1.11) hours.</p></div>
+        <div class="var-block"><h4>Sleep onset latency <span class="role dv">DV</span></h4><p class="detail">Single SDSC item: "How long after going to bed does your child usually fall asleep?" 5-point scale: &lt;15 min, 15–30, 30–45, 45–60, &gt;60 min. Sample mean = 1.93 (SD 0.99).</p></div>
+        <div class="var-block"><h4>Insomnia symptom severity <span class="role dv">DV</span></h4><p class="detail">7-item SDSC subscale (e.g., "the child has difficulty getting to sleep at night"). α = 0.73. Items rated "never" (1) to "always (daily)" (5). Sum score; sample M = 11.76 (SD 3.75).</p></div>
+        <div class="var-block"><h4>Sleep disordered breathing <span class="role dv">DV</span></h4><p class="detail">3-item SDSC subscale (e.g., "the child has difficulty in breathing during the night"). α = 0.37. Sum score; sample M = 3.77 (SD 1.26).</p></div>
+        <div class="var-block"><h4>Arousal disturbances <span class="role dv">DV</span></h4><p class="detail">3-item SDSC subscale (e.g., "you have observed the child sleepwalking"). α = 0.56. Sum score; sample M = 3.44 (SD 0.92).</p></div>
+        <div class="var-block"><h4>Sleep-wake transition disturbances <span class="role dv">DV</span></h4><p class="detail">6-item SDSC subscale (e.g., "the child startles or jerks parts of the body while falling asleep"). α = 0.59. Sum score; sample M = 8.18 (SD 2.63).</p></div>
+        <div class="var-block"><h4>Excessive sleepiness <span class="role dv">DV</span></h4><p class="detail">5-item SDSC subscale (e.g., "the child experiences daytime sleepiness"). α = 0.72. Sum score; sample M = 6.95 (SD 2.44).</p></div>
+        <div class="var-block"><h4>Sleep hyperhidrosis <span class="role dv">DV</span></h4><p class="detail">2-item SDSC subscale (e.g., "the child sweats excessively during the night"). α = 0.81. Sum score; sample M = 2.44 (SD 1.18).</p></div>
+        <div class="var-block"><h4>Total sleep-wake disturbance score <span class="role dv">DV</span></h4><p class="detail">All 26 SDSC symptom items summed (excludes the sleep-duration and sleep-latency items). α = 0.65. Sample M = 36.54 (SD 8.24). A score of 39 was used as the clinical threshold for "disturbed sleep" in the logistic models below.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Covariates</div>
+      <div class="section-content">
+        <div class="var-block"><h4>Age (years) <span class="role cov">cov</span></h4><p class="detail">Continuous, measured in years at baseline.</p></div>
+        <div class="var-block"><h4>Gender <span class="role cov">cov</span></h4><p class="detail">Binary: Male / transgender male = 0, Female / transgender female = 1.</p></div>
+        <div class="var-block"><h4>Race <span class="role cov">cov</span></h4><p class="detail">Binary: White = 0 vs. non-White = 1. (Coarser than paper 394's 5-category coding.)</p></div>
+        <div class="var-block"><h4>Ethnicity <span class="role cov">cov</span></h4><p class="detail">Binary: Hispanic/Latinx = 0 vs. non-Hispanic/non-Latinx = 1.</p></div>
+        <div class="var-block"><h4>Family income <span class="role cov">cov</span></h4><p class="detail">Continuous on a 1–10 ordinal scale (1 = less than $5,000, 10 = $200,000 and greater).</p></div>
+        <div class="var-block"><h4>Parent education <span class="role cov">cov</span></h4><p class="detail">Continuous on a 0–21 ordinal scale (0 = no formal education, 21 = doctoral degree).</p></div>
+        <div class="var-block"><h4>Parent employment <span class="role cov">cov</span></h4><p class="detail">Binary: currently working = 1, not currently working = 0.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">The full model</div>
+      <div class="section-content">
+        <div class="eq-table">
+          <table>
+            <tr><td><span class="lhs"><span class="slot">sleep_DV</span><sub>i</sub></span></td><td>=</td><td>β₀</td><td class="annotate">overall intercept</td></tr>
+            <tr><td></td><td>+</td><td><span class="focal">β₁ · <span class="slot">phone/SM_IV</span><sub>i</sub></span></td><td class="annotate focal-note">FOCAL — dichotomized 0/1 (≥2 hr vs &lt;2 hr); β₁ is the adjusted group-mean difference</td></tr>
+            <tr><td></td><td>+</td><td>β₂ · age<sub>i</sub></td><td class="annotate">years at baseline</td></tr>
+            <tr><td></td><td>+</td><td>β₃ · gender<sub>i</sub></td><td class="annotate">female / male (binary)</td></tr>
+            <tr><td></td><td>+</td><td>β₄ · race<sub>i</sub></td><td class="annotate">White vs. non-White (binary)</td></tr>
+            <tr><td></td><td>+</td><td>β₅ · ethnicity<sub>i</sub></td><td class="annotate">Hispanic/Latinx vs. non-Hispanic/non-Latinx (binary)</td></tr>
+            <tr><td></td><td>+</td><td>β₆ · income<sub>i</sub></td><td class="annotate">family income (1–10 ordinal)</td></tr>
+            <tr><td></td><td>+</td><td>β₇ · parent_ed<sub>i</sub></td><td class="annotate">parent education (0–21 ordinal)</td></tr>
+            <tr><td></td><td>+</td><td>β₈ · parent_emp<sub>i</sub></td><td class="annotate">parent employment (binary)</td></tr>
+            <tr><td></td><td>+</td><td>ε<sub>i</sub></td><td class="annotate">residual (one per child)</td></tr>
+          </table>
+          <p style="margin: 12px 0 0; font-size: 12px; color: var(--muted);">Cohen's d is computed from the adjusted means at IV = 0 and IV = 1 and the pooled standard deviation, not directly returned by the regression. d ≥ 0.20 is conventionally "small," d ≥ 0.50 "medium," d ≥ 0.80 "large." Most d's in this paper are below 0.20.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Estimation choices</div>
+      <div class="section-content">
+        <div class="var-block"><h4>Statistical method</h4><p class="detail">Ordinary linear regression for the continuous sleep DVs. The paper does not specify the software package; analyses were pre-registered on OSF.</p></div>
+        <div class="var-block"><h4>Estimation method</h4><p class="detail">Ordinary least squares (OLS). Coefficients minimize the sum of squared residuals. Each of the 54 cells in the matrix below is its own OLS fit with the same predictors.</p></div>
+        <div class="var-block"><h4>Sample weighting</h4><p class="detail">No survey weights applied. Estimates describe the ABCD analytic sample, not a U.S.-representative population — different from paper 394's ACS-weighted approach.</p></div>
+        <div class="var-block"><h4>Familial nesting</h4><p class="detail">Some children are siblings or twins. The paper did <em>not</em> use a random intercept for family. Instead, sensitivity analyses with vs. without siblings/twins were run; results were similar so the paper reports the full sample without family clustering. The standard errors therefore do not formally account for sibling clustering, though the paper argues this is unlikely to materially affect inference given the similarity of the two sample versions.</p></div>
+        <div class="var-block"><h4>Significance threshold (α)</h4><p class="detail"><strong>α = 0.001</strong> — not the conventional 0.05. The paper writes: "in order to limit false-positive findings because of multiple inferential tests, only P-values less than .001 were interpreted." This is the paper's chosen approach to multiple-comparison correction (a uniform threshold across all 54+ tests rather than a formal Bonferroni or FDR procedure).</p></div>
+        <div class="var-block"><h4>Multiple-comparison correction</h4><p class="detail">Implemented as the α threshold above (p &lt; .001 required for interpretation), not via Bonferroni or FDR per-test adjustment. This makes the reported "significant" cells more conservative than they would be at α = 0.05.</p></div>
+        <div class="var-block"><h4>Effect-modification (interaction) testing</h4><p class="detail">The paper tested whether Black children or Hispanic/Latinx children differed from White children in the screen-use → sleep relationships, by adding race × IV and ethnicity × IV interactions. <strong>All such interaction terms were non-significant</strong> (all p &gt; .001), so no race- or ethnicity-stratified per-modality estimates were reported.</p></div>
+        <div class="var-block"><h4>Sensitivity analysis</h4><p class="detail">Two sensitivity checks were run: (1) the analyses were repeated with siblings/twins excluded — results similar; (2) for the non-TV and total screen-time composites only, the original pre-registered <em>continuous</em> IV was used in additional logistic regressions, yielding ORs of 1.05–1.07 per hour for insufficient sleep. Per-modality continuous estimates for phone/SM specifically were not reported.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Models considered but not extracted</div>
+      <div class="section-content">
+        <table class="excluded-table">
+          <thead><tr><th>Model</th><th>Where</th><th>Why not extracted</th></tr></thead>
+          <tbody>
+            <tr><td>TV-, video-, video-game-only IVs</td><td>Tables 2–3 rows for those modalities</td><td>Non-phone/non-SM modalities (TV, YouTube videos, video games on console/PC) — fail IC2.</td></tr>
+            <tr><td>Non-TV screen media composite IV</td><td>Tables 2–3 rows</td><td>Bundles texting + SM + video chat + video games + YouTube videos. Includes non-phone (gaming, videos) ingredients without per-modality breakout — fails IC2 Step 2.</td></tr>
+            <tr><td>Total screen media composite IV</td><td>Tables 2–3 rows</td><td>Bundles all 6 modalities including TV. Includes non-phone ingredients — fails IC2 Step 2.</td></tr>
+            <tr><td>Continuous-IV logistic regressions</td><td>In-text</td><td>The paper reports continuous-IV ORs only for the non-TV and total composites, not per phone/SM modality. No phone/SM-specific continuous estimates extractable.</td></tr>
+            <tr><td>Sibling/twin sensitivity analyses</td><td>In-text</td><td>"Findings did not differ when including or excluding siblings and twins"; per-modality numbers in the sibling-excluded version are not printed.</td></tr>
+            <tr><td>Race × IV / ethnicity × IV interactions</td><td>In-text</td><td>All interactions were non-significant at p &gt; .001, so no stratified per-modality estimates were reported.</td></tr>
+            <tr><td>Pre-registered continuous-IV linear regressions</td><td>Pre-registration / supplemental Table 1</td><td>Switched to dichotomized IVs in the body of the paper due to right-skew in the continuous variables. The continuous-IV phone/SM estimates are not reported in the body of the paper.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matrix-wrap">
+    <div class="label">Estimated effects of β₁ (focal) — 6 IVs × 9 sleep DVs = 54 estimates (Cohen's d)</div>
+    <div class="label-meta"><strong style="color: var(--ink);">Contrast:</strong> d is the ≥2 hr vs &lt;2 hr group-mean difference on the sleep DV, divided by pooled SD. <em>Not directly comparable to per-1-SD-of-IV d's from papers like 394.</em><br><br>Source: Tables 2 (weekday IVs) and 3 (weekend IVs) of the paper. Each cell reports Cohen's d (≥2 hr vs. &lt;2 hr group), computed from adjusted group means. The native metric here is already on the d scale, so no derived layer is shown. Cells shaded green indicate p &lt; .001 (the paper's interpretation threshold). Ordinary linear regression, n ≈ 10,666–10,676 per cell. The paper does not report exact p-values for each d — only flags p &lt; .001 in bold typography on the adjusted means; the d significance status here is inferred from that flagging in Tables 2 and 3. Built by <code>scripts/build_matrices.py</code> from <code>scripts/paper_156.json</code>.</div>
+
+    <table class="matrix compact">
+  <thead><tr>
+    <th></th>
+    <th class="col-head">Sleep<br>duration</th>
+    <th class="col-head">Onset<br>latency</th>
+    <th class="col-head">Insomnia</th>
+    <th class="col-head">Disordered<br>breathing</th>
+    <th class="col-head">Arousal</th>
+    <th class="col-head">Wake-<br>transition</th>
+    <th class="col-head">Excessive<br>sleepiness</th>
+    <th class="col-head">Hyper-<br>hidrosis</th>
+    <th class="col-head">Total<br>disturbance</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="row-head">Weekday texting<div class="iv-meta">2.8% high users</div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.21</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.05</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.12</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.01</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.03</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.10</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.09</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.10</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend texting<div class="iv-meta">3.8% high users</div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.20</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.07</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.10</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.01</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.05</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.15</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.07</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.14</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekday social media<div class="iv-meta">1.5% high users</div></td>
+      <td class="cell sig"><div class="native"><span class="b">d = -0.28</span><span class="p">p &lt; .001</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.04</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">d = 0.19</span><span class="p">p &lt; .001</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.08</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.16</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.01</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.11</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">d = 0.14</span><span class="p">p &lt; .001</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend social media<div class="iv-meta">2.2% high users</div></td>
+      <td class="cell sig"><div class="native"><span class="b">d = -0.14</span><span class="p">p &lt; .001</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.19</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.04</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.15</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.18</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.18</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.04</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">d = 0.22</span><span class="p">p &lt; .001</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekday video chat<div class="iv-meta">2.1% high users</div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.12</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.08</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.03</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.03</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.08</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.13</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.12</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.13</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.04</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend video chat<div class="iv-meta">3.2% high users</div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.20</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.05</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.18</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.13</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.01</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.01</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = -0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.11</span></div></td>
+      <td class="cell"><div class="native"><span class="b">d = 0.17</span></div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</article>
+
+
+<!-- ============== MODEL 2: logistic regression / relative risk ============== -->
+<article class="model">
+
+  <header class="model-header">
+    <div class="model-id">Model 2 of 2 · 12 phone/SM estimates</div>
+    <h2 class="model-h2">Logistic regression of binary clinical-threshold sleep outcomes on dichotomized phone/SM use, fully adjusted (relative risk)</h2>
+    <p class="model-sub">A second analytical specification with the same 6 phone/SM IVs but binary clinical-threshold sleep DVs. Two outcomes are tested: insufficient sleep (&lt;9 hours) and disturbed sleep (total SDSC ≥ 39). 6 IVs × 2 binary DVs = 12 estimates of relative risk. Same sample, covariates, and IV coding as Model 1; only the DV form (continuous → binary) and estimator (linear → logistic) differ.</p>
+  </header>
+
+  <div class="model-body">
+
+    <div class="section">
+      <div class="section-label">Design</div>
+      <div class="section-content">
+        <p>Same cross-sectional ABCD baseline analysis as Model 1, with the same IV (dichotomized phone/SM use) and same 7 covariates. The difference from Model 1 is the DV: instead of analyzing the full continuous distribution of each sleep variable, this model dichotomizes two clinically meaningful sleep outcomes at established thresholds and asks "what is the risk of being in the bad-sleep group?"</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Sample</div>
+      <div class="section-content">
+        <p>Same as Model 1: ABCD Study Release 2.0 baseline, N varies between 10,666 and 10,676 across cells, ages 9–10. Same demographic profile and same per-IV "≥2 hr" group sizes (1.5%–3.8% of the sample depending on modality and day-type).</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Independent variable (IV)</div>
+      <div class="section-content">
+        <div class="var-block">
+          <h4>Phone/SM use, dichotomized at ≥2 vs. &lt;2 hours/day <span class="role">FOCAL</span></h4>
+          <p>Identical to Model 1 — six IVs (3 modalities × 2 day-types), each binary 0/1. The same instrument, dichotomization rule, and per-IV sample sizes apply.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Dependent variables (DVs)</div>
+      <div class="section-content">
+        <div class="var-block">
+          <h4>Insufficient sleep (binary) <span class="role dv">DV</span></h4>
+          <p class="detail">Coded 1 if the SDSC sleep-duration item indicated 7–8 hours of sleep or fewer; 0 if 8–9 hours or more. Threshold reflects the National Sleep Foundation recommendation for 9–11-year-olds (9–11 hours/night), with the "8–9" category included as sufficient for this dichotomization. Sample base rate ≈ 14–17% depending on day type.</p>
+        </div>
+        <div class="var-block">
+          <h4>Disturbed sleep (binary) <span class="role dv">DV</span></h4>
+          <p class="detail">Coded 1 if the total SDSC sleep-wake disturbance score (sum of 26 items, M = 36.54) was ≥ 39, the established clinical threshold for "likely clinically significant sleep-wake disturbances." Sample base rate ≈ 25–30%.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Covariates</div>
+      <div class="section-content">
+        <p>Identical to Model 1: age, gender, race (binary), ethnicity (binary), family income (1–10 ordinal), parent education (0–21 ordinal), parent employment (binary).</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">The full model</div>
+      <div class="section-content">
+        <div class="eq-table">
+          <table>
+            <tr><td>logit(<span class="lhs">P(<span class="slot">bad_sleep_DV</span><sub>i</sub>=1)</span>)</td><td>=</td><td>β₀</td><td class="annotate">log-odds intercept</td></tr>
+            <tr><td></td><td>+</td><td><span class="focal">β₁ · <span class="slot">phone/SM_IV</span><sub>i</sub></span></td><td class="annotate focal-note">FOCAL — log-odds-ratio for ≥2 hr vs &lt;2 hr; converted to relative risk for reporting</td></tr>
+            <tr><td></td><td>+</td><td>β₂..₈ · controls<sub>i</sub></td><td class="annotate">age, gender, race, ethnicity, income, parent education, parent employment</td></tr>
+          </table>
+          <p style="margin: 12px 0 0; font-size: 12px; color: var(--muted);">The estimator returns a log-odds-ratio (β₁); the paper converts this to a relative risk for the binary outcome (using the standard formula appropriate for cross-sectional prevalence data). Reported as RR in Tables 4 and 5.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Estimation choices</div>
+      <div class="section-content">
+        <div class="var-block"><h4>Statistical method</h4><p class="detail">Logistic regression for the binary clinical-threshold sleep DVs. The paper converts the resulting odds ratio to a relative risk for reporting in Tables 4 and 5.</p></div>
+        <div class="var-block"><h4>Sample weighting</h4><p class="detail">None applied (same as Model 1).</p></div>
+        <div class="var-block"><h4>Familial nesting</h4><p class="detail">Not formally modeled; same sibling/twin sensitivity check as Model 1.</p></div>
+        <div class="var-block"><h4>Significance threshold (α)</h4><p class="detail">α = 0.001 (same as Model 1; serves as the paper's MC correction).</p></div>
+        <div class="var-block"><h4>Effect-modification (interaction) testing</h4><p class="detail">Same as Model 1 — race × IV and ethnicity × IV interactions tested and all non-significant at p &gt; .001.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Models considered but not extracted</div>
+      <div class="section-content">
+        <table class="excluded-table">
+          <thead><tr><th>Model</th><th>Where</th><th>Why not extracted</th></tr></thead>
+          <tbody>
+            <tr><td>TV / video / video game / non-TV / total composite IVs</td><td>Tables 4–5</td><td>Non-phone/non-SM modalities or composites bundling non-phone ingredients — fail IC2.</td></tr>
+            <tr><td>Continuous-IV logistic regressions</td><td>In-text (additional logistic regressions)</td><td>Reported only for non-TV screen media and total screen media composites, not per phone/SM modality.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="matrix-wrap">
+    <div class="label">Estimated effects of β₁ (focal) — 6 IVs × 2 binary DVs = 12 relative risks</div>
+    <div class="label-meta"><strong style="color: var(--ink);">Contrast:</strong> derived d is on the log-OR scale (Chinn) for the ≥2 hr vs &lt;2 hr group. Interpretively close to Model 1's group-difference d, but from a logistic latent-variable derivation. <em>Not directly comparable to per-1-SD-of-IV d's from papers like 394.</em><br><br>Source: Table 4 (insufficient sleep) and Table 5 (disturbed sleep). Each cell reports two effect sizes: the native metric (RR for ≥2 hr vs. &lt;2 hr users, adjusted for the same 7 covariates) on top, and a derived Cohen's d below the dotted line in purple. The d is obtained by RR → OR (using the sample baseline rate p₀: 0.155 for insufficient sleep, 0.275 for disturbed sleep) → d via d = ln(OR) · √3/π (Chinn 2000). Because exposure prevalence is 1.5–3.8%, the marginal sample rate is within ~1% of the unexposed-group rate. Cells shaded green indicate p &lt; .001 (the paper's interpretation threshold). 95% CIs are not printed in the source tables. Built by <code>scripts/build_matrices.py</code> from <code>scripts/paper_156.json</code>.</div>
+
+    <table class="matrix">
+  <thead><tr>
+    <th></th>
+    <th class="col-head">Insufficient sleep<br><span style="font-weight:400;color:var(--muted);">(&lt;9 hr)</span></th>
+    <th class="col-head">Disturbed sleep<br><span style="font-weight:400;color:var(--muted);">(SDSC total ≥ 39)</span></th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td class="row-head">Weekday texting</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.44</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.247</span></div></td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.12</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.088</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend texting</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.39</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.222</span></div></td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.18</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.130</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekday social media</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.56</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.305</span></div></td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.26</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.185</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend social media</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.50</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.277</span></div></td>
+      <td class="cell sig"><div class="native"><span class="b">RR = 1.42</span><span class="p">p &lt; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.289</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekday video chat</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.13</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.081</span></div></td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.10</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.074</span></div></td>
+    </tr>
+    <tr>
+      <td class="row-head">Weekend video chat</td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.42</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.238</span></div></td>
+      <td class="cell"><div class="native"><span class="b">RR = 1.23</span><span class="p">p &ge; .001</span></div><div class="derived"><span class="d-val">d &asymp; 0.164</span></div></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+</article>
+
+</section>
+
+</main>
+</div>
+
+<script>
+  document.querySelectorAll('aside .paper-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const pid = card.dataset.paper;
+      document.querySelectorAll('aside .paper-card').forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+      document.querySelectorAll('.paper-section').forEach(sec => {
+        sec.classList.toggle('active', sec.dataset.paper === pid);
+      });
+      window.scrollTo(0, 0);
+    });
+  });
+</script>
+
+</body>
+</html>

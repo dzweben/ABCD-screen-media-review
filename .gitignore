@@ -44,4 +44,11 @@ data/raw/pmid_checkpoint.json
 data/raw/publications_page.html
 data/search_results/
 data/ABCD_SM_Systematic_Search.xlsx
-scripts/
+# Legacy top-level scripts folder only (not 03-model-extraction/scripts/)
+/scripts/
+
+# API keys
+.secrets/
+
+# Stage 3 scripts pycache
+03-model-extraction/scripts/__pycache__/

@@ -1,0 +1,129 @@
+{
+  "paper_id": "156",
+  "citation": "Hisler GC et al. 2020 Sleep Health 6:731-742",
+  "doi": "10.1016/j.sleh.2020.07.002",
+  "models": [
+    {
+      "model_id": "M1",
+      "model_label": "Linear regression of continuous sleep DVs on dichotomized phone/SM use",
+      "native_metric": "d",
+      "native_metric_label": "Cohen's d",
+      "alpha": 0.001,
+      "iv_axis": [
+        {"id": "wd_text", "label": "Weekday texting",      "meta": "2.8% high users"},
+        {"id": "we_text", "label": "Weekend texting",      "meta": "3.8% high users"},
+        {"id": "wd_sm",   "label": "Weekday social media", "meta": "1.5% high users"},
+        {"id": "we_sm",   "label": "Weekend social media", "meta": "2.2% high users"},
+        {"id": "wd_vc",   "label": "Weekday video chat",   "meta": "2.1% high users"},
+        {"id": "we_vc",   "label": "Weekend video chat",   "meta": "3.2% high users"}
+      ],
+      "dv_axis": [
+        {"id": "duration",   "label": "Sleep<br>duration"},
+        {"id": "onset",      "label": "Onset<br>latency"},
+        {"id": "insomnia",   "label": "Insomnia"},
+        {"id": "breathing",  "label": "Disordered<br>breathing"},
+        {"id": "arousal",    "label": "Arousal"},
+        {"id": "wake_trans", "label": "Wake-<br>transition"},
+        {"id": "sleepiness", "label": "Excessive<br>sleepiness"},
+        {"id": "hyper",      "label": "Hyper-<br>hidrosis"},
+        {"id": "total",      "label": "Total<br>disturbance"}
+      ],
+      "estimates": [
+        {"iv": "wd_text", "dv": "duration",   "d": -0.21, "sig": false},
+        {"iv": "wd_text", "dv": "onset",      "d":  0.05, "sig": false},
+        {"iv": "wd_text", "dv": "insomnia",   "d":  0.11, "sig": false},
+        {"iv": "wd_text", "dv": "breathing",  "d": -0.12, "sig": false},
+        {"iv": "wd_text", "dv": "arousal",    "d": -0.01, "sig": false},
+        {"iv": "wd_text", "dv": "wake_trans", "d": -0.03, "sig": false},
+        {"iv": "wd_text", "dv": "sleepiness", "d":  0.10, "sig": false},
+        {"iv": "wd_text", "dv": "hyper",      "d":  0.09, "sig": false},
+        {"iv": "wd_text", "dv": "total",      "d":  0.10, "sig": false},
+
+        {"iv": "we_text", "dv": "duration",   "d": -0.20, "sig": false},
+        {"iv": "we_text", "dv": "onset",      "d":  0.07, "sig": false},
+        {"iv": "we_text", "dv": "insomnia",   "d":  0.11, "sig": false},
+        {"iv": "we_text", "dv": "breathing",  "d":  0.10, "sig": false},
+        {"iv": "we_text", "dv": "arousal",    "d": -0.01, "sig": false},
+        {"iv": "we_text", "dv": "wake_trans", "d":  0.05, "sig": false},
+        {"iv": "we_text", "dv": "sleepiness", "d": -0.15, "sig": false},
+        {"iv": "we_text", "dv": "hyper",      "d":  0.07, "sig": false},
+        {"iv": "we_text", "dv": "total",      "d":  0.14, "sig": false},
+
+        {"iv": "wd_sm", "dv": "duration",   "d": -0.28, "sig": true},
+        {"iv": "wd_sm", "dv": "onset",      "d":  0.04, "sig": false},
+        {"iv": "wd_sm", "dv": "insomnia",   "d":  0.19, "sig": true},
+        {"iv": "wd_sm", "dv": "breathing",  "d":  0.08, "sig": false},
+        {"iv": "wd_sm", "dv": "arousal",    "d":  0.16, "sig": false},
+        {"iv": "wd_sm", "dv": "wake_trans", "d":  0.01, "sig": false},
+        {"iv": "wd_sm", "dv": "sleepiness", "d":  0.11, "sig": false},
+        {"iv": "wd_sm", "dv": "hyper",      "d": -0.11, "sig": false},
+        {"iv": "wd_sm", "dv": "total",      "d":  0.14, "sig": true},
+
+        {"iv": "we_sm", "dv": "duration",   "d": -0.14, "sig": true},
+        {"iv": "we_sm", "dv": "onset",      "d":  0.11, "sig": false},
+        {"iv": "we_sm", "dv": "insomnia",   "d":  0.19, "sig": false},
+        {"iv": "we_sm", "dv": "breathing",  "d": -0.04, "sig": false},
+        {"iv": "we_sm", "dv": "arousal",    "d": -0.15, "sig": false},
+        {"iv": "we_sm", "dv": "wake_trans", "d":  0.18, "sig": false},
+        {"iv": "we_sm", "dv": "sleepiness", "d": -0.18, "sig": false},
+        {"iv": "we_sm", "dv": "hyper",      "d":  0.04, "sig": false},
+        {"iv": "we_sm", "dv": "total",      "d":  0.22, "sig": true},
+
+        {"iv": "wd_vc", "dv": "duration",   "d": -0.12, "sig": false},
+        {"iv": "wd_vc", "dv": "onset",      "d":  0.08, "sig": false},
+        {"iv": "wd_vc", "dv": "insomnia",   "d":  0.03, "sig": false},
+        {"iv": "wd_vc", "dv": "breathing",  "d":  0.03, "sig": false},
+        {"iv": "wd_vc", "dv": "arousal",    "d": -0.08, "sig": false},
+        {"iv": "wd_vc", "dv": "wake_trans", "d": -0.13, "sig": false},
+        {"iv": "wd_vc", "dv": "sleepiness", "d":  0.12, "sig": false},
+        {"iv": "wd_vc", "dv": "hyper",      "d":  0.13, "sig": false},
+        {"iv": "wd_vc", "dv": "total",      "d":  0.04, "sig": false},
+
+        {"iv": "we_vc", "dv": "duration",   "d": -0.20, "sig": false},
+        {"iv": "we_vc", "dv": "onset",      "d":  0.05, "sig": false},
+        {"iv": "we_vc", "dv": "insomnia",   "d":  0.18, "sig": false},
+        {"iv": "we_vc", "dv": "breathing",  "d":  0.13, "sig": false},
+        {"iv": "we_vc", "dv": "arousal",    "d": -0.01, "sig": false},
+        {"iv": "we_vc", "dv": "wake_trans", "d":  0.01, "sig": false},
+        {"iv": "we_vc", "dv": "sleepiness", "d": -0.11, "sig": false},
+        {"iv": "we_vc", "dv": "hyper",      "d":  0.11, "sig": false},
+        {"iv": "we_vc", "dv": "total",      "d":  0.17, "sig": false}
+      ]
+    },
+    {
+      "model_id": "M2",
+      "model_label": "Logistic regression of binary clinical-threshold sleep outcomes on dichotomized phone/SM use",
+      "native_metric": "RR",
+      "native_metric_label": "Relative risk",
+      "alpha": 0.001,
+      "iv_axis": [
+        {"id": "wd_text", "label": "Weekday texting"},
+        {"id": "we_text", "label": "Weekend texting"},
+        {"id": "wd_sm",   "label": "Weekday social media"},
+        {"id": "we_sm",   "label": "Weekend social media"},
+        {"id": "wd_vc",   "label": "Weekday video chat"},
+        {"id": "we_vc",   "label": "Weekend video chat"}
+      ],
+      "dv_axis": [
+        {"id": "insufficient", "label": "Insufficient sleep<br><span style=\"font-weight:400;color:var(--muted);\">(&lt;9 hr)</span>", "p0": 0.155,
+         "_p0_note": "Sample marginal base rate ~14-17%; midpoint used. Exposed group is 1.5-3.8% of sample so marginal ≈ unexposed-group rate to within ~1%."},
+        {"id": "disturbed",    "label": "Disturbed sleep<br><span style=\"font-weight:400;color:var(--muted);\">(SDSC total ≥ 39)</span>", "p0": 0.275,
+         "_p0_note": "Sample marginal base rate ~25-30%; midpoint used."}
+      ],
+      "estimates": [
+        {"iv": "wd_text", "dv": "insufficient", "RR": 1.44, "sig": false},
+        {"iv": "wd_text", "dv": "disturbed",    "RR": 1.12, "sig": false},
+        {"iv": "we_text", "dv": "insufficient", "RR": 1.39, "sig": false},
+        {"iv": "we_text", "dv": "disturbed",    "RR": 1.18, "sig": false},
+        {"iv": "wd_sm",   "dv": "insufficient", "RR": 1.56, "sig": false},
+        {"iv": "wd_sm",   "dv": "disturbed",    "RR": 1.26, "sig": false},
+        {"iv": "we_sm",   "dv": "insufficient", "RR": 1.50, "sig": false},
+        {"iv": "we_sm",   "dv": "disturbed",    "RR": 1.42, "sig": true},
+        {"iv": "wd_vc",   "dv": "insufficient", "RR": 1.13, "sig": false},
+        {"iv": "wd_vc",   "dv": "disturbed",    "RR": 1.10, "sig": false},
+        {"iv": "we_vc",   "dv": "insufficient", "RR": 1.42, "sig": false},
+        {"iv": "we_vc",   "dv": "disturbed",    "RR": 1.23, "sig": false}
+      ]
+    }
+  ]
+}

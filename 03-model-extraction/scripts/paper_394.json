@@ -1,0 +1,50 @@
+{
+  "paper_id": "394",
+  "citation": "Nagata JM et al. 2024 BMC Public Health 24:2686",
+  "doi": "10.1186/s12889-024-20102-x",
+  "models": [
+    {
+      "model_id": "M1",
+      "model_label": "Mixed-effects linear regression of CBCL DSM-oriented t-scores on phone/SM modalities",
+      "native_metric": "B",
+      "native_metric_label": "B (unstandardized)",
+      "iv_axis": [
+        {"id": "texting",      "label": "Texting",       "sd_iv": 0.6, "meta": "M = 0.2 h/day, SD = 0.6"},
+        {"id": "video_chat",   "label": "Video chat",    "sd_iv": 0.7, "meta": "M = 0.3 h/day, SD = 0.7"},
+        {"id": "social_media", "label": "Social media",  "sd_iv": 0.1, "meta": "M = 0.1 h/day, SD = 0.1"}
+      ],
+      "dv_axis": [
+        {"id": "depressive", "label": "Depressive", "sd_dv": 10.0},
+        {"id": "anxiety",    "label": "Anxiety",    "sd_dv": 10.0},
+        {"id": "somatic",    "label": "Somatic",    "sd_dv": 10.0},
+        {"id": "adhd",       "label": "ADHD",       "sd_dv": 10.0},
+        {"id": "odd",        "label": "ODD",        "sd_dv": 10.0},
+        {"id": "conduct",    "label": "Conduct",    "sd_dv": 10.0}
+      ],
+      "_dv_sd_note": "CBCL t-scores are normed to mean=50, SD=10 by construction.",
+      "alpha": 0.05,
+      "estimates": [
+        {"iv": "texting",      "dv": "depressive", "B":  0.260, "B_lo":  0.090, "B_hi":  0.440, "p": 0.005, "sig": true},
+        {"iv": "texting",      "dv": "anxiety",    "B":  0.100, "B_lo": -0.070, "B_hi":  0.270, "p": 0.231, "sig": false},
+        {"iv": "texting",      "dv": "somatic",    "B":  0.190, "B_lo": -0.040, "B_hi":  0.420, "p": 0.101, "sig": false},
+        {"iv": "texting",      "dv": "adhd",       "B":  0.180, "B_lo": -0.020, "B_hi":  0.390, "p": 0.080, "sig": false},
+        {"iv": "texting",      "dv": "odd",        "B":  0.120, "B_lo": -0.040, "B_hi":  0.280, "p": 0.151, "sig": false},
+        {"iv": "texting",      "dv": "conduct",    "B":  0.100, "B_lo":  0.050, "B_hi":  0.160, "p": 0.001, "sig": true},
+
+        {"iv": "video_chat",   "dv": "depressive", "B":  0.350, "B_lo":  0.190, "B_hi":  0.510, "p": 0.0005, "sig": true},
+        {"iv": "video_chat",   "dv": "anxiety",    "B":  0.120, "B_lo": -0.060, "B_hi":  0.300, "p": 0.189, "sig": false},
+        {"iv": "video_chat",   "dv": "somatic",    "B":  0.050, "B_lo": -0.210, "B_hi":  0.310, "p": 0.683, "sig": false},
+        {"iv": "video_chat",   "dv": "adhd",       "B":  0.220, "B_lo":  0.030, "B_hi":  0.410, "p": 0.022, "sig": true},
+        {"iv": "video_chat",   "dv": "odd",        "B":  0.110, "B_lo": -0.090, "B_hi":  0.330, "p": 0.246, "sig": false},
+        {"iv": "video_chat",   "dv": "conduct",    "B":  0.330, "B_lo":  0.110, "B_hi":  0.560, "p": 0.006, "sig": true},
+
+        {"iv": "social_media", "dv": "depressive", "B":  0.140, "B_lo": -0.090, "B_hi":  0.330, "p": 0.230, "sig": false},
+        {"iv": "social_media", "dv": "anxiety",    "B":  0.004, "B_lo": -0.240, "B_hi":  0.250, "p": 0.971, "sig": false},
+        {"iv": "social_media", "dv": "somatic",    "B":  0.110, "B_lo": -0.160, "B_hi":  0.380, "p": 0.421, "sig": false},
+        {"iv": "social_media", "dv": "adhd",       "B":  0.040, "B_lo": -0.310, "B_hi":  0.390, "p": 0.805, "sig": false},
+        {"iv": "social_media", "dv": "odd",        "B":  0.070, "B_lo": -0.190, "B_hi":  0.330, "p": 0.617, "sig": false},
+        {"iv": "social_media", "dv": "conduct",    "B":  0.220, "B_lo": -0.020, "B_hi":  0.470, "p": 0.071, "sig": false}
+      ]
+    }
+  ]
+}
