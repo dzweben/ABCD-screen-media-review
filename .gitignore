@@ -1,6 +1,7 @@
-# PDFs too large for git
+# PDFs too large for git — except the 69 INCLUDE PDFs served from the site.
 data/pdfs/
 *.pdf
+!docs/pdfs/*.pdf
 
 # Temp browser download folders
 data/browser_dl*/

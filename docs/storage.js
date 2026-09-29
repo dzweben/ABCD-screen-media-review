@@ -58,7 +58,7 @@ const Storage = (() => {
   async function initRemote() {
     fbApp = firebase.initializeApp(window.FIREBASE_CONFIG);
     fbDb = firebase.firestore();
-    // On first ever load, seed Firestore from the JSON file if empty.
+    // Seed papers on first ever load
     const snap = await fbDb.collection("papers").limit(1).get();
     if (snap.empty) {
       console.log("[storage] Firestore is empty — seeding from papers-seed.json …");
@@ -68,7 +68,6 @@ const Storage = (() => {
         batch.set(ref, sanitizeForFirestore({ ...p, last_edited_by: "seed" }));
       });
       await batch.commit();
-      // Seed initial coder-log entries as subcollection docs
       for (const p of seed.papers) {
         for (const e of p.coder_log || []) {
           await fbDb
@@ -84,6 +83,65 @@ const Storage = (() => {
       }
       console.log("[storage] Seeded", seed.papers.length, "papers.");
     }
+    // Seed coders on first ever load
+    const coderSnap = await fbDb.collection("coders").limit(1).get();
+    if (coderSnap.empty) {
+      console.log("[storage] Seeding coders collection …");
+      const batch = fbDb.batch();
+      seed.coders.forEach((c) => {
+        batch.set(fbDb.collection("coders").doc(c.id), {
+          name: c.name,
+          role: c.role || "coder",
+          added_at: new Date().toISOString(),
+        });
+      });
+      await batch.commit();
+    }
+    await refreshCoders();
+  }
+
+  async function refreshCoders() {
+    if (mode !== "remote") { coders = seed.coders; return; }
+    const snap = await fbDb.collection("coders").get();
+    coders = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+    // Stable order: seeded ids first (by their seed order), then any added coders alphabetically.
+    const seedOrder = new Map(seed.coders.map((c, i) => [c.id, i]));
+    coders.sort((a, b) => {
+      const ai = seedOrder.has(a.id) ? seedOrder.get(a.id) : Infinity;
+      const bi = seedOrder.has(b.id) ? seedOrder.get(b.id) : Infinity;
+      if (ai !== bi) return ai - bi;
+      return a.name.localeCompare(b.name);
+    });
+  }
+
+  async function addCoder({ name, role }) {
+    const displayName = (name || "").trim();
+    if (!displayName) throw new Error("Name is required");
+    if (displayName.length > 59) throw new Error("Name too long (max 59 chars)");
+    const id = displayName
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 40) || "coder-" + Date.now();
+    if (mode === "remote") {
+      // Only create if not present (so we don't overwrite an existing coder's role).
+      const existing = await fbDb.collection("coders").doc(id).get();
+      if (existing.exists) {
+        throw new Error(`Coder id "${id}" already exists (${existing.data().name}). Pick a different name.`);
+      }
+      await fbDb.collection("coders").doc(id).set({
+        name: displayName,
+        role: role || "coder",
+        added_at: new Date().toISOString(),
+      });
+      await refreshCoders();
+    } else {
+      if (coders.find((c) => c.id === id)) {
+        throw new Error(`Coder id "${id}" already exists locally`);
+      }
+      coders.push({ id, name: displayName, role: role || "coder" });
+    }
+    return id;
   }
 
   /* ── index / list ─────────────────────────────────── */
@@ -249,6 +307,8 @@ const Storage = (() => {
   return {
     init,
     getCoders,
+    addCoder,
+    refreshCoders,
     listPapers,
     getPaper,
     savePaper,

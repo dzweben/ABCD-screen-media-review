@@ -8,16 +8,37 @@
 </head>
 <body>
 
+<div id="pw-gate" hidden>
+  <div class="pw-box">
+    <h2>ABCD Systematic Review</h2>
+    <p>Enter the access password to continue.</p>
+    <form id="pw-form">
+      <input type="password" id="pw-input" placeholder="Password" autocomplete="off" autofocus>
+      <button type="submit">Enter</button>
+    </form>
+    <p id="pw-err" class="pw-err" hidden>Wrong password.</p>
+  </div>
+</div>
+
+<div id="who-modal" hidden>
+  <div class="who-box">
+    <h2>Who are you?</h2>
+    <p>Pick your name — every edit you make gets stamped with this identity.</p>
+    <div id="who-chips"></div>
+    <div class="who-add">
+      <input type="text" id="who-add-input" placeholder="Not in the list? Add your name…" maxlength="40">
+      <button id="who-add-btn">+ Add me</button>
+    </div>
+  </div>
+</div>
+
 <header id="top-bar">
   <div class="brand">
     <span class="brand-title">ABCD Smartphone / Social Media Review</span>
     <span class="brand-sub">Stage 3 — model extraction</span>
   </div>
   <div class="top-right">
-    <label class="coder-select">
-      Editing as
-      <select id="coder-picker"></select>
-    </label>
+    <div id="coder-chip-row" class="coder-chip-row"></div>
     <span id="sync-status" title="Where edits are being saved">Local storage</span>
   </div>
 </header>
@@ -65,6 +86,11 @@
       Lead coder: <span data-field="lead_coder" data-edit="text"></span> ·
       Contributors: <span data-field="contributors" data-edit="csv"></span> ·
       Last updated: <span data-field="last_updated"></span>
+    </p>
+    <p class="paper-pdf">
+      <a class="pdf-link" target="_blank" hidden>📄 Open PDF</a>
+      <a class="pdf-download" target="_blank" hidden>⬇ Download</a>
+      <span class="pdf-missing" hidden>PDF not yet uploaded</span>
     </p>
   </header>
 

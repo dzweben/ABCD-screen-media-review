@@ -20,6 +20,17 @@ service cloud.firestore {
                     && request.resource.data.change.size() < 2000;
       allow update, delete: if false;
     }
+    // Coders roster — anyone can read; anyone can add themselves.
+    // Coder id is the doc id; must be a short slug. Existing coders can update
+    // their own display name/role but nobody can delete anyone.
+    match /coders/{coderId} {
+      allow read: if true;
+      allow create, update: if coderId.matches('^[a-z0-9][a-z0-9_-]{0,39}$')
+                            && request.resource.data.name is string
+                            && request.resource.data.name.size() > 0
+                            && request.resource.data.name.size() < 60;
+      allow delete: if false;
+    }
     // Everything else denied.
     match /{document=**} {
       allow read, write: if false;

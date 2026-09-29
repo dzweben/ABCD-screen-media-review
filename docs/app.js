@@ -26,7 +26,11 @@ const AppState = {
 function $(sel, root = document) { return root.querySelector(sel); }
 function $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 
+const SITE_PASSWORD = "ABCD";
+const PW_OK_KEY = "abcd-review-pw-ok-v1";
+
 async function main() {
+  await requirePassword();
   const mode = await Storage.init();
   const syncEl = document.getElementById("sync-status");
   if (mode === "remote") {
@@ -37,25 +41,107 @@ async function main() {
     syncEl.textContent = "Local storage";
     syncEl.title = "Firestore not connected — edits stay in this browser only";
   }
-  initCoderPicker();
+
+  await ensureCoderPicked();
+  renderCoderChipRow();
   wireSidebarControls();
   refreshSidebar();
 }
 
-function initCoderPicker() {
-  const picker = $("#coder-picker");
-  const coders = Storage.getCoders();
-  picker.innerHTML = coders
-    .map((c) => `<option value="${c.id}">${c.name}${c.role === "ai" ? " (AI)" : ""}</option>`)
-    .join("");
+/* ── password gate ──────────────────────────────────── */
+async function requirePassword() {
+  if (sessionStorage.getItem(PW_OK_KEY) === "yes") return;
+  const gate = document.getElementById("pw-gate");
+  const form = document.getElementById("pw-form");
+  const input = document.getElementById("pw-input");
+  const err = document.getElementById("pw-err");
+  gate.hidden = false;
+  return new Promise((resolve) => {
+    form.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      if (input.value === SITE_PASSWORD) {
+        sessionStorage.setItem(PW_OK_KEY, "yes");
+        gate.hidden = true;
+        resolve();
+      } else {
+        err.hidden = false;
+        input.value = "";
+        input.focus();
+      }
+    });
+  });
+}
+
+/* ── coder picking ──────────────────────────────────── */
+async function ensureCoderPicked() {
   const remembered = localStorage.getItem("abcd-review-current-coder");
+  const coders = Storage.getCoders();
   if (remembered && coders.find((c) => c.id === remembered)) {
-    picker.value = remembered;
+    AppState.currentCoder = remembered;
+    return;
   }
-  AppState.currentCoder = picker.value;
-  picker.addEventListener("change", () => {
-    AppState.currentCoder = picker.value;
-    localStorage.setItem("abcd-review-current-coder", picker.value);
+  await showWhoModal();
+}
+
+async function showWhoModal() {
+  const modal = document.getElementById("who-modal");
+  const chips = document.getElementById("who-chips");
+  const addBtn = document.getElementById("who-add-btn");
+  const addInput = document.getElementById("who-add-input");
+  modal.hidden = false;
+  const coders = Storage.getCoders();
+  chips.innerHTML = coders
+    .map((c) => `<button class="who-chip ${c.role === "ai" ? "ai" : ""}" data-id="${c.id}">${escapeHtml(c.name)}${c.role === "ai" ? " (AI)" : ""}</button>`)
+    .join("");
+  return new Promise((resolve) => {
+    chips.querySelectorAll(".who-chip").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        selectCoder(btn.dataset.id);
+        modal.hidden = true;
+        resolve();
+      });
+    });
+    addBtn.addEventListener("click", async () => {
+      const name = addInput.value.trim();
+      if (!name) return;
+      try {
+        const id = await Storage.addCoder({ name, role: "coder" });
+        selectCoder(id);
+        modal.hidden = true;
+        resolve();
+      } catch (err) {
+        alert("Could not add: " + err.message);
+      }
+    });
+    addInput.addEventListener("keydown", (ev) => {
+      if (ev.key === "Enter") { ev.preventDefault(); addBtn.click(); }
+    });
+  });
+}
+
+function selectCoder(id) {
+  AppState.currentCoder = id;
+  localStorage.setItem("abcd-review-current-coder", id);
+  renderCoderChipRow();
+}
+
+function renderCoderChipRow() {
+  const row = document.getElementById("coder-chip-row");
+  if (!row) return;
+  const coders = Storage.getCoders();
+  const chips = coders
+    .filter((c) => c.role !== "ai")
+    .map((c) => `<button class="mini-chip ${c.id === AppState.currentCoder ? "active" : ""}" data-id="${c.id}" title="Switch identity to ${escapeHtml(c.name)}">${escapeHtml(c.name)}</button>`)
+    .join("");
+  row.innerHTML = chips + `<button class="mini-chip add" data-add="1" title="Add a new coder">+ Add</button>`;
+  row.querySelectorAll("button.mini-chip").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      if (btn.dataset.add) {
+        await showWhoModal();
+      } else {
+        selectCoder(btn.dataset.id);
+      }
+    });
   });
 }
 
@@ -140,6 +226,25 @@ function renderPaper(paper) {
   linkEl.href = paper.doi ? `https://doi.org/${paper.doi}` : "#";
   const lastEl = view.querySelector('[data-field="last_updated"]');
   lastEl.textContent = paper.last_updated ? new Date(paper.last_updated).toLocaleString() : "(never)";
+
+  // Derive PDF url from DOI: pdfs/<doi with / -> _>.pdf
+  const pdfUrl = paper.pdf_url
+    || (paper.doi ? "pdfs/" + paper.doi.trim().replace(/\//g, "_") + ".pdf" : null);
+  const pdfLink = view.querySelector(".pdf-link");
+  const pdfDl = view.querySelector(".pdf-download");
+  const pdfMissing = view.querySelector(".pdf-missing");
+  if (pdfUrl) {
+    pdfLink.href = pdfUrl;
+    pdfLink.hidden = false;
+    pdfDl.href = pdfUrl;
+    pdfDl.setAttribute("download", `paper_${paper.paper_id}.pdf`);
+    pdfDl.hidden = false;
+    pdfMissing.hidden = true;
+  } else {
+    pdfLink.hidden = true;
+    pdfDl.hidden = true;
+    pdfMissing.hidden = false;
+  }
 
   wireStatusBadge(view, paper);
   wireDottedFields(view, paper);
