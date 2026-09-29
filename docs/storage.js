@@ -1,115 +1,249 @@
 /*
  * Storage adapter.
  *
- * Two modes:
- *   - LOCAL  (default): loads papers-seed.json, saves overrides to browser localStorage.
- *                       Good for single-viewer testing before Firebase is wired.
- *   - REMOTE (Firestore): plugged in once the user pastes their Firebase config into
- *                         `docs/firebase-config.js`. Every viewer sees every edit.
+ * Two modes, picked at init() based on whether window.FIREBASE_CONFIG is present:
  *
- * The app.js code doesn't care which mode is active — it calls the same API:
+ *   - REMOTE (Firestore): every viewer sees every edit. Public honor-system
+ *     attribution enforced by firestore.rules (see .firebase/firestore.rules).
+ *     Documents live in the `papers` collection with paper_id as doc id.
+ *     Log entries live in the `papers/{paperId}/log` subcollection, append-only.
  *
+ *   - LOCAL (fallback): loads papers-seed.json, saves overrides to browser
+ *     localStorage. Single-viewer testing only.
+ *
+ * Public API — same in both modes:
  *   await Storage.init()
- *   Storage.getCoders() -> [{id, name, role}, …]
- *   Storage.listPapers() -> [{paper_id, title, extraction_status, …}, …]  (index only)
- *   await Storage.getPaper(id) -> full paper object
- *   await Storage.savePaper(paperObj) -> persists and returns it
- *   await Storage.appendLog(paperId, {coder, change}) -> pushes a coder-log entry
- *   Storage.mode -> 'local' | 'remote'
+ *   Storage.getCoders()             -> [{id, name, role}, ...]
+ *   Storage.listPapers()            -> [{paper_id, title, extraction_status, ...}]  (index)
+ *   await Storage.getPaper(id)      -> full paper object
+ *   await Storage.savePaper(paper)  -> persists and returns
+ *   await Storage.appendLog(id, {coder, change}) -> pushes a log entry
+ *   Storage.clearOverride(id)       -> revert local edits (local mode only)
+ *   Storage.mode                    -> 'local' | 'remote'
  */
 
 const Storage = (() => {
   const LOCAL_OVERRIDES_KEY = "abcd-review-overrides-v1";
-  let seed = null;         // parsed papers-seed.json
-  let overrides = {};       // { paper_id: fullPaperObject }
+
+  let seed = null;
   let coders = [];
   let mode = "local";
+  let indexCache = [];   // list-view rows, refreshed after every write
+  let indexReady = false;
 
-  function loadOverrides() {
-    try {
-      const raw = localStorage.getItem(LOCAL_OVERRIDES_KEY);
-      overrides = raw ? JSON.parse(raw) : {};
-    } catch (e) {
-      console.warn("Could not read localStorage overrides", e);
-      overrides = {};
+  // Remote-mode Firebase handles
+  let fbApp = null;
+  let fbDb = null;
+
+  /* ── init ─────────────────────────────────────────── */
+  async function init() {
+    const seedResp = await fetch("data/papers-seed.json", { cache: "no-cache" });
+    if (!seedResp.ok) throw new Error(`Seed fetch failed: HTTP ${seedResp.status}`);
+    seed = await seedResp.json();
+    coders = seed.coders;
+
+    if (window.FIREBASE_CONFIG && window.firebase) {
+      try {
+        await initRemote();
+        mode = "remote";
+      } catch (err) {
+        console.error("Firestore init failed, falling back to localStorage:", err);
+        mode = "local";
+      }
+    }
+    await refreshIndex();
+    return mode;
+  }
+
+  async function initRemote() {
+    fbApp = firebase.initializeApp(window.FIREBASE_CONFIG);
+    fbDb = firebase.firestore();
+    // On first ever load, seed Firestore from the JSON file if empty.
+    const snap = await fbDb.collection("papers").limit(1).get();
+    if (snap.empty) {
+      console.log("[storage] Firestore is empty — seeding from papers-seed.json …");
+      const batch = fbDb.batch();
+      seed.papers.forEach((p) => {
+        const ref = fbDb.collection("papers").doc(p.paper_id);
+        batch.set(ref, sanitizeForFirestore({ ...p, last_edited_by: "seed" }));
+      });
+      await batch.commit();
+      // Seed initial coder-log entries as subcollection docs
+      for (const p of seed.papers) {
+        for (const e of p.coder_log || []) {
+          await fbDb
+            .collection("papers")
+            .doc(p.paper_id)
+            .collection("log")
+            .add({
+              timestamp: e.timestamp || new Date().toISOString(),
+              coder: e.coder || "seed",
+              change: e.change || "",
+            });
+        }
+      }
+      console.log("[storage] Seeded", seed.papers.length, "papers.");
     }
   }
 
-  function saveOverrides() {
-    try {
-      localStorage.setItem(LOCAL_OVERRIDES_KEY, JSON.stringify(overrides));
-    } catch (e) {
-      console.warn("Could not write localStorage overrides", e);
+  /* ── index / list ─────────────────────────────────── */
+  async function refreshIndex() {
+    if (mode === "remote") {
+      const snap = await fbDb.collection("papers").get();
+      indexCache = snap.docs.map((doc) => {
+        const p = doc.data();
+        return {
+          paper_id: p.paper_id,
+          title: p.title || "",
+          year: p.year || "",
+          doi: p.doi || "",
+          extraction_status: p.extraction_status || "empty",
+          d_transformable: p.d_transformable ?? null,
+          n_primary_models: (p.primary_models || []).length,
+          n_excluded_models: (p.excluded_models || []).length,
+        };
+      });
+      // Sort by numeric paper_id to preserve consistent order
+      indexCache.sort((a, b) => Number(a.paper_id) - Number(b.paper_id));
+    } else {
+      const overrides = loadOverrides();
+      indexCache = seed.papers.map((base) => {
+        const merged = overrides[base.paper_id] || base;
+        return {
+          paper_id: merged.paper_id,
+          title: merged.title,
+          year: merged.year,
+          doi: merged.doi,
+          extraction_status: merged.extraction_status,
+          d_transformable: merged.d_transformable,
+          n_primary_models: (merged.primary_models || []).length,
+          n_excluded_models: (merged.excluded_models || []).length,
+        };
+      });
     }
+    indexReady = true;
   }
 
-  function mergePaper(pid) {
+  function listPapers() {
+    return indexReady ? indexCache.slice() : [];
+  }
+  function getCoders() { return coders.slice(); }
+
+  /* ── read ─────────────────────────────────────────── */
+  async function getPaper(pid) {
+    if (mode === "remote") {
+      const doc = await fbDb.collection("papers").doc(pid).get();
+      if (!doc.exists) return null;
+      const paper = doc.data();
+      const logSnap = await fbDb
+        .collection("papers")
+        .doc(pid)
+        .collection("log")
+        .orderBy("timestamp", "asc")
+        .get();
+      paper.coder_log = logSnap.docs.map((d) => d.data());
+      return paper;
+    }
+    const overrides = loadOverrides();
     if (overrides[pid]) return structuredClone(overrides[pid]);
     const base = seed.papers.find((p) => p.paper_id === pid);
     return base ? structuredClone(base) : null;
   }
 
-  async function init() {
-    // Try to load Firebase config; if absent, we stay in local mode.
-    // (Firebase adapter to be added when config is ready — see comment at bottom.)
-    const seedResp = await fetch("data/papers-seed.json", { cache: "no-cache" });
-    if (!seedResp.ok) throw new Error(`Seed fetch failed: HTTP ${seedResp.status}`);
-    seed = await seedResp.json();
-    coders = seed.coders;
-    loadOverrides();
-    mode = "local";
-    return mode;
-  }
-
-  function getCoders() {
-    return coders.slice();
-  }
-
-  function listPapers() {
-    return seed.papers.map((p) => {
-      const merged = mergePaper(p.paper_id);
-      return {
-        paper_id: merged.paper_id,
-        title: merged.title,
-        year: merged.year,
-        doi: merged.doi,
-        extraction_status: merged.extraction_status,
-        d_transformable: merged.d_transformable,
-        n_primary_models: (merged.primary_models || []).length,
-        n_excluded_models: (merged.excluded_models || []).length,
-      };
-    });
-  }
-
-  async function getPaper(pid) {
-    return mergePaper(pid);
-  }
-
+  /* ── write ────────────────────────────────────────── */
   async function savePaper(paperObj) {
-    paperObj.last_updated = new Date().toISOString();
-    overrides[paperObj.paper_id] = structuredClone(paperObj);
-    saveOverrides();
-    return structuredClone(paperObj);
+    const now = new Date().toISOString();
+    paperObj.last_updated = now;
+    if (mode === "remote") {
+      // Log entries live in subcollection, not on the doc.
+      const { coder_log, ...body } = paperObj;
+      body.last_edited_by = body.last_edited_by || "unknown";
+      await fbDb
+        .collection("papers")
+        .doc(paperObj.paper_id)
+        .set(sanitizeForFirestore(body), { merge: false });
+    } else {
+      const overrides = loadOverrides();
+      overrides[paperObj.paper_id] = structuredClone(paperObj);
+      saveOverrides(overrides);
+    }
+    await refreshIndex();
+    return paperObj;
   }
 
   async function appendLog(pid, entry) {
-    const paper = mergePaper(pid);
-    if (!paper) throw new Error(`Unknown paper ${pid}`);
-    paper.coder_log = paper.coder_log || [];
-    paper.coder_log.push({
-      timestamp: new Date().toISOString(),
+    const now = new Date().toISOString();
+    const logEntry = {
+      timestamp: now,
       coder: entry.coder,
       change: entry.change,
-    });
+    };
+    if (mode === "remote") {
+      await fbDb
+        .collection("papers")
+        .doc(pid)
+        .collection("log")
+        .add(logEntry);
+      // Also update contributors + last_edited_by on the doc
+      const docRef = fbDb.collection("papers").doc(pid);
+      const doc = await docRef.get();
+      if (doc.exists) {
+        const p = doc.data();
+        const contribs = new Set(p.contributors || []);
+        contribs.add(entry.coder);
+        await docRef.update({
+          contributors: [...contribs],
+          last_edited_by: entry.coder,
+          last_updated: now,
+        });
+      }
+      return await getPaper(pid);
+    }
+    // local
+    const paper = (await getPaper(pid)) || {};
+    paper.coder_log = paper.coder_log || [];
+    paper.coder_log.push(logEntry);
     if (entry.coder && paper.contributors && !paper.contributors.includes(entry.coder)) {
       paper.contributors.push(entry.coder);
     }
+    paper.last_edited_by = entry.coder;
     return savePaper(paper);
   }
 
   function clearOverride(pid) {
+    if (mode === "remote") {
+      console.warn("[storage] Reset-to-seed is not supported in remote mode from the UI (would require rewriting the doc). Skipping.");
+      return;
+    }
+    const overrides = loadOverrides();
     delete overrides[pid];
-    saveOverrides();
+    saveOverrides(overrides);
+  }
+
+  /* ── helpers ──────────────────────────────────────── */
+  function loadOverrides() {
+    try {
+      const raw = localStorage.getItem(LOCAL_OVERRIDES_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function saveOverrides(obj) {
+    try { localStorage.setItem(LOCAL_OVERRIDES_KEY, JSON.stringify(obj)); }
+    catch (e) { console.warn(e); }
+  }
+  // Firestore rejects undefined values; convert to null recursively.
+  function sanitizeForFirestore(o) {
+    if (o === undefined) return null;
+    if (o === null) return null;
+    if (Array.isArray(o)) return o.map(sanitizeForFirestore);
+    if (typeof o === "object") {
+      const out = {};
+      for (const [k, v] of Object.entries(o)) out[k] = sanitizeForFirestore(v);
+      return out;
+    }
+    return o;
   }
 
   return {
@@ -121,29 +255,6 @@ const Storage = (() => {
     appendLog,
     clearOverride,
     get mode() { return mode; },
+    refreshIndex,
   };
 })();
-
-/*
- * REMOTE-MODE STUB — TO WIRE UP WHEN FIREBASE PROJECT IS READY
- *
- * Once you have a Firebase project:
- *   1. Enable Firestore in test mode.
- *   2. Copy your web config into `docs/firebase-config.js`:
- *
- *        window.FIREBASE_CONFIG = {
- *          apiKey: "...",
- *          authDomain: "...",
- *          projectId: "...",
- *          ...
- *        };
- *
- *   3. Include the Firebase SDK before storage.js in index.html:
- *        <script type="module" src="firebase-adapter.js"></script>
- *
- *   4. That adapter file will override Storage.getPaper / savePaper / appendLog
- *      to write to Firestore instead of localStorage. Same API surface.
- *
- * Every write carries `edited_by: <selected coder>` and `edited_at: server timestamp`,
- * so any viewer on the URL sees the live coder log.
- */

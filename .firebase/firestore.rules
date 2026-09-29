@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Public editable review — honor-system coder attribution.
+    // Papers collection: anyone can read; writes must carry last_edited_by.
+    match /papers/{paperId} {
+      allow read: if true;
+      allow create, update: if request.resource.data.keys().hasAll(['last_edited_by'])
+                            && request.resource.data.last_edited_by is string
+                            && request.resource.data.last_edited_by.size() > 0
+                            && request.resource.data.last_edited_by.size() < 40;
+      allow delete: if false;
+    }
+    // Coder log: append-only.
+    match /papers/{paperId}/log/{entryId} {
+      allow read: if true;
+      allow create: if request.resource.data.coder is string
+                    && request.resource.data.coder.size() > 0
+                    && request.resource.data.change is string
+                    && request.resource.data.change.size() < 2000;
+      allow update, delete: if false;
+    }
+    // Everything else denied.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

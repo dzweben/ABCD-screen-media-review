@@ -27,7 +27,16 @@ function $(sel, root = document) { return root.querySelector(sel); }
 function $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); }
 
 async function main() {
-  await Storage.init();
+  const mode = await Storage.init();
+  const syncEl = document.getElementById("sync-status");
+  if (mode === "remote") {
+    syncEl.textContent = "Live · Firestore";
+    syncEl.classList.add("remote");
+    syncEl.title = "Every edit is shared with all viewers in real time";
+  } else {
+    syncEl.textContent = "Local storage";
+    syncEl.title = "Firestore not connected — edits stay in this browser only";
+  }
   initCoderPicker();
   wireSidebarControls();
   refreshSidebar();
