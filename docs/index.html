@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABCD Smartphone/SM Review — Model Extraction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="top-bar">
+  <div class="brand">
+    <span class="brand-title">ABCD Smartphone / Social Media Review</span>
+    <span class="brand-sub">Stage 3 — model extraction</span>
+  </div>
+  <div class="top-right">
+    <label class="coder-select">
+      Editing as
+      <select id="coder-picker"></select>
+    </label>
+    <span id="sync-status" title="Where edits are being saved">Local storage</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside id="sidebar">
+    <div class="sidebar-controls">
+      <input id="search" type="search" placeholder="Search papers (title, DOI, id)…" autocomplete="off">
+      <div class="filter-row">
+        <label><input type="checkbox" class="status-filter" value="empty" checked> Empty</label>
+        <label><input type="checkbox" class="status-filter" value="ai_draft" checked> AI draft</label>
+        <label><input type="checkbox" class="status-filter" value="human_reviewed" checked> Reviewed</label>
+        <label><input type="checkbox" class="status-filter" value="disputed" checked> Disputed</label>
+        <label><input type="checkbox" class="status-filter" value="complete" checked> Complete</label>
+      </div>
+      <div id="progress-summary"></div>
+    </div>
+    <ul id="paper-list"></ul>
+  </aside>
+
+  <main id="paper-pane">
+    <div id="paper-pane-empty" class="empty-state">
+      <h2>Pick a paper from the sidebar to view or edit its extraction.</h2>
+      <p>All edits save immediately under whichever coder is selected at the top.</p>
+    </div>
+    <article id="paper-view" hidden></article>
+  </main>
+
+</div>
+
+<template id="tpl-paper-view">
+  <header class="paper-head">
+    <div class="paper-title-row">
+      <h1 class="paper-title" data-field="title" data-edit="text"></h1>
+      <span class="status-badge" data-field="extraction_status" data-edit="select" data-options="empty,ai_draft,human_reviewed,disputed,complete"></span>
+    </div>
+    <p class="paper-citation">
+      <span data-field="authors" data-edit="text"></span> ·
+      <span data-field="year" data-edit="text"></span> ·
+      <em data-field="journal" data-edit="text"></em>
+    </p>
+    <p class="paper-doi">DOI: <a class="doi-link" target="_blank"><span data-field="doi" data-edit="text"></span></a></p>
+    <p class="paper-meta">
+      Lead coder: <span data-field="lead_coder" data-edit="text"></span> ·
+      Contributors: <span data-field="contributors" data-edit="csv"></span> ·
+      Last updated: <span data-field="last_updated"></span>
+    </p>
+  </header>
+
+  <section class="section" data-section="primary-models">
+    <h2>Primary models (extracted)</h2>
+    <div class="model-list"></div>
+    <button class="add-btn" data-add="primary_model">+ Add model</button>
+  </section>
+
+  <section class="section" data-section="excluded-models">
+    <h2>Models considered but not extracted</h2>
+    <table class="ex-table">
+      <thead><tr><th>Model</th><th>Location in paper</th><th>Why not extracted</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <button class="add-btn" data-add="excluded_model">+ Add excluded model</button>
+  </section>
+
+  <section class="section" data-section="d-transformation">
+    <h2>Cohen's d transformation</h2>
+    <div class="field-grid">
+      <div><label>Native metric</label><div data-field="d_transformation.native_metric" data-edit="text"></div></div>
+      <div><label>Conversion formula</label><div data-field="d_transformation.conversion_formula" data-edit="text"></div></div>
+      <div><label>Contrast type</label><div data-field="d_transformation.contrast_type" data-edit="text"></div></div>
+      <div><label>Transformable?</label><div data-field="d_transformation.transformable" data-edit="tribool"></div></div>
+      <div class="wide"><label>Notes / caveats</label><div data-field="d_transformation.notes" data-edit="text"></div></div>
+    </div>
+  </section>
+
+  <section class="section" data-section="coder-log">
+    <h2>Coder log</h2>
+    <ul class="coder-log"></ul>
+    <form class="log-form">
+      <input type="text" placeholder="Describe your change…" class="log-input">
+      <button type="submit">Log entry</button>
+    </form>
+  </section>
+
+  <footer class="paper-foot">
+    <button class="danger-btn" data-action="reset-empty">Reset this paper to empty</button>
+  </footer>
+</template>
+
+<template id="tpl-model-card">
+  <div class="model-card">
+    <header>
+      <input class="model-name" placeholder="Model name (e.g., Mixed-effects linear regression of ...)" data-field="name">
+      <button class="delete-btn" data-action="delete-model">Delete</button>
+    </header>
+    <div class="model-fields">
+      <div class="field-row"><label>Location in paper</label><textarea rows="1" data-field="location_in_paper" placeholder="e.g., Table 2, fully adjusted Model 2 (pp 5-7)"></textarea></div>
+      <div class="field-row"><label>Design</label><textarea rows="3" data-field="design"></textarea></div>
+      <div class="field-row"><label>Sample</label><textarea rows="3" data-field="sample"></textarea></div>
+      <div class="field-row"><label>Independent variable(s)</label><textarea rows="2" data-field="iv"></textarea></div>
+      <div class="field-row"><label>Dependent variable(s)</label><textarea rows="2" data-field="dv"></textarea></div>
+      <div class="field-row"><label>Covariates</label><textarea rows="4" data-field="covariates_text" placeholder="One per line, format:  Name — detail"></textarea></div>
+      <div class="field-row"><label>Equation</label><textarea rows="3" data-field="equation" class="monospace"></textarea></div>
+      <div class="field-row"><label>Estimation choices</label><textarea rows="3" data-field="estimation"></textarea></div>
+      <div class="field-row"><label>Native metric</label><input data-field="native_metric" placeholder="B / OR / RR / d / beta_std / IRR / Shapley / edge_weight / …"></div>
+    </div>
+    <div class="model-estimates">
+      <h4>Estimates <span class="hint">— shows the raw results table for this model (edit in the underlying JSON for now)</span></h4>
+      <div class="estimates-preview"></div>
+    </div>
+  </div>
+</template>
+
+<script src="storage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
