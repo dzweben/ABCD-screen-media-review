@@ -219,11 +219,8 @@ def main():
             papers.append(stub_paper(r))
 
     coders = [
-        {"id": "danny",    "name": "Danny",   "role": "PI"},
-        {"id": "cooper",   "name": "Cooper",  "role": "coder"},
-        {"id": "coder3",   "name": "Coder 3", "role": "coder"},
-        {"id": "coder4",   "name": "Coder 4", "role": "coder"},
-        {"id": "ai-draft", "name": "AI Draft", "role": "ai"},
+        {"id": "danny",  "name": "Danny",  "role": "PI"},
+        {"id": "cooper", "name": "Cooper", "role": "coder"},
     ]
 
     out = {"coders": coders, "papers": papers, "generated_at": datetime.utcnow().isoformat() + "Z"}

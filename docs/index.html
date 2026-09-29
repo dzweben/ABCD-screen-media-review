@@ -92,16 +92,34 @@
       <a class="pdf-download" target="_blank" hidden>⬇ Download</a>
       <span class="pdf-missing" hidden>PDF not yet uploaded</span>
     </p>
+    <div class="review-bar">
+      <div class="agree-chips" title="Coders who marked this extraction as accurate"></div>
+      <button class="agree-btn" data-action="agree" hidden>✓ I agree with this extraction</button>
+      <button class="unagree-btn" data-action="unagree" hidden>Retract my agreement</button>
+      <span class="review-hint">Edit any field directly to correct. Corrections are logged automatically.</span>
+    </div>
   </header>
 
   <section class="section" data-section="primary-models">
-    <h2>Primary models (extracted)</h2>
+    <div class="section-head">
+      <h2>Primary models (extracted)</h2>
+      <div class="section-approve">
+        <div class="approve-chips"></div>
+        <button class="approve-btn" data-section-key="primary_models">✓ Looks right</button>
+      </div>
+    </div>
     <div class="model-list"></div>
     <button class="add-btn" data-add="primary_model">+ Add model</button>
   </section>
 
   <section class="section" data-section="excluded-models">
-    <h2>Models considered but not extracted</h2>
+    <div class="section-head">
+      <h2>Models considered but not extracted</h2>
+      <div class="section-approve">
+        <div class="approve-chips"></div>
+        <button class="approve-btn" data-section-key="excluded_models">✓ Looks right</button>
+      </div>
+    </div>
     <table class="ex-table">
       <thead><tr><th>Model</th><th>Location in paper</th><th>Why not extracted</th><th></th></tr></thead>
       <tbody></tbody>
@@ -110,7 +128,13 @@
   </section>
 
   <section class="section" data-section="d-transformation">
-    <h2>Cohen's d transformation</h2>
+    <div class="section-head">
+      <h2>Cohen's d transformation</h2>
+      <div class="section-approve">
+        <div class="approve-chips"></div>
+        <button class="approve-btn" data-section-key="d_transformation">✓ Looks right</button>
+      </div>
+    </div>
     <div class="field-grid">
       <div><label>Native metric</label><div data-field="d_transformation.native_metric" data-edit="text"></div></div>
       <div><label>Conversion formula</label><div data-field="d_transformation.conversion_formula" data-edit="text"></div></div>
@@ -119,26 +143,13 @@
       <div class="wide"><label>Notes / caveats</label><div data-field="d_transformation.notes" data-edit="text"></div></div>
     </div>
   </section>
-
-  <section class="section" data-section="coder-log">
-    <h2>Coder log</h2>
-    <ul class="coder-log"></ul>
-    <form class="log-form">
-      <input type="text" placeholder="Describe your change…" class="log-input">
-      <button type="submit">Log entry</button>
-    </form>
-  </section>
-
-  <footer class="paper-foot">
-    <button class="danger-btn" data-action="reset-empty">Reset this paper to empty</button>
-  </footer>
 </template>
 
 <template id="tpl-model-card">
   <div class="model-card">
     <header>
       <input class="model-name" placeholder="Model name (e.g., Mixed-effects linear regression of ...)" data-field="name">
-      <button class="delete-btn" data-action="delete-model">Delete</button>
+      <button class="strike-btn" data-action="strike-model" title="Cross this model out (kept for audit)">Strike</button>
     </header>
     <div class="model-fields">
       <div class="field-row"><label>Location in paper</label><textarea rows="1" data-field="location_in_paper" placeholder="e.g., Table 2, fully adjusted Model 2 (pp 5-7)"></textarea></div>
@@ -154,6 +165,13 @@
     <div class="model-estimates">
       <h4>Estimates <span class="hint">— shows the raw results table for this model (edit in the underlying JSON for now)</span></h4>
       <div class="estimates-preview"></div>
+    </div>
+    <div class="notes-block">
+      <div class="notes-list"></div>
+      <form class="add-note-form">
+        <input type="text" class="add-note-input" placeholder="Add a note on this model — a correction, a caveat, a question…" maxlength="600">
+        <button type="submit">+ Note</button>
+      </form>
     </div>
   </div>
 </template>

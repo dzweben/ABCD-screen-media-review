@@ -248,10 +248,10 @@ function renderPaper(paper) {
 
   wireStatusBadge(view, paper);
   wireDottedFields(view, paper);
+  wireReviewBar(view, paper);
   wirePrimaryModels(view, paper);
   wireExcludedModels(view, paper);
-  wireCoderLog(view, paper);
-  wireResetButton(view, paper);
+  wireSectionApprovals(view, paper);
 }
 
 /* ── text field wiring ──────────────────────────────── */
@@ -380,12 +380,29 @@ function buildModelCard(paper, model, idx) {
     autoSave(paper, `Edited model M${idx + 1} name`);
   });
 
-  card.querySelector('button[data-action="delete-model"]').addEventListener("click", () => {
-    if (!confirm(`Delete model "${model.name || model.model_id}"?`)) return;
-    paper.primary_models.splice(idx, 1);
-    autoSave(paper, `Deleted model ${model.model_id}`);
+  // Strike-through instead of delete — model stays visible with line-through
+  const strikeKey = `primary_models.${idx}`;
+  const strikeBtn = card.querySelector('button[data-action="strike-model"]');
+  const strikeInfo = getStrike(paper, strikeKey);
+  if (strikeInfo) {
+    card.classList.add("struck");
+    strikeBtn.textContent = "Un-strike";
+    strikeBtn.title = `Struck by ${coderName(strikeInfo.coder)} · ${relTime(strikeInfo.ts)}`;
+  }
+  strikeBtn.addEventListener("click", () => {
+    if (strikeInfo) {
+      unstrike(paper, strikeKey);
+      autoSave(paper, `Removed strike on model ${model.model_id}`);
+    } else {
+      if (!AppState.currentCoder) { alert("Pick a coder identity first."); return; }
+      setStrike(paper, strikeKey, AppState.currentCoder);
+      autoSave(paper, `Struck through model ${model.model_id}`);
+    }
     wirePrimaryModels(document.querySelector("#paper-view"), paper);
   });
+
+  // Notes block
+  wireNotesBlock(card, paper, `primary_models.${idx}`);
 
   // wire text/textarea fields on the card
   card.querySelectorAll('[data-field]').forEach((el) => {
@@ -467,12 +484,17 @@ function wireExcludedModels(root, paper) {
   });
 }
 function buildExcludedRow(paper, row, idx) {
+  const strikeKey = `excluded_models.${idx}`;
+  const strikeInfo = getStrike(paper, strikeKey);
   const tr = document.createElement("tr");
+  if (strikeInfo) tr.classList.add("struck");
   tr.innerHTML = `
     <td><input type="text" data-field="model"></td>
     <td><input type="text" data-field="location"></td>
     <td><textarea rows="2" data-field="why"></textarea></td>
-    <td><button class="delete-btn" data-action="delete-row">×</button></td>
+    <td>
+      <button class="strike-btn" data-action="strike-row" title="${strikeInfo ? "Struck by " + escapeHtml(coderName(strikeInfo.coder)) : "Cross this row out (kept for audit)"}">${strikeInfo ? "Un-strike" : "Strike"}</button>
+    </td>
   `;
   tr.querySelectorAll("[data-field]").forEach((el) => {
     const f = el.dataset.field;
@@ -482,48 +504,147 @@ function buildExcludedRow(paper, row, idx) {
       autoSave(paper, `Edited excluded model row ${idx + 1} (${f})`);
     });
   });
-  tr.querySelector('button[data-action="delete-row"]').addEventListener("click", () => {
-    paper.excluded_models.splice(idx, 1);
-    autoSave(paper, `Deleted excluded model row ${idx + 1}`);
+  tr.querySelector('button[data-action="strike-row"]').addEventListener("click", () => {
+    if (strikeInfo) {
+      unstrike(paper, strikeKey);
+      autoSave(paper, `Removed strike on excluded row ${idx + 1}`);
+    } else {
+      if (!AppState.currentCoder) { alert("Pick a coder identity first."); return; }
+      setStrike(paper, strikeKey, AppState.currentCoder);
+      autoSave(paper, `Struck through excluded row ${idx + 1}`);
+    }
     wireExcludedModels(document.querySelector("#paper-view"), paper);
   });
   return tr;
 }
 
-/* ── coder log ──────────────────────────────────────── */
-function wireCoderLog(root, paper) {
-  const ul = root.querySelector(".coder-log");
-  const entries = (paper.coder_log || []).slice().reverse();
-  ul.innerHTML = entries
-    .map((e) => `
-      <li>
-        <span class="ts">${new Date(e.timestamp).toLocaleString()}</span>
-        <span class="who who-${e.coder}">${escapeHtml(e.coder || "?")}</span>
-        <span class="change">${escapeHtml(e.change || "")}</span>
-      </li>`
-    ).join("") || `<li style="color:var(--muted);"><em>No coder activity yet.</em></li>`;
+/* ── review bar (paper-level agreement chips) ────────── */
+function wireReviewBar(root, paper) {
+  const chipsEl = root.querySelector(".agree-chips");
+  const agreeBtn = root.querySelector(".agree-btn");
+  const unagreeBtn = root.querySelector(".unagree-btn");
+  const agreements = paper.agreements || {};
+  const paperAgree = agreements.paper || {};
+  const me = AppState.currentCoder;
 
-  const form = root.querySelector(".log-form");
-  form.addEventListener("submit", async (ev) => {
-    ev.preventDefault();
-    const input = form.querySelector(".log-input");
-    const change = input.value.trim();
-    if (!change) return;
-    if (!AppState.currentCoder) { alert("Select a coder at the top first."); return; }
-    input.value = "";
-    await Storage.appendLog(paper.paper_id, { coder: AppState.currentCoder, change });
-    loadPaper(paper.paper_id); // re-render
+  chipsEl.innerHTML = Object.entries(paperAgree)
+    .map(([coder, info]) => `<span class="agree-chip" title="${escapeHtml(new Date(info.ts).toLocaleString())}">${escapeHtml(coderName(coder))}</span>`)
+    .join("");
+  if (!me) {
+    agreeBtn.hidden = true;
+    unagreeBtn.hidden = true;
+  } else if (paperAgree[me]) {
+    agreeBtn.hidden = true;
+    unagreeBtn.hidden = false;
+  } else {
+    agreeBtn.hidden = false;
+    unagreeBtn.hidden = true;
+  }
+  agreeBtn.onclick = () => {
+    if (!me) return;
+    paper.agreements = paper.agreements || {};
+    paper.agreements.paper = paper.agreements.paper || {};
+    paper.agreements.paper[me] = { ts: new Date().toISOString() };
+    autoSave(paper, `${coderName(me)} agreed with the extraction`);
+    wireReviewBar(root, paper);
+  };
+  unagreeBtn.onclick = () => {
+    if (!me) return;
+    if (paper.agreements?.paper) delete paper.agreements.paper[me];
+    autoSave(paper, `${coderName(me)} retracted agreement`);
+    wireReviewBar(root, paper);
+  };
+}
+
+/* ── per-section approvals ──────────────────────────── */
+function wireSectionApprovals(root, paper) {
+  root.querySelectorAll(".section-approve").forEach((wrap) => {
+    const btn = wrap.querySelector(".approve-btn");
+    const key = btn.dataset.sectionKey;
+    const chips = wrap.querySelector(".approve-chips");
+    const agreements = (paper.agreements && paper.agreements[key]) || {};
+    chips.innerHTML = Object.entries(agreements)
+      .map(([coder, info]) => `<span class="agree-chip small" title="${escapeHtml(new Date(info.ts).toLocaleString())}">${escapeHtml(coderName(coder))}</span>`)
+      .join("");
+    const me = AppState.currentCoder;
+    const iAgreed = me && agreements[me];
+    btn.textContent = iAgreed ? "Retract ✓" : "✓ Looks right";
+    btn.classList.toggle("done", !!iAgreed);
+    btn.onclick = () => {
+      if (!me) { alert("Pick a coder identity first."); return; }
+      paper.agreements = paper.agreements || {};
+      paper.agreements[key] = paper.agreements[key] || {};
+      if (iAgreed) {
+        delete paper.agreements[key][me];
+        autoSave(paper, `${coderName(me)} retracted approval of ${key}`);
+      } else {
+        paper.agreements[key][me] = { ts: new Date().toISOString() };
+        autoSave(paper, `${coderName(me)} approved ${key}`);
+      }
+      wireSectionApprovals(root, paper);
+    };
   });
 }
 
-function wireResetButton(root, paper) {
-  const btn = root.querySelector('button[data-action="reset-empty"]');
-  btn.addEventListener("click", async () => {
-    if (!confirm(`Reset paper #${paper.paper_id} to empty stub?\n\nThis clears everything you've edited locally on this paper.`)) return;
-    Storage.clearOverride(paper.paper_id);
-    await loadPaper(paper.paper_id);
-    refreshSidebar();
-  });
+/* ── notes on a model card ─────────────────────────── */
+function wireNotesBlock(card, paper, keyPath) {
+  const list = card.querySelector(".notes-list");
+  const form = card.querySelector(".add-note-form");
+  const input = form.querySelector(".add-note-input");
+  const notes = (paper.notes && paper.notes[keyPath]) || [];
+  list.innerHTML = notes.length
+    ? notes
+        .map(
+          (n, i) => `
+        <div class="note">
+          <span class="note-who who-${n.coder}">${escapeHtml(coderName(n.coder))}</span>
+          <span class="note-ts">${escapeHtml(relTime(n.ts))}</span>
+          <div class="note-text">${escapeHtml(n.text)}</div>
+        </div>`
+        )
+        .join("")
+    : "";
+  form.onsubmit = (ev) => {
+    ev.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
+    if (!AppState.currentCoder) { alert("Pick a coder identity first."); return; }
+    paper.notes = paper.notes || {};
+    paper.notes[keyPath] = paper.notes[keyPath] || [];
+    paper.notes[keyPath].push({
+      coder: AppState.currentCoder,
+      ts: new Date().toISOString(),
+      text,
+    });
+    input.value = "";
+    autoSave(paper, `${coderName(AppState.currentCoder)} added a note`);
+    wireNotesBlock(card, paper, keyPath);
+  };
+}
+
+/* ── strike helpers ─────────────────────────────────── */
+function getStrike(paper, keyPath) {
+  return paper.strikes && paper.strikes[keyPath];
+}
+function setStrike(paper, keyPath, coder) {
+  paper.strikes = paper.strikes || {};
+  paper.strikes[keyPath] = { coder, ts: new Date().toISOString() };
+}
+function unstrike(paper, keyPath) {
+  if (paper.strikes) delete paper.strikes[keyPath];
+}
+function coderName(id) {
+  const c = Storage.getCoders().find((c) => c.id === id);
+  return c ? c.name : id;
+}
+function relTime(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  const secs = (Date.now() - d.getTime()) / 1000;
+  if (secs < 60) return "just now";
+  if (secs < 3600) return `${Math.floor(secs / 60)}m ago`;
+  if (secs < 86400) return `${Math.floor(secs / 3600)}h ago`;
+  return d.toLocaleDateString();
 }
 
 /* ── autosave helpers ───────────────────────────────── */
@@ -532,23 +653,15 @@ function autoSave(paper, changeLabel) {
     console.warn("Save aborted: no coder selected");
     return;
   }
+  paper.last_edited_by = AppState.currentCoder;
+  if (!paper.contributors) paper.contributors = [];
+  if (!paper.contributors.includes(AppState.currentCoder)) {
+    paper.contributors.push(AppState.currentCoder);
+  }
   clearTimeout(AppState.saveTimers[paper.paper_id]);
   AppState.saveTimers[paper.paper_id] = setTimeout(async () => {
-    paper.coder_log = paper.coder_log || [];
-    paper.coder_log.push({
-      timestamp: new Date().toISOString(),
-      coder: AppState.currentCoder,
-      change: changeLabel,
-    });
-    if (!paper.contributors) paper.contributors = [];
-    if (!paper.contributors.includes(AppState.currentCoder)) {
-      paper.contributors.push(AppState.currentCoder);
-    }
     await Storage.savePaper(paper);
     refreshSidebar();
-    // re-render coder log without full reload
-    const logRoot = document.querySelector('#paper-view .section[data-section="coder-log"]');
-    if (logRoot) wireCoderLog(logRoot.parentElement, paper);
   }, 400);
 }
 
