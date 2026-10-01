@@ -90,10 +90,10 @@
      "RR_lo": 1.0,
      "RR_hi": 1.19,
      "p": 0.049,
-     "p_label": "0.049",
+     "p_label": null,
      "sig": true,
      "location": "Table 2, row 1, Adjusted ARR (95% CI) column (p. 3)",
-     "note": "Adjusted risk ratio. Unadjusted RR 1.15 (1.07-1.25), p <0.001 (Table 2, excluded as transparency artifact). Direction: frequent COVID social media checking associated with higher likelihood of always masking. p0 = 0.623 is the weighted marginal rate of 'all the time last week' in the whole sample (Table 1), not the rate in the unexposed group.",
+     "note": "Adjusted risk ratio. Unadjusted RR 1.15 (1.07-1.25), p <0.001 (Table 2, excluded as transparency artifact). Direction: frequent COVID social media checking associated with higher likelihood of always masking. p0 = 0.623 is the weighted marginal rate of 'all the time last week' in the whole sample (Table 1), not the rate in the unexposed group. [complete-stage check] Read entire PDF (pp.1-4: Tables 1-2, text, footnotes). Native ARR, 95% CI and exact p are all printed in Table 2; no SE or z printed (CI suffices). Exposure-group outcome rate (p0 in unexposed) not printed anywhere in the PDF; only whole-sample weighted 62.3% (Table 1). Exposure prevalence 9.1% printed but group n's not printed (only weighted %). Supplemental Appendix (question wording, included vs excluded) is online only and not bundled in docs/pdfs. [audit] Re-read all 4 PDF pages; ARR 1.09 (1.00-1.19), p=0.049 confirmed in Table 2 adjusted column p.3 and Results text p.3. No SE/z printed. No supplement file in docs/pdfs; unexposed-group masking rate and group n's not printed.",
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.09(1 \u2212 0.623) / (1 \u2212 1.09\u00d70.623) = 1.2804;  d = ln(1.2804) \u00d7 0.5513 = 0.1363",
      "derived_d": 0.1363,
@@ -101,7 +101,8 @@
      "derived_d_hi": 0.3037,
      "derived_d_method": "RR -> OR -> d (p0=0.623)"
     }
-   ]
+   ],
+   "iv_type": "binary"
   }
  ],
  "excluded_models": [
@@ -136,8 +137,41 @@
   "conversion_formula": "OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Apply to RR, RR_lo and RR_hi with p0 = 0.623.",
   "contrast_type": "Binary exposure: checking COVID-related social media almost every hour or more vs less often (yes vs no).",
   "transformable": true,
-  "notes": "p0 = 0.623 is the propensity-weighted proportion of the whole analytic sample reporting wearing a mask/protective gear 'all the time last week' (Table 1, p. 2). The outcome rate in the unexposed (less-than-hourly) group is not reported; because exposure prevalence is 9.1% (Table 1), the marginal rate is used as an approximation per guidelines \u00a74a, but 9.1% is near the ~10% threshold and the base rate is high (62%), so the RR-to-OR conversion is sensitive to p0. The RR is also covariate-adjusted and weighted, while p0 is a crude weighted marginal rate. The resulting d is a binary-contrast effect and is not directly comparable to per-1-SD d's from continuous-IV papers. The IV is COVID-information checking on social media, not general social media time."
+  "notes": "p0 = 0.623 is the propensity-weighted proportion of the whole analytic sample reporting wearing a mask/protective gear 'all the time last week' (Table 1, p. 2). The outcome rate in the unexposed (less-than-hourly) group is not reported; because exposure prevalence is 9.1% (Table 1), the marginal rate is used as an approximation per guidelines \u00a74a, but 9.1% is near the ~10% threshold and the base rate is high (62%), so the RR-to-OR conversion is sensitive to p0. The RR is also covariate-adjusted and weighted, while p0 is a crude weighted marginal rate. The resulting d is a binary-contrast effect and is not directly comparable to per-1-SD d's from continuous-IV papers. The IV is COVID-information checking on social media, not general social media time. Complete-stage check: whole PDF re-read; no unexposed-group masking rate, SE, or group n printed; marginal p0 approximation retained."
  },
  "extraction_flags": "The single qualifying estimate is the adjusted RR 1.09 (1.00-1.19), p = 0.049, in Table 2. The IV is checking COVID-related information on social media \"almost every hour or more\" versus less often. It is not general social media time, so a coder should confirm it counts as a phone/SM modality under FT-IC2. The DV \"always masking\" was taken to mean the \"all the time last week\" response (62.3%), but the paper never states the cut explicitly. p0 = 0.623 is the weighted marginal rate for the whole sample; the rate in the unexposed group is not reported. Exposure prevalence is 9.1%, close to the 10% threshold, and the high base rate makes the RR-to-OR conversion sensitive to p0. The question wording, the response options and the included/excluded comparison are in an online Supplemental Appendix that is not bundled in the PDF. Site was adjusted for, but the paper does not say how it was modelled. The other information-source variables (internet/YouTube, TV, parent counseling) were excluded as non-phone/SM; they enter the model as mutual covariates.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods 2.2 / Table 2 p.3 (almost every hour or more vs less)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_covid_check x always_mask",
+   "action": "confirmed_missing",
+   "value": "ARR 1.09 (1.00-1.19), p=0.049 already complete; p0 in unexposed group not printed (only marginal 0.623)",
+   "where": "Table 1 p.2, Table 2 p.3, text pp.2-3; supplement not bundled"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_covid_check x always_mask",
+   "action": "corrected",
+   "field": "p_label",
+   "was": "0.049",
+   "value": null,
+   "where": "Table 2 p.3: p printed exactly (0.049), stored in p; p_label reserved for inequalities"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_covid_check x always_mask",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "RR 1.09, RR_lo 1.00, RR_hi 1.19, p 0.049, sig true, iv_type binary, p0 0.623 confirmed; se/z/unexposed p0/group n not printed",
+   "where": "Table 1 p.2, Table 2 p.3, Results p.3; no supplement in docs/pdfs"
+  }
+ ],
  "supplements": []
 }

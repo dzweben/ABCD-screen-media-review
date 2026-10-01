@@ -97,6 +97,7 @@
      "p_label": ".17",
      "sig": false,
      "location": "Table 2, Prospective Analysis, Texting row (p. 752)",
+     "note": "Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.09 \u00d7 0.53 / 2.45 = -0.0195;  d = 2(-0.0195) / \u221a(1 \u2212 (-0.0195)\u00b2) = -0.0389",
      "derived_d": -0.0389,
@@ -114,6 +115,7 @@
      "p_label": ".53",
      "sig": false,
      "location": "Table 2, Prospective Analysis, Video chat row (p. 752)",
+     "note": "Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.05 \u00d7 0.47 / 2.45 = 0.0096;  d = 2(0.0096) / \u221a(1 \u2212 0.0096\u00b2) = 0.0192",
      "derived_d": 0.0192,
@@ -131,6 +133,7 @@
      "p_label": ".17",
      "sig": false,
      "location": "Table 2, Prospective Analysis, Social media row (p. 752)",
+     "note": "Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.12 \u00d7 0.39 / 2.45 = -0.0191;  d = 2(-0.0191) / \u221a(1 \u2212 (-0.0191)\u00b2) = -0.0382",
      "derived_d": -0.0382,
@@ -138,7 +141,8 @@
      "derived_d_hi": 0.0159,
      "derived_d_method": "linear (SD_IV=0.39, SD_DV=2.45)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -196,7 +200,7 @@
      "p_label": ".01",
      "sig": true,
      "location": "Table 2, Cross-Sectional Analysis, Texting row (p. 752)",
-     "note": "Also reported in Results text p. 751 and shown in Figure panel E.",
+     "note": "Also reported in Results text p. 751 and shown in Figure panel E. Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.15 \u00d7 0.73 / 2.45 = -0.0447;  d = 2(-0.0447) / \u221a(1 \u2212 (-0.0447)\u00b2) = -0.0895",
      "derived_d": -0.0895,
@@ -214,6 +218,7 @@
      "p_label": ".10",
      "sig": false,
      "location": "Table 2, Cross-Sectional Analysis, Video chat row (p. 752)",
+     "note": "Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.09 \u00d7 0.63 / 2.45 = -0.0231;  d = 2(-0.0231) / \u221a(1 \u2212 (-0.0231)\u00b2) = -0.0463",
      "derived_d": -0.0463,
@@ -231,7 +236,7 @@
      "p_label": ".01",
      "sig": true,
      "location": "Table 2, Cross-Sectional Analysis, Social media row (p. 752)",
-     "note": "Also reported in Results text p. 751 and shown in Figure panel F.",
+     "note": "Also reported in Results text p. 751 and shown in Figure panel F. Completion pass: B, CI, exact p already present; SE/t not searched because the bundled PDF is a different paper (see verification_log). CI is printed, so no SE needed. Audit 2026-10-01: B, 95% CI, p re-verified against Table 2 in PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164); all match. No SE, t, or exact p beyond 2 decimals printed in Table 2 or Results text; Supplementary Appendix A is only an exclusion flowchart.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.16 \u00d7 0.6 / 2.45 = -0.0392;  d = 2(-0.0392) / \u221a(1 \u2212 (-0.0392)\u00b2) = -0.0784",
      "derived_d": -0.0784,
@@ -239,7 +244,8 @@
      "derived_d_hi": -0.0245,
      "derived_d_method": "linear (SD_IV=0.6, SD_DV=2.45)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -274,8 +280,130 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). CI endpoints converted the same way.",
   "contrast_type": "per 1 SD of the IV (hours/day of the modality at the wave of measurement), derived from per-1-hour/day B",
   "transformable": true,
-  "notes": "SD_IV from Table 1 (p. 751): baseline texting 0.53, video chat 0.47, social media 0.39 h/d (used for M1); year-1 texting 0.73, video chat 0.63, social media 0.60 h/d (used for M2). SD_DV = 2.45 from Table 1 'MIND diet sum score 8.00 (2.45)'. That row sits under the 'Sociodemographic Characteristics (Baseline)' heading, but the MIND score was only collected at year 1 (Results text: average at year 1 was 8 points out of 14), so it is taken as the year-1 outcome SD for the analytic sample. Table 1 values are propensity-weighted. Each B comes from a single-modality model, so it is not mutually adjusted for the other screen modalities."
+  "notes": "SD_IV from Table 1 (p. 751): baseline texting 0.53, video chat 0.47, social media 0.39 h/d (used for M1); year-1 texting 0.73, video chat 0.63, social media 0.60 h/d (used for M2). SD_DV = 2.45 from Table 1 'MIND diet sum score 8.00 (2.45)'. That row sits under the 'Sociodemographic Characteristics (Baseline)' heading, but the MIND score was only collected at year 1 (Results text: average at year 1 was 8 points out of 14), so it is taken as the year-1 outcome SD for the analytic sample. Table 1 values are propensity-weighted. Each B comes from a single-modality model, so it is not mutually adjusted for the other screen modalities. Completion pass 2026-10-01: docs/pdfs/10.1016_j.acap.2024.01.023.pdf is the WRONG paper (Nagata et al., 'Neighborhood Quality and Screen Use', Acad Pediatr 2026;26:103164, doi 10.1016/j.acap.2025.103164); no '_supplement' file exists and no copy of the nutrition paper was found anywhere in the repo, so SE/t could not be searched for. B, 95% CI, p, SD_IV and SD_DV were already filled from the prior extraction of Table 1/Table 2; no CI input is missing. Re-verify against the correct PDF once it is placed."
  },
  "extraction_flags": "The PDF at the listed path is the wrong paper...) is actually Nagata et al., \"Neighborhood Quality and Screen Use\", Acad Pediatr 2026;26:103164...), and the extraction comes from that file. The copy in docs/pdfs should be replaced; I did not change it. The same mismatch exists in the archive data/pdfs/ folder, so other papers' PDFs may have been swapped the same way.\n\nOn the extraction: the prospective model (year-0 IV) and the cross-sectional model (year-1 IV) are split into M1 and M2 because they have different designs. The authors interpret both, but stress the cross-sectional findings for texting and social media. Texting and social media are significant only cross-sectionally (M2). In the prospective model (M1) all phone/SM estimates are null.\n\nThree things need human checks:\n- SD_DV = 2.45 is the Table 1 \"MIND diet sum score\" row. It sits under the \"Baseline\" heading, but MIND was only measured at year 1, so the label is ambiguous.\n- How study site was modeled (fixed or random) is not stated.\n- Supplementary Appendix A (the exclusion flowchart) is not bundled in the PDF.\n\nEach modality is its own single-IV regression, so the estimates are not mutually adjusted for other modalities. All 6 B values, CIs, p-values and all 6 SD_IV values were checked against Table 2 and Table 1.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "IVs are hours/day (Methods, Table 1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 videochat_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "IVs are hours/day (Methods, Table 1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 texting_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 videochat_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/t not recoverable: docs/pdfs copy is wrong paper (acap.2025.103164); B/CI/p/SDs already filled from Table 1-2 by prior extraction"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 videochat_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y0 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1",
+   "action": "confirmed",
+   "was": null,
+   "value": "B/CI/p for texting, video chat, social media; sd_iv; sd_dv=2.45; iv_type continuous; sig at P<.05 (Table 2 footnote, bold)",
+   "where": "Table 1 and Table 2, PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 texting_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 videochat_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_y1 x mind_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "SE/t not printed: Table 2 gives B, 95% CI, P only; Results text gives no coefficients; checked PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2",
+   "action": "confirmed",
+   "was": null,
+   "value": "B/CI/p for texting, video chat, social media; sd_iv; sd_dv=2.45; iv_type continuous; sig at P<.05 (Table 2 footnote, bold)",
+   "where": "Table 1 and Table 2, PMC11193610 full text (author manuscript; local docs/pdfs copy is the wrong paper, acap.2025.103164)"
+  }
+ ],
  "supplements": []
 }

@@ -113,183 +113,203 @@
      "iv": "sm_main",
      "dv": "csa",
      "beta": 0.001,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.001,
+     "beta_hi": 0.003,
      "p": 0.67,
      "p_label": "0.67",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage' column",
-     "note": "SE as printed in Table 2: (0.001). No CI reported.",
+     "note": "SE as printed in Table 2: (0.001). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.001,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.001) / \u221a(1 \u2212 0.001\u00b2) = 0.002",
      "derived_d": 0.002,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.002,
+     "derived_d_hi": 0.006,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "csa",
      "beta": 0.001,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0108,
+     "beta_hi": 0.0128,
      "p": 0.36,
      "p_label": "0.36",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time' column",
-     "note": "SE as printed in Table 2: (0.006). No CI reported.",
+     "note": "SE as printed in Table 2: (0.006). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3). [Audit] Printed beta/SE/p re-verified against Table 2 p.4 (text layer). Note: printed p is internally inconsistent with beta/SE (Wald z = 0.17 implies p ~ 0.87); kept the printed p.",
+     "se": 0.006,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.001) / \u221a(1 \u2212 0.001\u00b2) = 0.002",
      "derived_d": 0.002,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0216,
+     "derived_d_hi": 0.0256,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time2",
      "dv": "csa",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0178,
+     "beta_hi": -0.0022,
      "p": 0.004,
      "p_label": "0.004",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time^2' column",
-     "note": "SE as printed in Table 2: (0.004). No CI reported. Nominally p<.05 but not below the paper's Bonferroni threshold (p<0.0027 / p<0.003); not bolded and not interpreted by the authors.",
+     "note": "SE as printed in Table 2: (0.004). No CI reported. Nominally p<.05 but not below the paper's Bonferroni threshold (p<0.0027 / p<0.003); not bolded and not interpreted by the authors. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.004,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0356,
+     "derived_d_hi": -0.0044,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_main",
      "dv": "striatum",
      "beta": -0.007,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0266,
+     "beta_hi": 0.0126,
      "p": 0.49,
      "p_label": "0.49",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage' column",
-     "note": "SE as printed in Table 2: (0.01). No CI reported.",
+     "note": "SE as printed in Table 2: (0.01). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.007) / \u221a(1 \u2212 (-0.007)\u00b2) = -0.014",
      "derived_d": -0.014,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0532,
+     "derived_d_hi": 0.0252,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "striatum",
      "beta": -0.007,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0188,
+     "beta_hi": 0.0048,
      "p": 0.91,
      "p_label": "0.91",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time' column",
-     "note": "SE as printed in Table 2: (0.006). No CI reported.",
+     "note": "SE as printed in Table 2: (0.006). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3). [Audit] Printed beta/SE/p re-verified against Table 2 p.4 (text layer). Note: printed p is internally inconsistent with beta/SE (Wald z = -1.17 implies p ~ 0.24); kept the printed p.",
+     "se": 0.006,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.007) / \u221a(1 \u2212 (-0.007)\u00b2) = -0.014",
      "derived_d": -0.014,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0376,
+     "derived_d_hi": 0.0096,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time2",
      "dv": "striatum",
      "beta": 0.001,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0049,
+     "beta_hi": 0.0069,
      "p": 0.96,
      "p_label": "0.96",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time^2' column",
-     "note": "SE as printed in Table 2: (0.003). No CI reported.",
+     "note": "SE as printed in Table 2: (0.003). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.003,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.001) / \u221a(1 \u2212 0.001\u00b2) = 0.002",
      "derived_d": 0.002,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0098,
+     "derived_d_hi": 0.0138,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_main",
      "dv": "cerebellum",
      "beta": 0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0004,
+     "beta_hi": 0.0396,
      "p": 0.1,
      "p_label": "0.10",
      "sig": false,
      "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage' column",
-     "note": "SE as printed in Table 2: (0.01). No CI reported.",
+     "note": "SE as printed in Table 2: (0.01). No CI reported. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.02) / \u221a(1 \u2212 0.02\u00b2) = 0.04",
      "derived_d": 0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0008,
+     "derived_d_hi": 0.0793,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "cerebellum",
      "beta": 0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0102,
+     "beta_hi": 0.0298,
      "p": null,
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time' column (bolded)",
-     "note": "SE as printed in Table 2: (0.005). No CI reported. Interpreted in Results p. 3-5 ('positive association of social media usage and time with cerebellum volumes for a linear term (beta = 0.02)') and Discussion p. 6.",
+     "note": "SE as printed in Table 2: (0.005). No CI reported. Interpreted in Results p. 3-5 ('positive association of social media usage and time with cerebellum volumes for a linear term (beta = 0.02)') and Discussion p. 6. SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.005,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.02) / \u221a(1 \u2212 0.02\u00b2) = 0.04",
      "derived_d": 0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0204,
+     "derived_d_hi": 0.0596,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time2",
      "dv": "cerebellum",
      "beta": -0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0259,
+     "beta_hi": -0.0141,
      "p": null,
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time^2' column (bolded)",
-     "note": "SE as printed in Table 2: (0.003). No CI reported. Interpreted in Results p. 5 and Discussion p. 6 as a subtle decrease in cerebellum volume / earlier decline among heavier social media users (beta = -0.02).",
+     "note": "SE as printed in Table 2: (0.003). No CI reported. Interpreted in Results p. 5 and Discussion p. 6 as a subtle decrease in cerebellum volume / earlier decline among heavier social media users (beta = -0.02). SE moved into 'se' field (verified against Table 2 p.4). No CI printed anywhere in the PDF; CI computable from beta +/- 1.96*SE. sd_dv not printed (only plotted, unlabelled-SD, in Fig 1-3).",
+     "se": 0.003,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.02) / \u221a(1 \u2212 (-0.02)\u00b2) = -0.04",
      "derived_d": -0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0518,
+     "derived_d_hi": -0.0282,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sns_only",
      "dv": "cerebellum",
      "beta": -0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0327,
+     "beta_hi": -0.0073,
      "p": 0.002,
      "p_label": "0.002",
      "sig": true,
      "location": "Results text, p. 6 ('after excluding time spent on video chatting or texting from social media usage'); Methods p. 11",
-     "note": "Reported in text only (beta = -0.02; p = 0.002); no SE or CI printed. The text does not say which model term this is; the magnitude and the phrase 'same effect size' suggest it is the social media x Time^2 term for cerebellum, but this is an inference. IV here is social networking sites only (texting and video chat removed).",
+     "note": "Reported in text only (beta = -0.02; p = 0.002); no SE or CI printed. The text does not say which model term this is; the magnitude and the phrase 'same effect size' suggest it is the social media x Time^2 term for cerebellum, but this is an inference. IV here is social networking sites only (texting and video chat removed). Completion check: re-read full PDF (pp.1-14, Tables 1-2, Figs 1-3, Results p.6, Methods pp.10-11); only beta and exact p printed in text p.6; no SE/CI/t. p=0.002 exact allows a z-based CI. Supplement (eTables) not bundled; online only.",
+     "ci_source": "computed from exact p = 0.002 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.02) / \u221a(1 \u2212 (-0.02)\u00b2) = -0.04",
      "derived_d": -0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0654,
+     "derived_d_hi": -0.0146,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -361,39 +381,42 @@
      "iv": "sm_avg_t0t1",
      "dv": "cereb_change_t2t4",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0219,
+     "beta_hi": 0.0019,
      "p": 0.1,
      "p_label": "0.10",
      "sig": false,
      "location": "Results text, 'Additional analysis', p. 5 (eTable 5, supplement not in PDF)",
-     "note": "Text: negative trend for high social media users with changes in cerebellum volumes (beta = -0.01; p = 0.10). SE/CI only in eTable 5, which is not bundled with the PDF.",
+     "note": "Text: negative trend for high social media users with changes in cerebellum volumes (beta = -0.01; p = 0.10). SE/CI only in eTable 5, which is not bundled with the PDF. Completion check: re-read full PDF pp.1-14; only beta and exact p printed (Results pp.5-6); SE/CI in eTables 5/6 (online supplement, no supplement file in docs/pdfs). Exact p allows a z-based CI. SD of the T0/T1 average not printed (Table 1 gives T0 SD 1.06 and T1 SD 1.49 separately only).",
+     "ci_source": "computed from exact p = 0.1 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0438,
+     "derived_d_hi": 0.0038,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_t0",
      "dv": "cereb_change_t0t4",
      "beta": -0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0718,
+     "beta_hi": 0.0118,
      "p": 0.16,
      "p_label": "0.16",
      "sig": false,
      "location": "Results text p. 6 (eTable 6, supplement not in PDF); quoted in Abstract",
-     "note": "Authors describe this estimate as 'the overall effect size of social media usage over a 4-year study period' and cite it in the Abstract as the accumulated high-vs-low effect (beta = -0.03), judged below their 0.05 meaningfulness threshold. SE/CI only in eTable 6, not in PDF.",
+     "note": "Authors describe this estimate as 'the overall effect size of social media usage over a 4-year study period' and cite it in the Abstract as the accumulated high-vs-low effect (beta = -0.03), judged below their 0.05 meaningfulness threshold. SE/CI only in eTable 6, not in PDF. Completion check: re-read full PDF pp.1-14; only beta and exact p printed (Results pp.5-6); SE/CI in eTables 5/6 (online supplement, no supplement file in docs/pdfs). Exact p allows a z-based CI.",
+     "ci_source": "computed from exact p = 0.16 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.03) / \u221a(1 \u2212 (-0.03)\u00b2) = -0.06",
      "derived_d": -0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.144,
+     "derived_d_hi": 0.0236,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -453,8 +476,300 @@
   "conversion_formula": "Treat beta as approximate r: d = 2*beta / sqrt(1 - beta^2). If beta proves to be unstandardized, beta_std = B * SD_IV / SD_DV first (SD_DV not reported).",
   "contrast_type": "M1 main effect and M2: per 1 unit (h/day) of social media use, or per 1 SD if the IV was standardized (not stated). M1 interaction terms: difference in the linear or quadratic orthogonal-polynomial time slope per unit of average social media use.",
   "transformable": "partial",
-  "notes": "The paper never says whether variables were standardized. Raw brain volumes (cerebellum ~150 x 10^3 mm^3, Fig. 1) are incompatible with time coefficients of 0.04-0.12 and SEs of 0.001-0.02, which suggests the outcomes were standardized; SES and cogPGS are explicitly z-scored, but social media hours apparently entered in hours/day. SD_IV for the average social media variable is 0.95 h/day (Table 1, p. 3, 'Average estimated time spent over four years on Using social media'); SD at T0 is 1.06 (Table 1). SD_DV is not reported anywhere in the PDF. The M1 main-effect beta and the M2 betas can be converted to an approximate d under the beta_std assumption. The M1 interaction coefficients with Poly(Time,2) (orthogonal polynomial terms) are slope-difference parameters and do not map onto a between-person Cohen's d; they should be displayed in native metric only. No CIs are reported (SEs only for M1; neither SE nor CI for M2 in the PDF), so d CIs cannot be produced."
+  "notes": "The paper never says whether variables were standardized. Raw brain volumes (cerebellum ~150 x 10^3 mm^3, Fig. 1) are incompatible with time coefficients of 0.04-0.12 and SEs of 0.001-0.02, which suggests the outcomes were standardized; SES and cogPGS are explicitly z-scored, but social media hours apparently entered in hours/day. SD_IV for the average social media variable is 0.95 h/day (Table 1, p. 3, 'Average estimated time spent over four years on Using social media'); SD at T0 is 1.06 (Table 1). SD_DV is not reported anywhere in the PDF. The M1 main-effect beta and the M2 betas can be converted to an approximate d under the beta_std assumption. The M1 interaction coefficients with Poly(Time,2) (orthogonal polynomial terms) are slope-difference parameters and do not map onto a between-person Cohen's d; they should be displayed in native metric only. No CIs are reported (SEs only for M1; neither SE nor CI for M2 in the PDF), so d CIs cannot be produced. [Completion pass] Printed Table 2 SEs now stored in each M1 estimate's 'se' field; whole PDF re-read (14 pages, no supplement file available); no CIs, SD_DV or M2 SEs printed anywhere."
  },
  "extraction_flags": "1) Standardization: the paper labels coefficients only as \"beta\" and never says whether variables were standardized. Raw volumes of about 150x10^3 mm^3 don't fit coefficients of 0.01-0.12, so the outcomes look standardized, but this is an assumption. I coded native_metric as beta_std. 2) The focal M1 estimates are social media x Poly(Time,2) interaction slopes (orthogonal polynomial). They don't convert cleanly to a between-person d; only the main effect and the M2 betas are roughly convertible. SD_DV is not reported anywhere. SD_IV = 0.95 for average social media use (Table 1); T0 SD = 1.06. 3) Composite: the social media IV is texting (cell phone/tablet/computer) + social networking sites + video chat. That qualifies under FT-IC2 Step 2 and clarification 5. 4) The supplement (eTables 1-8) is not bundled in the PDF. M2 estimates (beta -0.01, p 0.10, eTable 5; beta -0.03, p 0.16, eTable 6) are from the text only, with no SE or CI, and their analytic N is unknown. The abstract anchors on the beta -0.03. Please check the online supplement. 5) The SNS-only sensitivity estimate (beta -0.02, p 0.002, text p. 6) does not name which model term it is. I inferred it is the Time^2 term for cerebellum and flagged this in its note. 6) The significance threshold is Bonferroni p<0.0027 (Table 2 caption), while the text says p<0.003. CSA x Time^2 has p = 0.004, so I coded it sig=false. 7) Coders may want to decide whether M2 (the abstract-cited accumulated-effect estimate) should be the primary anchor rather than the M1 interactions.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.10-11: DM usage 'fitted as a continuous measure' (h/day)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.10-11: DM usage 'fitted as a continuous measure' (h/day)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x csa",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.001
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x csa",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x csa",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.006
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x csa",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x csa",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.004
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x csa",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x striatum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x striatum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x striatum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.006
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x striatum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x striatum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.003
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x striatum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x cerebellum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_main x cerebellum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x cerebellum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.005
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x cerebellum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x cerebellum",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.003
+   },
+   "where": "Table 2 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time2 x cerebellum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sns_only x cerebellum",
+   "action": "confirmed_missing",
+   "value": "SE/CI not printed; exact p=0.002 present",
+   "where": "Results text p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sns_only x cerebellum",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 1 p.3 has no brain-volume SDs; Figs 1-3 plot CIs of predicted trajectories only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm_avg_t0t1 x cereb_change_t2t4",
+   "action": "confirmed_missing",
+   "value": "SE/CI/sd_dv not printed; exact p present",
+   "where": "Results pp.5-6; eTables 5-6 not in PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm_t0 x cereb_change_t0t4",
+   "action": "confirmed_missing",
+   "value": "SE/CI/sd_dv not printed; exact p present",
+   "where": "Results pp.5-6; eTables 5-6 not in PDF"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_main x csa",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time x csa",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time2 x csa",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time^2' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_main x striatum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time x striatum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time2 x striatum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time^2' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_main x cerebellum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage' column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time x cerebellum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time' column (bolded)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time2 x cerebellum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time^2' column (bolded)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sns_only x cerebellum",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Results text, p. 6 ('after excluding time spent on video chatting or texting from social media usage'); Methods p. 11"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_avg_t0t1 x cereb_change_t2t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Results text, 'Additional analysis', p. 5 (eTable 5, supplement not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_t0 x cereb_change_t0t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta, se, p re-verified exact; CI and sd_dv not printed anywhere (14-page PDF; no supplement file in docs/pdfs; eTables online only)",
+   "where": "Results text p. 6 (eTable 6, supplement not in PDF); quoted in Abstract"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 sd_iv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "sd_iv 0.95 (avg SM over 4 yrs) and 1.06 (T0) confirmed; SD of (T0+T1)/2 average and SNS-only composite not printed",
+   "where": "Table 1 p.3"
+  }
+ ],
  "supplements": []
 }

@@ -63,51 +63,66 @@
      "id": "texting",
      "label": "Texting",
      "sd_iv": 0.6,
-     "meta": "M = 0.2 h/day, SD = 0.6"
+     "meta": "M = 0.2 h/day, SD = 0.6",
+     "sd_iv_location": "Table 1 p.5 (baseline, analytic sample N=9,538, weighted), hours/day"
     },
     {
      "id": "video_chat",
      "label": "Video chat",
      "sd_iv": 0.7,
-     "meta": "M = 0.3 h/day, SD = 0.7"
+     "meta": "M = 0.3 h/day, SD = 0.7",
+     "sd_iv_location": "Table 1 p.5 (baseline, analytic sample N=9,538, weighted), hours/day"
     },
     {
      "id": "social_media",
      "label": "Social media",
      "sd_iv": 0.1,
-     "meta": "M = 0.1 h/day, SD = 0.1"
+     "meta": "M = 0.1 h/day, SD = 0.1",
+     "sd_iv_location": "Table 1 p.5 (baseline, analytic sample N=9,538, weighted), hours/day"
     }
    ],
    "dv_axis": [
     {
      "id": "depressive",
      "label": "Depressive",
-     "sd_dv": 10.0
+     "sd_dv": 6.1,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 6.1; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     },
     {
      "id": "anxiety",
      "label": "Anxiety",
-     "sd_dv": 10.0
+     "sd_dv": 6.3,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 6.3; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     },
     {
      "id": "somatic",
      "label": "Somatic",
-     "sd_dv": 10.0
+     "sd_dv": 6.6,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 6.6; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     },
     {
      "id": "adhd",
      "label": "ADHD",
-     "sd_dv": 10.0
+     "sd_dv": 5.6,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 5.6; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     },
     {
      "id": "odd",
      "label": "ODD",
-     "sd_dv": 10.0
+     "sd_dv": 5.4,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 5.4; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     },
     {
      "id": "conduct",
      "label": "Conduct",
-     "sd_dv": 10.0
+     "sd_dv": 5.4,
+     "sd_dv_normative": 10.0,
+     "sd_dv_note": "Analytic-sample (N=9,538) weighted baseline CBCL t-score SD from Table 1 p.5 = 5.4; follow-up (Y1/Y2) SDs not printed in the PDF (Appendix A/B are online-only). Normative t-score SD = 10 kept in sd_dv_normative."
     }
    ],
    "estimates": [
@@ -119,12 +134,14 @@
      "B_hi": 0.44,
      "p": 0.005,
      "sig": true,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.26 \u00d7 0.6 / 10 = 0.0156;  d = 2(0.0156) / \u221a(1 \u2212 0.0156\u00b2) = 0.0312",
-     "derived_d": 0.0312,
-     "derived_d_lo": 0.0108,
-     "derived_d_hi": 0.0528,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.26 \u00d7 0.6 / 6.1 = 0.0256;  d = 2(0.0256) / \u221a(1 \u2212 0.0256\u00b2) = 0.0512",
+     "derived_d": 0.0512,
+     "derived_d_lo": 0.0177,
+     "derived_d_hi": 0.0866,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=6.1)"
     },
     {
      "iv": "texting",
@@ -134,12 +151,14 @@
      "B_hi": 0.27,
      "p": 0.231,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.1 \u00d7 0.6 / 10 = 0.006;  d = 2(0.006) / \u221a(1 \u2212 0.006\u00b2) = 0.012",
-     "derived_d": 0.012,
-     "derived_d_lo": -0.0084,
-     "derived_d_hi": 0.0324,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.1 \u00d7 0.6 / 6.3 = 0.0095;  d = 2(0.0095) / \u221a(1 \u2212 0.0095\u00b2) = 0.019",
+     "derived_d": 0.019,
+     "derived_d_lo": -0.0133,
+     "derived_d_hi": 0.0514,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=6.3)"
     },
     {
      "iv": "texting",
@@ -149,12 +168,14 @@
      "B_hi": 0.42,
      "p": 0.101,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.19 \u00d7 0.6 / 10 = 0.0114;  d = 2(0.0114) / \u221a(1 \u2212 0.0114\u00b2) = 0.0228",
-     "derived_d": 0.0228,
-     "derived_d_lo": -0.0048,
-     "derived_d_hi": 0.0504,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.19 \u00d7 0.6 / 6.6 = 0.0173;  d = 2(0.0173) / \u221a(1 \u2212 0.0173\u00b2) = 0.0346",
+     "derived_d": 0.0346,
+     "derived_d_lo": -0.0073,
+     "derived_d_hi": 0.0764,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=6.6)"
     },
     {
      "iv": "texting",
@@ -164,12 +185,14 @@
      "B_hi": 0.39,
      "p": 0.08,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.18 \u00d7 0.6 / 10 = 0.0108;  d = 2(0.0108) / \u221a(1 \u2212 0.0108\u00b2) = 0.0216",
-     "derived_d": 0.0216,
-     "derived_d_lo": -0.0024,
-     "derived_d_hi": 0.0468,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.18 \u00d7 0.6 / 5.6 = 0.0193;  d = 2(0.0193) / \u221a(1 \u2212 0.0193\u00b2) = 0.0386",
+     "derived_d": 0.0386,
+     "derived_d_lo": -0.0043,
+     "derived_d_hi": 0.0836,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=5.6)"
     },
     {
      "iv": "texting",
@@ -179,27 +202,31 @@
      "B_hi": 0.28,
      "p": 0.151,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.12 \u00d7 0.6 / 10 = 0.0072;  d = 2(0.0072) / \u221a(1 \u2212 0.0072\u00b2) = 0.0144",
-     "derived_d": 0.0144,
-     "derived_d_lo": -0.0048,
-     "derived_d_hi": 0.0336,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.12 \u00d7 0.6 / 5.4 = 0.0133;  d = 2(0.0133) / \u221a(1 \u2212 0.0133\u00b2) = 0.0267",
+     "derived_d": 0.0267,
+     "derived_d_lo": -0.0089,
+     "derived_d_hi": 0.0623,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=5.4)"
     },
     {
      "iv": "texting",
      "dv": "conduct",
-     "B": 0.1,
-     "B_lo": 0.05,
-     "B_hi": 0.16,
-     "p": 0.001,
+     "B": 0.33,
+     "B_lo": 0.11,
+     "B_hi": 0.56,
+     "p": 0.006,
      "sig": true,
+     "note": "Corrected from draft (0.1, 0.05, 0.16, 0.001) (draft had copied the adjacent row's conduct cell); Table 2 Model 2 prints 0.33 (0.11, 0.56) p=0.006. [audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
+     "location": "Table 2, Model 2 (adjusted), p.6",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.1 \u00d7 0.6 / 10 = 0.006;  d = 2(0.006) / \u221a(1 \u2212 0.006\u00b2) = 0.012",
-     "derived_d": 0.012,
-     "derived_d_lo": 0.006,
-     "derived_d_hi": 0.0192,
-     "derived_d_method": "linear (SD_IV=0.6, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.33 \u00d7 0.6 / 5.4 = 0.0367;  d = 2(0.0367) / \u221a(1 \u2212 0.0367\u00b2) = 0.0734",
+     "derived_d": 0.0734,
+     "derived_d_lo": 0.0244,
+     "derived_d_hi": 0.1247,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=5.4)"
     },
     {
      "iv": "video_chat",
@@ -207,14 +234,17 @@
      "B": 0.35,
      "B_lo": 0.19,
      "B_hi": 0.51,
-     "p": 0.0005,
+     "p": null,
      "sig": true,
+     "p_label": "<0.001",
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.35 \u00d7 0.7 / 10 = 0.0245;  d = 2(0.0245) / \u221a(1 \u2212 0.0245\u00b2) = 0.049",
-     "derived_d": 0.049,
-     "derived_d_lo": 0.0266,
-     "derived_d_hi": 0.0714,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.35 \u00d7 0.7 / 6.1 = 0.0402;  d = 2(0.0402) / \u221a(1 \u2212 0.0402\u00b2) = 0.0804",
+     "derived_d": 0.0804,
+     "derived_d_lo": 0.0436,
+     "derived_d_hi": 0.1173,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=6.1)"
     },
     {
      "iv": "video_chat",
@@ -224,12 +254,14 @@
      "B_hi": 0.3,
      "p": 0.189,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.12 \u00d7 0.7 / 10 = 0.0084;  d = 2(0.0084) / \u221a(1 \u2212 0.0084\u00b2) = 0.0168",
-     "derived_d": 0.0168,
-     "derived_d_lo": -0.0084,
-     "derived_d_hi": 0.042,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.12 \u00d7 0.7 / 6.3 = 0.0133;  d = 2(0.0133) / \u221a(1 \u2212 0.0133\u00b2) = 0.0267",
+     "derived_d": 0.0267,
+     "derived_d_lo": -0.0133,
+     "derived_d_hi": 0.0667,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=6.3)"
     },
     {
      "iv": "video_chat",
@@ -239,12 +271,14 @@
      "B_hi": 0.31,
      "p": 0.683,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.05 \u00d7 0.7 / 10 = 0.0035;  d = 2(0.0035) / \u221a(1 \u2212 0.0035\u00b2) = 0.007",
-     "derived_d": 0.007,
-     "derived_d_lo": -0.0294,
-     "derived_d_hi": 0.0434,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.05 \u00d7 0.7 / 6.6 = 0.0053;  d = 2(0.0053) / \u221a(1 \u2212 0.0053\u00b2) = 0.0106",
+     "derived_d": 0.0106,
+     "derived_d_lo": -0.0446,
+     "derived_d_hi": 0.0658,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=6.6)"
     },
     {
      "iv": "video_chat",
@@ -254,12 +288,14 @@
      "B_hi": 0.41,
      "p": 0.022,
      "sig": true,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.22 \u00d7 0.7 / 10 = 0.0154;  d = 2(0.0154) / \u221a(1 \u2212 0.0154\u00b2) = 0.0308",
-     "derived_d": 0.0308,
-     "derived_d_lo": 0.0042,
-     "derived_d_hi": 0.0574,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.22 \u00d7 0.7 / 5.6 = 0.0275;  d = 2(0.0275) / \u221a(1 \u2212 0.0275\u00b2) = 0.055",
+     "derived_d": 0.055,
+     "derived_d_lo": 0.0075,
+     "derived_d_hi": 0.1026,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=5.6)"
     },
     {
      "iv": "video_chat",
@@ -269,27 +305,31 @@
      "B_hi": 0.33,
      "p": 0.246,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.11 \u00d7 0.7 / 10 = 0.0077;  d = 2(0.0077) / \u221a(1 \u2212 0.0077\u00b2) = 0.0154",
-     "derived_d": 0.0154,
-     "derived_d_lo": -0.0126,
-     "derived_d_hi": 0.0462,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.11 \u00d7 0.7 / 5.4 = 0.0143;  d = 2(0.0143) / \u221a(1 \u2212 0.0143\u00b2) = 0.0285",
+     "derived_d": 0.0285,
+     "derived_d_lo": -0.0233,
+     "derived_d_hi": 0.0856,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=5.4)"
     },
     {
      "iv": "video_chat",
      "dv": "conduct",
-     "B": 0.33,
-     "B_lo": 0.11,
-     "B_hi": 0.56,
-     "p": 0.006,
+     "B": 0.35,
+     "B_lo": 0.14,
+     "B_hi": 0.57,
+     "p": 0.002,
      "sig": true,
+     "note": "Corrected from draft (0.33, 0.11, 0.56, 0.006) (draft had copied the adjacent row's conduct cell); Table 2 Model 2 prints 0.35 (0.14, 0.57) p=0.002. [audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
+     "location": "Table 2, Model 2 (adjusted), p.6",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.33 \u00d7 0.7 / 10 = 0.0231;  d = 2(0.0231) / \u221a(1 \u2212 0.0231\u00b2) = 0.0462",
-     "derived_d": 0.0462,
-     "derived_d_lo": 0.0154,
-     "derived_d_hi": 0.0785,
-     "derived_d_method": "linear (SD_IV=0.7, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.35 \u00d7 0.7 / 5.4 = 0.0454;  d = 2(0.0454) / \u221a(1 \u2212 0.0454\u00b2) = 0.0908",
+     "derived_d": 0.0908,
+     "derived_d_lo": 0.0363,
+     "derived_d_hi": 0.1482,
+     "derived_d_method": "linear (SD_IV=0.7, SD_DV=5.4)"
     },
     {
      "iv": "social_media",
@@ -299,12 +339,14 @@
      "B_hi": 0.33,
      "p": 0.23,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.14 \u00d7 0.1 / 10 = 0.0014;  d = 2(0.0014) / \u221a(1 \u2212 0.0014\u00b2) = 0.0028",
-     "derived_d": 0.0028,
-     "derived_d_lo": -0.0018,
-     "derived_d_hi": 0.0066,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.14 \u00d7 0.1 / 6.1 = 0.0023;  d = 2(0.0023) / \u221a(1 \u2212 0.0023\u00b2) = 0.0046",
+     "derived_d": 0.0046,
+     "derived_d_lo": -0.003,
+     "derived_d_hi": 0.0108,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=6.1)"
     },
     {
      "iv": "social_media",
@@ -314,12 +356,14 @@
      "B_hi": 0.25,
      "p": 0.971,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.004 \u00d7 0.1 / 10 = 4e-05;  d = 2(4e-05) / \u221a(1 \u2212 4e-05\u00b2) = 8e-05",
+     "derived_d_calc": "\u03b2_std = 0.004 \u00d7 0.1 / 6.3 = 6.349e-05;  d = 2(6.349e-05) / \u221a(1 \u2212 6.349e-05\u00b2) = 0.000127",
      "derived_d": 0.0001,
-     "derived_d_lo": -0.0048,
-     "derived_d_hi": 0.005,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_lo": -0.0076,
+     "derived_d_hi": 0.0079,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=6.3)"
     },
     {
      "iv": "social_media",
@@ -329,12 +373,14 @@
      "B_hi": 0.38,
      "p": 0.421,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.11 \u00d7 0.1 / 10 = 0.0011;  d = 2(0.0011) / \u221a(1 \u2212 0.0011\u00b2) = 0.0022",
-     "derived_d": 0.0022,
-     "derived_d_lo": -0.0032,
-     "derived_d_hi": 0.0076,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.11 \u00d7 0.1 / 6.6 = 0.0017;  d = 2(0.0017) / \u221a(1 \u2212 0.0017\u00b2) = 0.0033",
+     "derived_d": 0.0033,
+     "derived_d_lo": -0.0048,
+     "derived_d_hi": 0.0115,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=6.6)"
     },
     {
      "iv": "social_media",
@@ -344,12 +390,14 @@
      "B_hi": 0.39,
      "p": 0.805,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.04 \u00d7 0.1 / 10 = 0.0004;  d = 2(0.0004) / \u221a(1 \u2212 0.0004\u00b2) = 0.0008",
-     "derived_d": 0.0008,
-     "derived_d_lo": -0.0062,
-     "derived_d_hi": 0.0078,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.04 \u00d7 0.1 / 5.6 = 0.0007143;  d = 2(0.0007143) / \u221a(1 \u2212 0.0007143\u00b2) = 0.0014",
+     "derived_d": 0.0014,
+     "derived_d_lo": -0.0111,
+     "derived_d_hi": 0.0139,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=5.6)"
     },
     {
      "iv": "social_media",
@@ -359,12 +407,14 @@
      "B_hi": 0.33,
      "p": 0.617,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.07 \u00d7 0.1 / 10 = 0.0007;  d = 2(0.0007) / \u221a(1 \u2212 0.0007\u00b2) = 0.0014",
-     "derived_d": 0.0014,
-     "derived_d_lo": -0.0038,
-     "derived_d_hi": 0.0066,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.07 \u00d7 0.1 / 5.4 = 0.0013;  d = 2(0.0013) / \u221a(1 \u2212 0.0013\u00b2) = 0.0026",
+     "derived_d": 0.0026,
+     "derived_d_lo": -0.007,
+     "derived_d_hi": 0.0122,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=5.4)"
     },
     {
      "iv": "social_media",
@@ -374,14 +424,17 @@
      "B_hi": 0.47,
      "p": 0.071,
      "sig": false,
+     "location": "Table 2, Model 2 (adjusted), p.6",
+     "note": "[audit] SE/t/df not printed: checked Table 2 p.6 (CI + p only), Tables 1 and 3, text pp.1-9; supplement (Appendix A/B) is online-only, not in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.22 \u00d7 0.1 / 10 = 0.0022;  d = 2(0.0022) / \u221a(1 \u2212 0.0022\u00b2) = 0.0044",
-     "derived_d": 0.0044,
-     "derived_d_lo": -0.0004,
-     "derived_d_hi": 0.0094,
-     "derived_d_method": "linear (SD_IV=0.1, SD_DV=10.0)"
+     "derived_d_calc": "\u03b2_std = 0.22 \u00d7 0.1 / 5.4 = 0.0041;  d = 2(0.0041) / \u221a(1 \u2212 0.0041\u00b2) = 0.0081",
+     "derived_d": 0.0081,
+     "derived_d_lo": -0.0007,
+     "derived_d_hi": 0.0174,
+     "derived_d_method": "linear (SD_IV=0.1, SD_DV=5.4)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -411,9 +464,164 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
   "contrast_type": "per 1-SD change in the IV",
   "transformable": true,
-  "notes": "SD_DV = 10 by construction (CBCL t-score is normed mean=50 SD=10). SD_IV per modality is reported in Table 1 (texting 0.6; video chat 0.7; social media 0.1). Not directly comparable to per-1-SD d's from papers using a different contrast (e.g., paper 156's high vs. low group difference)."
+  "notes": "SD_DV = 10 by construction (CBCL t-score is normed mean=50 SD=10). SD_IV per modality is reported in Table 1 (texting 0.6; video chat 0.7; social media 0.1). Not directly comparable to per-1-SD d's from papers using a different contrast (e.g., paper 156's high vs. low group difference). [complete-stage] SD_DV updated to the analytic-sample baseline SDs printed in Table 1 (depressive 6.1, anxiety 6.3, somatic 6.6, ADHD 5.6, ODD 5.4, conduct 5.4); normative SD 10 retained as sd_dv_normative. Texting x conduct and video chat x conduct corrected against Table 2 Model 2 (0.33 [0.11,0.56] p=.006 and 0.35 [0.14,0.57] p=.002)."
  },
  "last_edited_by": "danny",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.4: weighted daily hours, continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x conduct",
+   "action": "filled_value",
+   "value": {
+    "B": 0.33,
+    "B_lo": 0.11,
+    "B_hi": 0.56,
+    "p": "0.006"
+   },
+   "where": "Table 2, Model 2 (adjusted), p.6 (corrected misaligned row)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x conduct",
+   "action": "filled_ci_input",
+   "value": {
+    "p": 0.006
+   },
+   "where": "Table 2, Model 2 (adjusted), p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x depressive",
+   "action": "filled_ci_input",
+   "value": {
+    "p": null,
+    "p_label": "<0.001"
+   },
+   "where": "Table 2, Model 2 (adjusted), p.6 (p printed as inequality; draft had invented 0.0005)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x conduct",
+   "action": "filled_value",
+   "value": {
+    "B": 0.35,
+    "B_lo": 0.14,
+    "B_hi": 0.57,
+    "p": "0.002"
+   },
+   "where": "Table 2, Model 2 (adjusted), p.6 (corrected misaligned row)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x conduct",
+   "action": "filled_ci_input",
+   "value": {
+    "p": 0.002
+   },
+   "where": "Table 2, Model 2 (adjusted), p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv depressive",
+   "action": "filled_sd",
+   "value": 6.1,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv anxiety",
+   "action": "filled_sd",
+   "value": 6.3,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv somatic",
+   "action": "filled_sd",
+   "value": 6.6,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv adhd",
+   "action": "filled_sd",
+   "value": 5.6,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv odd",
+   "action": "filled_sd",
+   "value": 5.4,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv conduct",
+   "action": "filled_sd",
+   "value": 5.4,
+   "where": "Table 1 p.5 (baseline, analytic sample); replaced normative 10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv texting",
+   "action": "filled_sd",
+   "value": 0.6,
+   "where": "Table 1 p.5 (confirmed)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv video_chat",
+   "action": "filled_sd",
+   "value": 0.7,
+   "where": "Table 1 p.5 (confirmed)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv social_media",
+   "action": "filled_sd",
+   "value": 0.1,
+   "where": "Table 1 p.5 (confirmed)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 all cells",
+   "action": "confirmed_missing",
+   "value": "se, t, df",
+   "where": "Checked Table 1-3, text pp.5-9, all 13 pages; SE/t/df not printed (CI and p printed for all 18 cells). Appendix A/B are online additional files, not bundled; no supplement file in docs/pdfs."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 18 estimates",
+   "action": "confirmed",
+   "was": null,
+   "value": "B, B_lo, B_hi, p/p_label, sig all match",
+   "where": "Table 2 Model 2 (adjusted), p.6 (checked via text layer)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv/dv axes",
+   "action": "confirmed",
+   "was": null,
+   "value": "sd_iv 0.6/0.7/0.1; sd_dv 6.1/6.3/6.6/5.6/5.4/5.4",
+   "where": "Table 1 p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, t, df",
+   "where": "Whole PDF pp.1-13; no supplement file in docs/pdfs (Supplementary Material 1 online-only)"
+  }
+ ],
  "supplements": [],
  "duplicate_of": "394"
 }

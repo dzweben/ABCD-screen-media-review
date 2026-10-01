@@ -108,8 +108,8 @@
      "p": 0.016,
      "p_label": "0.016",
      "sig": true,
-     "location": "Results p. 5; Figure 2A Model 2; Supplemental Table S3",
-     "note": "Significant at the paper's P < 0.017 threshold."
+     "location": "Results p. 5; Figure 2A Model 2; Supplemental Table S3; also Abstract p.1-2",
+     "note": "Significant at the paper's P < 0.017 threshold. SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "own_smartphone",
@@ -120,7 +120,8 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Results p. 5-6; Figure 2A Model 2; Supplemental Table S4"
+     "location": "Results p. 5-6; Figure 2A Model 2; Supplemental Table S4; also Abstract p.1-2",
+     "note": "SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "own_smartphone",
@@ -131,9 +132,11 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Results p. 6; Figure 2A Model 2; Supplemental Table S5"
+     "location": "Results p. 6; Figure 2A Model 2; Supplemental Table S5; also Abstract p.1-2",
+     "note": "SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     }
-   ]
+   ],
+   "iv_type": "binary"
   },
   {
    "model_id": "M2",
@@ -157,7 +160,8 @@
      "id": "age_acq_earlier",
      "label": "Age of first smartphone (per 1 year earlier)",
      "meta": "Median 11 y, IQR 10-11, range 4-13; owners only",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of age at acquisition not printed: only median 11, range 4-13, IQR 10-11 (Results p.5, Fig 1 p.14 histogram without printed counts; supplement Fig S2 gives median 11, range 4-15, IQR 10-12 pooled across 3 waves). Not derivable; d stays per 1 year earlier via Chinn."
     }
    ],
    "dv_axis": [
@@ -191,7 +195,7 @@
      "p_label": "0.503",
      "sig": false,
      "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S6",
-     "note": "Inverted OR (per year earlier). Model 1 (age and sex only) gave OR 1.08 (1.0-1.15), P = 0.046, not significant at the 0.017 threshold."
+     "note": "Inverted OR (per year earlier). Model 1 (age and sex only) gave OR 1.08 (1.0-1.15), P = 0.046, not significant at the 0.017 threshold. SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "age_acq_earlier",
@@ -202,8 +206,8 @@
      "p": 0.007,
      "p_label": "0.007",
      "sig": true,
-     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S7",
-     "note": "Inverted OR (per year earlier)."
+     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S7; also Abstract p.1-2",
+     "note": "Inverted OR (per year earlier). SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "age_acq_earlier",
@@ -214,10 +218,11 @@
      "p": 0.005,
      "p_label": "0.005",
      "sig": true,
-     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S8",
-     "note": "Inverted OR (per year earlier). The abstract prints the CI as 1.02-1.12, same as Results."
+     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S8; also Abstract p.1-2",
+     "note": "Inverted OR (per year earlier). The abstract prints the CI as 1.02-1.12, same as Results. SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -257,19 +262,22 @@
      "id": "clinical_psychopathology",
      "label": "Clinical-threshold psychopathology (BPM T >= 65)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (3-year outcome prevalence among non-acquirers) not printed. Table 2 p.19 gives only 2-year (pre-exposure) values: clinical psychopathology 7.22%, obesity 10.21% in non-acquirers; no insufficient-sleep % (mean sleep 9.47 h, SD 1.12). Supplemental Table S1 (Excel, not available) may hold 3-year rates."
     },
     {
      "id": "obesity",
      "label": "Obesity (BMI > 95th percentile)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (3-year outcome prevalence among non-acquirers) not printed. Table 2 p.19 gives only 2-year (pre-exposure) values: clinical psychopathology 7.22%, obesity 10.21% in non-acquirers; no insufficient-sleep % (mean sleep 9.47 h, SD 1.12). Supplemental Table S1 (Excel, not available) may hold 3-year rates."
     },
     {
      "id": "insufficient_sleep",
      "label": "Insufficient sleep (< 9 h/night)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (3-year outcome prevalence among non-acquirers) not printed. Table 2 p.19 gives only 2-year (pre-exposure) values: clinical psychopathology 7.22%, obesity 10.21% in non-acquirers; no insufficient-sleep % (mean sleep 9.47 h, SD 1.12). Supplemental Table S1 (Excel, not available) may hold 3-year rates."
     }
    ],
    "estimates": [
@@ -282,7 +290,8 @@
      "p": 0.009,
      "p_label": "0.009",
      "sig": true,
-     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S9"
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S9; also Abstract p.1-2",
+     "note": "SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "acquired_past_year",
@@ -293,7 +302,8 @@
      "p": 0.176,
      "p_label": "0.176",
      "sig": false,
-     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S10"
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S10",
+     "note": "SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     },
     {
      "iv": "acquired_past_year",
@@ -304,9 +314,11 @@
      "p": null,
      "p_label": "<0.001",
      "sig": true,
-     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S11"
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S11; also Abstract p.1-2",
+     "note": "SE, z and exact per-model N not printed in the PDF (checked Results pp.5-6, Figs 2-3 pp.15-16, Tables 1-2 pp.17-19, supplement PDF eMethods 1-5 and Figs S1-S2); full model output is only in Supplemental Tables S3-S11 (appendix Excel file, not available). OR + 95% CI from text is complete, so no CI inputs needed."
     }
-   ]
+   ],
+   "iv_type": "binary"
   }
  ],
  "excluded_models": [
@@ -356,7 +368,209 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to the OR and to each CI bound.",
   "contrast_type": "M1: smartphone owner vs non-owner at age 12. M2: per 1 year earlier age of first smartphone acquisition (inverted OR, positive d = earlier acquisition associated with higher odds of the adverse outcome). M3: acquired a smartphone in the past year vs did not, net of the prior-year outcome.",
   "transformable": true,
-  "notes": "All estimates are adjusted odds ratios printed in the Results text (pp. 5-6) and matching Figures 2-3; no values were read off a figure. Chinn conversion needs no SDs. p0 for M1 is the outcome prevalence in non-owners from Table 1 (p. 17): depression 4.52%, obesity 11.80%, insufficient sleep 31.02%. p0 for M2 is the outcome prevalence among owners from Table 1 (there is no unexposed group for a continuous IV). p0 for M3 is not reported: Table 2 gives only 2-year (pre-exposure) prevalences, not 3-year outcome rates. SD of age at acquisition is not reported (median 11, IQR 10-11), so M2 cannot be put on a per-1-SD basis; its d is per one year earlier. M2 d values are not directly comparable to the group-contrast d values of M1 and M3."
+  "notes": "All estimates are adjusted odds ratios printed in the Results text (pp. 5-6) and matching Figures 2-3; no values were read off a figure. Chinn conversion needs no SDs. p0 for M1 is the outcome prevalence in non-owners from Table 1 (p. 17): depression 4.52%, obesity 11.80%, insufficient sleep 31.02%. p0 for M2 is the outcome prevalence among owners from Table 1 (there is no unexposed group for a continuous IV). p0 for M3 is not reported: Table 2 gives only 2-year (pre-exposure) prevalences, not 3-year outcome rates. SD of age at acquisition is not reported (median 11, IQR 10-11), so M2 cannot be put on a per-1-SD basis; its d is per one year earlier. M2 d values are not directly comparable to the group-contrast d values of M1 and M3. [complete pass] Re-read full 19-page manuscript and 10-page supplement PDF: no SEs, z statistics or per-model Ns are printed anywhere (only in Excel Supplemental Tables S3-S11, unavailable). All 9 Model 2 ORs have printed 95% CIs and p, so CIs are complete. iv_type set: M1 binary, M2 continuous, M3 binary."
  },
- "extraction_flags": "The PDF at the items.json path is already the 19-page NIH author manuscript (modified Oct 1 02:43), so I extracted from it. (1) Supplemental Tables S1-S28 are in an Excel appendix that is not among the files I had. All 9 estimates were copied from the Results text (pp. 5-6) and checked against Figures 2-3 and the abstract, but these are not available: exact per-outcome Ns (listwise deletion), the problematic-use exclusion (S12), the continuous-outcome linear mixed models (S14-S22) and the 3-wave longitudinal models (S23-S28). If the Excel file is obtained, the continuous-outcome models could become additional model cards. (2) M2 ORs are inverted by the authors (per 1 year EARLIER acquisition). The SD of age at acquisition is not reported (median 11, IQR 10-11), so d for M2 is per year, not per SD. (3) p0 for M1 is the non-owner prevalence from Table 1. For M2 it is the owner prevalence, since there is no unexposed group. For M3 it is null, because 3-year outcome rates are not reported. Chinn's OR-to-d conversion does not need p0. (4) The race covariate is described as 'race and ethnicity' in the main text but as 'Black race and Hispanic ethnicity' in eMethods 3; I followed eMethods. (5) Three separate cards were used because the analytic samples differ (all youth, owners only, and non-owners at age 12), and M3 adds the prior-year outcome. (6) p-values printed as '<.001' are stored as p = null with p_label."
+ "extraction_flags": "The PDF at the items.json path is already the 19-page NIH author manuscript (modified Oct 1 02:43), so I extracted from it. (1) Supplemental Tables S1-S28 are in an Excel appendix that is not among the files I had. All 9 estimates were copied from the Results text (pp. 5-6) and checked against Figures 2-3 and the abstract, but these are not available: exact per-outcome Ns (listwise deletion), the problematic-use exclusion (S12), the continuous-outcome linear mixed models (S14-S22) and the 3-wave longitudinal models (S23-S28). If the Excel file is obtained, the continuous-outcome models could become additional model cards. (2) M2 ORs are inverted by the authors (per 1 year EARLIER acquisition). The SD of age at acquisition is not reported (median 11, IQR 10-11), so d for M2 is per year, not per SD. (3) p0 for M1 is the non-owner prevalence from Table 1. For M2 it is the owner prevalence, since there is no unexposed group. For M3 it is null, because 3-year outcome rates are not reported. Chinn's OR-to-d conversion does not need p0. (4) The race covariate is described as 'race and ethnicity' in the main text but as 'Black race and Hispanic ethnicity' in eMethods 3; I followed eMethods. (5) Three separate cards were used because the analytic samples differ (all youth, owners only, and non-owners at age 12), and M3 adds the prior-year outcome. (6) p-values printed as '<.001' are stored as p = null with p_label.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.4 (Analysis 1-3 definitions)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 own_smartphone x depression",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 own_smartphone x obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 own_smartphone x insufficient sleep",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.4 (Analysis 1-3 definitions)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 age_acq_earlier x depression",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 age_acq_earlier x obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 age_acq_earlier x insufficient sleep",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 model",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.4 (Analysis 1-3 definitions)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 acquired_past_year x clinical psychopathology",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 acquired_past_year x obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 acquired_past_year x insufficient sleep",
+   "action": "confirmed_missing",
+   "value": "se/z/n not printed; OR, CI, p already present",
+   "where": "Results pp.5-6; Figs 2-3; Supplemental Tables S3-S11 in Excel only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis sd_dv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Binary outcomes; Chinn OR-to-d needs no SD_DV. p0 already from Table 1 p.17"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 age_acq_earlier sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.5; Fig 1 p.14; Supplement Fig S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 dv_axis sd_dv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Binary outcomes; Chinn OR-to-d needs no SD_DV. p0 already from Table 1 p.17"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 dv_axis p0",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 2 p.19 (2-year only); Supplemental Table S1 in Excel"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 own_smartphone x depression",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.31 (1.05-1.63), p 0.016, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 5; Figure 2A Model 2; Supplemental Table S3; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 own_smartphone x obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.4 (1.2-1.63), p <.001, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 5-6; Figure 2A Model 2; Supplemental Table S4; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 own_smartphone x insufficient_sleep",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.62 (1.46-1.79), p <.001, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 2A Model 2; Supplemental Table S5; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 age_acq_earlier x depression",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.03 (0.94-1.12), p 0.503, sig False all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 2B Model 2; Supplemental Table S6"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 age_acq_earlier x obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.09 (1.02-1.16), p 0.007, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 2B Model 2; Supplemental Table S7; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 age_acq_earlier x insufficient_sleep",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.08 (1.02-1.12), p 0.005, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 2B Model 2; Supplemental Table S8; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 acquired_past_year x clinical_psychopathology",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.57 (1.12-2.2), p 0.009, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 3 Model 2; Supplemental Table S9; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 acquired_past_year x obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.57 (0.82-3.04), p 0.176, sig False all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 3 Model 2; Supplemental Table S10"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 acquired_past_year x insufficient_sleep",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.5 (1.26-1.77), p <0.001, sig True all verified exact; se/z/n not printed anywhere in the 19-page manuscript or the 10-page supplement PDF (Excel tables S3-S11 only)",
+   "where": "Results p. 6; Figure 3 Model 2; Supplemental Table S11; also Abstract p.1-2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 dv_axis p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "p0 values verified against Table 1 p.17 (non-owners 4.52/11.80/31.02%; owners 6.38/17.73/47.16%); no change",
+   "where": "Table 1 p.17"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 dv_axis p0; M2 sd_iv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "Still not printed: 3-year outcome rates absent (Table 2 p.19 has 2-year only); acquisition-age SD absent (median/IQR only, p.5, Fig S2)",
+   "where": "Table 2 p.19; Results p.5; Supplement Fig S2"
+  }
+ ]
 }

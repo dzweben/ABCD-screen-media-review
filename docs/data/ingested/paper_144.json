@@ -117,9 +117,19 @@
      "p_label": "0.19",
      "sig": false,
      "location": "Table 2, Low increasing row, Little Man Task column",
-     "note": "Not bold (not significant after Benjamini-Hochberg). B and lower CI bound both printed as -0.01 owing to rounding.",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "note": "Not bold (not significant after Benjamini-Hochberg). B and lower CI bound both printed as -0.01 owing to rounding. CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally. [audit] Consistency flag (B equals its printed lower bound; CI width vs p) checked against Table 2 p.6: values printed exactly as -0.01 (-0.01, 0.003), P = 0.19. This is a rounding artefact: e.g. unrounded B ~ -0.006, CI ~ (-0.0149, 0.003) reproduces p ~ 0.19 and rounds to the printed values. No change.",
+     "n1": 2822,
+     "n0": 4289,
+     "se": null,
+     "consistency_flags": [
+      "p = 0.19 implies a CI width of 0.0299, printed width is 0.013"
+     ],
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.01 / 0.2 = -0.05",
+     "derived_d": -0.05,
+     "derived_d_lo": -0.05,
+     "derived_d_hi": 0.015,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=0.2)"
     },
     {
      "iv": "low_inc",
@@ -131,8 +141,16 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, Low increasing row, RAVLT Initial Learning Trials column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 2822,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -1.38 / 9.1 = -0.1516",
+     "derived_d": -0.1516,
+     "derived_d_lo": -0.2,
+     "derived_d_hi": -0.1033,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=9.1)"
     },
     {
      "iv": "low_inc",
@@ -144,8 +162,16 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, Low increasing row, RAVLT Retroactive Interference column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 2822,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.38 / 2.7 = -0.1407",
+     "derived_d": -0.1407,
+     "derived_d_lo": -0.1926,
+     "derived_d_hi": -0.0926,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=2.7)"
     },
     {
      "iv": "low_inc",
@@ -157,8 +183,16 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, Low increasing row, RAVLT Long Delay column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 2822,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.41 / 2.9 = -0.1414",
+     "derived_d": -0.1414,
+     "derived_d_lo": -0.1897,
+     "derived_d_hi": -0.0897,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=2.9)"
     },
     {
      "iv": "high_inc",
@@ -170,8 +204,16 @@
      "p_label": "0.004",
      "sig": true,
      "location": "Table 2, High increasing row, Little Man Task column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 417,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.03 / 0.2 = -0.15",
+     "derived_d": -0.15,
+     "derived_d_lo": -0.25,
+     "derived_d_hi": -0.05,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=0.2)"
     },
     {
      "iv": "high_inc",
@@ -183,8 +225,16 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, High increasing row, RAVLT Initial Learning Trials column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 417,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -1.9 / 9.1 = -0.2088",
+     "derived_d": -0.2088,
+     "derived_d_lo": -0.3033,
+     "derived_d_hi": -0.1143,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=9.1)"
     },
     {
      "iv": "high_inc",
@@ -196,8 +246,16 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, High increasing row, RAVLT Retroactive Interference column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 417,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.61 / 2.7 = -0.2259",
+     "derived_d": -0.2259,
+     "derived_d_lo": -0.3296,
+     "derived_d_hi": -0.1185,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=2.7)"
     },
     {
      "iv": "high_inc",
@@ -209,10 +267,19 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, High increasing row, RAVLT Long Delay column",
-     "derived_d": null,
-     "derived_d_method": "SD_IV or SD_DV not reported"
+     "n1": 417,
+     "n0": 4289,
+     "se": null,
+     "note": "CI printed in Table 2 p.6 (also Abstract and Results p.5). No SE, t or exact p beyond the printed P column in the PDF; checked full text pp.1-9, Table 1 p.5, Table 2 p.6, Fig 1 p.6. n1/n0 are the unweighted trajectory group sizes from Table 2 row labels (reference no/very low n = 4289). sd_dv on dv_axis = Year 2 total-sample SD from Table 1 p.5. No supplement file bundled; Tables S1-S4 not available locally.",
+     "derived_d_formula": "d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+     "derived_d_calc": "d = -0.55 / 2.9 = -0.1897",
+     "derived_d": -0.1897,
+     "derived_d_lo": -0.2897,
+     "derived_d_hi": -0.0931,
+     "derived_d_method": "group difference: d = B / SD_DV (SD_DV=2.9)"
     }
-   ]
+   ],
+   "iv_type": "categorical"
   }
  ],
  "excluded_models": [
@@ -247,8 +314,233 @@
   "conversion_formula": "Categorical (dummy-coded group) IV on continuous DV: d = B / SD_DV, i.e., adjusted mean difference between the trajectory group and the no/very low use reference divided by the DV SD; applied to B_lo and B_hi for the CI.",
   "contrast_type": "Trajectory group membership vs the no/very low social media use group (low increasing vs reference; high increasing vs reference); not a per-hour slope.",
   "transformable": true,
-  "notes": "SD_DV taken from Table 1 (p. 5) Year 2 cognitive performance measures for the full analytic sample (N = 7528): LMT accuracy 0.2, RAVLT Initial Learning Trials 9.1, RAVLT Retroactive Interference 2.7, RAVLT Long Delay 2.9. These are total-sample SDs, not pooled within-group SDs, and Table 1 notes weighted estimates, so d is approximate. The LMT SD is printed to one decimal (0.2) and B to two decimals, so derived d for LMT is coarse (e.g., -0.03/0.2 = -0.15). Because the model adjusts for the baseline score of the same test, B is a residualized (change-like) adjusted difference; dividing by the raw Year 2 SD gives a d on the outcome scale. SD_IV is not applicable (categorical IV)."
+  "notes": "SD_DV taken from Table 1 (p. 5) Year 2 cognitive performance measures for the full analytic sample (N = 7528): LMT accuracy 0.2, RAVLT Initial Learning Trials 9.1, RAVLT Retroactive Interference 2.7, RAVLT Long Delay 2.9. These are total-sample SDs, not pooled within-group SDs, and Table 1 notes weighted estimates, so d is approximate. The LMT SD is printed to one decimal (0.2) and B to two decimals, so derived d for LMT is coarse (e.g., -0.03/0.2 = -0.15). Because the model adjusts for the baseline score of the same test, B is a residualized (change-like) adjusted difference; dividing by the raw Year 2 SD gives a d on the outcome scale. SD_IV is not applicable (categorical IV). [complete stage] Verified all 8 B, 95% CI and P values against Table 2 p.6, Abstract p.1 and Results p.5; all agree. No SE printed anywhere; CIs are complete so not needed. Group sizes (n1/n0) added from Table 2 row labels. No supplementary file available in docs/pdfs."
  },
  "extraction_flags": "The IV is a 3-group trajectory from a group-based trajectory model (GBTM), not hours per day, so d = B / SD_DV is a group contrast. SD_DV values are the Year 2 total-sample SDs from Table 1 (LMT 0.2, RAVLT 9.1 / 2.7 / 2.9), not pooled within-group SDs. The LMT SD is printed to only one decimal, so its d is coarse. The model adjusts for the baseline score on the same test, so B is a residualized difference. The trajectory window (baseline to Year 2) overlaps the Year 2 outcome wave. The Research-in-context panel says N = 7582, which conflicts with the N = 7528 used everywhere else. The supplement (Tables S1-S4) is not bundled in the PDF, so it is unverified whether Table S4 contains any sex-stratified social media estimates; the text and limitations suggest it does not. Software for the regression stage is not stated separately (GBTM is Stata 18.0). All 8 Table 2 values were checked against the pdftotext extraction.json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 2 p.6 (3 trajectory groups dummy-coded vs no/very low use)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x lmt",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 2822,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x lmt",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_init",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 2822,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_init",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_retro",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 2822,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_retro",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_long",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 2822,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 low_inc x ravlt_long",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x lmt",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 417,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x lmt",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_init",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 417,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_init",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_retro",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 417,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_retro",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_long",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 417,
+    "n0": 4289
+   },
+   "where": "Table 2 p.6 row labels"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 high_inc x ravlt_long",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked Tables 1-2, text pp.1-9; SE not printed (CI already present)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 low_inc x lmt",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B -0.01, CI -0.01 to 0.003, p 0.19 as printed; flag is a 2-decimal rounding artefact",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 low_inc x lmt",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 low_inc x ravlt_init",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 low_inc x ravlt_retro",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 low_inc x ravlt_long",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 high_inc x lmt",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 high_inc x ravlt_init",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 high_inc x ravlt_retro",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 high_inc x ravlt_long",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, CI, p/p_label, sig, n1/n0 verified against Table 2 p.6 and Results p.5/Abstract p.1; SE/t not printed; no supplement file in docs/pdfs",
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis sd_dv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "Year 2 SDs LMT 0.2, RAVLT init 9.1, retro 2.7, long 2.9 verified; iv_type categorical verified",
+   "where": "Table 1 p.5"
+  }
+ ],
  "supplements": []
 }

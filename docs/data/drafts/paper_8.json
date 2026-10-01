@@ -181,7 +181,7 @@
      "p_label": ".19",
      "sig": false,
      "location": "Results p. 6, Within-Person Associations; Figure 2 (gray path)",
-     "note": "SM -> depression cross-lagged path, baseline to year 1."
+     "note": "SM -> depression cross-lagged path, baseline to year 1. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "sm_y1",
@@ -193,7 +193,7 @@
      "p_label": ".01",
      "sig": true,
      "location": "Results p. 6; Abstract; Figure 2",
-     "note": "SM -> depression cross-lagged path, year 1 to year 2; authors call it a medium effect size."
+     "note": "SM -> depression cross-lagged path, year 1 to year 2; authors call it a medium effect size. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "sm_y2",
@@ -201,11 +201,11 @@
      "beta": 0.09,
      "beta_lo": 0.04,
      "beta_hi": 0.14,
-     "p": 0.001,
+     "p": null,
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 6; Abstract; Figure 2",
-     "note": "SM -> depression cross-lagged path, year 2 to year 3; authors call it a medium effect size. p stored as upper bound .001."
+     "note": "SM -> depression cross-lagged path, year 2 to year 3; authors call it a medium effect size. p printed only as <.001 (p left null per convention; p_label holds the text). SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "dep_y0",
@@ -217,7 +217,7 @@
      "p_label": ".46",
      "sig": false,
      "location": "Results p. 6, Within-Person Associations",
-     "note": "Reverse path (depression -> SM), baseline to year 1."
+     "note": "Reverse path (depression -> SM), baseline to year 1. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "dep_y1",
@@ -229,7 +229,7 @@
      "p_label": ".65",
      "sig": false,
      "location": "Results p. 6, Within-Person Associations",
-     "note": "Reverse path (depression -> SM), year 1 to year 2."
+     "note": "Reverse path (depression -> SM), year 1 to year 2. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "dep_y2",
@@ -241,7 +241,7 @@
      "p_label": ".18",
      "sig": false,
      "location": "Results p. 6, Within-Person Associations",
-     "note": "Reverse path (depression -> SM), year 2 to year 3."
+     "note": "Reverse path (depression -> SM), year 2 to year 3. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "ri_sm",
@@ -253,7 +253,7 @@
      "p_label": ".46",
      "sig": false,
      "location": "Results p. 5, Between-Person Association; Abstract; Figure 2 shows r = 0.01",
-     "note": "Standardized covariance (correlation) between latent random intercepts; non-directional. Text and Abstract print -0.01 while Figure 2 labels the RI covariance r = 0.01; text value used."
+     "note": "Standardized covariance (correlation) between latent random intercepts; non-directional. Text and Abstract print -0.01 while Figure 2 labels the RI covariance r = 0.01; text value used. SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     },
     {
      "iv": "sm_y2_res",
@@ -265,7 +265,7 @@
      "p_label": null,
      "sig": true,
      "location": "Figure 2 (p. 6) only",
-     "note": "Within-wave standardized residual covariance at year 2, read from Figure 2 label r = 0.08 (drawn as a black/significant line). No CI or p in the main text; presumably in eTable 3."
+     "note": "Within-wave standardized residual covariance at year 2, read from Figure 2 label r = 0.08 (drawn as a black/significant line). No CI or p in the main text; presumably in eTable 3. Checked full 10-page PDF: Abstract p.1, Results pp.4-6 text, Table 1 p.4, Table 2 p.5 (descriptives/zero-order r only), Figure 2 p.6 labels, footnotes, Supplement list p.10. No supplement file bundled in docs/pdfs. Year-2 residual covariance appears only as the Figure 2 label r = 0.08 (black = significant); CI, SE and p are not printed in the main text; they would be in eTable 3 of Supplement 1, which is not in this PDF."
     },
     {
      "iv": "sm_y3_res",
@@ -273,13 +273,14 @@
      "beta": 0.07,
      "beta_lo": 0.03,
      "beta_hi": 0.1,
-     "p": 0.001,
+     "p": null,
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 5-6, Within-Person Associations; Figure 2 r = 0.07",
-     "note": "Within-wave standardized residual covariance at year 3; non-directional. p stored as upper bound .001."
+     "note": "Within-wave standardized residual covariance at year 3; non-directional. p printed only as <.001 (p left null per convention; p_label holds the text). SE not printed (CI printed in text); SE/z would be in eTable 3 of Supplement 1 (not bundled)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -316,10 +317,183 @@
  ],
  "d_transformation": {
   "native_metric": "beta_std (standardized SEM path coefficients and standardized covariances)",
-  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines \u00a74a, SEM standardized path). Applied to CI endpoints for d CI.",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines §4a, SEM standardized path). Applied to CI endpoints for d CI.",
   "contrast_type": "per 1 SD within-person deviation in social media time (from the person's own mean) at wave t, in SD units of within-person deviation in depressive symptoms at wave t+1 (and the reverse for depression -> SM paths); covariances are correlations",
   "transformable": true,
-  "notes": "Estimates are already standardized, so SD_IV / SD_DV are not needed; sd_iv/sd_dv left null. Table 2 (p. 5) gives untransformed SDs for reference, but the social media variables were transformed in the final model (method described only in Supplement 1), so those SDs do not correspond to the modeled metric. Standardization is of within-person latent deviations, so the derived d reflects within-person effects and is not directly comparable to between-person per-SD-of-hours d's from other papers. Year-2 residual covariance (0.08) is read off Figure 2 without CI. Random-intercept covariance sign differs between text (-0.01) and Figure 2 (r = 0.01)."
+  "notes": "Estimates are already standardized, so SD_IV / SD_DV are not needed; sd_iv/sd_dv left null. Table 2 (p. 5) gives untransformed SDs for reference, but the social media variables were transformed in the final model (method described only in Supplement 1), so those SDs do not correspond to the modeled metric. Standardization is of within-person latent deviations, so the derived d reflects within-person effects and is not directly comparable to between-person per-SD-of-hours d's from other papers. Year-2 residual covariance (0.08) is read off Figure 2 without CI. Random-intercept covariance sign differs between text (-0.01) and Figure 2 (r = 0.01). [complete-stage check 2026-10-01] Full PDF re-read (10 pages, no supplement bundled). All printed CIs/exact ps already captured; p for '<.001' cells set to null with p_label. No SEs, z, or exact p for <.001 cells printed anywhere in the article; eTables 1-3 are in Supplement 1 only."
  },
- "extraction_flags": "1. The PDF has only the 10-page article. Supplement 1 (eMethods, eTables 1-3) is not included, so the full parameter table (eTable 3), the covariate effects (eTable 2) and the transformation applied to the social media variable all come from the main text and Figure 2 only.\n2. The paper does not say how social media time was transformed in the final model (years 0-1 were reported in ordinal categories, years 2-3 in continuous hours). The Table 2 SDs are untransformed, so sd_iv/sd_dv are left null. That is fine because the betas are already standardized.\n3. The random-intercept covariance sign does not match: the text and Abstract print -0.01 (95% CI -0.04 to 0.02, P = .46), but Figure 2 labels it r = 0.01. I used the text value.\n4. The year-2 within-wave residual covariance (r = 0.08) comes only from the Figure 2 label. It is drawn in black (significant), but no CI or p is printed.\n5. Coders should decide whether the non-directional covariances (the random-intercept covariance and the year-2 and year-3 residual covariances) belong in the matrix or should be struck. The 6 cross-lagged paths are the core estimates.\n6. The derived d from standardized within-person RI-CLPM paths is a within-person effect. It is not comparable to between-person d per SD of hours from other papers.\n7. Table 1 prints parent education as college or more 17.2% and high school or less 82.8%. That looks inverted, but I copied it as printed.\n8. p values printed as <.001 are stored as 0.001, with p_label \"<.001\"."
+ "extraction_flags": "1. The PDF has only the 10-page article. Supplement 1 (eMethods, eTables 1-3) is not included, so the full parameter table (eTable 3), the covariate effects (eTable 2) and the transformation applied to the social media variable all come from the main text and Figure 2 only.\n2. The paper does not say how social media time was transformed in the final model (years 0-1 were reported in ordinal categories, years 2-3 in continuous hours). The Table 2 SDs are untransformed, so sd_iv/sd_dv are left null. That is fine because the betas are already standardized.\n3. The random-intercept covariance sign does not match: the text and Abstract print -0.01 (95% CI -0.04 to 0.02, P = .46), but Figure 2 labels it r = 0.01. I used the text value.\n4. The year-2 within-wave residual covariance (r = 0.08) comes only from the Figure 2 label. It is drawn in black (significant), but no CI or p is printed.\n5. Coders should decide whether the non-directional covariances (the random-intercept covariance and the year-2 and year-3 residual covariances) belong in the matrix or should be struck. The 6 cross-lagged paths are the core estimates.\n6. The derived d from standardized within-person RI-CLPM paths is a within-person effect. It is not comparable to between-person d per SD of hours from other papers.\n7. Table 1 prints parent education as college or more 17.2% and high school or less 82.8%. That looks inverted, but I copied it as printed.\n8. p values printed as <.001 are stored as 0.001, with p_label \"<.001\".",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3: social media hours/day and CBCL raw score both continuous; standardized RI-CLPM paths"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y0 -> dep_y1",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y1 -> dep_y2",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y2 -> dep_y3",
+   "action": "confirmed_missing",
+   "value": "p printed as <.001; exact p not printed, p set null, p_label kept",
+   "where": "Results p.5-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y2 -> dep_y3",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dep_y0 -> sm_y1",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dep_y1 -> sm_y2",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dep_y2 -> sm_y3",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ri_sm -> ri_dep",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y2_res -> dep_y2_res",
+   "action": "confirmed_missing",
+   "value": "CI/SE/p for r=0.08",
+   "where": "Figure 2 p.6 label only; eTable 3 Supplement 1 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y3_res -> dep_y3_res",
+   "action": "confirmed_missing",
+   "value": "p printed as <.001; exact p not printed, p set null, p_label kept",
+   "where": "Results p.5-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y3_res -> dep_y3_res",
+   "action": "confirmed_missing",
+   "value": "SE/z not printed; 95% CI already present",
+   "where": "Results pp.5-6; eTable 3 not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "value": "not needed: native metric is standardized beta; Table 2 SDs are for untransformed SM hours, modeled SM variable was transformed (method only in Supplement 1 eMethods)",
+   "where": "Table 2 p.5 and footnote a"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y0 -> dep_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.03 [-0.02, 0.09], p_label .19, sig False verified against PDF; still not printed: se, z",
+   "where": "Results p. 6, Within-Person Associations; Figure 2 (gray path); full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y1 -> dep_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.07 [0.01, 0.12], p_label .01, sig True verified against PDF; still not printed: se, z",
+   "where": "Results p. 6; Abstract; Figure 2; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y2 -> dep_y3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.09 [0.04, 0.14], p_label <.001, sig True verified against PDF; still not printed: se, z, p",
+   "where": "Results p. 6; Abstract; Figure 2; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dep_y0 -> sm_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.0 [-0.01, 0.02], p_label .46, sig False verified against PDF; still not printed: se, z",
+   "where": "Results p. 6, Within-Person Associations; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dep_y1 -> sm_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.0 [-0.007, 0.01], p_label .65, sig False verified against PDF; still not printed: se, z",
+   "where": "Results p. 6, Within-Person Associations; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dep_y2 -> sm_y3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.0 [-0.003, 0.02], p_label .18, sig False verified against PDF; still not printed: se, z",
+   "where": "Results p. 6, Within-Person Associations; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ri_sm -> ri_dep",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta -0.01 [-0.04, 0.02], p_label .46, sig False verified against PDF; still not printed: se, z",
+   "where": "Results p. 5, Between-Person Association; Abstract; Figure 2 shows r = 0.01; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y2_res -> dep_y2_res",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.08 [None, None], p_label None, sig True verified against PDF; still not printed: se, z, beta_lo, beta_hi, p",
+   "where": "Figure 2 (p. 6) only; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y3_res -> dep_y3_res",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta 0.07 [0.03, 0.1], p_label <.001, sig True verified against PDF; still not printed: se, z, p",
+   "where": "Results p. 5-6, Within-Person Associations; Figure 2 r = 0.07; full 10-page PDF re-read, no Supplement 1 file in docs/pdfs (eTable 3 holds SEs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_type / sd_iv / sd_dv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "iv_type continuous confirmed (hours/day and CBCL raw score, standardized paths); sd_iv/sd_dv left null since modeled SM variable was transformed (Table 2 footnote a) and betas are already standardized",
+   "where": "Methods p.3; Table 2 p.5"
+  }
+ ]
 }

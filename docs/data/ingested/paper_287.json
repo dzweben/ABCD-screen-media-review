@@ -99,7 +99,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 2, Positive smoking expectancies model, Direct effect (p. 5); Figure 1a (B = 0.14***)",
-     "note": "Unstandardized logit coefficient (log-odds per 1 h/day of social media), SE = 0.029. Adjusted for Year 3 positive expectancies. Text (p. 3) rounds to B = 0.14, 95% CI 0.08-0.20. p0 = 0.054 is the weighted whole-sample Year 4 prevalence, not the rate in non-users.",
+     "note": "Unstandardized logit coefficient (log-odds per 1 h/day of social media), SE = 0.029. Adjusted for Year 3 positive expectancies. Text (p. 3) rounds to B = 0.14, 95% CI 0.08-0.20. p0 = 0.054 is the weighted whole-sample Year 4 prevalence, not the rate in non-users. No OR, z or exact p printed (p<.001 only).",
+     "se": 0.029,
+     "se_scale": "log",
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.138 = 1.148;  d = 0.138 \u00d7 0.5513 = 0.0761",
      "derived_d": 0.0761,
@@ -117,7 +119,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 2, Negative smoking expectancies model, Direct effect (p. 5); Figure 1b (B = 0.15***)",
-     "note": "Unstandardized logit coefficient, SE = 0.027. Adjusted for Year 3 negative expectancies. Text (p. 3) rounds to B = 0.15, 95% CI 0.10-0.21.",
+     "note": "Unstandardized logit coefficient, SE = 0.027. Adjusted for Year 3 negative expectancies. Text (p. 3) rounds to B = 0.15, 95% CI 0.10-0.21. No OR, z or exact p printed (p<.001 only).",
+     "se": 0.027,
+     "se_scale": "log",
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.153 = 1.1653;  d = 0.153 \u00d7 0.5513 = 0.0844",
      "derived_d": 0.0844,
@@ -125,7 +129,8 @@
      "derived_d_hi": 0.1136,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -177,7 +182,7 @@
      "p_label": "<.001 (***)",
      "sig": true,
      "location": "Figure 1a, a-path (p. 5)",
-     "note": "Read from figure label 'B = 0.07***'. No CI or SE printed.",
+     "note": "Read from figure label 'B = 0.07***'. No CI or SE printed. Checked Table 2 (direct/indirect only), Figure 1 labels, Results text p.3, Table 1, Abstract; a-path SE/CI/exact p are not printed anywhere in the 7-page PDF; Appendices A-B are online only (sample flowchart and expectancy items, not estimates).",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.07 \u00d7 1.5 / 2.2 = 0.0477;  d = 2(0.0477) / \u221a(1 \u2212 0.0477\u00b2) = 0.0956",
      "derived_d": 0.0956,
@@ -192,10 +197,10 @@
      "B_lo": null,
      "B_hi": null,
      "p": null,
-     "p_label": "ns (no asterisk)",
+     "p_label": ">=.001 (no asterisk; Figure 1 marks only p<.001)",
      "sig": false,
      "location": "Figure 1b, a-path (p. 5)",
-     "note": "Read from figure label 'B = 0.003'. No CI, SE, or p printed.",
+     "note": "Read from figure label 'B = 0.003'. No CI, SE, or p printed. Checked Table 2 (direct/indirect only), Figure 1 labels, Results text p.3, Table 1, Abstract; a-path SE/CI/exact p are not printed anywhere in the 7-page PDF; Appendices A-B are online only (sample flowchart and expectancy items, not estimates). Audit: Figure 1 legend defines only *** (p<.001), so the absence of an asterisk establishes only p>=.001, not p>=.05; sig=false kept as the coder's inference (B=0.003 on an SD=2.1 scale, and the indirect effect through negative expectancies is ns, p=.616, Table 2).",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.003 \u00d7 1.5 / 2.1 = 0.0021;  d = 2(0.0021) / \u221a(1 \u2212 0.0021\u00b2) = 0.0043",
      "derived_d": 0.0043,
@@ -203,7 +208,8 @@
      "derived_d_hi": null,
      "derived_d_method": "linear (SD_IV=1.5, SD_DV=2.1)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -256,6 +262,8 @@
      "sig": true,
      "location": "Table 2, Positive smoking expectancies model, Indirect effect (p. 5)",
      "note": "SE = 0.003. Proportion mediated 5.97% (95% CI 1.27%, 10.67%), p = .013.",
+     "se": 0.003,
+     "se_scale": "log",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_logit' (flagged for later review level)"
     },
@@ -270,10 +278,13 @@
      "sig": false,
      "location": "Table 2, Negative smoking expectancies model, Indirect effect (p. 5)",
      "note": "SE = 0.001. Proportion mediated 0.34% (95% CI -1.00%, 1.67%), p = .617.",
+     "se": 0.001,
+     "se_scale": "log",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_logit' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -298,8 +309,160 @@
   "conversion_formula": "M1: ln(OR) = B, so d = B * sqrt(3)/pi (Chinn 2000), applied to B and each CI bound. M2: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M3: not converted (mediation indirect effect).",
   "contrast_type": "M1 and M3: per 1 hour/day of Year 2 social media time. M2: per 1 hour/day, converted to per 1 SD of social media time via SD_IV.",
   "transformable": "partial",
-  "notes": "SD_IV = 1.5 h/day; SD_DV = 2.2 (positive expectancies) and 2.1 (negative expectancies), weighted Table 1 descriptives for the N = 8292 analytic sample (p. 4). M1 B is on the log-odds scale because the gsem outcome equation is binomial logit (Statistical analysis, p. 3); it is not an OR and should not be run through the linear B formula. A per-1-SD log-odds contrast would multiply by 1.5. M2 values are read from Figure 1 labels with no CI, so only point d can be derived, and the mediator equation's link function is not stated. M3 indirect effects mix a linear and a logit equation and are kept in native units as non-convertible. Year 4 nicotine prevalence (5.4%, weighted marginal) is given as p0 but is not the non-user rate."
+  "notes": "SD_IV = 1.5 h/day; SD_DV = 2.2 (positive expectancies) and 2.1 (negative expectancies), weighted Table 1 descriptives for the N = 8292 analytic sample (p. 4). M1 B is on the log-odds scale because the gsem outcome equation is binomial logit (Statistical analysis, p. 3); it is not an OR and should not be run through the linear B formula. A per-1-SD log-odds contrast would multiply by 1.5. M2 values are read from Figure 1 labels with no CI, so only point d can be derived, and the mediator equation's link function is not stated. M3 indirect effects mix a linear and a logit equation and are kept in native units as non-convertible. Year 4 nicotine prevalence (5.4%, weighted marginal) is given as p0 but is not the non-user rate. Completion pass: SEs from Table 2 added to M1 (0.029, 0.027; logit scale) and M3 (0.003, 0.001). M2 a-path CIs/SEs confirmed not printed."
  },
  "extraction_flags": "The paper is 7 pages and the supporting appendices are not in the PDF.\n\n1. The M1 direct effects (0.138 and 0.153) are unstandardized log-odds from a binomial-logit gsem outcome equation. They are not linear B. I coded them as other:logit_B, the same way as sibling paper 107 (same authors and design, with a cannabis outcome). They should be converted with d = B*sqrt(3)/pi, per 1 hour/day.\n2. The two direct effects come from the positive-expectancy and negative-expectancy mediation models. The authors interpret both, and neither is clearly the anchor. No total effect is printed.\n3. The M2 a-path values (0.07* and 0.003) are read off the Figure 1 labels. There is no CI, SE or exact p, and the link function for the mediator equation is not stated.\n4. p0 = 0.054 is the weighted whole-sample prevalence at Year 4, not the rate among non-users.\n5. Study site is entered as a covariate, not a random effect, as far as the text says.\n6. The ABCD release is not stated.\n7. Including the a-path (social media time to smoking expectancies) as a qualifying analysis assumes expectancies count as an individual-trait construct (substance-related cognition). The coder should confirm this.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2: social media hours/day continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2: social media hours/day continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M3",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2: social media hours/day continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SM time x nicotine Y4 (pos model)",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.029
+   },
+   "where": "Table 2 p.5, Direct effect B (SE)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SM time x nicotine Y4 (neg model)",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.027
+   },
+   "where": "Table 2 p.5, Direct effect B (SE)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 indirect via pos expectancies",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.003
+   },
+   "where": "Table 2 p.5, Indirect effect B (SE)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 indirect via neg expectancies",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.001
+   },
+   "where": "Table 2 p.5, Indirect effect B (SE)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x pos_exp_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Fig 1 p.5 gives B with asterisks only; no CI/SE/p anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x neg_exp_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Fig 1 p.5 gives B with asterisks only; no CI/SE/p anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nicotine_y4_posmodel sd_dv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Binary outcome; sd_dv not applicable; p0=0.054 from Table 1 (whole-sample weighted, non-user rate not printed)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nicotine_y4_negmodel sd_dv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Binary outcome; sd_dv not applicable; p0=0.054 from Table 1 (whole-sample weighted, non-user rate not printed)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 SM time x neg_exp_y3",
+   "action": "corrected",
+   "field": "p_label",
+   "was": "ns (no asterisk)",
+   "value": ">=.001 (no asterisk; Figure 1 marks only p<.001)",
+   "where": "Figure 1 legend p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 pos direct",
+   "action": "confirmed",
+   "value": "B 0.138, SE 0.029, CI 0.081-0.196, p<.001",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 neg direct",
+   "action": "confirmed",
+   "value": "B 0.153, SE 0.027, CI 0.100-0.206, p<.001",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 pos indirect",
+   "action": "confirmed",
+   "value": "0.009 (0.003), CI 0.003-0.014, p=.002; prop mediated 5.97% (1.27,10.67) p=.013",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 neg indirect",
+   "action": "confirmed",
+   "value": "0.001 (0.001), CI -0.002-0.003, p=.616; prop 0.34% (-1.00,1.67) p=.617",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 a-paths",
+   "action": "confirmed",
+   "value": "0.07***, 0.003",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "sd/p0",
+   "action": "confirmed",
+   "value": "SD_IV 1.5; SD pos 2.2, neg 2.1; Y4 prevalence 5.4%",
+   "where": "Table 2 / Figure 1 p.5; Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 SM time x pos_exp_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Re-searched all 7 pages: a-path CI/SE/exact p not printed; supporting information (Appendices A-B) not in repo pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 SM time x neg_exp_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Re-searched all 7 pages: a-path CI/SE/exact p not printed; supporting information (Appendices A-B) not in repo pdfs"
+  }
+ ],
  "supplements": []
 }

@@ -109,183 +109,244 @@
      "iv": "social_media",
      "dv": "flanker",
      "B": -0.5,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.9116,
+     "B_hi": -0.0884,
      "p": 0.017,
      "p_label": "0.017",
      "sig": true,
      "location": "Table 3 (p. 399), row 'Social media' under outcome 'Inhibitory control and attention'",
-     "note": "SE = 0.21, t = -2.40, pFDR = 0.026* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.21, t = -2.40, pFDR = 0.026* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.21,
+     "se_scale": "raw",
+     "t": -2.4,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.5 \u00d7 0.38 / 7.49 = -0.0254;  d = 2(-0.0254) / \u221a(1 \u2212 (-0.0254)\u00b2) = -0.0508",
      "derived_d": -0.0508,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0926,
+     "derived_d_hi": -0.009,
      "derived_d_method": "linear (SD_IV=0.38, SD_DV=7.49)"
     },
     {
      "iv": "social_media",
      "dv": "pattern",
      "B": -0.99,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -1.7936,
+     "B_hi": -0.1864,
      "p": 0.015,
      "p_label": "0.015",
      "sig": true,
      "location": "Table 3 (p. 399), row 'Social media' under outcome 'Information processing speed'",
-     "note": "SE = 0.41, t = -2.44, pFDR = 0.039* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.41, t = -2.44, pFDR = 0.039* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.41,
+     "se_scale": "raw",
+     "t": -2.44,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.99 \u00d7 0.38 / 15.09 = -0.0249;  d = 2(-0.0249) / \u221a(1 \u2212 (-0.0249)\u00b2) = -0.0499",
      "derived_d": -0.0499,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0904,
+     "derived_d_hi": -0.0094,
      "derived_d_method": "linear (SD_IV=0.38, SD_DV=15.09)"
     },
     {
      "iv": "social_media",
      "dv": "picseq",
      "B": -1.4,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -1.988,
+     "B_hi": -0.812,
      "p": null,
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3 (p. 399), row 'Social media' under outcome 'Visuospatial sequencing and memory'",
-     "note": "SE = 0.30, t = -4.68, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.30, t = -4.68, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.3,
+     "se_scale": "raw",
+     "t": -4.68,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -1.4 \u00d7 0.38 / 12.14 = -0.0438;  d = 2(-0.0438) / \u221a(1 \u2212 (-0.0438)\u00b2) = -0.0877",
      "derived_d": -0.0877,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1247,
+     "derived_d_hi": -0.0509,
      "derived_d_method": "linear (SD_IV=0.38, SD_DV=12.14)"
     },
     {
      "iv": "social_media",
      "dv": "picvocab",
      "B": -0.79,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -1.084,
+     "B_hi": -0.496,
      "p": null,
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 4 (p. 399), row 'Social media' under outcome 'Verbal intellect'",
-     "note": "SE = 0.15, t = -5.26, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.15, t = -5.26, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 4 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.15,
+     "se_scale": "raw",
+     "t": -5.26,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.79 \u00d7 0.38 / 8.31 = -0.0361;  d = 2(-0.0361) / \u221a(1 \u2212 (-0.0361)\u00b2) = -0.0723",
      "derived_d": -0.0723,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0993,
+     "derived_d_hi": -0.0454,
      "derived_d_method": "linear (SD_IV=0.38, SD_DV=8.31)"
     },
     {
      "iv": "social_media",
      "dv": "reading",
      "B": -0.28,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.4956,
+     "B_hi": -0.0644,
      "p": 0.014,
      "p_label": "0.014",
      "sig": true,
      "location": "Table 4 (p. 399), row 'Social media' under outcome 'Reading and language ability'",
-     "note": "SE = 0.11, t = -2.46, pFDR = 0.019* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.11, t = -2.46, pFDR = 0.019* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 4 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.11,
+     "se_scale": "raw",
+     "t": -2.46,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.28 \u00d7 0.38 / 6.5 = -0.0164;  d = 2(-0.0164) / \u221a(1 \u2212 (-0.0164)\u00b2) = -0.0327",
      "derived_d": -0.0327,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.058,
+     "derived_d_hi": -0.0075,
      "derived_d_method": "linear (SD_IV=0.38, SD_DV=6.5)"
     },
     {
      "iv": "social_engagement",
      "dv": "flanker",
      "B": -0.5,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.696,
+     "B_hi": -0.304,
      "p": null,
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Inhibitory control and attention'",
-     "note": "SE = 0.10, t = -4.96, pFDR = 0.006* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.10, t = -4.96, pFDR = 0.006* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.1,
+     "se_scale": "raw",
+     "t": -4.96,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.5 \u00d7 0.79 / 7.49 = -0.0527;  d = 2(-0.0527) / \u221a(1 \u2212 (-0.0527)\u00b2) = -0.1056",
      "derived_d": -0.1056,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1472,
+     "derived_d_hi": -0.0642,
      "derived_d_method": "linear (SD_IV=0.79, SD_DV=7.49)"
     },
     {
      "iv": "social_engagement",
      "dv": "pattern",
      "B": -0.35,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.742,
+     "B_hi": 0.042,
      "p": 0.072,
      "p_label": "0.072",
      "sig": false,
      "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Information processing speed'",
-     "note": "SE = 0.20, t = -1.80, pFDR = 0.144 (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.20, t = -1.80, pFDR = 0.144 (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.2,
+     "se_scale": "raw",
+     "t": -1.8,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.35 \u00d7 0.79 / 15.09 = -0.0183;  d = 2(-0.0183) / \u221a(1 \u2212 (-0.0183)\u00b2) = -0.0367",
      "derived_d": -0.0367,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0777,
+     "derived_d_hi": 0.0044,
      "derived_d_method": "linear (SD_IV=0.79, SD_DV=15.09)"
     },
     {
      "iv": "social_engagement",
      "dv": "picseq",
      "B": -0.9,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -1.1744,
+     "B_hi": -0.6256,
      "p": null,
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Visuospatial sequencing and memory'",
-     "note": "SE = 0.14, t = -6.32, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.14, t = -6.32, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 3 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.14,
+     "se_scale": "raw",
+     "t": -6.32,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.9 \u00d7 0.79 / 12.14 = -0.0586;  d = 2(-0.0586) / \u221a(1 \u2212 (-0.0586)\u00b2) = -0.1173",
      "derived_d": -0.1173,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1533,
+     "derived_d_hi": -0.0815,
      "derived_d_method": "linear (SD_IV=0.79, SD_DV=12.14)"
     },
     {
      "iv": "social_engagement",
      "dv": "picvocab",
      "B": -0.57,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.7072,
+     "B_hi": -0.4328,
      "p": null,
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 4 (p. 399), row 'Social engagement' under outcome 'Verbal intellect'",
-     "note": "SE = 0.07, t = -8.03, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.07, t = -8.03, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 4 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.07,
+     "se_scale": "raw",
+     "t": -8.03,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.57 \u00d7 0.79 / 8.31 = -0.0542;  d = 2(-0.0542) / \u221a(1 \u2212 (-0.0542)\u00b2) = -0.1085",
      "derived_d": -0.1085,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1348,
+     "derived_d_hi": -0.0824,
      "derived_d_method": "linear (SD_IV=0.79, SD_DV=8.31)"
     },
     {
      "iv": "social_engagement",
      "dv": "reading",
      "B": -0.19,
-     "B_lo": null,
-     "B_hi": null,
+     "B_lo": -0.288,
+     "B_hi": -0.092,
      "p": 0.001,
      "p_label": "0.001",
      "sig": true,
      "location": "Table 4 (p. 399), row 'Social engagement' under outcome 'Reading and language ability'",
-     "note": "SE = 0.05, t = -3.39, pFDR = 0.001* (asterisk = significant after FDR). CI not reported.",
+     "note": "SE = 0.05, t = -3.39, pFDR = 0.001* (asterisk = significant after FDR). CI not reported. Verified: B, SE, t, p match Table 4 p.399. B_lo/B_hi stay null: Tables 3-4 print only B, SE, t, p, pFDR; no CIs in text (Sections 3.2.1-3.2.2), Table 5, Fig 1, or anywhere in the 13-page PDF; supplement (Tables S2-S3) not bundled. B, SD_IV and SD_DV are all present, so d is computable. Complete pass 2026-10-01: SE and t added as structured fields from the same table row (se_scale raw: linear B); 95% CI computable as B +/- 1.96*SE. Error df not printed (lmer t, no df in Tables 3-4 or text); analytic N = 7043 (Section 2.1 p.396).",
+     "se": 0.05,
+     "se_scale": "raw",
+     "t": -3.39,
+     "df": null,
+     "n": 7043,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.19 \u00d7 0.79 / 6.5 = -0.0231;  d = 2(-0.0231) / \u221a(1 \u2212 (-0.0231)\u00b2) = -0.0462",
      "derived_d": -0.0462,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.07,
+     "derived_d_hi": -0.0224,
      "derived_d_method": "linear (SD_IV=0.79, SD_DV=6.5)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -325,8 +386,483 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
   "contrast_type": "per 1 hour/day of baseline social media or social engagement use, converted to per 1 SD of the IV",
   "transformable": true,
-  "notes": "SD_IV from Table 2 (p. 398), baseline analytic sample: social media 0.38, social engagement 0.79. SD_DV taken as the 2-year follow-up SD of the raw task score from Table 2 (Flanker 7.49, Pattern Comparison 15.09, Picture Sequence Memory 12.14, Picture Vocabulary 8.31, Oral Reading 6.50), because the DV is the T2 score. B is conditional on the baseline score (residual change), so the derived d expresses the association with residualized change scaled by the raw T2 SD, not by the residual SD, which makes it smaller than a d on residualized change would be. No CIs are reported (only SE), so d CIs are not computed. Social media is highly right-skewed (M 0.10, SD 0.38 h), so per-SD contrasts reflect a small number of heavy users."
+  "notes": "SD_IV from Table 2 (p. 398), baseline analytic sample: social media 0.38, social engagement 0.79. SD_DV taken as the 2-year follow-up SD of the raw task score from Table 2 (Flanker 7.49, Pattern Comparison 15.09, Picture Sequence Memory 12.14, Picture Vocabulary 8.31, Oral Reading 6.50), because the DV is the T2 score. B is conditional on the baseline score (residual change), so the derived d expresses the association with residualized change scaled by the raw T2 SD, not by the residual SD, which makes it smaller than a d on residualized change would be. No CIs are reported (only SE), so d CIs are not computed. Social media is highly right-skewed (M 0.10, SD 0.38 h), so per-SD contrasts reflect a small number of heavy users. Verification pass (2026-10-01): re-read full PDF; all 10 B values, SEs, p values and all SD_IV/SD_DV values confirmed against Tables 2-4 (pp. 398-399); iv_type set to continuous. Every estimate has B, SD_IV and SD_DV, so d is computable for all 10 cells; only the CIs are genuinely not printed. Complete pass (2026-10-01): SE (Tables 3-4 p.399) and t added to every estimate as structured fields, so B CIs (B +/- 1.96*SE) and hence d CIs are computable; df not printed, N = 7043."
  },
  "extraction_flags": "1) I counted 'social engagement' (texting + video chat, summed weighted daily hours) as a qualifying IV. It is a composite built only from phone/SM items, so it passes FT-IC2 Step 2, and the texting item says 'cell phone, tablet, or computer'. Coders should confirm this. 2) Each lifestyle factor was fit in its own model, so the social media B is not adjusted for the other screen types. 3) For SD_DV I used the 2-year follow-up raw-score SDs from Table 2. B comes from a residual change model (it conditions on the baseline score), so d scaled by the raw T2 SD is a convention choice to check. 4) Only SE is reported, so CIs are null. Several p values are printed as '< 0.001', so p is left null and p_label is filled in. Significance follows the pFDR asterisks. 5) The social media x sex interactions and the semi-partial R2 values are only in the Supporting Information (Tables S2-S5), which is not bundled in the PDF. 6) Race/ethnicity of the sample is not reported. 7) Unrelated quirks in the paper: sleep duration on the Flanker is marked significant at pFDR 0.119*, and the text gives SE = -3.03 for the sex interaction. These do not affect the extracted phone/SM cells.json",
+ "verification_log": [
+  {
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Section 2.2.2 p.396: weighted average daily hours"
+  },
+  {
+   "item": "M1 sd_iv social_media",
+   "action": "confirmed",
+   "value": 0.38,
+   "where": "Table 2 p.398 baseline"
+  },
+  {
+   "item": "M1 sd_iv social_engagement",
+   "action": "confirmed",
+   "value": 0.79,
+   "where": "Table 2 p.398 baseline"
+  },
+  {
+   "item": "M1 sd_dv flanker",
+   "action": "confirmed",
+   "value": 7.49,
+   "where": "Table 2 p.398 2-year follow-up"
+  },
+  {
+   "item": "M1 sd_dv pattern",
+   "action": "confirmed",
+   "value": 15.09,
+   "where": "Table 2 p.398 2-year follow-up"
+  },
+  {
+   "item": "M1 sd_dv picseq",
+   "action": "confirmed",
+   "value": 12.14,
+   "where": "Table 2 p.398 2-year follow-up"
+  },
+  {
+   "item": "M1 sd_dv picvocab",
+   "action": "confirmed",
+   "value": 8.31,
+   "where": "Table 2 p.398 2-year follow-up"
+  },
+  {
+   "item": "M1 sd_dv reading",
+   "action": "confirmed",
+   "value": 6.5,
+   "where": "Table 2 p.398 2-year follow-up"
+  },
+  {
+   "item": "M1 social_media x flanker B",
+   "action": "confirmed",
+   "value": -0.5,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_media x flanker CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_media x pattern B",
+   "action": "confirmed",
+   "value": -0.99,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_media x pattern CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_media x picseq B",
+   "action": "confirmed",
+   "value": -1.4,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_media x picseq CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_media x picvocab B",
+   "action": "confirmed",
+   "value": -0.79,
+   "where": "Table 4 p.399"
+  },
+  {
+   "item": "M1 social_media x picvocab CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_media x reading B",
+   "action": "confirmed",
+   "value": -0.28,
+   "where": "Table 4 p.399"
+  },
+  {
+   "item": "M1 social_media x reading CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_engagement x flanker B",
+   "action": "confirmed",
+   "value": -0.5,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_engagement x flanker CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_engagement x pattern B",
+   "action": "confirmed",
+   "value": -0.35,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_engagement x pattern CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_engagement x picseq B",
+   "action": "confirmed",
+   "value": -0.9,
+   "where": "Table 3 p.399"
+  },
+  {
+   "item": "M1 social_engagement x picseq CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_engagement x picvocab B",
+   "action": "confirmed",
+   "value": -0.57,
+   "where": "Table 4 p.399"
+  },
+  {
+   "item": "M1 social_engagement x picvocab CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "item": "M1 social_engagement x reading B",
+   "action": "confirmed",
+   "value": -0.19,
+   "where": "Table 4 p.399"
+  },
+  {
+   "item": "M1 social_engagement x reading CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Only SE printed in Tables 3-4 p.399; checked all 13 pages"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x flanker SE",
+   "action": "filled_ci_input",
+   "value": 0.21,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x flanker t",
+   "action": "filled_ci_input",
+   "value": -2.4,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x flanker CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x pattern SE",
+   "action": "filled_ci_input",
+   "value": 0.41,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x pattern t",
+   "action": "filled_ci_input",
+   "value": -2.44,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x pattern CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picseq SE",
+   "action": "filled_ci_input",
+   "value": 0.3,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picseq t",
+   "action": "filled_ci_input",
+   "value": -4.68,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picseq CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picvocab SE",
+   "action": "filled_ci_input",
+   "value": 0.15,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picvocab t",
+   "action": "filled_ci_input",
+   "value": -5.26,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x picvocab CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x reading SE",
+   "action": "filled_ci_input",
+   "value": 0.11,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x reading t",
+   "action": "filled_ci_input",
+   "value": -2.46,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x reading CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x flanker SE",
+   "action": "filled_ci_input",
+   "value": 0.1,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x flanker t",
+   "action": "filled_ci_input",
+   "value": -4.96,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x flanker CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x pattern SE",
+   "action": "filled_ci_input",
+   "value": 0.2,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x pattern t",
+   "action": "filled_ci_input",
+   "value": -1.8,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x pattern CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picseq SE",
+   "action": "filled_ci_input",
+   "value": 0.14,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picseq t",
+   "action": "filled_ci_input",
+   "value": -6.32,
+   "where": "Table 3 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picseq CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picvocab SE",
+   "action": "filled_ci_input",
+   "value": 0.07,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picvocab t",
+   "action": "filled_ci_input",
+   "value": -8.03,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x picvocab CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x reading SE",
+   "action": "filled_ci_input",
+   "value": 0.05,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x reading t",
+   "action": "filled_ci_input",
+   "value": -3.39,
+   "where": "Table 4 p.399"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_engagement x reading CI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No CI in Tables 3-4, text, Table 5 or any of 13 pages; supplement S2-S3 not bundled; SE recorded instead"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Section 2.2.2 p.396: weighted average daily hours"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x flanker B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x pattern B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x picseq B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x picvocab B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x reading B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_engagement x flanker B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_engagement x pattern B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_engagement x picseq B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_engagement x picvocab B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_engagement x reading B_lo/B_hi, df",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 13 PDF pages (Tables 3-4 p.399 print B, SE, t, p, pFDR only; no CI or df anywhere); Supporting Information (Tables S2-S3) not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 10 estimates: B, SE, t, p/p_label, sig (pFDR<.05), location; sd_iv (0.38, 0.79) and sd_dv (follow-up SDs 7.49, 15.09, 12.14, 8.31, 6.50); iv_type continuous; n 7043",
+   "action": "confirmed",
+   "was": null,
+   "value": "all match",
+   "where": "Tables 2-4 pp.398-399; Section 2.2.2 p.396"
+  }
+ ],
  "supplements": []
 }

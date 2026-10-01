@@ -58,7 +58,7 @@
     {
      "id": "wd_text",
      "label": "Weekday texting",
-     "meta": "2.8% high users"
+     "meta": "2.7% high users"
     },
     {
      "id": "we_text",
@@ -89,39 +89,57 @@
    "dv_axis": [
     {
      "id": "duration",
-     "label": "Sleep<br>duration"
+     "label": "Sleep<br>duration",
+     "sd_dv": 1.11,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "onset",
-     "label": "Onset<br>latency"
+     "label": "Onset<br>latency",
+     "sd_dv": 0.99,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "insomnia",
-     "label": "Insomnia"
+     "label": "Insomnia",
+     "sd_dv": 3.75,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "breathing",
-     "label": "Disordered<br>breathing"
+     "label": "Disordered<br>breathing",
+     "sd_dv": 1.26,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "arousal",
-     "label": "Arousal"
+     "label": "Arousal",
+     "sd_dv": 0.92,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "wake_trans",
-     "label": "Wake-<br>transition"
+     "label": "Wake-<br>transition",
+     "sd_dv": 2.63,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "sleepiness",
-     "label": "Excessive<br>sleepiness"
+     "label": "Excessive<br>sleepiness",
+     "sd_dv": 2.44,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "hyper",
-     "label": "Hyper-<br>hidrosis"
+     "label": "Hyper-<br>hidrosis",
+     "sd_dv": 1.18,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     },
     {
      "id": "total",
-     "label": "Total<br>disturbance"
+     "label": "Total<br>disturbance",
+     "sd_dv": 8.24,
+     "_sd_dv_note": "Table 1 p.734 full-analytic-sample baseline SD (raw, unadjusted)."
     }
    ],
    "estimates": [
@@ -129,327 +147,976 @@
      "iv": "wd_text",
      "dv": "duration",
      "d": -0.21,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 8.82,
+     "m1_se": 0.06,
+     "m0": 9.03,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "onset",
      "d": 0.05,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 1.99,
+     "m1_se": 0.06,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "insomnia",
      "d": 0.11,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 12.2,
+     "m1_se": 0.22,
+     "m0": 11.75,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "breathing",
-     "d": -0.12,
-     "sig": false
+     "d": 0.12,
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 3.88,
+     "m1_se": 0.07,
+     "m0": 3.75,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "arousal",
      "d": -0.01,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 3.43,
+     "m1_se": 0.05,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "wake_trans",
      "d": -0.03,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 8.09,
+     "m1_se": 0.15,
+     "m0": 8.18,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "sleepiness",
      "d": 0.1,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 7.16,
+     "m1_se": 0.14,
+     "m0": 6.94,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "hyper",
      "d": 0.09,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 2.53,
+     "m1_se": 0.07,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_text",
      "dv": "total",
      "d": 0.1,
-     "sig": false
+     "sig": false,
+     "n1": 291,
+     "n0": 10385,
+     "m1": 37.29,
+     "m1_se": 0.48,
+     "m0": 36.49,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "duration",
      "d": -0.2,
-     "sig": false
+     "sig": true,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 8.83,
+     "m1_se": 0.05,
+     "m0": 9.03,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "onset",
      "d": 0.07,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 2.01,
+     "m1_se": 0.05,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "insomnia",
      "d": 0.11,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 12.19,
+     "m1_se": 0.19,
+     "m0": 11.74,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "breathing",
      "d": 0.1,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 3.86,
+     "m1_se": 0.06,
+     "m0": 3.75,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "arousal",
-     "d": -0.01,
-     "sig": false
+     "d": 0.01,
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 3.45,
+     "m1_se": 0.05,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "wake_trans",
      "d": 0.05,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 8.31,
+     "m1_se": 0.13,
+     "m0": 8.18,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "sleepiness",
-     "d": -0.15,
-     "sig": false
+     "d": 0.15,
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 7.26,
+     "m1_se": 0.12,
+     "m0": 6.93,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "hyper",
      "d": 0.07,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 2.51,
+     "m1_se": 0.06,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_text",
      "dv": "total",
      "d": 0.14,
-     "sig": false
+     "sig": false,
+     "n1": 410,
+     "n0": 10264,
+     "m1": 37.58,
+     "m1_se": 0.4,
+     "m0": 36.47,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "duration",
      "d": -0.28,
-     "sig": true
+     "sig": true,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 8.74,
+     "m1_se": 0.08,
+     "m0": 9.03,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "onset",
      "d": 0.04,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 1.98,
+     "m1_se": 0.08,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "insomnia",
      "d": 0.19,
-     "sig": true
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 12.49,
+     "m1_se": 0.3,
+     "m0": 11.75,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "breathing",
      "d": 0.08,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 3.84,
+     "m1_se": 0.1,
+     "m0": 3.75,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "arousal",
      "d": 0.16,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 3.59,
+     "m1_se": 0.07,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "wake_trans",
      "d": 0.01,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 8.21,
+     "m1_se": 0.21,
+     "m0": 8.18,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "sleepiness",
      "d": 0.11,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 7.19,
+     "m1_se": 0.19,
+     "m0": 6.94,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "hyper",
      "d": -0.11,
-     "sig": false
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 2.31,
+     "m1_se": 0.09,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_sm",
      "dv": "total",
      "d": 0.14,
-     "sig": true
+     "sig": false,
+     "n1": 160,
+     "n0": 10516,
+     "m1": 37.62,
+     "m1_se": 0.64,
+     "m0": 36.49,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "duration",
      "d": -0.14,
-     "sig": true
+     "sig": true,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 8.75,
+     "m1_se": 0.07,
+     "m0": 9.03,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "onset",
      "d": 0.11,
-     "sig": false
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 2.06,
+     "m1_se": 0.07,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "insomnia",
      "d": 0.19,
-     "sig": false
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 12.48,
+     "m1_se": 0.24,
+     "m0": 11.75,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "breathing",
-     "d": -0.04,
-     "sig": false
+     "d": 0.04,
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 3.79,
+     "m1_se": 0.08,
+     "m0": 3.75,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "arousal",
-     "d": -0.15,
-     "sig": false
+     "d": 0.15,
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 3.59,
+     "m1_se": 0.06,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "wake_trans",
-     "d": 0.18,
-     "sig": false
+     "d": 0.15,
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 8.59,
+     "m1_se": 0.17,
+     "m0": 8.17,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "sleepiness",
-     "d": -0.18,
-     "sig": false
+     "d": 0.18,
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 7.35,
+     "m1_se": 0.16,
+     "m0": 6.94,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "hyper",
      "d": 0.04,
-     "sig": false
+     "sig": false,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 2.48,
+     "m1_se": 0.08,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_sm",
      "dv": "total",
      "d": 0.22,
-     "sig": true
+     "sig": true,
+     "n1": 236,
+     "n0": 10438,
+     "m1": 38.27,
+     "m1_se": 0.53,
+     "m0": 36.47,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "duration",
      "d": -0.12,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 8.91,
+     "m1_se": 0.07,
+     "m0": 9.03,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "onset",
      "d": 0.08,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 2.02,
+     "m1_se": 0.07,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "insomnia",
-     "d": 0.03,
-     "sig": false
+     "d": 0.08,
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 12.08,
+     "m1_se": 0.25,
+     "m0": 11.75,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "breathing",
      "d": 0.03,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 3.78,
+     "m1_se": 0.08,
+     "m0": 3.75,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "arousal",
      "d": -0.08,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 3.36,
+     "m1_se": 0.06,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "wake_trans",
      "d": -0.13,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 7.82,
+     "m1_se": 0.18,
+     "m0": 8.19,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "sleepiness",
-     "d": 0.12,
-     "sig": false
+     "d": 0.14,
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 7.24,
+     "m1_se": 0.16,
+     "m0": 6.94,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "hyper",
-     "d": 0.13,
-     "sig": false
+     "d": 0.12,
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 2.56,
+     "m1_se": 0.08,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "wd_vc",
      "dv": "total",
      "d": 0.04,
-     "sig": false
+     "sig": false,
+     "n1": 223,
+     "n0": 10448,
+     "m1": 36.85,
+     "m1_se": 0.54,
+     "m0": 36.5,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 2 p.735; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "duration",
      "d": -0.2,
-     "sig": false
+     "sig": true,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 8.82,
+     "m1_se": 0.06,
+     "m0": 9.03,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "onset",
      "d": 0.05,
-     "sig": false
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 1.99,
+     "m1_se": 0.05,
+     "m0": 1.94,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "insomnia",
      "d": 0.18,
-     "sig": false
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 12.43,
+     "m1_se": 0.2,
+     "m0": 11.74,
+     "m0_se": 0.04,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "breathing",
      "d": 0.13,
-     "sig": false
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 3.89,
+     "m1_se": 0.07,
+     "m0": 3.74,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "arousal",
-     "d": -0.01,
-     "sig": false
+     "d": 0.01,
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 3.45,
+     "m1_se": 0.05,
+     "m0": 3.44,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "wake_trans",
-     "d": 0.01,
-     "sig": false
+     "d": 0.0,
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 8.19,
+     "m1_se": 0.14,
+     "m0": 8.18,
+     "m0_se": 0.03,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "sleepiness",
-     "d": -0.11,
-     "sig": false
+     "d": 0.2,
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 7.37,
+     "m1_se": 0.13,
+     "m0": 6.93,
+     "m0_se": 0.02,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "hyper",
      "d": 0.11,
-     "sig": false
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 2.55,
+     "m1_se": 0.06,
+     "m0": 2.43,
+     "m0_se": 0.01,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     },
     {
      "iv": "we_vc",
      "dv": "total",
      "d": 0.17,
-     "sig": false
+     "sig": false,
+     "n1": 344,
+     "n0": 10322,
+     "m1": 37.87,
+     "m1_se": 0.44,
+     "m0": 36.46,
+     "m0_se": 0.08,
+     "d_lo": null,
+     "d_hi": null,
+     "p": null,
+     "p_label": ">=.001 (not significant at paper alpha .001; exact p not printed)",
+     "location": "Table 3 p.736; group Ns in row labels; adjusted M (SE) per group",
+     "note": "d printed (adjusted means / pooled SD). No CI, exact p, t or SE of difference printed; group sizes n1 (>=2 hr) / n0 (<2 hr) and covariate-adjusted group means with SEs recorded so a CI can be computed. Checked Tables 1-3, 6, Figs 1-6, text pp.731-741; supplement (Suppl Table 1) not bundled in repo."
     }
-   ]
+   ],
+   "iv_type": "binary"
   },
   {
    "model_id": "M2",
@@ -499,13 +1166,13 @@
      "id": "insufficient",
      "label": "Insufficient sleep<br><span style=\"font-weight:400;color:var(--muted);\">(&lt;9 hr)</span>",
      "p0": 0.155,
-     "_p0_note": "Sample marginal base rate ~14-17%; midpoint used. Exposed group is 1.5-3.8% of sample so marginal \u2248 unexposed-group rate to within ~1%."
+     "_p0_note": "Sample marginal base rate ~14-17%; midpoint used. Exposed group is 1.5-3.8% of sample so marginal ≈ unexposed-group rate to within ~1%. Exact prevalences not printed; Figs 1/2/4/5 bars are unlabelled (only axis gridlines), so p0 kept as draft approximation."
     },
     {
      "id": "disturbed",
-     "label": "Disturbed sleep<br><span style=\"font-weight:400;color:var(--muted);\">(SDSC total \u2265 39)</span>",
+     "label": "Disturbed sleep<br><span style=\"font-weight:400;color:var(--muted);\">(SDSC total ≥ 39)</span>",
      "p0": 0.275,
-     "_p0_note": "Sample marginal base rate ~25-30%; midpoint used."
+     "_p0_note": "Sample marginal base rate ~25-30%; midpoint used. Exact prevalences not printed; Figs 1/2/4/5 bars are unlabelled (only axis gridlines), so p0 kept as draft approximation."
     }
    ],
    "estimates": [
@@ -513,75 +1180,184 @@
      "iv": "wd_text",
      "dv": "insufficient",
      "RR": 1.44,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 291,
+     "n0": 10385,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "wd_text",
      "dv": "disturbed",
      "RR": 1.12,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 291,
+     "n0": 10385,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_text",
      "dv": "insufficient",
      "RR": 1.39,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 410,
+     "n0": 10264,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_text",
      "dv": "disturbed",
      "RR": 1.18,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 410,
+     "n0": 10264,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "wd_sm",
      "dv": "insufficient",
      "RR": 1.56,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 160,
+     "n0": 10516,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "wd_sm",
      "dv": "disturbed",
      "RR": 1.26,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 160,
+     "n0": 10516,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_sm",
      "dv": "insufficient",
      "RR": 1.5,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 236,
+     "n0": 10438,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_sm",
      "dv": "disturbed",
      "RR": 1.42,
-     "sig": true
+     "sig": true,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": "<.001",
+     "n1": 236,
+     "n0": 10438,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "wd_vc",
      "dv": "insufficient",
      "RR": 1.13,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 223,
+     "n0": 10448,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "wd_vc",
      "dv": "disturbed",
      "RR": 1.1,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 223,
+     "n0": 10448,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_vc",
      "dv": "insufficient",
      "RR": 1.42,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 344,
+     "n0": 10322,
+     "location": "Table 4 p.738",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     },
     {
      "iv": "we_vc",
      "dv": "disturbed",
      "RR": 1.23,
-     "sig": false
+     "sig": false,
+     "RR_lo": null,
+     "RR_hi": null,
+     "p": null,
+     "se": null,
+     "p_label": ">=.001 (no *** marker; exact p not printed)",
+     "n1": 344,
+     "n0": 10322,
+     "location": "Table 5 p.740",
+     "note": "RR printed without CI, SE or exact p (only *** for P<.001). Group Ns from Table 2/3 row labels (sleep N may differ slightly). p0 (unexposed-group prevalence) shown only as unlabelled bars in Figs 2/4/5 (Fig 1/2 insufficient; 4/5 disturbed) - not read off plots. Checked Tables 1-6, Figs 1-6, all text; supplement not bundled."
     }
-   ]
+   ],
+   "iv_type": "binary"
   }
  ],
  "excluded_models": [
@@ -626,7 +1402,1348 @@
   "conversion_formula": "M1: passthrough (native is already d). M2: OR = RR * (1-p0) / (1 - RR*p0); d = ln(OR) * sqrt(3)/pi (Chinn 2000). p0 = 0.155 (insufficient sleep marginal base rate); 0.275 (disturbed sleep).",
   "contrast_type": "M1: >=2 hr group vs. <2 hr group difference / pooled SD. M2: log-OR scale via Chinn.",
   "transformable": true,
-  "notes": "For M2, marginal sample rate approximates unexposed-group rate to within ~1% since exposure prevalence is 1.5-3.8%. Not directly comparable to per-1-SD-of-IV d's from papers like 394."
+  "notes": "For M2, marginal sample rate approximates unexposed-group rate to within ~1% since exposure prevalence is 1.5-3.8%. Not directly comparable to per-1-SD-of-IV d's from papers like 394. [complete-stage] M1 d values/signs/sig flags re-verified against Tables 2-3 page images; several draft cells corrected (see verification_log). Group Ns, adjusted group means and SEs added per M1 estimate to allow CI computation (SE_d approx sqrt(1/n1+1/n0)). sd_dv from Table 1."
  },
- "last_edited_by": "danny"
+ "last_edited_by": "danny",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.733: IVs dichotomized <2 vs >=2 hr"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.733"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv duration",
+   "action": "filled_sd",
+   "value": 1.11,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv onset",
+   "action": "filled_sd",
+   "value": 0.99,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv insomnia",
+   "action": "filled_sd",
+   "value": 3.75,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv breathing",
+   "action": "filled_sd",
+   "value": 1.26,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv arousal",
+   "action": "filled_sd",
+   "value": 0.92,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv wake_trans",
+   "action": "filled_sd",
+   "value": 2.63,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv sleepiness",
+   "action": "filled_sd",
+   "value": 2.44,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv hyper",
+   "action": "filled_sd",
+   "value": 1.18,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv total",
+   "action": "filled_sd",
+   "value": 8.24,
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     8.82,
+     0.06
+    ],
+    "m0": [
+     9.03,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     1.99,
+     0.06
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     12.2,
+     0.22
+    ],
+    "m0": [
+     11.75,
+     0.04
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x breathing",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.12,
+    "new_d": 0.12
+   },
+   "where": "Table 2 p.735 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     3.88,
+     0.07
+    ],
+    "m0": [
+     3.75,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     3.43,
+     0.05
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     8.09,
+     0.15
+    ],
+    "m0": [
+     8.18,
+     0.03
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     7.16,
+     0.14
+    ],
+    "m0": [
+     6.94,
+     0.02
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     2.53,
+     0.07
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 291,
+    "n0": 10385,
+    "m1": [
+     37.29,
+     0.48
+    ],
+    "m0": [
+     36.49,
+     0.08
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x duration",
+   "action": "filled_value",
+   "value": {
+    "old_sig": false,
+    "new_sig": true
+   },
+   "where": "Table 3 p.736 (bold/*** marking)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     8.83,
+     0.05
+    ],
+    "m0": [
+     9.03,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     2.01,
+     0.05
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     12.19,
+     0.19
+    ],
+    "m0": [
+     11.74,
+     0.04
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     3.86,
+     0.06
+    ],
+    "m0": [
+     3.75,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x arousal",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.01,
+    "new_d": 0.01
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     3.45,
+     0.05
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     8.31,
+     0.13
+    ],
+    "m0": [
+     8.18,
+     0.03
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x sleepiness",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.15,
+    "new_d": 0.15
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     7.26,
+     0.12
+    ],
+    "m0": [
+     6.93,
+     0.02
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     2.51,
+     0.06
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 410,
+    "n0": 10264,
+    "m1": [
+     37.58,
+     0.4
+    ],
+    "m0": [
+     36.47,
+     0.08
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     8.74,
+     0.08
+    ],
+    "m0": [
+     9.03,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     1.98,
+     0.08
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x insomnia",
+   "action": "filled_value",
+   "value": {
+    "old_sig": true,
+    "new_sig": false
+   },
+   "where": "Table 2 p.735 (bold/*** marking)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     12.49,
+     0.3
+    ],
+    "m0": [
+     11.75,
+     0.04
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     3.84,
+     0.1
+    ],
+    "m0": [
+     3.75,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     3.59,
+     0.07
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     8.21,
+     0.21
+    ],
+    "m0": [
+     8.18,
+     0.03
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     7.19,
+     0.19
+    ],
+    "m0": [
+     6.94,
+     0.02
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     2.31,
+     0.09
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x total",
+   "action": "filled_value",
+   "value": {
+    "old_sig": true,
+    "new_sig": false
+   },
+   "where": "Table 2 p.735 (bold/*** marking)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 160,
+    "n0": 10516,
+    "m1": [
+     37.62,
+     0.64
+    ],
+    "m0": [
+     36.49,
+     0.08
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     8.75,
+     0.07
+    ],
+    "m0": [
+     9.03,
+     0.03
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     2.06,
+     0.07
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     12.48,
+     0.24
+    ],
+    "m0": [
+     11.75,
+     0.04
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x breathing",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.04,
+    "new_d": 0.04
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     3.79,
+     0.08
+    ],
+    "m0": [
+     3.75,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x arousal",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.15,
+    "new_d": 0.15
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     3.59,
+     0.06
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x wake_trans",
+   "action": "filled_value",
+   "value": {
+    "old_d": 0.18,
+    "new_d": 0.15
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     8.59,
+     0.17
+    ],
+    "m0": [
+     8.17,
+     0.03
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x sleepiness",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.18,
+    "new_d": 0.18
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     7.35,
+     0.16
+    ],
+    "m0": [
+     6.94,
+     0.02
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     2.48,
+     0.08
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 236,
+    "n0": 10438,
+    "m1": [
+     38.27,
+     0.53
+    ],
+    "m0": [
+     36.47,
+     0.08
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     8.91,
+     0.07
+    ],
+    "m0": [
+     9.03,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     2.02,
+     0.07
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x insomnia",
+   "action": "filled_value",
+   "value": {
+    "old_d": 0.03,
+    "new_d": 0.08
+   },
+   "where": "Table 2 p.735 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     12.08,
+     0.25
+    ],
+    "m0": [
+     11.75,
+     0.04
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     3.78,
+     0.08
+    ],
+    "m0": [
+     3.75,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     3.36,
+     0.06
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     7.82,
+     0.18
+    ],
+    "m0": [
+     8.19,
+     0.03
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x sleepiness",
+   "action": "filled_value",
+   "value": {
+    "old_d": 0.12,
+    "new_d": 0.14
+   },
+   "where": "Table 2 p.735 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     7.24,
+     0.16
+    ],
+    "m0": [
+     6.94,
+     0.02
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x hyper",
+   "action": "filled_value",
+   "value": {
+    "old_d": 0.13,
+    "new_d": 0.12
+   },
+   "where": "Table 2 p.735 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     2.56,
+     0.08
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 223,
+    "n0": 10448,
+    "m1": [
+     36.85,
+     0.54
+    ],
+    "m0": [
+     36.5,
+     0.08
+    ]
+   },
+   "where": "Table 2 p.735"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x duration",
+   "action": "filled_value",
+   "value": {
+    "old_sig": false,
+    "new_sig": true
+   },
+   "where": "Table 3 p.736 (bold/*** marking)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x duration",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     8.82,
+     0.06
+    ],
+    "m0": [
+     9.03,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x onset",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     1.99,
+     0.05
+    ],
+    "m0": [
+     1.94,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x insomnia",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     12.43,
+     0.2
+    ],
+    "m0": [
+     11.74,
+     0.04
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x breathing",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     3.89,
+     0.07
+    ],
+    "m0": [
+     3.74,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x arousal",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.01,
+    "new_d": 0.01
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x arousal",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     3.45,
+     0.05
+    ],
+    "m0": [
+     3.44,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x wake_trans",
+   "action": "filled_value",
+   "value": {
+    "old_d": 0.01,
+    "new_d": 0.0
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x wake_trans",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     8.19,
+     0.14
+    ],
+    "m0": [
+     8.18,
+     0.03
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x sleepiness",
+   "action": "filled_value",
+   "value": {
+    "old_d": -0.11,
+    "new_d": 0.2
+   },
+   "where": "Table 3 p.736 (corrected: draft value/sign did not match printed table; sign verified against adjusted means and page image)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x sleepiness",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     7.37,
+     0.13
+    ],
+    "m0": [
+     6.93,
+     0.02
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x hyper",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     2.55,
+     0.06
+    ],
+    "m0": [
+     2.43,
+     0.01
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x total",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 344,
+    "n0": 10322,
+    "m1": [
+     37.87,
+     0.44
+    ],
+    "m0": [
+     36.46,
+     0.08
+    ]
+   },
+   "where": "Table 3 p.736"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_text x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_text x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_text x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_text x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_sm x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_sm x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_sm x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_sm x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_vc x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 wd_vc x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_vc x insufficient",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_vc x disturbed",
+   "action": "confirmed_missing",
+   "value": "RR CI/SE/p; p0",
+   "where": "Tables 4-5, Figs 1,2,4,5 (unlabelled bars)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis wd_text meta",
+   "action": "corrected",
+   "was": "2.8% high users",
+   "value": "2.7% high users",
+   "where": "Table 2 p.735 row labels: 291/(291+10,385)=2.7% (Table 1 p.734 prints rounded 3%)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 54 cells",
+   "action": "confirmed",
+   "value": "d, sign, sig (*** / bold, alpha .001), n1/n0, adjusted M (SE) both groups re-checked against Tables 2-3; all match",
+   "where": "Table 2 p.735, Table 3 p.736"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis sd_dv",
+   "action": "confirmed",
+   "value": "1.11, 0.99, 3.75, 1.26, 0.92, 2.63, 2.44, 1.18, 8.24",
+   "where": "Table 1 p.734"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 all 12 RRs",
+   "action": "confirmed",
+   "value": "RRs and *** flags match (only weekend SM x disturbed sig, 1.42***)",
+   "where": "Table 4 p.738, Table 5 p.740"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 d_lo/d_hi/p/se/t; M2 RR_lo/RR_hi/se/p; M2 p0",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Full PDF pp.731-742 (Tables 1-6, Figs 1-6, text) read; no CI, SE, exact p or test statistic printed; p0 only in unlabelled bar charts Figs 1,2,4,5; no supplement file in docs/pdfs (Suppl Table 1 online only, raw screen-use means)"
+  }
+ ]
 }

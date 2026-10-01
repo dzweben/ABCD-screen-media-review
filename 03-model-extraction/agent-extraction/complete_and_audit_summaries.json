@@ -1,0 +1,1355 @@
+{
+ "1": {
+  "complete": {
+   "paper_id": "1",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 7,
+   "summary": "I re-read the whole PDF (JAMA Research Letter, pp.1948-1950; p.1950 is unrelated correspondence). There are no supplement files for this DOI in docs/pdfs, so there was nothing to fill. M1 already had all 12 B values with 95% CIs from the Table on p.1949. The paper prints no SEs, t statistics or other test statistics. sd_dv for all 6 outcomes was already set from the reference group's unadjusted weighted SDs in the Table's top panel. iv_type was already categorical; I confirmed it and logged it again. The table prints 7 cells only as p '<.001', so their exact p is not in the paper. I recorded those as confirmed_missing and added notes on each of those estimates. Group sizes are printed only as percentages of N=6554, so I added no n values; this is noted in d_transformation.notes. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_1.json (JSON validates)."
+  },
+  "audit": {
+   "paper_id": "1",
+   "numbers_checked": 78,
+   "errors_fixed": 0,
+   "error_examples": [
+    "No value errors found. The only edits were location strings: all 12 estimates now name the page (Table p. 1949, plus Results text p. 1948 for the significant cells). These are logged as 'corrected' in verification_log."
+   ],
+   "still_missing": 12,
+   "summary": "I read the full 3-page PDF of paper 1 (Nagata et al., JAMA 2025, DOI 10.1001/jama.2025.16613). Page 1950 is unrelated correspondence. No *_supplement files exist in docs/pdfs for this DOI.\n\nChecked against the Table on p. 1949 and the Results text on p. 1948:\n- All 12 M1 estimates (low and high increasing vs no/very low use, across 6 NIH Toolbox outcomes): B, both 95% CI bounds, p and p_label, and sig. All match exactly.\n- sig fits alpha .05 with no correction: 8 significant and 4 non-significant, and each agrees with whether its CI includes 0.\n- sd_dv (14.2, 16.9, 16.2, 20.8, 15.6, 10.6): matches the reference group's unadjusted weighted SDs. No whole-sample or pooled SD is printed. A pooled SD would differ by less than about 0.3 points.\n- iv_type categorical is correct.\n- The estimate set is complete (12 of 12 cells).\n\nNo numeric corrections were needed. I added page numbers to all 12 location fields and appended audit entries (confirmed and confirmed_missing) to verification_log.\n\nStill missing (12 cells): no SE or t-statistic is printed anywhere for any of the 12 cells. For the 7 cells printed as '<.001' the exact p is also missing. The CIs are fully printed, so d can still be computed.\n\nThe file was rewritten and passes JSON validation: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_1.json"
+  }
+ },
+ "3": {
+  "complete": {
+   "paper_id": "3",
+   "values_filled": 0,
+   "ci_inputs_filled": 16,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 1,
+   "summary": "I read the whole PDF (pp. 219-228). No supplement file is bundled in docs/pdfs. Nothing was blank in this draft: all 16 adjusted estimates (8 risk ratios in M1, 8 mean differences in M2) already had their values and printed 95% CIs, and I checked each one against Figure 3 (p. 224) and the Results text. The exact or inequality P values recorded match the FDR-adjusted P values printed in the text (p. 222-223). The SDs for M2's outcomes (CBCL internalizing 10.8, externalizing 9.3) match the Table on p. 222. The reference-group event rates used for M1 match the Low rows of Figure 3. What I added: for every estimate, the two group sizes (n1 and n0) taken from the denominators in Figure 3. The suicide outcomes in M1 and the CBCL outcomes in M2 use slightly different group sizes. I also confirmed both models as categorical exposures (each trajectory class compared with the low class) and added completion entries to verification_log and to d_transformation.notes. No standard errors, exact P values beyond those already recorded, or t/z statistics are printed anywhere in the article. The models also adjusted for screen time are only in Supplement eFigures 1-3, which is not in the folder. SD of the exposure is not needed because the exposure is categorical, and the M1 outcomes are binary, so they use reference-group event rates rather than an outcome SD. The JSON file validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_3.json"
+  },
+  "audit": {
+   "paper_id": "3",
+   "numbers_checked": 108,
+   "errors_fixed": 1,
+   "error_examples": [
+    "M2 sm_high x CBCL externalizing p_label: was \".004\", now null. The exact FDR-adjusted P = .004 is kept as p = 0.004, because p_label is only for inequalities (Results text p. 223)"
+   ],
+   "still_missing": 11,
+   "summary": "I read all 10 pages of the PDF (pp. 219-228). There is no supplement file in docs/pdfs for this paper. I checked the 16 adjusted estimates (8 RRs in M1, 8 mean differences in M2), with both CI bounds, against the Figure 3 adjusted column (p. 224) using a pdftotext extraction. Every one matches, including signs and decimals (for example -0.30 (-0.94 to 0.33) and 0.66 (0.00 to 1.33)). I also checked the p and p_label values against the Results text on pp. 222-223. Seven are FDR-adjusted P < .001 and one is P = .004. The sig flags match the authors' FDR results and the CIs. ph_high x internalizing has a CI lower bound of 0.00 and is not reported as an association, so it stays non-significant. The paper prints FDR P < .001 for ph_incr x ideation even though the CI starts at 1.01; I kept it as printed. The per-estimate p0 values match the reference-group counts in Figure 3: SM low 3.0% / 14.2%, phone low 2.7% / 13.3%. The n1/n0 values match the Figure 3 denominators: M1 407/1326/2507 and 2085/1040/1115; M2 403/1315/2488 and 2067/1030/1109. The SDs for the year 4 CBCL outcomes (10.8 internalizing, 9.3 externalizing) match the Table on p. 222 and the Results text. The class sizes in iv_axis match Figure 2 and the text. iv_type = categorical is correct for both models (dummy coded against the low trajectory, per the Figure 3 footnote). All 16 phone/SM IV x DV cells are present. Video game and Figure 4 total screen time results are correctly excluded. The only fix was a convention issue: a redundant p_label on an estimate that already had an exact p. Still missing: 11 cells have no exact p, and no cell has a printed SE or t/z; none of these are printed in the main text. The supplement (eFigures 1-3, eTables) is not in docs/pdfs. I logged each confirmation and each confirmed_missing in verification_log with stage \"audit\". The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_3.json"
+  }
+ },
+ "8": {
+  "complete": {
+   "paper_id": "8",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 11,
+   "summary": "Read all 10 pages of the PDF. There is no supplement file in docs/pdfs. The draft already had every number the article prints: all 6 cross-lagged betas with 95% CIs, exact p where it is printed, the random-intercept covariance, and the year-3 residual covariance with its CI. The changes were: set iv_type to continuous on M1. For the two cells printed only as P < .001 (SM y2 -> dep y3 and the y3 residual covariance), p is now null and p_label \"<.001\" keeps the text. No SE or z is printed anywhere in the article. The year-2 residual covariance (r = 0.08) has no printed CI or p; it appears only as a label on Figure 2. Those values, and all SEs, would be in eTable 3 of Supplement 1, which is not in the PDF. sd_iv/sd_dv stay null because the estimates are already standardized and the Table 2 SDs describe untransformed hours. Each check is in verification_log and appended to d_transformation.notes. The JSON is valid. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_8.json"
+  },
+  "audit": {
+   "paper_id": "8",
+   "numbers_checked": 42,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 10,
+   "summary": "I re-read all 10 pages of the PDF. No supplement file exists in docs/pdfs, so Supplement 1 and its eTable 3 were not available. The draft was already right, so I corrected nothing. I checked all 9 M1 estimates against the PDF: 6 cross-lagged paths (Results p.6), the random-intercept covariance (p.5) and 2 residual covariances (p.5 text and Figure 2). Every beta, both CI bounds where printed, every exact p or p_label, every sig flag and every location matches the paper. Specific values: 0.03 [-0.02, 0.09] p=.19; 0.07 [0.01, 0.12] p=.01; 0.09 [0.04, 0.14] p<.001; 0.00 [-0.01, 0.02] p=.46; 0.00 [-0.007, 0.01] p=.65; 0.00 [-0.003, 0.02] p=.18; random intercept -0.01 [-0.04, 0.02] p=.46; residual covariance year 3 0.07 [0.03, 0.10] p<.001; residual covariance year 2 r=0.08 (Figure 2 label only). iv_type is continuous, which is correct. sd_iv and sd_dv are correctly left null: the betas are already standardized, and the social media variable was transformed in the model (Table 2 footnote a), so the Table 2 SDs don't apply. The random-intercept sign conflict is real. The text and Abstract print -0.01, but the Figure 2 text layer prints r = 0.01. The draft keeps the text value and already flags this. No phone or social media estimate for this model is missing from the draft: the baseline and year-1 residual covariances are unlabelled gray arrows in Figure 2. Values that remain null: no estimate has an SE or z (they would be in eTable 3), the year-2 residual covariance has no CI or p, and two estimates have p<.001 with no exact p. I logged audit confirmed_missing entries in verification_log, and the JSON is valid. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_8.json"
+  }
+ },
+ "13": {
+  "complete": {
+   "paper_id": "13",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 0,
+   "confirmed_missing": 1,
+   "summary": "Paper 13 has nothing to fill: primary_models is empty, so there were no models to complete. Every estimate printed in the 9-page article uses total daily screen time as the predictor. That measure includes TV, videos and videogames, so it fails FT-IC2. The one subcategory that would qualify, communication time (texting + social media + video chat), has no coefficient, SE, p-value or CI anywhere in the article. It appears only as descriptive data (Table 1: M 0.4, SD 0.8 h/day) and in one narrative sentence in the Discussion on p.1005. The SD for the CBCL depressive score is also not printed. These values are only in Supplement 1 (eMethods/eResults/eTable 1), and no supplement file is in docs/pdfs. I appended a confirmed_missing entry to verification_log and a note to d_transformation.notes. The edited file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_13.json, and it passes the JSON check. Next step: get Supplement 1 from JAMA Pediatrics. If it has no printed communication-time estimates either, the inclusion decision should be revisited under FT-EC4."
+  },
+  "audit": {
+   "paper_id": "13",
+   "numbers_checked": 16,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 1,
+   "summary": "Read all 9 pages of the PDF. There is no supplement file in docs/pdfs. primary_models is empty because every model in the article uses total daily screen time as the IV, and that composite includes TV, videos and videogames. I checked every number cited in excluded_models, d_transformation and extraction_flags against the PDF and all of them match. The numbers checked: B=0.12 (0.04-0.20, P=.008); sleep B=-0.21 (-0.28 to -0.14); Fig 3 path beta=-0.23 (-0.28 to -0.16); mediation 36.4% (18.2%-63.6%); the 1h/2h/3h thresholds; F=19.05; Table 1 communication time M 0.4, SD 0.8, N=976. The locations are also correct. I found no errors. The communication-time estimates (texting + social media + video chat) are still missing because they appear only in Supplement 1, which is not available; I logged this as confirmed_missing. Two audit entries were added to verification_log. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_13.json"
+  }
+ },
+ "18": {
+  "complete": {
+   "paper_id": "18",
+   "values_filled": 0,
+   "ci_inputs_filled": 4,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 93,
+   "summary": "I read all 11 pages of the PDF and re-rendered Figure 2 at 300 dpi. All 30 printed cell values in the M1 draft match the figure. No supplement file for this DOI exists in docs/pdfs.\n\nFilled:\n- M2 (one-sample MR, texting/SNS/VC on reading time): added the printed SEs from Table 2 (p.8) as numeric \"se\" values. They are 0.094 for texting, 0.109 for SNS and 0.087 for video chat. Before this they were only written in the notes.\n- M2 SNS: Table 2 prints p as 0.000, so exact p stays null. I set p_label to \"<0.0005\" from the text on p.7.\n- M1: tightened four p_labels using the Results text. Text x picture vocabulary is corrected p<0.004 and VC x picture vocabulary is p<10^-6, at both waves.\n- iv_type was already \"continuous\" on all 3 models; I confirmed it.\n\nConfirmed missing:\n- M1 SE, CI and exact p: none of the 78 cells has any of these anywhere in the PDF. 48 cells are blank (n.s.) in Figure 2, so B is missing too. Everything lives only in Supporting Information Table S1, which we don't have.\n- M1 outcome SDs: no descriptives for the 13 NIH Toolbox or CBCL outcomes. Table 1 covers only demographics, screen activities and reading. The score metric isn't stated either, so I did not apply the T-score SD of 10.\n- M3: no SD for the picture vocabulary score, and no SE, CI or exact p for B = -0.001. Figure 3b has CI bars but no numbers on them; the values are in Table S2.\n\nI added notes on every estimate and axis, extended d_transformation.notes, and logged all actions to verification_log. The JSON validates.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_18.json"
+  },
+  "audit": {
+   "paper_id": "18",
+   "numbers_checked": 110,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 55,
+   "summary": "I read all 11 pages of the PDF and found no errors, so I made no corrections. No supplement file exists in docs/pdfs. I re-rendered Figure 2 (p.4) at 400 dpi. All 23 non-null M1 cell labels match the printed values, as do the 55 blank cells that are not significant after Bonferroni. Examples: SNS x picture vocabulary is -4.28 at baseline and -1.31 at follow-up; VC x picture vocabulary is -3.18 and -2.11; VC x oral reading at follow-up is -1.46. The p_labels match the Results text on p.3-4. M2 matches Table 2 p.8 for B, SE, p and bolding: Text -0.188 (SE 0.094, p 0.045, not significant under Bonferroni); SNS -0.382 (SE 0.109, p printed as 0.000, so p_label '<0.0005' from p.7); VC -0.301 (SE 0.087, p 0.001). M3 matches Results p.4 (B -0.001, corrected p < 10^-8). The sd_iv values match Table 1 for both waves: baseline Text 0.42, SNS 0.31, VC 0.38; follow-up 0.96, 1.10, 0.77. M2 sd_dv is reading time 0.67 at baseline. All three models are continuous for iv_type, which is correct. No CIs, t values or df are printed anywhere in the paper. The 55 M1 cells still null are blank because they are not significant, and their values exist only in Table S1, which was not provided; DV SDs for NIH Toolbox, CBCL and picture vocabulary are also unprinted, so M1 and M3 cannot be converted to d. I found no missing phone/SM estimates for the extracted model specifications. The paper's text and Figure 2 disagree for Text and VC with picture vocabulary and for VC with picture sequence memory; the draft's notes already flag this, and I kept the figure values. I appended 84 audit entries to verification_log (82 per estimate plus 2 for SDs and iv_type), and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_18.json"
+  }
+ },
+ "24": {
+  "complete": {
+   "paper_id": "24",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 3,
+   "summary": "Paper 24 (Nagata 2021) was already complete, so this pass added no new numbers. I re-read all 6 pages of the PDF; no supplement file exists. All three adjusted ORs (texting, video chat and social networking against binge-eating disorder at the 1-year follow-up) matched Table 2 on p.890, along with their 95% CIs and exact p-values. I set M1 iv_type to \"continuous\" (hours per day). The paper prints no SE or z statistic for any estimate. That gap doesn't matter because the CIs are printed. sd_iv (0.56, 0.52, 0.45) comes from Table 1 and was already in the draft. sd_dv does not apply to a binary outcome. I wrote a note on each estimate saying where I looked, logged each action in verification_log, and appended a short note to d_transformation.notes. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_24.json"
+  },
+  "audit": {
+   "paper_id": "24",
+   "numbers_checked": 22,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 3,
+   "summary": "I read all 6 pages of 10.1002_eat.23489 and checked them against the PDF's text layer too. There is no supplement file for this paper. The values in M1 all match Table 2's adjusted aOR columns on p. 890. Texting: 1.40 (1.08 to 1.82), p = .011, significant. Video chat: 1.32 (0.99 to 1.76), p = .057, not significant; its CI includes 1, it is not bold in the table, and alpha is .05. Social networking: 1.62 (1.18 to 2.22), p = .003, significant. The sd_iv values (0.56, 0.52 and 0.45) and p0 = 0.011 match Table 1 on p. 889. iv_type is continuous, which is correct: hours per day enter the model as a continuous variable (Methods 2.2.1). No phone/social-media cells are missing. I made no corrections. The paper does not print SE, z or Wald statistics for any of the 3 estimates, so those stay missing, and I logged each one in verification_log as confirmed_missing at the audit stage. The JSON validates."
+  }
+ },
+ "31": {
+  "complete": {
+   "paper_id": "31",
+   "values_filled": 0,
+   "ci_inputs_filled": 20,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 10,
+   "summary": "I finished paper 31 (Zheng et al. 2026, J Adolescence). The draft already had all 10 B values (social media and social engagement, each against 5 NIH Toolbox tasks). I re-checked those B values against Tables 3-4 on p.399, and SD_IV and SD_DV against Table 2 on p.398. All of them match. I added the printed SE (se_scale raw) and t value to each estimate as structured fields. That is 20 new inputs, so each CI can be computed as B \u00b1 1.96\u00b7SE. I also recorded the analytic N = 7043 on each estimate and kept iv_type as continuous. The paper prints no CIs on any of its 13 pages. It also gives no error df. The Supporting Information Tables S2-S3 are not in the PDF. So the 10 CIs are logged as confirmed_missing. One oddity is left unchanged: for social engagement \u00d7 Flanker the table prints p < 0.001 but pFDR = 0.006. I appended entries to verification_log and to d_transformation.notes, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_31.json"
+  },
+  "audit": {
+   "paper_id": "31",
+   "numbers_checked": 68,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 20,
+   "summary": "I read all 13 pages of the PDF. No supplement file exists in docs/pdfs. I checked the 10 estimates (2 IVs, social media and social engagement, against 5 NIH Toolbox tasks) in Tables 3-4 on p.399. For each I checked B, SE, t, p or p_label, sig, location and n = 7043, and all of them match. Every sig value follows pFDR < .05, and only social engagement x Pattern Comparison is non-significant (pFDR = 0.144). The baseline sd_iv values (0.38 and 0.79) and the follow-up sd_dv values (7.49, 15.09, 12.14, 8.31, 6.50) match Table 2 on p.398. iv_type continuous is correct, since the IVs are weighted average hours per day. The estimates set is complete: these two IVs are the only qualifying rows in Tables 3-4. Table 5 has no social media or social engagement cells. No corrections were needed. Still missing: the 95% CI bounds and the error df for all 10 estimates (20 values). The paper does not print them, and Supporting Information Tables S2-S3 are not available. I logged each of these as confirmed_missing in verification_log, along with one audit entry recording that all other values were confirmed. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_31.json (valid JSON)."
+  }
+ },
+ "35": {
+  "complete": {
+   "paper_id": "35",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 20,
+   "summary": "I re-read all 10 pages of the PDF (pp. 346-355). There is no supplement file for this paper in docs/pdfs. I checked all 12 Model 2 and Model 3 estimates (M1 PRs from Table 2, M2 RRs from Table 3, M3 trajectory RRs from Table 4) against the tables, and each value and 95% CI was already filled in correctly. There was nothing new to fill. The paper prints no SEs, exact p-values or test statistics. The SD of social media time is not printed anywhere: Table 1 has no social media time row, and Figure 1 shows only group means. The BE rate in the reference group (no addiction symptoms, or consistently low addiction scores) is also not printed, so p0 stays as the overall sample prevalence (0.128 at Wave 1, 0.122 at Wave 3). These numbers would be in the online-only Supplementary Tables S1-S7. iv_type was confirmed for all three models: categorical at the model level, with per-axis types set (social media time continuous, addiction groups and trajectory classes categorical). I added 'complete'-stage entries to verification_log and appended a note to d_transformation.notes. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_35.json"
+  },
+  "audit": {
+   "paper_id": "35",
+   "numbers_checked": 48,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 12,
+   "summary": "I read the full 10-page PDF. There is no supplement file in docs/pdfs. I checked all 12 estimates against the printed tables and found no errors, so I made no corrections:\n- M1 (prevalence ratios): Table 2, Model 2.\n- M2 (risk ratios): Table 3, Model 3.\n- M3 (risk ratios): Table 4, Model 3.\n\nEach estimate's value, both CI bounds, sig flag and location are correct. The two cells whose lower CI bound is printed as 1.00 are both marked not significant, which matches what the authors say in the text (Wave 1 mild SMA: PR 1.35, 1.00-1.84; prospective mild SMA: RR 1.37, 1.00-1.87).\n\nI also checked the p0 values. Wave 1 is 249/1940, from Table 1, and equals Figure 1's remitted 165 plus persistent 84. Wave 3 is 237/1940, from the text on p. 351, and equals Figure 1's developed 153 plus persistent 84.\n\nThe trajectory class sizes are right as entered: Figure 2 gives decreased n=143 and increased n=455, which match 7.4% and 23.5% of 1940. The text on p. 350 swaps these two counts.\n\niv_type is set per axis: social media time is continuous, and the SMA groups and trajectory classes are categorical. The draft is complete, with no missing IV x DV cells for the models the authors interpret.\n\nThe paper prints no SE, exact p, t/z or test statistics anywhere, and gives no SD for social media time, so those fields remain null in all 12 estimates. I recorded this in the verification_log as 13 audit entries. The edited JSON is valid."
+  }
+ },
+ "48": {
+  "complete": {
+   "paper_id": "48",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 16,
+   "summary": "I read all 12 pages of the PDF. No supplement file is in docs/pdfs; Supplementary Tables 1-2 exist only online. All 16 social screen-time ORs already in the draft (12 in M1, 4 in M2) match the Results text on pp. 2284-2285, and each has a printed 95% CI, so no values or CI inputs needed filling. The paper prints no SEs, z values or p-values anywhere. Fig. 1 shows points with no printed numbers, so I read nothing off it. These are OR estimates converted with the Chinn method, which needs no SDs or p0. I set iv_type to \"categorical\" on M1 and M2. On each M1 estimate's note I added where I looked and the baseline group sizes from Table 1 as information (e.g. clinical total problems n=620 vs non-significant n=8005). I added a line to d_transformation.notes and 18 entries to verification_log (2 set_iv_type, 16 confirmed_missing). The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_48.json"
+  },
+  "audit": {
+   "paper_id": "48",
+   "numbers_checked": 112,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 16,
+   "summary": "I re-read all 12 pages of the paper and checked every number in the draft against them. No supplement file is bundled in docs/pdfs. All 16 social-screen-time odds ratios and their 95% CIs match the Results text exactly: 12 for M1 on p.2284 and 4 for M2 on pp.2284-2285. The rows, signs, decimals and locations are right, and none of the values had to be corrected. Each estimate is marked significant, which fits its 95% CI excluding 1. The paper states no alpha level or multiple-comparison correction. Fig. 1 confirms the total-problems clinical ORs (1.02 weekday, 1.15 weekend) belong to the 'Clinical -> High' row. I used the figure only to place them, not to read values. iv_type 'categorical' is correct for both models. The cut-scores and percentages in the axis metadata match Table 1 on p.2282. For all 16 estimates the SE, z/t and exact p-value are still missing, because the paper prints only ORs with 95% CIs. The remaining social cells, plus which category the M2 'higher' exposure refers to, need the online Supplementary Tables 1-2, which we don't have. I didn't add any estimates, because the text prints no other social cells for these models. Audit entries were added to verification_log, and the JSON file loads without errors."
+  }
+ },
+ "49": {
+  "complete": {
+   "paper_id": "49",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 0,
+   "confirmed_missing": 0,
+   "summary": "Paper 49 needed no new values. I checked the draft against the full PDF text. All 5 estimates already have B with a complete 95% CI, and every one matches the paper: M1 texting, video chat and social media against Table 2 Model 2 (p.1484), and the M2 direct and indirect effects against the Results text (p.1482). Both models already had iv_type set to continuous. sd_iv (texting 0.7, video chat 0.6, social media 0.6) and sd_dv (2.5) were already filled from Table 1 (p.1483); that table is propensity-weighted. The paper prints no SE, t or z anywhere, but none is needed because every CI is complete. No supplement file is bundled in docs/pdfs. I added stage-'complete' entries to verification_log; they confirm values that were already there, so the counts above are zero. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_49.json, and it still parses as valid JSON."
+  },
+  "audit": {
+   "paper_id": "49",
+   "numbers_checked": 34,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 5,
+   "summary": "I read all 9 pages of the paper. There is no supplement file in docs/pdfs. I checked every number in the draft against the paper and found no errors, so I made no corrections.\n\n- M1 (Table 2, Model 2, the adjusted model, p.1484):\n  - Texting: 0.18 (0.08, 0.28), p<0.001\n  - Video chat: 0.10 (-0.012, 0.21), p=0.079, not significant\n  - Social media: 0.20 (0.09, 0.32), p=0.001\n  - The unadjusted Model 1 values in the notes also match.\n- M2 (Results p.1482 and Fig. 1):\n  - Direct effect: 0.14 (0.020, 0.26), p=0.026\n  - Indirect effect: 0.12 (0.09, 0.16), p<0.001\n  - The proportion mediated (47.7%) and the path values a=2.23 and b=0.06 also match.\n- SDs from Table 1 (p.1483) match: texting 0.7, video chat 0.6, social media 0.6 for the predictors, and 2.5 for the outcome. Both models are correctly marked as having a continuous predictor (hours/day).\n- Significance calls are consistent with the paper's alpha of 0.05 and with the CIs.\n- No phone or social media estimate for this model is missing from the draft.\n- Five values are still empty: the standard error for each of the 5 estimates. The paper prints no SE, t or z anywhere. Supplementary Tables 1-3 are online only. This is now logged as confirmed missing.\n\nI added audit entries to verification_log, and the JSON still loads cleanly. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_49.json"
+  }
+ },
+ "50": {
+  "complete": {
+   "paper_id": "50",
+   "values_filled": 0,
+   "ci_inputs_filled": 12,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 7,
+   "summary": "Read all 10 pages of the PDF, including Tables 1-3, the Fig. 1 path labels, the text and the footnotes. No supplement file is bundled in docs/pdfs.\n\n- **iv_type:** set to \"continuous\" on M1 and M2, since OSA time is measured in continuous hours per day.\n- **M2 (sex multigroup, Table 3):** the 12 printed SEs (0.033, 0.041, 0.028, 0.023, 0.030, 0.036, 0.029, 0.022, 0.027, 0.024, 0.021, 0.029) were only in the notes. They are now in the numeric \"se\" field. The exact p values and CIs were already filled.\n- **M1 (full-sample RI-CLPM, Fig. 1):** the PDF prints only the standardized betas with significance asterisks. There is no SE, CI, exact p or z for any of the 7 cells; these are only in the online supplementary Tables S2/S3, which are not in docs/pdfs. All 7 cells are kept null and marked as confirmed missing with notes.\n- **Between-person random-intercept correlation (r = 0.068):** the printed \"95% CI, 0.07-0.35\" does not contain the estimate, so the CI was left null.\n- **SDs:** none are needed because all coefficients are standardized. The Table 1 SDs are total SDs (between plus within person), not the within-person SDs the coefficients are scaled on, so they were not used.\n\nNotes and verification_log entries were added, and d_transformation.notes was extended. The JSON validates.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_50.json"
+  },
+  "audit": {
+   "paper_id": "50",
+   "numbers_checked": 68,
+   "errors_fixed": 6,
+   "error_examples": [
+    "M2 m_adhd_to_osa T1->T2: was beta CI [-0.029, -0.002], now beta_lo/hi null with printed CI kept in ci_printed_raw. The printed CI does not fit beta -0.057 (SE 0.024); beta +/- 1.96*SE = [-0.104, -0.010]; beta/SE gives the printed p = .020 (Table 3 p.2200)",
+    "M2 m_adhd_to_osa T2->T3: was beta CI [-0.040, -0.004], now null + ci_printed_raw. beta -0.051 (SE 0.021) gives [-0.092, -0.010] (Table 3 p.2200)",
+    "M2 m_adhd_to_osa T3->T4: was beta CI [-0.025, 0.064], now null + ci_printed_raw. beta 0.025 (SE 0.029) gives [-0.032, 0.082] (Table 3 p.2200)",
+    "M2 m_osa_to_adhd T1->T2: was beta CI [-0.253, 0.141], now null + ci_printed_raw. beta -0.013 (SE 0.023) gives [-0.058, 0.032] (Table 3 p.2200)",
+    "M2 m_osa_to_adhd T2->T3: was beta CI [-0.139, 0.133], now null + ci_printed_raw. beta -0.001 (SE 0.030) gives [-0.060, 0.058] (Table 3 p.2200)",
+    "M2 m_osa_to_adhd T3->T4: was beta CI [-0.113, 0.138], now null + ci_printed_raw. beta 0.007 (SE 0.036) gives [-0.064, 0.078] (Table 3 p.2200)"
+   ],
+   "still_missing": 7,
+   "summary": "Audited paper 50 (Deng et al. 2025, Eur Child Adolesc Psychiatry, 10.1007/s00787-024-02620-6). I read all 10 PDF pages; the folder has no supplement file. Everything the draft copied is printed exactly as entered, so the errors were in how the paper's own numbers fit together. M1 (Fig. 1 p.2199): the 6 cross-lag betas (-0.009, 0.058*, 0.074**, -0.006, -0.007, 0.028) and the random-intercept correlation r = 0.068** match. On the zoomed figure, each crossing label sits on the path the draft gave it. Sig flags match the asterisks. M1 prints no SE, CI or exact p anywhere in the PDF (they are only in the supplement's Tables S2/S3), so those 7 cells stay null. The interval '95% CI 0.07-0.35' does not contain r and stays excluded. M2 (Table 3 p.2200): all 12 beta, SE and p values are exact (checked against the PDF text layer), and sig agrees with the paper's bold marking. All 6 female CIs equal beta +/- 1.96*SE. All 6 male CIs do not, and this explains the automated flags: for each male cell, beta/SE gives back the printed p, so beta and SE belong together, but the printed CI does not fit them. Two of the male CIs (adhd_to_osa T1->T2, T2->T3) do not even contain their own estimate. My best guess is that the male CIs are on an unstandardized scale, but the paper does not say so. I set beta_lo/beta_hi to null for the 6 male cells, kept the printed CI in a new ci_printed_raw field, and explained the problem in each cell's note. Conversions will then use the SE, which fits beta and p. iv_type continuous is correct for both models; no SD conversion is needed because the coefficients are standardized. No IV x DV cells were missing. Every change is logged in verification_log with stage audit. JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_50.json"
+  }
+ },
+ "55": {
+  "complete": {
+   "paper_id": "55",
+   "values_filled": 0,
+   "ci_inputs_filled": 18,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 13,
+   "summary": "Read the whole 11-page PDF (pp. 907-917). No supplement files are bundled; Supplemental Tables 1-5 are online only. I checked all 18 estimates against Tables 3-5 (pp. 912-913): 12 in M1 (Tables 4 and 5) and 6 in M2 (Table 3). Every standardized beta, 95% CI and exact p was already filled and matches the paper, so no values or CIs were missing. I saved each printed t-value as a numeric 't' field (18 CI inputs). Error df and SE are not printed. I set iv_type = continuous on both M1 and M2. sd_iv and sd_dv stay null on purpose and are logged as confirmed missing, 13 entries: 9 sd_iv and 4 sd_dv. The paper standardized all variables before analysis (p. 910), so the betas are already effect sizes and need no rescaling. The Table 1 media SDs also cannot be right for a 0-240 minute scale. I added a verification_log, appended a note to d_transformation.notes, and confirmed the JSON parses. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_55.json"
+  },
+  "audit": {
+   "paper_id": "55",
+   "numbers_checked": 96,
+   "errors_fixed": 0,
+   "error_examples": [
+    "M1 CBCL anxiety sd_dv: was null, now 5.939 (Table 1 p.911), added not corrected",
+    "M1 CBCL depression sd_dv: was null, now 5.57 (Table 1 p.911), added not corrected"
+   ],
+   "still_missing": 0,
+   "summary": "I re-read the whole PDF (pp. 907-917) and checked the draft against it. No supplement file is bundled, since Supplemental Tables 1-5 are online only. The draft had no errors. I checked all 18 estimates against the paper: beta, both 95% CI bounds, t, exact p, sig at alpha .05 and location. These are M1 from Tables 4/5 on p.913 (weekday and weekend texting, social networks and video chatting, each against CBCL anxiety and depression) and M2 from Table 3 on p.912 (the weekend categories split by boys and girls). Every value matches the printed row and column exactly. Sig agrees with the CI in every cell, and iv_type continuous is correct because all variables were standardized (p.910). No phone/SM cells are missing for these models. The only change was adding the M1 sd_dv values from Table 1 (anxiety 5.939, depression 5.57). They are for reference only, because the betas are already standardized. SE, df, sd_iv and the sex-specific SDs are not printed anywhere, and the log records where I looked. The p_label fields still hold the exact p plus footnote markers such as \"0.013a\"; I left them as they were. The JSON validates."
+  }
+ },
+ "57": {
+  "complete": {
+   "paper_id": "57",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 18,
+   "summary": "I re-read all 13 pages of the PDF (10.1007_s10802-020-00703-x.pdf). There is no supplement file for this DOI in docs/pdfs. The 18 estimate cells for texting, social media and video chat across the 6 K-SADS mood symptoms are LASSO-regularized MGM network edge weights. In the article they appear only as unlabelled line widths and colours in Fig. 1 (p.1640). Their values, bootstrap CIs and significance flags are only in online ESM Table S1, which is not bundled. The Results text gives only a qualitative statement that these screen types showed no consistent pattern with mood symptoms. Fig. 2 and the regression text print numbers only for mature video games and R-rated movies, which are excluded models. So there was nothing printed to fill in: no value, CI, SE, exact p or t for any cell. iv_type is continuous, which I re-confirmed and logged. sd_iv, sd_dv and p0 from Table 1 (p.1639) were already filled and still match. I added a complete-stage note to each estimate and to d_transformation.notes, plus 19 verification_log entries. I also noted a small inconsistency: the abstract says 9986 families, while the Methods and Discussion say 9987. The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_57.json and is valid JSON. Next step: a person needs to get ESM Table S1 from Springer to fill these cells. The metric is not convertible to d under guidelines section 4a."
+  },
+  "audit": {
+   "paper_id": "57",
+   "numbers_checked": 29,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 18,
+   "summary": "I read all 13 pages of the PDF. There is no supplement file for this DOI in docs/pdfs. The paper fits one mixed graphical network model. Its texting, social media and video chat edges with the 6 K-SADS mood symptoms make 18 cells, and every one is still null. Fig. 1 on p.1640 shows these edges only as line width and colour, with no numbers. The Results text points to online ESM Table S1, which is not available here. Nothing else in the paper prints an edge weight, CI, SE, p, t/z or sig for any phone/social-media cell. The only per-cell numbers are the node-strength slopes in Fig. 2, and those cover only mature video games and R-rated movies. Everything that is printed matches the draft: sd_iv 0.55/0.43/0.50 and the sd_dv/p0 values for all six symptoms (Table 1, p.1639), the female/male means, iv_type continuous (0-4 Poisson node), and the excluded connectivity regressions (b=0.02, t=9.25; b=0.05, t=17.34; p.1641). I made no corrections. I added empty se/t/z/df fields to each estimate, added an audit sentence to each note, and added 19 audit entries to verification_log. The JSON validates. Someone needs to get ESM Table S1 from the publisher to fill these cells. Network edge weights cannot be converted to d under the guidelines in any case."
+  }
+ },
+ "70": {
+  "complete": {
+   "paper_id": "70",
+   "values_filled": 0,
+   "ci_inputs_filled": 10,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 15,
+   "summary": "Nothing was missing from paper 70's draft: all 15 odds ratios (OR), their 95% CIs and their p-values were already filled in, and they match Tables 2 and 3 (p.6). I set iv_type to continuous on both models. I added the subsample sizes from the Table 3 header to the 10 M2 estimates: n=5,587 for problematic social media use (SMAQ) and n=7,280 for problematic phone use (MPIQ). I checked Tables 1-3, the results text and the abstract. No standard errors or z values are printed anywhere. The outcomes are yes/no, so an outcome SD isn't needed for the OR-to-d conversion. The baseline rates (p0) are the full-sample year-2 prevalences from Table 1; prevalences within the SMAQ and MPIQ subsamples are not printed. The supplement (Tables S1-S2) is online only and not in docs/pdfs. I added a note to each estimate, verification_log entries, and a line in d_transformation.notes. The file validates as JSON. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_70.json"
+  },
+  "audit": {
+   "paper_id": "70",
+   "numbers_checked": 83,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 30,
+   "summary": "I read the whole PDF (10 pages) and checked it against the draft. There is no supplement in docs/pdfs; Additional file 1 is online only.\n\nM1 (Table 2 p.6, social media hours): I checked all 5 cells (OR, both CI bounds, p, sig) and every one matches. M2 (Table 3 p.6, SMAQ n=5,587 and MPIQ n=7,280): I checked all 10 cells (OR, CI, p or p_label, sig, n) and every one matches. Every cell is bold in the paper (p<0.05) and no CI includes 1, so all sig=true values are correct.\n\nThe other inputs also match. sd_iv: 0.4, 0.9 and 1.1 (Table 1). p0: .014, .016, .007, .075 and .029 (Table 1). Both models are continuous, which fits the Methods (hours/day, and SMAQ/MPIQ scores entered as scale scores).\n\nThe estimate set is complete. The only other estimates printed are for total screen time, which is correctly excluded as a mixed composite.\n\nThe paper prints no SE or z anywhere, so se and z stay null on all 15 estimates (30 values). Each of these is logged as confirmed_missing.\n\nI made no corrections. I added audit 'confirmed' and 'confirmed_missing' entries to verification_log and checked that the file is valid JSON.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_70.json"
+  }
+ },
+ "80": {
+  "complete": {
+   "paper_id": "80",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 6,
+   "summary": "Paper 80 (Nagata 2024, screen time and MIND diet) is not in the repo, so nothing in this draft could be checked against the source. The file docs/pdfs/10.1016_j.acap.2024.01.023.pdf is a different paper: Nagata et al., \"Neighborhood Quality and Screen Use\", Acad Pediatr 2026, doi 10.1016/j.acap.2025.103164. There is no supplement file for this paper, and I found no other copy of the nutrition paper in the repo. Even so, the draft already had all 6 B values with their 95% CIs, exact p-values, SD_IV (from Table 1, for each wave) and SD_DV = 2.45. No cells were blank and no CI inputs were missing. Changes made: set iv_type to \"continuous\" on M1 and M2. On each of the 6 estimates I added a note that the SE and t were not searched for because the bundled PDF is the wrong paper (the printed CIs mean they are not needed). I also appended the same explanation to d_transformation.notes and added 8 verification_log entries. The JSON validates. To do: put the correct PDF in docs/pdfs and re-check Table 1 and Table 2."
+  },
+  "audit": {
+   "paper_id": "80",
+   "numbers_checked": 32,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "The local PDF docs/pdfs/10.1016_j.acap.2024.01.023.pdf is still the wrong paper (Nagata et al., 'Neighborhood Quality and Screen Use', doi 10.1016/j.acap.2025.103164), and there is no supplement file. No copy of the nutrition paper was found anywhere in the repo. So I audited against the open-access full text, PMC11193610 (https://pmc.ncbi.nlm.nih.gov/articles/PMC11193610). Every number in the draft matched: the 6 B values with both CI bounds and p, the 6 sd_iv values from Table 1 (year 0: 0.53, 0.47, 0.39; year 1: 0.73, 0.63, 0.60), sd_dv 2.45, and N = 8267. sig is P < .05 with no correction (the Table 2 footnote says bold means P < .05). Only M2 texting and social media are significant, and their CIs exclude 0. iv_type is continuous (hours/day) for both models. No estimates were missing: the paper has no other phone/SM cells for these model specifications. The 6 cells have no SE or t because the paper never prints them (Table 2 gives only B, CI and P). That is recorded in each estimate's note and in verification_log as confirmed_missing. One remaining issue: the MIND sum-score SD row sits under the Table 1 'Baseline' heading even though MIND was measured only at year 1; this was already flagged. Action needed: replace the local PDF with the correct paper."
+  }
+ },
+ "84": {
+  "complete": {
+   "paper_id": "84",
+   "values_filled": 0,
+   "ci_inputs_filled": 10,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 10,
+   "summary": "Paper 84 (Shou et al., 2026): I read all 6 pages of the article PDF. The supplement isn't in docs/pdfs, so I used the scratchpad copy p84_mmc1.docx. All 10 M1 estimates (texting and video chat x 5 NIH Toolbox domains) already had their beta and 95% CI, and every value matches Supplementary Table S1. Changes: set iv_type to continuous, and added t and df to each estimate as structured fields; these were only in the notes before. The SE isn't printed, but it isn't needed because the CIs are. The SD of texting and video chat hours isn't printed in the article or the supplement (Table 2 only gives total screen time, 3.07 h/day). I logged this as confirmed missing on each estimate and on the iv_axis. A cross-check on the main-text total screen time result supports treating the Table S1 betas as standardized: b x SD_IV / SD_DV = -0.053 against the printed beta of -0.051. I added this to d_transformation.notes. The JSON validates."
+  },
+  "audit": {
+   "paper_id": "84",
+   "numbers_checked": 75,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 10,
+   "summary": "I checked every number in M1 (texting and video chat \u00d7 5 NIH Toolbox domains, 10 cells) and found nothing wrong. For each cell I compared beta, both CI bounds, t, d.f., raw p, FDR p and r2 against Supplementary Table S1 (the publisher's supplement, mmc1.docx), and all of them match exactly. Significance follows the paper's own correction, which is FDR across all 25 p-values in that table. So texting is correctly not significant for executive function (FDR p .071) and processing speed (FDR p .064), even though both raw p-values are below .05; the other 8 cells are FDR p < .001. The sd_dv values match Table 2 on p.3 (this is the full sample; the paper gives no SDs for the analytic sample). iv_type continuous is correct, since Section 2.2 measures each device in daily hours. The estimate set is complete: Table S1 has only these two phone/social-media devices, and video games, television and videos are rightly excluded. I read all 6 article pages: the main text and figures report only total screen time and the mediation results, with no per-device numbers. Still not printed anywhere, so null in all 10 cells (that is the still_missing count): SE, per-cell N, and the SD for texting or video chat. These are recorded as confirmed_missing in the audit log. Two things to note. First, the texting \u00d7 language raw p is printed as \"0.000\" and kept in p_label. Second, the supplement existed only in this session's temporary folder, so I saved a copy at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx. The draft at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_84.json loads as valid JSON."
+  }
+ },
+ "85": {
+  "complete": {
+   "paper_id": "85",
+   "values_filled": 0,
+   "ci_inputs_filled": 3,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 13,
+   "summary": "I read the whole 7-page PDF. No supplement files are bundled; Supplementary Tables 1, 'S', 3 and 4 are online only. All 14 OR cells (8 in M1, 6 in M2) already had printed values and CIs, so no values were added. Changes: (1) Set iv_type to binary for M1 and M2. (2) Added Table 3's Std Err 0.04 (logit scale) to M1 SM x alcohol and SM x time x alcohol. For the SM row, the printed SE does not match its CI width (the CI implies about 0.069); the note says so. (3) Fixed M1 phone x alcohol, where p had been entered as 0.001 but the paper only prints 'p < 0.001': p is now null with p_label '<0.001'. The Table 2 SE cell for that row is empty. (4) For the 12 other cells, recorded that exact p and SE are printed nowhere in the PDF; they appear only in the Results text or the online supplement. (5) Recorded that the M2 substance-naive p0 values are not printed. They are not needed, because OR converts to d via Chinn. Logged 18 verification_log entries, and the JSON validates. The existing conflict over the SM x alcohol main effect is still flagged and unresolved: Table 3 gives OR 1.50, while the text gives OR 1.06. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_85.json"
+  },
+  "audit": {
+   "paper_id": "85",
+   "numbers_checked": 62,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 13,
+   "summary": "I read all 7 PDF pages. There is no supplement file in docs/pdfs. I checked every number in the draft against the PDF and found no errors, so I made no corrections.\n\nValues checked:\n- **All 14 OR estimates:** OR, CI bounds, b and b CI in the notes, and location.\n  - M1: Table 2 phone x alcohol 1.34 (1.18, 1.51), p<0.001. Table 3 SM 1.50 (1.31, 1.72) and SM x time 1.09 (1.01, 1.17), SE 0.04 each. The Results text p.3 gives phone x nicotine 1.71 [1.21, 2.40], phone x cannabis 1.31 [0.82, 2.09], SM x nicotine 1.22 [1.06, 1.37], SM x time x nicotine 1.08 [1.05, 1.11] and SM x cannabis 4.91 [2.84, 8.47].\n  - M2 (sensitivity analysis, Results pp.3-4): 1.28, 1.92, 1.71, 1.61, 4.12 and 3.46, with their CIs.\n- **Other fields:** sig flags agree with alpha 0.05 and the CIs. The p0 values (9.9%, 0.9%, 0.5%) match Table 1. Both models are correctly coded as binary IVs (0/1).\n- **Completeness:** no phone/social media cells are missing.\n\nUnresolved:\n- **SM x alcohol conflict:** Table 3 gives OR 1.50 (significant); the Results text gives OR 1.06 (non-significant). The draft keeps the table value and flags the conflict.\n- **Still missing:** 13 of the 14 estimates have no printed SE (the 2 with an SE have no exact p). Those numbers are only in the online supplementary tables. Each of these 13 cells is logged as confirmed_missing in verification_log.\n\nThe edited file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_85.json; it passed the JSON check."
+  }
+ },
+ "86": {
+  "complete": {
+   "paper_id": "86",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 26,
+   "summary": "I read all 10 pages of the PDF and checked its text layer. All 26 point estimates were already filled from the numbers printed next to Figures 1 and 2. No CI, SE, exact p, or t/z value is printed anywhere for any cell: the figures show CI whiskers without numbers. The full results are only in the online Appendix Table 3, and docs/pdfs has no supplement file for this paper. SDs were already present: IV SDs come from Table 1 (MPIQ 1.10, SMAQ 0.89), the CBCL T-score SD is 10, sleep SD is 1.58, and M2 p0 is the Table 1 prevalence. I set iv_type to continuous on M1 and M2, added confirmed-missing notes to all 26 estimates, added to d_transformation.notes, and wrote a verification_log. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_86.json"
+  },
+  "audit": {
+   "paper_id": "86",
+   "numbers_checked": 49,
+   "errors_fixed": 6,
+   "error_examples": [
+    "M1 dv_axis dep sd_dv: was 10, now 6.26 (Table 1 p.4)",
+    "M1 dv_axis anx sd_dv: was 10, now 6.26 (Table 1 p.4)",
+    "M1 dv_axis som sd_dv: was 10, now 6.18 (Table 1 p.4)",
+    "M1 dv_axis att sd_dv: was 10, now 5.38 (Table 1 p.4)",
+    "M1 dv_axis odd sd_dv: was 10, now 4.99 (Table 1 p.4)",
+    "M1 dv_axis cond sd_dv: was 10, now 4.71 (Table 1 p.4)"
+   ],
+   "still_missing": 26,
+   "summary": "I checked all 26 phone/social-media estimates against the printed labels in Figure 1 (p.5, 14 B values) and Figure 2 (p.6, 12 ORs), zooming in at 200 dpi. Every point estimate, sign and decimal matches. Each sig flag agrees with the Results text on p.4. The one non-significant pair besides phone x anxiety is social media x anxiety, whose whisker crosses 0, so sig=false is right. The other 23 cells are sig=true, consistent with the text. I also confirmed the IV SDs (MPIQ 1.10, SMAQ 0.89), the p0 values (Table 1), and iv_type=continuous for both models. The only real correction: the six CBCL sd_dv values were set to the population T-score SD of 10, which the paper does not print for this sample. I replaced them with the weighted Year 3 SDs Table 1 prints for the analytic sample (6.26, 6.26, 6.18, 5.38, 4.99, 4.71). The sleep sd_dv of 1.58 is unchanged. Its unit is still uncertain: Table 1 gives hours per night, but Figure 1 labels the outcome weekly. I also added page numbers to all 26 estimate locations. No video-game cells were added because they are excluded on purpose. All 26 CIs, SEs, exact p values and test statistics are still null. They appear only in the online Appendix Table 3, and docs/pdfs has no supplement file for this DOI. Each estimate's note and the verification_log record where I looked. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_86.json, and it validates as JSON."
+  }
+ },
+ "95": {
+  "complete": {
+   "paper_id": "95",
+   "values_filled": 0,
+   "ci_inputs_filled": 64,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 33,
+   "summary": "Read the whole 9-page PDF (He et al. 2025, CHB). It has no supplement. Before this pass, M1 (the 32 SMA x Time standardized betas in Table 3) already had every beta, 95% CI and exact p, and they match the table. M2 (64 SMA partial correlations in Table 2, Time 1 and Time 2) had all r and exact p, and the script check found no mismatches. The paper prints no CIs, SEs or t values for M2 anywhere. To make Fisher-z CIs computable, I added n = 543 to each M2 estimate. That is the final analytic sample from Table 1. The paper does not give an N for each correlation, and the estimate notes say so. Both models are set to iv_type continuous. The paper prints no SD for SMAQ or for the ROI beta-weights (Fig. 2 shows violin plots only). I recorded that as confirmed missing; the SDs are not needed because both metrics are already standardized. I added notes on the axes and estimates and appended to d_transformation.notes. verification_log has 99 entries, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_95.json"
+  },
+  "audit": {
+   "paper_id": "95",
+   "numbers_checked": 352,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 0,
+   "summary": "I found no errors in the paper 95 draft and changed no values. I read the full 9-page PDF; the folder has no supplement for this DOI. I then checked every cell against text pulled from the PDF with a script and against the page images. M1 (SMA x Time interaction, Table 3, p.6) has 32 cells: the standardized b, both CI bounds, exact p, the p_FDR in each note, and sig all match. sig follows the paper's own threshold of p_FDR < .05; the right insula loss cell is p = .017 uncorrected but p_FDR = .089, so sig = false is correct. M2 (SMA partial r at Time 1 and Time 2, Table 2, p.5) has 64 cells: r, p, sig (p < .05, as the table bolds it) and n = 543 all match, and every location points to the right row and wave column. iv_type is continuous on both models, which is correct. The Table 1 sample counts in the model description also match. No SMA x ROI cell is missing. Some fields stay null because the paper never prints them: the SDs of SMA and of the brain measures, the SMA main-effect coefficients, the SMA-as-outcome (hypothesis 2) coefficients, and any CI, SE or t for M2. They are not counted in still_missing, and the existing notes already say where these were looked for. I added three audit entries to verification_log, and the JSON loads cleanly. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_95.json"
+  }
+ },
+ "96": {
+  "complete": {
+   "paper_id": "96",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 65,
+   "summary": "Paper 96 (Hein et al. 2024): I read the whole 13-page PDF and found nothing new to fill. There was no local supplement for this paper. The draft has one model, M1: graphical LASSO (glasso) network edges between 3 phone/social-media screen-time nodes and 7 psychotic-like-experience (PLE) items, at each of 3 waves, giving 63 edges. All 63 edge values already in the draft match Tables 2-4 (pp. 5-6). The paper prints no CI, SE, exact p, test statistic or significance flag for any edge. Bootstrapped edge intervals and difference tests are only in the online supplement (Figs. S8/S10/S12), which is not in docs/pdfs. It also prints no means or SDs for any screen-time or PLE node, and no PLE endorsement rates (p0). Table 1 is only the attrition t-test, and N per wave is not given apart from 10,414 at the smallest time point. Changes made: iv_type set to continuous; a confirmed-missing note added to all 63 edges stating where I looked; the same kind of note added to the 9 screen-time and 7 PLE axis entries; d_transformation.notes appended; verification_log written. The JSON file loads without errors. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_96.json"
+  },
+  "audit": {
+   "paper_id": "96",
+   "numbers_checked": 63,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 63,
+   "summary": "Audited paper 96 (Hein et al. 2024, Comprehensive Psychiatry; per-wave graphical-LASSO networks). I read the whole 13-page PDF by page image and also compared it with pdftotext output. All 63 phone/SM-to-PLE edge weights in model M1 match the printed tables: ScrText, ScrVChat and ScrSM (columns 4-6) against PLE_5, 10, 14, 16, 19, 20 and 21 (rows 7-13) in Table 2 (T1, p.5), Table 3 (T2, p.5) and Table 4 (T3, p.6). Signs, decimals and locations are correct, including the three negative edges: -0.007 for ScrSM-PLE_5 at T1, -0.007 for ScrText-PLE_16 at T3 and -0.005 for ScrVChat-PLE_20 at T3. The paper prints no per-edge CI, SE, p, test statistic or significance flag anywhere. It reports bootnet difference tests only in the online supplement (Figs. S8, S10, S12), and docs/pdfs has no supplement file for this DOI. So sig, CI and p are correctly null, and every estimate's note already says where the extractor looked. No node descriptives are printed, so sd_iv, sd_dv and p0 are correctly null with notes. iv_type \"continuous\" is correct (screen time in hours/minutes). The estimate set is complete: 3 phone/SM nodes x 7 PLE nodes x 3 waves = 63. I made no corrections and appended one audit confirmed_missing entry to verification_log. The JSON validates. still_missing = 63 means all 63 estimates lack a CI and p because the paper does not print them. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_96.json"
+  }
+ },
+ "97": {
+  "complete": {
+   "paper_id": "97",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 21,
+   "summary": "I re-read all 19 pages of the PDF, including Figs. 4-8, Tables 1-4, Results 3.1-3.7, the Discussion and the supplementary-data note. There is no bundled supplement in docs/pdfs. Nothing new is printed, so no values, CI inputs or SDs were filled. M1 is the GFA. Its 12 texting, video chat and social media loadings appear only on the radial plots in Figs. 5-6, which print axis anchors and nothing else. The Fig. 4 heatmap has no numbers. The loadings are in OSM-2 or the GitHub code only. M2 is the social media GAMMs. The text gives only the range \"\u03b2's ranging from .013 to .026\" (p. 301). Per-outcome betas, CIs, SEs, p-values and Ns are in OSM-4, which is online only. Figs. 7-8 show the GFA-factor GAMMs, not the social media ones. The social media SD and the cognitive SDs are in OSM-1. The only SD printed is total weekly screen time (SD = 21.52 h, N = 11,309), which does not apply to the social media items. I set iv_type to continuous for both models. I added notes on where I looked to every M1 estimate, added a sd_note on M2, and appended to d_transformation.notes. 21 confirmed_missing entries went into verification_log: 12 M1 cells, 6 M1 sd_iv, and 3 for M2. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_97.json"
+  },
+  "audit": {
+   "paper_id": "97",
+   "numbers_checked": 32,
+   "errors_fixed": 2,
+   "error_examples": [
+    "M2 dv_axis cbcl_int sd_dv: was 10, now null (normative T-score SD, not printed in PDF; Table 2 p.300 gives only n; descriptives in OSM-1)",
+    "M2 dv_axis cbcl_ext sd_dv: was 10, now null (same reason, Table 2 p.300)"
+   ],
+   "still_missing": 12,
+   "summary": "I read the whole PDF (19 pages) and looked at the rendered images of Figs. 5 and 6 (pp. 299-300). There is no supplement file in docs/pdfs. The paper prints none of the 12 M1 GFA loadings for texting, video chat or social media. The radial plots show only the axis anchors (.63/.00/-.77 and .6/.0/-.7), so all 12 M1 cells stay null and are logged as confirmed_missing. M2's estimates also stay empty: the text gives only a range for the social media GAMMs (beta .013 to .026, Results 3.7 p.301), and the per-outcome values are in OSM-4, which is not bundled. I checked every other number in the draft against the paper and all of them match: the sample counts (11,878; 86; 3,983; 7,809; 11,309), weekly screen time (M 26.50, SD 21.52), 67 latent variables, 22.7%, 9.34% and 8.56% of variance, alpha .05/12 = .004, the Table 2-3 Ns (7,559-7,714), the picture vocabulary result (beta .052, p<.001; .02, p=.057), the network-change GLMM range (.0067-.025), and the page and figure locations. The iv_type of continuous is correct for both models, because the items are recoded 0-4 hours. I made one correction: the CBCL sd_dv was set to 10, which is the T-score norm SD, not a value printed for this sample, so I set it to null and logged the change. The 12 M1 cells counted as still missing are separate from M2, whose estimates list remains empty."
+  }
+ },
+ "106": {
+  "complete": {
+   "paper_id": "106",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 12,
+   "summary": "I read all 7 pages of the PDF (10.1016_j.drugalcdep.2024.112504.pdf). There are no bundled supplement files; Appendix A is online only. The draft was already complete: all 12 ORs and their 95% CIs in M1 (texting, social media and video chat, each against alcohol, nicotine, cannabis and any substance) match the printed labels on Fig. 1, p.4. The SD_IV values match Table 1, p.3: texting 1.5, social media 1.6, video chat 1.3. The p0 values match Table 2. Nothing new was printed to fill. The paper gives no SEs, exact p-values or z statistics, and the CIs are all there anyway. I set iv_type to continuous, since the IV is hours per day. On each estimate I added a note recording that SE and p are not printed and where I looked. On each dv_axis entry I added a note saying sd_dv does not apply because the outcomes are binary (OR to d by the Chinn method). I also appended a line to d_transformation.notes and added 19 verification_log entries. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_106.json"
+  },
+  "audit": {
+   "paper_id": "106",
+   "numbers_checked": 55,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 24,
+   "summary": "I read the whole 7-page PDF. There is no supplement file in docs/pdfs; Appendix A is online only. I found no errors and corrected nothing.\n\n- **Estimates:** I checked all 12 M1 estimates (texting, social media and video chat \u00d7 alcohol, nicotine, cannabis and any substance). The OR, CI bounds and significance asterisk all match the Fig. 1 labels on p.4, which I re-rendered at 220 dpi. 11 of the 12 also match the Results text on p.3. Video chat \u00d7 alcohol (1.04, 0.98\u20131.11, not significant) appears only in the figure.\n- **Significance:** sig follows the paper's own Benjamini-Hochberg asterisks. Every cell marked significant has a CI that excludes 1.\n- **Descriptives:** sd_iv (texting 1.5, social media 1.6, video chat 1.3) matches Table 1, Year 2, N=8006. p0 (0.12, 0.025, 0.01, 0.132) matches the Year 3 column of Table 2.\n- **Model type:** iv_type continuous is right; the IV is hours per day and the OR is per added hour.\n- **Completeness:** No phone or social media cells are missing.\n- **Still missing (24):** SE and exact p for all 12 estimates. The paper prints neither, nor any z statistic.\n\nI added 13 audit entries to verification_log, all as confirmed_missing, and the JSON loads cleanly. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_106.json"
+  }
+ },
+ "107": {
+  "complete": {
+   "paper_id": "107",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 5,
+   "summary": "I read all 6 pages of the PDF, including Table 1, the Fig. 1a/1b labels and the Appendix A note. There is no supplement file in docs/pdfs; Appendices A and B are online only. I set iv_type to continuous on M1, M2 and M3, because social media time is measured in hours per day. Nothing new was printed to fill. M1's logit direct effect B=0.18 (95% CI 0.13-0.24) and M3's indirect effects (0.05 [0.03-0.06] and 0.03 [0.02-0.04]) already had CIs. The paper prints no SE, exact p or z for any of these, so I added se_scale=log and n=7691 to M1 and left se null. The M2 a-paths (B=0.16 and -0.16) are printed only as figure labels with ***, and the paper gives no CI, SE, exact p or t for them; I confirmed that and logged where I looked. The SDs were already filled correctly from Table 1 (social media time 1.5; positive expectancies 3.0; negative expectancies 2.6), and I checked them. sd_dv does not apply to the binary cannabis outcome, and p0=0.051 stays as is. I added notes and verification_log entries, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_107.json"
+  },
+  "audit": {
+   "paper_id": "107",
+   "numbers_checked": 24,
+   "errors_fixed": 2,
+   "error_examples": [
+    "M2 sm_time_y2 x pos_expect_y3 p_label: was '<0.001 (***)', now '<0.001' (Fig. 1a p.4, formatting only)",
+    "M2 sm_time_y2 x neg_expect_y3 p_label: was '<0.001 (***)', now '<0.001' (Fig. 1b p.4, formatting only)"
+   ],
+   "still_missing": 5,
+   "summary": "I read the whole 6-page PDF. There is no supplement file in docs/pdfs, since Appendices A and B are online only. All the numbers in the draft match the paper. M1, the direct logit B, is 0.18 (95% CI 0.13-0.24, p<0.001, N=7691, p0=0.051). M2, the a-paths, are 0.16 and -0.16 (*** p<0.001), with SD_IV 1.5 and SD_DV 3.0 and 2.6 from Table 1. M3, the indirect effects, are 0.05 (0.03-0.06) with 19.8% mediated (12.6-27.0%), and 0.03 (0.02-0.04) with 13.6% mediated (8.4-18.8%). Significance, iv_type (continuous) and locations are correct, and no social media \u00d7 outcome cells are missing. The only changes were two formatting fixes to the p_label text in M2. Five SEs are still null because the paper never prints them: M1 (along with its z and exact p), both M2 paths (which also have no CIs) and both M3 indirect effects. The audit entries were added to verification_log and the JSON validates."
+  }
+ },
+ "115": {
+  "complete": {
+   "paper_id": "115",
+   "values_filled": 0,
+   "ci_inputs_filled": 3,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 14,
+   "summary": "I read the whole 12-page PDF: Tables 1-5, Fig 2 and all the text. No supplement file is bundled in docs/pdfs. Every value already in the draft matches the paper.\n\nChanges:\n- M2: I moved the three printed SEs out of the notes and into the \"se\" field. They are 0.011 for video chat to internalizing, and 0.014 for each of the two paths from externalizing to texting and to social media (all from the p.6 text). A CI can now be derived for each of the three M2 paths.\n- All three models: iv_type set to continuous.\n\nConfirmed missing (14 items):\n- M1 (6 items): the five unreported cells are not printed anywhere. They may be in online Table S2, which is not in the PDF.\n- M1: the four printed estimates have only beta and pfdr. No SE, t, df or CI is printed anywhere.\n- M1 (3 items): the SDs for texting, social media and video chat are not printed. Table 1 gives only the total SMA SD (2.896).\n- M3 (2 items): Tables 4-5 print beta, pfdr and the 95% bootstrap CI, but no SE. The variables are standardized, so no SDs are needed.\n\nStill open: the 2-year SDs needed for M2 are not printed, since Table 1 is baseline only.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_115.json. The JSON loads without errors, and the verification_log is appended."
+  },
+  "audit": {
+   "paper_id": "115",
+   "numbers_checked": 28,
+   "errors_fixed": 2,
+   "error_examples": [
+    "M3 texting_bl x stress_direct p_label: was \"0.0466\", now \"pfdr = 0.0466\" (Table 4 p.7, the column is pfdr)",
+    "M3 texting_bl x stress_indirect p_label: was \"0.0338\", now \"pfdr = 0.0338\" (Table 5 p.8, the column is pfdr)"
+   ],
+   "still_missing": 6,
+   "summary": "I read all 12 pages of the PDF. No supplement file exists in docs/pdfs; online Table S2 is not available. Every number in the draft matches the paper: M1 betas and pfdr on p.6 (texting\u2192stress 0.051/0.003; social media\u2192internalizing 0.032/0.038, \u2192externalizing 0.055/0.001, \u2192stress 0.055/0.001), M2 CLPM on p.6 (video chat\u2192internalizing -0.021, SE 0.011, pfdr 0.069, not significant; externalizing\u2192texting 0.038, SE 0.014, pfdr 0.005; externalizing\u2192social media 0.037, SE 0.014, pfdr 0.007), M3 Table 4 (0.035, pfdr 0.0466, CI 0.0229-0.0456) and Table 5 (0.005, pfdr 0.0338, CI 0.0038-0.0061). The sd_dv values match the Table 1 baseline columns (internalizing 10.516, externalizing 9.543, stress 5.694). All three models are correctly continuous. The two automated consistency flags come from the paper itself, not from extraction. The CIs belong to the correct rows. The printed p values are Benjamini-Hochberg FDR-adjusted and the CIs are bootstrap CIs, so the raw p implied by each CI is much smaller. I kept the values as printed, relabelled the p_label as pfdr, and added explanatory notes. Still null: the five M1 cells the text implies are non-significant (texting\u2192internalizing and externalizing; video chat\u2192all three outcomes), which are only printed in the unavailable Table S2. Also null are the media-specific sd_iv values, which are not printed (Table 1 gives only total SMA). There is no CI, t, or df anywhere for M1 or M2. I added every check to verification_log with stage audit."
+  }
+ },
+ "124": {
+  "complete": {
+   "paper_id": "124",
+   "values_filled": 0,
+   "ci_inputs_filled": 32,
+   "sds_filled": 32,
+   "iv_types_set": 2,
+   "confirmed_missing": 32,
+   "summary": "I read the whole 8-page PDF. No supplement is bundled; it is online only and covers just the composite curves. All 32 adjusted RRs (M1: Tables 2-3, video chat, social media and texting; M2: any vs. no social media, p.533 text) and their 95% CIs were already in the draft, and I checked them against the PDF with no discrepancies, so no values needed filling. Both models are now iv_type binary. Each estimate also gets a p0 equal to its cell-specific unexposed-group rate (taken from p0_cell), plus the group sizes n1/n0 from the adjusted rows. The paper prints no SE, exact p or test statistic anywhere, so each of the 32 estimates is logged as confirmed missing. Notes, d_transformation.notes and verification_log are updated, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_124.json"
+  },
+  "audit": {
+   "paper_id": "124",
+   "numbers_checked": 248,
+   "errors_fixed": 8,
+   "error_examples": [
+    "M2 sm_any x dep_g: was n0=1081, n1=4002, now n0=4002, n1=1081 (Results text p.533)",
+    "M2 sm_any x si_g: was n0=1081, n1=4001, now n0=4001, n1=1081 (Results text p.533)",
+    "M2 sm_any x anx_g: was n0=1081, n1=4002, now n0=4002, n1=1081 (Results text p.533)",
+    "M2 sm_any x sh_g: was n0=1081, n1=4002, now n0=4002, n1=1081 (Results text p.533)",
+    "M2 sm_any x dep_b: was n0=824, n1=4681, now n0=4681, n1=824 (Results text p.533)",
+    "M2 sm_any x si_b: was n0=822, n1=4680, now n0=4680, n1=822 (Results text p.533)",
+    "M2 sm_any x anx_b: was n0=824, n1=4681, now n0=4681, n1=824 (Results text p.533)",
+    "M2 sm_any x sh_b: was n0=824, n1=4681, now n0=4681, n1=824 (Results text p.533)",
+    "Location only: the 24 M1 cells cited 'pp. 532-534', now give the exact page (Table 2 p.532 / continued p.533; Table 3 p.533 / continued p.534)",
+    "Location only: M1 iv_axis meta cited Table 2/3 for the 2+ h/day shares, now cites Table 1 p.532"
+   ],
+   "still_missing": 32,
+   "summary": "I audited paper 124 (Roberston et al. 2022, J Affect Disord) against all 8 pages of the PDF. There is no supplement file in docs/pdfs. The online supplement holds only exposure-response figures. I checked about 248 numbers. That covers the RR and both CI bounds for each of the 32 cells, plus the group %, n0, n1, p0_cell and sig for each, and the Table 1 prevalences and 2+ h/day shares on the axes.\n\nM1 (24 adjusted RR cells for video chat from Table 2 and for social media and texting from Table 3): every RR, CI, n, % and sig matches the bold/non-bold marking in the tables. I made no value corrections there. I did change the locations from 'pp. 532-534' to the exact page, and the iv_axis meta now cites Table 1, not Table 2/3, for the 2+ h/day shares.\n\nM2 (8 cells, any social media use vs. none, Results text p.533): the RRs, CIs, percentages and sig values were right. However, n0 and n1 were swapped in all 8 cells: n0 held the user count and n1 the non-user count. I corrected them so n1 is users and n0 is non-users. This affects any d derivation that uses the group sizes.\n\nThe p0 values on dv_axis match the Table 1 prevalences, and iv_type 'binary' is correct for both models. There are no missing phone or social-media cells. Gaming, online videos, TV and the composites are correctly in the excluded models.\n\n32 cells still have no SE, exact p or test statistic. None is printed anywhere in the paper; the tables mark significance only by bold, meaning the 95% CI excludes 1. I noted this on each estimate and logged it.\n\nThe existing extraction flag still stands: the text calls the social media links to self-harm and suicidal ideation in boys significant, but the adjusted CIs include 1. Sig is coded from the adjusted CIs.\n\nThe JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_124.json"
+  }
+ },
+ "130": {
+  "complete": {
+   "paper_id": "130",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 12,
+   "summary": "I read all 9 pages of the PDF. No supplement file is bundled with it. The three printed mean |SHAP| values match the bar labels: texting x depression (Survey 1) 0.07 in Fig 4B, online communication x anxiety 0.06 in Fig 3, and online communication x stress 0.05 in Fig 2. The paper prints no CI, SE, p-value, test statistic or df for any SHAP importance, because these are not significance-tested. The other three cells are blank because those features rank below the printed top 20. SDs for the IV items and the anxiety/stress prevalences (p0) are not printed; they would be in Appendix B and Fig A2 of the online supplement. I set iv_type to continuous, added notes on where I looked to every estimate, appended 12 verification_log entries plus a d_transformation note, and checked that the JSON loads. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_130.json"
+  },
+  "audit": {
+   "paper_id": "130",
+   "numbers_checked": 14,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 3,
+   "summary": "I read all 9 pages of the PDF and zoomed into Figures 2, 3 and 4B at 200 dpi. No supplement file exists in docs/pdfs for this DOI. Every number in the draft matches the paper, so nothing needed correcting. Texting x depressive symptoms (Survey 1) is 0.07 with a red bar, rank 11 (Figure 4B). On-line communication x anxiety is 0.06 with a red bar, rank 11 (Figure 3). On-line communication x stress is 0.05 with a blue bar, rank 13 (Figure 2). The sample sizes, the 16.49% prevalence, the McNemar test (chi2(1)=9.803, p=.001, N=2,080), the feature counts and the Table 1 demographics also match. One caveat on p0=0.1649: it comes from the N=2,080 participants who did both Survey 1 and Survey 3, not from the n=3,063 model sample. The three null cells are also correct, because those features do not appear in the printed top-20 lists: texting x anxiety, texting x stress, and on-line communication x depressive symptoms. SHAP importances have no CI, SE or p, so sig stays null. iv_type is set to continuous and I kept it; the paper does not describe dichotomizing these items. No SDs or anxiety/stress prevalences are printed anywhere, and no other phone or social-media feature appears in any printed top-20 list. I added 9 audit entries (confirmed and confirmed_missing) to verification_log, and the JSON file loads without errors: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_130.json"
+  }
+ },
+ "133": {
+  "complete": {
+   "paper_id": "133",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 3,
+   "summary": "Nothing new was filled for paper 133 because the draft already had everything the paper prints. I read all 7 pages of the PDF (there are no supplement files). The three Model 3 adjusted ORs in Table 3 (p.394) match the draft: texting 1.20 (1.00-1.44), p=.056; video chat 0.91 (0.70-1.18), p=.483; social networking 1.07 (0.83-1.39), p=.604. Each has its exact p and 95% CI. The SD_IV values (0.43, 0.48, 0.40) match the Table 1 column for participants without OCD at baseline (n=8,542, the Model 3 sample). The paper prints no SE or z anywhere, which doesn't matter because the CIs are printed; I marked this as confirmed missing on all three estimates. Appendices A and B are online only and not in this PDF. I set iv_type to continuous and set se_scale to log on each estimate. p0=0.044 (Results p.392) is kept, but the paper gives no count or denominator for it. Changes made: notes and verification_log entries added, and a line appended to d_transformation.notes. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_133.json (JSON validates)."
+  },
+  "audit": {
+   "paper_id": "133",
+   "numbers_checked": 28,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 3,
+   "summary": "Read all 7 pages of the paper. There is no supplement file in docs/pdfs, and Appendices A and B are online only. The three Model 3 estimates match Table 3 on p.394 exactly: texting 1.20 (1.00-1.44), p=.056; video chat 0.91 (0.70-1.18), p=.483; social networking 1.07 (0.83-1.39), p=.604. All three are correctly marked non-significant at the paper's alpha of .05. The sd_iv values (0.43, 0.48, 0.40) match the No OCD (baseline) column of Table 1 on p.393, which is the Model 3 sample of n=8,542. p0=0.044 matches the Results text on p.392. iv_type continuous is correct. I also checked the Model 1 and Model 2 values listed under excluded models, and they match Table 3. No phone or social media cells are missing. The 3 still-missing values are the SE and z for each estimate: the paper does not print them. I added audit confirmation entries to verification_log. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_133.json"
+  }
+ },
+ "136": {
+  "complete": {
+   "paper_id": "136",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 0,
+   "confirmed_missing": 4,
+   "summary": "Nothing could be filled for paper 136. I read all 8 pages of the PDF (pp. 496-503), and the docs/pdfs folder has no supplement file for this paper. The only phone/social-media estimates are weekend texting, video chatting and social networking against withdrawn/depressed symptoms. Those are in online Supplementary Table A7, which is not in the local PDF. The main text only says these categories were \"not associated\" and prints no numbers. Tables 1-4 report the total screen-time composite and no per-category descriptives. So no OR, CI, SE, exact p or test statistic is available for these three cells. I left iv_type null on purpose: the PDF never says how Table A7 coded the categories (continuous hours, ordinal, or dichotomized), and I did not want to guess. Changes made: a pass note on each of the 3 estimates saying where I looked; a d_transformation.notes addition listing the Table 2 follow-up prevalences (females 5.5%, males 9.7%), which could serve as an approximate p0 only if Table A7 turns out to report RR; and 4 confirmed_missing entries in verification_log. The JSON validates. To finish this paper, someone needs the supplement (mmc1) from doi 10.1016/j.jadohealth.2023.09.001. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_136.json"
+  },
+  "audit": {
+   "paper_id": "136",
+   "numbers_checked": 22,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 3,
+   "summary": "I read the whole 8-page PDF (pp. 496-503). There is no supplement file in docs/pdfs. The only phone/social-media estimates are weekend texting, video chatting and social networking versus withdrawn/depressed symptoms. Those are in online Supplementary Table A7, which isn't available locally, so all three cells stay empty: OR, CI, SE, p, iv_type, sd_iv, sd_dv and p0. sig=false is consistent with the Discussion (p. 501), which says these screen-type categories were not associated. I checked every number quoted in the draft's text against the paper and all were correct: Table 1 demographics, the Table 2 withdrawn/depressed prevalences (236/4.6%, 282/5.5%, 529/9.4%, 550/9.7%), the sample sizes (10,828, 5,177 and 5,651), the 243 participants excluded for >18 h/day, the pubertal-status N of 8,716, and the Table 3 headline result (OR 1.6, 95% CI 1.1-2.2). No corrections were needed. I added audit entries to the verification log, and the JSON file validates. To fill M1, someone needs to download Supplementary Table A7 (mmc1) from the article's online page."
+  }
+ },
+ "139": {
+  "complete": {
+   "paper_id": "139",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 21,
+   "confirmed_missing": 21,
+   "summary": "I re-read all 6 pages of the PDF (Tables 1-3, the text and the footnotes). All 18 estimates already had their value, 95% CI and p, and each one matches Table 3 on p.654, so I filled no new numbers.\n\n- **IV type:** set on all 3 models and all 18 estimates (21 in total).\n  - Each model is marked \"continuous\", which is the cautious choice. The tables mix two kinds of IV. The phone-action rows are dummies compared against \"turn the phone off\". The talk/text, social media and woken-by-phone rows are frequency items with one coefficient each.\n  - Each estimate has its own iv_type that overrides the model's: \"categorical\" on the 9 phone-action estimates and \"continuous\" on the 9 frequency-item estimates.\n- **Confirmed missing:**\n  - No standard errors, t or z values, or exact p for the \"< .001\" cells are printed anywhere. I logged this for all 18 estimates.\n  - No SD is printed for any frequency item, so the 3 sleep-duration (M3) frequency estimates still cannot be converted to d.\n  - For M1 (total sleep disturbance), the event rate in the reference group is not printed. Only the overall Year 3 rate of 25.5% is given, which is enough because odds ratios don't need it.\n- **Supplement:** appendices A-D are online only and were not in docs/pdfs.\n\nI added notes to each estimate, appended to d_transformation.notes, and wrote a verification_log. The file passes the JSON check: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_139.json"
+  },
+  "audit": {
+   "paper_id": "139",
+   "numbers_checked": 78,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 18,
+   "summary": "I read the whole 6-page PDF and checked the draft against it. There is no supplement in docs/pdfs; Appendices A-D are online only. I checked all 18 estimates (3 models x 6 phone/SM IVs) against Table 3 on p.654, using both the pdftotext output and the page image so that minus signs were confirmed. Every OR, B and ordered-logit value matched, along with both CI bounds, the p values (exact or '< .001'), the significance flags (bold = p<.05) and the signs. sd_dv for DIMS (4.01), sd_dv for sleep duration (1.62) and the 25.5% p0 match Table 1. The numbers for the excluded chat-room row also match. Model iv_type is 'continuous' with estimate-level overrides (categorical for the phone-action dummies), which is consistent with how the IVs enter the models. The estimate set is complete: Table 3 prints no other phone/SM cells. SE, t/z and IV SDs are not printed anywhere, so all 18 SEs stay null, and the existing notes already say where we looked. I made no corrections. I added audit confirmation entries to verification_log, and the JSON validates."
+  }
+ },
+ "144": {
+  "complete": {
+   "paper_id": "144",
+   "values_filled": 0,
+   "ci_inputs_filled": 8,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 8,
+   "summary": "I read all 9 pages of the PDF. There are no supplement files in docs/pdfs. The draft for paper 144 was already complete: all 8 Table 2 B values (p.6), their 95% CIs and P values (0.19, 0.004 and <0.001) match the Abstract and Results p.5, and the Year 2 SD_DV values come from Table 1 p.5. I set iv_type to categorical on M1. I added n1/n0 to every estimate, using the group sizes printed in the Table 2 row labels (low increasing 2822, high increasing 417, reference 4289). No standard error is printed anywhere in the paper, so for each estimate se stays null and a note says where I looked. Because every CI is printed, this does not block anything. I added entries to verification_log and d_transformation.notes, and the JSON is valid. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_144.json"
+  },
+  "audit": {
+   "paper_id": "144",
+   "numbers_checked": 44,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 8,
+   "summary": "I read all 9 pages of the PDF. No supplement file exists in docs/pdfs. Every value in the draft matches the paper: all 8 B values, their 16 CI bounds, the P values and labels, and the sig flags (bold = significant after Benjamini-Hochberg). These were checked against Table 2 on p.6, the Abstract on p.1 and the Results on p.5. The group sizes (n1/n0: 2822, 417 and 4289), the Year 2 SDs from Table 1 on p.5 (LMT 0.2, RAVLT 9.1, 2.7 and 2.9) and iv_type = categorical also match. The draft has all 2 x 4 IV x DV cells, so nothing was missing. The consistency flag was on the low increasing x LMT cell: B -0.01, CI (-0.01, 0.003), p 0.19. These numbers are exactly what the paper prints, and the mismatch comes from rounding to two decimals. An unrounded B of about -0.006 with a CI of about (-0.0149, 0.003) gives p of about 0.19 and rounds to the printed values. I recorded this in that estimate's note. The SE was still null on all 8 estimates and is confirmed missing because the paper never prints it; I recorded this in verification_log. I added audit confirmations to verification_log, made no corrections, and the JSON validates."
+  }
+ },
+ "150": {
+  "complete": {
+   "paper_id": "150",
+   "values_filled": 0,
+   "ci_inputs_filled": 141,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 0,
+   "summary": "Finished paper 150 (Nagata et al. 2026, NeuroImage). The draft is updated in place and passes the JSON check.\n\n**What I did**\n- **Read the paper:** all 11 pages. There is no bundled supplement; the paper says its supplementary material is online only.\n- **Checked the numbers:** I re-checked all 140 Table 2 values against a 300-dpi render of p.4. Every value, SEM and p/q value in the draft matches the printed table.\n- **IV type:** set M1 iv_type to \"continuous\".\n\n**What I filled**\n- **SE added (141 estimates):** every estimate now has a numeric \"se\". For the 140 Table 2 cells this is the SEM printed as \"value \u00b1 SEM\", on the same x100 beta scale as the value. For the right-hemisphere cortical volume estimate it is SE = 0.931, from the Results 3.1 text.\n- **Sample size added:** each estimate now has n = 7,614 (Table 1).\n- **CIs:** the paper prints no CIs anywhere, so value_lo and value_hi stay null. Each estimate's exact raw p was already there. A 95% CI can be computed from the SE as value \u00b1 1.96 \u00d7 se.\n\n**Standard deviations**\n- These were already in the draft, and I confirmed them against the paper.\n- **IV:** SD = 1.5 h/day for social media time and 0.8 for the addiction score (Table 1).\n- **DV:** SD = 1 because thickness is z-scored (Table 2 header).\n\n**Still unresolved**\n- **Coefficient scale:** the paper calls the coefficients standardized betas but never says the IV itself was z-scored. That affects how d is calculated.\n- **Unprinted results:** surface area, subcortical volume and vertexwise results are not printed as numbers. They stay in excluded_models.\n\nI added a note on each estimate, appended to d_transformation.notes, and logged every action in verification_log.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_150.json"
+  },
+  "audit": {
+   "paper_id": "150",
+   "numbers_checked": 573,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 141,
+   "summary": "I audited paper 150 (Nagata et al. 2026, NeuroImage) and found no errors. I read all 11 pages of the PDF; no supplement file is bundled. Table 2 on p.4 is an image, so I rendered it at 400 dpi and checked every cell against the draft: 70 ROI x 2 IV cells, each with the x100 beta, SEM, raw p, FDR q and sig flag. All 140 matched exactly, including sign and decimals. The sig flags all follow the paper's own rule: q < 0.05 for ROI rows, and raw p < 0.05 for the whole-hemisphere 'All Cortical Gray Matter' row, where no q is printed. The right-hemisphere cortical volume estimate in the Results 3.1 text (-1.916, SE 0.931, p = 0.040) also matches. From Table 1 I confirmed N = 7,614 and the SDs (social media time 1.5, addiction 0.8). iv_type is continuous, and the DV is z-scored, so sd_dv = 1. The estimate set is complete: the paper prints no other phone/social-media cells for this model. The one change I made was to add a numeric 'q' field to the 136 ROI estimates, taken from the p/Q column; the draft had q only inside the p_label text. I logged this and the full confirmation in verification_log. Still missing: CIs, t/z and df for all 141 estimates. The paper never prints them, so they stay null, and the existing notes already say so. The draft file /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_150.json is valid JSON."
+  }
+ },
+ "152": {
+  "complete": {
+   "paper_id": "152",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 1,
+   "summary": "I read the whole 4-page PDF. No supplement file is bundled; the Supplemental Appendix is online only. The paper has one qualifying estimate (M1), checking COVID social media hourly or more \u2192 always masking. Its ARR 1.09 (1.00\u20131.19), p = 0.049 is printed in Table 2 and was already fully in the draft, so I filled no new values, CI inputs or SDs. I set M1's iv_type to binary. One item is confirmed missing: the masking rate in the unexposed group (the p0 the conversion needs). The paper prints only the whole-sample rate of 0.623 (Table 1), so the draft keeps that as an approximation. The paper also prints no SE, z or group sizes. I logged both actions in verification_log, added notes to the estimate and to d_transformation.notes, and checked that /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_152.json loads as valid JSON."
+  },
+  "audit": {
+   "paper_id": "152",
+   "numbers_checked": 14,
+   "errors_fixed": 1,
+   "error_examples": [
+    "M1 sm_covid_check x always_mask p_label: was \"0.049\", now null (p printed exactly as 0.049 and stored in p; p_label is only for inequalities) (Table 2 p.3)"
+   ],
+   "still_missing": 1,
+   "summary": "I read all 4 PDF pages. docs/pdfs has no supplement file for this paper. The one qualifying estimate checks out against Table 2 (p.3, adjusted column) and the Results text: ARR 1.09, CI 1.00-1.19, p = 0.049, sig = true, binary IV. These also match the paper: p0 = 0.623 (Table 1, 'all the time last week'), the 9.1% exposure prevalence, the unadjusted RR 1.15 (1.07-1.25, p < 0.001) in excluded_models, and the sample percentages. No other phone or social-media cells are missing; the other Table 2 rows are internet, TV and parent counseling and are correctly excluded. The only change was a convention fix: p_label set to null because the p-value is printed exactly. No SE, z or group n's are printed anywhere, and neither is the masking rate in the unexposed group, which stays recorded as not printed in the estimate note. The audit entries are in verification_log in /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_152.json, and the JSON validates."
+  }
+ },
+ "154": {
+  "complete": {
+   "paper_id": "154",
+   "values_filled": 108,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 41,
+   "summary": "Paper 154 (Alexander et al. 2025, Psychiatry Research). I read all 10 pages of the PDF. The docs/pdfs folder has no supplement file for this DOI.\n\nWhat I checked: all 108 printed standardized betas, p-values and significance flags in M1 (36 combined-effect cells) and M2 (72 within- and between-person cells) match Table 3 on p.6. I compared them with a script against the pdftotext output.\n\nWhat I filled:\n- The unstandardized B (per additional minute of use) from Table 3, as a new 'B' field on every estimate (108 values). The native metric stays beta_std.\n- iv_type = 'continuous' on M1 and M2.\n\nCIs: none are printed anywhere. Table 3 gives only B, beta_std and p. There is no SE, t, z, df or per-model N. Fig. 1 on p.7 shows 95% CIs only as unlabelled error bars, so I did not read them. The exact p in Table 3 is therefore the only CI input. It was already recorded for the 73 cells printed with an exact p. The 35 cells printed as '<0.001' have no CI input; I recorded each as confirmed missing with a note on where I looked.\n\nSDs: I made no SD changes. The existing sd_iv and sd_dv values come from Table 2. The SD of the within-person daily deviations is not reported for the 6 within-person axes, which I recorded as confirmed missing. It is not needed, because the paper prints beta_std directly.\n\nI appended to d_transformation.notes and added a verification_log. The JSON validates.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_154.json"
+  },
+  "audit": {
+   "paper_id": "154",
+   "numbers_checked": 360,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 108,
+   "summary": "I found no errors in paper 154 and made no corrections. I read the whole 10-page PDF, Psychiatry Research 349:116523 (doi 10.1016/j.psychres.2025.116523). There is no supplement file for this paper in docs/pdfs. I pulled the text of Table 3 (p.6) with pdftotext and checked every estimate against it with a script. That covers 108 estimates: 36 in M1 (combined effect) and 72 in M2 (36 within-person, 36 between-person). For each one, the following all match the table: unstandardized B, standardized beta, exact p or the '<0.001' label, sig at P<.05, and the table location (right block, row and column group). The numbers repeated in each estimate's note also match its fields. I checked every sd_iv and sd_dv against Table 2 (p.5). M1 uses the overall SDs, M2 between-person uses the SDs of the participant means, and the sleep-onset and wake-time SDs of 2 h 14 m and 2 h 17 m are correctly stored as 134 and 137 minutes. The sample numbers match Table 1. iv_type 'continuous' is correct for both models, since each IV is minutes of use. All 108 cells are present: 6 IVs x 6 DVs x combined/within/between. The 108 still missing are the CIs and SEs. No CI, SE, t, z or df is printed anywhere in the paper, and Fig. 1 shows the 95% CIs only as unlabelled error bars, which I did not read. Each estimate's note already says where this was searched. I added one audit confirmed_missing entry to verification_log, and the file validates as JSON: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_154.json"
+  }
+ },
+ "156": {
+  "complete": {
+   "paper_id": "156",
+   "values_filled": 17,
+   "ci_inputs_filled": 54,
+   "sds_filled": 9,
+   "iv_types_set": 2,
+   "confirmed_missing": 12,
+   "summary": "I read the whole 12-page PDF and checked the rotated Tables 2 and 3 as page images. No supplement file is in the repo. The draft had 17 wrong M1 cells, and I corrected all of them to match the printed tables. 13 had wrong d values or signs. For example, wd_text x breathing is +0.12, not -0.12. we_sm arousal, breathing and sleepiness are positive, and we_sm wake_trans is 0.15. For wd_vc, insomnia is 0.08, sleepiness 0.14 and hyperhidrosis 0.12. For we_vc, sleepiness is 0.20, wake_trans 0.00 and arousal +0.01. we_text sleepiness and arousal are positive. The other 4 had wrong significance flags: weekday SM insomnia and total are not significant, and weekend texting and video-chat sleep duration are significant (p<.001). All 54 M1 estimates now carry the group sizes n1/n0 from the table row labels, the covariate-adjusted group means and SEs, and a p_label, so a CI can be computed. The paper prints no CI, exact p or SE for any d. I added sd_dv for all 9 sleep outcomes from Table 1 (analytic baseline sample). iv_type is set to binary on both models. For the 12 M2 relative risks, the paper prints no CI, SE or exact p, only *** for P<.001. The exposed/unexposed prevalences behind p0 appear only as unlabelled bars in Figs 1, 2, 4 and 5, so I left p0 as the draft's approximation and noted this. All changes are logged in verification_log, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_156.json"
+  },
+  "audit": {
+   "paper_id": "156",
+   "numbers_checked": 608,
+   "errors_fixed": 1,
+   "error_examples": [
+    "M1 iv_axis wd_text meta (high-user share): was 2.8%, now 2.7%. Computed as 291/(291+10,385) from the Table 2 row labels (p.735); Table 1 (p.734) prints the rounded 3%"
+   ],
+   "still_missing": 66,
+   "summary": "I read the whole 12-page PDF of paper 156 (Hisler et al. 2020, Sleep Health). The repo has no supplement file for it. Checked against the paper:\n- M1, 54 cells (6 IVs: weekday/weekend texting, social media and video chat; 9 sleep DVs). For every cell, the printed d and its sign, the sig flag (bold or *** at alpha .001), n1/n0, and the adjusted M (SE) for both groups all match Tables 2-3 (pp.735-736).\n- M1 sd_dv: all 9 values match Table 1 (p.734).\n- M1 and M2 iv_type: binary is correct for both (the paper dichotomizes at 2 hours, p.733).\n- M2, 12 relative risks: all match Tables 4-5 (pp.738, 740), including the only significant cell, weekend social media x disturbed sleep (1.42***).\n\nNo IV x DV cells are missing. The one correction was a derived label: the weekday-texting high-user share was 2.8% and is now 2.7%. The 66 still-missing items are expected: the paper prints no CI, SE, exact p or test statistic for any cell (54 M1 + 12 M2). The M2 p0 values (0.155 and 0.275) are still the draft's approximations, because base rates appear only as bars in Figs 1, 2, 4 and 5 and I did not read values off them. All checks and the confirmed_missing entries are in verification_log, and the JSON validates."
+  }
+ },
+ "157": {
+  "complete": {
+   "paper_id": "157",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 12,
+   "summary": "Paper 157 had nothing printed left to fill. I read all 6 pages of the PDF (pp. 497-502); there is no supplement file. Table 3 prints the RR and 95% CI for all 12 included cells (talk/text, social media, the three ringer categories and woken-by-phone, each against the two sleep outcomes), and all of them were already in the draft. Exact p-values or '<.001' labels were also already there. I set the model's iv_type to continuous, with a per-estimate override to categorical for the three ringer cells, which are compared against 'turn the phone off'. Still null because the paper doesn't print them: the SE or test statistic for any estimate, the SD for the frequency items (Table 2 gives only weighted % per category, and the item coding is unclear: a 1-5 scale in Methods vs four categories in Table 2), and the event rate in the unexposed group. So p0 stays at the marginal rates from Table 1 (0.155 and 0.28). Each cell's note says where I looked. I added 13 verification_log entries, added to d_transformation.notes, and the JSON still validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_157.json"
+  },
+  "audit": {
+   "paper_id": "157",
+   "numbers_checked": 52,
+   "errors_fixed": 12,
+   "error_examples": [
+    "All 12 estimates, location: was 'Table 3, <row>', now 'Table 3 (p. 500), <row>' (page number added; Table 3 p.500)"
+   ],
+   "still_missing": 12,
+   "summary": "I read the whole 6-page PDF (pp. 497-502). There is no supplement file. I compared every number in the 12 included cells against Table 3 on p. 500, using both the page image and a text extraction. That covers the RR, both CI bounds, p or p_label, and sig for each cell, 48 numbers in all. Every one matches the correct row and column. Sig matches the bold marking after the Benjamini-Hochberg correction: woken_by_phone x sleep_disturbance (1.06, 1.00-1.12, p=.072) and the silent and outside-room ringer cells are correctly marked not significant. The p0 values (0.155 and 0.28) match Table 1 on p. 499. The iv_type settings are correct: the frequency items are treated as continuous (Statistical analyses, p. 499) and the ringer items are categorical against 'turn the phone off'. The text on p. 500 gives a CI of 1.01-1.13 for social media x sleep disturbance, but Table 3 prints 1.01-1.11, and the draft correctly uses the table value. No numbers were wrong. The only changes were adding the page number to all 12 locations. The paper prints no SE, z, IV SD, or group sizes anywhere, so these stay null, which leaves sd_iv missing for the continuous IVs. No phone or social-media cell from this model is missing; chat rooms and night-waking device use were deliberately excluded and are recorded in excluded_models. All checks and changes are logged in verification_log with stage 'audit'. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_157.json"
+  }
+ },
+ "158": {
+  "complete": {
+   "paper_id": "158",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 4,
+   "confirmed_missing": 10,
+   "summary": "I read the full PDF (pp. 562-571); there is no supplement file in docs/pdfs. All 12 estimates in M1-M4 already had native values, 95% CIs and p values, and every one matches Tables 4 and 5. I set iv_type to \"continuous\" on all 4 models, since each bedtime item enters on its 1-5 Likert scale. The paper prints no SE or t statistics; the tables give only OR or B with 95% CI and p. No SDs are printed: Table 2 gives the bedtime items only as percentages in binned categories (0, 1-2, 3-4, 5-7 nights), not as a mean or SD on the 1-5 scale. Sleep duration has no mean or SD anywhere, and the prevalence of sleep disturbance (SDSC >= 39) is not printed, though the Chinn conversion for the ORs does not need it. I recorded these gaps as notes on the axes and estimates, logged them as 10 confirmed_missing entries (6 sd_iv, 4 sd_dv) in verification_log, and appended a summary to d_transformation.notes. The B models (M2, M3) still cannot be converted to d from this PDF; the ORs (M1, M4) can, using Chinn. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_158.json (JSON validates)."
+  },
+  "audit": {
+   "paper_id": "158",
+   "numbers_checked": 46,
+   "errors_fixed": 12,
+   "error_examples": [
+    "All 12 estimates, location: was 'Table 4, row ...' / 'Table 5, ...' with no page number, now the same text with '(p. 568)' added (Table 4/5 p.568). These are precision fixes only. No numeric value was wrong."
+   ],
+   "still_missing": 7,
+   "summary": "I read the whole PDF (pp. 562-571) and used a pdftotext layout extraction to check every digit in Tables 4 and 5. There is no supplement file in docs/pdfs. All 12 estimates are correct: the native OR or B, both CI bounds, the p or p_label, and sig all match the printed tables. That covers M1 (3 sleep-disturbance ORs), M2 (3 sleep-duration Bs), M3 (4 sex-stratified Bs) and M4 (2 sex-stratified ORs). sig agrees with the paper's bold, p < .05 rule; the woken-by-messages OR (1.10, CI 1.00-1.21, p = .053) is correctly marked not significant. iv_type = continuous is right, because each item is entered on its 1-5 Likert scale. No SE, t or z is printed anywhere. The estimate set is complete: Table 5 shows dashes for phone/text x sleep disturbance by sex (interaction p = .077) and does not include the woken item. Still missing, because the paper does not print them: sd_iv for the 3 bedtime items (Table 2 gives only binned percentages), sd_dv for MCTQ sleep duration, and p0 for SDSC >= 39. The M2/M3 B models therefore cannot be converted to d; the ORs can be converted with the Chinn formula. The only edits were adding the page number to each location. Every confirmation and change is in verification_log with stage 'audit', and the file passes the JSON check."
+  }
+ },
+ "160": {
+  "complete": {
+   "paper_id": "160",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 3,
+   "summary": "Paper 160's draft was already complete; the only change is that M1's iv_type is now set to \"continuous\". I checked the full 12-page PDF, and there is no supplement file. The adjusted ORs, 95% CIs and exact p-values for texting (1.36, 1.06-1.74, p=0.014), video chat (1.30, 1.03-1.65, p=0.028) and social networking (1.27, 0.97-1.66, p=0.076) match Table 2 on p.11. The IV SDs (0.56/0.52/0.45) and the outcome base rate p0=0.0138 match Table 1 on p.10. The paper prints no SEs or z statistics, so those three estimates are logged as confirmed missing; the CIs are printed, so nothing is lost. sd_dv stays null on purpose: the outcome is binary, and the Chinn conversion from OR to d needs no SD. I added a note to each estimate, appended to d_transformation.notes, and added verification_log entries. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_160.json, and it parses as valid JSON."
+  },
+  "audit": {
+   "paper_id": "160",
+   "numbers_checked": 21,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "I read all 12 pages of the PDF. There are no supplement files for this paper. Every number in the draft matched the paper, so I made no corrections. I checked the adjusted ORs, 95% CIs and exact p-values against Table 2 on manuscript p.11: texting 1.36 (1.06-1.74), p=.014; video chat 1.30 (1.03-1.65), p=.028; social networking 1.27 (0.97-1.66), p=.076. The sig flags are right at alpha .05 with no correction, and social networking's CI includes 1, so it is correctly marked not significant. The sd_iv values (0.56, 0.52, 0.45) and p0 = 0.0138 match Table 1 on p.10. iv_type is continuous (hours per day, Methods 2.2). The draft has every phone and social-media cell in the adjusted model; the other Table 2 rows are TV, videos, video games and total screen time, which are correctly excluded. The only edit was making each estimate's location name the page, plus audit entries in verification_log. The 6 values still missing are the se and z for each of the 3 estimates; the paper does not print them. p_label holds the exact p as text even though p is exact; I left it as it was."
+  }
+ },
+ "167": {
+  "complete": {
+   "paper_id": "167",
+   "values_filled": 0,
+   "ci_inputs_filled": 48,
+   "sds_filled": 20,
+   "iv_types_set": 3,
+   "confirmed_missing": 33,
+   "summary": "I read all 13 pages of the PDF; no supplement for this paper is bundled in docs/pdfs. Every native value was already present, so no values were added.\n\n- **Model types:** M1 and M2 are set to categorical, because smartphone-ownership age is a 5-group grouping variable. M3 is set to continuous (the coded category is correlated as a number).\n- **Inputs for CIs (48 added):**\n  - M1: SE from Table 3 (p.7) added as a field, with se_scale raw, on all 15 time, informant and time x informant cells.\n  - M1: z from Table 4 (p.8) added on all 20 yearly informant-effect cells. The z values printed for the 13 & 14 group look like typesetting errors; this was already flagged.\n  - M1: chi2_df = 1, n and sign added on the 3 Wald tests. n is the sum of the two groups' Table 2 sizes, because the per-test N is not printed. sign = +1 means the later-ownership group has the smaller (less negative) informant effect.\n  - M2: SE and the printed standardized beta added from the text on p.5 for all 10 slopes.\n- **SDs (20 added):** sd_dv and the group n added on the 20 yearly informant-effect cells. sd_dv is calculated, not printed: it pools that group's printed youth and parent SDs for that year from Table 2 (p.5), and the arithmetic is in each note.\n- **Confirmed missing (33):**\n  - M1 time, informant and time x informant cells: no SD of the pooled two-reporter score is printed.\n  - M2 slopes: no CI and no SD on the slope's scale.\n  - M3 correlations: no CI, exact p or pairwise N.\n- **New discrepancies noted:**\n  - The text on p.7 gives SE .01 for the 11 & 12 time x informant cell, but Table 3 gives .02.\n  - The Figure 1 label for the No Phone parent slope reads beta -.16, but the text gives -.19.\n\nAll edits are logged in verification_log, a note was added to d_transformation.notes, and the JSON parses. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_167.json"
+  },
+  "audit": {
+   "paper_id": "167",
+   "numbers_checked": 215,
+   "errors_fixed": 2,
+   "error_examples": [
+    "M1 No Phone x beta1 Time: was b = .06, SE = .07, p = .401 (Table 3 p.7 cell, which copies the No Phone Puberty row word for word); now b = -.09, SE = .05, p = .068, sig false (Results text p.6, which matches the authors' 'negative, non-significant' description and the negative No Phone M2 slopes)",
+    "M1 No Phone x beta2 Informant: was b = .03, SE = .02, p = .064 (Table 3 p.7 cell, which copies the No Phone Screen-time row word for word); now b = -.04, SE = .06, p = .694, sig false (Results text p.6)"
+   ],
+   "still_missing": 33,
+   "summary": "I audited the whole 13-page PDF against the draft at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_167.json. There is no supplement file in docs/pdfs for this paper.\n\n**What matched:** Almost every number is correct.\n- M1, Table 3 p.7: beta1, beta2 and beta3, with their SE and p values.\n- M1, beta3 95% CIs from the Results text p.7.\n- M1, Table 4 p.8: b, z and p for the informant effect at every year in every group.\n- M1, Wald chi-square tests on p.7: 26.98, 5.83 and 3.93.\n- M2, latent growth slopes from the text on p.5: b, standardized beta, SE and p.\n- M3, Table 1 row 11: all eight correlations and their significance levels.\n- I recomputed all 20 pooled sd_dv values from the Table 2 group SDs, and they match, as do the group Ns.\n\n**Two corrections:** both are No Phone cells in Table 3, for beta1 (time) and beta2 (informant). Each printed cell is an exact copy of a covariate row in the same column (the Puberty row and the Screen-time row). Both also contradict the Results text on p.6. I replaced them with the text values: time b = -.09, SE = .05, p = .068, and informant b = -.04, SE = .06, p = .694. Neither is significant, so sig stays false. The original table values are kept in each note and in verification_log.\n\n**Discrepancies kept as printed:**\n- 11 & 12 informant SE: I kept the Table 3 value of .03. The text prints SE = .17, but that cannot fit the stated p < .001.\n- 11 & 12 beta3 SE: I kept the table value of .02, which fits the printed CI. The text gives .01.\n- Table 4, 13 & 14 z values: the z column repeats b in every cell, which looks like a typesetting error. I kept the printed values.\n- M2 No Phone parent slope: I kept the text's beta of -.19. The Figure 1 label reads -.16.\n\n**Still null (33 values):** these are not printed anywhere in the paper.\n- No CIs for beta1/beta2 or the Table 4 probes (20 cells), the M2 slopes (10 cells), or the M3 correlations (8 cells).\n- No SE for the Table 4 probes.\n- No exact p for the M3 correlations.\n- No sd_dv for the per-wave pooled beta1, beta2 and beta3 cells.\n\nThe file validates as JSON."
+  }
+ },
+ "175": {
+  "complete": {
+   "paper_id": "175",
+   "values_filled": 0,
+   "ci_inputs_filled": 14,
+   "sds_filled": 12,
+   "iv_types_set": 1,
+   "confirmed_missing": 2,
+   "summary": "Paper 175 (Carvalho et al. 2025) is complete, with one caveat about the SDs. I checked the full-text results (pp.1030-1033), Table 1 and Figures 1-4 against the draft. All 14 native beta values, the b values with their 95% CIs, and the exact p values (or p_label) match what is printed. No supplement PDF is bundled, so Supplemental Tables 1-5 could not be checked.\n\nChanges made:\n- Set iv_type to \"continuous\" on M1.\n- Added the printed SE as a structured \"se\" on all 14 estimates. It is the SE of the unstandardized b; the paper prints no SE or CI for beta anywhere.\n- Added a lag-matched sd_iv from Table 1 to the 12 cross-lagged estimates: social EMU at T1/T2/T3 = 0.82/1.16/1.66, and family conflict at T1/T2/T3 = 1.95/1.88/1.83. These are full-sample observed SDs, not sex-specific or within-person SDs, so the 'beta = B*SD_IV/SD_DV' conversion is only approximate.\n- Confirmed as missing: the SDs of the latent random intercepts for the 2 between-person rows. They are not printed in Table 1, Figures 3-4 or the text.\n- Added a note that Figure 4's -.04 label for girls is the T1 residual covariance, not a cross-lag.\n\nEarlier flags still stand: girls T1-T2 b = -0.59 has SE .02, which does not fit its CI; boys T3-T4 b = -0.04 has a sign that conflicts with its beta and CI; and the text and figures disagree for girls on the FC->social EMU T1-T2 beta (-.07 vs -.06) and the random-intercept beta (.24 vs .22).\n\nThe draft is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_175.json, with the verification_log added. The JSON validates."
+  },
+  "audit": {
+   "paper_id": "175",
+   "numbers_checked": 132,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 30,
+   "summary": "I read all 14 pages of the PDF. No supplement file exists in docs/pdfs. I checked all 14 estimates for the gender-multigroup RI-CLPM M8 (social EMU and family conflict) against the Results text on pp. 1030 and 1032 and against Figures 3 and 4 on pp. 1034-1035. These are 12 cross-lagged paths (boys and girls, both directions, 3 lags) and 2 random-intercept associations. For each one, beta, b, the b 95% CI, SE, raw p, the p-adj noted, and sig all match the printed values. Sig follows the BH-adjusted p: all girls social EMU to family conflict paths and both random intercepts are significant; nothing else is. The per-lag sd_iv and the dv_axis sd_dv values match the Table 1 SDs (social EMU .82/1.16/1.66/2.07; family conflict 1.95/1.88/1.83/1.94), and iv_type continuous is correct. The draft already flags the paper's printing inconsistencies (girls T1-T2 b = -0.59 with SE .02; boys FC T3 to EMU T4 b = -0.04 with a positive beta and CI; text vs figure beta of -.07 vs -.06 and .24 vs .22). No phone or social-media cells were missing. Still null and not printed: beta_lo and beta_hi for all 14 estimates (28 values), plus sd_iv and sd_dv for the 2 random-intercept rows. I logged these as confirmed_missing in verification_log. I made no corrections. The JSON validates."
+  }
+ },
+ "177": {
+  "complete": {
+   "paper_id": "177",
+   "values_filled": 4,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 22,
+   "summary": "I read all 19 pages of the PDF (an author manuscript). None of the missing values are printed in it. The paper gives no standard errors, confidence intervals, t/z statistics or degrees of freedom for any social media slope, and no standard deviations for any sleep outcome or for social media time. Table 1 has demographic percentages only. Figures 1 and 2 show means with CI bars but print no numbers, and the coefficient tables (S2-S5) are only in the online PMC supplement. No supplement file is bundled in docs/pdfs.\n\nChanges made to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_177.json:\n- Set iv_type to \"continuous\" on M1 and M2.\n- Recorded the three M1 social media main-effect likelihood-ratio tests as other:chi2 with chi2_df 1 and a direction sign: time in bed 114.56 (sign -1), bedtime 456.52 (+1), sleep onset latency 33.74 (+1).\n- Recast M2 (awakenings, 6.94, p = .008) as other:chi2 with chi2_df 1 and sign +1.\n- Left n null on all four chi-square cells. The paper never prints the number of observations behind each test, only that 5,027 participants contribute up to 7 repeated assessments each.\n- Added a note on every estimate saying where I looked and that the rest is only in the web supplement.\n- Appended to d_transformation.notes, added 24 entries to verification_log, and confirmed the JSON still parses.\n\nThe earlier flag still stands: the time-in-bed social media slopes on p.7 repeat the age slopes printed just above them. The only difference is August, printed as +0.05 for social media and -0.05 for age. The paper is still not convertible to d unless someone gets the PMC supplement."
+  },
+  "audit": {
+   "paper_id": "177",
+   "numbers_checked": 40,
+   "errors_fixed": 3,
+   "error_examples": [
+    "M1 sm_may20 x TIB p_label: was \"= .01\", now null (p = 0.01 is printed exactly; Results p. 7)",
+    "M1 sm_aug20 x TIB p_label: was \"= .02\", now null (p = 0.02 is printed exactly; Results p. 7)",
+    "M2 sm_overall x awakenings p_label: was \"=.008\", now null (p = 0.008 is printed exactly; Results p. 8)"
+   ],
+   "still_missing": 18,
+   "summary": "I re-read all 19 pages of the author manuscript and checked every number in /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_177.json against it. All 18 estimates match the paper exactly. There are 14 social media simple slopes: 7 for time in bed on p. 7 and 7 for bedtime on p. 8. There are 4 likelihood-ratio chi2(1) main effects: time in bed 114.56, bedtime 456.52, sleep onset latency 33.74 and awakenings 6.94 (p = .008). Values, signs, p values, significance flags and locations are all correct. The paper prints +0.05 for the August time-in-bed slope, which the draft already flags as a possible sign typo, and I kept it as printed. I made 3 small fixes: where a p value is printed exactly, I removed the redundant p_label text. The iv_type of continuous is correct, since the predictors were standardized. No phone or social media estimate is missing for these model specifications: the paper gives no social media simple slopes for sleep onset latency or awakenings. All 18 estimates still lack SE, CI, test statistic, df, SD of the sleep outcome and test N, because none of these appear in the main text. The paper's coefficient tables are in Supplementary Tables S2-S5, and docs/pdfs has no supplement file for this DOI. Each estimate's note now says where I looked. The file passes the JSON validation check."
+  }
+ },
+ "184": {
+  "complete": {
+   "paper_id": "184",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 12,
+   "summary": "Read all 8 pages of the PDF; no supplement file is bundled (the online supplement and Appendix A are not in the PDF). The draft was already complete. All 12 B values and 95% CIs (SMAQ and MPIQ against 6 parenting practices) match Table 3 on p.407. The exact p-values for the 2 control-behavior cells (0.489 and 0.488) are there, and the SDs for IVs and DVs match Table 1 on p.405. I set M1 iv_type to continuous and added notes to each estimate. I also logged a confirmation (an entry in verification_log) for each estimate and each axis SD, and appended to d_transformation.notes. No SE or t-values are printed, but none are needed because the CIs are printed. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_184.json"
+  },
+  "audit": {
+   "paper_id": "184",
+   "numbers_checked": 62,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 12,
+   "summary": "I read the whole PDF (pp. 403-410). No supplement is bundled; Appendix A is online only. Table 3 is printed rotated, so I pulled the text layer and checked it against the results text on pp. 405-406. All 12 SM/phone estimates in M1 match the paper exactly. That covers 6 parenting practices x SMAQ and MPIQ, and for each I checked B, the lower and upper CI bounds, p or p_label (two exact p values: 0.489 and 0.488) and sig (alpha .05; only the two control cells have CIs that include 0). I also confirmed the sd_iv values against Table 1 p.405 (0.63, 0.94, 0.89, 0.89, 0.95, 0.72) and the sd_dv values (SMAQ 7.50, MPIQ 13.07). iv_type continuous is correct, because the IVs are mean scores and the coefficients are per 1 point. No IV x DV cells are missing, and leaving out the total screen time and VGAQ columns is correct. Still missing on all 12 estimates: SE, t and df, which the paper never prints. I made no corrections and added audit confirmation entries to verification_log. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_184.json (validated)."
+  }
+ },
+ "190": {
+  "complete": {
+   "paper_id": "190",
+   "values_filled": 0,
+   "ci_inputs_filled": 7,
+   "sds_filled": 0,
+   "iv_types_set": 4,
+   "confirmed_missing": 10,
+   "summary": "Read all 14 pages of the paper. No supplement is bundled; the Supplementary Information is online only. All native values were already present, and I checked each one against Table 1, Fig 1 and the text on p.6. I set iv_type to continuous for M1-M4. I added n = 9855 (the baseline analytic N) to the 7 M2 Table 1 correlations as a CI input. Per-correlation N is not printed, so a Fisher-z CI from it is approximate, and the notes say so. For M1 (baseline) and M3 (baseline), p was printed only as '<0.001', so I set p to null and kept the text in p_label. The paper prints no SE, CI, z/t or exact p for the M1 SEM paths or the M3 sibling mixed models, and no descriptive SDs, since there is no descriptive table. The SDs are not needed because the coefficients are standardized. M4 already had its bootstrap CI. Each of these is noted on the estimate and logged in verification_log. JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_190.json"
+  },
+  "audit": {
+   "paper_id": "190",
+   "numbers_checked": 34,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "I read all 14 pages of the PDF. No supplement is bundled in docs/pdfs; the Socializing-only models are only in the online SI. I checked Table 1 and the Figure 1 labels against 250-dpi renders. Everything in the draft matches the paper, so nothing needed correcting. M1 (latent change score SEM, Fig 1 / p.3): Socializing to baseline intelligence beta = -0.10, p<0.001; to change in intelligence beta = -0.07, p = 0.220, n.s.; covariance with cogPGS -0.04, not marked n.s. M2 (Table 1, Holm-corrected r for Socializing): Picture -0.19, Flanker -0.07, Reading -0.13, RAVLT -0.12, LMT -0.09, cogPGS -0.17, lack of perseverance -0.01, which is crossed out as n.s. M3 (sibling models, p.6): r = -0.04, p<0.001 and beta = -0.001, p = 0.307. M4 (mediation, p.6): indirect effect -0.001, p = 0.909, CI [-0.002, 0.002]. The sig flags, p/p_label and iv_type (continuous) are all correct. I found no missing Socializing cells for these model specifications: gender contrasts are given only as chi-square difference tests, and the SES and screen-type cells are correctly excluded. Six items are still missing because the paper never prints them: SE/CI/z for the M1 paths, exact p and CI for the M2 r values, SE/CI for M3, and raw SDs. I logged each as confirmed_missing at the audit stage. The file is written and passes JSON validation: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_190.json"
+  }
+ },
+ "192": {
+  "complete": {
+   "paper_id": "192",
+   "values_filled": 0,
+   "ci_inputs_filled": 9,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 12,
+   "summary": "Read the whole 14-page PDF. There is no supplement file in docs/pdfs, and eTables 1-8 exist only online. I checked all nine M1 beta and p values against Table 2 on p.4 and they match. The SEs printed in Table 2 had only been written into the notes, so I copied them into the 'se' field of each of the nine M1 estimates. I set iv_type to continuous for M1 and M2, because the paper says DM usage was \"fitted as a continuous measure\". Some values are not printed anywhere in the PDF, so I left them null and said so in the notes: no CIs at all, no outcome SDs (sd_dv), and no SE/CI for the SNS-only sensitivity estimate or the two M2 estimates. Those three have only beta and an exact p, which is enough for a z-based CI. The M2 numbers are in eTables 5-6 online. The SD of the T0/T1 averaged IV is also not printed; Table 1 gives only the T0 and T1 SDs separately. I added each action to verification_log and appended a note to d_transformation.notes. The JSON validates."
+  },
+  "audit": {
+   "paper_id": "192",
+   "numbers_checked": 58,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 24,
+   "summary": "I read the whole 14-page PDF and checked Table 2 against the text layer. There is no supplement file in docs/pdfs; the paper's eTables are online only. All 9 social-media M1 estimates match Table 2 on p.4: beta, SE, p and sign. The sig flags are right under the paper's Bonferroni threshold of p<0.0027. CSA x Time^2 has p=0.004, so it stays non-significant. Cerebellum x Time and x Time^2 are both p<0.001 and significant. The SNS-only cerebellum estimate (beta -0.02, p=0.002, text p.6) is correct. Both M2 text-only estimates are correct: beta -0.01, p=0.10, and beta -0.03, p=0.16, on pp.5-6. The SD values also check out against Table 1: 0.95 for average social media use and 1.06 at T0. iv_type is continuous for both models, which matches Methods p.11. No missing social-media IV x DV cells were found. I made no corrections. I added notes to two Table 2 cells (CSA x Time and striatum x Time) where the printed p does not match beta/SE: implied p is about 0.87 and 0.24, printed is 0.36 and 0.91. I kept the printed values. Still missing because they are not printed anywhere: all 11 CIs, the M2 and SNS-only SEs, sd_dv for every outcome, and sd_iv for the T0/T1 average and the SNS-only composite. Audit entries were added to verification_log, and the JSON validates."
+  }
+ },
+ "195": {
+  "complete": {
+   "paper_id": "195",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 13,
+   "summary": "Nothing in paper 195 needed filling. All 13 primary estimates already had their beta, 95% CI and p value. I checked each one against the printed table in Fig. 3 (p. 6) and all 13 match. I read the full PDF: Tables 1-3, Figs 1-3 and the text; no supplement file is bundled. The only change to the data is setting iv_type to \"continuous\" on M1. The paper never prints an SE, t or df. It also gives no outcome SDs: Table 1 lists demographics only, with nothing for CBCL, NIH Toolbox or Fitbit. Neither is needed, because the betas are already standardized and every CI is printed. I recorded these gaps as confirmed missing on each estimate and outcome, added a line to d_transformation.notes, and wrote everything to verification_log. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_195.json and it loads as valid JSON. One thing to check: the Fig. 3 caption mentions SMAQ and VGAQ, but the plot has no SMAQ or VGAQ rows. Those estimates appear only in the text on p. 3, and the draft already lists them as excluded models."
+  },
+  "audit": {
+   "paper_id": "195",
+   "numbers_checked": 52,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 0,
+   "summary": "I read the whole 9-page PDF. There is no supplement file in docs/pdfs. I rendered Fig. 3 (p.6) at 250 dpi and checked all 13 estimates in model M1 against the printed table: beta, both CI bounds, and p or p_label. All of them match, and they agree with the Results text (p.3) and the Abstract. Every cell is significant at alpha .05 and none of the CIs includes 0, so sig=true is correct throughout. The SD values on the IVs match Table 2 (p.4): 1.93, 1.93, 1.97, 2.87 and 0.73. iv_type=continuous is correct. The numbers quoted under excluded models also check out: the Table 3 ORs, the SMAQ/VGAQ betas, and the Fig. 2 r values. Nothing was missing. The paper prints no SE, t or df. It also gives no full-sample SDs for the outcomes; the only outcome summaries are picture vocabulary means for the reporting subgroups. Since the betas are already standardized, these values are not needed. Fig. 3 prints only cells with p < .05, so the non-significant cells cannot be added. The only edit was adding audit confirmations to verification_log in /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_195.json, and the JSON validates."
+  }
+ },
+ "196": {
+  "complete": {
+   "paper_id": "196",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 5,
+   "confirmed_missing": 31,
+   "summary": "Nothing new could be filled for paper 196. I read all 10 pages of the PDF (10.1038_s44277-024-00006-9.pdf), and there is no _supplement file for this DOI in docs/pdfs. The paper prints one number for a qualifying exposure: public social media account, B = 2.13 (Discussion p.6). It has no CI, SE, exact p or t anywhere in the PDF. The other 30 coefficients and every CI appear only in Fig. 2B, a forest plot with no value labels, so I did not read them off the plot. They are printed only in online Supplementary Table S1, which is not in the folder. Table 1 gives demographics and non-social screentime but no SDs for the exposures and no BPM descriptives, so no SDs could be filled; SD_DV stays at 10 (T-score convention). I set the model iv_type to continuous and set iv_type = binary on 4 estimates. For public account this is printed (public vs private, p.6). For secret accounts, parent suspects secret account and top app TikTok it is inferred from the prevalences the Discussion reports (15%, 7%, 16%, p.6). All 31 estimates now have a note listing where I looked and saying the values live only in Table S1. I added se: null placeholders, 36 verification_log entries, and a line in d_transformation.notes. The JSON validates. To fill the rest, get Supplementary Table S1 from the online version of the article. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_196.json"
+  },
+  "audit": {
+   "paper_id": "196",
+   "numbers_checked": 8,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 30,
+   "summary": "I audited the draft against all 10 pages of the PDF and found no errors, so I made no corrections. There is no supplement file for this DOI in docs/pdfs. I checked the estimate set against the Fig. 2B labels on p. 4 at 400 dpi. All 31 phone/social-media exposures are present, and their labels and Table S1 numbers match the figure. The other 4 of the 35 FDR-significant exposures are correctly excluded: Cyberbullied [37] and the video-game items [20], [4] and [1]. The only number for a single exposure printed in the paper is public social media account, B = 2.13 (Discussion p. 6). That value is correct, and the paper gives no CI, SE, exact p or t for it. sig = true matches the paper's FDR correction for all 31 cells. The iv_type settings are reasonable (binary: secret accounts, public account, parent suspects secret account, top app TikTok; continuous: everything else). sd_dv = 10 is the normed T-score SD, not a printed descriptive, and the draft already flags this as an assumption. The training sample size (5082) and the Model-4 values listed under excluded models (1.78 [1.58\u20131.98], t = 17.41, n = 4004) match the paper. The other 30 cells stay null because their values appear only in the Fig. 2B forest plot and the online Table S1, which is not available. I added a note on each saying where I looked, logged every check in verification_log with stage \"audit\", and the file validates as JSON."
+  }
+ },
+ "208": {
+  "complete": {
+   "paper_id": "208",
+   "values_filled": 0,
+   "ci_inputs_filled": 2,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 7,
+   "summary": "I read the whole 7-page PDF, including Tables 1-3 and Appendix A. No bundled supplement file exists in docs/pdfs. Every point estimate and 95% CI in Table 2 (M1 and M2 risk ratios) and Table 3 (M3 GSEM) was already in the draft, along with sd_iv (0.59 and 6.6) and p0 = 0.087 from Table 1, so nothing new was needed there. Changes I made: set iv_type to continuous on all 3 models. Added the printed SEs for M3: 0.009 for the direct effect and 0.0021 for the indirect effect, both with se_scale raw. Changed p values printed as '<0.001' to p = null, keeping only p_label, as the conventions require (10 estimates had p = 0.001 stored for an inequality; the exact p = 0.001 values in Table 3 were kept). Confirmed missing and noted on each estimate: SE/z for the risk ratios (CIs are printed), the SE for proportion mediated, and the scale/link of the GSEM B. sd_dv is not applicable because the outcome is binary. Appended notes to d_transformation.notes and a verification_log. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_208.json; JSON validates."
+  },
+  "audit": {
+   "paper_id": "208",
+   "numbers_checked": 38,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 5,
+   "summary": "I read all 7 pages of the PDF, including Appendix A, and checked every number in the draft against it. There are no supplement files in docs/pdfs. Everything matches the paper exactly, so I made no corrections:\n- Table 2, Model 1: 1.31 (1.20, 1.43)\n- Table 2, Model 2: 1.03 (1.03, 1.05)\n- Table 2, Model 3: 1.21 (1.10, 1.33) and 1.03 (1.02, 1.04), all p<0.001\n- Table 3 direct effect: B 0.03 (SE 0.009), CI 0.01 to 0.05, p 0.001\n- Table 3 indirect effect: 0.011 (SE 0.0021), bias-corrected CI 0.007 to 0.016, p<0.001\n- Table 3 proportion mediated: 25.0% (11.0 to 39.3), p 0.001\n- Table 1: SD of social media time 0.59 and of problematic social media use 6.6; Year 3 sipping 8.7%\n\nThe sig flags fit the paper's two-sided alpha of 0.05, with no correction for multiple comparisons. Both social media measures are continuous, which fits iv_type for all three models. No social-media-by-sipping result is missing from the draft. I added audit entries to the log for the 5 estimates with no printed SE, z or exact p (4 risk ratios and the proportion mediated). The file loads as valid JSON."
+  }
+ },
+ "215": {
+  "complete": {
+   "paper_id": "215",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 11,
+   "summary": "Re-read the whole 20-page author manuscript and the whole supplement docx (S1-S5 and Supplementary Tables 1-13). The docx text matches the 215_supplement.txt copy. All 6 M1 socializing estimates already had B, the 95% CI and an exact p (Supp Tables S6/S7), so no values or CI inputs needed filling. SE, t and df are not printed. I set iv_type to continuous. Confirmed missing: (1) the socializing SD_IV, which is not printed anywhere (Table 1 and Supp Table 1 give only total screen time, 3.7 (2.9) and 3.8 (3.0)); (2) the four sex-specific percentile SD_DVs (Table 1 has sex-specific SDs only for raw BMI/WC, and Supp Table 1 has percentile SDs only for the whole sample). I added notes on the axes and estimates, appended to d_transformation.notes, and added 11 verification_log entries (1 set_iv_type, 10 confirmed_missing; the 11 in confirmed_missing counts the SD_IV plus the 4 SD_DVs plus the 6 estimates). The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_215.json"
+  },
+  "audit": {
+   "paper_id": "215",
+   "numbers_checked": 32,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 5,
+   "summary": "Audited paper 215 (Al-Shoaibi et al. 2025, Childhood Obesity). I read all 20 pages of the author manuscript, the full supplement docx, and the docx XML so I could check which cells are bold. All 6 socializing estimates in M1 match Supplementary Tables 6 (BMI percentile) and 7 (WC percentile) exactly. The six cells are All, Female and Male for each outcome: BMI 0.31 (-0.02, 0.65) p=.065; -0.15 (-0.62, 0.32) p=.530; 0.77 (0.30, 1.25) p=.001; WC 0.19 (-0.26, 0.63) p=.412; -0.17 (-0.80, 0.47) p=.608; 0.50 (-0.12, 1.13) p=.113. That covers the B values, both CI bounds, p and location. The sig flags are correct: alpha = .05, and only the male BMI cell is bold in the docx and has a CI that excludes 0. The proxy sd_dv values of 30.3 (BMI) and 29.0 (WC) match Supplementary Table 1, baseline percentiles for the Included column. iv_type is continuous, which fits Methods p.3. The estimate set is complete: the complete-case Supplementary Tables 8-13 have no subtype rows. SE, t and df are not printed anywhere. Five values are still missing and not printed anywhere in the paper or supplement: the socializing SD_IV, and the four sex-specific percentile SD_DVs. I made no corrections and added audit confirmations to verification_log. The file validates as JSON: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_215.json"
+  }
+ },
+ "287": {
+  "complete": {
+   "paper_id": "287",
+   "values_filled": 0,
+   "ci_inputs_filled": 4,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 4,
+   "summary": "I read the whole 7-page PDF. There is no supplement in the repo; Appendices A and B are online only and hold the sample flowchart and the expectancy items, not estimates. I set iv_type = continuous on M1, M2 and M3. From Table 2 (p.5) I added the printed SEs as \"se\" with se_scale \"log\": M1 direct effects 0.029 (positive-expectancy model) and 0.027 (negative), and M3 indirect effects 0.003 and 0.001. The M1 and M3 point values, CIs and p values were already complete. For the M2 a-paths (B = 0.07*** and 0.003), I confirmed that no CI, SE or exact p is printed anywhere in the paper; Figure 1 gives only the B values with asterisks. M1 has a binary outcome, so sd_dv does not apply. p0 = 0.054 is the weighted whole-sample prevalence; the paper does not print the rate among non-users. SDs were already set: sd_iv 1.5 and sd_dv 2.2 / 2.1 (Table 1). The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_287.json"
+  },
+  "audit": {
+   "paper_id": "287",
+   "numbers_checked": 32,
+   "errors_fixed": 1,
+   "error_examples": [
+    "M2 SM time -> negative expectancies Y3 p_label: was 'ns (no asterisk)', now '>=.001 (no asterisk; Figure 1 marks only p<.001)'. The legend defines only ***, so a missing asterisk means only p>=.001, not that the path is ns at .05. sig=false is kept as an inference and the reason is in the note (Figure 1, p.5)."
+   ],
+   "still_missing": 4,
+   "summary": "I read all 7 pages of the PDF; the paper's supporting information is not among the repo PDFs. Every number in the draft matches the paper exactly. Checked against Table 2 (p.5): both direct-effect logit Bs, with SE, CI and p<.001 (0.138 (0.029), 0.081 to 0.196; 0.153 (0.027), 0.100 to 0.206); both indirect effects (0.009 (0.003), 0.003 to 0.014, p=.002; 0.001 (0.001), -0.002 to 0.003, p=.616); and both proportions mediated. Checked against Figure 1: the a-paths (0.07***, 0.003). Checked against Table 1 (p.4): SD_IV 1.5, SD_DV 2.2 and 2.1, p0 5.4%. iv_type is continuous on all models, which is correct. No phone or social-media cells are missing (the paper prints no total effect). I made one fix, the p_label on the a-path to negative expectancies. Still null because the paper does not print them: the CI bounds (and SE) for the two M2 a-paths, and the exact p for each. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_287.json"
+  }
+ },
+ "289": {
+  "complete": {
+   "paper_id": "289",
+   "values_filled": 0,
+   "ci_inputs_filled": 6,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 6,
+   "summary": "I read the whole PDF, pp. 825-833. No supplement file is bundled with it. All six social-media estimates in M1 and M2 already had their B and 95% CI, and I checked each one against Table 3 on p. 830. SD_DV = 66.14 from Table 1 was already filled. I set iv_type to binary on both models, because the parental ASR score is dichotomised at T >= 65. I added the group sizes to each estimate from Table 1: n1 = 935, 1425 and 446 for externalising, internalising and total problems, and n0 = 10650 - n1. No exact p, SE or t is printed for the social media cells: Table 3 marks significance with asterisks only, and none of these cells has one. Tables S1-S4 are online only. I logged these as confirmed missing and noted it in each estimate's note and in d_transformation.notes. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_289.json. The JSON is valid."
+  },
+  "audit": {
+   "paper_id": "289",
+   "numbers_checked": 42,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "I read the full 9-page PDF (pp. 825-833) and cross-checked Tables 1-4 against a text extraction of the PDF. The draft had no errors, so I made no corrections. Every number checks out against the paper. M1 (basic adjustments) has the following social media B values and 95% CIs from Table 3, p.830: externalising 2.17 [-2.25, 6.59], internalising 0.01 [-3.80, 3.77] and total problems -1.54 [-7.83, 4.76]. M2 (adding family conflict) has 1.65 [-2.78, 6.09], -0.22 [-4.00, 3.57] and -1.83 [-8.13, 4.46]. No social media cell has an asterisk, and the paper flags only p<.05 and p<.01, so sig=false is correct for all six. The Table 3 header for social media says 'OR', but the table title and the size of the values show these are linear-model coefficients in minutes/day, so coding them as B is correct. Table 1 confirms sd_dv = 66.14 and the n1/n0 group sizes (935/9715, 1425/9225 and 446/10204 out of N=10,650). iv_type 'binary' is correct, since the ASR is split at T>=65. The draft has every social media cell for both specifications. The paper prints no SE, exact p or t/z for any social media cell, which leaves 6 estimates with those fields empty. There is no supplement file in docs/pdfs, and Tables S1-S4 are online only. I added one audit entry to verification_log with action confirmed_missing. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_289.json"
+  }
+ },
+ "295": {
+  "complete": {
+   "paper_id": "295",
+   "values_filled": 0,
+   "ci_inputs_filled": 6,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 9,
+   "summary": "I read all 18 pages of the PDF. There is no bundled supplement: Appendix S1, which holds Fig S5/S6 and Table S1, is online only. All six F(1,df) values match p. 2044.\n\nWhat I added:\n- The error df for all six estimates: FCF 9664/9669/9670, sleep 9662/9666/9666.\n- A sign for five estimates, taken from the authors' wording: -1 for SM\u2192FCF, VC\u2192FCF, SM\u2192sleep and text\u2192sleep; +1 for VC\u2192sleep. Text\u2192FCF has no stated direction, so its sign stays null. Its exact p of .75 was already in the draft.\n- iv_type set to continuous (STQ hours/day).\n\nThe paper prints no B, SE, CI or t anywhere, so those stay null. SD_IV (0.42/0.56/0.50) and SD_FCF (17.48) were already filled. The sleep-length SD is not printed (Table 1 gives category counts only), so I recorded it as missing.\n\nI appended notes to each estimate, to d_transformation.notes and to verification_log. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_295.json (valid JSON)."
+  },
+  "audit": {
+   "paper_id": "295",
+   "numbers_checked": 34,
+   "errors_fixed": 1,
+   "error_examples": [
+    "texting x FCF p_label: was \"= .75\", now null. The exact p = .75 is kept in p (Results, Follow-Up Analyses, p. 2044 left column)"
+   ],
+   "still_missing": 6,
+   "summary": "I checked all 6 F(1,df) estimates in M1 (social media, texting and video chat by FCF and sleep length) against the p. 2044 text and page image. Every F value, error df, p / p_label, sign and sig flag was correct: SM-FCF 6.79 (9664, <.01, -), text-FCF 0.10 (9669, p=.75, sign not stated), VC-FCF 27.18 (9670, <.001, -), SM-sleep 27.36 (9662, <.001, -), text-sleep 7.99 (9666, <.005, -), VC-sleep 6.81 (9666, <.01, +). sd_iv values matched Table 1 pp. 2040-2041 (0.42, 0.56, 0.50). SD_FCF = 17.48 matched p. 2043. iv_type continuous is correct. The estimate set is complete: the follow-up LMEs used weekday items only, and all phone/SM items are covered. The only fix was clearing a redundant p_label where an exact p is printed. Still missing for all 6 cells: B/SE/CI, which the paper never prints. Figures S5/S6 are online only and no supplement file exists in docs/pdfs. The sleep-length SD is also missing because Table 1 gives category counts only. I logged these as confirmed_missing. The edited file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_295.json, and the JSON validates."
+  }
+ },
+ "302": {
+  "complete": {
+   "paper_id": "302",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 3,
+   "summary": "Paper 302 needed almost no new values; the draft was already complete. I read the whole 5-page PDF, and there is no supplement file in docs/pdfs. All three M1 estimates (texting, video chat, social networking) match Table 2 on p.4: the fully adjusted B, 95% CI and exact p are all present and correct. The SDs were already filled from Table 1 on p.3: sd_iv is 0.56, 0.52 and 0.45, and sd_dv is 30.5. One added change: I set iv_type to continuous. I also added n = 11066 and a verification note to each estimate. For social networking, the note explains why the lower CI is -0.07: the minus sign is lost in the text extraction, and -0.07 fits p = 0.075. No SE or t values are printed anywhere in the PDF, but none are needed because the CI is printed. Appendices A and B, the BMI and BMI z-score sensitivity analyses, exist only as online Supporting Information. I appended entries to verification_log, and the JSON loads without errors. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_302.json"
+  },
+  "audit": {
+   "paper_id": "302",
+   "numbers_checked": 27,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "I read all 5 pages of 10.1111_ijpo.12827.pdf from the page images. There is no supplement file in docs/pdfs; Appendices A and B are online-only. I found no errors. The three fully adjusted Table 2 estimates (p.4) match the paper exactly, including B, both CI bounds, exact p and sig: texting 0.92 (0.29-1.55), p=0.004; video chat 0.72 (0.09-1.36), p=0.025; social networking 0.67 (-0.07-1.41), p=0.075, not significant. The image confirms the minus sign on -0.07. The SDs from Table 1 (p.3) are also correct: texting 0.56, video chat 0.52, social networking 0.45, and 1-year follow-up BMI percentile 30.5. So are N=11,066 and iv_type=continuous. The estimate set is complete, since Table 2 has no other phone or social media rows. The paper does not print SE or t for any of the 3 estimates, which accounts for the 6 values still missing. I added audit entries to verification_log in /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_302.json, and the JSON validates."
+  }
+ },
+ "304": {
+  "complete": {
+   "paper_id": "304",
+   "values_filled": 0,
+   "ci_inputs_filled": 6,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 6,
+   "summary": "I read the whole 23-page PDF for paper 304, including the table pages 18-22. No supplement file is in docs/pdfs, and the paper's Tables S1-S3 are published online only. The draft was already complete: all 6 adjusted prevalence ratios, their 95% CIs and p-values in Tables 2 and 3 match the page images exactly. The texting, video chat and social media SDs (0.6, 0.5, 0.4) and the p0 prevalences (conduct disorder 0.019, ODD 0.063) in Table 1 also match. I set iv_type to continuous and added n=11875 to each estimate; that count is the 6 entered under ci_inputs_filled. Each estimate's note now states that no SE or z statistic is printed anywhere and none is needed because the CIs are printed. sd_dv stays empty because both outcomes are binary. I appended a short note to d_transformation.notes and added 7 entries to verification_log. The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_304.json and loads as valid JSON."
+  },
+  "audit": {
+   "paper_id": "304",
+   "numbers_checked": 23,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 6,
+   "summary": "I read all 23 pages of the PDF, including Tables 1-4 and their footnotes, and checked every number in the draft against it. I found no errors, so nothing was corrected. The 6 adjusted prevalence ratios (texting, video chat and social networking, each against conduct disorder in Table 2 and ODD in Table 3), their 95% CIs, the p-values and the sig flags all match the adjusted columns exactly. The sig flags follow the paper's alpha of 0.05, which has no correction. The three IV SDs (0.6, 0.5, 0.4 from Table 1 p.18), the two baseline prevalences (0.019 and 0.063 from Table 1 p.19), N=11,875 and iv_type continuous (per hour/day) are also correct. The 6 values still missing are the SEs, one for each estimate: the PDF prints no SEs or z values anywhere. The supplement with Tables S1-S3 is not in docs/pdfs, so it could not be checked. No phone or social-media IV x DV cells are missing from the draft. I added 7 audit entries to verification_log and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_304.json"
+  }
+ },
+ "310": {
+  "complete": {
+   "paper_id": "310",
+   "values_filled": 0,
+   "ci_inputs_filled": 12,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 12,
+   "summary": "I read all 13 pages of the PDF. There is no supplement for this paper in docs/pdfs. The draft already had all 12 standardized betas from Table 3 (p.8), so no new native values were added. Changes made: (1) I set M1 iv_type to continuous, because the predictors are latent growth factors. (2) On every estimate I added the unstandardized numbers from Table 3 as separate structured fields: est_unstd, se_unstd, ci_unstd_lo, ci_unstd_hi and p_adjusted_label. I did not put them in 'se' or 'beta_lo/hi', because they are not on the standardized beta scale. (3) The 12 beta CIs are confirmed missing. The paper prints no standardized SE, z or CI anywhere; the SE and 95% CI columns are on the unstandardized scale. Exact p is printed for 10 of the 12 estimates and could support an approximate CI. The other 2 are crystallized rows printed only as p < .001; one of them has the inconsistent SE = 0.12. (4) sd_iv and sd_dv are not needed to convert a standardized beta to d. I added notes on the axes giving the observed Table 1 SDs for reference, and noted that p0 does not apply. I appended to d_transformation.notes and added 25 entries to verification_log. The JSON file loads without error. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_310.json"
+  },
+  "audit": {
+   "paper_id": "310",
+   "numbers_checked": 108,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 36,
+   "summary": "I audited paper 310 (Carvalho and Ravindran 2025, JORA) against the full 13-page PDF and found no errors. There is no supplement file in docs/pdfs. I checked all 12 Table 3 estimates (Models 5-7, p.8) cell by cell against a pdftotext layout extraction: the standardized beta, exact p or p label, BH-adjusted p, sig, location, and the unstandardized Est, SE and 95% CI. Every value and sign matched. I also matched the Table 1 (p.6) means and SDs for SMU, crystallized, Flanker, Pattern Comparison and parent education. The sig flags follow the paper's BH-adjusted p < .05. One row, i_cryst <-> i_sm, is marked significant (p = .024, adjusted .041) even though its printed CI [-0.33, 0.01] includes 0; the paper itself reports that inconsistency, and it is already flagged in the draft. The estimates set is complete (4 SM paths x 3 models = 12), and iv_type continuous is correct. Three things are still missing for each of the 12 estimates (36 values): the SE, CI bounds and z on the standardized scale are not printed anywhere. Table 3's SE and CI columns belong to the unstandardized Est., so they stay in se_unstd and ci_unstd_* and I left the 'se' field unset. I added audit entries to verification_log ('confirmed' per estimate, 'confirmed_missing' for the standardized SE/CI/z, plus checks of the descriptives and completeness), and the file validates as JSON. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_310.json"
+  }
+ },
+ "314": {
+  "complete": {
+   "paper_id": "314",
+   "values_filled": 0,
+   "ci_inputs_filled": 8,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 9,
+   "summary": "Re-read all 10 pages of the PDF, including every figure and table. No supplement file exists locally. The paper prints only chi-squared statistics with exact FDR-corrected p-values, and those were already in the draft. It prints no coefficients, SEs, CIs or chi-squared df. Table 1 has demographics only, so there are no SDs for sleep duration or social media use. Figures 2-5 show category means with SE bars but no coefficient values.\n\nChanges made:\n- Set iv_type to \"continuous\" on M1 and M2, since all predictors were standardized (Section 2.4, p.4).\n- Added test N = 1985 to all 8 estimates as an input for computing a CI.\n- Added the direction sign (-1) to the 4 main effects: SM to sleep, sleep to SM, insula to SM, middle frontal gyrus to SM. The 4 SM x ROI interactions have no sign, because the sign of the interaction coefficient is not printed.\n\nRecorded as missing, with notes on where I looked: coefficients, SE, CI, chi-squared df and SD_IV/SD_DV. These are only in the online Supplementary Tables S1-S2. Entries were appended to verification_log and d_transformation.notes. The JSON is valid."
+  },
+  "audit": {
+   "paper_id": "314",
+   "numbers_checked": 30,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 8,
+   "summary": "I read the whole 10-page PDF (J Sleep Res, 10.1111/jsr.70325). There is no supplement file in docs/pdfs. I checked all 8 estimates against pp. 5-7: the chi-squared values, exact FDR-corrected p-values, sig, sign, N = 1985 and locations all match the paper. M1, SM -> Y4 sleep: 7.76/.016. SM x ROI interactions: NAcc 7.11/.021, cingulate 6.61/.027, insula 9.15/.011, putamen 7.13/.021. M2, Y4 SM on: Y2 sleep 6.72/.021, insula 5.25/.039, MFG 5.09/.042. The covariate statistics also match (189.82, 12.03/.002, 102.55, 29.92), as does the excluded caudate result (8.18/.033). I made no corrections. iv_type = continuous is correct for both models (predictors standardized), and sig follows the paper's FDR p < .05 threshold. Nothing is missing from the set of estimates: Section 3.3 (SM -> brain) prints no statistic, so it stays excluded. All 8 estimates still lack chi2 df, coefficients, SE, CI and SDs; these appear only in the online Supplementary Tables S1-S2, which we don't have, so none of the cells can be converted to d. I logged one paper typo in verification_log: the Y4 sleep group '6-8 h' is printed as 26.8% (n = 611), but the counts sum to 2064, not 1985. No estimate is affected. I added confirmation and confirmed_missing entries to verification_log. The JSON validates."
+  }
+ },
+ "381": {
+  "complete": {
+   "paper_id": "381",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 6,
+   "iv_types_set": 2,
+   "confirmed_missing": 6,
+   "summary": "I read the whole 24-page author manuscript for paper 381, including Tables 1-2 and every page of text. The PDF has no embedded figures, and no supplement file exists in docs/pdfs. I found nothing printed beyond what the draft already had: no CI, SE, exact p or test statistic for any GVAR temporal edge, and the edge from irritability to social media has no value anywhere. That information is only in the online Figure S2 and Tables S1-S2, which are not in this PDF. Changes: (1) set iv_type to \"continuous\" on M1 and M2; (2) filled sd_iv and sd_dv on M1's three IV axes and three DV axes from Table 2 (N = 8979), using baseline SDs for wave t and Year 1 SDs for wave t+1. The other waves' SDs are in sd_note, which also warns that these are for reference only and are not conversion inputs. The edges are partial correlations on detrended variables, so the paper stays non-transformable. (3) On all 6 estimates (4 in M1, 2 in M2), the note now lists where I looked and where the missing values live. (4) Added to d_transformation.notes and appended a verification_log. The M2 sex-specific SDs are not printed. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_381.json"
+  },
+  "audit": {
+   "paper_id": "381",
+   "numbers_checked": 24,
+   "errors_fixed": 2,
+   "error_examples": [
+    "M2 chat_t x irr_t1_male p: was 0.047 (p_label 'p=.047'), now p null with p_sex_difference 0.047, because .047 tests the male vs female difference, not the edge against zero (Supplementary Results p.10)",
+    "M2 chat_t x irr_t1_female p: was 0.047 (p_label 'p=.047'), now p null with p_sex_difference 0.047, same reason (Supplementary Results p.10)"
+   ],
+   "still_missing": 5,
+   "summary": "I checked every number in the draft against the 24-page author manuscript. There is no supplement file in docs/pdfs, so Figure 3, Figure S4 and Tables S1-S2 are not available. The M1 temporal edges match the text on p.9: SNS->irritability 0.12, chat->irritability -0.03, irritability->chat 0.03. The M2 sex-specific chat->irritability edges also match p.10 (males 0.37, females 0.14). All Table 2 SDs are correct for the analytic N=8979: SNS 0.34/0.50/0.78, Chat 0.58/0.77/0.90, irritability 0.39/0.38/0.37. The Year 2 SNS/Chat rows are misaligned in the text extract, but the order in the draft is correct. The only error was on both M2 cells: the printed p=.047 is for the sex difference, so I moved it out of the edge p into p_sex_difference. sig=true stays on the M2 cells because the edges are non-zero after stepup pruning at alpha .05. iv_type continuous is correct. The irritability->SNS edge stays null with sig=false because the paper calls social media unidirectional. No printed phone/SM cells are missing. Still null: CIs, SEs and exact p for all edges, plus the irritability->SNS edge value. These are only in the supplement (Figure S2, Tables S1-S2), and the notes say where I looked. The JSON validates."
+  }
+ },
+ "388": {
+  "complete": {
+   "paper_id": "388",
+   "values_filled": 0,
+   "ci_inputs_filled": 2,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 2,
+   "summary": "I read all 11 pages of the PDF. There is no supplement file in docs/pdfs. Model M1 now has iv_type set to \"continuous\", since the ORs are per 1 SD of the GF score.\n\n- **Confidence intervals filled for both estimates.** Fig. 5 (p.8) prints each estimate as \"OR \u00b1 0.09\" under the axis label \"Odds Ratio +/- 95% CI\", so it gives the 95% CI as a half-width. I filled the bounds as OR \u00b1 0.09:\n  - Texting: 1.05, CI 0.96\u20131.14\n  - Weekday social SMA: 0.96, CI 0.87\u20131.05\n  \n  Each estimate now has ci_halfwidth 0.09 and ci_source \"symmetric_from_printed_halfwidth\". This rebuilt CI is accurate to about \u00b10.01. The other factors' CIs, where the text also prints them, are slightly asymmetric: games vs social media 0.76\u20130.90 rebuilt vs 0.76\u20130.89 in the text, and media and internalizing 1.01\u20131.19 vs 1.02\u20131.18. I added this caveat to the estimate notes and to d_transformation.notes.\n- **Still missing (confirmed).** No exact p, SE or z is printed anywhere for the two phone/social-media factors; the text only says they were non-significant.\n- **No SDs needed.** For an OR per 1 SD of the factor score, the Chinn conversion uses no SD inputs, and the factor scores have no descriptive statistics.\n- **Not available without the supplement.** The item loadings for these factors (Suppl. Figs. 4-15), the five activity-specific models (Suppl. Figs. 16-20) and Suppl. Table 1 are only in the online supplement.\n\nAll actions are recorded in verification_log, and the JSON loads without errors. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_388.json"
+  },
+  "audit": {
+   "paper_id": "388",
+   "numbers_checked": 34,
+   "errors_fixed": 2,
+   "error_examples": [
+    "Texting GF x any activity OR_hi: was 1.14 (OR+0.09, symmetric), now 1.15 (OR^2/OR_lo, log-symmetric). Across 10 cells where the text also prints a CI, the Fig. 5 '\u00b1' matches OR minus the lower bound, not a symmetric half-width (Fig. 5 p.8; text CIs pp.1, 6)",
+    "Weekday social SMA GF x any activity OR_hi: was 1.05, now 1.06 (same reasoning; OR_lo 0.87 kept) (Fig. 5 p.8)"
+   ],
+   "still_missing": 2,
+   "summary": "I audited paper 388 (Lees et al. 2020, BMC Public Health) against all 11 pages of the PDF. There is no supplement in docs/pdfs. I zoomed into Fig. 5 at 200 dpi. Both point estimates are correct: Texting is 1.05 \u00b1 0.09 and Weekday social SMA is 0.96 \u00b1 0.09. sig=false is correct, since the text names only the games-vs-social-media and media-and-internalizing factors as significant and both reconstructed CIs include 1. iv_type is continuous, which is correct because ORs are per 1 SD of the factor score. p0 = 0.898 (8308/9254) is correct. Table 1 descriptives, model-fit stats (R\u00b2 0.35/0.34, BIC 5146.9, \u0394BIC 52.8, LRT 84.2) and the excluded-model ORs (0.99\u00b10.07, 1.07\u00b10.08, 0.83 (0.76\u20130.89), 1.10 (1.02\u20131.18)) all match. One correction: the '\u00b1' in Fig. 5 is not a symmetric 95% CI half-width. In the 10 cells where the text also prints a CI, the \u00b1 matches OR minus the lower bound within 0.02, but the gap to the upper bound is much larger for wide CIs (e.g. Asian 0.47\u00b10.22 vs 0.25\u20130.87). So OR_lo stays as OR\u22120.09, and I changed OR_hi to the log-symmetric value OR\u00b2/OR_lo: Texting 1.14\u21921.15, Weekday social 1.05\u21921.06. I flagged the new method in ci_source and the notes. Still missing: p, SE and z for both estimates. They are not printed in the main text, and the supplement (Additional file 1, Suppl. Figs. 4\u201320) is not available. That also means the texting and weekday-social estimates for the five activity-specific models cannot be added. I logged every change in verification_log, and the JSON validates."
+  }
+ },
+ "389": {
+  "complete": {
+   "paper_id": "389",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 4,
+   "summary": "I read all 9 pages of the paper and checked the draft against them. All four Model 3 estimates (social media time and SMAQ, each against positive and negative alcohol expectancies) already had their B, 95% CI and p, and they match Table 2 on p.7. The two SMAQ CIs also match the Results text on p.4. The SDs already on the IV and DV axes match Table 1 on p.6 (1.62, 0.90, 0.61, 0.78), so nothing new was filled. Changes: I set iv_type to continuous, added page numbers to the locations, and added a note on each estimate saying where I looked for an SE, t or df (none is printed anywhere, and none is needed because the CIs are printed). The notes also say that SDs for the n=5,642 Model 3 subset are not reported. Supplementary Tables S1-S2 are not bundled with the PDF. I added entries to verification_log and to d_transformation.notes. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_389.json"
+  },
+  "audit": {
+   "paper_id": "389",
+   "numbers_checked": 28,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 4,
+   "summary": "I read all 9 pages of the paper. There is no supplement file in docs/pdfs, and Supplementary Material 1 is not bundled with the PDF. I checked the four Model 3 estimates (social media time and SMAQ, each against positive and negative expectancies) against Table 2 on p.7 by pdftotext and by eye: every B, both CI bounds and every p / p_label matches exactly. Sig is correct under the paper's two-sided alpha of .01: the two SMAQ cells are significant (p<0.001) and the two social media time cells are not (CIs include 0). sd_iv (1.62 and 0.90) and sd_dv (0.61 and 0.78) match Table 1 on p.6. iv_type continuous is correct. The estimate set is complete (2 IVs x 2 DVs). The draft's reference values for the excluded Models 1 and 2 also match Table 2. I made no corrections. The 4 values still missing are the SE/t/df for each estimate, which the paper does not print anywhere. The existing notes say where that was checked, and I added audit confirmed_missing entries to verification_log. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_389.json"
+  }
+ },
+ "394": {
+  "complete": {
+   "paper_id": "394",
+   "values_filled": 2,
+   "ci_inputs_filled": 2,
+   "sds_filled": 6,
+   "iv_types_set": 1,
+   "confirmed_missing": 1,
+   "summary": "I checked all 18 estimates in paper 394 against Table 2, Model 2 (p.6) of the PDF. Two of them were wrong in the draft, and I corrected both. Texting x conduct had been copied from the video-games row: it said 0.10 (0.05, 0.16), p=.001, and the table prints 0.33 (0.11, 0.56), p=.006. Video chat x conduct had taken texting's value: it said 0.33, and the table prints 0.35 (0.14, 0.57), p=.002. The draft also had p=0.0005 for video chat x depressive, which the paper does not print. I set that p to null with p_label \"<0.001\". Every cell now has a location and a sig flag, and its p matches the table. I set iv_type to continuous. I changed sd_dv from the standard t-score SD of 10 to the SDs printed in Table 1 for the analysis sample (N=9,538): depressive 6.1, anxiety 6.3, somatic 6.6, ADHD 5.6, ODD 5.4, conduct 5.4. Those are baseline SDs, because the paper prints no SDs for the follow-up waves. The old value of 10 is kept as sd_dv_normative, so the switch can be undone if you prefer it. sd_iv was already correct against Table 1 (0.6, 0.7, 0.1 h/day). SE, t and df are not printed anywhere in the 13 pages, but all 18 cells have a printed CI and p. Appendices A and B are online-only and there is no supplement file in docs/pdfs; I noted this as confirmed missing. The edited file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_394.json, with 16 entries in verification_log and a note added to d_transformation.notes; it loads as valid JSON."
+  },
+  "audit": {
+   "paper_id": "394",
+   "numbers_checked": 99,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 54,
+   "summary": "I checked all 13 pages of the PDF; there is no supplement file in docs/pdfs. For all 18 estimates (texting, video chat, social media x six CBCL scales), I compared B, both CI bounds, p or p_label and sig against Table 2 Model 2 (the adjusted model) on p.6, using the PDF's text layer. All of them match, including the earlier fixes to texting x conduct (0.33 [0.11, 0.56], p=.006) and video chat x conduct (0.35 [0.14, 0.57], p=.002). The sig flags follow the paper's alpha of .05 with no correction, and every sig cell's CI excludes 0. The SDs also match Table 1 for the N=9,538 sample: sd_iv is 0.6, 0.7 and 0.1, and sd_dv is 6.1, 6.3, 6.6, 5.6, 5.4 and 5.4. iv_type is continuous, which is correct because daily hours enter the model as a continuous variable. The PDF reports no phone or social-media estimates for this model beyond these 18 cells; Table 3 covers total screen time only. SE, t and df are not printed anywhere, so 54 values stay empty (3 fields x 18 cells). I added a note on every estimate saying where I looked, logged three audit entries, and the JSON loads cleanly. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_394.json"
+  }
+ },
+ "395": {
+  "complete": {
+   "paper_id": "395",
+   "values_filled": 0,
+   "ci_inputs_filled": 2,
+   "sds_filled": 0,
+   "iv_types_set": 1,
+   "confirmed_missing": 8,
+   "summary": "I read all 11 pages of the PDF. The supplement is not bundled, and no other files share the stem. All 8 B values and their 95% CIs in M1 (social media trajectory groups 2-5 vs group 1, on CBCL anxiety and depression at year 3) were already filled. They match Table 4 on p.8. I set M1 iv_type to \"categorical\". Two depression p-values print as '< 0.001' (groups 3 and 5). For those I set p to null and p_label to \"<.001\", following the convention. The paper prints no SE, t or df, and no sample SD for the outcomes; I checked Tables 1-2, the text and Fig 1. So sd_dv stays at 10, the CBCL t-score norm SD. Each estimate's note now lists the group sizes from Table 2, with reference group 1 at n=4,255. I appended entries to verification_log, and the JSON still loads cleanly. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_395.json"
+  },
+  "audit": {
+   "paper_id": "395",
+   "numbers_checked": 52,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 16,
+   "summary": "I read the whole 11-page PDF. There is no supplement file in docs/pdfs; Supplementary Material 1 is cited on p.10 but not bundled. I checked all 8 estimates (SM trajectory groups 2-5 x Y3 CBCL anxiety/depression) against Table 4 on p.8, covering B, both CI bounds, p, p_label and sig. Every value matches exactly, and each sig flag matches the paper's bolding. The 4 group sizes match Table 2 on p.6 (Group 4 n = 226; the Results text on p.4 prints 266). iv_type categorical is correct. The estimates set is complete: there are no other SM main-effect cells. Still missing: SE and t for all 8 estimates, which the paper never prints. The sample SD of the Y3 t-scores is also not printed, so I kept the CBCL norm SD of 10 as sd_dv. Audit entries are appended to verification_log, and the JSON validates."
+  }
+ },
+ "398": {
+  "complete": {
+   "paper_id": "398",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 17,
+   "summary": "Paper 398 (Guerrero 2019) is a 10-page PDF with no bundled supplement. I checked it against the text layer of Tables 1-3. Every social media value already in the draft matches what is printed: B, exact p, the 95% CI on the log scale, the IRR, and the Table 1 SDs for the IV, the CBCL scales and sleep. Nothing new was printed that could be filled. I set iv_type to continuous on M1, M2 and M3. The paper prints no SE, t or z anywhere, and Table 2 gives CIs on the B (log) scale only, so IRR_lo and IRR_hi stay null. M3 indirect effects have a CI and exact p but no SE. I wrote these confirmed-missing points into each estimate's note and the verification_log, appended a line to d_transformation.notes, and checked that the JSON loads. Two existing flags still stand: the aggressive-behavior CI (.029, .053) excludes its own B, and the IV coding is ambiguous between 4 categories and hours. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_398.json"
+  },
+  "audit": {
+   "paper_id": "398",
+   "numbers_checked": 96,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 17,
+   "summary": "I read the whole 10-page PDF. There is no supplement file in docs/pdfs; Additional file 1 holds only the covariate associations. I checked all 17 social media estimates against the paper and found no errors, so nothing was corrected.\n- M1 (direct effects on the 8 CBCL scales): B, p, 95% CI, IRR and sig all match Table 2 (pp. 5-6) and the Fig. 1 social media column. Only rule-breaking (.08) and aggressive (.06) are significant, both p <.001. The aggressive CI (.029, .053) excludes its own B of .06. That is how the paper prints it, and the draft already flags it as a likely typo.\n- M2 (social media to sleep duration): B -.03, p .064, CI -.068 to .002, IRR .968, not significant. Matches Table 2, p. 6.\n- M3 (8 indirect effects through sleep): all match Table 3 (pp. 8-9). p values run .057 to .065, so none are significant.\n- SDs and iv_type: the SD for social media (1.15), the eight CBCL raw-score SDs and the sleep SD (1.11) match Table 1. iv_type is continuous for all three models. The existing flag stays: the Methods say screen time was put into 4 groups, but the Results read coefficients as per hour.\n- Still missing (17 estimates): no SE, z/t or IRR-scale CI is printed for any estimate. The notes already say where I looked.\n- No cells are missing from the draft.\nI added five audit entries to verification_log in /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_398.json, and the JSON loads cleanly."
+  }
+ },
+ "400": {
+  "complete": {
+   "paper_id": "400",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 18,
+   "summary": "Re-read the full PDF, all 13 pages: Tables 1 to 6, Methods, Results and Discussion. No supplement for this paper is in docs/pdfs; Supplementary Material 1 is online only. All 18 estimates already had their native value and 95% CI: 16 isotemporal B cells from Table 2 and 2 CoDA ILR coefficients from Table 6. None were missing. The paper prints no coefficient SE, no exact p, and no t. Table 2 marks significance with asterisks only, and Table 6 marks it in bold only. No SD is printed for the IV or the DV. Table 1 gives only survey-weighted mean (SE) with site clustering. I did not use SE*sqrt(n) because it gives impossible SDs, about 3.6 for follow-up BMI z and about 142 min/day for socializing against a mean of 31.5; the arithmetic is written in the axis notes. Table 5 gives only pairwise log-ratio variances, so the SD of the ILR1 coordinate cannot be derived. I set iv_type to continuous for both M1 and M2. I added notes on every axis and estimate saying where I looked, appended to d_transformation.notes, and logged 20 verification_log entries. JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_400.json"
+  },
+  "audit": {
+   "paper_id": "400",
+   "numbers_checked": 72,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 18,
+   "summary": "I read the full 13-page PDF. It has no supplement in docs/pdfs. I checked every estimate in the draft against the page images and the PDF text layer. That covers 18 estimates, each with a value, two CI bounds and a sig flag, so 72 numbers.\n\nM1 is the isotemporal substitution model in Table 2 (p.7). All 16 socializing cells match the table exactly, 8 for females and 8 for males. For each cell, the row, column, sign, decimals and significance asterisk (*, ** or ***) are all correct.\n\nM2 is the compositional ILR model in Table 6 (p.9). The female socializing estimate is -0.01 (-0.03, 0.01), not significant. The male estimate is 0.05 (0.02, 0.08), bold, so significant. Both match the draft.\n\niv_type is continuous for both models, which is correct: M1 uses minutes/30 and M2 uses the ILR coordinate. No socializing cells are missing.\n\nI found nothing wrong, so I made no corrections. One discrepancy is in the paper itself. For males replacing 30 min of socializing with 30 min of gaming, the Abstract prints the CI as (-0.03, -0.0001). Table 2 and the Results on p.5 both print (-0.02, -0.0001). I kept the Table 2 value and added a note to that estimate.\n\nSeveral fields are not printed anywhere in the paper, so they stay null for all 18 estimates:\n- SE, exact p and t.\n- sd_iv and sd_dv. Tables 1 and 3 give only the survey-weighted mean with its SE, not an SD.\n\nI logged each confirmation in verification_log with stage \"audit\". File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_400.json. It loads as valid JSON."
+  }
+ },
+ "404": {
+  "complete": {
+   "paper_id": "404",
+   "values_filled": 0,
+   "ci_inputs_filled": 2,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 1,
+   "summary": "I read all 6 pages of the PDF. No supplement file is bundled, and Appendices A-E are online only. All main values and CIs were already in the draft. I added the printed cluster-robust SEs from Table 2's adjusted columns: 0.17 for 'used' and 0.19 for 'don't know' (M1). For those two estimates, p_label is now null because the exact p values are printed. M1 iv_type is set to categorical (3 levels), and M2 iv_type is set to binary. M1 sd_dv of 2.9 checks out against Table 1. For M2 (youth-reported internalizing), the SE, exact p, analytic N and SD_DV are not in the PDF; they live only in online Appendix E. I logged these as missing and noted it. The file was edited in place at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_404.json, and it passes the JSON validation check."
+  },
+  "audit": {
+   "paper_id": "404",
+   "numbers_checked": 22,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 5,
+   "summary": "I read the whole 6-page PDF and checked the draft against it. The repo has no supplement file for this paper, so Appendices A-E could not be checked. Every number in the draft matches the paper, so I made no corrections.\n\nM1 (Table 2, adjusted columns, p. 3):\n- Ever used a dating app: beta 0.42 (0.08, 0.76), cluster-robust SE 0.17, p = 0.017, significant.\n- Don't know what a dating app is: beta 0.04 (-0.33, 0.41), SE 0.19, p = 0.817, not significant.\n- SD of the depression score is 2.9 (Table 1 and Results, p. 3).\n- The unadjusted values in the note and in excluded_models also match: 0.47 (0.12, 0.82), SE 0.18, p = 0.009; and -0.02 (-0.39, 0.35), SE 0.19, p = 0.921.\n- Significance follows the paper's two-sided alpha of .05. iv_type \"categorical\" is right: the IV has three levels with \"never used\" as reference.\n\nM2 (youth-reported internalizing, Results p. 4): beta 0.66 (0.34, 0.99), p < 0.001 matches the text. iv_type \"binary\" is right.\n\nThe Appendix D sensitivity values (0.44, 0.03-0.85, p = 0.035) match the text.\n\nNo estimates are missing for these model specifications.\n\nFive values remain unfilled because the PDF does not print them, and the log says so:\n- SD of the IV (M1)\n- t statistics (M1)\n- M2 SE\n- M2 SD of the outcome\n- M2 analytic N\n\nThe M2 values are only in online Appendix E, which is not in docs/pdfs.\n\nThe only edit to existing fields was adding \"p. 3\" to the M1 location strings. I added audit confirmation entries to verification_log, and the JSON loads cleanly. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_404.json."
+  }
+ },
+ "420": {
+  "complete": {
+   "paper_id": "420",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 26,
+   "iv_types_set": 2,
+   "confirmed_missing": 2,
+   "summary": "I re-read the whole 23-page PDF of Paulich et al. 2021 (PLoS ONE). No supplement file for this DOI is in docs/pdfs. Every coefficient for texting, social media and video chat (M1 weekday, M2 weekend, 78 cells each) appears only in Supplementary Tables S6-S31. Those are separate DOCX files, and the PDF prints only their titles (pp. 18-21). Tables 1-5 and the Results and Discussion text give no per-type beta, SE, t, p or CI; the text has only narrative statements about significance. So no values or CI inputs could be filled, and both models' estimates are logged as confirmed_missing with the places I checked. I set iv_type to continuous on both models. I added sex-specific in-sample SD_DV from Table 1 (Part 1 and Part 2) as sd_dv_male and sd_dv_female on all 13 DV-axis entries of each model (26 entries). I added a note to d_transformation.notes and appended verification_log entries. The file is valid JSON at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_420.json. To finish this paper, someone needs to get the S6-S31 DOCX supplements from PLOS."
+  },
+  "audit": {
+   "paper_id": "420",
+   "numbers_checked": 82,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 156,
+   "summary": "I read all 23 pages of the PDF. The main paper has no texting, social media or video chat coefficients. Tables 2-5 report total screen time only, and those models are correctly excluded. Each per-modality estimate is only in Supplementary Tables S6-S18 (weekday, M1) and S19-S31 (weekend, M2). PLOS ONE publishes these as separate DOCX files, and none of them are in docs/pdfs, so both models still have 0 estimates. That leaves 78 cells missing per model (3 modalities x 13 outcomes x 2 sexes), 156 in total. I checked every number already in the draft against Table 1 (p.8-9) and found no errors. That covers 12 sd_iv values plus the IV means for each modality, day type and sex. It also covers 52 sex-specific outcome SDs and the analytic-sample sizes (11,727; 11,672; 6111/5613; 6071/5598). iv_type = continuous is correct, because hours (0 to 4+) enter as a numeric predictor. One caveat: the CBCL outcomes have sd_dv set to 10 by convention, not the in-sample SD. The in-sample sex-specific SDs are stored next to it, and the native metric is standardized beta, so the conversion does not depend on it. I logged all of this as audit entries in verification_log and added an audit note to each model's estimates_note. The JSON validates. To finish this paper, someone needs to download the S6-S31 DOCX supplements from PLOS ONE."
+  }
+ },
+ "431": {
+  "complete": {
+   "paper_id": "431",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 3,
+   "confirmed_missing": 14,
+   "summary": "Read all 19 pages of the manuscript and all 10 pages of the supplement PDF. The supplement contains only eMethods and Figures S1-S2; all of its tables are in an Excel appendix we don't have. Nothing new could be filled: all 9 Model 2 odds ratios already had their printed 95% CIs and p values from the Results text (pp. 5-6). These match Figures 2-3, and the abstract repeats 8 of them. No SEs, z statistics or per-model Ns are printed anywhere in the PDFs; they exist only in Excel Supplemental Tables S3-S11. Set iv_type to binary for M1, continuous for M2 and binary for M3. Recorded these as confirmed missing: SE/z/N for each of the 9 estimates; the SD of age at first smartphone for M2 (only median 11, IQR 10-11 and range 4-13 are printed); p0 for M3, because Table 2 gives only 2-year pre-exposure rates; and sd_dv for M1/M2, which the Chinn OR-to-d conversion doesn't need. Added the Abstract to the location of the 8 estimates it prints, and appended to d_transformation.notes and verification_log. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_431.json"
+  },
+  "audit": {
+   "paper_id": "431",
+   "numbers_checked": 57,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 11,
+   "summary": "I read the whole 19-page manuscript and the 10-page supplement PDF. I checked every number in the draft for paper 431 against them and found no errors, so I changed no values. That covers all 9 Model 2 ORs, their CIs, p-values and p_labels, sig flags, locations, the p0 values for M1 and M2, and iv_type for each model.\n\n- **ORs and CIs:** all 9 match the Results text on pp. 5-6 and the abstract. The intervals also look consistent with Figures 2-3, but I took no values from the plots.\n- **sig flags:** all match the paper's P < 0.017 threshold. M1 depression has p = .016, so it counts as significant. M2 depression and M3 obesity are not significant, and their CIs include 1.\n- **p0 values:** they match Table 1 on p. 17. That is non-owners for M1 (4.52%, 11.80%, 31.02%) and owners for M2 (6.38%, 17.73%, 47.16%).\n- **iv_type:** M1 binary, M2 continuous (the paper inverts the ORs to read per one year earlier), M3 binary. All correct.\n- **Completeness:** no Model 2 cell is missing from the estimates.\n\nStill missing (11):\n- **SE, z and per-model N for all 9 estimates:** these are only in the Excel tables S3-S11, which are not among the files we have.\n- **M2 sd_iv:** the SD of age at acquisition is not printed. The paper gives only the median (11) and IQR (10-11).\n- **M3 p0:** the 3-year outcome rates are not reported. Table 2 gives only the 2-year values.\n\nI added audit \"confirmed_missing\" entries to verification_log, and the JSON loads without errors.\n\nFile: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_431.json"
+  }
+ },
+ "435": {
+  "complete": {
+   "paper_id": "435",
+   "values_filled": 0,
+   "ci_inputs_filled": 13,
+   "sds_filled": 0,
+   "iv_types_set": 4,
+   "confirmed_missing": 6,
+   "summary": "Read the full 10-page PDF, including Tables 1-2, Figures 1-3 and the text. The file 10.1542_pedsos.2025-000922_205729.pdf is the same article in a different download, and no supplement file is in the folder. All native values were already filled and match the PDF. I set iv_type to continuous on M1-M4. I moved the printed SEs into the 'se' field for 13 estimates: 9 cells from Table 2 in M1, M2 cumulative 0.15 (SE 0.03), the two M3 cross-lagged paths (SE 0.01 and 0.004), and M4 yearly (SE 0.001). The paper prints no CIs anywhere. Confirmed missing: CI and exact p for the non-significant M1 cells; the SD of the M2 change score and its analytic N; inattention SDs at T1-T4 for M3 (I recorded the SM wave SDs in the iv_axis meta); and any SE or p for the M4 total effect. None of the SDs are needed because every estimate is a standardized beta. I added a verification_log and appended a note to d_transformation.notes. The JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_435.json"
+  },
+  "audit": {
+   "paper_id": "435",
+   "numbers_checked": 58,
+   "errors_fixed": 0,
+   "error_examples": [],
+   "still_missing": 14,
+   "summary": "I read all 10 pages of the PDF, and checked the text layer of Table 2 as well. Every number in the draft matches the paper, so I made no corrections.\n\n- **Table 2 (p.6):** all 9 social-media cells match on beta, SE, sign and Bonferroni marker (a = <.001, b = <.005).\n- **Text values:** these also match: p = .002 and P < .001 in the Results (p.5); the cumulative effect 0.15 [0.03], P < .001; the cross-lagged paths 0.03 [0.01], P = .004 and -0.002 [0.004], P = .64 (Figure 3 marks P < .01); and the reverse-direction effect -0.01 [0.001], P < .001 with a total of -0.01 that has no SE or p.\n- **sig:** each flag matches the paper's Bonferroni markers. For example, social media \u00d7 time on hyperactivity (-0.03, SE 0.01) has no marker, so it stays not significant.\n- **SDs and iv_type:** sd_iv 1.0 and sd_dv 3.0, 1.9 and 1.8 match Table 1. iv_type is continuous for all 4 models.\n- **Missing estimates:** none of the social-media cells for these model specifications are missing.\n\n**Still null (14):** all 13 CIs, plus the SE and p for the M4 total effect. They are not printed anywhere in the PDF. There is no _supplement file in docs/pdfs; the _205729 file is a second 10-page download of the same article.\n\nI added audit entries to verification_log, and the JSON loads without errors. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_435.json"
+  }
+ },
+ "443": {
+  "complete": {
+   "paper_id": "443",
+   "values_filled": 0,
+   "ci_inputs_filled": 0,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 18,
+   "summary": "I read all 14 pages of the PDF, and nothing more could be filled. No supplement file for this paper is saved locally. All 18 cross-lagged estimates (9 female, 9 male) already had their B values, and those match the Results text on p.731. The paper prints no SE, CI, exact p, t/z or df for any CLPN edge. Fig. 4B shows no numbers on its edges and hides edges with |B| < 0.05. Table 1 (p.727) gives demographics only, with no SDs for SMAQ, MPIQ, CBCL, UPPS, BIS/BAS or E1-E6. The full edge matrix is only in online eTable 10, which is not here. I set iv_type to continuous on M1 and M2. I added a note to each estimate saying where I looked. The nodes are standardized residuals (p.728), so their SD is 1 by definition. I still left sd_iv and sd_dv null because the coefficients are LASSO-shrunk and the paper stays d_transformable=false. I appended to d_transformation.notes, added verification_log entries, and checked that the JSON loads. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_443.json"
+  },
+  "audit": {
+   "paper_id": "443",
+   "numbers_checked": 18,
+   "errors_fixed": 8,
+   "error_examples": [
+    "M1 A2->BAS location: was 'pp. 730-731' generic, now p. 731 left column, female-network paragraph (Results p.731)",
+    "M1 A2->E3 location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A2->C5 location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A3->UPPS location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A3->BAS location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A3->BIS location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A3->E5 location: was 'pp. 730-731', now p. 731 left column (Results p.731)",
+    "M1 A3->E4 location: was 'pp. 730-731', now p. 731 left column (Results p.731); A2->C3 location also made explicit (p.730 last line continuing p.731)"
+   ],
+   "still_missing": 18,
+   "summary": "I checked all 18 cross-lagged B values against the page image of p. 731: 9 from the female network (M1) and 9 from the male network (M2). Every value and sign matches, including the female A2->C5 edge at -0.251 (pdftotext drops the minus sign, so this was checked against the page image). I found no numeric errors. My only corrections were to the M1 location strings, which I narrowed from 'pp. 730-731' to the exact page and column. No estimate cells are missing: the paper prints 9 A2/A3 edges to non-screen nodes per sex, and the draft has all of them. The A2<->A3 and A1 edges are correctly left out. iv_type 'continuous' is right for both models. For each of the 18 estimates, the SE, CI, p, t/z and df are still null because the 14-page PDF does not print them. The SDs for sd_iv and sd_dv are not printed either. No supplement file is in docs/pdfs, and the full edge matrix is online only (eTable 10). I kept sig=true because each edge is non-zero after LASSO and the authors call these significant associations. The paper prints no CIs to check that against. Every check is logged in verification_log as stage 'audit'. The file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_443.json and it passes the JSON check."
+  }
+ },
+ "521": {
+  "complete": {
+   "paper_id": "521",
+   "values_filled": 0,
+   "ci_inputs_filled": 16,
+   "sds_filled": 0,
+   "iv_types_set": 2,
+   "confirmed_missing": 4,
+   "summary": "I re-read the whole 9-page PDF. There is no supplement file, and the paper has no supplementary-material section. Every native value, 95% CI and exact p in M1 (Table 2) and M2 (Tables 3 and 5) was already filled and matches the printed tables. I set iv_type to binary for M1 (autism vs typically developing) and categorical for M2 (three-level duration category). I added group sizes (n1/n0) and group means to the 4 M1 estimates, and exposed and reference-group n to the 12 M2 estimates. The M2 p0 values were already present. The SD of minutes per day for the M1 outcomes is not printed anywhere in the paper (Tables 1-5 and the text, pp. 3-8 checked), so sd_dv stays null on all 4 M1 cells. That gap is recorded in each estimate's note and in verification_log. No SEs are printed, but none are needed because the CIs and exact p values are there. I appended to d_transformation.notes and validated the JSON. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_521.json"
+  },
+  "audit": {
+   "paper_id": "521",
+   "numbers_checked": 116,
+   "errors_fixed": 4,
+   "error_examples": [
+    "M1 autism_boys x svc_min note: was 'n1/n0 = %d autism / %d TD' (unfilled placeholder), now 'n1/n0 = 159 autism / 795 TD' (Table 2 p.5)",
+    "M1 autism_girls x svc_min note: was '%d autism / %d TD', now '27 autism / 135 TD' (Table 2 p.5)",
+    "M1 autism_boys x text_min note: was '%d autism / %d TD', now '159 autism / 795 TD' (Table 2 p.5)",
+    "M1 autism_girls x text_min note: was '%d autism / %d TD', now '27 autism / 135 TD' (Table 2 p.5)"
+   ],
+   "still_missing": 0,
+   "summary": "I read the whole 9-page PDF (there is no supplement) and checked the draft against it. Paper 521 has 16 estimates. M1 has 4: ratio of means from Table 2, for social/video chat and texting by autism status, within boys and within girls. M2 has 12: prevalence ratios of obesity from Table 3 (all children) and Table 5 (autism and TD strata). For each estimate I checked the native value, both CI bounds, the exact p, sig, n1/n0, and the group means or p0. All of them match the paper exactly. Sig is also right: the paper's rule is p < 0.05, so Table 3 texting 30+ min (p = 0.05, CI 1.00-2.01) is correctly non-significant. The p0 values (reference-row prevalences 14.8/15.2/17.6/14.2/16.6/14.8%) are correct. iv_type is right on both models: binary for M1 and categorical for M2. The estimate set is complete for the phone/SM screen types. The paper does not print SEs, test statistics or SDs anywhere, so those fields stay null and are correctly noted as not printed. The only fix was in the four M1 estimate notes, which had an unfilled '%d autism / %d TD' placeholder; they now give the actual group sizes. Every change and an overall confirmation entry are in verification_log, and the JSON validates. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_521.json"
+  }
+ }
+}

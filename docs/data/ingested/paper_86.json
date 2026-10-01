@@ -72,37 +72,37 @@
     {
      "id": "dep",
      "label": "Depressive problems (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 6.26,
      "p0": null
     },
     {
      "id": "anx",
      "label": "Anxiety problems (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 6.26,
      "p0": null
     },
     {
      "id": "som",
      "label": "Somatic problems (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 6.18,
      "p0": null
     },
     {
      "id": "att",
      "label": "Attention/deficit (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 5.38,
      "p0": null
     },
     {
      "id": "odd",
      "label": "Oppositional defiant problems (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 4.99,
      "p0": null
     },
     {
      "id": "cond",
      "label": "Conduct problems (CBCL T)",
-     "sd_dv": 10,
+     "sd_dv": 4.71,
      "p0": null
     },
     {
@@ -122,14 +122,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Depressive Problems",
-     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF).",
+     "location": "Figure 1 (p.5), Phone Use, Depressive Problems",
+     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF). [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.31 \u00d7 1.1 / 10 = 0.0341;  d = 2(0.0341) / \u221a(1 \u2212 0.0341\u00b2) = 0.0682",
-     "derived_d": 0.0682,
+     "derived_d_calc": "\u03b2_std = 0.31 \u00d7 1.1 / 6.26 = 0.0545;  d = 2(0.0545) / \u221a(1 \u2212 0.0545\u00b2) = 0.1091",
+     "derived_d": 0.1091,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=6.26)"
     },
     {
      "iv": "mpiq",
@@ -140,14 +140,14 @@
      "p": null,
      "p_label": null,
      "sig": false,
-     "location": "Figure 1, Phone Use, Anxiety Problems",
-     "note": "CI visibly crosses zero; text states PSU was not associated with anxiety.",
+     "location": "Figure 1 (p.5), Phone Use, Anxiety Problems",
+     "note": "CI visibly crosses zero; text states PSU was not associated with anxiety. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.03 \u00d7 1.1 / 10 = 0.0033;  d = 2(0.0033) / \u221a(1 \u2212 0.0033\u00b2) = 0.0066",
-     "derived_d": 0.0066,
+     "derived_d_calc": "\u03b2_std = 0.03 \u00d7 1.1 / 6.26 = 0.0053;  d = 2(0.0053) / \u221a(1 \u2212 0.0053\u00b2) = 0.0105",
+     "derived_d": 0.0105,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=6.26)"
     },
     {
      "iv": "mpiq",
@@ -158,14 +158,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Somatic Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Phone Use, Somatic Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.21 \u00d7 1.1 / 10 = 0.0231;  d = 2(0.0231) / \u221a(1 \u2212 0.0231\u00b2) = 0.0462",
-     "derived_d": 0.0462,
+     "derived_d_calc": "\u03b2_std = 0.21 \u00d7 1.1 / 6.18 = 0.0374;  d = 2(0.0374) / \u221a(1 \u2212 0.0374\u00b2) = 0.0748",
+     "derived_d": 0.0748,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=6.18)"
     },
     {
      "iv": "mpiq",
@@ -176,14 +176,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Attention/Deficit",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Phone Use, Attention/Deficit",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.23 \u00d7 1.1 / 10 = 0.0253;  d = 2(0.0253) / \u221a(1 \u2212 0.0253\u00b2) = 0.0506",
-     "derived_d": 0.0506,
+     "derived_d_calc": "\u03b2_std = 0.23 \u00d7 1.1 / 5.38 = 0.047;  d = 2(0.047) / \u221a(1 \u2212 0.047\u00b2) = 0.0942",
+     "derived_d": 0.0942,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=5.38)"
     },
     {
      "iv": "mpiq",
@@ -194,14 +194,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Oppositional Defiant Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Phone Use, Oppositional Defiant Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.16 \u00d7 1.1 / 10 = 0.0176;  d = 2(0.0176) / \u221a(1 \u2212 0.0176\u00b2) = 0.0352",
-     "derived_d": 0.0352,
+     "derived_d_calc": "\u03b2_std = 0.16 \u00d7 1.1 / 4.99 = 0.0353;  d = 2(0.0353) / \u221a(1 \u2212 0.0353\u00b2) = 0.0706",
+     "derived_d": 0.0706,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=4.99)"
     },
     {
      "iv": "mpiq",
@@ -212,14 +212,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Conduct Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Phone Use, Conduct Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.2 \u00d7 1.1 / 10 = 0.022;  d = 2(0.022) / \u221a(1 \u2212 0.022\u00b2) = 0.044",
-     "derived_d": 0.044,
+     "derived_d_calc": "\u03b2_std = 0.2 \u00d7 1.1 / 4.71 = 0.0467;  d = 2(0.0467) / \u221a(1 \u2212 0.0467\u00b2) = 0.0935",
+     "derived_d": 0.0935,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=4.71)"
     },
     {
      "iv": "mpiq",
@@ -230,8 +230,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Phone Use, Weekly sleep duration",
-     "note": "Units of sleep duration ambiguous (Figure label 'weekly'; Table 1 'hours per night'). Text reports significant association with shorter sleep duration.",
+     "location": "Figure 1 (p.5), Phone Use, Weekly sleep duration",
+     "note": "Units of sleep duration ambiguous (Figure label 'weekly'; Table 1 'hours per night'). Text reports significant association with shorter sleep duration. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.12 \u00d7 1.1 / 1.58 = -0.0835;  d = 2(-0.0835) / \u221a(1 \u2212 (-0.0835)\u00b2) = -0.1677",
      "derived_d": -0.1677,
@@ -248,14 +248,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Depressive Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Social Media Use, Depressive Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.42 \u00d7 0.89 / 10 = 0.0374;  d = 2(0.0374) / \u221a(1 \u2212 0.0374\u00b2) = 0.0748",
-     "derived_d": 0.0748,
+     "derived_d_calc": "\u03b2_std = 0.42 \u00d7 0.89 / 6.26 = 0.0597;  d = 2(0.0597) / \u221a(1 \u2212 0.0597\u00b2) = 0.1196",
+     "derived_d": 0.1196,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=6.26)"
     },
     {
      "iv": "smaq",
@@ -266,14 +266,14 @@
      "p": null,
      "p_label": null,
      "sig": false,
-     "location": "Figure 1, Social Media Use, Anxiety Problems",
-     "note": "CI appears to touch or cross zero; text states PSU was not associated with anxiety.",
+     "location": "Figure 1 (p.5), Social Media Use, Anxiety Problems",
+     "note": "CI appears to touch or cross zero; text states PSU was not associated with anxiety. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.2 \u00d7 0.89 / 10 = 0.0178;  d = 2(0.0178) / \u221a(1 \u2212 0.0178\u00b2) = 0.0356",
-     "derived_d": 0.0356,
+     "derived_d_calc": "\u03b2_std = 0.2 \u00d7 0.89 / 6.26 = 0.0284;  d = 2(0.0284) / \u221a(1 \u2212 0.0284\u00b2) = 0.0569",
+     "derived_d": 0.0569,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=6.26)"
     },
     {
      "iv": "smaq",
@@ -284,14 +284,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Somatic Problems",
-     "note": "Lower CI bound appears close to zero in the figure; text reports a significant association.",
+     "location": "Figure 1 (p.5), Social Media Use, Somatic Problems",
+     "note": "Lower CI bound appears close to zero in the figure; text reports a significant association. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.28 \u00d7 0.89 / 10 = 0.0249;  d = 2(0.0249) / \u221a(1 \u2212 0.0249\u00b2) = 0.0499",
-     "derived_d": 0.0499,
+     "derived_d_calc": "\u03b2_std = 0.28 \u00d7 0.89 / 6.18 = 0.0403;  d = 2(0.0403) / \u221a(1 \u2212 0.0403\u00b2) = 0.0807",
+     "derived_d": 0.0807,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=6.18)"
     },
     {
      "iv": "smaq",
@@ -302,14 +302,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Attention/Deficit",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Social Media Use, Attention/Deficit",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.23 \u00d7 0.89 / 10 = 0.0205;  d = 2(0.0205) / \u221a(1 \u2212 0.0205\u00b2) = 0.0409",
-     "derived_d": 0.0409,
+     "derived_d_calc": "\u03b2_std = 0.23 \u00d7 0.89 / 5.38 = 0.038;  d = 2(0.038) / \u221a(1 \u2212 0.038\u00b2) = 0.0762",
+     "derived_d": 0.0762,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=5.38)"
     },
     {
      "iv": "smaq",
@@ -320,14 +320,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Oppositional Defiant Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Social Media Use, Oppositional Defiant Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.27 \u00d7 0.89 / 10 = 0.024;  d = 2(0.024) / \u221a(1 \u2212 0.024\u00b2) = 0.0481",
-     "derived_d": 0.0481,
+     "derived_d_calc": "\u03b2_std = 0.27 \u00d7 0.89 / 4.99 = 0.0482;  d = 2(0.0482) / \u221a(1 \u2212 0.0482\u00b2) = 0.0964",
+     "derived_d": 0.0964,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=4.99)"
     },
     {
      "iv": "smaq",
@@ -338,14 +338,14 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Conduct Problems",
-     "note": "CI shown graphically only.",
+     "location": "Figure 1 (p.5), Social Media Use, Conduct Problems",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
-     "derived_d_calc": "\u03b2_std = 0.29 \u00d7 0.89 / 10 = 0.0258;  d = 2(0.0258) / \u221a(1 \u2212 0.0258\u00b2) = 0.0516",
-     "derived_d": 0.0516,
+     "derived_d_calc": "\u03b2_std = 0.29 \u00d7 0.89 / 4.71 = 0.0548;  d = 2(0.0548) / \u221a(1 \u2212 0.0548\u00b2) = 0.1098",
+     "derived_d": 0.1098,
      "derived_d_lo": null,
      "derived_d_hi": null,
-     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=4.71)"
     },
     {
      "iv": "smaq",
@@ -356,8 +356,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 1, Social Media Use, Weekly sleep duration",
-     "note": "Units of sleep duration ambiguous (see mpiq row).",
+     "location": "Figure 1 (p.5), Social Media Use, Weekly sleep duration",
+     "note": "Units of sleep duration ambiguous (see mpiq row). [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.14 \u00d7 0.89 / 1.58 = -0.0789;  d = 2(-0.0789) / \u221a(1 \u2212 (-0.0789)\u00b2) = -0.1582",
      "derived_d": -0.1582,
@@ -365,7 +365,8 @@
      "derived_d_hi": null,
      "derived_d_method": "linear (SD_IV=0.89, SD_DV=1.58)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -470,8 +471,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Suicide behaviors",
-     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF).",
+     "location": "Figure 2 (p.6), Phone Use, Suicide behaviors",
+     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF). [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.57) \u00d7 0.5513 = 0.4511 \u00d7 0.5513 = 0.2487",
      "derived_d": 0.2487,
@@ -488,8 +489,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Total sleep disturbance",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Phone Use, Total sleep disturbance",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.11) \u00d7 0.5513 = 0.1044 \u00d7 0.5513 = 0.0575",
      "derived_d": 0.0575,
@@ -506,8 +507,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Alcohol use initiation",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Phone Use, Alcohol use initiation",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.21) \u00d7 0.5513 = 0.1906 \u00d7 0.5513 = 0.1051",
      "derived_d": 0.1051,
@@ -524,8 +525,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Tobacco use initiation",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Phone Use, Tobacco use initiation",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.55) \u00d7 0.5513 = 0.4383 \u00d7 0.5513 = 0.2416",
      "derived_d": 0.2416,
@@ -542,8 +543,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Marijuana use initiation",
-     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association.",
+     "location": "Figure 2 (p.6), Phone Use, Marijuana use initiation",
+     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.41) \u00d7 0.5513 = 0.3436 \u00d7 0.5513 = 0.1894",
      "derived_d": 0.1894,
@@ -560,8 +561,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Phone Use, Any substance use initiation",
-     "note": "CI shown graphically only; abstract reports association with substance initiation.",
+     "location": "Figure 2 (p.6), Phone Use, Any substance use initiation",
+     "note": "CI shown graphically only; abstract reports association with substance initiation. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.23) \u00d7 0.5513 = 0.207 \u00d7 0.5513 = 0.1141",
      "derived_d": 0.1141,
@@ -578,8 +579,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Suicide behaviors",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Social Media Use, Suicide behaviors",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.86) \u00d7 0.5513 = 0.6206 \u00d7 0.5513 = 0.3421",
      "derived_d": 0.3421,
@@ -596,8 +597,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Total sleep disturbance",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Social Media Use, Total sleep disturbance",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.11) \u00d7 0.5513 = 0.1044 \u00d7 0.5513 = 0.0575",
      "derived_d": 0.0575,
@@ -614,8 +615,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Alcohol use initiation",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Social Media Use, Alcohol use initiation",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.22) \u00d7 0.5513 = 0.1989 \u00d7 0.5513 = 0.1096",
      "derived_d": 0.1096,
@@ -632,8 +633,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Tobacco use initiation",
-     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association.",
+     "location": "Figure 2 (p.6), Social Media Use, Tobacco use initiation",
+     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.3) \u00d7 0.5513 = 0.2624 \u00d7 0.5513 = 0.1446",
      "derived_d": 0.1446,
@@ -650,8 +651,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Marijuana use initiation",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Social Media Use, Marijuana use initiation",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.66) \u00d7 0.5513 = 0.5068 \u00d7 0.5513 = 0.2794",
      "derived_d": 0.2794,
@@ -668,8 +669,8 @@
      "p": null,
      "p_label": null,
      "sig": true,
-     "location": "Figure 2, Social Media Use, Any substance use initiation",
-     "note": "CI shown graphically only.",
+     "location": "Figure 2 (p.6), Social Media Use, Any substance use initiation",
+     "note": "CI shown graphically only. [complete stage] CI/SE/exact p/t not printed anywhere in this PDF: checked Table 1 p.4, Figure 1 p.5 and Figure 2 p.6 (only point estimates printed; CI whiskers unlabelled), Results p.4, Discussion pp.4-7, figure notes, text layer. Numeric CIs/p live only in online Appendix Table 3 (supplement not bundled). SDs already present (IV SDs Table 1 p.4). [audit] Value and sig re-verified against printed figure label and Results p.4; CI/SE/p/t not printed in PDF; no supplement file bundled in docs/pdfs.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.24) \u00d7 0.5513 = 0.2151 \u00d7 0.5513 = 0.1186",
      "derived_d": 0.1186,
@@ -677,7 +678,8 @@
      "derived_d_hi": null,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -702,8 +704,672 @@
   "conversion_formula": "M1: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M2: d = ln(OR) * sqrt(3) / pi (Chinn 2000).",
   "contrast_type": "Per 1-point increase in the MPIQ (1-7) or SMAQ (1-6) mean score; after the M1 conversion, per 1 SD of the exposure.",
   "transformable": true,
-  "notes": "SD_IV from Table 1 (p. 4): MPIQ 1.10 (n=6,158 phone users), SMAQ 0.89 (n=4,633 social media account holders); these are ACS-weighted descriptives. SD_DV for CBCL DSM-oriented T-scores set to 10 by construction per guidelines; the observed weighted Year 3 SDs in Table 1 are smaller (depressive 6.26, anxiety 6.26, somatic 6.18, attention 5.38, ODD 4.99, conduct 4.71), so using 10 will give smaller d values than using the sample SDs. SD_DV for sleep duration 1.58 (Table 1, 'hours per night'), but Figure 1 labels the outcome 'Weekly sleep duration', so the unit of B for sleep is uncertain. Figure 1 is labeled beta; the IV is an unstandardized mean score and the DV is in T-score units, and the paper never says the coefficients are standardized, so they are treated as unstandardized B. Because all M1 models adjust for the Year 2 outcome, the derived d reflects association with Year 3 level conditional on Year 2 level. p0 for M2 are the weighted marginal Year 3 prevalences from Table 1 (not unexposed-group rates) and are not needed for the OR-to-d conversion. No numeric CIs are printed in the main PDF (only graphical CIs in Figures 1-2), so d CIs cannot be computed until Appendix Table 3 is obtained."
+  "notes": "SD_IV from Table 1 (p. 4): MPIQ 1.10 (n=6,158 phone users), SMAQ 0.89 (n=4,633 social media account holders); these are ACS-weighted descriptives. SD_DV for CBCL DSM-oriented T-scores set to 10 by construction per guidelines; the observed weighted Year 3 SDs in Table 1 are smaller (depressive 6.26, anxiety 6.26, somatic 6.18, attention 5.38, ODD 4.99, conduct 4.71), so using 10 will give smaller d values than using the sample SDs. SD_DV for sleep duration 1.58 (Table 1, 'hours per night'), but Figure 1 labels the outcome 'Weekly sleep duration', so the unit of B for sleep is uncertain. Figure 1 is labeled beta; the IV is an unstandardized mean score and the DV is in T-score units, and the paper never says the coefficients are standardized, so they are treated as unstandardized B. Because all M1 models adjust for the Year 2 outcome, the derived d reflects association with Year 3 level conditional on Year 2 level. p0 for M2 are the weighted marginal Year 3 prevalences from Table 1 (not unexposed-group rates) and are not needed for the OR-to-d conversion. No numeric CIs are printed in the main PDF (only graphical CIs in Figures 1-2), so d CIs cannot be computed until Appendix Table 3 is obtained. [complete stage 2026-10-01] Re-read entire PDF: no numeric CI, SE, exact p or test statistic printed for any cell; all 26 CIs confirmed missing (Appendix Table 3 online only). iv_type set to continuous for M1 and M2. [audit 2026-10-01] sd_dv for the six CBCL scales changed from 10 to the analytic-sample weighted Year 3 SDs printed in Table 1 p.4 (6.26, 6.26, 6.18, 5.38, 4.99, 4.71)."
  },
  "extraction_flags": "1) The PDF has only 10 pages, and Appendix Table 3 (the full results with numeric CIs and p values) is in the online supplement, which is not included. All 26 point estimates come from the values printed next to the forest-plot rows in Figures 1 and 2. CIs and p values are null and need filling from Appendix Table 3. 2) Significance is judged from the text and by looking at the figure CIs. The ones to check against the supplement: SMAQ->somatic and SMAQ->anxiety (lower bounds near 0), and MPIQ->marijuana and SMAQ->tobacco (lower bounds near 1). Benjamini-Hochberg FDR was applied, but the adjusted values are not shown. 3) Figure 1 labels the coefficient 'beta', but nothing says it is standardized, so I treated it as unstandardized B (per 1 point of the MPIQ/SMAQ mean score). 4) The sleep duration unit is unclear: Figure 1 says 'Weekly sleep duration', but Table 1 gives 8.91 (SD 1.58) hours per night. 5) SD_DV for the CBCL T-scores is set to 10 by rule. The weighted sample SDs in Table 1 are 4.71-6.26, so the derived d will be smaller than with sample SDs. 6) The paper says N=8,119, but the MPIQ was asked only of phone users (n=6,158) and the SMAQ only of SM account holders (n=4,633). The per-model Ns are not printed, and the paper never says whether the phone, SM and gaming exposures were modeled separately or together. 7) The p0 values are weighted marginal Year 3 prevalences, not rates in an unexposed group. Problematic video game use is excluded (generic gaming).json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2-3: MPIQ/SMAQ mean scores"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x dep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x anx",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x som",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x att",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x odd",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x cond",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 mpiq x sleepdur",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x dep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x anx",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x som",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x att",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x odd",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x cond",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smaq x sleepdur",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2-3: MPIQ/SMAQ mean scores"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x suicide",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x sleepdist",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x tobacco",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x marijuana",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x anysub",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x suicide",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x sleepdist",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x tobacco",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x marijuana",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x anysub",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Read full PDF pp.1-10 (Table 1 p.4, Fig 1 p.5, Fig 2 p.6, Results/Discussion text, footnotes) plus PDF text layer; no supplement file in docs/pdfs; CI only in online Appendix Table 3"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis dep sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 6.26,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis anx sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 6.26,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis som sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 6.18,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis att sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 5.38,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis odd sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 4.99,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis cond sd_dv",
+   "action": "corrected",
+   "was": 10,
+   "value": 4.71,
+   "where": "Table 1 p.4, CBCL DSM-Oriented Scales at Year 3 (t-scores), weighted SD in analytic sample N=8,119 (replaces normative T-score SD 10, which is not printed for this sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis sleepdur sd_dv",
+   "action": "confirmed",
+   "value": 1.58,
+   "where": "Table 1 p.4, Average sleep duration (hours per night) 8.91 (1.58)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x dep location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Depressive Problems",
+   "value": "Figure 1 (p.5), Phone Use, Depressive Problems",
+   "where": "Figure 1 (p.5), Phone Use, Depressive Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x dep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.31 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Depressive Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x anx location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Anxiety Problems",
+   "value": "Figure 1 (p.5), Phone Use, Anxiety Problems",
+   "where": "Figure 1 (p.5), Phone Use, Anxiety Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x anx",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.03 and sig=False confirmed against printed label in Figure 1 (p.5), Phone Use, Anxiety Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x som location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Somatic Problems",
+   "value": "Figure 1 (p.5), Phone Use, Somatic Problems",
+   "where": "Figure 1 (p.5), Phone Use, Somatic Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x som",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.21 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Somatic Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x att location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Attention/Deficit",
+   "value": "Figure 1 (p.5), Phone Use, Attention/Deficit",
+   "where": "Figure 1 (p.5), Phone Use, Attention/Deficit"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x att",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.23 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Attention/Deficit (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x odd location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Oppositional Defiant Problems",
+   "value": "Figure 1 (p.5), Phone Use, Oppositional Defiant Problems",
+   "where": "Figure 1 (p.5), Phone Use, Oppositional Defiant Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x odd",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.16 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Oppositional Defiant Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x cond location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Conduct Problems",
+   "value": "Figure 1 (p.5), Phone Use, Conduct Problems",
+   "where": "Figure 1 (p.5), Phone Use, Conduct Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x cond",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.2 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Conduct Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x sleepdur location",
+   "action": "corrected",
+   "was": "Figure 1, Phone Use, Weekly sleep duration",
+   "value": "Figure 1 (p.5), Phone Use, Weekly sleep duration",
+   "where": "Figure 1 (p.5), Phone Use, Weekly sleep duration"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 mpiq x sleepdur",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value -0.12 and sig=True confirmed against printed label in Figure 1 (p.5), Phone Use, Weekly sleep duration (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x dep location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Depressive Problems",
+   "value": "Figure 1 (p.5), Social Media Use, Depressive Problems",
+   "where": "Figure 1 (p.5), Social Media Use, Depressive Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x dep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.42 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Depressive Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x anx location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Anxiety Problems",
+   "value": "Figure 1 (p.5), Social Media Use, Anxiety Problems",
+   "where": "Figure 1 (p.5), Social Media Use, Anxiety Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x anx",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.2 and sig=False confirmed against printed label in Figure 1 (p.5), Social Media Use, Anxiety Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x som location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Somatic Problems",
+   "value": "Figure 1 (p.5), Social Media Use, Somatic Problems",
+   "where": "Figure 1 (p.5), Social Media Use, Somatic Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x som",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.28 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Somatic Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x att location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Attention/Deficit",
+   "value": "Figure 1 (p.5), Social Media Use, Attention/Deficit",
+   "where": "Figure 1 (p.5), Social Media Use, Attention/Deficit"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x att",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.23 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Attention/Deficit (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x odd location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Oppositional Defiant Problems",
+   "value": "Figure 1 (p.5), Social Media Use, Oppositional Defiant Problems",
+   "where": "Figure 1 (p.5), Social Media Use, Oppositional Defiant Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x odd",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.27 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Oppositional Defiant Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x cond location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Conduct Problems",
+   "value": "Figure 1 (p.5), Social Media Use, Conduct Problems",
+   "where": "Figure 1 (p.5), Social Media Use, Conduct Problems"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x cond",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 0.29 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Conduct Problems (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x sleepdur location",
+   "action": "corrected",
+   "was": "Figure 1, Social Media Use, Weekly sleep duration",
+   "value": "Figure 1 (p.5), Social Media Use, Weekly sleep duration",
+   "where": "Figure 1 (p.5), Social Media Use, Weekly sleep duration"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x sleepdur",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value -0.14 and sig=True confirmed against printed label in Figure 1 (p.5), Social Media Use, Weekly sleep duration (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x suicide location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Suicide behaviors",
+   "value": "Figure 2 (p.6), Phone Use, Suicide behaviors",
+   "where": "Figure 2 (p.6), Phone Use, Suicide behaviors"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x suicide",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.57 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Suicide behaviors (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x sleepdist location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Total sleep disturbance",
+   "value": "Figure 2 (p.6), Phone Use, Total sleep disturbance",
+   "where": "Figure 2 (p.6), Phone Use, Total sleep disturbance"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x sleepdist",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.11 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Total sleep disturbance (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x alcohol location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Alcohol use initiation",
+   "value": "Figure 2 (p.6), Phone Use, Alcohol use initiation",
+   "where": "Figure 2 (p.6), Phone Use, Alcohol use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.21 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Alcohol use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x tobacco location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Tobacco use initiation",
+   "value": "Figure 2 (p.6), Phone Use, Tobacco use initiation",
+   "where": "Figure 2 (p.6), Phone Use, Tobacco use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x tobacco",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.55 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Tobacco use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x marijuana location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Marijuana use initiation",
+   "value": "Figure 2 (p.6), Phone Use, Marijuana use initiation",
+   "where": "Figure 2 (p.6), Phone Use, Marijuana use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x marijuana",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.41 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Marijuana use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x anysub location",
+   "action": "corrected",
+   "was": "Figure 2, Phone Use, Any substance use initiation",
+   "value": "Figure 2 (p.6), Phone Use, Any substance use initiation",
+   "where": "Figure 2 (p.6), Phone Use, Any substance use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x anysub",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.23 and sig=True confirmed against printed label in Figure 2 (p.6), Phone Use, Any substance use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x suicide location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Suicide behaviors",
+   "value": "Figure 2 (p.6), Social Media Use, Suicide behaviors",
+   "where": "Figure 2 (p.6), Social Media Use, Suicide behaviors"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x suicide",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.86 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Suicide behaviors (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x sleepdist location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Total sleep disturbance",
+   "value": "Figure 2 (p.6), Social Media Use, Total sleep disturbance",
+   "where": "Figure 2 (p.6), Social Media Use, Total sleep disturbance"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x sleepdist",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.11 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Total sleep disturbance (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x alcohol location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Alcohol use initiation",
+   "value": "Figure 2 (p.6), Social Media Use, Alcohol use initiation",
+   "where": "Figure 2 (p.6), Social Media Use, Alcohol use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.22 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Alcohol use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x tobacco location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Tobacco use initiation",
+   "value": "Figure 2 (p.6), Social Media Use, Tobacco use initiation",
+   "where": "Figure 2 (p.6), Social Media Use, Tobacco use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x tobacco",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.3 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Tobacco use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x marijuana location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Marijuana use initiation",
+   "value": "Figure 2 (p.6), Social Media Use, Marijuana use initiation",
+   "where": "Figure 2 (p.6), Social Media Use, Marijuana use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x marijuana",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.66 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Marijuana use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x anysub location",
+   "action": "corrected",
+   "was": "Figure 2, Social Media Use, Any substance use initiation",
+   "value": "Figure 2 (p.6), Social Media Use, Any substance use initiation",
+   "where": "Figure 2 (p.6), Social Media Use, Any substance use initiation"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x anysub",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Native value 1.24 and sig=True confirmed against printed label in Figure 2 (p.6), Social Media Use, Any substance use initiation (zoomed 200 dpi) and Results text p.4; CI/SE/p/t printed nowhere in PDF pp.1-10; no supplement file for this DOI in docs/pdfs (Appendix Table 3 online only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 iv_axis sd_iv",
+   "action": "confirmed",
+   "value": "MPIQ 1.10, SMAQ 0.89",
+   "where": "Table 1 p.4 and Results p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 dv_axis p0",
+   "action": "confirmed",
+   "value": "0.029,0.257,0.116,0.025,0.010,0.128",
+   "where": "Table 1 p.4"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 iv_type",
+   "action": "confirmed",
+   "value": "continuous",
+   "where": "Methods p.2-3 (mean scores)"
+  }
+ ],
  "supplements": []
 }

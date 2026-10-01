@@ -111,7 +111,8 @@
      "p_label": "0.064",
      "sig": false,
      "location": "Table 2, adjusted, Texting row",
-     "note": "Prevalence ratio per 1 hour/day."
+     "note": "Prevalence ratio per 1 hour/day. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     },
     {
      "iv": "video_chat",
@@ -123,7 +124,8 @@
      "p_label": "0.119",
      "sig": false,
      "location": "Table 2, adjusted, Video chat row",
-     "note": "Prevalence ratio per 1 hour/day."
+     "note": "Prevalence ratio per 1 hour/day. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     },
     {
      "iv": "social_media",
@@ -135,7 +137,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2, adjusted, Social networking row",
-     "note": "Prevalence ratio per 1 hour/day. Headline finding of the paper."
+     "note": "Prevalence ratio per 1 hour/day. Headline finding of the paper. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     },
     {
      "iv": "texting",
@@ -147,7 +150,8 @@
      "p_label": "0.002",
      "sig": true,
      "location": "Table 3, adjusted, Texting row",
-     "note": "Prevalence ratio per 1 hour/day."
+     "note": "Prevalence ratio per 1 hour/day. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     },
     {
      "iv": "video_chat",
@@ -159,7 +163,8 @@
      "p_label": "0.003",
      "sig": true,
      "location": "Table 3, adjusted, Video chat row",
-     "note": "Prevalence ratio per 1 hour/day."
+     "note": "Prevalence ratio per 1 hour/day. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     },
     {
      "iv": "social_media",
@@ -171,9 +176,11 @@
      "p_label": "0.938",
      "sig": false,
      "location": "Table 3, adjusted, Social networking row",
-     "note": "Prevalence ratio per 1 hour/day."
+     "note": "Prevalence ratio per 1 hour/day. Re-verified against Table 2/3 page images (PMC author manuscript pp.20-21): PR, 95% CI and p match. Point estimate and CI printed, so no SE needed; no SE/z printed anywhere in the PDF. N=11,875 (imputed full cohort, p.5). Binary DV: sd_dv not applicable; p0 = marginal 1-yr prevalence from Table 1 p.19. Supplementary Tables S1-S3 are online only and not in this PDF (no supplement file in docs/pdfs).",
+     "n": 11875
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -218,7 +225,114 @@
   "conversion_formula": "OR = PR * (1 - p0) / (1 - PR * p0); d = ln(OR) * sqrt(3)/pi (Chinn 2000), applied to the point estimate and each CI bound. p0 = 0.019 for conduct disorder and 0.063 for oppositional defiant disorder (marginal one-year follow-up prevalence). To express per 1 SD of the IV rather than per 1 hour/day, ln(PR) could first be multiplied by SD_IV (ln(PR_SD) = SD_IV * ln(PR)) before the PR -> OR step.",
   "contrast_type": "per 1 hour/day of the baseline modality (continuous IV); optionally rescaled to per 1 SD using Table 1 SDs",
   "transformable": true,
-  "notes": "p0 values are the marginal sample prevalences at one-year follow-up from Table 1 (manuscript p. 19: conduct disorder 1.9%, ODD 6.3%), not the rate in an unexposed group; with a continuous IV there is no unexposed group, and because both outcomes are rare the PR/OR distinction is small. SD_IV values are from Table 1 (manuscript p. 18; propensity-weighted, full N=11,875): texting 0.6, video chat 0.5, social media 0.4 hours/day. The IVs are heavily right-skewed with floor effects (80% report zero social media), so per-hour and per-SD contrasts may both be unrepresentative. Binary DVs, so sd_dv is null. Not directly comparable to per-1-SD d values from linear models or to group-contrast d values (e.g. paper 156)."
+  "notes": "p0 values are the marginal sample prevalences at one-year follow-up from Table 1 (manuscript p. 19: conduct disorder 1.9%, ODD 6.3%), not the rate in an unexposed group; with a continuous IV there is no unexposed group, and because both outcomes are rare the PR/OR distinction is small. SD_IV values are from Table 1 (manuscript p. 18; propensity-weighted, full N=11,875): texting 0.6, video chat 0.5, social media 0.4 hours/day. The IVs are heavily right-skewed with floor effects (80% report zero social media), so per-hour and per-SD contrasts may both be unrepresentative. Binary DVs, so sd_dv is null. Not directly comparable to per-1-SD d values from linear models or to group-contrast d values (e.g. paper 156). [complete-stage 2026-10-01] Whole PDF (23 pp) re-read; no supplement bundled. All 6 PRs, CIs and p-values verified against table images; SD_IV (Table 1 p.18) and p0 (Table 1 p.19) confirmed. No additional numbers (SE, z) are printed."
  },
- "extraction_flags": "1) The native metric is an adjusted prevalence ratio (PR) from modified Poisson regression. It is coded as \"RR\". 2) The stage2_reason gives p<.001 for video chat and texting predicting ODD. Table 3 actually prints p=0.003 for video chat and p=0.002 for texting, and the file uses the table values. 3) Age is listed as a confounder in the Methods (p. 5) but is missing from the confounder footnotes of Tables 2 and 3, so it is unclear whether age is in the final models. Site appears as an adjustment variable, not a random effect. 4) p0 uses the marginal one-year prevalences from Table 1 (CD 1.9%, ODD 6.3%), not an unexposed-group rate, because the IV is continuous. SD_IV comes from the propensity-weighted Table 1: texting 0.6, video chat 0.5, social media 0.4. These SDs differ from paper 394's ABCD descriptives. 5) Each modality was modeled separately, so the estimates are not mutually adjusted for the other modalities. The analysis uses all N=11,875 after imputation (outcome imputed for n=793). Baseline cases were not excluded even though the Discussion calls the outcome \"new-onset\". 6) Supplementary Tables S1 to S3 are not in the PDF. They hold assumption checks, the share of each modality with zero use, and confounder estimates, and were not reviewed. 7) The two \"<0.001\" p-values are stored as p=null with p_label \"<0.001\". All 6 PRs/CIs/p-values and the 3 SDs were checked against the pdftotext output of Tables 1 to 3."
+ "extraction_flags": "1) The native metric is an adjusted prevalence ratio (PR) from modified Poisson regression. It is coded as \"RR\". 2) The stage2_reason gives p<.001 for video chat and texting predicting ODD. Table 3 actually prints p=0.003 for video chat and p=0.002 for texting, and the file uses the table values. 3) Age is listed as a confounder in the Methods (p. 5) but is missing from the confounder footnotes of Tables 2 and 3, so it is unclear whether age is in the final models. Site appears as an adjustment variable, not a random effect. 4) p0 uses the marginal one-year prevalences from Table 1 (CD 1.9%, ODD 6.3%), not an unexposed-group rate, because the IV is continuous. SD_IV comes from the propensity-weighted Table 1: texting 0.6, video chat 0.5, social media 0.4. These SDs differ from paper 394's ABCD descriptives. 5) Each modality was modeled separately, so the estimates are not mutually adjusted for the other modalities. The analysis uses all N=11,875 after imputation (outcome imputed for n=793). Baseline cases were not excluded even though the Discussion calls the outcome \"new-onset\". 6) Supplementary Tables S1 to S3 are not in the PDF. They hold assumption checks, the share of each modality with zero use, and confounder estimates, and were not reviewed. 7) The two \"<0.001\" p-values are stored as p=null with p_label \"<0.001\". All 6 PRs/CIs/p-values and the 3 SDs were checked against the pdftotext output of Tables 1 to 3.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.4: weighted average hours/day entered as continuous; PR per hour (Table 2-3 footnotes)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x conduct disorder",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x conduct disorder",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media x conduct disorder",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x ODD",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x ODD",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media x ODD",
+   "action": "confirmed_missing",
+   "value": "all native values/CI/p already present and verified; se not printed (not needed)",
+   "where": "Table 2 p.20 / Table 3 p.21; text pp.1-10 checked"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x conduct",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 2, adjusted, Texting row p.20"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x conduct",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 2, adjusted, Video chat row p.20"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x conduct",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 2, adjusted, Social networking row p.20"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x odd",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 3, adjusted, Texting row p.21"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x odd",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 3, adjusted, Video chat row p.21"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x odd",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "PR, 95% CI, p and sig re-checked against adjusted column (match exactly); se/z not printed anywhere in the 23-pp PDF; no supplement file in docs/pdfs (Tables S1-S3 online only)",
+   "where": "Table 3, adjusted, Social networking row p.21"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 axes",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "sd_iv 0.6/0.5/0.4 (Table 1 p.18) and p0 0.019/0.063 (Table 1 p.19) confirmed; iv_type continuous confirmed (per hour/day, Methods p.4, Table 2-3 footnotes); sd_dv not applicable (binary DV); no missing phone/SM IV x DV cells",
+   "where": "Table 1 pp.18-19; Tables 2-3 pp.20-21"
+  }
+ ]
 }

@@ -67,19 +67,22 @@
      "id": "phone_text",
      "label": "Talk on the phone or text in bed",
      "meta": "1-5 nights/week Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     },
     {
      "id": "social_media",
      "label": "Social media in bed",
      "meta": "1-5 nights/week Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     },
     {
      "id": "woken_calls_texts",
      "label": "Woken by phone calls, texts, or emails",
      "meta": "1-5 frequency Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     }
    ],
    "dv_axis": [
@@ -87,7 +90,8 @@
      "id": "sleep_disturbance",
      "label": "Sleep disturbance (SDSC >= 39)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (prevalence of SDSC >= 39) not printed in Tables 1-7 or text; not needed for OR->d (Chinn)."
     }
    ],
    "estimates": [
@@ -100,7 +104,8 @@
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
-     "location": "Table 4, row 'Talk on the phone or text'"
+     "location": "Table 4, row 'Talk on the phone or text' (p. 568)",
+     "note": "All native values, 95% CI and p verified against Table 4, row 'Talk on the phone or text'. No SE/t printed (only B/OR (95% CI) and p)."
     },
     {
      "iv": "social_media",
@@ -111,7 +116,8 @@
      "p": 0.007,
      "p_label": ".007",
      "sig": true,
-     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)'"
+     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568)",
+     "note": "All native values, 95% CI and p verified against Table 4, row 'Spend time online on social media (e.g., Facebook)'. No SE/t printed (only B/OR (95% CI) and p)."
     },
     {
      "iv": "woken_calls_texts",
@@ -122,10 +128,11 @@
      "p": 0.053,
      "p_label": ".053",
      "sig": false,
-     "location": "Table 4, row 'phone calls, text messages, or emails that wake you'",
-     "note": "Item includes emails in addition to phone calls and texts."
+     "location": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568)",
+     "note": "Item includes emails in addition to phone calls and texts. All native values, 95% CI and p verified against Table 4, row 'phone calls, text messages, or emails that wake you'. No SE/t printed (only B/OR (95% CI) and p)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -149,19 +156,22 @@
      "id": "phone_text",
      "label": "Talk on the phone or text in bed",
      "meta": "1-5 nights/week Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     },
     {
      "id": "social_media",
      "label": "Social media in bed",
      "meta": "1-5 nights/week Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     },
     {
      "id": "woken_calls_texts",
      "label": "Woken by phone calls, texts, or emails",
      "meta": "1-5 frequency Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     }
    ],
    "dv_axis": [
@@ -169,7 +179,8 @@
      "id": "sleep_duration",
      "label": "Sleep duration (h)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD of MCTQ sleep duration not printed. Checked Tables 1-7 and text pp.563-569; no mean or SD for sleep duration anywhere in the PDF. Possibly in online supplement (not bundled)."
     }
    ],
    "estimates": [
@@ -182,7 +193,8 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 4, row 'Talk on the phone or text'"
+     "location": "Table 4, row 'Talk on the phone or text' (p. 568)",
+     "note": "All native values, 95% CI and p verified against Table 4, row 'Talk on the phone or text'. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     },
     {
      "iv": "social_media",
@@ -193,7 +205,8 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)'"
+     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568)",
+     "note": "All native values, 95% CI and p verified against Table 4, row 'Spend time online on social media (e.g., Facebook)'. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     },
     {
      "iv": "woken_calls_texts",
@@ -204,10 +217,11 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 4, row 'phone calls, text messages, or emails that wake you'",
-     "note": "Item includes emails in addition to phone calls and texts."
+     "location": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568)",
+     "note": "Item includes emails in addition to phone calls and texts. All native values, 95% CI and p verified against Table 4, row 'phone calls, text messages, or emails that wake you'. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -231,13 +245,15 @@
      "id": "phone_text",
      "label": "Talk on the phone or text in bed",
      "meta": "1-5 Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     },
     {
      "id": "social_media",
      "label": "Social media in bed",
      "meta": "1-5 Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     }
    ],
    "dv_axis": [
@@ -245,13 +261,15 @@
      "id": "duration_female",
      "label": "Sleep duration, female",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD of MCTQ sleep duration not printed. Checked Tables 1-7 and text pp.563-569; no mean or SD for sleep duration anywhere in the PDF. Possibly in online supplement (not bundled)."
     },
     {
      "id": "duration_male",
      "label": "Sleep duration, male",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD of MCTQ sleep duration not printed. Checked Tables 1-7 and text pp.563-569; no mean or SD for sleep duration anywhere in the PDF. Possibly in online supplement (not bundled)."
     }
    ],
    "estimates": [
@@ -264,8 +282,8 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 5, Talk on the phone or text, Female",
-     "note": "Sex interaction p = .023"
+     "location": "Table 5, Talk on the phone or text, Female (p. 568)",
+     "note": "Sex interaction p = .023 All native values, 95% CI and p verified against Table 5, Talk on the phone or text, Female. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     },
     {
      "iv": "phone_text",
@@ -276,8 +294,8 @@
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
-     "location": "Table 5, Talk on the phone or text, Male",
-     "note": "Sex interaction p = .023"
+     "location": "Table 5, Talk on the phone or text, Male (p. 568)",
+     "note": "Sex interaction p = .023 All native values, 95% CI and p verified against Table 5, Talk on the phone or text, Male. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     },
     {
      "iv": "social_media",
@@ -288,8 +306,8 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 5, Spend time online on social media, Female",
-     "note": "Sex interaction p = .040"
+     "location": "Table 5, Spend time online on social media, Female (p. 568)",
+     "note": "Sex interaction p = .040 All native values, 95% CI and p verified against Table 5, Spend time online on social media, Female. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     },
     {
      "iv": "social_media",
@@ -300,10 +318,11 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 5, Spend time online on social media, Male",
-     "note": "Sex interaction p = .040"
+     "location": "Table 5, Spend time online on social media, Male (p. 568)",
+     "note": "Sex interaction p = .040 All native values, 95% CI and p verified against Table 5, Spend time online on social media, Male. No SE/t printed (only B/OR (95% CI) and p). Not d-convertible: sd_iv and sd_dv not printed (see axis notes)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M4",
@@ -327,7 +346,8 @@
      "id": "social_media",
      "label": "Social media in bed",
      "meta": "1-5 Likert",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD of 1-5 bedtime Likert item not printed. Checked Table 1 (sociodemographics only), Table 2 (item reported only as % in binned categories 0/1-2/3-4/5-7 nights, not on the 1-5 scale; no mean/SD), Tables 3-7, text pp.563-569. Online Appendix A/B (doi:10.1016/j.sleh.2025.05.005 supplementary data) not bundled in this PDF."
     }
    ],
    "dv_axis": [
@@ -335,13 +355,15 @@
      "id": "disturbance_female",
      "label": "Sleep disturbance, female",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (prevalence of SDSC >= 39) not printed in Tables 1-7 or text; not needed for OR->d (Chinn)."
     },
     {
      "id": "disturbance_male",
      "label": "Sleep disturbance, male",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 (prevalence of SDSC >= 39) not printed in Tables 1-7 or text; not needed for OR->d (Chinn)."
     }
    ],
    "estimates": [
@@ -354,8 +376,8 @@
      "p": 0.472,
      "p_label": ".472",
      "sig": false,
-     "location": "Table 5, Spend time online on social media, Female",
-     "note": "Sex interaction p = .016"
+     "location": "Table 5, Spend time online on social media, Female (p. 568)",
+     "note": "Sex interaction p = .016 All native values, 95% CI and p verified against Table 5, Spend time online on social media, Female. No SE/t printed (only B/OR (95% CI) and p)."
     },
     {
      "iv": "social_media",
@@ -366,10 +388,11 @@
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
-     "location": "Table 5, Spend time online on social media, Male",
-     "note": "Sex interaction p = .016"
+     "location": "Table 5, Spend time online on social media, Male (p. 568)",
+     "note": "Sex interaction p = .016 All native values, 95% CI and p verified against Table 5, Spend time online on social media, Male. No SE/t printed (only B/OR (95% CI) and p)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -424,7 +447,437 @@
   "conversion_formula": "OR models: d = ln(OR) * sqrt(3)/pi (Chinn 2000). B models: beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1) - not computable here because SD_IV and SD_DV are not reported.",
   "contrast_type": "Per 1-point increase on the five-point bedtime frequency Likert scale (1 = never to 5 = every night) for each item.",
   "transformable": "partial",
-  "notes": "ORs (M1, M4) convert via Chinn without additional inputs. For B models (M2, M3), the paper reports no mean or SD for the bedtime Likert items (Table 2 gives only categorical frequencies: 0, 1-2, 3-4, 5-7 nights) and no mean or SD for MCTQ sleep duration, so standardized d cannot be derived from the PDF; online supplement may contain them. Baseline prevalence of SDSC >= 39 is not reported (not needed for Chinn). Methods describe logistic regression for sleep disturbance, but table footnotes mention modified Poisson; columns are labeled OR."
+  "notes": "ORs (M1, M4) convert via Chinn without additional inputs. For B models (M2, M3), the paper reports no mean or SD for the bedtime Likert items (Table 2 gives only categorical frequencies: 0, 1-2, 3-4, 5-7 nights) and no mean or SD for MCTQ sleep duration, so standardized d cannot be derived from the PDF; online supplement may contain them. Baseline prevalence of SDSC >= 39 is not reported (not needed for Chinn). Methods describe logistic regression for sleep disturbance, but table footnotes mention modified Poisson; columns are labeled OR. [complete-stage check 2026-10-01] Re-read full PDF (pp.562-571): all 12 estimates and CIs present and match Tables 4-5; no SEs/t printed; no SDs for Likert items or sleep duration; SDSC prevalence not printed; no supplement file available in docs/pdfs."
  },
- "extraction_flags": "1) The methods describe logistic regression for SDSC sleep disturbance, but the table footnotes say the output comes from \"modified Poisson and linear regression\" models. The columns are labeled OR, so I recorded the values as OR. 2) The paper does not say whether each bedtime item was fit in its own model or whether all items were entered together; \"in addition to all variables listed\" in the footnote is ambiguous. 3) No SDs are reported for the 1-5 Likert bedtime items or for MCTQ sleep duration, so the B models (M2, M3) cannot be converted to d. The ORs can be converted with the Chinn formula. 4) I included the item about being woken by \"phone calls, text messages, or emails\" as phone-qualifying even though emails could come from a non-phone device; please check that call. I excluded the night-waking \"phone or other device ... play games/browse ...\" item as a mixed composite (OR 1.25, B -0.25); coders may want to revisit it. 5) I extracted the sex-stratified Table 5 estimates as separate cards (M3 linear, M4 logistic) because the authors interpret the sex differences. If you prefer, strike them or treat them as interaction results. 6) The ABCD release is not stated, and the online Appendices A and B are not in the PDF. 7) The paper's description of the sleep-duration weights (\"weekdays (7) and weekends (2)\") is copied as written but looks like an error for 5/2. All 12 values were checked against the Table 4 and Table 5 text."
+ "extraction_flags": "1) The methods describe logistic regression for SDSC sleep disturbance, but the table footnotes say the output comes from \"modified Poisson and linear regression\" models. The columns are labeled OR, so I recorded the values as OR. 2) The paper does not say whether each bedtime item was fit in its own model or whether all items were entered together; \"in addition to all variables listed\" in the footnote is ambiguous. 3) No SDs are reported for the 1-5 Likert bedtime items or for MCTQ sleep duration, so the B models (M2, M3) cannot be converted to d. The ORs can be converted with the Chinn formula. 4) I included the item about being woken by \"phone calls, text messages, or emails\" as phone-qualifying even though emails could come from a non-phone device; please check that call. I excluded the night-waking \"phone or other device ... play games/browse ...\" item as a mixed composite (OR 1.25, B -0.25); coders may want to revisit it. 5) I extracted the sex-stratified Table 5 estimates as separate cards (M3 linear, M4 logistic) because the authors interpret the sex differences. If you prefer, strike them or treat them as interaction results. 6) The ABCD release is not stated, and the online Appendices A and B are not in the PDF. 7) The paper's description of the sleep-duration weights (\"weekdays (7) and weekends (2)\") is copied as written but looks like an error for 5/2. All 12 values were checked against the Table 4 and Table 5 text.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.564: each bedtime item entered on 1-5 Likert scale"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv phone_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv woken_calls_texts",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.564: each bedtime item entered on 1-5 Likert scale"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv phone_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv woken_calls_texts",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_dv sleep_duration",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M3",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.564: each bedtime item entered on 1-5 Likert scale"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sd_iv phone_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sd_dv duration_female",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sd_dv duration_male",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "complete",
+   "item": "M4",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.564: each bedtime item entered on 1-5 Likert scale"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Tables 1-7, text pp.563-569"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_text x sleep_disturbance",
+   "action": "corrected",
+   "was": "Table 4, row 'Talk on the phone or text'",
+   "value": "Table 4, row 'Talk on the phone or text' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_text x sleep_disturbance",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.11,
+    "OR_lo": 1.05,
+    "OR_hi": 1.18,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true
+   },
+   "where": "Table 4, row 'Talk on the phone or text' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x sleep_disturbance",
+   "action": "corrected",
+   "was": "Table 4, row 'Spend time online on social media (e.g., Facebook)'",
+   "value": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x sleep_disturbance",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.08,
+    "OR_lo": 1.02,
+    "OR_hi": 1.15,
+    "p": 0.007,
+    "p_label": ".007",
+    "sig": true
+   },
+   "where": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_calls_texts x sleep_disturbance",
+   "action": "corrected",
+   "was": "Table 4, row 'phone calls, text messages, or emails that wake you'",
+   "value": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_calls_texts x sleep_disturbance",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.1,
+    "OR_lo": 1.0,
+    "OR_hi": 1.21,
+    "p": 0.053,
+    "p_label": ".053",
+    "sig": false
+   },
+   "where": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sd_iv/sd_dv/p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.562-571 re-read: Table 1 (demographics), Table 2 (items as binned % only despite 'Mean (SD)/%' header; only total screen time 9.13 (8.87) h/week has SD), Tables 3-7, text; no SD for bedtime Likert items or MCTQ sleep duration, no SDSC>=39 prevalence; online Appendix A/B not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone_text x sleep_duration",
+   "action": "corrected",
+   "was": "Table 4, row 'Talk on the phone or text'",
+   "value": "Table 4, row 'Talk on the phone or text' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone_text x sleep_duration",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.2,
+    "B_lo": -0.24,
+    "B_hi": -0.15,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 4, row 'Talk on the phone or text' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x sleep_duration",
+   "action": "corrected",
+   "was": "Table 4, row 'Spend time online on social media (e.g., Facebook)'",
+   "value": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x sleep_duration",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.25,
+    "B_lo": -0.29,
+    "B_hi": -0.2,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 4, row 'Spend time online on social media (e.g., Facebook)' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 woken_calls_texts x sleep_duration",
+   "action": "corrected",
+   "was": "Table 4, row 'phone calls, text messages, or emails that wake you'",
+   "value": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 woken_calls_texts x sleep_duration",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.21,
+    "B_lo": -0.29,
+    "B_hi": -0.13,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 4, row 'phone calls, text messages, or emails that wake you' (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sd_iv/sd_dv/p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.562-571 re-read: Table 1 (demographics), Table 2 (items as binned % only despite 'Mean (SD)/%' header; only total screen time 9.13 (8.87) h/week has SD), Tables 3-7, text; no SD for bedtime Likert items or MCTQ sleep duration, no SDSC>=39 prevalence; online Appendix A/B not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 phone_text x duration_female",
+   "action": "corrected",
+   "was": "Table 5, Talk on the phone or text, Female",
+   "value": "Table 5, Talk on the phone or text, Female (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 phone_text x duration_female",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.25,
+    "B_lo": -0.31,
+    "B_hi": -0.19,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 5, Talk on the phone or text, Female (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 phone_text x duration_male",
+   "action": "corrected",
+   "was": "Table 5, Talk on the phone or text, Male",
+   "value": "Table 5, Talk on the phone or text, Male (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 phone_text x duration_male",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.13,
+    "B_lo": -0.2,
+    "B_hi": -0.05,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true
+   },
+   "where": "Table 5, Talk on the phone or text, Male (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 social_media x duration_female",
+   "action": "corrected",
+   "was": "Table 5, Spend time online on social media, Female",
+   "value": "Table 5, Spend time online on social media, Female (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 social_media x duration_female",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.29,
+    "B_lo": -0.35,
+    "B_hi": -0.24,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 5, Spend time online on social media, Female (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 social_media x duration_male",
+   "action": "corrected",
+   "was": "Table 5, Spend time online on social media, Male",
+   "value": "Table 5, Spend time online on social media, Male (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 social_media x duration_male",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "B": -0.19,
+    "B_lo": -0.27,
+    "B_hi": -0.12,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true
+   },
+   "where": "Table 5, Spend time online on social media, Male (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 sd_iv/sd_dv/p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.562-571 re-read: Table 1 (demographics), Table 2 (items as binned % only despite 'Mean (SD)/%' header; only total screen time 9.13 (8.87) h/week has SD), Tables 3-7, text; no SD for bedtime Likert items or MCTQ sleep duration, no SDSC>=39 prevalence; online Appendix A/B not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M4 social_media x disturbance_female",
+   "action": "corrected",
+   "was": "Table 5, Spend time online on social media, Female",
+   "value": "Table 5, Spend time online on social media, Female (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M4 social_media x disturbance_female",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.03,
+    "OR_lo": 0.95,
+    "OR_hi": 1.12,
+    "p": 0.472,
+    "p_label": ".472",
+    "sig": false
+   },
+   "where": "Table 5, Spend time online on social media, Female (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M4 social_media x disturbance_male",
+   "action": "corrected",
+   "was": "Table 5, Spend time online on social media, Male",
+   "value": "Table 5, Spend time online on social media, Male (p. 568)",
+   "where": "PDF p. 568"
+  },
+  {
+   "stage": "audit",
+   "item": "M4 social_media x disturbance_male",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.16,
+    "OR_lo": 1.06,
+    "OR_hi": 1.27,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true
+   },
+   "where": "Table 5, Spend time online on social media, Male (p. 568); native value, both CI bounds, p, sig match printed table (pdftotext layout check); no SE/t/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M4 sd_iv/sd_dv/p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.562-571 re-read: Table 1 (demographics), Table 2 (items as binned % only despite 'Mean (SD)/%' header; only total screen time 9.13 (8.87) h/week has SD), Tables 3-7, text; no SD for bedtime Likert items or MCTQ sleep duration, no SDSC>=39 prevalence; online Appendix A/B not in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "completeness",
+   "action": "confirmed",
+   "was": null,
+   "value": "No missing IV x DV cells: Table 5 phone/text x sleep disturbance by sex printed as dashes (interaction p=.077); woken-by-messages item not in Table 5",
+   "where": "Table 5 p. 568"
+  }
+ ]
 }

@@ -100,13 +100,13 @@
     {
      "id": "anxiety",
      "label": "CBCL anxiety",
-     "sd_dv": null,
+     "sd_dv": 5.939,
      "p0": null
     },
     {
      "id": "depression",
      "label": "CBCL depression",
-     "sd_dv": null,
+     "sd_dv": 5.57,
      "p0": null
     }
    ],
@@ -121,7 +121,8 @@
      "p_label": "0.187",
      "sig": false,
      "location": "Table 4, Weekday, Texting (p. 913)",
-     "note": "t = 1.32.",
+     "note": "t = 1.32. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.32,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.021) / \u221a(1 \u2212 0.021\u00b2) = 0.042",
      "derived_d": 0.042,
@@ -139,7 +140,8 @@
      "p_label": "0.044",
      "sig": true,
      "location": "Table 4, Weekday, Social networks (p. 913)",
-     "note": "t = 2.014. Text (p. 913) says this association was lost when controlling for depression.",
+     "note": "t = 2.014. Text (p. 913) says this association was lost when controlling for depression. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 2.014,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.031) / \u221a(1 \u2212 0.031\u00b2) = 0.062",
      "derived_d": 0.062,
@@ -157,7 +159,8 @@
      "p_label": "0.309",
      "sig": false,
      "location": "Table 4, Weekday, Video chatting (p. 913)",
-     "note": "t = 1.016.",
+     "note": "t = 1.016. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.016,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.016) / \u221a(1 \u2212 0.016\u00b2) = 0.032",
      "derived_d": 0.032,
@@ -175,7 +178,8 @@
      "p_label": "0.056",
      "sig": false,
      "location": "Table 4, Weekend, Texting (p. 913)",
-     "note": "t = 1.908.",
+     "note": "t = 1.908. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.908,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
@@ -193,7 +197,8 @@
      "p_label": "0.062",
      "sig": false,
      "location": "Table 4, Weekend, Social networks (p. 913)",
-     "note": "t = 1.87.",
+     "note": "t = 1.87. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.87,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.029) / \u221a(1 \u2212 0.029\u00b2) = 0.058",
      "derived_d": 0.058,
@@ -211,7 +216,8 @@
      "p_label": "0.013a",
      "sig": true,
      "location": "Table 4, Weekend, Video chatting (p. 913)",
-     "note": "t = 2.487. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "note": "t = 2.487. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF). Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 2.487,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.038) / \u221a(1 \u2212 0.038\u00b2) = 0.0761",
      "derived_d": 0.0761,
@@ -229,7 +235,8 @@
      "p_label": "0.493",
      "sig": false,
      "location": "Table 5, Weekday, Texting (p. 913)",
-     "note": "t = 0.685.",
+     "note": "t = 0.685. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 0.685,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.011) / \u221a(1 \u2212 0.011\u00b2) = 0.022",
      "derived_d": 0.022,
@@ -247,7 +254,8 @@
      "p_label": "0.181",
      "sig": false,
      "location": "Table 5, Weekday, Social networks (p. 913)",
-     "note": "t = 1.339.",
+     "note": "t = 1.339. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.339,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.021) / \u221a(1 \u2212 0.021\u00b2) = 0.042",
      "derived_d": 0.042,
@@ -265,7 +273,8 @@
      "p_label": "0.986",
      "sig": false,
      "location": "Table 5, Weekday, Video chatting (p. 913)",
-     "note": "t = 0.018.",
+     "note": "t = 0.018. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 0.018,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0) / \u221a(1 \u2212 0\u00b2) = 0",
      "derived_d": 0.0,
@@ -283,7 +292,8 @@
      "p_label": "0.184",
      "sig": false,
      "location": "Table 5, Weekend, Texting (p. 913)",
-     "note": "t = 1.33.",
+     "note": "t = 1.33. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.33,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.021) / \u221a(1 \u2212 0.021\u00b2) = 0.042",
      "derived_d": 0.042,
@@ -301,7 +311,8 @@
      "p_label": "0.271",
      "sig": false,
      "location": "Table 5, Weekend, Social networks (p. 913)",
-     "note": "t = 1.101.",
+     "note": "t = 1.101. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.101,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.017) / \u221a(1 \u2212 0.017\u00b2) = 0.034",
      "derived_d": 0.034,
@@ -319,7 +330,8 @@
      "p_label": "0.292",
      "sig": false,
      "location": "Table 5, Weekend, Video chatting (p. 913)",
-     "note": "t = 1.053.",
+     "note": "t = 1.053. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 1.053,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.016) / \u221a(1 \u2212 0.016\u00b2) = 0.032",
      "derived_d": 0.032,
@@ -327,7 +339,8 @@
      "derived_d_hi": 0.0921,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -415,7 +428,8 @@
      "p_label": "0.001a",
      "sig": true,
      "location": "Table 3, Boys, Texting (p. 912)",
-     "note": "t = 3.418. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "note": "t = 3.418. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF). Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 3.418,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.081) / \u221a(1 \u2212 0.081\u00b2) = 0.1625",
      "derived_d": 0.1625,
@@ -433,7 +447,8 @@
      "p_label": "0.010",
      "sig": true,
      "location": "Table 3, Boys, Social networks (p. 912)",
-     "note": "t = 2.574.",
+     "note": "t = 2.574. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 2.574,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.061) / \u221a(1 \u2212 0.061\u00b2) = 0.1222",
      "derived_d": 0.1222,
@@ -451,7 +466,8 @@
      "p_label": "0.002a",
      "sig": true,
      "location": "Table 3, Boys, Video chatting (p. 912)",
-     "note": "t = 3.131. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "note": "t = 3.131. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF). Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 3.131,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.069) / \u221a(1 \u2212 0.069\u00b2) = 0.1383",
      "derived_d": 0.1383,
@@ -469,7 +485,8 @@
      "p_label": "0.512",
      "sig": false,
      "location": "Table 3, Girls, Texting (p. 912)",
-     "note": "t = -0.656.",
+     "note": "t = -0.656. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": -0.656,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.013) / \u221a(1 \u2212 (-0.013)\u00b2) = -0.026",
      "derived_d": -0.026,
@@ -487,7 +504,8 @@
      "p_label": "0.867",
      "sig": false,
      "location": "Table 3, Girls, Social networks (p. 912)",
-     "note": "t = 0.168.",
+     "note": "t = 0.168. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 0.168,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.003) / \u221a(1 \u2212 0.003\u00b2) = 0.006",
      "derived_d": 0.006,
@@ -505,7 +523,8 @@
      "p_label": "0.718",
      "sig": false,
      "location": "Table 3, Girls, Video chatting (p. 912)",
-     "note": "t = 0.361.",
+     "note": "t = 0.361. Verified against PDF: beta, 95% CI, exact p and t all printed and match. Error df not printed (GLMM in SPSS). SE not printed (CI given). sd_iv/sd_dv not needed: all variables standardized before analysis (p.910).",
+     "t": 0.361,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.008) / \u221a(1 \u2212 0.008\u00b2) = 0.016",
      "derived_d": 0.016,
@@ -513,7 +532,8 @@
      "derived_d_hi": 0.1001,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -568,8 +588,561 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2), applied to the coefficient and to each CI bound (guidelines \u00a74a).",
   "contrast_type": "per 1 SD of the child-reported phone/SM minutes per day (weekday or weekend), in SD units of the CBCL T-score",
   "transformable": true,
-  "notes": "All variables were standardized before modelling (Data Analysis, p. 910; Discussion p. 915 calls them 'standardized beta weights'), so no SD_IV/SD_DV is needed; sd_iv and sd_dv are left null. Table 1 (p. 911) SDs are recorded in iv_axis meta for reference but look implausible for minute-scale variables (e.g., weekday texting M = 11.99, SD = 0.51, range 0-240) and should not be used for rescaling. Because the outcome variables were also standardized, using the sample CBCL SDs (anxiety 5.939, depression 5.57) rather than the normative T-score SD of 10 is implicit in the coefficients. Effects are adjusted for covariates with partial-out of site/family random effects, so the beta-as-r approximation is approximate."
+  "notes": "All variables were standardized before modelling (Data Analysis, p. 910; Discussion p. 915 calls them 'standardized beta weights'), so no SD_IV/SD_DV is needed; sd_iv and sd_dv are left null. Table 1 (p. 911) SDs are recorded in iv_axis meta for reference but look implausible for minute-scale variables (e.g., weekday texting M = 11.99, SD = 0.51, range 0-240) and should not be used for rescaling. Because the outcome variables were also standardized, using the sample CBCL SDs (anxiety 5.939, depression 5.57) rather than the normative T-score SD of 10 is implicit in the coefficients. Effects are adjusted for covariates with partial-out of site/family random effects, so the beta-as-r approximation is approximate. [complete-stage] Re-verified all 18 estimates against Tables 3-5 (pp.912-913): beta, 95% CI, exact p, t match; t now stored in 't'. No supplement bundled in docs/pdfs (Supplemental Tables 1-5 online only)."
  },
  "extraction_flags": "1. Anchoring model: the authors also read their findings off parallel models that control for depression or anxiety. Those coefficients are in Supplemental Tables 1-2, which are online only and not in the PDF. Only footnote 'a' flags in Tables 3-5 show which estimates stayed significant. I extracted the printed versions without that control (Tables 4/5 for the full sample, Table 3 sex-stratified) and listed the controlled versions under excluded models. If the supplement can be obtained, add those coefficients.\n\n2. Separate or joint models: the paper does not say whether each media category was its own GLMM or all categories went into one model. I assumed one category per model.\n\n3. Coefficients are treated as standardized betas because the paper says all variables were standardized. The SPSS link function / GLMM family is not stated; I assumed linear on continuous T-scores.\n\n4. Table 1 SDs for the media categories look implausible (e.g., weekday texting mean 11.99 min, SD 0.51, range 0-240). They are recorded only as meta. sd_iv and sd_dv are left null because the betas are already standardized.\n\n5. M2 (sex-stratified, weekend only) has no per-stratum N. The 2162 boys and 1977 girls are the full-sample sex counts.\n\n6. ABCD release is inferred as 1.0 from reference 36 and the NDA DOI.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.909-910: STQ minutes per day, standardized continuous predictor"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.32
+   },
+   "where": "Table 4, Weekday, Texting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 2.014
+   },
+   "where": "Table 4, Weekday, Social networks (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.016
+   },
+   "where": "Table 4, Weekday, Video chatting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.908
+   },
+   "where": "Table 4, Weekend, Texting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.87
+   },
+   "where": "Table 4, Weekend, Social networks (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x anxiety",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 2.487
+   },
+   "where": "Table 4, Weekend, Video chatting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_text x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 0.685
+   },
+   "where": "Table 5, Weekday, Texting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_sm x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.339
+   },
+   "where": "Table 5, Weekday, Social networks (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 wd_vc x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 0.018
+   },
+   "where": "Table 5, Weekday, Video chatting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_text x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.33
+   },
+   "where": "Table 5, Weekend, Texting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_sm x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.101
+   },
+   "where": "Table 5, Weekend, Social networks (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 we_vc x depression",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 1.053
+   },
+   "where": "Table 5, Weekend, Video chatting (p. 913)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv wd_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv wd_sm",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv wd_vc",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv we_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv we_sm",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv we_vc",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_dv anxiety",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 gives full-sample CBCL SD (anx 5.939, dep 5.57), sex-specific not printed; not needed since DV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_dv depression",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 gives full-sample CBCL SD (anx 5.939, dep 5.57), sex-specific not printed; not needed since DV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.909-910: STQ minutes per day, standardized continuous predictor"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_text x anx_boys",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 3.418
+   },
+   "where": "Table 3, Boys, Texting (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_sm x anx_boys",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 2.574
+   },
+   "where": "Table 3, Boys, Social networks (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_vc x anx_boys",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 3.131
+   },
+   "where": "Table 3, Boys, Video chatting (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_text x anx_girls",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -0.656
+   },
+   "where": "Table 3, Girls, Texting (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_sm x anx_girls",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 0.168
+   },
+   "where": "Table 3, Girls, Social networks (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 we_vc x anx_girls",
+   "action": "filled_ci_input",
+   "value": {
+    "t": 0.361
+   },
+   "where": "Table 3, Girls, Video chatting (p. 912)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv we_text",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv we_sm",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv we_vc",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 SD printed but implausible for minute scale (0-240 range); not needed since IV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_dv anx_boys",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 gives full-sample CBCL SD (anx 5.939, dep 5.57), sex-specific not printed; not needed since DV standardized (p.910)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_dv anx_girls",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.911 gives full-sample CBCL SD (anx 5.939, dep 5.57), sex-specific not printed; not needed since DV standardized (p.910)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sd_dv anxiety",
+   "action": "added",
+   "was": null,
+   "value": 5.939,
+   "where": "Table 1 (p. 911), full analytic sample N=4139, CBCL T-score SD; informational only since betas are already standardized"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sd_dv depression",
+   "action": "added",
+   "was": null,
+   "value": 5.57,
+   "where": "Table 1 (p. 911), full analytic sample N=4139, CBCL T-score SD; informational only since betas are already standardized"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_text x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.021,
+    "lo": -0.01,
+    "hi": 0.051,
+    "t": 1.32,
+    "p": 0.187
+   },
+   "where": "Table 4, Weekday, Texting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_sm x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.031,
+    "lo": 0.001,
+    "hi": 0.062,
+    "t": 2.014,
+    "p": 0.044
+   },
+   "where": "Table 4, Weekday, Social networks (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_vc x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.016,
+    "lo": -0.015,
+    "hi": 0.046,
+    "t": 1.016,
+    "p": 0.309
+   },
+   "where": "Table 4, Weekday, Video chatting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_text x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.03,
+    "lo": -0.001,
+    "hi": 0.06,
+    "t": 1.908,
+    "p": 0.056
+   },
+   "where": "Table 4, Weekend, Texting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_sm x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.029,
+    "lo": -0.001,
+    "hi": 0.06,
+    "t": 1.87,
+    "p": 0.062
+   },
+   "where": "Table 4, Weekend, Social networks (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_vc x anxiety",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.038,
+    "lo": 0.008,
+    "hi": 0.069,
+    "t": 2.487,
+    "p": 0.013
+   },
+   "where": "Table 4, Weekend, Video chatting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_text x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.011,
+    "lo": -0.02,
+    "hi": 0.041,
+    "t": 0.685,
+    "p": 0.493
+   },
+   "where": "Table 5, Weekday, Texting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_sm x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.021,
+    "lo": -0.01,
+    "hi": 0.051,
+    "t": 1.339,
+    "p": 0.181
+   },
+   "where": "Table 5, Weekday, Social networks (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 wd_vc x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.0,
+    "lo": -0.03,
+    "hi": 0.031,
+    "t": 0.018,
+    "p": 0.986
+   },
+   "where": "Table 5, Weekday, Video chatting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_text x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.021,
+    "lo": -0.01,
+    "hi": 0.051,
+    "t": 1.33,
+    "p": 0.184
+   },
+   "where": "Table 5, Weekend, Texting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_sm x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.017,
+    "lo": -0.013,
+    "hi": 0.047,
+    "t": 1.101,
+    "p": 0.271
+   },
+   "where": "Table 5, Weekend, Social networks (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 we_vc x depression",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.016,
+    "lo": -0.014,
+    "hi": 0.046,
+    "t": 1.053,
+    "p": 0.292
+   },
+   "where": "Table 5, Weekend, Video chatting (p. 913)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_text x anx_boys",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.081,
+    "lo": 0.034,
+    "hi": 0.127,
+    "t": 3.418,
+    "p": 0.001
+   },
+   "where": "Table 3, Boys, Texting (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_sm x anx_boys",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.061,
+    "lo": 0.015,
+    "hi": 0.108,
+    "t": 2.574,
+    "p": 0.01
+   },
+   "where": "Table 3, Boys, Social networks (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_vc x anx_boys",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.069,
+    "lo": 0.026,
+    "hi": 0.113,
+    "t": 3.131,
+    "p": 0.002
+   },
+   "where": "Table 3, Boys, Video chatting (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_text x anx_girls",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.013,
+    "lo": -0.054,
+    "hi": 0.027,
+    "t": -0.656,
+    "p": 0.512
+   },
+   "where": "Table 3, Girls, Texting (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_sm x anx_girls",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.003,
+    "lo": -0.037,
+    "hi": 0.044,
+    "t": 0.168,
+    "p": 0.867
+   },
+   "where": "Table 3, Girls, Social networks (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 we_vc x anx_girls",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.008,
+    "lo": -0.035,
+    "hi": 0.05,
+    "t": 0.361,
+    "p": 0.718
+   },
+   "where": "Table 3, Girls, Video chatting (p. 912)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 se, df, sd_iv; M2 sd_dv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp. 907-917 re-read; SE and df not printed (CI and t only); Table 1 IV SDs implausible for minute scale; sex-specific CBCL SDs not printed; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "completeness",
+   "action": "confirmed",
+   "was": null,
+   "value": "All texting/social networks/video chatting cells in Tables 3 (weekend, by sex), 4 and 5 present (18/18)",
+   "where": "Tables 3-5, pp. 912-913"
+  }
+ ],
  "supplements": []
 }

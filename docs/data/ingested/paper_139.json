@@ -123,7 +123,10 @@
      "p_label": ".668",
      "sig": false,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(0.96) \u00d7 0.5513 = -0.0408 \u00d7 0.5513 = -0.0225",
      "derived_d": -0.0225,
@@ -141,7 +144,10 @@
      "p_label": ".046",
      "sig": true,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.25) \u00d7 0.5513 = 0.2231 \u00d7 0.5513 = 0.123",
      "derived_d": 0.123,
@@ -159,7 +165,10 @@
      "p_label": ".292",
      "sig": false,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.11) \u00d7 0.5513 = 0.1044 \u00d7 0.5513 = 0.0575",
      "derived_d": 0.0575,
@@ -177,6 +186,10 @@
      "p_label": ".002",
      "sig": true,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Total sleep disturbance OR column (p. 654)",
+     "iv_type": "continuous",
+     "note": "CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.13) \u00d7 0.5513 = 0.1222 \u00d7 0.5513 = 0.0674",
      "derived_d": 0.0674,
@@ -194,6 +207,10 @@
      "p_label": ".025",
      "sig": true,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Total sleep disturbance OR column (p. 654)",
+     "iv_type": "continuous",
+     "note": "CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.1) \u00d7 0.5513 = 0.0953 \u00d7 0.5513 = 0.0525",
      "derived_d": 0.0525,
@@ -211,6 +228,10 @@
      "p_label": ".788",
      "sig": false,
      "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Total sleep disturbance OR column (p. 654)",
+     "iv_type": "continuous",
+     "note": "CI printed (Table 3 p.654); SE not printed anywhere in PDF. p0 for reference group (phone off / 0 nights) not printed; only marginal Year 3 rate 25.5% (Table 1 p.652). Not needed for OR->d. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "se": null,
+     "se_scale": null,
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(0.98) \u00d7 0.5513 = -0.0202 \u00d7 0.5513 = -0.0111",
      "derived_d": -0.0111,
@@ -218,7 +239,9 @@
      "derived_d_hi": 0.0575,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous",
+   "iv_type_note": "Mixed IVs in this model: phone-action rows are categorical dummies vs. 'turn the phone off' (estimate-level iv_type='categorical'); talk/text, social media and woken-by-phone rows are single per-step frequency terms (continuous). Model-level set to 'continuous' conservatively; estimate-level iv_type overrides."
   },
   {
    "model_id": "M2",
@@ -330,7 +353,9 @@
      "p_label": ".563",
      "sig": false,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^-0.06 = 0.9418;  d = -0.06 \u00d7 0.5513 = -0.0331",
      "derived_d": -0.0331,
@@ -348,7 +373,9 @@
      "p_label": ".237",
      "sig": false,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.15 = 1.1618;  d = 0.15 \u00d7 0.5513 = 0.0827",
      "derived_d": 0.0827,
@@ -366,7 +393,9 @@
      "p_label": ".043",
      "sig": true,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.2 = 1.2214;  d = 0.2 \u00d7 0.5513 = 0.1103",
      "derived_d": 0.1103,
@@ -384,6 +413,9 @@
      "p_label": ".012",
      "sig": true,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Disorders of initiating and maintaining sleep B column (p. 654)",
+     "iv_type": "continuous",
+     "note": "CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.12 = 1.1275;  d = 0.12 \u00d7 0.5513 = 0.0662",
      "derived_d": 0.0662,
@@ -401,7 +433,9 @@
      "p_label": ".058",
      "sig": false,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Disorders of initiating and maintaining sleep B column (p. 654)",
-     "note": "Lower CI bound printed as '-0.00'.",
+     "note": "Lower CI bound printed as '-0.00'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "continuous",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.09 = 1.0942;  d = 0.09 \u00d7 0.5513 = 0.0496",
      "derived_d": 0.0496,
@@ -419,6 +453,9 @@
      "p_label": ".357",
      "sig": false,
      "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Disorders of initiating and maintaining sleep B column (p. 654)",
+     "iv_type": "continuous",
+     "note": "CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "se": null,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^-0.06 = 0.9418;  d = -0.06 \u00d7 0.5513 = -0.0331",
      "derived_d": -0.0331,
@@ -426,7 +463,9 @@
      "derived_d_hi": 0.0386,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous",
+   "iv_type_note": "Mixed IVs in this model: phone-action rows are categorical dummies vs. 'turn the phone off' (estimate-level iv_type='categorical'); talk/text, social media and woken-by-phone rows are single per-step frequency terms (continuous). Model-level set to 'continuous' conservatively; estimate-level iv_type overrides."
   },
   {
    "model_id": "M3",
@@ -538,7 +577,9 @@
      "p_label": ".005",
      "sig": true,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     },
@@ -552,7 +593,9 @@
      "p_label": "< .001",
      "sig": true,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
-     "note": "p printed only as '< .001'. Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "p printed only as '< .001'. Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Exact p not printed (only '< .001'). Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     },
@@ -566,7 +609,9 @@
      "p_label": ".227",
      "sig": false,
      "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
-     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "note": "Categorical dummy contrast against 'Turn the phone off'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "categorical",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     },
@@ -580,7 +625,9 @@
      "p_label": "< .001",
      "sig": true,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Weekly sleep duration B column (p. 654)",
-     "note": "p printed only as '< .001'.",
+     "note": "p printed only as '< .001'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Exact p not printed (only '< .001'). sd_iv not printed: no mean/SD for this frequency item (Table 2 gives only category percentages; coding 1-5 Likert vs 4 night-categories ambiguous). Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "continuous",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     },
@@ -594,7 +641,9 @@
      "p_label": "< .001",
      "sig": true,
      "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Weekly sleep duration B column (p. 654)",
-     "note": "p printed only as '< .001'.",
+     "note": "p printed only as '< .001'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Exact p not printed (only '< .001'). sd_iv not printed: no mean/SD for this frequency item (Table 2 gives only category percentages; coding 1-5 Likert vs 4 night-categories ambiguous). Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "continuous",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     },
@@ -608,11 +657,15 @@
      "p_label": "< .001",
      "sig": true,
      "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Weekly sleep duration B column (p. 654)",
-     "note": "p printed only as '< .001'.",
+     "note": "p printed only as '< .001'. CI printed (Table 3 p.654); SE not printed anywhere in PDF. Exact p not printed (only '< .001'). sd_iv not printed: no mean/SD for this frequency item (Table 2 gives only category percentages; coding 1-5 Likert vs 4 night-categories ambiguous). Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs.",
+     "iv_type": "continuous",
+     "se": null,
      "derived_d": null,
      "derived_d_method": "SD_IV or SD_DV not reported"
     }
-   ]
+   ],
+   "iv_type": "continuous",
+   "iv_type_note": "Mixed IVs in this model: phone-action rows are categorical dummies vs. 'turn the phone off' (estimate-level iv_type='categorical'); talk/text, social media and woken-by-phone rows are single per-step frequency terms (continuous). Model-level set to 'continuous' conservatively; estimate-level iv_type overrides."
   }
  ],
  "excluded_models": [
@@ -662,8 +715,464 @@
   "conversion_formula": "M1: d = ln(OR) * sqrt(3)/pi (Chinn 2000). M2: OR = exp(B); d = B * sqrt(3)/pi (Chinn applied to the proportional-odds OR). M3, phone-action dummies (binary contrast vs. phone off): d ~= B / SD_DV with SD_DV = 1.62. M3, frequency items: beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein 2009 eq 7.1), requires SD_IV which is not reported.",
   "contrast_type": "Phone-action rows: each category vs. 'turn the phone off'. Talk/text, social media and woken-by-phone rows: per one-step increase on the bedtime frequency item (coding not explicitly stated; Likert 1-5 per Methods vs. 4 night-count categories in Table 2).",
   "transformable": "partial",
-  "notes": "M1 (OR) and M2 (ordered-logit B) convert to d without SDs. p0 for M1 = 0.255 is the Year 3 marginal rate of total sleep disturbance (Table 1, p. 652); not needed for OR conversion. SD_DV for M3 = 1.62 h (Table 1, 'Sleep duration at Year 3 (hours per night)'); M3 phone-action dummy cells convertible via B/SD_DV (uses total-sample SD in place of pooled within-group SD). M3 frequency-item cells (talk/text, social media, woken by calls/texts) are not convertible from reported statistics because the paper gives no mean/SD for the items; SD could be approximated from the Table 2 category percentages only under an assumed coding, which was not done. ABCD propensity weights used throughout."
+  "notes": "M1 (OR) and M2 (ordered-logit B) convert to d without SDs. p0 for M1 = 0.255 is the Year 3 marginal rate of total sleep disturbance (Table 1, p. 652); not needed for OR conversion. SD_DV for M3 = 1.62 h (Table 1, 'Sleep duration at Year 3 (hours per night)'); M3 phone-action dummy cells convertible via B/SD_DV (uses total-sample SD in place of pooled within-group SD). M3 frequency-item cells (talk/text, social media, woken by calls/texts) are not convertible from reported statistics because the paper gives no mean/SD for the items; SD could be approximated from the Table 2 category percentages only under an assumed coding, which was not done. ABCD propensity weights used throughout. [complete-stage check 2026-10-01] Re-read full PDF (6 pp.). All 18 native values and 95% CIs present and verified against Table 3 p.654. No SEs, t/z, or exact p for '< .001' cells printed. No SD for any bedtime-frequency item (sd_iv) printed; M3 frequency cells remain non-convertible. Supplement (Appendices A-D) not bundled."
  },
  "extraction_flags": "1) Which IVs count as phone/SM. I included 'Talk on the phone or text', 'Spend time online on social media', the three phone-action categories (ringer silent/vibrate, ringer on, phone outside room, each vs. turning the phone off) and 'Woken up by phone calls, text messages, or e-mails'. The phone-action and woken-by items are phone-specific but are not texting/SM time as such, so please check they belong. I excluded 'Spend time in chat rooms' (not on the FT-IC2 list, device not specified) and 'Used phone or other device when woke up during the night' (bundles other devices and mixed activities). Both are borderline; their numbers are recorded in excluded_models. 2) The IV coding is unclear. Methods describe a 1-5 Likert scale, but Table 2 shows four night-count categories, so 'per one step' is ambiguous. The paper also does not say whether each exposure was fit in its own model or entered jointly. 3) No SDs are reported for any IV, so the M3 (linear, sleep duration) frequency-item cells cannot be converted to d. The phone-action dummies are converted with B/1.62, using the total-sample SD rather than the pooled SD. 4) M2 reports raw ordered-logit coefficients (log-odds) labelled B, not ORs. I stored them in the value fields and convert them with B*sqrt(3)/pi. 5) The DV is called 'weekly sleep duration', but Table 1 gives it in hours per night (SD 1.62). 6) Appendices A-D (supplement) are not in the PDF. Appendices C and D are described only in the text, and the supplement may hold extra phone/SM numbers. 7) The ABCD release version is not stated. pdftotext drops non-bold minus signs, so every sign was checked against a 220-dpi render of Table 3. For p shown as '< .001', p is set to null and only p_label is kept.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "continuous (model); categorical on 3 phone-action estimates",
+   "where": "Table 2 p.653 / Table 3 p.654; Methods p.651"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_silent x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_silent x total_dist",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_on x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_on x total_dist",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone_outside x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone_outside x total_dist",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 talk_text x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 talk_text x total_dist",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x total_dist",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 woken_by_phone x total_dist",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 woken_by_phone x total_dist",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "continuous (model); categorical on 3 phone-action estimates",
+   "where": "Table 2 p.653 / Table 3 p.654; Methods p.651"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 ringer_silent x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 ringer_silent x dims",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 ringer_on x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 ringer_on x dims",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 phone_outside x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 phone_outside x dims",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 talk_text x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 talk_text x dims",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 social_media x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 social_media x dims",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 woken_by_phone x dims",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 woken_by_phone x dims",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 model",
+   "action": "set_iv_type",
+   "value": "continuous (model); categorical on 3 phone-action estimates",
+   "where": "Table 2 p.653 / Table 3 p.654; Methods p.651"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 ringer_silent x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 ringer_silent x sleep_dur",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 ringer_on x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 ringer_on x sleep_dur",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 phone_outside x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 phone_outside x sleep_dur",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 talk_text x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "sd_iv",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 talk_text x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 talk_text x sleep_dur",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 social_media x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "sd_iv",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 social_media x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 social_media x sleep_dur",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 woken_by_phone x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "sd_iv",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 woken_by_phone x sleep_dur",
+   "action": "confirmed_missing",
+   "value": "se",
+   "where": "Checked full PDF pp.650-655: Table 1 (descriptives), Table 2 (item distributions), Table 3 (all estimates, OR/B with 95% CI and p only; no SE, t/z, or SD columns), Results/Discussion text pp.652-654. Appendices A-D are online-only supplementary data (doi link p.655), not bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 woken_by_phone x sleep_dur",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Table 3 p.654"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_silent x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_on x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_outside x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 talk_text x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_by_phone x total_dist",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Total sleep disturbance OR column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 ringer_silent x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 ringer_on x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone_outside x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 talk_text x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 woken_by_phone x dims",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Disorders of initiating and maintaining sleep B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 ringer_silent x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 ringer_on x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 phone_outside x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 talk_text x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 social_media x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 woken_by_phone x sleep_dur",
+   "action": "confirmed",
+   "was": null,
+   "value": "native value, CI, p/p_label, sig, sign verified against Table 3 (pdftotext + page image); se/t/z not printed anywhere in the 6-page PDF; no supplement file in docs/pdfs",
+   "where": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Weekly sleep duration B column (p. 654)"
+  },
+  {
+   "stage": "audit",
+   "item": "descriptives",
+   "action": "confirmed",
+   "was": null,
+   "value": "sd_dv DIMS 4.01, sleep duration 1.62, p0 total sleep disturbance 0.255 (Table 1 p.652); excluded chat-room numbers match Table 3",
+   "where": "Table 1 p.652; Table 3 p.654"
+  },
+  {
+   "stage": "audit",
+   "item": "completeness",
+   "action": "confirmed",
+   "was": null,
+   "value": "All phone/SM rows of Table 3 (3 phone-action dummies, talk/text, social media, woken by phone) x 3 outcomes = 18 cells present; no other phone/SM estimates printed for these models",
+   "where": "Table 3 p.654; Results pp.652-653"
+  }
+ ],
  "supplements": []
 }

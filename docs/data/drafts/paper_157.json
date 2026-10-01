@@ -63,13 +63,15 @@
      "id": "talk_text",
      "label": "Talk on the phone or text in bed before sleep",
      "meta": "past-week nights, ordinal treated as continuous; 34.1% any",
-     "sd_iv": null
+     "sd_iv": null,
+     "sd_iv_note": "Not printed: Table 2 (p. 500) reports only weighted % per frequency category; no mean/SD in Table 1 or text."
     },
     {
      "id": "social_media",
      "label": "Spend time online on social media in bed before sleep",
      "meta": "past-week nights, ordinal treated as continuous; 30.6% any",
-     "sd_iv": null
+     "sd_iv": null,
+     "sd_iv_note": "Not printed: Table 2 (p. 500) reports only weighted % per frequency category; no mean/SD in Table 1 or text."
     },
     {
      "id": "ringer_silent",
@@ -93,7 +95,8 @@
      "id": "woken_by_phone",
      "label": "Woken by phone calls, texts or emails after trying to sleep",
      "meta": "past-week frequency, treated as continuous; 16.9% any",
-     "sd_iv": null
+     "sd_iv": null,
+     "sd_iv_note": "Not printed: Table 2 (p. 500) reports only weighted % per frequency category; no mean/SD in Table 1 or text."
     }
    ],
    "dv_axis": [
@@ -120,7 +123,9 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 3, 'Talk on the phone or text' row"
+     "location": "Table 3 (p. 500), 'Talk on the phone or text' row",
+     "iv_type": "continuous",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null."
     },
     {
      "iv": "talk_text",
@@ -131,7 +136,9 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 3, 'Talk on the phone or text' row"
+     "location": "Table 3 (p. 500), 'Talk on the phone or text' row",
+     "iv_type": "continuous",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null."
     },
     {
      "iv": "social_media",
@@ -142,7 +149,9 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 3, 'Spend time online on social media (eg, Facebook)' row"
+     "location": "Table 3 (p. 500), 'Spend time online on social media (eg, Facebook)' row",
+     "iv_type": "continuous",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null."
     },
     {
      "iv": "social_media",
@@ -153,8 +162,9 @@
      "p": 0.009,
      "p_label": ".009",
      "sig": true,
-     "location": "Table 3, 'Spend time online on social media (eg, Facebook)' row",
-     "note": "Results text p. 500 reports this as ARR 1.06 (95% CI 1.01-1.13); Table 3 upper bound (1.11) used here."
+     "location": "Table 3 (p. 500), 'Spend time online on social media (eg, Facebook)' row",
+     "note": "Results text p. 500 reports this as ARR 1.06 (95% CI 1.01-1.13); Table 3 upper bound (1.11) used here. Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null.",
+     "iv_type": "continuous"
     },
     {
      "iv": "ringer_silent",
@@ -165,7 +175,9 @@
      "p": 0.274,
      "p_label": ".274",
      "sig": false,
-     "location": "Table 3, 'Put the ringer on silent or vibrate' row (referent: turn the phone off)"
+     "location": "Table 3 (p. 500), 'Put the ringer on silent or vibrate' row (referent: turn the phone off)",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "ringer_silent",
@@ -176,7 +188,9 @@
      "p": 0.874,
      "p_label": ".874",
      "sig": false,
-     "location": "Table 3, 'Put the ringer on silent or vibrate' row"
+     "location": "Table 3 (p. 500), 'Put the ringer on silent or vibrate' row",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "ringer_on",
@@ -187,7 +201,9 @@
      "p": 0.022,
      "p_label": ".022",
      "sig": true,
-     "location": "Table 3, 'Leave the ringer on' row (referent: turn the phone off)"
+     "location": "Table 3 (p. 500), 'Leave the ringer on' row (referent: turn the phone off)",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "ringer_on",
@@ -198,7 +214,9 @@
      "p": 0.013,
      "p_label": ".013",
      "sig": true,
-     "location": "Table 3, 'Leave the ringer on' row"
+     "location": "Table 3 (p. 500), 'Leave the ringer on' row",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "phone_outside",
@@ -209,7 +227,9 @@
      "p": 0.781,
      "p_label": ".781",
      "sig": false,
-     "location": "Table 3, 'Put it outside of the room where I sleep' row (referent: turn the phone off)"
+     "location": "Table 3 (p. 500), 'Put it outside of the room where I sleep' row (referent: turn the phone off)",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "phone_outside",
@@ -220,7 +240,9 @@
      "p": 0.064,
      "p_label": ".064",
      "sig": false,
-     "location": "Table 3, 'Put it outside of the room where I sleep' row"
+     "location": "Table 3 (p. 500), 'Put it outside of the room where I sleep' row",
+     "iv_type": "categorical",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). Categorical IV (vs 'turn the phone off'); no SD_IV needed. Group sizes printed only as weighted percentages in Table 2 (54.9% referent)."
     },
     {
      "iv": "woken_by_phone",
@@ -231,7 +253,9 @@
      "p": null,
      "p_label": "<.001",
      "sig": true,
-     "location": "Table 3, 'How often have you had phone calls, text messages or emails that wake you' row"
+     "location": "Table 3 (p. 500), 'How often have you had phone calls, text messages or emails that wake you' row",
+     "iv_type": "continuous",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null."
     },
     {
      "iv": "woken_by_phone",
@@ -242,9 +266,13 @@
      "p": 0.072,
      "p_label": ".072",
      "sig": false,
-     "location": "Table 3, 'How often have you had phone calls, text messages or emails that wake you' row"
+     "location": "Table 3 (p. 500), 'How often have you had phone calls, text messages or emails that wake you' row",
+     "iv_type": "continuous",
+     "note": "Checked full PDF (pp. 497-502: abstract, Methods, Tables 1-3, Results, Discussion, footnotes); no supplement in docs/pdfs. RR and 95% CI printed in Table 3; no SE, z, or exact p beyond the Table 3 P column. p0 is the marginal prevalence from Table 1 (unexposed/referent-group event rate not printed). No mean/SD printed for this IV; Table 2 gives only the weighted % distribution over 0/1-2/3-4/5-7 nights, and the numeric coding is ambiguous (Methods 1-5 Likert vs Table 2 four categories), so sd_iv left null."
     }
-   ]
+   ],
+   "iv_type": "continuous",
+   "iv_type_note": "Mixed: talk_text, social_media and woken_by_phone are ordinal frequency items 'considered continuous variables' (Statistical analyses p. 499); ringer_silent, ringer_on, phone_outside are categorical dummies vs 'Turn the phone off' (Table 3). Per-estimate 'iv_type' overrides set on the categorical cells."
   }
  ],
  "excluded_models": [
@@ -289,7 +317,320 @@
   "conversion_formula": "OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). p0 = 0.155 for trouble falling/staying asleep and 0.28 for overall sleep disturbance (marginal sample rates, Table 1 p. 499). Apply to RR_lo and RR_hi for the CI.",
   "contrast_type": "Talk/text, social media, and woken-by-phone items: per one-step increase on the past-week frequency scale (ordinal categories treated as continuous). Ringer items: category vs 'turn the phone off' referent.",
   "transformable": true,
-  "notes": "p0 values are marginal sample prevalences from Table 1 (15.5% and 28.0%), not unexposed-group rates; exposure prevalence here is well above 10% (e.g., about 34% any bedtime texting), so the marginal-rate approximation from guidelines section 4a is weaker than usual and the derived d values should be treated as approximate. No SD is reported for any IV; the per-step contrast depends on how the 4-category (Table 2) or 5-point (Methods text) frequency scale was coded, which the paper does not resolve. d values are therefore per-scale-step and not comparable to per-1-SD or per-hour d's from other papers."
+  "notes": "p0 values are marginal sample prevalences from Table 1 (15.5% and 28.0%), not unexposed-group rates; exposure prevalence here is well above 10% (e.g., about 34% any bedtime texting), so the marginal-rate approximation from guidelines section 4a is weaker than usual and the derived d values should be treated as approximate. No SD is reported for any IV; the per-step contrast depends on how the 4-category (Table 2) or 5-point (Methods text) frequency scale was coded, which the paper does not resolve. d values are therefore per-scale-step and not comparable to per-1-SD or per-hour d's from other papers. [complete stage] Full PDF re-read (6 pages, no supplement file): every RR and CI for the 12 included cells is printed in Table 3 and already filled; no SEs, test statistics, IV SDs or unexposed-group event rates are printed anywhere."
  },
- "extraction_flags": "1) The IV set goes beyond the Stage 2 pointer (talk/text). I also included bedtime social media, the phone-at-bedtime ringer categories (silent/vibrate, ringer on and outside the room, each vs turning the phone off), and being woken by phone calls, texts or emails (this item also covers emails). Please confirm the ringer and woken-by-phone items count as phone-specific under FT-IC2. 2) I excluded 'spend time in chat rooms' (ARR 1.27/1.08) and 'used phone or other device after waking' (mixed device and activities). A coder may want chat rooms back in. 3) Table 3 gives social media vs sleep disturbance as 1.06 (1.01, 1.11), but the Results text on p. 500 says 1.01-1.13. I used the table value. 4) The IV coding is unclear. Methods describe a 5-point Likert scale (1 never to 5 every night), Table 2 shows 4 categories (0, 1-2, 3-4, 5-7 nights), and the exposures were 'treated as continuous'. So the per-unit contrast is ambiguous, and no SD is reported for any IV. 5) The covariates are inconsistent. Age is listed among confounders in Methods but is missing from the Table 3 footnote and the abstract. 6) p0 values are marginal rates (15.5%, 28.0%), not rates in the unexposed group, and exposure prevalence is over 10%, so the RR-to-OR conversion is approximate. 7) Each exposure seems to be modeled separately, but the paper does not say so. 8) The ABCD data release is not stated. p-values printed as '<.001' are stored as p null with p_label."
+ "extraction_flags": "1) The IV set goes beyond the Stage 2 pointer (talk/text). I also included bedtime social media, the phone-at-bedtime ringer categories (silent/vibrate, ringer on and outside the room, each vs turning the phone off), and being woken by phone calls, texts or emails (this item also covers emails). Please confirm the ringer and woken-by-phone items count as phone-specific under FT-IC2. 2) I excluded 'spend time in chat rooms' (ARR 1.27/1.08) and 'used phone or other device after waking' (mixed device and activities). A coder may want chat rooms back in. 3) Table 3 gives social media vs sleep disturbance as 1.06 (1.01, 1.11), but the Results text on p. 500 says 1.01-1.13. I used the table value. 4) The IV coding is unclear. Methods describe a 5-point Likert scale (1 never to 5 every night), Table 2 shows 4 categories (0, 1-2, 3-4, 5-7 nights), and the exposures were 'treated as continuous'. So the per-unit contrast is ambiguous, and no SD is reported for any IV. 5) The covariates are inconsistent. Age is listed among confounders in Methods but is missing from the Table 3 footnote and the abstract. 6) p0 values are marginal rates (15.5%, 28.0%), not rates in the unexposed group, and exposure prevalence is over 10%, so the RR-to-OR conversion is approximate. 7) Each exposure seems to be modeled separately, but the paper does not say so. 8) The ABCD data release is not stated. p-values printed as '<.001' are stored as p null with p_label.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous (per-estimate categorical for ringer items)",
+   "where": "Methods p. 499; Table 3 p. 500"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 talk_text x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 talk_text x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_silent x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_silent x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_on x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ringer_on x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone_outside x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone_outside x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 woken_by_phone x trouble_sleep",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 woken_by_phone x sleep_disturbance",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "SE/sd_iv/unexposed p0 not printed; checked Tables 1-3 pp. 499-500, text pp. 497-501"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 talk_text x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Talk on the phone or text' row",
+   "value": "Table 3 (p. 500), 'Talk on the phone or text' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 talk_text x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.16 (1.09, 1.23) p <.001 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 talk_text x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Talk on the phone or text' row",
+   "value": "Table 3 (p. 500), 'Talk on the phone or text' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 talk_text x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.09 (1.04, 1.13) p <.001 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Spend time online on social media (eg, Facebook)' row",
+   "value": "Table 3 (p. 500), 'Spend time online on social media (eg, Facebook)' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.16 (1.1, 1.23) p <.001 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Spend time online on social media (eg, Facebook)' row",
+   "value": "Table 3 (p. 500), 'Spend time online on social media (eg, Facebook)' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.06 (1.01, 1.11) p .009 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_silent x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Put the ringer on silent or vibrate' row (referent: turn the phone off)",
+   "value": "Table 3 (p. 500), 'Put the ringer on silent or vibrate' row (referent: turn the phone off)",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_silent x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.09 (0.94, 1.26) p .274 sig=False",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_silent x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Put the ringer on silent or vibrate' row",
+   "value": "Table 3 (p. 500), 'Put the ringer on silent or vibrate' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_silent x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.01 (0.91, 1.12) p .874 sig=False",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_on x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Leave the ringer on' row (referent: turn the phone off)",
+   "value": "Table 3 (p. 500), 'Leave the ringer on' row (referent: turn the phone off)",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_on x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.23 (1.03, 1.46) p .022 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_on x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Leave the ringer on' row",
+   "value": "Table 3 (p. 500), 'Leave the ringer on' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ringer_on x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.16 (1.03, 1.3) p .013 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_outside x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Put it outside of the room where I sleep' row (referent: turn the phone off)",
+   "value": "Table 3 (p. 500), 'Put it outside of the room where I sleep' row (referent: turn the phone off)",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_outside x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "0.98 (0.83, 1.15) p .781 sig=False",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_outside x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'Put it outside of the room where I sleep' row",
+   "value": "Table 3 (p. 500), 'Put it outside of the room where I sleep' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone_outside x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "0.89 (0.8, 1.01) p .064 sig=False",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_by_phone x trouble_sleep",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'How often have you had phone calls, text messages or emails that wake you' row",
+   "value": "Table 3 (p. 500), 'How often have you had phone calls, text messages or emails that wake you' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_by_phone x trouble_sleep",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.28 (1.19, 1.39) p <.001 sig=True",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_by_phone x sleep_disturbance",
+   "action": "corrected",
+   "field": "location",
+   "was": "Table 3, 'How often have you had phone calls, text messages or emails that wake you' row",
+   "value": "Table 3 (p. 500), 'How often have you had phone calls, text messages or emails that wake you' row",
+   "where": "Table 3 p. 500"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 woken_by_phone x sleep_disturbance",
+   "action": "confirmed",
+   "field": "RR/RR_lo/RR_hi/p/p_label/sig",
+   "value": "1.06 (1.0, 1.12) p .072 sig=False",
+   "where": "Table 3 p. 500 (bold = significant after Benjamini-Hochberg); no SE/z printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1",
+   "action": "confirmed",
+   "field": "p0",
+   "value": "0.155 / 0.28",
+   "where": "Table 1 p. 499"
+  },
+  {
+   "stage": "audit",
+   "item": "M1",
+   "action": "confirmed_missing",
+   "field": "sd_iv/se/z/n1/n0",
+   "value": null,
+   "where": "Full PDF pp. 497-502 re-read (Tables 1-3, Methods, Results, Discussion); no supplement file in docs/pdfs; none printed"
+  }
+ ]
 }

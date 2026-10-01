@@ -96,7 +96,9 @@
      "p": 0.004,
      "p_label": "0.004",
      "sig": true,
-     "location": "Table 2, Texting row, fully adjusted columns"
+     "location": "Table 2, Texting row, fully adjusted columns",
+     "n": 11066,
+     "note": "Verified against Table 2 p.4 (fully adjusted B, 95% CI, exact p). No SE/t printed; CI is printed so none needed. sd_iv from Table 1 p.3 on iv_axis; sd_dv 30.5 (follow-up BMI percentile, Table 1 p.3) on dv_axis. N = 11,066 analytic sample (Methods p.2)."
     },
     {
      "iv": "video_chat",
@@ -107,7 +109,9 @@
      "p": 0.025,
      "p_label": "0.025",
      "sig": true,
-     "location": "Table 2, Video chat row, fully adjusted columns"
+     "location": "Table 2, Video chat row, fully adjusted columns",
+     "n": 11066,
+     "note": "Verified against Table 2 p.4 (fully adjusted B, 95% CI, exact p). No SE/t printed; CI is printed so none needed. sd_iv from Table 1 p.3 on iv_axis; sd_dv 30.5 (follow-up BMI percentile, Table 1 p.3) on dv_axis. N = 11,066 analytic sample (Methods p.2)."
     },
     {
      "iv": "social_networking",
@@ -118,9 +122,12 @@
      "p": 0.075,
      "p_label": "0.075",
      "sig": false,
-     "location": "Table 2, Social networking row, fully adjusted columns"
+     "location": "Table 2, Social networking row, fully adjusted columns",
+     "n": 11066,
+     "note": "Verified against Table 2 p.4 (fully adjusted B, 95% CI, exact p). No SE/t printed; CI is printed so none needed. sd_iv from Table 1 p.3 on iv_axis; sd_dv 30.5 (follow-up BMI percentile, Table 1 p.3) on dv_axis. N = 11,066 analytic sample (Methods p.2). Lower CI printed as '( 0.07' in text extraction (minus sign glyph lost); -0.07 is consistent with p = 0.075 and the non-significant result."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -155,7 +162,120 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
   "contrast_type": "per 1 hour/day of the phone/SM modality, rescaled to per 1 SD of the IV",
   "transformable": true,
-  "notes": "SD_IV from Table 1 (p. 3), baseline screen time hours per day for the analytic N = 11,066: texting 0.56, video chat 0.52, social networking 0.45. SD_DV = 30.5, the SD of BMI percentile at 1-year follow-up in Table 1 (p. 3). Table 1 values are propensity-weighted. Because baseline BMI percentile is a covariate, B reflects association with follow-up BMI percentile net of baseline; standardizing by the raw follow-up SD (not a residual/change SD) yields a very small d and is not directly comparable to cross-sectional estimates. IVs are heavily floor-skewed (means under 15 min/day)."
+  "notes": "SD_IV from Table 1 (p. 3), baseline screen time hours per day for the analytic N = 11,066: texting 0.56, video chat 0.52, social networking 0.45. SD_DV = 30.5, the SD of BMI percentile at 1-year follow-up in Table 1 (p. 3). Table 1 values are propensity-weighted. Because baseline BMI percentile is a covariate, B reflects association with follow-up BMI percentile net of baseline; standardizing by the raw follow-up SD (not a residual/change SD) yields a very small d and is not directly comparable to cross-sectional estimates. IVs are heavily floor-skewed (means under 15 min/day). [complete stage] Re-verified all inputs against Table 1/Table 2; no supplement file in docs/pdfs (Appendices A-B are online Supporting Information only)."
  },
- "extraction_flags": "The PDF is the 5-page short communication only. Appendices A and B are online supporting information that was not available, so the per-modality sensitivity estimates for BMI and BMI z-score were not extracted. Site is listed as a covariate, but the paper does not say whether it is a fixed effect or a random effect. Age is not among the covariates; this is presumably because BMI percentile is already age- and sex-specific. SD_DV is the raw SD of follow-up BMI percentile (30.5), but the model adjusts for baseline BMI percentile, so the derived d values will be very small and are not comparable to cross-sectional d values. The SDs in Table 1 are propensity-weighted. The social networking estimate was not significant (p=0.075). Texting and video chat were significant."
+ "extraction_flags": "The PDF is the 5-page short communication only. Appendices A and B are online supporting information that was not available, so the per-modality sensitivity estimates for BMI and BMI z-score were not extracted. Site is listed as a covariate, but the paper does not say whether it is a fixed effect or a random effect. Age is not among the covariates; this is presumably because BMI percentile is already age- and sex-specific. SD_DV is the raw SD of follow-up BMI percentile (30.5), but the model adjusts for baseline BMI percentile, so the derived d values will be very small and are not comparable to cross-sectional d values. The SDs in Table 1 are propensity-weighted. The social networking estimate was not significant (p=0.075). Texting and video chat were significant.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.2.1 p.2 (hours/day as continuous variable)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "value": {
+    "B": 0.92,
+    "B_lo": 0.29,
+    "B_hi": 1.55,
+    "p": 0.004,
+    "se": null
+   },
+   "where": "Table 2 p.4; all native values/CI/p already present and verified; SE/t not printed anywhere in the 5-page PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "value": {
+    "B": 0.72,
+    "B_lo": 0.09,
+    "B_hi": 1.36,
+    "p": 0.025,
+    "se": null
+   },
+   "where": "Table 2 p.4; all native values/CI/p already present and verified; SE/t not printed anywhere in the 5-page PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_networking x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "value": {
+    "B": 0.67,
+    "B_lo": -0.07,
+    "B_hi": 1.41,
+    "p": 0.075,
+    "se": null
+   },
+   "where": "Table 2 p.4; all native values/CI/p already present and verified; SE/t not printed anywhere in the 5-page PDF"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": {
+    "B": 0.92,
+    "B_lo": 0.29,
+    "B_hi": 1.55,
+    "p": 0.004,
+    "sig": true,
+    "se": null,
+    "t": null
+   },
+   "where": "Table 2 p.4 fully adjusted columns re-read from page image: B, CI, p and sig match exactly (bold = p<0.05). SE and t not printed anywhere in the 5-page PDF; no supplement file in docs/pdfs."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": {
+    "B": 0.72,
+    "B_lo": 0.09,
+    "B_hi": 1.36,
+    "p": 0.025,
+    "sig": true,
+    "se": null,
+    "t": null
+   },
+   "where": "Table 2 p.4 fully adjusted columns re-read from page image: B, CI, p and sig match exactly (bold = p<0.05). SE and t not printed anywhere in the 5-page PDF; no supplement file in docs/pdfs."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_networking x bmi_pct_y1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": {
+    "B": 0.67,
+    "B_lo": -0.07,
+    "B_hi": 1.41,
+    "p": 0.075,
+    "sig": false,
+    "se": null,
+    "t": null
+   },
+   "where": "Table 2 p.4 fully adjusted columns re-read from page image: B, CI, p and sig match exactly (bold = p<0.05). SE and t not printed anywhere in the 5-page PDF; no supplement file in docs/pdfs."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 axes/iv_type",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": {
+    "sd_iv": {
+     "texting": 0.56,
+     "video_chat": 0.52,
+     "social_networking": 0.45
+    },
+    "sd_dv": 30.5,
+    "iv_type": "continuous",
+    "n": 11066
+   },
+   "where": "Table 1 p.3 (screen time SDs, BMI percentile 1-year follow-up 63.5 (30.5)); Methods 2.1 p.2 N=11,066; Methods 2.2.1 p.2 continuous hours/day. All verified; no change needed. Estimate set complete: Table 2 prints only texting, video chat, social networking as phone/SM rows."
+  }
+ ]
 }

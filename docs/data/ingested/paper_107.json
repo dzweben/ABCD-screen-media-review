@@ -93,7 +93,10 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Results p. 3; Fig. 1a and 1b direct effect",
-     "note": "Unstandardized coefficient from the binomial logit equation (log-odds per 1 h/day of social media). The text does not say which of the two mediation models (positive or negative expectancies) the CI comes from; both panels print B = 0.18***. p0 = 0.051 is the weighted sample prevalence at Year 4, not the rate among non-users.",
+     "note": "Unstandardized coefficient from the binomial logit equation (log-odds per 1 h/day of social media). The text does not say which of the two mediation models (positive or negative expectancies) the CI comes from; both panels print B = 0.18***. p0 = 0.051 is the weighted sample prevalence at Year 4, not the rate among non-users. CI printed (Results p.3, abstract); no SE, exact p, or z printed. sd_dv not applicable (binary DV, logit scale). Checked full PDF pp.1-6: abstract, Methods 2.1-2.5, Results p.3 text, Table 1 p.3, Fig. 1a/1b labels and caption p.4, Appendix A note p.5; no supplement file bundled in docs/pdfs (online Appendix A/B only).",
+     "se": null,
+     "se_scale": "log",
+     "n": 7691,
      "derived_d_formula": "OR = e^b;  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = e^b = e^0.18 = 1.1972;  d = 0.18 \u00d7 0.5513 = 0.0992",
      "derived_d": 0.0992,
@@ -101,7 +104,8 @@
      "derived_d_hi": 0.1323,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -150,10 +154,11 @@
      "B_lo": null,
      "B_hi": null,
      "p": null,
-     "p_label": "<0.001 (***)",
+     "p_label": "<0.001",
      "sig": true,
      "location": "Fig. 1a, path social media time -> positive expectancies",
-     "note": "Value read from figure label 'B = 0.16***'; no CI or SE reported. Whether the coefficient is unstandardized is not stated explicitly; the indirect effect (0.05) is consistent with 0.16 x 0.29 on the raw scale.",
+     "note": "Value read from figure label 'B = 0.16***'; no CI or SE reported. Whether the coefficient is unstandardized is not stated explicitly; the indirect effect (0.05) is consistent with 0.16 x 0.29 on the raw scale. Confirmed missing: no CI, SE, exact p, t/z for the a-paths anywhere in the article (only *** p<0.001 in Fig. 1). sd_iv 1.5 and sd_dv (3.0 pos / 2.6 neg) from Table 1 p.3 (weighted, analytic N=7691, Year 2 / Year 3 respectively). Checked full PDF pp.1-6: abstract, Methods 2.1-2.5, Results p.3 text, Table 1 p.3, Fig. 1a/1b labels and caption p.4, Appendix A note p.5; no supplement file bundled in docs/pdfs (online Appendix A/B only).",
+     "n": 7691,
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.16 \u00d7 1.5 / 3 = 0.08;  d = 2(0.08) / \u221a(1 \u2212 0.08\u00b2) = 0.1605",
      "derived_d": 0.1605,
@@ -168,10 +173,11 @@
      "B_lo": null,
      "B_hi": null,
      "p": null,
-     "p_label": "<0.001 (***)",
+     "p_label": "<0.001",
      "sig": true,
      "location": "Fig. 1b, path social media time -> negative expectancies",
-     "note": "Value read from figure label 'B = -0.16***'; no CI or SE reported. Indirect effect (0.03) is consistent with -0.16 x -0.18.",
+     "note": "Value read from figure label 'B = -0.16***'; no CI or SE reported. Indirect effect (0.03) is consistent with -0.16 x -0.18. Confirmed missing: no CI, SE, exact p, t/z for the a-paths anywhere in the article (only *** p<0.001 in Fig. 1). sd_iv 1.5 and sd_dv (3.0 pos / 2.6 neg) from Table 1 p.3 (weighted, analytic N=7691, Year 2 / Year 3 respectively). Checked full PDF pp.1-6: abstract, Methods 2.1-2.5, Results p.3 text, Table 1 p.3, Fig. 1a/1b labels and caption p.4, Appendix A note p.5; no supplement file bundled in docs/pdfs (online Appendix A/B only).",
+     "n": 7691,
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.16 \u00d7 1.5 / 2.6 = -0.0923;  d = 2(-0.0923) / \u221a(1 \u2212 (-0.0923)\u00b2) = -0.1854",
      "derived_d": -0.1854,
@@ -179,7 +185,8 @@
      "derived_d_hi": null,
      "derived_d_method": "linear (SD_IV=1.5, SD_DV=2.6)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -231,7 +238,7 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Results p. 3; Fig. 1a",
-     "note": "Proportion mediated 19.8% (95% CI 12.6%-27.0%).",
+     "note": "Proportion mediated 19.8% (95% CI 12.6%-27.0%). CI printed in Results p.3; no SE or exact p. Checked full PDF pp.1-6: abstract, Methods 2.1-2.5, Results p.3 text, Table 1 p.3, Fig. 1a/1b labels and caption p.4, Appendix A note p.5; no supplement file bundled in docs/pdfs (online Appendix A/B only).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_logit' (flagged for later review level)"
     },
@@ -245,11 +252,12 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Results p. 3; Fig. 1b",
-     "note": "Proportion mediated 13.6% (95% CI 8.4%-18.8%).",
+     "note": "Proportion mediated 13.6% (95% CI 8.4%-18.8%). CI printed in Results p.3; no SE or exact p. Checked full PDF pp.1-6: abstract, Methods 2.1-2.5, Results p.3 text, Table 1 p.3, Fig. 1a/1b labels and caption p.4, Appendix A note p.5; no supplement file bundled in docs/pdfs (online Appendix A/B only).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_logit' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -274,8 +282,146 @@
   "conversion_formula": "M1: ln(OR) = B, so d = B * sqrt(3)/pi (Chinn 2000), applied to B and to each CI bound. M2: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M3: not converted (mediation indirect effect).",
   "contrast_type": "M1 and M3: per 1 hour/day of Year 2 social media time. M2: per 1 hour/day, converted to per 1 SD of social media time via SD_IV.",
   "transformable": "partial",
-  "notes": "SD_IV = 1.5 h/day and SD_DV = 3.0 (positive expectancies) and 2.6 (negative expectancies) are the weighted Table 1 descriptives for the N = 7691 analytic sample (p. 3). M1 B is on the log-odds scale because the gsem outcome equation is a binomial logit (Methods 2.5); it is not an OR and should not be run through the linear B formula. M2 has no CI, so only a point d can be derived. M3 indirect effects are products of coefficients across a linear and a logit equation; they are kept in native units and marked non-convertible per the guidelines for mediation indirect effects. Baseline event rate for the binary DV is the marginal weighted 5.1% at Year 4."
+  "notes": "SD_IV = 1.5 h/day and SD_DV = 3.0 (positive expectancies) and 2.6 (negative expectancies) are the weighted Table 1 descriptives for the N = 7691 analytic sample (p. 3). M1 B is on the log-odds scale because the gsem outcome equation is a binomial logit (Methods 2.5); it is not an OR and should not be run through the linear B formula. M2 has no CI, so only a point d can be derived. M3 indirect effects are products of coefficients across a linear and a logit equation; they are kept in native units and marked non-convertible per the guidelines for mediation indirect effects. Baseline event rate for the binary DV is the marginal weighted 5.1% at Year 4. Completion pass: whole PDF re-read (6 pp.); no supplementary file in repo; M2 a-path CIs/SEs and M1 SE are not printed anywhere in the article. All IVs continuous (hours/day)."
  },
  "extraction_flags": "1) The headline B=0.18 (95% CI 0.13-0.24) is the gsem direct effect from a binomial logit equation, so it is on the log-odds scale; I coded it as other:logit_B (d = B*sqrt(3)/pi). Please make sure the pipeline does not run it through the linear B formula. Fig. 1a and 1b both print direct B = 0.18, and the text does not say which mediation model the CI comes from. 2) The M2 a-paths (SM to positive expectancies B=0.16, to negative B=-0.16) come only from the Fig. 1 labels: there is no CI, no exact p, and the paper does not say whether they are unstandardized. The indirect effects (0.16x0.29=0.046 and 0.16x0.18=0.029) are consistent with raw-scale coefficients. Expectancies (beliefs about cannabis) were counted as an individual-level psychosocial DV, so check that they are eligible. 3) M3 indirect effects are kept in native units and marked non-convertible. 4) SDs come from Table 1 and are weighted (SM 1.5 h/day; expectancies 3.0 and 2.6). p0 = 0.051 is the weighted marginal prevalence of Year 4 experimentation, not the rate among non-users. 5) The ABCD release is not stated. The Appendix A flowchart and Appendix B (expectancy scoring) are online supplements that are not in the PDF. The paper does not say whether study site enters as a fixed or random term.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 social media time",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.1 p.2 (hours/day continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 social media time",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.1 p.2 (hours/day continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 social media time",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.1 p.2 (hours/day continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SM time x cannabis Y4",
+   "action": "confirmed_missing",
+   "value": "SE/exact p/z not printed; CI 0.13-0.24 already filled",
+   "where": "Results p.3, abstract p.1, Fig.1 p.4"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x pos_expect_y3",
+   "action": "confirmed_missing",
+   "value": "CI/SE/exact p not printed; only p<0.001",
+   "where": "Fig. 1 p.4; Results p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x pos_expect_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.5,
+    "sd_dv": 3.0
+   },
+   "where": "Table 1 p.3 (already present, verified)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x neg_expect_y3",
+   "action": "confirmed_missing",
+   "value": "CI/SE/exact p not printed; only p<0.001",
+   "where": "Fig. 1 p.4; Results p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 SM time x neg_expect_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.5,
+    "sd_dv": 2.6
+   },
+   "where": "Table 1 p.3 (already present, verified)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 indirect cannabis_y4_via_pos",
+   "action": "confirmed_missing",
+   "value": "SE/exact p not printed; CI already filled",
+   "where": "Results p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 indirect cannabis_y4_via_neg",
+   "action": "confirmed_missing",
+   "value": "SE/exact p not printed; CI already filled",
+   "where": "Results p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_time_y2 x pos_expect_y3",
+   "action": "corrected",
+   "field": "p_label",
+   "was": "<0.001 (***)",
+   "value": "<0.001",
+   "where": "Fig. 1 p.4 caption (*** = p<0.001)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_time_y2 x neg_expect_y3",
+   "action": "corrected",
+   "field": "p_label",
+   "was": "<0.001 (***)",
+   "value": "<0.001",
+   "where": "Fig. 1 p.4 caption (*** = p<0.001)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_time_y2 x cannabis_y4",
+   "action": "confirmed_missing",
+   "value": "value 0.18, CI 0.13-0.24, p<0.001, sig, n 7691, p0 0.051 all match; SE/z/exact p not printed",
+   "where": "Abstract p.1; Results p.3; Fig. 1a/1b p.4; Table 1 p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_time_y2 x pos_expect_y3",
+   "action": "confirmed",
+   "value": "B 0.16***, sd_iv 1.5, sd_dv 3.0 match; no CI/SE/exact p printed",
+   "where": "Fig. 1a p.4; Table 1 p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm_time_y2 x neg_expect_y3",
+   "action": "confirmed",
+   "value": "B -0.16***, sd_iv 1.5, sd_dv 2.6 match; no CI/SE/exact p printed",
+   "where": "Fig. 1b p.4; Table 1 p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 indirect via pos",
+   "action": "confirmed",
+   "value": "0.05 (0.03-0.06), p<0.001; 19.8% (12.6-27.0) match",
+   "where": "Results p.3; Fig. 1a"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 indirect via neg",
+   "action": "confirmed",
+   "value": "0.03 (0.02-0.04), p<0.001; 13.6% (8.4-18.8) match",
+   "where": "Results p.3; Fig. 1b"
+  },
+  {
+   "stage": "audit",
+   "item": "all models",
+   "action": "confirmed",
+   "value": "iv_type continuous confirmed (hours/day continuous, Methods 2.1); no supplement file in docs/pdfs; no missing SM x DV cells",
+   "where": "Methods 2.1 p.2; full PDF pp.1-6"
+  }
+ ],
  "supplements": []
 }

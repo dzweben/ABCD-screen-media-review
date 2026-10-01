@@ -159,7 +159,9 @@
      "p_label": ".426",
      "sig": false,
      "location": "Table 3, beta1 Time -> IP, 8 & under column (p. 7)",
-     "note": "SE = .03.",
+     "note": "SE = .03. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.03,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -173,7 +175,9 @@
      "p_label": ".002",
      "sig": true,
      "location": "Table 3, beta1 Time -> IP, 9 & 10 column (p. 7)",
-     "note": "SE = .02.",
+     "note": "SE = .02. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.02,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -187,7 +191,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta1 Time -> IP, 11 & 12 column (p. 7)",
-     "note": "SE = .01.",
+     "note": "SE = .01. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.01,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -201,21 +207,25 @@
      "p_label": ".276",
      "sig": false,
      "location": "Table 3, beta1 Time -> IP, 13 & 14 column (p. 7)",
-     "note": "SE = .03.",
+     "note": "SE = .03. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.03,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
     {
      "iv": "nophone",
      "dv": "time",
-     "value": 0.06,
+     "value": -0.09,
      "value_lo": null,
      "value_hi": null,
-     "p": 0.401,
-     "p_label": ".401",
+     "p": 0.068,
+     "p_label": ".068",
      "sig": false,
-     "location": "Table 3, beta1 Time -> IP, No phone column (p. 7)",
-     "note": "SE = .07. Discrepancy: Results text p. 6 reports the No Phone time effect as b = -.09, SE = .05, p = .068; Table 3 prints .06/.07/.401, identical to the No Phone Puberty row, so the Table 3 cell is probably a transcription error. Value here is copied from Table 3.",
+     "location": "Results text p. 6 (Multi-group direct effects section), No Phone group; Table 3 p. 7 No Phone cell not used",
+     "note": "SE = .07. Discrepancy: Results text p. 6 reports the No Phone time effect as b = -.09, SE = .05, p = .068; Table 3 prints .06/.07/.401, identical to the No Phone Puberty row, so the Table 3 cell is probably a transcription error. AUDIT: value now taken from the Results text p. 6, because the Table 3 No Phone cell exactly duplicates a covariate row in the same column (Puberty .06/.07/.401) and contradicts the authors' own description (\"a negative, non-significant association between time and internalizing problems was found in the No Phone group\"), and the M2 latent growth slopes for No Phone (youth b = -.05, parent b = -.07) also point to a negative pooled time effect. Original Table 3 values: .06/.07/p = .401. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.05,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -229,7 +239,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta2 Informant -> IP, 8 & under column (p. 7)",
-     "note": "SE = .08.",
+     "note": "SE = .08. sd_dv not filled: beta2 is averaged over Years 1-4; no single wave-pooled SD is printed. Per-wave group SDs by reporter are in Table 2 p.5 (used for inf_y1..inf_y4 cells). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.08,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -243,7 +255,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta2 Informant -> IP, 9 & 10 column (p. 7)",
-     "note": "SE = .04.",
+     "note": "SE = .04. sd_dv not filled: beta2 is averaged over Years 1-4; no single wave-pooled SD is printed. Per-wave group SDs by reporter are in Table 2 p.5 (used for inf_y1..inf_y4 cells). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.04,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -257,7 +271,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta2 Informant -> IP, 11 & 12 column (p. 7)",
-     "note": "SE = .03. Results text p. 6 prints SE = .17 for this estimate; Table 3 prints SE = .03.",
+     "note": "SE = .03. Results text p. 6 prints SE = .17 for this estimate; Table 3 prints SE = .03. sd_dv not filled: beta2 is averaged over Years 1-4; no single wave-pooled SD is printed. Per-wave group SDs by reporter are in Table 2 p.5 (used for inf_y1..inf_y4 cells). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.03,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -271,21 +287,25 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta2 Informant -> IP, 13 & 14 column (p. 7)",
-     "note": "SE = .06.",
+     "note": "SE = .06. sd_dv not filled: beta2 is averaged over Years 1-4; no single wave-pooled SD is printed. Per-wave group SDs by reporter are in Table 2 p.5 (used for inf_y1..inf_y4 cells). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.06,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
     {
      "iv": "nophone",
      "dv": "informant",
-     "value": 0.03,
+     "value": -0.04,
      "value_lo": null,
      "value_hi": null,
-     "p": 0.064,
-     "p_label": ".064",
+     "p": 0.694,
+     "p_label": ".694",
      "sig": false,
-     "location": "Table 3, beta2 Informant -> IP, No phone column (p. 7)",
-     "note": "SE = .02. Discrepancy: Results text p. 6 reports the No Phone informant effect as b = -.04, SE = .06, p = .694; Table 3 prints .03/.02/.064, identical to the No Phone Screen time row, so the Table 3 cell is probably a transcription error. Value here is copied from Table 3.",
+     "location": "Results text p. 6 (Multi-group direct effects section), No Phone group; Table 3 p. 7 No Phone cell not used",
+     "note": "SE = .02. Discrepancy: Results text p. 6 reports the No Phone informant effect as b = -.04, SE = .06, p = .694; Table 3 prints .03/.02/.064, identical to the No Phone Screen time row, so the Table 3 cell is probably a transcription error. AUDIT: value now taken from the Results text p. 6, because the Table 3 No Phone cell exactly duplicates a covariate row in the same column (Screen time .03/.02/.064) and contradicts the authors' own description (b = -.04, p = .694 in the text), and the M2 latent growth slopes for No Phone (youth b = -.05, parent b = -.07) also point to a negative pooled time effect. Original Table 3 values: .03/.02/p = .064. sd_dv not filled: beta2 is averaged over Years 1-4; no single wave-pooled SD is printed. Per-wave group SDs by reporter are in Table 2 p.5 (used for inf_y1..inf_y4 cells). No 95% CI printed for this cell (Table 3 gives Est/SE/p only; text CIs on p.7 are for beta3 only); CI computable from se.",
+     "se": 0.06,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -299,7 +319,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta3 Time x Inf. -> IP, 8 & under column (p. 7)",
-     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3).",
+     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3). sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave).",
+     "se": 0.05,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -313,7 +335,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta3 Time x Inf. -> IP, 9 & 10 column (p. 7)",
-     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3).",
+     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3). sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave).",
+     "se": 0.02,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -327,7 +351,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta3 Time x Inf. -> IP, 11 & 12 column (p. 7)",
-     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3).",
+     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3). Results text p.7 prints SE = .01 for this estimate (Table 3: .02); se field uses Table 3. sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave).",
+     "se": 0.02,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -341,7 +367,9 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, beta3 Time x Inf. -> IP, 13 & 14 column (p. 7)",
-     "note": "SE = .04. 95% CI from Results text p. 7 (not in Table 3).",
+     "note": "SE = .04. 95% CI from Results text p. 7 (not in Table 3). sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave).",
+     "se": 0.04,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -355,7 +383,9 @@
      "p_label": ".747",
      "sig": false,
      "location": "Table 3, beta3 Time x Inf. -> IP, No phone column (p. 7)",
-     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3).",
+     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3). sd_dv not filled: beta1/beta3 are per-wave changes in a pooled two-reporter score; no SD of the pooled stacked outcome is printed (Table 1/2 give SDs only by reporter x wave).",
+     "se": 0.05,
+     "se_scale": "raw",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -369,7 +399,10 @@
      "p_label": ".023",
      "sig": true,
      "location": "Table 4, Year 1, 8 & under columns (p. 8)",
-     "note": "z = -2.28.",
+     "note": "z = -2.28. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 1: sqrt((2.23^2 + 2.0^2)/2) = 2.118 (Table 2 p.5, 8 & under column, youth SD 2.23, parent SD 2.0); group n = 677 (Table 2).",
+     "z": -2.28,
+     "sd_dv": 2.118,
+     "n": 677,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -383,7 +416,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 1, 9 & 10 columns (p. 8)",
-     "note": "z = -4.31.",
+     "note": "z = -4.31. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 1: sqrt((2.11^2 + 1.82^2)/2) = 1.97 (Table 2 p.5, 9 & 10 column, youth SD 2.11, parent SD 1.82); group n = 2641 (Table 2).",
+     "z": -4.31,
+     "sd_dv": 1.97,
+     "n": 2641,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -397,7 +433,10 @@
      "p_label": ".901",
      "sig": false,
      "location": "Table 4, Year 1, 11 & 12 columns (p. 8)",
-     "note": "z = -.09.",
+     "note": "z = -.09. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 1: sqrt((2.11^2 + 1.87^2)/2) = 1.994 (Table 2 p.5, 11 & 12 column, youth SD 2.11, parent SD 1.87); group n = 5037 (Table 2).",
+     "z": -0.09,
+     "sd_dv": 1.994,
+     "n": 5037,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -411,7 +450,10 @@
      "p_label": ".039",
      "sig": true,
      "location": "Table 4, Year 1, 13 & 14 columns (p. 8)",
-     "note": "z = .22. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. p = .039 would make this a significant positive informant effect at Year 1, but the Results text (p. 8) says informant discrepancy was significant only at Y4 for the 13 & 14 group; verify.",
+     "note": "z = .22. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. p = .039 would make this a significant positive informant effect at Year 1, but the Results text (p. 8) says informant discrepancy was significant only at Y4 for the 13 & 14 group; verify. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 1: sqrt((1.91^2 + 1.84^2)/2) = 1.875 (Table 2 p.5, 13 & 14 column, youth SD 1.91, parent SD 1.84); group n = 744 (Table 2).",
+     "z": 0.22,
+     "sd_dv": 1.875,
+     "n": 744,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -425,7 +467,10 @@
      "p_label": ".973",
      "sig": false,
      "location": "Table 4, Year 1, No phone columns (p. 8)",
-     "note": "z = .03.",
+     "note": "z = .03. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 1: sqrt((2.23^2 + 2.0^2)/2) = 2.118 (Table 2 p.5, No phone column, youth SD 2.23, parent SD 2.0); group n = 376 (Table 2).",
+     "z": 0.03,
+     "sd_dv": 2.118,
+     "n": 376,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -439,7 +484,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 2, 8 & under columns (p. 8)",
-     "note": "z = -3.82.",
+     "note": "z = -3.82. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 2: sqrt((2.43^2 + 1.94^2)/2) = 2.199 (Table 2 p.5, 8 & under column, youth SD 2.43, parent SD 1.94); group n = 677 (Table 2).",
+     "z": -3.82,
+     "sd_dv": 2.199,
+     "n": 677,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -453,7 +501,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 2, 9 & 10 columns (p. 8)",
-     "note": "z = -6.61.",
+     "note": "z = -6.61. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 2: sqrt((2.26^2 + 1.79^2)/2) = 2.039 (Table 2 p.5, 9 & 10 column, youth SD 2.26, parent SD 1.79); group n = 2641 (Table 2).",
+     "z": -6.61,
+     "sd_dv": 2.039,
+     "n": 2641,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -467,7 +518,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 2, 11 & 12 columns (p. 8)",
-     "note": "z = -4.14.",
+     "note": "z = -4.14. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 2: sqrt((2.21^2 + 1.88^2)/2) = 2.052 (Table 2 p.5, 11 & 12 column, youth SD 2.21, parent SD 1.88); group n = 5037 (Table 2).",
+     "z": -4.14,
+     "sd_dv": 2.052,
+     "n": 5037,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -481,7 +535,10 @@
      "p_label": ".904",
      "sig": false,
      "location": "Table 4, Year 2, 13 & 14 columns (p. 8)",
-     "note": "z = .01. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error.",
+     "note": "z = .01. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 2: sqrt((2.15^2 + 1.89^2)/2) = 2.024 (Table 2 p.5, 13 & 14 column, youth SD 2.15, parent SD 1.89); group n = 744 (Table 2).",
+     "z": 0.01,
+     "sd_dv": 2.024,
+     "n": 744,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -495,7 +552,10 @@
      "p_label": ".952",
      "sig": false,
      "location": "Table 4, Year 2, No phone columns (p. 8)",
-     "note": "z = -.06.",
+     "note": "z = -.06. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 2: sqrt((2.31^2 + 2.21^2)/2) = 2.261 (Table 2 p.5, No phone column, youth SD 2.31, parent SD 2.21); group n = 376 (Table 2).",
+     "z": -0.06,
+     "sd_dv": 2.261,
+     "n": 376,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -509,7 +569,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 3, 8 & under columns (p. 8)",
-     "note": "z = -4.67.",
+     "note": "z = -4.67. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 3: sqrt((2.56^2 + 1.99^2)/2) = 2.293 (Table 2 p.5, 8 & under column, youth SD 2.56, parent SD 1.99); group n = 677 (Table 2).",
+     "z": -4.67,
+     "sd_dv": 2.293,
+     "n": 677,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -523,7 +586,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 3, 9 & 10 columns (p. 8)",
-     "note": "z = -8.36.",
+     "note": "z = -8.36. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 3: sqrt((2.48^2 + 1.86^2)/2) = 2.192 (Table 2 p.5, 9 & 10 column, youth SD 2.48, parent SD 1.86); group n = 2641 (Table 2).",
+     "z": -8.36,
+     "sd_dv": 2.192,
+     "n": 2641,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -537,7 +603,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 3, 11 & 12 columns (p. 8)",
-     "note": "z = -6.98.",
+     "note": "z = -6.98. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 3: sqrt((2.4^2 + 1.99^2)/2) = 2.205 (Table 2 p.5, 11 & 12 column, youth SD 2.4, parent SD 1.99); group n = 5037 (Table 2).",
+     "z": -6.98,
+     "sd_dv": 2.205,
+     "n": 5037,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -551,7 +620,10 @@
      "p_label": ".131",
      "sig": false,
      "location": "Table 4, Year 3, 13 & 14 columns (p. 8)",
-     "note": "z = -.19. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error.",
+     "note": "z = -.19. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 3: sqrt((2.14^2 + 1.77^2)/2) = 1.964 (Table 2 p.5, 13 & 14 column, youth SD 2.14, parent SD 1.77); group n = 744 (Table 2).",
+     "z": -0.19,
+     "sd_dv": 1.964,
+     "n": 744,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -565,7 +637,10 @@
      "p_label": ".892",
      "sig": false,
      "location": "Table 4, Year 3, No phone columns (p. 8)",
-     "note": "z = -.14.",
+     "note": "z = -.14. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 3: sqrt((1.96^2 + 2.14^2)/2) = 2.052 (Table 2 p.5, No phone column, youth SD 1.96, parent SD 2.14); group n = 376 (Table 2).",
+     "z": -0.14,
+     "sd_dv": 2.052,
+     "n": 376,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -579,7 +654,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 4, 8 & under columns (p. 8)",
-     "note": "z = -5.04.",
+     "note": "z = -5.04. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 4: sqrt((2.72^2 + 1.81^2)/2) = 2.31 (Table 2 p.5, 8 & under column, youth SD 2.72, parent SD 1.81); group n = 677 (Table 2).",
+     "z": -5.04,
+     "sd_dv": 2.31,
+     "n": 677,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -593,7 +671,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 4, 9 & 10 columns (p. 8)",
-     "note": "z = -8.98.",
+     "note": "z = -8.98. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 4: sqrt((2.67^2 + 1.89^2)/2) = 2.313 (Table 2 p.5, 9 & 10 column, youth SD 2.67, parent SD 1.89); group n = 2641 (Table 2).",
+     "z": -8.98,
+     "sd_dv": 2.313,
+     "n": 2641,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -607,7 +688,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 4, 11 & 12 columns (p. 8)",
-     "note": "z = -8.66.",
+     "note": "z = -8.66. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 4: sqrt((2.57^2 + 2.01^2)/2) = 2.307 (Table 2 p.5, 11 & 12 column, youth SD 2.57, parent SD 2.01); group n = 5037 (Table 2).",
+     "z": -8.66,
+     "sd_dv": 2.307,
+     "n": 5037,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -621,7 +705,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 4, Year 4, 13 & 14 columns (p. 8)",
-     "note": "z = .40. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error.",
+     "note": "z = .40. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 4: sqrt((2.4^2 + 1.8^2)/2) = 2.121 (Table 2 p.5, 13 & 14 column, youth SD 2.4, parent SD 1.8); group n = 744 (Table 2).",
+     "z": 0.4,
+     "sd_dv": 2.121,
+     "n": 744,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -635,7 +722,10 @@
      "p_label": ".848",
      "sig": false,
      "location": "Table 4, Year 4, No phone columns (p. 8)",
-     "note": "z = -.19.",
+     "note": "z = -.19. Table 4 prints b, z, p only (no SE or CI); SE = b/z if z is trusted. sd_dv = pooled within-group SD of youth and parent internalizing at Year 4: sqrt((2.17^2 + 2.21^2)/2) = 2.19 (Table 2 p.5, No phone column, youth SD 2.17, parent SD 2.21); group n = 376 (Table 2).",
+     "z": -0.19,
+     "sd_dv": 2.19,
+     "n": 376,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -649,7 +739,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 6-7 (post-hoc Wald tests)",
-     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient.",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient. chi2_df = 1 (printed chi2(1)). n = 7678 = sum of the two groups' Table 2 Ns (2641 + 5037); the analytic N per test is not printed. sign = +1 means the later-ownership group has the less negative (smaller) parent-youth informant effect (text p.6: 9 & 10 b = -0.68, 11 & 12 b = -0.44; No Phone value from text p.6, not Table 3).",
+     "chi2_df": 1,
+     "n": 7678,
+     "sign": 1,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -663,7 +756,10 @@
      "p_label": ".015",
      "sig": true,
      "location": "Results text p. 6-7 (post-hoc Wald tests)",
-     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient.",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient. chi2_df = 1 (printed chi2(1)). n = 5781 = sum of the two groups' Table 2 Ns (5037 + 744); the analytic N per test is not printed. sign = +1 means the later-ownership group has the less negative (smaller) parent-youth informant effect (text p.6: 11 & 12 b = -0.44, 13 & 14 b = -0.27; No Phone value from text p.6, not Table 3).",
+     "chi2_df": 1,
+     "n": 5781,
+     "sign": 1,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     },
@@ -677,11 +773,15 @@
      "p_label": ".040",
      "sig": true,
      "location": "Results text p. 6-7 (post-hoc Wald tests)",
-     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient.",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient. chi2_df = 1 (printed chi2(1)). n = 1120 = sum of the two groups' Table 2 Ns (744 + 376); the analytic N per test is not printed. sign = +1 means the later-ownership group has the less negative (smaller) parent-youth informant effect (text p.6: 13 & 14 b = -0.27, No phone b = -0.04; No Phone value from text p.6, not Table 3).",
+     "chi2_df": 1,
+     "n": 1120,
+     "sign": 1,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "categorical"
   },
   {
    "model_id": "M2",
@@ -757,7 +857,10 @@
      "p_label": ".001",
      "sig": true,
      "location": "Results text p. 5 (8 & under); Figure 1 (p. 6)",
-     "note": "SE = .12. Standardized beta = .29.",
+     "note": "SE = .12. Standardized beta = .29. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.12,
+     "se_scale": "raw",
+     "beta_std": 0.29,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -771,7 +874,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 5 (9 & 10); Figure 1 (p. 6)",
-     "note": "SE = .02. Standardized beta = .29.",
+     "note": "SE = .02. Standardized beta = .29. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.02,
+     "se_scale": "raw",
+     "beta_std": 0.29,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -785,7 +891,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 5 (11 & 12); Figure 1 (p. 6)",
-     "note": "SE = .02. Standardized beta = .32.",
+     "note": "SE = .02. Standardized beta = .32. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.02,
+     "se_scale": "raw",
+     "beta_std": 0.32,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -799,7 +908,10 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 5 (13 & 14); Figure 1 (p. 6)",
-     "note": "SE = .06. Standardized beta = .39.",
+     "note": "SE = .06. Standardized beta = .39. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.06,
+     "se_scale": "raw",
+     "beta_std": 0.39,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -813,7 +925,10 @@
      "p_label": ".216",
      "sig": false,
      "location": "Results text p. 5 (No phone); Figure 1 (p. 6)",
-     "note": "SE = .04. Standardized beta = -.09.",
+     "note": "SE = .04. Standardized beta = -.09. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.04,
+     "se_scale": "raw",
+     "beta_std": -0.09,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -827,7 +942,10 @@
      "p_label": ".013",
      "sig": true,
      "location": "Results text p. 5 (8 & under); Figure 1 (p. 6)",
-     "note": "SE = .03. Standardized beta = -.24.",
+     "note": "SE = .03. Standardized beta = -.24. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.03,
+     "se_scale": "raw",
+     "beta_std": -0.24,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -841,7 +959,10 @@
      "p_label": ".858",
      "sig": false,
      "location": "Results text p. 5 (9 & 10); Figure 1 (p. 6)",
-     "note": "SE = .01. Standardized beta = .01.",
+     "note": "SE = .01. Standardized beta = .01. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.01,
+     "se_scale": "raw",
+     "beta_std": 0.01,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -855,7 +976,10 @@
      "p_label": ".439",
      "sig": false,
      "location": "Results text p. 5 (11 & 12); Figure 1 (p. 6)",
-     "note": "SE = .02. Standardized beta = .02.",
+     "note": "SE = .02. Standardized beta = .02. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.02,
+     "se_scale": "raw",
+     "beta_std": 0.02,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -869,7 +993,10 @@
      "p_label": ".308",
      "sig": false,
      "location": "Results text p. 5 (13 & 14); Figure 1 (p. 6)",
-     "note": "SE = .02. Standardized beta = -.06.",
+     "note": "SE = .02. Standardized beta = -.06. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.02,
+     "se_scale": "raw",
+     "beta_std": -0.06,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     },
@@ -883,11 +1010,15 @@
      "p_label": ".044",
      "sig": true,
      "location": "Results text p. 5 (No phone); Figure 1 (p. 6)",
-     "note": "SE = .03. Standardized beta = -.19.",
+     "note": "SE = .03. Standardized beta = -.19. No CI printed (text p.5 gives b, beta, SE, p; Figure 1 labels give beta only). Figure 1 label for No phone parent slope reads beta = -.16* while text p.5 says beta = -.19; text value kept. sd_dv not filled: slope is per wave of a latent growth factor; per-wave SDs by group/reporter are in Table 2 p.5 but no SD of the slope's metric is printed.",
+     "se": 0.03,
+     "se_scale": "raw",
+     "beta_std": -0.19,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:within-group latent growth slope b (standardized beta in note)' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "categorical"
   },
   {
    "model_id": "M3",
@@ -975,7 +1106,7 @@
      "p_label": "p < .01",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 1 (Internal (Y) 1) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(-0.04) / \u221a(1 \u2212 (-0.04)\u00b2) = -0.0801",
      "derived_d": -0.0801,
@@ -993,7 +1124,7 @@
      "p_label": "p < .01",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 2 (Internal (Y) 2) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(-0.04) / \u221a(1 \u2212 (-0.04)\u00b2) = -0.0801",
      "derived_d": -0.0801,
@@ -1011,7 +1142,7 @@
      "p_label": "p < .001",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 3 (Internal (Y) 3) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(-0.07) / \u221a(1 \u2212 (-0.07)\u00b2) = -0.1403",
      "derived_d": -0.1403,
@@ -1029,7 +1160,7 @@
      "p_label": "p < .001",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 4 (Internal (Y) 4) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(-0.06) / \u221a(1 \u2212 (-0.06)\u00b2) = -0.1202",
      "derived_d": -0.1202,
@@ -1047,7 +1178,7 @@
      "p_label": "p < .01",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 5 (Internal (P) 1) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
@@ -1065,7 +1196,7 @@
      "p_label": "p < .01",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 6 (Internal (P) 2) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(0.04) / \u221a(1 \u2212 0.04\u00b2) = 0.0801",
      "derived_d": 0.0801,
@@ -1083,7 +1214,7 @@
      "p_label": "p < .01",
      "sig": true,
      "location": "Table 1, row 11 (Cellphone age) x column 7 (Internal (P) 3) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(0.04) / \u221a(1 \u2212 0.04\u00b2) = 0.0801",
      "derived_d": 0.0801,
@@ -1101,7 +1232,7 @@
      "p_label": "ns (no asterisk)",
      "sig": false,
      "location": "Table 1, row 11 (Cellphone age) x column 8 (Internal (P) 4) (p. 5)",
-     "note": "Exact p not printed; significance from asterisks.",
+     "note": "Exact p not printed; significance from asterisks. Checked Table 1 note, text p.4, Table 2: no CI, exact p, or pairwise N printed for these correlations. Smartphone-age sample with data = 9,475 (Table 2 group Ns sum; 17.9% missing per p.4), wave Ns p.3 (Y1 11,219; Y2 10,972; Y3 10,335; Y4 4,754); pairwise N would be at most the smaller of these but is not printed. No supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2r / \u221a(1 \u2212 r\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
@@ -1109,7 +1240,8 @@
      "derived_d_hi": null,
      "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -1144,8 +1276,990 @@
   "conversion_formula": "M3 only: d = 2r / sqrt(1 - r^2) (Borenstein et al. 2009). M1 and M2: no conversion.",
   "contrast_type": "M3: per unit of the coded ownership-age variable expressed as a correlation (higher code = later or no smartphone ownership); sign is negative for youth-report internalizing, so later ownership goes with fewer youth-reported problems. M1/M2: smartphone age is a grouping variable; estimates are within-group parameters (parent vs youth difference, change per year), not effects of phone ownership.",
   "transformable": "partial",
-  "notes": "M3 correlations are directly convertible; SD_IV (0.85) and SD_DV per wave/reporter are from Table 1 (p. 5) but are not needed for the r-to-d conversion. M3 is unadjusted and treats a five-category variable (with No Phone coded as the highest value) as continuous, so the derived d is a rough association, not the authors' focal estimate. M1 is the analysis the authors use to interpret the smartphone finding, but it is a multi-group model in which smartphone age only defines groups; the parameters are the informant (parent minus youth) effect and its change over time within each group, in raw internalizing-score units (0-12). A between-group phone contrast exists only as Wald chi-square tests (df = 1) with no effect size, so no Cohen's d for smartphone ownership can be derived from M1 or M2 without the raw between-group differences and their SEs, which are not reported. M2 slopes are within-group change over time, likewise not a phone effect."
+  "notes": "M3 correlations are directly convertible; SD_IV (0.85) and SD_DV per wave/reporter are from Table 1 (p. 5) but are not needed for the r-to-d conversion. M3 is unadjusted and treats a five-category variable (with No Phone coded as the highest value) as continuous, so the derived d is a rough association, not the authors' focal estimate. M1 is the analysis the authors use to interpret the smartphone finding, but it is a multi-group model in which smartphone age only defines groups; the parameters are the informant (parent minus youth) effect and its change over time within each group, in raw internalizing-score units (0-12). A between-group phone contrast exists only as Wald chi-square tests (df = 1) with no effect size, so no Cohen's d for smartphone ownership can be derived from M1 or M2 without the raw between-group differences and their SEs, which are not reported. M2 slopes are within-group change over time, likewise not a phone effect. [complete pass 2026-10-01] Added se/se_scale to all Table 3 and M2 cells, z to Table 4 probes, chi2_df/n/sign to Wald tests, pooled per-wave sd_dv (Table 2) for Table 4 informant probes, iv_type on each model. No supplement PDF in docs/pdfs (online supplement holds only item list and distributions per text p.3)."
  },
  "extraction_flags": "1) Eligibility: in this paper, age of smartphone ownership is used only to split the sample into 5 groups (8 & under, 9 & 10, 11 & 12, 13 & 14, No Phone) for multi-group models (M1 Table 3/4, M2 latent growth). It never enters a model as a regressor with its own coefficient, so in practice it works as a moderator, and FT-IC2 clarification 7 says moderators do not qualify. The only direct phone-trait numbers are the unadjusted bivariate r values in Table 1 (M3: 'Cellphone age' with youth/parent internalizing Y1-Y4) and three Wald chi-square tests comparing adjacent groups' informant effects. A human should confirm whether Stage-2 inclusion holds. 2) M1 is the analysis the authors use to interpret their findings, but it is not convertible to d. Only M3 converts (r to d), and M3 is unadjusted. It also treats the coded group variable (No Phone presumably = 5) as continuous, and the coding is not printed explicitly. 3) Table 3 errors in the No Phone column: the informant row (.03/.02/.064) and the time row (.06/.07/.401) duplicate the screen-time and puberty rows. The text reports b = -.04, SE = .06, p = .694 and b = -.09, SE = .05, p = .068. I extracted the table values and flagged them in notes. 4) The text gives SE = .17 for the 11 & 12 informant effect; Table 3 gives .03. 5) Table 4, 13 & 14 column: every printed z equals b, and Y4 z = .40 vs b = -.40, which looks like a typesetting error. Y1 b = .22, p = .039 contradicts the text's claim that 13 & 14 was significant only at Y4. 6) Per the text, beta1/beta2 in Table 3 come from the model before the interaction was added and beta3 from the interaction model. 7) M2 (post-hoc latent growth curve) values come from the Results text p. 5, which matches Figure 1. Covariates for that model are not reported. 8) The full-sample interaction CI [-.29, -.23] does not contain b = -.21 (excluded, not phone-specific). 9) There is no supplement in the PDF; Supplemental Table 1 and Figure 1 are online only and were not reviewed.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "smartphone-ownership age is a 5-level grouping variable; within-group informant is binary (0 youth/1 parent)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "smartphone-ownership age is a 5-level grouping variable"
+  },
+  {
+   "stage": "complete",
+   "item": "M3",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "coded ownership-age category (1-5) correlated as a continuous variable"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x time",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x time",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x time",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x time",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x time",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x time",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x time",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x time",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x time",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.07
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x time",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.08
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x informant",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 2 p.5 per-wave only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x informant",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 2 p.5 per-wave only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x informant",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 2 p.5 per-wave only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.06
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x informant",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 2 p.5 per-wave only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x informant",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Table 2 p.5 per-wave only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x time_x_inf",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.05
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x time_x_inf",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x time_x_inf",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x time_x_inf",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x time_x_inf",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x time_x_inf",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x time_x_inf",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x time_x_inf",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x time_x_inf",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.05
+   },
+   "where": "Table 3 p.7 (SE column)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x time_x_inf",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-2 p.5: only reporter x wave SDs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y1",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -2.28
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y1",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.118,
+    "sd_youth": 2.23,
+    "sd_parent": 2.0
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y1",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -4.31
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y1",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 1.97,
+    "sd_youth": 2.11,
+    "sd_parent": 1.82
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y1",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -0.09
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y1",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 1.994,
+    "sd_youth": 2.11,
+    "sd_parent": 1.87
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y1",
+   "action": "filled_ci_input",
+   "value": {
+    "z": 0.22
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y1",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 1.875,
+    "sd_youth": 1.91,
+    "sd_parent": 1.84
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y1",
+   "action": "filled_ci_input",
+   "value": {
+    "z": 0.03
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y1",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.118,
+    "sd_youth": 2.23,
+    "sd_parent": 2.0
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y2",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -3.82
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y2",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.199,
+    "sd_youth": 2.43,
+    "sd_parent": 1.94
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y2",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -6.61
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y2",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.039,
+    "sd_youth": 2.26,
+    "sd_parent": 1.79
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y2",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -4.14
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y2",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.052,
+    "sd_youth": 2.21,
+    "sd_parent": 1.88
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y2",
+   "action": "filled_ci_input",
+   "value": {
+    "z": 0.01
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y2",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.024,
+    "sd_youth": 2.15,
+    "sd_parent": 1.89
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y2",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -0.06
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y2",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.261,
+    "sd_youth": 2.31,
+    "sd_parent": 2.21
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y3",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -4.67
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.293,
+    "sd_youth": 2.56,
+    "sd_parent": 1.99
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y3",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -8.36
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.192,
+    "sd_youth": 2.48,
+    "sd_parent": 1.86
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y3",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -6.98
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.205,
+    "sd_youth": 2.4,
+    "sd_parent": 1.99
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y3",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -0.19
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 1.964,
+    "sd_youth": 2.14,
+    "sd_parent": 1.77
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y3",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -0.14
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y3",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.052,
+    "sd_youth": 1.96,
+    "sd_parent": 2.14
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -5.04
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 u8 x inf_y4",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.31,
+    "sd_youth": 2.72,
+    "sd_parent": 1.81
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -8.98
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a910 x inf_y4",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.313,
+    "sd_youth": 2.67,
+    "sd_parent": 1.89
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -8.66
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1112 x inf_y4",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.307,
+    "sd_youth": 2.57,
+    "sd_parent": 2.01
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "z": 0.4
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 a1314 x inf_y4",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.121,
+    "sd_youth": 2.4,
+    "sd_parent": 1.8
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "z": -0.19
+   },
+   "where": "Table 4 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 nophone x inf_y4",
+   "action": "filled_sd",
+   "value": {
+    "sd_dv": 2.19,
+    "sd_youth": 2.17,
+    "sd_parent": 2.21
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 cmp_910_1112 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "chi2_df": 1,
+    "n": 7678,
+    "sign": 1
+   },
+   "where": "Results text p.6-7; Table 2 p.5 group Ns"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 cmp_1112_1314 x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "chi2_df": 1,
+    "n": 5781,
+    "sign": 1
+   },
+   "where": "Results text p.6-7; Table 2 p.5 group Ns"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 cmp_1314_np x informant",
+   "action": "filled_ci_input",
+   "value": {
+    "chi2_df": 1,
+    "n": 1120,
+    "sign": 1
+   },
+   "where": "Results text p.6-7; Table 2 p.5 group Ns"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 u8 x slope_youth",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.12,
+    "beta_std": 0.29
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 u8 x slope_youth",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a910 x slope_youth",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02,
+    "beta_std": 0.29
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a910 x slope_youth",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1112 x slope_youth",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02,
+    "beta_std": 0.32
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1112 x slope_youth",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1314 x slope_youth",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.06,
+    "beta_std": 0.39
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1314 x slope_youth",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 nophone x slope_youth",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04,
+    "beta_std": -0.09
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 nophone x slope_youth",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 u8 x slope_parent",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03,
+    "beta_std": -0.24
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 u8 x slope_parent",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a910 x slope_parent",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01,
+    "beta_std": 0.01
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a910 x slope_parent",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1112 x slope_parent",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02,
+    "beta_std": 0.02
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1112 x slope_parent",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1314 x slope_parent",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02,
+    "beta_std": -0.06
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 a1314 x slope_parent",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 nophone x slope_parent",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03,
+    "beta_std": -0.19
+   },
+   "where": "Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 nophone x slope_parent",
+   "action": "confirmed_missing",
+   "value": "CI/sd_dv",
+   "where": "Text p.5, Fig 1 p.6, Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x youth_y1",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x youth_y2",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x youth_y3",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x youth_y4",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x parent_y1",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x parent_y2",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x parent_y3",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 cellphone_age x parent_y4",
+   "action": "confirmed_missing",
+   "value": "r CI / n",
+   "where": "Table 1 p.5, text pp.3-4"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 nophone x time",
+   "action": "corrected",
+   "was": {
+    "value": 0.06,
+    "se": 0.07,
+    "p": 0.401,
+    "p_label": ".401",
+    "location": "Table 3, beta1 Time -> IP, No phone column (p. 7)"
+   },
+   "value": {
+    "value": -0.09,
+    "se": 0.05,
+    "p": 0.068,
+    "p_label": ".068",
+    "sig": false
+   },
+   "where": "Results text p. 6 (Multi-group direct effects section), No Phone group; Table 3 p. 7 No Phone cell not used"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 nophone x informant",
+   "action": "corrected",
+   "was": {
+    "value": 0.03,
+    "se": 0.02,
+    "p": 0.064,
+    "p_label": ".064",
+    "location": "Table 3, beta2 Informant -> IP, No phone column (p. 7)"
+   },
+   "value": {
+    "value": -0.04,
+    "se": 0.06,
+    "p": 0.694,
+    "p_label": ".694",
+    "sig": false
+   },
+   "where": "Results text p. 6 (Multi-group direct effects section), No Phone group; Table 3 p. 7 No Phone cell not used"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 a1112 x informant",
+   "action": "confirmed_missing",
+   "was": {
+    "se": 0.03
+   },
+   "value": {
+    "se": 0.03
+   },
+   "where": "Table 3 p.7 SE = .03 kept; text p.6 SE = .17 is inconsistent with p < .001 (z would be about 2.6), so it is treated as a typo"
+  },
+  {
+   "stage": "audit",
+   "item": "all",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "All other M1 (Table 3, Table 4, Wald tests p.7), M2 (text p.5) and M3 (Table 1 row 11) values, SEs, p labels, z, CIs (text p.7), sd_dv (Table 2 pooled), and n re-checked against the PDF and match. No supplement file exists in docs/pdfs for this DOI; no CIs printed for beta1/beta2, Table 4 probes, M2 slopes, or M3 r.",
+   "where": "PDF pp. 1-13"
+  }
+ ],
  "supplements": []
 }

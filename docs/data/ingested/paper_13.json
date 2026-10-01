@@ -55,8 +55,39 @@
   "conversion_formula": "Not applicable; no qualifying phone/SM estimate is printed in the available PDF. If the Supplement 1 communication-time coefficients are obtained and are unstandardized B from linear regression: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2).",
   "contrast_type": "Would be per 1 hour/day of communication time (texting + social media + video chat), matching the per-hour coding of total screen time in the main analyses.",
   "transformable": false,
-  "notes": "The 9-page article PDF contains no numeric estimate for the communication subcategory. Table 1 (p. 1002) reports communication time at T1 as mean (SD) 0.4 (0.8) hours/day in the analytic sample (N = 976), which would serve as SD_IV. The CBCL depressive outcome is described as a raw-score total (Methods p. 1003), and no SD for it is reported in the article body, so SD_DV would also need to come from Supplement 1 (eTable 1). Stage 2 inclusion rested on the methods definition of the communication subcategory; the actual estimates live only in the supplement."
+  "notes": "The 9-page article PDF contains no numeric estimate for the communication subcategory. Table 1 (p. 1002) reports communication time at T1 as mean (SD) 0.4 (0.8) hours/day in the analytic sample (N = 976), which would serve as SD_IV. The CBCL depressive outcome is described as a raw-score total (Methods p. 1003), and no SD for it is reported in the article body, so SD_DV would also need to come from Supplement 1 (eTable 1). Stage 2 inclusion rested on the methods definition of the communication subcategory; the actual estimates live only in the supplement. Verification pass (2026-10-01): re-read the full 9-page PDF (no supplement file exists in docs/pdfs). primary_models is empty; the only phone/SM-relevant variable (communication time) has no printed coefficient anywhere in the article (Results pp. 1004, Table 2, Figure 3, Exploratory Analyses, Discussion p. 1005 narrative only). Nothing to fill. Completion pass (2026-10-01): confirmed again that no supplement is bundled and the article body prints no communication-time estimate, SE, p, or CBCL depressive SD; nothing fillable."
  },
  "extraction_flags": "This paper has no qualifying phone/SM estimate in the bundled PDF, so primary_models is []. The PDF is the 9-page article only; Supplement 1 is not included. Every printed model uses total daily screen time as the IV. That variable bundles TV, videos and videogames, so it fails FT-IC2 Step 2. The communication subcategory (texting + social media + video chat) qualifies under Step 2, and the Methods define it as an exploratory analysis. But the article body gives no number for it, only the narrative line in the Discussion on p. 1005 that \"communication time effects did not involve sleep duration\". Any communication-time coefficients are in Supplement 1 (eResults, eTables), which I could not read. A human should get Supplement 1 from JAMA Pediatrics and extract the communication-time models from there. If those models turn out to have no printed coefficients either, the Stage 2 INCLUDE decision should be revisited under FT-EC4. SD_IV is available from Table 1 (communication time M 0.4, SD 0.8 h/day, N = 976). SD_DV for the CBCL depressive score (raw score, not a T-score) is not in the article body. Spot-checked against the PDF: 0.12 (0.04-0.20, P = .008); -0.21 (-0.28 to -0.14); Fig 3 path -0.23 (-0.28 to -0.16); 36.4% (18.2%-63.6%); F = 19.05; Table 1 communication 0.4 (0.8).json",
+ "verification_log": [
+  {
+   "item": "communication time (texting+SM+video chat) -> CBCL depressive / sleep / ODI",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked full PDF: Table 1 p.1002 (only descriptive M 0.4, SD 0.8), Table 2 p.1004, Fig 3 p.1005, Results/Exploratory Analyses p.1004, Discussion p.1005 (narrative only). Coefficients only in Supplement 1 eResults/eTables, not in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "communication time (texting+SM+video chat) -> depressive / sleep / cingulum ODI (exploratory, would-be primary model)",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Complete pass 2026-10-01: re-read full 9-page PDF text (Table 1 p.1002 only descriptive comm. time M 0.4 SD 0.8 h/day; Methods pp.1002-1003; Results incl. Exploratory Analyses p.1004; Table 2 p.1004 sleep->diffusion only; Figs 2-3 p.1005 total screen time only; Discussion p.1005 narrative only). No supplement file with stem 10.1001_jamapediatrics.2025.1718_supplement exists in docs/pdfs. Communication-time coefficients, SEs, CIs and CBCL depressive SD live only in Supplement 1 (eMethods/eResults/eTable 1). primary_models stays empty; no iv_type to set."
+  },
+  {
+   "stage": "audit",
+   "item": "all printed numbers in excluded_models / d_transformation notes / extraction_flags",
+   "action": "confirmed",
+   "was": null,
+   "value": "no change",
+   "where": "Independent audit 2026-10-01 of full 9-page PDF: Abstract p.1000 and Results p.1004 B=0.12 (0.04-0.20, P=.008); Results p.1004 sleep B=-0.21 (-0.28 to -0.14, P<.001); Fig 3 p.1005 path beta=-0.23 (-0.28 to -0.16); serial mediation 36.4% (18.2%-63.6%) p.1004/Fig 3; thresholds 1h/2h/3h p.1004; inverse model F=19.05, P<.001 p.1004; Table 1 p.1002 communication time M 0.4 SD 0.8 h/day, N=976. All match."
+  },
+  {
+   "stage": "audit",
+   "item": "communication time (texting+SM+video chat) -> depressive / sleep / cingulum ODI",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Audit 2026-10-01: no file with stem 10.1001_jamapediatrics.2025.1718_supplement in docs/pdfs; article pp.1000-1008 (all tables, figures, footnotes, Discussion p.1005) print no communication-time coefficient, SE, CI, p, or CBCL depressive SD. primary_models remains empty; no estimates to audit."
+  }
+ ],
  "supplements": []
 }

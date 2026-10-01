@@ -99,165 +99,184 @@
      "iv": "sm_avg",
      "dv": "combined",
      "beta": 0.11,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0316,
+     "beta_hi": 0.1884,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use column, Combined ADHD row",
-     "note": "SE = 0.04. No CI or exact p printed.",
+     "note": "SE = 0.04. No CI or exact p printed. SE 0.04 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.04,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.11) / \u221a(1 \u2212 0.11\u00b2) = 0.2213",
      "derived_d": 0.2213,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0632,
+     "derived_d_hi": 0.3837,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_avg",
      "dv": "inattention",
      "beta": 0.05,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0108,
+     "beta_hi": 0.0892,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use column, Inattention row",
-     "note": "SE = 0.02. No CI or exact p printed.",
+     "note": "SE = 0.02. No CI or exact p printed. SE 0.02 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.02,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.05) / \u221a(1 \u2212 0.05\u00b2) = 0.1001",
      "derived_d": 0.1001,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0216,
+     "derived_d_hi": 0.1791,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_avg",
      "dv": "hyperactivity",
      "beta": 0.21,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.1316,
+     "beta_hi": 0.2884,
      "p": null,
      "p_label": "<0.001 (Bonferroni corrected)",
      "sig": true,
      "location": "Table 2, Social Media Use column, Hyperactivity-impulsivity row",
-     "note": "SE = 0.04. Footnote a.",
+     "note": "SE = 0.04. Footnote a. SE 0.04 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.04,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.21) / \u221a(1 \u2212 0.21\u00b2) = 0.4296",
      "derived_d": 0.4296,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.2655,
+     "derived_d_hi": 0.6024,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "combined",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0104,
+     "beta_hi": 0.0496,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use x Time column, Combined ADHD row",
-     "note": "SE = 0.01. No CI or exact p printed.",
+     "note": "SE = 0.01. No CI or exact p printed. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0208,
+     "derived_d_hi": 0.0993,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "inattention",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0104,
+     "beta_hi": 0.0496,
      "p": null,
      "p_label": "<.001",
      "sig": true,
      "location": "Table 2, Social Media Use x Time column, Inattention row; Results p. 5",
-     "note": "SE = 0.01. Footnote a (<0.001 Bonferroni corrected); text gives P < .001. Headline finding; per-year slope difference.",
+     "note": "SE = 0.01. Footnote a (<0.001 Bonferroni corrected); text gives P < .001. Headline finding; per-year slope difference. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0208,
+     "derived_d_hi": 0.0993,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time",
      "dv": "hyperactivity",
      "beta": -0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0496,
+     "beta_hi": -0.0104,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use x Time column, Hyperactivity-impulsivity row",
-     "note": "SE = 0.01. No CI or exact p printed.",
+     "note": "SE = 0.01. No CI or exact p printed. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.03) / \u221a(1 \u2212 (-0.03)\u00b2) = -0.06",
      "derived_d": -0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0993,
+     "derived_d_hi": -0.0208,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time_x_pgs",
      "dv": "combined",
      "beta": -0.04,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0596,
+     "beta_hi": -0.0204,
      "p": 0.002,
      "p_label": "=.002",
      "sig": true,
      "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Combined ADHD row; Results p. 5",
-     "note": "SE = 0.01. Footnote b (<0.005 Bonferroni corrected). Moderation term; not a phone/SM main association and not meaningfully convertible to d.",
+     "note": "SE = 0.01. Footnote b (<0.005 Bonferroni corrected). Moderation term; not a phone/SM main association and not meaningfully convertible to d. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.04) / \u221a(1 \u2212 (-0.04)\u00b2) = -0.0801",
      "derived_d": -0.0801,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1194,
+     "derived_d_hi": -0.0408,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time_x_pgs",
      "dv": "inattention",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0296,
+     "beta_hi": 0.0096,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Inattention row",
-     "note": "SE = 0.01. Moderation term.",
+     "note": "SE = 0.01. Moderation term. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0592,
+     "derived_d_hi": 0.0192,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sm_x_time_x_pgs",
      "dv": "hyperactivity",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0296,
+     "beta_hi": 0.0096,
      "p": null,
      "p_label": "not marked significant (Bonferroni)",
      "sig": false,
      "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Hyperactivity-impulsivity row",
-     "note": "SE = 0.01. Moderation term.",
+     "note": "SE = 0.01. Moderation term. SE 0.01 moved to 'se' field (Table 2 p.6, standardized beta (SE)). 95% CI not printed anywhere in the PDF (Table 2 footnotes give only Bonferroni markers); exact p printed only for the 3-way combined cell (p=.002, Results p.5) and SM x time inattention as P<.001. Supplement not bundled.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0592,
+     "derived_d_hi": 0.0192,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -289,7 +308,8 @@
      "id": "inatt_change",
      "label": "Change in inattention (T4-T0)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD of T4-T0 change not printed; only T0 inattention SD 1.9 (Table 1 p.5). Beta is standardized so not required."
     }
    ],
    "estimates": [
@@ -297,21 +317,24 @@
      "iv": "sm_avg",
      "dv": "inatt_change",
      "beta": 0.15,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0912,
+     "beta_hi": 0.2088,
      "p": null,
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 5 (also Abstract); Figure 2B",
-     "note": "SE = 0.03. No CI printed.",
+     "note": "SE = 0.03. No CI printed. SE 0.03 in 'se' (Abstract p.1 and Results p.5: '\u03b2 [SE], 0.15 [0.03]; P < .001'). Analytic N for change score not printed. SD of the T4-T0 inattention change score not printed (Table 1 gives only T0 symptom SDs); not needed since beta is standardized. Fig 2B error bars are unlabelled, not read. Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs.",
+     "se": 0.03,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.15) / \u221a(1 \u2212 0.15\u00b2) = 0.3034",
      "derived_d": 0.3034,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.1832,
+     "derived_d_hi": 0.427,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -334,13 +357,13 @@
     {
      "id": "sm_wave",
      "label": "Social media use at wave t",
-     "meta": "Hours/day, wave-specific",
+     "meta": "Hours/day, wave-specific; wave SDs (Table 1 p.4): T0 1.1, T1 1.6, T2 1.4, T3 1.5, T4 1.4 h/day. Not needed (standardized paths).",
      "sd_iv": null
     },
     {
      "id": "inatt_wave",
      "label": "Inattention at wave t",
-     "meta": "Reverse path; SM is DV",
+     "meta": "Reverse path; SM is DV; only T0 inattention SD 1.9 printed (Table 1 p.5); later-wave SDs not printed.",
      "sd_iv": null
     }
    ],
@@ -363,39 +386,44 @@
      "iv": "sm_wave",
      "dv": "inatt_next",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0104,
+     "beta_hi": 0.0496,
      "p": 0.004,
      "p_label": "=.004",
      "sig": true,
      "location": "Figure 3 (gamma paths, each lag); Results text p. 6",
-     "note": "SE = 0.01 (text). Figure marks a (P < .01). Same value displayed at all four lags.",
+     "note": "SE = 0.01 (text). Figure marks a (P < .01). Same value displayed at all four lags. SE 0.01 in 'se' (Results p.6). Exact p printed. No CI printed. Figure 3 p.7 confirms value and marker.",
+     "se": 0.01,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0208,
+     "derived_d_hi": 0.0993,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "inatt_wave",
      "dv": "sm_next",
      "beta": -0.002,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0098,
+     "beta_hi": 0.0058,
      "p": 0.64,
      "p_label": "=.64",
      "sig": false,
      "location": "Figure 3 (beta paths, each lag); Results text p. 6",
-     "note": "SE = 0.004 (text). Social media is the DV here.",
+     "note": "SE = 0.004 (text). Social media is the DV here. SE 0.004 in 'se' (Results p.6). Exact p printed. No CI printed. Figure 3 p.7 confirms value and marker.",
+     "se": 0.004,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.002) / \u221a(1 \u2212 (-0.002)\u00b2) = -0.004",
      "derived_d": -0.004,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0196,
+     "derived_d_hi": 0.0116,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M4",
@@ -441,18 +469,20 @@
      "iv": "inatt_avg",
      "dv": "sm_yearly",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.012,
+     "beta_hi": -0.008,
      "p": null,
      "p_label": "<.001",
      "sig": true,
      "location": "Results text p. 6; Supplemental Tables 4-8",
-     "note": "SE = 0.001. Social media is the DV.",
+     "note": "SE = 0.001. Social media is the DV. SE 0.001 in 'se' (Results p.6). No CI or exact p printed; detailed estimates in Supplemental Tables 4-8, not bundled. SD of average inattention not printed (only T0 SD 1.9); standardized beta so not required.",
+     "se": 0.001,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.024,
+     "derived_d_hi": -0.016,
      "derived_d_method": "standardized beta -> d"
     },
     {
@@ -465,7 +495,7 @@
      "p_label": "not reported",
      "sig": false,
      "location": "Results text p. 6 ('total effect (T4-T0) = -0.01'); Figure 2C",
-     "note": "No SE or p printed; sig set false only because no test is reported.",
+     "note": "No SE or p printed; sig set false only because no test is reported. Confirmed: only 'total effect (T4-T0) = -0.01' printed (Results p.6); no SE, p, CI or N. Fig 2C error bars unlabelled. Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs.",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
@@ -473,7 +503,8 @@
      "derived_d_hi": null,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -518,8 +549,222 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines section 4a).",
   "contrast_type": "Per 1 SD of social media use (hours/day) in SD units of the symptom score; for M1 SM x time terms, per 1 SD of average social media use difference in the yearly symptom slope; for M2, per 1 SD of average social media use in the 4-year inattention change score.",
   "transformable": "partial",
-  "notes": "All estimates are reported as standardized betas, so SD_IV and SD_DV are not needed for conversion. SDs recorded for reference from Table 1 (pp. 4-5): average social media use over 4 years 1.0 h/day; T0 combined ADHD 3.0, inattention 1.9, hyperactivity-impulsivity 1.8. Convertible: M1 social media main effects, M2 cumulative beta 0.15, M3 cross-lagged paths, M4 reverse paths (SM as DV). Caveats: (1) the M1 SM x time coefficients are differences in yearly slope, so a d derived from them is a per-year rate, not a level difference, and is not comparable to cross-sectional d's; (2) the three-way SM x time x PGS-ADHD terms are moderation effects and should not be converted; (3) how the authors standardized variables inside lmer (both sides z-scored vs. partial standardization) is not described; (4) only SEs are reported, no CIs, so d CIs cannot be formed without computing beta +/- 1.96*SE, which the extraction rules prohibit. The M4 total effect has no SE or p."
+  "notes": "All estimates are reported as standardized betas, so SD_IV and SD_DV are not needed for conversion. SDs recorded for reference from Table 1 (pp. 4-5): average social media use over 4 years 1.0 h/day; T0 combined ADHD 3.0, inattention 1.9, hyperactivity-impulsivity 1.8. Convertible: M1 social media main effects, M2 cumulative beta 0.15, M3 cross-lagged paths, M4 reverse paths (SM as DV). Caveats: (1) the M1 SM x time coefficients are differences in yearly slope, so a d derived from them is a per-year rate, not a level difference, and is not comparable to cross-sectional d's; (2) the three-way SM x time x PGS-ADHD terms are moderation effects and should not be converted; (3) how the authors standardized variables inside lmer (both sides z-scored vs. partial standardization) is not described; (4) only SEs are reported, no CIs, so d CIs cannot be formed without computing beta +/- 1.96*SE, which the extraction rules prohibit. The M4 total effect has no SE or p. [complete pass] SEs moved into 'se' field for all 13 estimates with printed SEs (Table 2 p.6; Abstract; Results pp.5-6). No CIs are printed anywhere in the PDF; the two docs/pdfs files are the same article (different download), no supplement file is bundled. iv_type = continuous for all models."
  },
  "extraction_flags": "1. The supplement is not bundled in the 10-page PDF. As a result, the M2 cumulative-change covariates, the CLPM (M3) covariates, missing-data handling and estimator, the full M4 reverse-direction spec, Supplemental Tables 1-8 (moderation and sensitivity analyses) and analytic Ns other than 8,324 could not be checked.\n2. The 'social media use' IV is a composite of texting, social networking sites and video chat (YSTS items 4+5+6). All three items are phone/SM, so it qualifies under Step 2. Texting is asked as cell phone/tablet/computer, which is activity-defined and qualifies under clarification 5.\n3. The exposure is averaged over T0-T4, the same waves as the outcome, so the IV and DV are not temporally ordered in M1 and M2.\n4. In M1 the authors anchor on the SM x time interaction, which gives a difference in yearly slope. A d derived from it is a per-year rate. I included the three-way SM x time x PGS-ADHD terms as estimates and flagged them as not convertible; a coder may prefer to strike them.\n5. Table 2 prints only beta (SE) with Bonferroni footnote markers. Cells without a marker are coded sig=false with p null. CIs are null throughout and the SEs are in the notes.\n6. In M3 the CLPM cross-lagged values look constrained equal across lags; this is inferred from the figure.\n7. The M4 total effect (-0.01) has no SE or p. sig=false is set only because no test is reported.\n8. The Figure 2 caption quartile cutoffs (0.61/1.22/1.97) disagree with the Figure 2B panel legend (0.54/1.36/1.86).\n9. The year is recorded as 2025 per items.json, but the journal issue is Vol 2, Issue 1, 2026.\n10. Spot-checked all 9 Table 2 social media cells plus the in-text values 0.15, 0.03/p=.004, -0.002/p=.64 and -0.01/SE 0.001 against the PDF text layer; all match.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (average hours/day or symptom score, continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (average hours/day or symptom score, continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M3",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (average hours/day or symptom score, continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M4",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (average hours/day or symptom score, continuous)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_avg x combined",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_avg x combined",
+   "action": "confirmed_missing",
+   "value": "CI and exact p",
+   "where": "Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_avg x inattention",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_avg x inattention",
+   "action": "confirmed_missing",
+   "value": "CI and exact p",
+   "where": "Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_avg x hyperactivity",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x combined",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x inattention",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x hyperactivity",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time_x_pgs x combined",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time_x_pgs x inattention",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time_x_pgs x hyperactivity",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Table 2 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm_avg x inatt_change",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Abstract p.1; Results p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_dv change score",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sm_wave x inatt_next",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Results p.6; Figure 3 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 inatt_wave x sm_next",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.004
+   },
+   "where": "Results p.6; Figure 3 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 wave-specific SDs",
+   "action": "confirmed_missing",
+   "value": "inattention SD at T1-T4 not printed; SM wave SDs recorded in iv_axis meta",
+   "where": "Table 1 pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 inatt_avg x sm_yearly",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.001
+   },
+   "where": "Results p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 inatt_avg x sm_change",
+   "action": "confirmed_missing",
+   "value": "SE/p/CI",
+   "where": "Checked full 10-page PDF (and duplicate download _205729.pdf, identical content): Table 1 pp.4-5, Table 2 p.6, Figures 1-3 pp.5-7, Abstract, Results pp.5-6, Discussion p.7; no supplement bundled in docs/pdfs."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 9 SM cells",
+   "action": "confirmed",
+   "was": null,
+   "value": "beta/SE/Bonferroni markers match: SM 0.11(0.04),0.05(0.02),0.21(0.04)a; SMxTime 0.03(0.01),0.03(0.01)a,-0.03(0.01); SMxTimexPGS -0.04(0.01)b,-0.01(0.01),-0.01(0.01); p=.002 and P<.001 in text",
+   "where": "Table 2 p.6; Results p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M2-M4",
+   "action": "confirmed",
+   "was": null,
+   "value": "0.15[0.03] P<.001; CLPM gamma 0.03[0.01] P=.004 (Fig 3 marker a P<.01), beta -0.002[0.004] P=.64; reverse -0.01[0.001] P<.001, total -0.01 (no SE/p)",
+   "where": "Abstract p.1; Results pp.5-6; Figure 3 p.7"
+  },
+  {
+   "stage": "audit",
+   "item": "sd_iv/sd_dv",
+   "action": "confirmed",
+   "was": null,
+   "value": "SM avg SD 1.0; T0 combined 3.0, inattention 1.9, hyperactivity 1.8",
+   "where": "Table 1 pp.4-5"
+  },
+  {
+   "stage": "audit",
+   "item": "CIs, exact p for unmarked cells, supplement",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read all 10 pages; no CIs printed; no _supplement file in docs/pdfs (the _205729 file is a duplicate 10-page download of the article)"
+  }
+ ],
  "supplements": []
 }

@@ -3,7 +3,7 @@
  "title": "Neural Sensitivity to Social Media Use: Implications for Sleep Duration in Adolescents",
  "doi": "10.1111/jsr.70325",
  "year": "2026",
- "authors": "Kiss O, Zhang L, Chaarani B, M\u00fcller-Oehring EM, Baker FC",
+ "authors": "Kiss O, Zhang L, Chaarani B, Müller-Oehring EM, Baker FC",
  "journal": "Journal of Sleep Research",
  "extraction_status": "ai_draft",
  "lead_coder": "danny",
@@ -67,31 +67,36 @@
      "id": "sm_y2",
      "label": "Social media use (Y2)",
      "meta": "weighted daily hours, standardized",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "sm_x_nacc",
      "label": "SM (Y2) x nucleus accumbens activation (Y2)",
      "meta": "interaction",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "sm_x_cing",
      "label": "SM (Y2) x cingulate gyrus activation (Y2)",
      "meta": "interaction",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "sm_x_ins",
      "label": "SM (Y2) x insula activation (Y2)",
      "meta": "interaction",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "sm_x_put",
      "label": "SM (Y2) x putamen activation (Y2)",
      "meta": "interaction",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     }
    ],
    "dv_axis": [
@@ -99,7 +104,8 @@
      "id": "sleep_y4",
      "label": "Sleep duration (Y4)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     }
    ],
    "estimates": [
@@ -113,7 +119,10 @@
      "p_label": "0.016",
      "sig": true,
      "location": "Section 3.1 text p. 5; Figure 2 caption p. 5",
-     "note": "Chi-squared, FDR-corrected p. Direction: more Year 2 SM -> shorter Year 4 sleep. Which ROI model this main effect comes from is not stated."
+     "note": "Chi-squared, FDR-corrected p. Direction: more Year 2 SM -> shorter Year 4 sleep. Which ROI model this main effect comes from is not stated. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF.",
+     "n": 1985,
+     "sign": -1,
+     "chi2_df": null
     },
     {
      "iv": "sm_x_nacc",
@@ -125,7 +134,9 @@
      "p_label": "0.021",
      "sig": true,
      "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
-     "note": "Chi-squared for SM x ROI interaction. SM-sleep association stronger among those with lower activation (Figure 3)."
+     "note": "Chi-squared for SM x ROI interaction. SM-sleep association stronger among those with lower activation (Figure 3). [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF. Interaction direction: SM->shorter sleep association stronger at lower ROI activation (Figure 3 p.6); sign of the interaction coefficient not printed, so 'sign' left unset.",
+     "n": 1985,
+     "chi2_df": null
     },
     {
      "iv": "sm_x_cing",
@@ -137,7 +148,9 @@
      "p_label": "0.027",
      "sig": true,
      "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
-     "note": "Chi-squared for SM x ROI interaction."
+     "note": "Chi-squared for SM x ROI interaction. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF. Interaction direction: SM->shorter sleep association stronger at lower ROI activation (Figure 3 p.6); sign of the interaction coefficient not printed, so 'sign' left unset.",
+     "n": 1985,
+     "chi2_df": null
     },
     {
      "iv": "sm_x_ins",
@@ -149,7 +162,9 @@
      "p_label": "0.011",
      "sig": true,
      "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
-     "note": "Chi-squared for SM x ROI interaction."
+     "note": "Chi-squared for SM x ROI interaction. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF. Interaction direction: SM->shorter sleep association stronger at lower ROI activation (Figure 3 p.6); sign of the interaction coefficient not printed, so 'sign' left unset.",
+     "n": 1985,
+     "chi2_df": null
     },
     {
      "iv": "sm_x_put",
@@ -161,9 +176,12 @@
      "p_label": "0.021",
      "sig": true,
      "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
-     "note": "Chi-squared for SM x ROI interaction."
+     "note": "Chi-squared for SM x ROI interaction. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF. Interaction direction: SM->shorter sleep association stronger at lower ROI activation (Figure 3 p.6); sign of the interaction coefficient not printed, so 'sign' left unset.",
+     "n": 1985,
+     "chi2_df": null
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -219,19 +237,22 @@
      "id": "sleep_y2",
      "label": "Sleep duration (Y2)",
      "meta": "hours, standardized",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "insula_y2",
      "label": "Insular cortex activation (Y2)",
      "meta": "MID large reward vs neutral, standardized",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     },
     {
      "id": "mfg_y2",
      "label": "Middle frontal gyrus activation (Y2)",
      "meta": "MID large reward vs neutral, standardized",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     }
    ],
    "dv_axis": [
@@ -239,7 +260,8 @@
      "id": "sm_y4",
      "label": "Social media use (Y4)",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "SD not printed anywhere in PDF (Table 1 demographics only; Y4 sleep/SM given only as category percentages pp.4-5). Predictors standardized, so SD_IV = 1 in model units."
     }
    ],
    "estimates": [
@@ -253,7 +275,10 @@
      "p_label": "0.021",
      "sig": true,
      "location": "Section 3.2 text p. 5",
-     "note": "Chi-squared, FDR-corrected p. Direction: shorter Year 2 sleep -> more Year 4 SM. Which ROI model this comes from is not stated."
+     "note": "Chi-squared, FDR-corrected p. Direction: shorter Year 2 sleep -> more Year 4 SM. Which ROI model this comes from is not stated. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF.",
+     "n": 1985,
+     "sign": -1,
+     "chi2_df": null
     },
     {
      "iv": "insula_y2",
@@ -265,7 +290,10 @@
      "p_label": "0.039",
      "sig": true,
      "location": "Section 3.2 text p. 5; Figure 4 caption p. 7",
-     "note": "Chi-squared. Lower Year 2 insula activation -> more Year 4 SM; authors note a less consistent trend across activation deciles (Figure 4)."
+     "note": "Chi-squared. Lower Year 2 insula activation -> more Year 4 SM; authors note a less consistent trend across activation deciles (Figure 4). [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF.",
+     "n": 1985,
+     "sign": -1,
+     "chi2_df": null
     },
     {
      "iv": "mfg_y2",
@@ -277,9 +305,13 @@
      "p_label": "0.042",
      "sig": true,
      "location": "Section 3.2 text p. 5; Figure 4 caption p. 7",
-     "note": "Chi-squared. Lower Year 2 middle frontal gyrus activation -> more Year 4 SM."
+     "note": "Chi-squared. Lower Year 2 middle frontal gyrus activation -> more Year 4 SM. [complete pass] Test N = 1985 (analytic sample, Section 2.1 p.2 / Table 1 p.3). chi2 df not printed (1 df plausible for a single continuous term but not stated). Checked full PDF (10 pp.): Table 1 p.3 (demographics only, no sleep/SM means or SDs), Methods 2.2-2.4 pp.3-4, Results 3.1-3.4 p.5, Figures 2-5 (box plots / category means with SE bars, no printed coefficient values), Discussion, Supporting Information list p.10. No bundled supplement in docs/pdfs. Only chi-squared and FDR-corrected exact p printed; no B/beta, SE, CI or chi-squared df printed. Coefficients, SEs and df live only in online Supplementary Tables S1 (sleep outcome) and S2 (SM outcome), not in this PDF.",
+     "n": 1985,
+     "sign": -1,
+     "chi2_df": null
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -311,10 +343,369 @@
  ],
  "d_transformation": {
   "native_metric": "other:chi2",
-  "conversion_formula": "None applied. Guidelines \u00a74a give no conversion for chi-squared Wald/ANOVA test statistics from mixed models; a chi-squared(1) could in principle be converted via r = sqrt(chi2 / N) and d = 2r / sqrt(1 - r^2), but df are not reported and the statistics come from multi-predictor mixed models (partial effects), so this would not be valid without further information.",
+  "conversion_formula": "None applied. Guidelines §4a give no conversion for chi-squared Wald/ANOVA test statistics from mixed models; a chi-squared(1) could in principle be converted via r = sqrt(chi2 / N) and d = 2r / sqrt(1 - r^2), but df are not reported and the statistics come from multi-predictor mixed models (partial effects), so this would not be valid without further information.",
   "contrast_type": "Per 1 SD of the standardized predictor (SM use, sleep duration or ROI activation) in Year 2; however, only test statistics are reported, not slopes.",
   "transformable": false,
-  "notes": "The paper reports only chi-squared statistics with FDR-corrected p-values in the main text; no B, beta, SE, CI or df. SDs for Year 2/Year 4 SM use and sleep duration are not reported (Table 1 gives demographics only; Year 4 categories are given as percentages on pp. 4-5). Coefficients may be in Supplementary Tables S1-S2, which are not in the PDF. M2 is additionally a zero-inflated model on log(x + 1) SM, which complicates any d conversion. If the supplement provides standardized coefficients, M1 (continuous standardized IV and continuous DV) could become transformable."
+  "notes": "The paper reports only chi-squared statistics with FDR-corrected p-values in the main text; no B, beta, SE, CI or df. SDs for Year 2/Year 4 SM use and sleep duration are not reported (Table 1 gives demographics only; Year 4 categories are given as percentages on pp. 4-5). Coefficients may be in Supplementary Tables S1-S2, which are not in the PDF. M2 is additionally a zero-inflated model on log(x + 1) SM, which complicates any d conversion. If the supplement provides standardized coefficients, M1 (continuous standardized IV and continuous DV) could become transformable. [complete pass 2026-10-01] Re-read the entire PDF (10 pp., all figures/tables); no supplement file available locally. Added test N = 1985 and direction signs; chi2 df, coefficients, SEs, CIs and SDs remain unprinted (in online Tables S1-S2 only). If chi2 df = 1 were confirmed, r = sqrt(chi2/N) could be computed."
  },
- "extraction_flags": "The main text reports only chi-squared statistics with FDR-corrected p-values. It gives no coefficients, SEs, CIs, df, or SDs for social media use or sleep, so none of the estimates can be converted to d. Supplementary Tables S1\u2013S3 should hold the full model output, but they are not in the PDF; someone needs to get them. If they report standardized betas, M1 might become transformable, and the SM -> brain activation model (Set 2, Table S3), which is currently excluded for having no printed numbers, could be added.\n\n1) The main effects of SM on sleep (\u03c7\u00b2=7.76) and of sleep on SM (\u03c7\u00b2=6.72) are each reported once. The paper fits 12 models per set, one per brain region, and does not say which of these models the numbers come from.\n\n2) I included the SM \u00d7 ROI interaction chi-squares as phone/SM estimates in M1. In M2 I included the effects of insula and middle frontal gyrus activation on SM, with SM as the DV. Please check that both choices meet the eligibility criteria.\n\n3) The abstract says the sleep -> SM effect was moderated by insula and middle frontal gyrus activation. The results text instead reports these as main effects of brain activation on SM and gives no interaction statistics.\n\n4) The methods say the log(x+1) transform and the zero-inflated glmmTMB model were used for the \"first set\" of models, but SM is the outcome only in the third set. It is also not stated whether the chi-squares come from the conditional component or the zero-inflation component.\n\n5) The propensity weights are mentioned, but the paper does not say how they were applied in the models."
+ "extraction_flags": "The main text reports only chi-squared statistics with FDR-corrected p-values. It gives no coefficients, SEs, CIs, df, or SDs for social media use or sleep, so none of the estimates can be converted to d. Supplementary Tables S1–S3 should hold the full model output, but they are not in the PDF; someone needs to get them. If they report standardized betas, M1 might become transformable, and the SM -> brain activation model (Set 2, Table S3), which is currently excluded for having no printed numbers, could be added.\n\n1) The main effects of SM on sleep (χ²=7.76) and of sleep on SM (χ²=6.72) are each reported once. The paper fits 12 models per set, one per brain region, and does not say which of these models the numbers come from.\n\n2) I included the SM × ROI interaction chi-squares as phone/SM estimates in M1. In M2 I included the effects of insula and middle frontal gyrus activation on SM, with SM as the DV. Please check that both choices meet the eligibility criteria.\n\n3) The abstract says the sleep -> SM effect was moderated by insula and middle frontal gyrus activation. The results text instead reports these as main effects of brain activation on SM and gives no interaction statistics.\n\n4) The methods say the log(x+1) transform and the zero-inflated glmmTMB model were used for the \"first set\" of models, but SM is the outcome only in the third set. It is also not stated whether the chi-squares come from the conditional component or the zero-inflation component.\n\n5) The propensity weights are mentioned, but the paper does not say how they were applied in the models.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Section 2.4 p.4: all continuous predictors standardized (mean 0, SD 1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y2 x sleep_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": -1
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_y2 x sleep_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_nacc x sleep_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": null
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_nacc x sleep_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_cing x sleep_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": null
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_cing x sleep_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_ins x sleep_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": null
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_ins x sleep_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_put x sleep_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": null
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_put x sleep_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Section 2.4 p.4: all continuous predictors standardized (mean 0, SD 1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sleep_y2 x sm_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": -1
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sleep_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 insula_y2 x sm_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": -1
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 insula_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mfg_y2 x sm_y4",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 1985,
+    "sign": -1
+   },
+   "where": "Section 2.1 p.2; Table 1 p.3; direction from Results text p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mfg_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "value": "coefficient, SE, CI, chi2 df, SD_IV/SD_DV",
+   "where": "Only in online Supplementary Tables S1-S2 (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "axes SDs",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.3; Results pp.4-5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y2 x sleep_y4",
+   "action": "confirmed",
+   "was": 7.76,
+   "value": {
+    "chi2": 7.76,
+    "p": 0.016,
+    "sig": true,
+    "sign": -1,
+    "n": 1985
+   },
+   "where": "Section 3.1 text p. 5; Figure 2 caption p. 5 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_y2 x sleep_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_nacc x sleep_y4",
+   "action": "confirmed",
+   "was": 7.11,
+   "value": {
+    "chi2": 7.11,
+    "p": 0.021,
+    "sig": true,
+    "sign": null,
+    "n": 1985
+   },
+   "where": "Section 3.1 text p. 5; Figure 3 caption p. 6 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_nacc x sleep_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_cing x sleep_y4",
+   "action": "confirmed",
+   "was": 6.61,
+   "value": {
+    "chi2": 6.61,
+    "p": 0.027,
+    "sig": true,
+    "sign": null,
+    "n": 1985
+   },
+   "where": "Section 3.1 text p. 5; Figure 3 caption p. 6 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_cing x sleep_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_ins x sleep_y4",
+   "action": "confirmed",
+   "was": 9.15,
+   "value": {
+    "chi2": 9.15,
+    "p": 0.011,
+    "sig": true,
+    "sign": null,
+    "n": 1985
+   },
+   "where": "Section 3.1 text p. 5; Figure 3 caption p. 6 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_ins x sleep_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_put x sleep_y4",
+   "action": "confirmed",
+   "was": 7.13,
+   "value": {
+    "chi2": 7.13,
+    "p": 0.021,
+    "sig": true,
+    "sign": null,
+    "n": 1985
+   },
+   "where": "Section 3.1 text p. 5; Figure 3 caption p. 6 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_put x sleep_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sleep_y2 x sm_y4",
+   "action": "confirmed",
+   "was": 6.72,
+   "value": {
+    "chi2": 6.72,
+    "p": 0.021,
+    "sig": true,
+    "sign": -1,
+    "n": 1985
+   },
+   "where": "Section 3.2 text p. 5 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sleep_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 insula_y2 x sm_y4",
+   "action": "confirmed",
+   "was": 5.25,
+   "value": {
+    "chi2": 5.25,
+    "p": 0.039,
+    "sig": true,
+    "sign": -1,
+    "n": 1985
+   },
+   "where": "Section 3.2 text p. 5; Figure 4 caption p. 7 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 insula_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mfg_y2 x sm_y4",
+   "action": "confirmed",
+   "was": 5.09,
+   "value": {
+    "chi2": 5.09,
+    "p": 0.042,
+    "sig": true,
+    "sign": -1,
+    "n": 1985
+   },
+   "where": "Section 3.2 text p. 5; Figure 4 caption p. 7 (re-read against PDF; exact match)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mfg_y2 x sm_y4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "chi2_df, coefficient, SE, CI, t/z, SD_IV, SD_DV",
+   "where": "Full 10-page PDF re-read (Table 1 p.3, Sections 2-3 pp.2-5, Figs 2-5 captions, Supporting Information list p.10); no *_supplement file exists in docs/pdfs; numbers only in online Tables S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1/M2 iv_type",
+   "action": "confirmed",
+   "was": "continuous",
+   "value": "continuous",
+   "where": "Section 2.3 p.4: all continuous predictors standardized; SM, sleep and ROI activation entered as continuous (Fig 3 caption p.6)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sig / FDR",
+   "action": "confirmed",
+   "was": true,
+   "value": true,
+   "where": "Section 2.3 p.4: FDR-corrected p < 0.05 within each set of 12 models; all extracted p are FDR-corrected and < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "Y4 sleep distribution (dv prose)",
+   "action": "confirmed",
+   "was": "26.8% (n = 611) 6-8 h",
+   "value": "26.8% (n = 611) as printed",
+   "where": "Section 3 pp.4-5. Paper typo: counts sum to 2064 not 1985; 26.8% of 1985 = 532, so n = 611 is likely a misprint. No estimate affected."
+  }
+ ]
 }

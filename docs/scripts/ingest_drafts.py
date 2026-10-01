@@ -104,12 +104,12 @@ def spec_for(est, metric, iv_meta, dv_meta, iv_type=None):
         F, df = est.get("value"), est.get("df")
         if F is None or not df:
             return None, "F or its error df not reported"
-        return {"kind": "F1", "F": F, "df": df, "sign": est.get("sign", 1)}, None
+        return {"kind": "F1", "F": F, "df": df, "sign": est.get("sign") or 1}, None
     if m in ("other:chi2", "chi2_1"):
         X, N = est.get("value"), est.get("n")
         if X is None or not N or (est.get("chi2_df") not in (None, 1)):
             return None, "χ² needs 1 df and its N to convert"
-        return {"kind": "chi2_1", "chi2": X, "N": N, "sign": est.get("sign", 1)}, None
+        return {"kind": "chi2_1", "chi2": X, "N": N, "sign": est.get("sign") or 1}, None
     if m == "other:standardized_beta_x100":
         if v is None:
             return None, "value missing"
@@ -334,6 +334,8 @@ def process(paper):
             try:
                 out = to_d(spec)
                 est["derived_d_formula"], est["derived_d_calc"] = worked(spec, model.get("native_metric"), est)
+                if spec.get("kind") in ("F1", "chi2_1") and est.get("sign") is None:
+                    est["derived_d_calc"] += "  (direction not reported: sign assumed positive, treat as |d|)"
                 est["derived_d"] = round(out["d"], 4)
                 est["derived_d_lo"] = round(out["d_lo"], 4) if "d_lo" in out else None
                 est["derived_d_hi"] = round(out["d_hi"], 4) if "d_hi" in out else None

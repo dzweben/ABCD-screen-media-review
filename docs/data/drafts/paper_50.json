@@ -115,7 +115,8 @@
      "p_label": "n.s. (dashed path, no asterisk)",
      "sig": false,
      "location": "Fig. 1, OSA time T1 -> ADHD T2",
-     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "osa_to_adhd",
@@ -127,7 +128,8 @@
      "p_label": "* (p <= 0.05)",
      "sig": true,
      "location": "Fig. 1, OSA time T2 -> ADHD T3",
-     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "osa_to_adhd",
@@ -139,7 +141,8 @@
      "p_label": "** (p <= 0.01)",
      "sig": true,
      "location": "Fig. 1, OSA time T3 -> ADHD T4",
-     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "adhd_to_osa",
@@ -151,7 +154,8 @@
      "p_label": "n.s. (dashed path, no asterisk)",
      "sig": false,
      "location": "Fig. 1, ADHD T1 -> OSA time T2",
-     "note": "OSA time is the DV here."
+     "note": "OSA time is the DV here. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "adhd_to_osa",
@@ -163,7 +167,8 @@
      "p_label": "n.s. (dashed path, no asterisk)",
      "sig": false,
      "location": "Fig. 1, ADHD T2 -> OSA time T3",
-     "note": "OSA time is the DV here."
+     "note": "OSA time is the DV here. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "adhd_to_osa",
@@ -175,7 +180,8 @@
      "p_label": "n.s. (dashed path, no asterisk)",
      "sig": false,
      "location": "Fig. 1, ADHD T3 -> OSA time T4",
-     "note": "OSA time is the DV here."
+     "note": "OSA time is the DV here. Completion pass: re-read all 10 PDF pages (Tables 1-3, Fig. 1 labels, Results pp.2198-2199, Discussion, footnotes). For the full-sample model the PDF prints only the standardized point estimate with significance asterisks; no SE, CI, exact p, or z appears anywhere in the PDF. SE/CI/exact p are in online supplementary Tables S2/S3 (ESM), and no supplement file is bundled in docs/pdfs. SD_IV/SD_DV not needed (standardized coefficient); Table 1 SDs are total, not within-person.",
+     "se": null
     },
     {
      "iv": "ri_between",
@@ -187,9 +193,11 @@
      "p_label": "** (p <= 0.01)",
      "sig": true,
      "location": "Fig. 1 (between level); Results p. 2198",
-     "note": "Correlation between random intercepts (r = 0.068**), not a directional path. Text prints '95% CI, 0.07-0.35', which does not contain the point estimate and may refer to the unstandardized covariance; CI left null for that reason. Random-intercept variances: OSA 0.82 (95% CI 0.68-0.95), ADHD 15.18 (95% CI 13.75-16.61)."
+     "note": "Correlation between random intercepts (r = 0.068**), not a directional path. Text prints '95% CI, 0.07-0.35', which does not contain the point estimate and may refer to the unstandardized covariance; CI left null for that reason. Random-intercept variances: OSA 0.82 (95% CI 0.68-0.95), ADHD 15.18 (95% CI 13.75-16.61). Completion pass: the only interval printed is '95% CI, 0.07-0.35' (Results p.2198), which excludes the point estimate 0.068 and so is not a valid CI for r; left null. No SE or exact p printed (only **). Full parameters in supplementary Tables S2/S3, not bundled.",
+     "se": null
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -265,7 +273,8 @@
      "p_label": "0.857",
      "sig": false,
      "location": "Table 3, Females, OSA -> ADHD, T1 -> T2",
-     "note": "SE = 0.033"
+     "note": "SE = 0.033",
+     "se": 0.033
     },
     {
      "iv": "f_osa_to_adhd",
@@ -277,7 +286,8 @@
      "p_label": "0.023",
      "sig": true,
      "location": "Table 3, Females, OSA -> ADHD, T2 -> T3",
-     "note": "SE = 0.041"
+     "note": "SE = 0.041",
+     "se": 0.041
     },
     {
      "iv": "f_osa_to_adhd",
@@ -289,43 +299,59 @@
      "p_label": "0.005",
      "sig": true,
      "location": "Table 3, Females, OSA -> ADHD, T3 -> T4",
-     "note": "SE = 0.028"
+     "note": "SE = 0.028",
+     "se": 0.028
     },
     {
      "iv": "m_osa_to_adhd",
      "dv": "t1_t2",
      "beta": -0.013,
-     "beta_lo": -0.253,
-     "beta_hi": 0.141,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.576,
      "p_label": "0.576",
      "sig": false,
      "location": "Table 3, Males, OSA -> ADHD, T1 -> T2",
-     "note": "SE = 0.023. Printed CI is much wider than 1.96*SE implies; copied as printed."
+     "note": "SE = 0.023. Table 3 (p. 2200) prints 95% CI [-0.253, 0.141] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.058, 0.032], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.023,
+     "ci_printed_raw": [
+      -0.253,
+      0.141
+     ]
     },
     {
      "iv": "m_osa_to_adhd",
      "dv": "t2_t3",
      "beta": -0.001,
-     "beta_lo": -0.139,
-     "beta_hi": 0.133,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.967,
      "p_label": "0.967",
      "sig": false,
      "location": "Table 3, Males, OSA -> ADHD, T2 -> T3",
-     "note": "SE = 0.030. Printed CI is wider than 1.96*SE implies; copied as printed."
+     "note": "SE = 0.03. Table 3 (p. 2200) prints 95% CI [-0.139, 0.133] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.06, 0.058], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.03,
+     "ci_printed_raw": [
+      -0.139,
+      0.133
+     ]
     },
     {
      "iv": "m_osa_to_adhd",
      "dv": "t3_t4",
      "beta": 0.007,
-     "beta_lo": -0.113,
-     "beta_hi": 0.138,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.844,
      "p_label": "0.844",
      "sig": false,
      "location": "Table 3, Males, OSA -> ADHD, T3 -> T4",
-     "note": "SE = 0.036. Printed CI is wider than 1.96*SE implies; copied as printed."
+     "note": "SE = 0.036. Table 3 (p. 2200) prints 95% CI [-0.113, 0.138] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.064, 0.078], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.036,
+     "ci_printed_raw": [
+      -0.113,
+      0.138
+     ]
     },
     {
      "iv": "f_adhd_to_osa",
@@ -337,7 +363,8 @@
      "p_label": "0.117",
      "sig": false,
      "location": "Table 3, Females, ADHD -> OSA, T1 -> T2",
-     "note": "SE = 0.029"
+     "note": "SE = 0.029",
+     "se": 0.029
     },
     {
      "iv": "f_adhd_to_osa",
@@ -349,7 +376,8 @@
      "p_label": "0.281",
      "sig": false,
      "location": "Table 3, Females, ADHD -> OSA, T2 -> T3",
-     "note": "SE = 0.022"
+     "note": "SE = 0.022",
+     "se": 0.022
     },
     {
      "iv": "f_adhd_to_osa",
@@ -361,45 +389,62 @@
      "p_label": "0.403",
      "sig": false,
      "location": "Table 3, Females, ADHD -> OSA, T3 -> T4",
-     "note": "SE = 0.027"
+     "note": "SE = 0.027",
+     "se": 0.027
     },
     {
      "iv": "m_adhd_to_osa",
      "dv": "t1_t2",
      "beta": -0.057,
-     "beta_lo": -0.029,
-     "beta_hi": -0.002,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.02,
      "p_label": "0.020",
      "sig": true,
      "location": "Table 3, Males, ADHD -> OSA, T1 -> T2",
-     "note": "SE = 0.024. The printed CI [-0.029, -0.002] does not contain the point estimate -0.057; likely a CI on a different (unstandardized) scale. Copied as printed; verify before converting the CI."
+     "note": "SE = 0.024. Table 3 (p. 2200) prints 95% CI [-0.029, -0.002] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.104, -0.01], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.024,
+     "ci_printed_raw": [
+      -0.029,
+      -0.002
+     ]
     },
     {
      "iv": "m_adhd_to_osa",
      "dv": "t2_t3",
      "beta": -0.051,
-     "beta_lo": -0.04,
-     "beta_hi": -0.004,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.017,
      "p_label": "0.017",
      "sig": true,
      "location": "Table 3, Males, ADHD -> OSA, T2 -> T3",
-     "note": "SE = 0.021. The printed CI [-0.040, -0.004] does not contain the point estimate -0.051; copied as printed; verify before converting the CI."
+     "note": "SE = 0.021. Table 3 (p. 2200) prints 95% CI [-0.04, -0.004] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.092, -0.01], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.021,
+     "ci_printed_raw": [
+      -0.04,
+      -0.004
+     ]
     },
     {
      "iv": "m_adhd_to_osa",
      "dv": "t3_t4",
      "beta": 0.025,
-     "beta_lo": -0.025,
-     "beta_hi": 0.064,
+     "beta_lo": null,
+     "beta_hi": null,
      "p": 0.38,
      "p_label": "0.380",
      "sig": false,
      "location": "Table 3, Males, ADHD -> OSA, T3 -> T4",
-     "note": "SE = 0.029"
+     "note": "SE = 0.029. Table 3 (p. 2200) prints 95% CI [-0.025, 0.064] for this male cell, but it is not a CI for the standardized beta: beta +/- 1.96*SE gives [-0.032, 0.082], and beta/SE reproduces the printed p, so beta and SE are on the same scale while the printed male CIs appear to be on another (likely unstandardized) scale. All six male CIs show this; all six female CIs match beta +/- 1.96*SE. Printed CI kept in ci_printed_raw; beta_lo/beta_hi left null so the SE (consistent with beta and p) is used.",
+     "se": 0.029,
+     "ci_printed_raw": [
+      -0.025,
+      0.064
+     ]
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -444,7 +489,304 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). Applied to CI endpoints where CIs are printed (M2 only).",
   "contrast_type": "Per 1 within-person SD of the predictor (deviation from the child's own mean) at wave t, predicting the within-person SD of the outcome at wave t+1, net of the autoregressive path and covariates. The between-person cell is a correlation of stable person-level means.",
   "transformable": true,
-  "notes": "No SD_IV or SD_DV is needed because the paper reports standardized coefficients. For reference, Table 1 (p. 2198) gives OSA time SDs 1.15/1.57/2.15/2.63 and CBCL ADHD T-score SDs 6.17/5.98/5.58/5.62 at T1-T4, but these are total (between + within) SDs, and the coefficients are standardized on the within-person components. The resulting d's describe within-person lagged effects and are not directly comparable to between-person regression d's from other papers. M1 has no CIs in the PDF (they are in supplementary Tables S2/S3), so M1 d's have no CI. In M2, two male ADHD -> OSA CIs do not contain their point estimates and several male CIs are wider than SE implies; converting those CIs would give misleading d intervals."
+  "notes": "No SD_IV or SD_DV is needed because the paper reports standardized coefficients. For reference, Table 1 (p. 2198) gives OSA time SDs 1.15/1.57/2.15/2.63 and CBCL ADHD T-score SDs 6.17/5.98/5.58/5.62 at T1-T4, but these are total (between + within) SDs, and the coefficients are standardized on the within-person components. The resulting d's describe within-person lagged effects and are not directly comparable to between-person regression d's from other papers. M1 has no CIs in the PDF (they are in supplementary Tables S2/S3), so M1 d's have no CI. In M2, two male ADHD -> OSA CIs do not contain their point estimates and several male CIs are wider than SE implies; converting those CIs would give misleading d intervals. Completion pass (2026-10-01): set iv_type = continuous on M1 and M2; moved Table 3 SEs into the numeric 'se' field on every M2 estimate (exact p values were already numeric). M1 SE/CI/exact p confirmed absent from the PDF (supplementary Tables S2/S3 only; no supplement file in docs/pdfs). For the M2 male cells whose printed CIs are inconsistent with beta and SE, the SE and exact p offer an alternative CI basis (beta +/- 1.96*SE)."
  },
- "extraction_flags": "1) The M1 (full-sample RI-CLPM) point estimates come from the path labels in Fig. 1. Their SEs, CIs and exact p-values are in supplementary Tables S2/S3, which are not in the PDF, so M1 has no CIs and its significance is read from the asterisks. Fig. 1 was checked at high resolution, but each label's assignment to its path (for example, -0.009 is OSA T1->ADHD T2 and -0.006 is ADHD T1->OSA T2) should be confirmed against S2/S3. 2) Table 3 has printing problems in the male column. Two male ADHD->OSA CIs do not contain their own point estimates: -0.057 printed with [-0.029, -0.002], and -0.051 printed with [-0.040, -0.004]. Several other male CIs, such as -0.013 (SE 0.023) printed with [-0.253, 0.141], are much wider than 1.96*SE implies. They were copied as printed; do not convert those CIs without checking. 3) The between-person random-intercept correlation r = 0.068 is printed with '95% CI, 0.07-0.35', which does not contain 0.068, so the CI was left null. It is included in M1 as a beta_std cell. 4) The standardized coefficients are within-person (RI-CLPM), so the d's are not directly comparable to between-person d's. The Table 1 SDs are total SDs and were not used. 5) M2 (sex multigroup, Table 3) was extracted as a separate card because the authors interpret it. The paper does not say whether sex was dropped as a covariate in that model. 6) The content-type moderation (Tables S5-S7) and the non-imputed sensitivity analysis are supplement-only and were excluded for lack of numbers. 7) The SEM software is not named, and the OSA time units are implied hours/day but not stated explicitly. 8) OSA qualifies under FT-IC2 Step 2 (texting + social networking sites + video chat only). In the ADHD->OSA paths, OSA is the DV."
+ "extraction_flags": "1) The M1 (full-sample RI-CLPM) point estimates come from the path labels in Fig. 1. Their SEs, CIs and exact p-values are in supplementary Tables S2/S3, which are not in the PDF, so M1 has no CIs and its significance is read from the asterisks. Fig. 1 was checked at high resolution, but each label's assignment to its path (for example, -0.009 is OSA T1->ADHD T2 and -0.006 is ADHD T1->OSA T2) should be confirmed against S2/S3. 2) Table 3 has printing problems in the male column. Two male ADHD->OSA CIs do not contain their own point estimates: -0.057 printed with [-0.029, -0.002], and -0.051 printed with [-0.040, -0.004]. Several other male CIs, such as -0.013 (SE 0.023) printed with [-0.253, 0.141], are much wider than 1.96*SE implies. They were copied as printed; do not convert those CIs without checking. 3) The between-person random-intercept correlation r = 0.068 is printed with '95% CI, 0.07-0.35', which does not contain 0.068, so the CI was left null. It is included in M1 as a beta_std cell. 4) The standardized coefficients are within-person (RI-CLPM), so the d's are not directly comparable to between-person d's. The Table 1 SDs are total SDs and were not used. 5) M2 (sex multigroup, Table 3) was extracted as a separate card because the authors interpret it. The paper does not say whether sex was dropped as a covariate in that model. 6) The content-type moderation (Tables S5-S7) and the non-imputed sensitivity analysis are supplement-only and were excluded for lack of numbers. 7) The SEM software is not named, and the OSA time units are implied hours/day but not stated explicitly. 8) OSA qualifies under FT-IC2 Step 2 (texting + social networking sites + video chat only). In the ADHD->OSA paths, OSA is the DV.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2197: OSA time is continuous typical daily time; ADHD CBCL T-score continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.2197: OSA time is continuous typical daily time; ADHD CBCL T-score continuous"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 OSA->ADHD t1_t2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 OSA->ADHD t2_t3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 OSA->ADHD t3_t4",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ADHD->OSA t1_t2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ADHD->OSA t2_t3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ADHD->OSA t3_t4",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 RI corr stable",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked PDF pp.2195-2204 (Tables 1-3, Fig. 1, text); CI/SE only in supplementary Tables S2/S3, not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_osa_to_adhd t1_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.033
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_osa_to_adhd t2_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.041
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_osa_to_adhd t3_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.028
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_osa_to_adhd t1_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.023
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_osa_to_adhd t2_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_osa_to_adhd t3_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.036
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_adhd_to_osa t1_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.029
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_adhd_to_osa t2_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.022
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 f_adhd_to_osa t3_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.027
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_adhd_to_osa t1_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.024
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_adhd_to_osa t2_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.021
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 m_adhd_to_osa t3_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.029
+   },
+   "where": "Table 3 p.2200, beta (SE) column"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_osa_to_adhd t1_t2",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.253,
+    "beta_hi": 0.141
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.253,
+     0.141
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_osa_to_adhd t2_t3",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.139,
+    "beta_hi": 0.133
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.139,
+     0.133
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_osa_to_adhd t3_t4",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.113,
+    "beta_hi": 0.138
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.113,
+     0.138
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_adhd_to_osa t1_t2",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.029,
+    "beta_hi": -0.002
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.029,
+     -0.002
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_adhd_to_osa t2_t3",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.04,
+    "beta_hi": -0.004
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.04,
+     -0.004
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 m_adhd_to_osa t3_t4",
+   "action": "corrected",
+   "was": {
+    "beta_lo": -0.025,
+    "beta_hi": 0.064
+   },
+   "value": {
+    "beta_lo": null,
+    "beta_hi": null,
+    "ci_printed_raw": [
+     -0.025,
+     0.064
+    ]
+   },
+   "where": "Table 3 p.2200, Males 95% CI column; printed CI inconsistent with beta(SE) and p (male CIs appear to be on a different scale); beta, SE, p verified exact"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Re-read PDF pp.2195-2204: Fig. 1 betas (-0.009, 0.058*, 0.074**, -0.006, -0.007, 0.028, RI r 0.068**) verified; no SE/CI/p printed; Tables S2/S3 not available (no supplement file in docs/pdfs)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 female cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 3 p.2200: all 6 female beta, SE, CI, p verified exact; no changes"
+  }
+ ]
 }

@@ -63,7 +63,8 @@
      "id": "socializing",
      "label": "Socializing (texting + social networking + video chat)",
      "meta": "Baseline hours/day, standardized residual; boys M = 0.47, girls M = 0.65",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "Raw SD of Socializing not printed anywhere (only sex-specific means with SE: boys 0.47 SE 0.02, girls 0.65 SE 0.02, p.4; baseline 4686 females of 9855, p.8). Not needed: coefficients are standardized."
     }
    ],
    "dv_axis": [
@@ -93,11 +94,11 @@
      "beta": -0.1,
      "beta_lo": null,
      "beta_hi": null,
-     "p": 0.001,
+     "p": null,
      "p_label": "<0.001",
      "sig": true,
      "location": "Results p. 3; Figure 1 (p. 4); abstract",
-     "note": "Abstract reports this as r = -0.10. No CI or SE reported. p is an upper bound."
+     "note": "Abstract reports this as r = -0.10. No CI or SE reported. p is an upper bound. p set to null because printed only as p < 0.001 (kept in p_label). Completion check: read all 14 pages (Results pp.2-6, Fig 1 p.4, Fig 2 p.5, Methods pp.8-11); no SE, CI, z or exact p printed for any SEM path beyond those recorded. Baseline N = 9855, follow-up N = 5374 (Methods p.8). Separate Socializing-only model and any SEs are only in online Supplementary Information, not bundled."
     },
     {
      "iv": "socializing",
@@ -109,7 +110,7 @@
      "p_label": "0.220",
      "sig": false,
      "location": "Results p. 3; Figure 1 (p. 4)",
-     "note": "Marked n.s. in Figure 1. No CI or SE reported."
+     "note": "Marked n.s. in Figure 1. No CI or SE reported. Completion check: read all 14 pages (Results pp.2-6, Fig 1 p.4, Fig 2 p.5, Methods pp.8-11); no SE, CI, z or exact p printed for any SEM path beyond those recorded. Baseline N = 9855, follow-up N = 5374 (Methods p.8). Separate Socializing-only model and any SEs are only in online Supplementary Information, not bundled."
     },
     {
      "iv": "socializing",
@@ -121,9 +122,10 @@
      "p_label": null,
      "sig": true,
      "location": "Figure 1 (p. 4), curved arrow cogPGS <-> Screen Time",
-     "note": "Standardized exogenous covariance (non-directional), read from the figure label; no p printed. Treated as significant because Figure 1 marks non-significant values with 'n.s.' and this one is not marked; text p. 3 says all screen time types were negatively associated with cogPGS and SES."
+     "note": "Standardized exogenous covariance (non-directional), read from the figure label; no p printed. Treated as significant because Figure 1 marks non-significant values with 'n.s.' and this one is not marked; text p. 3 says all screen time types were negatively associated with cogPGS and SES. Completion check: read all 14 pages (Results pp.2-6, Fig 1 p.4, Fig 2 p.5, Methods pp.8-11); no SE, CI, z or exact p printed for any SEM path beyond those recorded. Baseline N = 9855, follow-up N = 5374 (Methods p.8). Separate Socializing-only model and any SEs are only in online Supplementary Information, not bundled."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -147,7 +149,8 @@
      "id": "socializing",
      "label": "Socializing (texting + social networking + video chat)",
      "meta": "Baseline hours/day",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "Raw SD of Socializing not printed anywhere (only sex-specific means with SE: boys 0.47 SE 0.02, girls 0.65 SE 0.02, p.4; baseline 4686 females of 9855, p.8). Not needed: coefficients are standardized."
     }
    ],
    "dv_axis": [
@@ -204,7 +207,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, Picture row x Socializing column"
+     "location": "Table 1, Picture row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -215,7 +220,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, Flanker row x Socializing column"
+     "location": "Table 1, Flanker row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -226,7 +233,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, Reading row x Socializing column"
+     "location": "Table 1, Reading row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -237,7 +246,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, RAVLT row x Socializing column"
+     "location": "Table 1, RAVLT row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -248,7 +259,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, LMT row x Socializing column"
+     "location": "Table 1, LMT row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -259,7 +272,9 @@
      "p": null,
      "p_label": "<0.05 (Holm)",
      "sig": true,
-     "location": "Table 1, cogPGS row x Socializing column"
+     "location": "Table 1, cogPGS row x Socializing column",
+     "n": 9855,
+     "note": "n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.)."
     },
     {
      "iv": "socializing",
@@ -271,9 +286,11 @@
      "p_label": "n.s. (crossed out)",
      "sig": false,
      "location": "Table 1, Lack Persev row x Socializing column",
-     "note": "Crossed out in Table 1 as non-significant after Holm correction."
+     "note": "Crossed out in Table 1 as non-significant after Holm correction. n = 9855 is the baseline analytic sample (Abstract p.1; Methods p.8); per-correlation pairwise N is not printed in Table 1, so a Fisher-z CI using 9855 is approximate. No exact p, SE or CI printed (Table 1 caption: Holm-adjusted, only crossed = n.s.).",
+     "n": 9855
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -321,7 +338,8 @@
      "id": "socializing",
      "label": "Socializing (texting + social networking + video chat)",
      "meta": "Baseline, sibling subsample",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "Raw SD of Socializing not printed anywhere (only sex-specific means with SE: boys 0.47 SE 0.02, girls 0.65 SE 0.02, p.4; baseline 4686 females of 9855, p.8). Not needed: coefficients are standardized."
     }
    ],
    "dv_axis": [
@@ -345,11 +363,11 @@
      "value": -0.04,
      "value_lo": null,
      "value_hi": null,
-     "p": 0.001,
+     "p": null,
      "p_label": "<0.001",
      "sig": true,
      "location": "Results p. 6, Sibling analyses",
-     "note": "Printed as 'r = -0.04'. p is an upper bound."
+     "note": "Printed as 'r = -0.04'. p is an upper bound. p set to null because printed only as p < 0.001 (kept in p_label). Completion check: Results p.6 and Methods p.11 print only coefficient and p; no SE, CI, t or df. Subsample ~1102 individuals / ~400 families (Discussion p.8)."
     },
     {
      "iv": "socializing",
@@ -361,9 +379,10 @@
      "p_label": "0.307",
      "sig": false,
      "location": "Results p. 6, Sibling analyses",
-     "note": "Printed as 'beta = -0.001'."
+     "note": "Printed as 'beta = -0.001'. Completion check: Results p.6 and Methods p.11 print only coefficient and p; no SE, CI, t or df. Subsample ~1102 individuals / ~400 families (Discussion p.8)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M4",
@@ -391,7 +410,8 @@
      "id": "socializing",
      "label": "Socializing (texting + social networking + video chat)",
      "meta": "Baseline",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "Raw SD of Socializing not printed anywhere (only sex-specific means with SE: boys 0.47 SE 0.02, girls 0.65 SE 0.02, p.4; baseline 4686 females of 9855, p.8). Not needed: coefficients are standardized."
     }
    ],
    "dv_axis": [
@@ -415,7 +435,8 @@
      "location": "Results p. 6, Mediation by lack of perseverance",
      "note": "Bias-corrected bootstrap 95% CI [-0.002, 0.002]."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -475,7 +496,218 @@
   "conversion_formula": "M1: standardized SEM path treated as beta_std ~ r; d = 2*beta_std / sqrt(1 - beta_std^2). M2: d = 2r / sqrt(1 - r^2). M3 and M4: no conversion.",
   "contrast_type": "M1 and M2: per 1 SD of baseline Socializing screen time (all variables standardized residuals), latent intelligence in SD units. M3: unclear scaling. M4: indirect effect.",
   "transformable": "partial",
-  "notes": "M1 coefficients are fully standardized betas from Figure 1 and the Results text (p. 3), so no SD_IV or SD_DV is needed; no CIs or SEs are printed, so no d CI can be formed. The Figure 1 covariance of Socializing with cogPGS (-0.04) is a standardized covariance (correlation) and is convertible the same way. M2 correlations come from Table 1 (p. 3) and convert directly; no CIs or exact p-values. M3 (sibling analysis) prints 'r = -0.04' and 'beta = -0.001' without saying whether variables were standardized, so these are not converted. M4 is a mediation indirect effect (product of paths), not convertible to d. Socializing raw descriptive SD is not reported anywhere in the paper (only sex-specific means with SEs, p. 4)."
+  "notes": "M1 coefficients are fully standardized betas from Figure 1 and the Results text (p. 3), so no SD_IV or SD_DV is needed; no CIs or SEs are printed, so no d CI can be formed. The Figure 1 covariance of Socializing with cogPGS (-0.04) is a standardized covariance (correlation) and is convertible the same way. M2 correlations come from Table 1 (p. 3) and convert directly; no CIs or exact p-values. M3 (sibling analysis) prints 'r = -0.04' and 'beta = -0.001' without saying whether variables were standardized, so these are not converted. M4 is a mediation indirect effect (product of paths), not convertible to d. Socializing raw descriptive SD is not reported anywhere in the paper (only sex-specific means with SEs, p. 4). Completion pass (2026-10-01): re-read all 14 pages; no supplement bundled. No SEs/CIs exist in the PDF for M1-M3; M2 r given baseline n = 9855 for approximate Fisher-z CIs. p for '<0.001' entries moved to p_label only."
  },
- "extraction_flags": "1. The qualifying IV is 'Socializing', which combines texting, social networking sites and video chat. It counts as a phone/SM-only composite under FT-IC2 Step 2, but the texting item says 'cell phone, tablet, or computer'. 2. M1 (the latent change score SEM) is the anchor model. A coder should decide whether to keep M2 (the Table 1 correlations, which are descriptive and Holm-corrected but have no exact p-values or N), M3 (the post hoc sibling mixed models, where the paper prints 'r' for the baseline result and 'beta' for the change result and does not state the scaling) and M4 (the mediation indirect effect, which is not convertible). 3. The Socializing<->cogPGS covariance (-0.04) was read from the Figure 1 labels. No p-value is printed; I marked it significant only because the figure does not label it 'n.s.' 4. The follow-up N is inconsistent: 5374 in Methods (p. 8) versus 5169 in the Introduction (p. 2). 5. No raw SD for Socializing is reported, but the SEM coefficients are fully standardized, so the d conversion does not need it. No CIs or SEs are given for the M1 paths. 6. A Socializing-only model is in the online Supplementary Information, which is not in this PDF. 7. Figure 1 draws the baseline-intelligence/change link as a double-headed arrow, but the gender section calls it an 'effect'. The M1 equation treats it as a covariance.json"
+ "extraction_flags": "1. The qualifying IV is 'Socializing', which combines texting, social networking sites and video chat. It counts as a phone/SM-only composite under FT-IC2 Step 2, but the texting item says 'cell phone, tablet, or computer'. 2. M1 (the latent change score SEM) is the anchor model. A coder should decide whether to keep M2 (the Table 1 correlations, which are descriptive and Holm-corrected but have no exact p-values or N), M3 (the post hoc sibling mixed models, where the paper prints 'r' for the baseline result and 'beta' for the change result and does not state the scaling) and M4 (the mediation indirect effect, which is not convertible). 3. The Socializing<->cogPGS covariance (-0.04) was read from the Figure 1 labels. No p-value is printed; I marked it significant only because the figure does not label it 'n.s.' 4. The follow-up N is inconsistent: 5374 in Methods (p. 8) versus 5169 in the Introduction (p. 2). 5. No raw SD for Socializing is reported, but the SEM coefficients are fully standardized, so the d conversion does not need it. No CIs or SEs are given for the M1 paths. 6. A Socializing-only model is in the online Supplementary Information, which is not in this PDF. 7. Figure 1 draws the baseline-intelligence/change link as a double-headed arrow, but the gender section calls it an 'effect'. The M1 equation treats it as a covariance.json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 socializing",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.9: Socializing = mean weekday/weekend hours (items 4+5+6), standardized residual"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.9: Socializing = mean weekday/weekend hours (items 4+5+6), standardized residual"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 socializing",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.9: Socializing = mean weekday/weekend hours (items 4+5+6), standardized residual"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 socializing",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.9: Socializing = mean weekday/weekend hours (items 4+5+6), standardized residual"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x picture",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x flanker",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x reading",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x ravlt",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x lmt",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x cogpgs",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 socializing x lack_persev",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 9855
+   },
+   "where": "Methods p.8 / Abstract p.1; Table 1 p.3"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 socializing x int_baseline",
+   "action": "confirmed_missing",
+   "value": "beta CI / SE",
+   "where": "Fig 1 p.4, Results p.3; supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 socializing x int_change",
+   "action": "confirmed_missing",
+   "value": "beta CI / SE",
+   "where": "Fig 1 p.4, Results p.3; supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 socializing x cogpgs_cov",
+   "action": "confirmed_missing",
+   "value": "beta CI / SE",
+   "where": "Fig 1 p.4, Results p.3; supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 socializing x int_baseline",
+   "action": "confirmed_missing",
+   "value": "CI / SE",
+   "where": "Results p.6, Methods p.11, Discussion p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 socializing x int_change",
+   "action": "confirmed_missing",
+   "value": "CI / SE",
+   "where": "Results p.6, Methods p.11, Discussion p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 socializing -> lack persev -> change",
+   "action": "confirmed_missing",
+   "value": "none missing (CI printed)",
+   "where": "Results p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "value": "SDs not printed; not needed (standardized coefficients / r)",
+   "where": "Table 1 p.3 is a correlation matrix only; no descriptive table"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "value": "SDs not printed; not needed (standardized coefficients / r)",
+   "where": "Table 1 p.3 is a correlation matrix only; no descriptive table"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "value": "SDs not printed; not needed (standardized coefficients / r)",
+   "where": "Table 1 p.3 is a correlation matrix only; no descriptive table"
+  },
+  {
+   "stage": "complete",
+   "item": "M4 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "value": "SDs not printed; not needed (standardized coefficients / r)",
+   "where": "Table 1 p.3 is a correlation matrix only; no descriptive table"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 socializing x int_baseline",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta SE/CI/z/exact p",
+   "where": "Fig 1 p.4 + Results p.3 + Abstract p.1 print only beta=-0.10, p<0.001; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 socializing x int_change",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta SE/CI/z",
+   "where": "Fig 1 p.4 + Results p.3 print only beta=-0.07, p=0.220"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 socializing x cogpgs_cov",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "p/SE/CI",
+   "where": "Fig 1 p.4 prints only -0.04 (not marked n.s.)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 all socializing cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "exact p / CI / pairwise N",
+   "where": "Table 1 p.3 prints r only (Holm, crossed = n.s.); all 7 r values re-verified at 250 dpi"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 socializing x int_baseline / int_change",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "SE/CI/t/df",
+   "where": "Results p.6, Methods p.11, Discussion p.8 print coefficient and p only"
+  },
+  {
+   "stage": "audit",
+   "item": "M1-M4 sd_iv/sd_dv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "raw SDs",
+   "where": "No descriptive table in paper; only sex-specific Socializing means (p.4)"
+  }
+ ]
 }

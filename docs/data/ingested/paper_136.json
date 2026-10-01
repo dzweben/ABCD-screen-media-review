@@ -97,7 +97,7 @@
      "p_label": null,
      "sig": false,
      "location": "Supplementary Table A7",
-     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501) that specific weekend screen-time categories were not associated with withdrawn/depressed symptoms.",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501) that specific weekend screen-time categories were not associated with withdrawn/depressed symptoms. Complete pass 2026-10-01: re-read all 8 PDF pages (pp.496-503): Abstract, Methods pp.497-498, Table 1 p.499 (no per-category screen-time descriptives), Table 2 p.499 (total screen time >2 h/day prevalence only), Tables 3-4 p.500 (total weekday/weekend composite only), Results/Discussion pp.501-502 (Table A7 cited, 'not associated', no numbers). No OR, CI, SE, exact p, or test statistic for this category is printed in the PDF; no supplement file exists in docs/pdfs. Values live only in online Supplementary Table A7 (mmc1 at doi 10.1016/j.jadohealth.2023.09.001).",
      "derived_d": null,
      "derived_d_method": "OR missing"
     },
@@ -111,7 +111,7 @@
      "p_label": null,
      "sig": false,
      "location": "Supplementary Table A7",
-     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501).",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501). Complete pass 2026-10-01: re-read all 8 PDF pages (pp.496-503): Abstract, Methods pp.497-498, Table 1 p.499 (no per-category screen-time descriptives), Table 2 p.499 (total screen time >2 h/day prevalence only), Tables 3-4 p.500 (total weekday/weekend composite only), Results/Discussion pp.501-502 (Table A7 cited, 'not associated', no numbers). No OR, CI, SE, exact p, or test statistic for this category is printed in the PDF; no supplement file exists in docs/pdfs. Values live only in online Supplementary Table A7 (mmc1 at doi 10.1016/j.jadohealth.2023.09.001).",
      "derived_d": null,
      "derived_d_method": "OR missing"
     },
@@ -125,11 +125,13 @@
      "p_label": null,
      "sig": false,
      "location": "Supplementary Table A7",
-     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501).",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501). Complete pass 2026-10-01: re-read all 8 PDF pages (pp.496-503): Abstract, Methods pp.497-498, Table 1 p.499 (no per-category screen-time descriptives), Table 2 p.499 (total screen time >2 h/day prevalence only), Tables 3-4 p.500 (total weekday/weekend composite only), Results/Discussion pp.501-502 (Table A7 cited, 'not associated', no numbers). No OR, CI, SE, exact p, or test statistic for this category is printed in the PDF; no supplement file exists in docs/pdfs. Values live only in online Supplementary Table A7 (mmc1 at doi 10.1016/j.jadohealth.2023.09.001).",
      "derived_d": null,
      "derived_d_method": "OR missing"
     }
-   ]
+   ],
+   "iv_type": null,
+   "iv_type_note": "Not set: coding of weekend texting/video chat/SNS in Supplementary Table A7 (hours/day continuous, ordinal categories, or dichotomized at a threshold) is not stated anywhere in the article PDF (Methods p.498 describes only the summed total screen time dichotomized at >2 h/day). Set after reading Table A7."
   }
  ],
  "excluded_models": [
@@ -179,8 +181,78 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to OR and each CI bound.",
   "contrast_type": "Unknown until Table A7 is read: either per 1 unit (h/day) of the weekend category or a dichotomized high vs low contrast.",
   "transformable": false,
-  "notes": "The only phone/SM-isolated estimates (weekend texting, video chatting, social networking vs withdrawn/depressed) are in online supplementary Table A7, which is not bundled in the local PDF (the PDF is the 8-page article, pp. 496-503, only). No values could be extracted, so d cannot yet be computed. If Table A7 reports ORs with 95% CIs, the cells become convertible via Chinn and transformable should be updated to true. No SDs are needed for the OR route; p0 for the DV could be taken from Table 2 (follow-up withdrawn/depressed t >= 65: females 5.5%, males 9.7%) if a RR is reported instead."
+  "notes": "The only phone/SM-isolated estimates (weekend texting, video chatting, social networking vs withdrawn/depressed) are in online supplementary Table A7, which is not bundled in the local PDF (the PDF is the 8-page article, pp. 496-503, only). No values could be extracted, so d cannot yet be computed. If Table A7 reports ORs with 95% CIs, the cells become convertible via Chinn and transformable should be updated to true. No SDs are needed for the OR route; p0 for the DV could be taken from Table 2 (follow-up withdrawn/depressed t >= 65: females 5.5%, males 9.7%) if a RR is reported instead. [Complete pass 2026-10-01] Full PDF re-read; no supplement available locally. No SDs needed for the OR route; if Table A7 reports RR, p0 candidates in Table 2 p.499 (follow-up withdrawn/depressed t>=65: females 282/5,177 = 5.5%, males 550/5,651 = 9.7%; marginal rates, not reference-group rates)."
  },
  "extraction_flags": "The local PDF has only the 8-page article (pp. 496-503). It has no supplement. Every analysis in the main text (Tables 3-4) uses a total screen-time composite that mixes TV, video, and games with texting, video chat, and social networking, so all of them fail FT-IC2 Step 2. The only phone/SM-isolated estimates are in online Supplementary Table A7. The Discussion (p. 501) describes these as exploratory weekend screen-type categories vs withdrawn/depressed symptoms and says none were associated. I wrote M1 as a placeholder card for Table A7 with three cells (weekend texting, video chat, SNS). All OR, CI, and p values are null. sig=false comes only from the Discussion sentence. Someone needs to get the supplement (mmc1 from the article's page at doi 10.1016/j.jadohealth.2023.09.001) and fill in the following: the values; how the IV is coded (continuous hours or dichotomized); whether the model is female-only or gender-stratified; the covariate set (my list assumes the main adjusted models); and whether the categories enter separately or together. Then set d_transformable to true if ORs with CIs are printed. Also re-check Stage 2 eligibility: the stage2_reason only notes that the headline composite fails Step 2. If Table A7 does not break out texting, video chat, and SNS with their own estimates, this paper fails FT-IC2.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 weekend texting x withdrawn/depressed",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked full PDF pp.496-503 incl. Tables 1-4; values only in online Supplementary Table A7 (not bundled)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 weekend video chatting x withdrawn/depressed",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked full PDF pp.496-503 incl. Tables 1-4; values only in online Supplementary Table A7 (not bundled)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 weekend social networking x withdrawn/depressed",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Checked full PDF pp.496-503 incl. Tables 1-4; values only in online Supplementary Table A7 (not bundled)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_type",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "IV coding for Table A7 not described in PDF (Methods p.498); left null rather than guessed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 weekend texting x withdrawn/depressed: OR, CI, se, p, sig",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Audit 2026-10-01: re-read all 8 PDF pages (pp.496-503) incl. Tables 1-4 and Discussion p.501; Table A7 cited with no numbers; no *_supplement file in docs/pdfs; sig=false consistent with Discussion p.501 ('not associated')"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 weekend video chatting x withdrawn/depressed: OR, CI, se, p, sig",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Audit 2026-10-01: re-read all 8 PDF pages (pp.496-503) incl. Tables 1-4 and Discussion p.501; Table A7 cited with no numbers; no *_supplement file in docs/pdfs; sig=false consistent with Discussion p.501 ('not associated')"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 weekend social networking x withdrawn/depressed: OR, CI, se, p, sig",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Audit 2026-10-01: re-read all 8 PDF pages (pp.496-503) incl. Tables 1-4 and Discussion p.501; Table A7 cited with no numbers; no *_supplement file in docs/pdfs; sig=false consistent with Discussion p.501 ('not associated')"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_type, sd_iv, sd_dv, p0",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Audit 2026-10-01: re-read all 8 PDF pages (pp.496-503) incl. Tables 1-4 and Discussion p.501; Table A7 cited with no numbers; no *_supplement file in docs/pdfs; per-category coding/descriptives not printed (Methods p.498, Table 1 p.499)"
+  },
+  {
+   "stage": "audit",
+   "item": "Prose numbers (Table 1 demographics, Table 2 withdrawn/depressed prevalences 236/4.6%, 282/5.5%, 529/9.4%, 550/9.7%, N=10,828/5,177/5,651, excluded n=243, pubertal N=8,716, headline OR 1.6 [1.1-2.2])",
+   "action": "confirmed",
+   "was": null,
+   "value": null,
+   "where": "Tables 1-3 pp.499-500; Methods p.498; Results p.501"
+  }
+ ],
  "supplements": []
 }

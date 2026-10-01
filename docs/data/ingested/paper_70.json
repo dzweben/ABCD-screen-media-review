@@ -113,6 +113,7 @@
      "p_label": "0.001",
      "sig": true,
      "location": "Table 2, row 'Fear of obesity', Social media use columns",
+     "note": "OR and 95 percent CI fully printed (Table 2 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.55) \u00d7 0.5513 = 0.4383 \u00d7 0.5513 = 0.2416",
      "derived_d": 0.2416,
@@ -130,6 +131,7 @@
      "p_label": "0.025",
      "sig": true,
      "location": "Table 2, row 'Self-worth tied to weight', Social media use columns",
+     "note": "OR and 95 percent CI fully printed (Table 2 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.3) \u00d7 0.5513 = 0.2624 \u00d7 0.5513 = 0.1446",
      "derived_d": 0.1446,
@@ -147,6 +149,7 @@
      "p_label": "0.039",
      "sig": true,
      "location": "Table 2, row 'Inappropriate compensatory behaviors to prevent weight gain', Social media use columns",
+     "note": "OR and 95 percent CI fully printed (Table 2 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.18) \u00d7 0.5513 = 0.1655 \u00d7 0.5513 = 0.0913",
      "derived_d": 0.0913,
@@ -164,6 +167,7 @@
      "p_label": "0.002",
      "sig": true,
      "location": "Table 2, row 'Binge eating', Social media use columns",
+     "note": "OR and 95 percent CI fully printed (Table 2 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.28) \u00d7 0.5513 = 0.2469 \u00d7 0.5513 = 0.1361",
      "derived_d": 0.1361,
@@ -181,6 +185,7 @@
      "p_label": "0.012",
      "sig": true,
      "location": "Table 2, row 'Distress with binge eating', Social media use columns",
+     "note": "OR and 95 percent CI fully printed (Table 2 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.31) \u00d7 0.5513 = 0.27 \u00d7 0.5513 = 0.1489",
      "derived_d": 0.1489,
@@ -188,7 +193,8 @@
      "derived_d_hi": 0.2626,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -292,6 +298,8 @@
      "p_label": "0.004",
      "sig": true,
      "location": "Table 3, row 'Fear of obesity', Problematic social media use columns",
+     "n": 5587,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.38) \u00d7 0.5513 = 0.3221 \u00d7 0.5513 = 0.1776",
      "derived_d": 0.1776,
@@ -309,6 +317,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Self-worth tied to weight', Problematic social media use columns",
+     "n": 5587,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.75) \u00d7 0.5513 = 0.5596 \u00d7 0.5513 = 0.3085",
      "derived_d": 0.3085,
@@ -326,6 +336,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Inappropriate compensatory behaviors to prevent weight gain', Problematic social media use columns",
+     "n": 5587,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.43) \u00d7 0.5513 = 0.3577 \u00d7 0.5513 = 0.1972",
      "derived_d": 0.1972,
@@ -343,6 +355,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Binge eating', Problematic social media use columns",
+     "n": 5587,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.63) \u00d7 0.5513 = 0.4886 \u00d7 0.5513 = 0.2694",
      "derived_d": 0.2694,
@@ -360,6 +374,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Distress with binge eating', Problematic social media use columns",
+     "n": 5587,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.79) \u00d7 0.5513 = 0.5822 \u00d7 0.5513 = 0.321",
      "derived_d": 0.321,
@@ -377,6 +393,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Fear of obesity', Problematic mobile phone use columns",
+     "n": 7280,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.43) \u00d7 0.5513 = 0.3577 \u00d7 0.5513 = 0.1972",
      "derived_d": 0.1972,
@@ -394,6 +412,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Self-worth tied to weight', Problematic mobile phone use columns",
+     "n": 7280,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.51) \u00d7 0.5513 = 0.4121 \u00d7 0.5513 = 0.2272",
      "derived_d": 0.2272,
@@ -411,6 +431,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Inappropriate compensatory behaviors to prevent weight gain', Problematic mobile phone use columns",
+     "n": 7280,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.26) \u00d7 0.5513 = 0.2311 \u00d7 0.5513 = 0.1274",
      "derived_d": 0.1274,
@@ -428,6 +450,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Binge eating', Problematic mobile phone use columns",
+     "n": 7280,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.66) \u00d7 0.5513 = 0.5068 \u00d7 0.5513 = 0.2794",
      "derived_d": 0.2794,
@@ -445,6 +469,8 @@
      "p_label": "< 0.001",
      "sig": true,
      "location": "Table 3, row 'Distress with binge eating', Problematic mobile phone use columns",
+     "n": 7280,
+     "note": "OR and 95 percent CI fully printed (Table 3 p.6). Checked Tables 1-3, results text pp.4-5, abstract: no SE or z printed; outcome binary so sd_dv not applicable (Chinn conversion). p0 is full-sample Y2 prevalence (Table 1 p.5); subsample prevalence not printed; Additional file 1 (Tables S1-S2) online only, not in PDF.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.82) \u00d7 0.5513 = 0.5988 \u00d7 0.5513 = 0.3302",
      "derived_d": 0.3302,
@@ -452,7 +478,8 @@
      "derived_d_hi": 0.4143,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -477,8 +504,572 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to the OR and to each CI bound.",
   "contrast_type": "M1: per 1 additional hour/day of baseline social media use. M2: per 1-unit increase in SMAQ or MPIQ score (unit not explicitly stated; item-mean scale assumed from Table 1 means).",
   "transformable": true,
-  "notes": "Both models report adjusted ORs with 95% CIs, so the Chinn conversion applies directly and p0 is not needed. p0 values given in dv_axis are the full-sample (N = 10,246, weighted) year-two prevalences from Table 1 (p. 5); prevalences within the SMAQ (n = 5,587) and MPIQ (n = 7,280) subsamples are not reported. SD_IV values from Table 1 (p. 5): social media 0.4 hours/day (baseline), SMAQ 0.9, MPIQ 1.1; these are full-sample/subsample descriptives as printed and could be used to rescale ORs to a per-SD contrast (ln OR x SD_IV) if a per-SD comparison is wanted. Because social media hours have a very small SD (0.4 h), the per-hour OR of 1.55 corresponds to a much smaller per-SD effect; per-hour d values are not directly comparable to per-SD d values from other papers."
+  "notes": "Both models report adjusted ORs with 95% CIs, so the Chinn conversion applies directly and p0 is not needed. p0 values given in dv_axis are the full-sample (N = 10,246, weighted) year-two prevalences from Table 1 (p. 5); prevalences within the SMAQ (n = 5,587) and MPIQ (n = 7,280) subsamples are not reported. SD_IV values from Table 1 (p. 5): social media 0.4 hours/day (baseline), SMAQ 0.9, MPIQ 1.1; these are full-sample/subsample descriptives as printed and could be used to rescale ORs to a per-SD contrast (ln OR x SD_IV) if a per-SD comparison is wanted. Because social media hours have a very small SD (0.4 h), the per-hour OR of 1.55 corresponds to a much smaller per-SD effect; per-hour d values are not directly comparable to per-SD d values from other papers. [complete stage] All 15 ORs have printed 95% CIs; no SEs printed anywhere. M2 estimates now carry subsample n (5,587 SMAQ; 7,280 MPIQ) from Table 3 header. iv_type set to continuous for both models. No supplement file bundled in docs/pdfs."
  },
  "extraction_flags": "(1) The paper never states the scoring unit for SMAQ and MPIQ, so for M2 the contrast is assumed to be per 1 point on an item-mean score. That assumption comes from the Table 1 means (1.9 and 3.1) and the item ranges. (2) The Methods text names age as a confounder, but neither the Table 2 nor the Table 3 covariate footnote lists it. The extraction follows the footnotes and flags the gap. Smaller points: the p0 values are full-sample year-two prevalences from Table 1. Prevalences within the SMAQ (n=5,587) and MPIQ (n=7,280) subsamples are not reported, but Chinn's OR-to-d conversion does not need p0. Table 1 does not say outright that the 'Social media (hours)' SD of 0.4 is from baseline; it is read as baseline because it sits under the table's 'baseline' header. Per-cell N is not printed for Table 2. The Table 3 models leave out the baseline parent-reported eating disorder symptom covariate, so their specification differs from M1. The total-screen-time column is excluded as a mixed composite. The supplement (Tables S1 and S2) is not in the PDF. I checked all 15 ORs, CIs and p-values against the table text pulled from the PDF.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 all estimates",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.4 (hours/day; SMAQ/MPIQ scale scores entered continuously)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_hours x fear_obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_hours x self_worth",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_hours x compensatory",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_hours x binge",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_hours x binge_distress",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 all estimates",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.4 (hours/day; SMAQ/MPIQ scale scores entered continuously)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x fear_obesity",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 5587
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x fear_obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x self_worth",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 5587
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x self_worth",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x compensatory",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 5587
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x compensatory",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x binge",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 5587
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x binge",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x binge_distress",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 5587
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smaq x binge_distress",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x fear_obesity",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 7280
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x fear_obesity",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x self_worth",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 7280
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x self_worth",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x compensatory",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 7280
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x compensatory",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x binge",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 7280
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x binge",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x binge_distress",
+   "action": "filled_ci_input",
+   "value": {
+    "n": 7280
+   },
+   "where": "Table 3 column header n (p.6)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 mpiq x binge_distress",
+   "action": "confirmed_missing",
+   "value": "se/z/subsample p0 not printed",
+   "where": "Tables 1-3, text pp.4-5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x fear_obesity",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.55,
+    "OR_lo": 1.21,
+    "OR_hi": 1.98,
+    "p": 0.001,
+    "p_label": "0.001",
+    "sig": true
+   },
+   "where": "Table 2 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x fear_obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x self_worth",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.3,
+    "OR_lo": 1.03,
+    "OR_hi": 1.63,
+    "p": 0.025,
+    "p_label": "0.025",
+    "sig": true
+   },
+   "where": "Table 2 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x self_worth",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x compensatory",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.18,
+    "OR_lo": 1.01,
+    "OR_hi": 1.4,
+    "p": 0.039,
+    "p_label": "0.039",
+    "sig": true
+   },
+   "where": "Table 2 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x compensatory",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x binge",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.28,
+    "OR_lo": 1.1,
+    "OR_hi": 1.49,
+    "p": 0.002,
+    "p_label": "0.002",
+    "sig": true
+   },
+   "where": "Table 2 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x binge",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x binge_distress",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.31,
+    "OR_lo": 1.06,
+    "OR_hi": 1.61,
+    "p": 0.012,
+    "p_label": "0.012",
+    "sig": true
+   },
+   "where": "Table 2 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_hours x binge_distress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x fear_obesity",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.38,
+    "OR_lo": 1.11,
+    "OR_hi": 1.71,
+    "p": 0.004,
+    "p_label": "0.004",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x fear_obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x self_worth",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.75,
+    "OR_lo": 1.45,
+    "OR_hi": 2.1,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x self_worth",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x compensatory",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.43,
+    "OR_lo": 1.28,
+    "OR_hi": 1.6,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x compensatory",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x binge",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.63,
+    "OR_lo": 1.48,
+    "OR_hi": 1.81,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x binge",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x binge_distress",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.79,
+    "OR_lo": 1.54,
+    "OR_hi": 2.08,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smaq x binge_distress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x fear_obesity",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.43,
+    "OR_lo": 1.18,
+    "OR_hi": 1.72,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x fear_obesity",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x self_worth",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.51,
+    "OR_lo": 1.27,
+    "OR_hi": 1.79,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x self_worth",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x compensatory",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.26,
+    "OR_lo": 1.15,
+    "OR_hi": 1.39,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x compensatory",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x binge",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.66,
+    "OR_lo": 1.51,
+    "OR_hi": 1.81,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x binge",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x binge_distress",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "OR": 1.82,
+    "OR_lo": 1.57,
+    "OR_hi": 2.12,
+    "p": null,
+    "p_label": "< 0.001",
+    "sig": true
+   },
+   "where": "Table 3 p.6 (OR, CI, p, bold-sig verified against PDF text layer and page image)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 mpiq x binge_distress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed; no supplement file in docs/pdfs",
+   "where": "Full PDF pp.1-10 re-read; Additional file 1 online only"
+  },
+  {
+   "stage": "audit",
+   "item": "sd_iv / p0 / iv_type",
+   "action": "confirmed",
+   "was": null,
+   "value": "sd_iv 0.4 (SM h), 0.9 (SMAQ), 1.1 (MPIQ); p0 .014/.016/.007/.075/.029; iv_type continuous both models",
+   "where": "Table 1 p.5; Methods pp.3-4"
+  }
+ ],
  "supplements": []
 }

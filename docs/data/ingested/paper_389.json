@@ -96,7 +96,8 @@
      "p": 0.106,
      "p_label": "0.106",
      "sig": false,
-     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Positive Expectancies",
+     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Positive Expectancies (p. 7)",
+     "note": "Verified B, 95% CI and p against Table 2 Model 3 p.7 (SMAQ CIs also in Results text p.4). No SE, t or df printed anywhere (checked pp.1-9, Table 1 p.6, Table 2 p.7 and footnotes, Fig. 1 p.5 predicted-score plot without printed slopes); CI is printed so none needed. SDs: sd_iv/sd_dv from Table 1 p.6 (weighted, N=9,008; SMAQ SD on n=5,642); SDs for the Model 3 analytic subset (n=5,642) are not printed. Supplementary Material 1 (Tables S1-S2) not bundled.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = -0.01 \u00d7 1.62 / 0.61 = -0.0266;  d = 2(-0.0266) / \u221a(1 \u2212 (-0.0266)\u00b2) = -0.0531",
      "derived_d": -0.0531,
@@ -113,7 +114,8 @@
      "p": 0.504,
      "p_label": "0.504",
      "sig": false,
-     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Negative Expectancies",
+     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Negative Expectancies (p. 7)",
+     "note": "Verified B, 95% CI and p against Table 2 Model 3 p.7 (SMAQ CIs also in Results text p.4). No SE, t or df printed anywhere (checked pp.1-9, Table 1 p.6, Table 2 p.7 and footnotes, Fig. 1 p.5 predicted-score plot without printed slopes); CI is printed so none needed. SDs: sd_iv/sd_dv from Table 1 p.6 (weighted, N=9,008; SMAQ SD on n=5,642); SDs for the Model 3 analytic subset (n=5,642) are not printed. Supplementary Material 1 (Tables S1-S2) not bundled.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.005 \u00d7 1.62 / 0.78 = 0.0104;  d = 2(0.0104) / \u221a(1 \u2212 0.0104\u00b2) = 0.0208",
      "derived_d": 0.0208,
@@ -130,7 +132,8 @@
      "p": null,
      "p_label": "<0.001",
      "sig": true,
-     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Positive Expectancies",
+     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Positive Expectancies (p. 7)",
+     "note": "Verified B, 95% CI and p against Table 2 Model 3 p.7 (SMAQ CIs also in Results text p.4). No SE, t or df printed anywhere (checked pp.1-9, Table 1 p.6, Table 2 p.7 and footnotes, Fig. 1 p.5 predicted-score plot without printed slopes); CI is printed so none needed. SDs: sd_iv/sd_dv from Table 1 p.6 (weighted, N=9,008; SMAQ SD on n=5,642); SDs for the Model 3 analytic subset (n=5,642) are not printed. Supplementary Material 1 (Tables S1-S2) not bundled.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.045 \u00d7 0.9 / 0.61 = 0.0664;  d = 2(0.0664) / \u221a(1 \u2212 0.0664\u00b2) = 0.1331",
      "derived_d": 0.1331,
@@ -147,7 +150,8 @@
      "p": null,
      "p_label": "<0.001",
      "sig": true,
-     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Negative Expectancies",
+     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Negative Expectancies (p. 7)",
+     "note": "Verified B, 95% CI and p against Table 2 Model 3 p.7 (SMAQ CIs also in Results text p.4). No SE, t or df printed anywhere (checked pp.1-9, Table 1 p.6, Table 2 p.7 and footnotes, Fig. 1 p.5 predicted-score plot without printed slopes); CI is printed so none needed. SDs: sd_iv/sd_dv from Table 1 p.6 (weighted, N=9,008; SMAQ SD on n=5,642); SDs for the Model 3 analytic subset (n=5,642) are not printed. Supplementary Material 1 (Tables S1-S2) not bundled.",
      "derived_d_formula": "\u03b2_std = B \u00d7 SD_IV / SD_DV;  d = 2\u03b2_std / \u221a(1 \u2212 \u03b2_std\u00b2)",
      "derived_d_calc": "\u03b2_std = 0.072 \u00d7 0.9 / 0.78 = 0.0831;  d = 2(0.0831) / \u221a(1 \u2212 0.0831\u00b2) = 0.1667",
      "derived_d": 0.1667,
@@ -155,7 +159,8 @@
      "derived_d_hi": 0.2347,
      "derived_d_method": "linear (SD_IV=0.9, SD_DV=0.78)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -185,8 +190,125 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1); CI endpoints converted the same way.",
   "contrast_type": "per 1-SD change in the IV (B itself is per 1 hour/day of social media time, or per 1 point of SMAQ mean score)",
   "transformable": true,
-  "notes": "All SDs from Table 1 (p. 6), weighted descriptives. SD_IV: social media time 1.62 h/day (computed on N = 9,008); SMAQ 0.90 (computed on the n = 5,642 subset with a social media account). SD_DV: positive expectancies 0.61, negative expectancies 0.78, both computed on N = 9,008, whereas Model 3 is presumably fit on the n = 5,642 subset; SDs in that subset are not reported, so the sample-level SDs are an approximation. Social media time is heavily right-skewed (M 0.71, SD 1.62)."
+  "notes": "All SDs from Table 1 (p. 6), weighted descriptives. SD_IV: social media time 1.62 h/day (computed on N = 9,008); SMAQ 0.90 (computed on the n = 5,642 subset with a social media account). SD_DV: positive expectancies 0.61, negative expectancies 0.78, both computed on N = 9,008, whereas Model 3 is presumably fit on the n = 5,642 subset; SDs in that subset are not reported, so the sample-level SDs are an approximation. Social media time is heavily right-skewed (M 0.71, SD 1.62). [complete stage] All four Model 3 estimates verified with B, 95% CI and p printed in Table 2 p.7; no SE/t printed in paper; SDs verified in Table 1 p.6 and Results text p.4."
  },
  "extraction_flags": "The paper never states the analytic N for Model 3. The SMAQ was only given to youth with a social media account (n=5,642), so Model 3 is presumably fit on that subset, but the outcome SDs (0.61 and 0.78) and the social media time SD (1.62) in Table 1 come from the full N=9,008. That makes the SD-based d conversion approximate. The SMAQ item response range is not stated: Fig. 1 plots it on a 0-6 axis, and the mean is 1.84 with SD 0.90. The abstract's covariate list leaves out age, but the Methods and the Table 2 footnote include it. Study site is treated as a covariate, not a random effect. Alpha is 0.01. Model 1, which uses social media time only, showed a significant negative-expectancy association (B=0.018, p=0.007). I excluded it as scaffolding because the authors anchor their conclusions on Model 3, so a coder should confirm that choice. Table 1's caption says 'Year 2 assessment 2016-2018', which conflicts with the 2018-2020 dates given in the text. Supplementary Tables S1 and S2 are not bundled in the PDF.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (social media time h/day; SMAQ mean score)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media time x positive expectancies",
+   "action": "confirmed_missing",
+   "value": "se/t/df not printed; B, CI, p verified present",
+   "where": "Table 2 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media time x positive expectancies",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.62,
+    "sd_dv": 0.61
+   },
+   "where": "Table 1 p.6 (already on axes; verified)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media time x negative expectancies",
+   "action": "confirmed_missing",
+   "value": "se/t/df not printed; B, CI, p verified present",
+   "where": "Table 2 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social media time x negative expectancies",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.62,
+    "sd_dv": 0.78
+   },
+   "where": "Table 1 p.6 (already on axes; verified)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SMAQ x positive expectancies",
+   "action": "confirmed_missing",
+   "value": "se/t/df not printed; B, CI, p verified present",
+   "where": "Table 2 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SMAQ x positive expectancies",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 0.9,
+    "sd_dv": 0.61
+   },
+   "where": "Table 1 p.6 (already on axes; verified)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SMAQ x negative expectancies",
+   "action": "confirmed_missing",
+   "value": "se/t/df not printed; B, CI, p verified present",
+   "where": "Table 2 p.7"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 SMAQ x negative expectancies",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 0.9,
+    "sd_dv": 0.78
+   },
+   "where": "Table 1 p.6 (already on axes; verified)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_time x pos_exp",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, 95% CI, p, sig (alpha=.01) re-verified exactly against Table 2 Model 3; se/t/z/df not printed in paper (pp.1-9 checked); no supplement file in docs/pdfs",
+   "where": "Table 2, Model 3, row 'Social media time (hours per day)', Positive Expectancies (p. 7)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_time x neg_exp",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, 95% CI, p, sig (alpha=.01) re-verified exactly against Table 2 Model 3; se/t/z/df not printed in paper (pp.1-9 checked); no supplement file in docs/pdfs",
+   "where": "Table 2, Model 3, row 'Social media time (hours per day)', Negative Expectancies (p. 7)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x pos_exp",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, 95% CI, p, sig (alpha=.01) re-verified exactly against Table 2 Model 3; se/t/z/df not printed in paper (pp.1-9 checked); no supplement file in docs/pdfs",
+   "where": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Positive Expectancies (p. 7)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smaq x neg_exp",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B, 95% CI, p, sig (alpha=.01) re-verified exactly against Table 2 Model 3; se/t/z/df not printed in paper (pp.1-9 checked); no supplement file in docs/pdfs",
+   "where": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Negative Expectancies (p. 7)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 axes",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "sd_iv 1.62/0.90, sd_dv 0.61/0.78 confirmed in Table 1 p.6; iv_type continuous confirmed (Methods p.3); estimate set complete (2 IVs x 2 DVs in Model 3)",
+   "where": "Table 1 p.6; Table 2 p.7"
+  }
+ ],
  "supplements": []
 }

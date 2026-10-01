@@ -17,3 +17,11 @@ cd docs/scripts && npm install && node upload_to_firestore.mjs   # push to the l
 node patch_derived.mjs                                     # once coders are reviewing: update only the computed-d fields, never their edits
 node export_firestore.mjs                                  # snapshot live site state (incl. coder edits) -> docs/data/firestore-export.json
 ```
+
+## Completion + audit pass
+
+`complete_and_audit_workflow.js` runs two independent agents per paper (all 67 papers):
+1. **Complete**: re-reads the PDF and supplements and fills every printed value, the CI inputs (SE, exact p, t/z, group sizes), the SDs, and `iv_type`. Anything not printed gets a note saying where the agent looked.
+2. **Audit**: a separate agent checks every number against the PDF and fixes errors.
+
+Per-paper results are in `complete_and_audit_summaries.json`. Every change is also stored in each draft's `verification_log` and shown on the site. In the first run, 5,519 numbers were checked and 76 errors fixed.

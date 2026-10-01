@@ -149,7 +149,8 @@
      "derived_d_hi": 0.1541,
      "derived_d_method": "linear (SD_IV=0.6, SD_DV=2.5)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -227,7 +228,8 @@
      "derived_d_hi": 0.0769,
      "derived_d_method": "linear (SD_IV=0.6, SD_DV=2.5)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -272,8 +274,317 @@
   "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). Apply to B, B_lo and B_hi.",
   "contrast_type": "per 1 hour/day of the Year 1 screen subtype (native); per 1 SD of the IV after conversion",
   "transformable": true,
-  "notes": "SD_IV from Table 1 (p. 1483), Year 1 typical hours/day, propensity-weighted: texting 0.7, video chat 0.6, social media 0.6. SD_DV = 2.5, Year 3 manic symptoms (7 Up) from Table 1 (p. 1483). Table 1 descriptives are weighted estimates, not unweighted analytic-sample SDs. The M2 indirect effect is a product term (a*b); converting it with the same beta_std formula is an approximation and the bootstrap CI is not symmetric. Converted d values will be small (e.g., social media M1: beta_std = 0.20*0.6/2.5 = 0.048). Not directly comparable to papers using high vs. low group contrasts."
+  "notes": "SD_IV from Table 1 (p. 1483), Year 1 typical hours/day, propensity-weighted: texting 0.7, video chat 0.6, social media 0.6. SD_DV = 2.5, Year 3 manic symptoms (7 Up) from Table 1 (p. 1483). Table 1 descriptives are weighted estimates, not unweighted analytic-sample SDs. The M2 indirect effect is a product term (a*b); converting it with the same beta_std formula is an approximation and the bootstrap CI is not symmetric. Converted d values will be small (e.g., social media M1: beta_std = 0.20*0.6/2.5 = 0.048). Not directly comparable to papers using high vs. low group contrasts. Verification pass (2026-10-01): re-read all 9 pages; every B, CI and SD in M1 and M2 matches Table 1, Table 2, Fig. 1 and Results text; no native values or SDs were missing. iv_type set to continuous for both models. p for texting (M1) and the M2 indirect effect is printed only as <0.001 (kept in p_label)."
  },
  "extraction_flags": "1) The PDF has no supplement. Supplemental Tables 1 (cross-sectional Y3) and 2 (logistic regression on the clinical cutoff) may contain per-subtype texting, video chat and social media estimates, and someone should check the online supplement. 2) SD_IV and SD_DV come from Table 1, which is propensity-weighted, so they are not unweighted analytic-sample SDs. The social media IV is heavily floored (M 0.2, SD 0.6). 3) For the M2 mediation, the covariates are only described as \"adjusting for covariates\". I assumed the M1 set and flagged that in the file. The paths are labeled beta in Fig. 1 but B in the text, and nothing says they are standardized. The p-value for the indirect effect is <0.001 only. Converting the indirect effect (a*b) to d is approximate. 4) The paper is inconsistent about the sleep mediation: the abstract and results text say video game screen time, while Fig. 3 and the Methods say total screen time. It is excluded either way. 5) The video chat lower CI bound is printed as -0.012 (three decimals) in Table 2. 6) Study site is listed as an adjustment variable, and it is unclear whether it was a fixed or random effect.",
+ "verification_log": [
+  {
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.1481: typical daily screen time in hours/day"
+  },
+  {
+   "item": "M2 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.1481: typical daily screen time in hours/day"
+  },
+  {
+   "item": "M1 texting x mania_y3 B and CI",
+   "action": "confirmed",
+   "value": [
+    0.18,
+    0.08,
+    0.28
+   ],
+   "where": "Table 2 Model 2, p.1484 (verified against page image)"
+  },
+  {
+   "item": "M1 video_chat x mania_y3 B and CI",
+   "action": "confirmed",
+   "value": [
+    0.1,
+    -0.012,
+    0.21
+   ],
+   "where": "Table 2 Model 2, p.1484 (verified against page image)"
+  },
+  {
+   "item": "M1 social_media x mania_y3 B and CI",
+   "action": "confirmed",
+   "value": [
+    0.2,
+    0.09,
+    0.32
+   ],
+   "where": "Table 2 Model 2, p.1484 (verified against page image)"
+  },
+  {
+   "item": "M2 social_media x mania_y3_direct B and CI",
+   "action": "confirmed",
+   "value": [
+    0.14,
+    0.02,
+    0.26
+   ],
+   "where": "Results text p.1482; Fig. 1 p.1484"
+  },
+  {
+   "item": "M2 social_media x mania_y3_indirect B and CI",
+   "action": "confirmed",
+   "value": [
+    0.12,
+    0.09,
+    0.16
+   ],
+   "where": "Results text p.1482; Fig. 1 p.1484"
+  },
+  {
+   "item": "SDs (sd_iv texting 0.7, video chat 0.6, social media 0.6; sd_dv 2.5)",
+   "action": "confirmed",
+   "value": [
+    0.7,
+    0.6,
+    0.6,
+    2.5
+   ],
+   "where": "Table 1 p.1483"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.1481 (hours/day); already set, confirmed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x mania_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "B and 95% CI fully printed (Table 2 p.1484 / Results p.1482); CI complete so no SE needed; paper prints no SE, t or z anywhere (checked all 9 pages via text extraction and Table 2). Nothing further to fill."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x mania_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "B and 95% CI fully printed (Table 2 p.1484 / Results p.1482); CI complete so no SE needed; paper prints no SE, t or z anywhere (checked all 9 pages via text extraction and Table 2). Nothing further to fill."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x mania_y3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "B and 95% CI fully printed (Table 2 p.1484 / Results p.1482); CI complete so no SE needed; paper prints no SE, t or z anywhere (checked all 9 pages via text extraction and Table 2). Nothing further to fill."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_type",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.1481 (hours/day); already set, confirmed"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 social_media x mania_y3_direct",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "B and 95% CI fully printed (Table 2 p.1484 / Results p.1482); CI complete so no SE needed; paper prints no SE, t or z anywhere (checked all 9 pages via text extraction and Table 2). Nothing further to fill."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 social_media x mania_y3_indirect",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "B and 95% CI fully printed (Table 2 p.1484 / Results p.1482); CI complete so no SE needed; paper prints no SE, t or z anywhere (checked all 9 pages via text extraction and Table 2). Nothing further to fill."
+  },
+  {
+   "stage": "complete",
+   "item": "SDs",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "sd_iv (0.7/0.6/0.6) and sd_dv 2.5 already present from Table 1 p.1483; no unweighted analytic-sample SDs printed; no supplement file bundled in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x mania_y3",
+   "action": "confirmed",
+   "was": [
+    0.18,
+    0.08,
+    0.28,
+    null,
+    "<0.001",
+    true
+   ],
+   "value": [
+    0.18,
+    0.08,
+    0.28,
+    null,
+    "<0.001",
+    true
+   ],
+   "where": "Table 2, Texting row, Model 2 (audited against page images p.1482/1484)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x mania_y3 se/t/z",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All 9 pages read (incl. Table 2, Figs 1-3, Results p.1482); no SE, t or z printed; Supplementary Tables 1-3 not available in docs/pdfs (no _supplement file)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x mania_y3",
+   "action": "confirmed",
+   "was": [
+    0.1,
+    -0.012,
+    0.21,
+    0.079,
+    "0.079",
+    false
+   ],
+   "value": [
+    0.1,
+    -0.012,
+    0.21,
+    0.079,
+    "0.079",
+    false
+   ],
+   "where": "Table 2, Video chat row, Model 2 (audited against page images p.1482/1484)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x mania_y3 se/t/z",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All 9 pages read (incl. Table 2, Figs 1-3, Results p.1482); no SE, t or z printed; Supplementary Tables 1-3 not available in docs/pdfs (no _supplement file)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x mania_y3",
+   "action": "confirmed",
+   "was": [
+    0.2,
+    0.09,
+    0.32,
+    0.001,
+    "0.001",
+    true
+   ],
+   "value": [
+    0.2,
+    0.09,
+    0.32,
+    0.001,
+    "0.001",
+    true
+   ],
+   "where": "Table 2, Social media row, Model 2 (audited against page images p.1482/1484)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x mania_y3 se/t/z",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All 9 pages read (incl. Table 2, Figs 1-3, Results p.1482); no SE, t or z printed; Supplementary Tables 1-3 not available in docs/pdfs (no _supplement file)."
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x mania_y3_direct",
+   "action": "confirmed",
+   "was": [
+    0.14,
+    0.02,
+    0.26,
+    0.026,
+    "0.026",
+    true
+   ],
+   "value": [
+    0.14,
+    0.02,
+    0.26,
+    0.026,
+    "0.026",
+    true
+   ],
+   "where": "Results text p. 1482; Fig. 1 (beta=0.14*) (audited against page images p.1482/1484)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x mania_y3_direct se/t/z",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All 9 pages read (incl. Table 2, Figs 1-3, Results p.1482); no SE, t or z printed; Supplementary Tables 1-3 not available in docs/pdfs (no _supplement file)."
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x mania_y3_indirect",
+   "action": "confirmed",
+   "was": [
+    0.12,
+    0.09,
+    0.16,
+    null,
+    "<0.001",
+    true
+   ],
+   "value": [
+    0.12,
+    0.09,
+    0.16,
+    null,
+    "<0.001",
+    true
+   ],
+   "where": "Results text p. 1482; Fig. 1 (Indirect effect=0.12***) (audited against page images p.1482/1484)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 social_media x mania_y3_indirect se/t/z",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All 9 pages read (incl. Table 2, Figs 1-3, Results p.1482); no SE, t or z printed; Supplementary Tables 1-3 not available in docs/pdfs (no _supplement file)."
+  },
+  {
+   "stage": "audit",
+   "item": "sd_iv/sd_dv and iv_type",
+   "action": "confirmed",
+   "was": [
+    0.7,
+    0.6,
+    0.6,
+    2.5,
+    "continuous"
+   ],
+   "value": [
+    0.7,
+    0.6,
+    0.6,
+    2.5,
+    "continuous"
+   ],
+   "where": "Table 1 p.1483 (texting 0.4(0.7), video chat 0.3(0.6), social media 0.2(0.6), Y3 mania 1.9(2.5)); Methods p.1481 hours/day"
+  },
+  {
+   "stage": "audit",
+   "item": "estimate completeness",
+   "action": "confirmed",
+   "was": null,
+   "value": "No missing phone/SM IV x DV cells for M1 (Table 2 Model 2: texting, video chat, social media) or M2 (Fig.1 direct/indirect)",
+   "where": "Table 2 p.1484; Fig. 1 p.1484; Results p.1482"
+  }
+ ],
  "supplements": []
 }

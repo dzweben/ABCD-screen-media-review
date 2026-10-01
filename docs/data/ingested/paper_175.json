@@ -121,8 +121,8 @@
      "iv": "sem_boys",
      "dv": "fc_t2",
      "beta": 0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.1172,
+     "beta_hi": 0.1572,
      "B": 0.06,
      "B_lo": -0.08,
      "B_hi": 0.19,
@@ -130,20 +130,23 @@
      "p_label": "= .435",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .07; no BH-adjusted p printed for this path. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_EB -> L_F1 = .02.",
+     "note": "SE = .07; no BH-adjusted p printed for this path. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_EB -> L_F1 = .02. SE field (0.07) is the printed SE of the unstandardized b, not of beta. sd_iv = 0.82 is the full-sample observed SD of Social EMU T1 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.07,
+     "sd_iv": 0.82,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.02) / \u221a(1 \u2212 0.02\u00b2) = 0.04",
      "derived_d": 0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.236,
+     "derived_d_hi": 0.3184,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sem_boys",
      "dv": "fc_t3",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0288,
+     "beta_hi": 0.0888,
      "B": 0.05,
      "B_lo": -0.01,
      "B_hi": 0.11,
@@ -151,20 +154,23 @@
      "p_label": "= .125",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .03; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E1 -> L_F2 = .03.",
+     "note": "SE = .03; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E1 -> L_F2 = .03. SE field (0.03) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.16 is the full-sample observed SD of Social EMU T2 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.03,
+     "sd_iv": 1.16,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0576,
+     "derived_d_hi": 0.1783,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sem_boys",
      "dv": "fc_t4",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0492,
+     "beta_hi": 0.0292,
      "B": -0.01,
      "B_lo": -0.05,
      "B_hi": 0.03,
@@ -172,20 +178,23 @@
      "p_label": "= .714",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .02; BH-adjusted p = .884. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E2 -> L_F3 = -.01.",
+     "note": "SE = .02; BH-adjusted p = .884. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E2 -> L_F3 = -.01. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.66 is the full-sample observed SD of Social EMU T3 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.66,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0985,
+     "derived_d_hi": 0.0584,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_boys",
      "dv": "sem_t2",
      "beta": -0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0296,
+     "beta_hi": 0.0096,
      "B": -0.01,
      "B_lo": -0.03,
      "B_hi": 0.01,
@@ -193,20 +202,23 @@
      "p_label": "= .490",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .01; BH-adjusted p = .637. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_FB -> L_E1 = -.01.",
+     "note": "SE = .01; BH-adjusted p = .637. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_FB -> L_E1 = -.01. SE field (0.01) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.95 is the full-sample observed SD of Family conflict T1 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.01,
+     "sd_iv": 1.95,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.01) / \u221a(1 \u2212 (-0.01)\u00b2) = -0.02",
      "derived_d": -0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0592,
+     "derived_d_hi": 0.0192,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_boys",
      "dv": "sem_t3",
      "beta": -0.02,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0592,
+     "beta_hi": 0.0192,
      "B": -0.02,
      "B_lo": -0.05,
      "B_hi": 0.01,
@@ -214,20 +226,23 @@
      "p_label": "= .182",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .02; BH-adjusted p = .314. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_F1 -> L_E2 = -.02.",
+     "note": "SE = .02; BH-adjusted p = .314. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_F1 -> L_E2 = -.02. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.88 is the full-sample observed SD of Family conflict T2 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.88,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.02) / \u221a(1 \u2212 (-0.02)\u00b2) = -0.04",
      "derived_d": -0.04,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1186,
+     "derived_d_hi": 0.0384,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_boys",
      "dv": "sem_t4",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0092,
+     "beta_hi": 0.0692,
      "B": -0.04,
      "B_lo": -0.0,
      "B_hi": 0.07,
@@ -235,20 +250,23 @@
      "p_label": "= .056",
      "sig": false,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Sign inconsistency as printed: b = -0.04 but beta = .03 and 95% CI [-0.00, 0.07]; Figure 3 path L_F2 -> L_E3 = .03, so the negative sign on b is probably a typo. Values copied exactly as printed.",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Sign inconsistency as printed: b = -0.04 but beta = .03 and 95% CI [-0.00, 0.07]; Figure 3 path L_F2 -> L_E3 = .03, so the negative sign on b is probably a typo. Values copied exactly as printed. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.83 is the full-sample observed SD of Family conflict T3 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.83,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0184,
+     "derived_d_hi": 0.1387,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sem_girls",
      "dv": "fc_t2",
      "beta": -0.18,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.2192,
+     "beta_hi": -0.1408,
      "B": -0.59,
      "B_lo": -0.94,
      "B_hi": -0.25,
@@ -256,20 +274,23 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Printed SE = .02 is inconsistent with the printed 95% CI [-0.94, -0.25] (CI width implies SE near .18); values copied as printed. Figure 4 path L_EB -> L_F1 = -.18***.",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Printed SE = .02 is inconsistent with the printed 95% CI [-0.94, -0.25] (CI width implies SE near .18); values copied as printed. Figure 4 path L_EB -> L_F1 = -.18***. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 0.82 is the full-sample observed SD of Social EMU T1 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 0.82,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.18) / \u221a(1 \u2212 (-0.18)\u00b2) = -0.366",
      "derived_d": -0.366,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.4493,
+     "derived_d_hi": -0.2844,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sem_girls",
      "dv": "fc_t3",
      "beta": 0.08,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0212,
+     "beta_hi": 0.1388,
      "B": 0.13,
      "B_lo": 0.06,
      "B_hi": 0.16,
@@ -277,20 +298,23 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .03; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. CI is asymmetric around b as printed. Figure 4 path L_E1 -> L_F2 = .08***.",
+     "note": "SE = .03; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. CI is asymmetric around b as printed. Figure 4 path L_E1 -> L_F2 = .08***. SE field (0.03) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.16 is the full-sample observed SD of Social EMU T2 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.03,
+     "sd_iv": 1.16,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.08) / \u221a(1 \u2212 0.08\u00b2) = 0.1605",
      "derived_d": 0.1605,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0424,
+     "derived_d_hi": 0.2803,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "sem_girls",
      "dv": "fc_t4",
      "beta": 0.07,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0308,
+     "beta_hi": 0.1092,
      "B": 0.07,
      "B_lo": 0.03,
      "B_hi": 0.1,
@@ -298,20 +322,23 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_E2 -> L_F3 = .07***.",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_E2 -> L_F3 = .07***. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.66 is the full-sample observed SD of Social EMU T3 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.66,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.07) / \u221a(1 \u2212 0.07\u00b2) = 0.1403",
      "derived_d": 0.1403,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0616,
+     "derived_d_hi": 0.2197,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_girls",
      "dv": "sem_t2",
      "beta": -0.07,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.1092,
+     "beta_hi": -0.0308,
      "B": -0.05,
      "B_lo": -0.09,
      "B_hi": 0.01,
@@ -319,20 +346,23 @@
      "p_label": "= .054",
      "sig": false,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 shows this path (L_FB -> L_E1) as -.06, while the text prints beta = -.07; text value used.",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 shows this path (L_FB -> L_E1) as -.06, while the text prints beta = -.07; text value used. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.95 is the full-sample observed SD of Family conflict T1 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.95,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.07) / \u221a(1 \u2212 (-0.07)\u00b2) = -0.1403",
      "derived_d": -0.1403,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.2197,
+     "derived_d_hi": -0.0616,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_girls",
      "dv": "sem_t3",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0092,
+     "beta_hi": 0.0692,
      "B": 0.03,
      "B_lo": -0.01,
      "B_hi": 0.07,
@@ -340,20 +370,23 @@
      "p_label": "= .138",
      "sig": false,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F1 -> L_E2 = .03.",
+     "note": "SE = .02; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F1 -> L_E2 = .03. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.88 is the full-sample observed SD of Family conflict T2 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.88,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0184,
+     "derived_d_hi": 0.1387,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "fc_girls",
      "dv": "sem_t4",
      "beta": 0.03,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0092,
+     "beta_hi": 0.0692,
      "B": 0.04,
      "B_lo": 0.0,
      "B_hi": 0.09,
@@ -361,20 +394,23 @@
      "p_label": "= .051",
      "sig": false,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F2 -> L_E3 = .03.",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F2 -> L_E3 = .03. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv = 1.83 is the full-sample observed SD of Family conflict T3 (Table 1, p.1031), not sex-specific and not the within-person component SD; sd_dv on dv_axis is likewise the observed full-sample SD. Beta CI not printed anywhere (text, Figs 3-4); no supplement bundled.",
+     "se": 0.02,
+     "sd_iv": 1.83,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.03) / \u221a(1 \u2212 0.03\u00b2) = 0.06",
      "derived_d": 0.06,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0184,
+     "derived_d_hi": 0.1387,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "ri_sem_boys",
      "dv": "ri_fc",
      "beta": 0.15,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.1108,
+     "beta_hi": 0.1892,
      "B": 0.1,
      "B_lo": 0.07,
      "B_hi": 0.13,
@@ -382,20 +418,22 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
-     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person (random-intercept) covariance/correlation of social EMU with family conflict, not a directional path. Figure 3 RI arc = .15***.",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person (random-intercept) covariance/correlation of social EMU with family conflict, not a directional path. Figure 3 RI arc = .15***. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv/sd_dv not applicable: between-person random-intercept association; latent RI variances not printed (checked Table 1, Figs 3-4, Results pp.1030-1033; Supplemental Table 4 not in PDF).",
+     "se": 0.02,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.15) / \u221a(1 \u2212 0.15\u00b2) = 0.3034",
      "derived_d": 0.3034,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.223,
+     "derived_d_hi": 0.3854,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "ri_sem_girls",
      "dv": "ri_fc",
      "beta": 0.24,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.2008,
+     "beta_hi": 0.2792,
      "B": 0.2,
      "B_lo": 0.16,
      "B_hi": 0.24,
@@ -403,15 +441,18 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
-     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person random-intercept association, not directional. The text sentence for girls says 'family conflict and total EMU', which appears to be a slip for social EMU since it sits in the Social EMU girls paragraph; Figure 4 RI arc shows .22***, while the text prints beta = .24. Text values used.",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person random-intercept association, not directional. The text sentence for girls says 'family conflict and total EMU', which appears to be a slip for social EMU since it sits in the Social EMU girls paragraph; Figure 4 RI arc shows .22***, while the text prints beta = .24. Text values used. SE field (0.02) is the printed SE of the unstandardized b, not of beta. sd_iv/sd_dv not applicable: between-person random-intercept association; latent RI variances not printed (checked Table 1, Figs 3-4, Results pp.1030-1033; Supplemental Table 4 not in PDF).",
+     "se": 0.02,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.24) / \u221a(1 \u2212 0.24\u00b2) = 0.4945",
      "derived_d": 0.4945,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.4099,
+     "derived_d_hi": 0.5815,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -456,8 +497,400 @@
   "conversion_formula": "d = 2 * beta_std / sqrt(1 - beta_std^2) (beta_std treated as approximate r; guidelines section 4a, standardized SEM path). Alternative from b: beta_std = B * SD_IV / SD_DV, then same r -> d.",
   "contrast_type": "per 1 SD of within-person social EMU (or within-person family conflict) at wave t, on the within-person outcome at wave t+1; for the random-intercept rows, the between-person standardized association",
   "transformable": true,
-  "notes": "Standardized betas are printed in the Results text (pp. 1030-1032) and match Figures 3-4 except girls FC->social EMU T1-T2 (text -.07, figure -.06) and the girls random-intercept association (text .24, figure .22). No CI is printed for beta, so no d CI from the native metric; a d CI could only be approximated from the b CIs with SDs. sd_dv values on the dv_axis are full-sample observed SDs from Table 1 (p. 1031; family conflict T2 1.88, T3 1.83, T4 1.94; social EMU T2 1.16, T3 1.66, T4 2.07), not the SDs of the within-person latent components and not sex-specific, so B-based conversion would be approximate; sd_iv left null because it depends on the lag (Table 1: social EMU T1 0.82, T2 1.16, T3 1.66; family conflict T1 1.95, T2 1.88, T3 1.83). Several printed b values are internally inconsistent (girls T1->T2 social EMU -> FC b = -0.59 with SE .02 and CI [-0.94, -0.25]; boys FC T3 -> social EMU T4 b = -0.04 with positive beta and CI), so beta is the safer basis for d. Random-intercept rows are nondirectional between-person associations, not effects of one variable on the other."
+  "notes": "Standardized betas are printed in the Results text (pp. 1030-1032) and match Figures 3-4 except girls FC->social EMU T1-T2 (text -.07, figure -.06) and the girls random-intercept association (text .24, figure .22). No CI is printed for beta, so no d CI from the native metric; a d CI could only be approximated from the b CIs with SDs. sd_dv values on the dv_axis are full-sample observed SDs from Table 1 (p. 1031; family conflict T2 1.88, T3 1.83, T4 1.94; social EMU T2 1.16, T3 1.66, T4 2.07), not the SDs of the within-person latent components and not sex-specific, so B-based conversion would be approximate; sd_iv left null because it depends on the lag (Table 1: social EMU T1 0.82, T2 1.16, T3 1.66; family conflict T1 1.95, T2 1.88, T3 1.83). Several printed b values are internally inconsistent (girls T1->T2 social EMU -> FC b = -0.59 with SE .02 and CI [-0.94, -0.25]; boys FC T3 -> social EMU T4 b = -0.04 with positive beta and CI), so beta is the safer basis for d. Random-intercept rows are nondirectional between-person associations, not effects of one variable on the other. Completion pass: per-estimate sd_iv added from Table 1 (lag-matched observed SDs); printed SE of b added as 'se'. Sex-specific SDs are not reported. Fig 4 girls -.04 label near e1 is the T1 residual covariance, not a cross-lag."
  },
  "extraction_flags": "There is one model card (M1): the gender-multigroup RI-CLPM M8 for social EMU (social media + texting) and family conflict, adjusted for income. It has 12 cross-lagged estimates (both directions x 3 lags x boys/girls) and 2 between-person random-intercept associations. All values come from the Results text (pp. 1030-1032). I checked each one against Figures 3 and 4. I recorded native beta_std and also kept b with its 95% CI in B/B_lo/B_hi, because the paper prints no CI for beta.\n\nPrinted values a human should check:\n(1) Girls social EMU T1->FC T2: b = -0.59 with SE = .02 and CI [-0.94, -0.25]. The SE does not fit the CI.\n(2) Boys FC T3->social EMU T4: b = -0.04, but beta = .03 and the CI [-0.00, 0.07] is positive. The figure shows .03, so the sign on b is probably a typo.\n(3) Girls FC T1->social EMU T2: the text says beta = -.07, the figure says -.06.\n(4) The girls random-intercept sentence says 'total EMU' even though it is in the social EMU paragraph. Its beta is .24 in the text and .22 in Figure 4.\n(5) The girls T2->T3 b CI is asymmetric.\n\nOther issues:\n- sd_dv values are full-sample observed SDs from Table 1. They are not within-person or sex-specific SDs.\n- Group-specific Ns are not reported. T3 N is printed as '100,972'.\n- The ABCD release is not stated.\n- Supplemental Tables 1-5 are not in the PDF.\n- Texting is defined as 'on a phone, tablet, or computer'. I counted it as qualifying under the activity-defined clarification 5.\n- I excluded the sensitivity-model coefficients for parents' screen behavior -> youth social media intercept (girls beta = -.05, p = .049; boys beta = -.12, p < .001), because they are covariate effects the authors do not interpret further. A coder may disagree.\n\njson",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Measures p.1029-1030: social EMU in h/day; family conflict 0-9 sum score"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.07
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t2",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 0.82
+   },
+   "where": "Table 1 p.1031 (Social EMU T1 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.16
+   },
+   "where": "Table 1 p.1031 (Social EMU T2 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_boys -> fc_t4",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.66
+   },
+   "where": "Table 1 p.1031 (Social EMU T3 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.01
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t2",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.95
+   },
+   "where": "Table 1 p.1031 (Family conflict T1 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.88
+   },
+   "where": "Table 1 p.1031 (Family conflict T2 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_boys -> sem_t4",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.83
+   },
+   "where": "Table 1 p.1031 (Family conflict T3 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t2",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 0.82
+   },
+   "where": "Table 1 p.1031 (Social EMU T1 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.03
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.16
+   },
+   "where": "Table 1 p.1031 (Social EMU T2 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sem_girls -> fc_t4",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.66
+   },
+   "where": "Table 1 p.1031 (Social EMU T3 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t2",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t2",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.95
+   },
+   "where": "Table 1 p.1031 (Family conflict T1 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t3",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t3",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.88
+   },
+   "where": "Table 1 p.1031 (Family conflict T2 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t4",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 fc_girls -> sem_t4",
+   "action": "filled_sd",
+   "value": {
+    "sd_iv": 1.83
+   },
+   "where": "Table 1 p.1031 (Family conflict T3 SD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ri_sem_boys -> ri_fc",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ri_sem_boys -> ri_fc",
+   "action": "confirmed_missing",
+   "value": "RI latent SDs",
+   "where": "Table 1, Figs 3-4, text pp.1030-1033"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ri_sem_girls -> ri_fc",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.02
+   },
+   "where": "Results text p.1032 (SE printed for unstandardized b)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 ri_sem_girls -> ri_fc",
+   "action": "confirmed_missing",
+   "value": "RI latent SDs",
+   "where": "Table 1, Figs 3-4, text pp.1030-1033"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_boys -> fc_t2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_boys -> fc_t3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_boys -> fc_t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_boys -> sem_t2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_boys -> sem_t3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_boys -> sem_t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_girls -> fc_t2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_girls -> fc_t3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sem_girls -> fc_t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_girls -> sem_t2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_girls -> sem_t3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 fc_girls -> sem_t4",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ri_sem_boys -> ri_fc",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ri_sem_girls -> ri_fc",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "beta_lo/beta_hi",
+   "where": "Searched Results pp.1030-1033, Table 1 p.1031, Figures 3-4 pp.1034-1035, Discussion; only b CI printed; Supplemental Tables not in PDF/no supplement file in docs/pdfs. All other fields (beta, B, B_lo, B_hi, se, p, p_label, sig vs BH p-adj, sd_iv) re-checked against p.1030/1032 text and Table 1: match."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 ri_fc",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "field": "sd_dv / sd_iv for random-intercept rows",
+   "where": "Latent RI variances not printed in Table 1, Figs 3-4 or Results; Supplemental Table 4 not available"
+  }
+ ],
  "supplements": []
 }

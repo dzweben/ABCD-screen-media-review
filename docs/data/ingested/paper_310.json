@@ -55,25 +55,29 @@
      "id": "s_cog_s_sm",
      "label": "Slope-slope covariance (s_cog <-> s_sm)",
      "meta": "SM growth with cognitive growth; standardized = correlation",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "sd_iv not required: native metric is standardized beta / latent correlation (guidelines 4a). Observed SMU SDs in Table 1 p.6 (Y0 .42, Y2 1.32, Y4 2.05) are for observed scores, not the latent growth factors."
     },
     {
      "id": "i_sm_to_s_cog",
      "label": "SM intercept -> cognitive slope (i_sm -> s_cog)",
      "meta": "SM as predictor",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "sd_iv not required: native metric is standardized beta / latent correlation (guidelines 4a). Observed SMU SDs in Table 1 p.6 (Y0 .42, Y2 1.32, Y4 2.05) are for observed scores, not the latent growth factors."
     },
     {
      "id": "i_cog_to_s_sm",
      "label": "Cognitive intercept -> SM slope (i_cog -> s_sm)",
      "meta": "SM as outcome",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "sd_iv not required: native metric is standardized beta / latent correlation (guidelines 4a). Observed SMU SDs in Table 1 p.6 (Y0 .42, Y2 1.32, Y4 2.05) are for observed scores, not the latent growth factors."
     },
     {
      "id": "i_cog_i_sm",
      "label": "Intercept-intercept covariance (i_cog <-> i_sm)",
      "meta": "Baseline SM with baseline cognition; standardized = correlation",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "sd_iv not required: native metric is standardized beta / latent correlation (guidelines 4a). Observed SMU SDs in Table 1 p.6 (Y0 .42, Y2 1.32, Y4 2.05) are for observed scores, not the latent growth factors."
     }
    ],
    "dv_axis": [
@@ -81,19 +85,22 @@
      "id": "cryst",
      "label": "Crystallized (reading + vocabulary), Model 5",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "sd_dv not required for standardized beta. Observed SDs Table 1 p.6: cryst 6.59/6.81/9.15; flanker 9.14/7.71/7.31; pattern 14.59/15.09/16.73 (Y0/Y2/Y4). p0 not applicable (continuous outcome)."
     },
     {
      "id": "flanker",
      "label": "Flanker inhibitory control/attention, Model 6",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "sd_dv not required for standardized beta. Observed SDs Table 1 p.6: cryst 6.59/6.81/9.15; flanker 9.14/7.71/7.31; pattern 14.59/15.09/16.73 (Y0/Y2/Y4). p0 not applicable (continuous outcome)."
     },
     {
      "id": "pattern",
      "label": "Pattern Comparison processing speed, Model 7",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "sd_dv not required for standardized beta. Observed SDs Table 1 p.6: cryst 6.59/6.81/9.15; flanker 9.14/7.71/7.31; pattern 14.59/15.09/16.73 (Y0/Y2/Y4). p0 not applicable (continuous outcome)."
     }
    ],
    "estimates": [
@@ -107,7 +114,12 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, Model 5, row s_cryst <-> s_sm",
-     "note": "Unstandardized Est. = -0.09, SE = 0.01, 95% CI [-0.11, -0.07] (CI is on the unstandardized scale). p-adjusted <.001.",
+     "note": "Unstandardized Est. = -0.09, SE = 0.01, 95% CI [-0.11, -0.07] (CI is on the unstandardized scale). p-adjusted <.001. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (here p is printed only as <.001, so not even that; the unstandardized Est/SE ratio gives an implied z but is not printed). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": -0.09,
+     "se_unstd": 0.01,
+     "ci_unstd_lo": -0.11,
+     "ci_unstd_hi": -0.07,
+     "p_adjusted_label": "<.001",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.36) / \u221a(1 \u2212 (-0.36)\u00b2) = -0.7717",
      "derived_d": -0.7717,
@@ -125,7 +137,12 @@
      "p_label": "<.001",
      "sig": true,
      "location": "Table 3, Model 5, row i_sm -> s_cryst",
-     "note": "Unstandardized Est. = -0.11, SE = 0.12, 95% CI [-0.15, -0.07]. The printed SE (0.12) is inconsistent with the CI and p < .001; possible typo in Table 3. p-adjusted <.001.",
+     "note": "Unstandardized Est. = -0.11, SE = 0.12, 95% CI [-0.15, -0.07]. The printed SE (0.12) is inconsistent with the CI and p < .001; possible typo in Table 3. p-adjusted <.001. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (here p is printed only as <.001, so not even that; the unstandardized Est/SE ratio gives an implied z but is not printed, and the printed SE 0.12 is inconsistent). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": -0.11,
+     "se_unstd": 0.12,
+     "ci_unstd_lo": -0.15,
+     "ci_unstd_hi": -0.07,
+     "p_adjusted_label": "<.001",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.22) / \u221a(1 \u2212 (-0.22)\u00b2) = -0.4511",
      "derived_d": -0.4511,
@@ -137,183 +154,244 @@
      "iv": "i_cog_to_s_sm",
      "dv": "cryst",
      "beta": 0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0353,
+     "beta_hi": 0.0553,
      "p": 0.665,
      "p_label": ".665",
      "sig": false,
      "location": "Table 3, Model 5, row i_cryst -> s_sm",
-     "note": "Unstandardized Est. = 0.00, SE = 0.00, 95% CI [-0.01, 0.01]. p-adjusted .665.",
+     "note": "Unstandardized Est. = 0.00, SE = 0.00, 95% CI [-0.01, 0.01]. p-adjusted .665. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.665 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.0,
+     "se_unstd": 0.0,
+     "ci_unstd_lo": -0.01,
+     "ci_unstd_hi": 0.01,
+     "p_adjusted_label": ".665",
+     "ci_source": "computed from exact p = 0.665 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.01) / \u221a(1 \u2212 0.01\u00b2) = 0.02",
      "derived_d": 0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0706,
+     "derived_d_hi": 0.1108,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_cog_i_sm",
      "dv": "cryst",
      "beta": -0.04,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0747,
+     "beta_hi": -0.0053,
      "p": 0.024,
      "p_label": ".024",
      "sig": true,
      "location": "Table 3, Model 5, row i_cryst <-> i_sm",
-     "note": "Unstandardized Est. = -0.19, SE = 0.02, 95% CI [-0.33, 0.01]; the printed CI includes 0 despite p = .024. p-adjusted .041. Not significant in listwise sensitivity analysis (text p. 8).",
+     "note": "Unstandardized Est. = -0.19, SE = 0.02, 95% CI [-0.33, 0.01]; the printed CI includes 0 despite p = .024. p-adjusted .041. Not significant in listwise sensitivity analysis (text p. 8). COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.024 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": -0.19,
+     "se_unstd": 0.02,
+     "ci_unstd_lo": -0.33,
+     "ci_unstd_hi": 0.01,
+     "p_adjusted_label": ".041",
+     "ci_source": "computed from exact p = 0.024 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.04) / \u221a(1 \u2212 (-0.04)\u00b2) = -0.0801",
      "derived_d": -0.0801,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.1498,
+     "derived_d_hi": -0.0106,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "s_cog_s_sm",
      "dv": "flanker",
      "beta": -0.09,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.1718,
+     "beta_hi": -0.0082,
      "p": 0.031,
      "p_label": ".031",
      "sig": true,
      "location": "Table 3, Model 6, row s_flanker <-> s_sm",
-     "note": "Unstandardized Est. = -0.04, SE = 0.02, 95% CI [-0.07, -0.01]. p-adjusted .046.",
+     "note": "Unstandardized Est. = -0.04, SE = 0.02, 95% CI [-0.07, -0.01]. p-adjusted .046. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.031 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": -0.04,
+     "se_unstd": 0.02,
+     "ci_unstd_lo": -0.07,
+     "ci_unstd_hi": -0.01,
+     "p_adjusted_label": ".046",
+     "ci_source": "computed from exact p = 0.031 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.09) / \u221a(1 \u2212 (-0.09)\u00b2) = -0.1807",
      "derived_d": -0.1807,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.3488,
+     "derived_d_hi": -0.0164,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_sm_to_s_cog",
      "dv": "flanker",
      "beta": -0.06,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.1346,
+     "beta_hi": 0.0146,
      "p": 0.115,
      "p_label": ".115",
      "sig": false,
      "location": "Table 3, Model 6, row i_sm -> s_flanker",
-     "note": "Unstandardized Est. = -0.06, SE = 0.04, 95% CI [-0.13, 0.04]. p-adjusted .138.",
+     "note": "Unstandardized Est. = -0.06, SE = 0.04, 95% CI [-0.13, 0.04]. p-adjusted .138. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.115 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": -0.06,
+     "se_unstd": 0.04,
+     "ci_unstd_lo": -0.13,
+     "ci_unstd_hi": 0.04,
+     "p_adjusted_label": ".138",
+     "ci_source": "computed from exact p = 0.115 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.06) / \u221a(1 \u2212 (-0.06)\u00b2) = -0.1202",
      "derived_d": -0.1202,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.2717,
+     "derived_d_hi": 0.0292,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_cog_to_s_sm",
      "dv": "flanker",
      "beta": 0.04,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0067,
+     "beta_hi": 0.0867,
      "p": 0.093,
      "p_label": ".093",
      "sig": false,
      "location": "Table 3, Model 6, row i_flanker -> s_sm",
-     "note": "Unstandardized Est. = 0.01, SE = 0.00, 95% CI [-0.01, 0.02]. p-adjusted .124.",
+     "note": "Unstandardized Est. = 0.01, SE = 0.00, 95% CI [-0.01, 0.02]. p-adjusted .124. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.093 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.01,
+     "se_unstd": 0.0,
+     "ci_unstd_lo": -0.01,
+     "ci_unstd_hi": 0.02,
+     "p_adjusted_label": ".124",
+     "ci_source": "computed from exact p = 0.093 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.04) / \u221a(1 \u2212 0.04\u00b2) = 0.0801",
      "derived_d": 0.0801,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0134,
+     "derived_d_hi": 0.1741,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_cog_i_sm",
      "dv": "flanker",
      "beta": 0.06,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0243,
+     "beta_hi": 0.0957,
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
      "location": "Table 3, Model 6, row i_flanker <-> i_sm",
-     "note": "Unstandardized Est. = 0.39, SE = 0.12, 95% CI [0.16, 0.70]. p-adjusted .002. Positive sign contrasts with the negative zero-order Y0 correlation (Table 1, r = -.03) and with the Discussion's description of both constructs as negatively linked at baseline.",
+     "note": "Unstandardized Est. = 0.39, SE = 0.12, 95% CI [0.16, 0.70]. p-adjusted .002. Positive sign contrasts with the negative zero-order Y0 correlation (Table 1, r = -.03) and with the Discussion's description of both constructs as negatively linked at baseline. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.001 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.39,
+     "se_unstd": 0.12,
+     "ci_unstd_lo": 0.16,
+     "ci_unstd_hi": 0.7,
+     "p_adjusted_label": ".002",
+     "ci_source": "computed from exact p = 0.001 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.06) / \u221a(1 \u2212 0.06\u00b2) = 0.1202",
      "derived_d": 0.1202,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0486,
+     "derived_d_hi": 0.1923,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "s_cog_s_sm",
      "dv": "pattern",
      "beta": 0.11,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0445,
+     "beta_hi": 0.1755,
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
      "location": "Table 3, Model 7, row s_pattern <-> s_sm",
-     "note": "Unstandardized Est. = 0.12, SE = 0.04, 95% CI [0.05, 0.21]. p-adjusted .002.",
+     "note": "Unstandardized Est. = 0.12, SE = 0.04, 95% CI [0.05, 0.21]. p-adjusted .002. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.001 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.12,
+     "se_unstd": 0.04,
+     "ci_unstd_lo": 0.05,
+     "ci_unstd_hi": 0.21,
+     "p_adjusted_label": ".002",
+     "ci_source": "computed from exact p = 0.001 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.11) / \u221a(1 \u2212 0.11\u00b2) = 0.2213",
      "derived_d": 0.2213,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0891,
+     "derived_d_hi": 0.3565,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_sm_to_s_cog",
      "dv": "pattern",
      "beta": 0.1,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.034,
+     "beta_hi": 0.166,
      "p": 0.003,
      "p_label": ".003",
      "sig": true,
      "location": "Table 3, Model 7, row i_sm -> s_pattern",
-     "note": "Unstandardized Est. = 0.22, SE = 0.08, 95% CI [0.08, 0.41]. p-adjusted .006. Not significant in listwise sensitivity analysis (text p. 8).",
+     "note": "Unstandardized Est. = 0.22, SE = 0.08, 95% CI [0.08, 0.41]. p-adjusted .006. Not significant in listwise sensitivity analysis (text p. 8). COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.003 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.22,
+     "se_unstd": 0.08,
+     "ci_unstd_lo": 0.08,
+     "ci_unstd_hi": 0.41,
+     "p_adjusted_label": ".006",
+     "ci_source": "computed from exact p = 0.003 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.1) / \u221a(1 \u2212 0.1\u00b2) = 0.201",
      "derived_d": 0.201,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.068,
+     "derived_d_hi": 0.3367,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_cog_to_s_sm",
      "dv": "pattern",
      "beta": 0.06,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0243,
+     "beta_hi": 0.0957,
      "p": 0.001,
      "p_label": ".001",
      "sig": true,
      "location": "Table 3, Model 7, row i_pattern -> s_sm",
-     "note": "Unstandardized Est. = 0.02, SE = 0.00, 95% CI [0.01, 0.03]. p-adjusted .002. Not significant in listwise sensitivity analysis (text p. 8).",
+     "note": "Unstandardized Est. = 0.02, SE = 0.00, 95% CI [0.01, 0.03]. p-adjusted .002. Not significant in listwise sensitivity analysis (text p. 8). COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.001 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.02,
+     "se_unstd": 0.0,
+     "ci_unstd_lo": 0.01,
+     "ci_unstd_hi": 0.03,
+     "p_adjusted_label": ".002",
+     "ci_source": "computed from exact p = 0.001 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.06) / \u221a(1 \u2212 0.06\u00b2) = 0.1202",
      "derived_d": 0.1202,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0486,
+     "derived_d_hi": 0.1923,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "i_cog_i_sm",
      "dv": "pattern",
      "beta": 0.01,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0162,
+     "beta_hi": 0.0362,
      "p": 0.455,
      "p_label": ".455",
      "sig": false,
      "location": "Table 3, Model 7, row i_pattern <-> i_sm",
-     "note": "Unstandardized Est. = 0.14, SE = 0.19, 95% CI [-0.23, 0.62]. p-adjusted .496.",
+     "note": "Unstandardized Est. = 0.14, SE = 0.19, 95% CI [-0.23, 0.62]. p-adjusted .496. COMPLETION CHECK: re-read all 13 pages (Tables 1-3, text pp.5-9, footnotes); no supplement file exists in docs/pdfs. Table 3 prints only the standardized point estimate (beta column) with exact/inequality p; no standardized SE, z or CI is printed anywhere (the SE and 95% CI columns are on the unstandardized Est. scale, stored as est_unstd/se_unstd/ci_unstd_lo/hi). beta_lo/beta_hi therefore remain null; a beta CI could only be approximated from beta and p (exact p = 0.455 is recorded). SD_IV/SD_DV not needed for standardized beta -> d; latent growth-factor variances are only in univariate Table 2 (p.7), not for these bivariate models.",
+     "est_unstd": 0.14,
+     "se_unstd": 0.19,
+     "ci_unstd_lo": -0.23,
+     "ci_unstd_hi": 0.62,
+     "p_adjusted_label": ".496",
+     "ci_source": "computed from exact p = 0.455 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.01) / \u221a(1 \u2212 0.01\u00b2) = 0.02",
      "derived_d": 0.02,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0324,
+     "derived_d_hi": 0.0724,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -348,8 +426,633 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2) (guidelines section 4a, SEM path coefficients, standardized).",
   "contrast_type": "Per 1 SD of the latent predictor (for i_sm -> s_cog and i_cog -> s_sm); for the covariance rows the standardized value is a latent correlation between growth factors (slope-slope or intercept-intercept).",
   "transformable": true,
-  "notes": "Standardized coefficients taken from the beta column of Table 3 (p. 8); the conversion needs no SD_IV or SD_DV, so sd_iv and sd_dv are left null. No CI is printed on the standardized scale (the 95% CI column is on the unstandardized Est. scale), so d CIs cannot be derived; unstandardized Est., SE and CI are kept in each estimate's note. The d values describe associations between latent growth factors (levels and rates of change), not per-hour associations between observed social media time and cognitive score, so they are not directly comparable to per-SD observed-variable d's from regression papers. Social media hours were log-transformed. Table 3 contains internal inconsistencies (i_sm -> s_cryst SE 0.12 with CI [-0.15, -0.07] and p < .001; i_cryst <-> i_sm CI [-0.33, 0.01] with p = .024)."
+  "notes": "Standardized coefficients taken from the beta column of Table 3 (p. 8); the conversion needs no SD_IV or SD_DV, so sd_iv and sd_dv are left null. No CI is printed on the standardized scale (the 95% CI column is on the unstandardized Est. scale), so d CIs cannot be derived; unstandardized Est., SE and CI are kept in each estimate's note. The d values describe associations between latent growth factors (levels and rates of change), not per-hour associations between observed social media time and cognitive score, so they are not directly comparable to per-SD observed-variable d's from regression papers. Social media hours were log-transformed. Table 3 contains internal inconsistencies (i_sm -> s_cryst SE 0.12 with CI [-0.15, -0.07] and p < .001; i_cryst <-> i_sm CI [-0.33, 0.01] with p = .024). Completion pass (2026-10-01): full PDF re-read (13 pp., no supplement in docs/pdfs). Unstandardized Est/SE/95% CI and BH-adjusted p from Table 3 added as structured fields est_unstd, se_unstd, ci_unstd_lo, ci_unstd_hi, p_adjusted_label on every estimate. Standardized-scale CIs/SEs are not printed, so beta_lo/beta_hi remain null; for 10 of 12 estimates an exact p is printed and could support an approximate CI for beta (z from p); for the 2 crystallized rows with p < .001 no exact p is available."
  },
  "extraction_flags": "Each gives 4 social media paths: the slope-slope covariance, i_sm -> s_cog, i_cog -> s_sm and the intercept-intercept covariance. That makes 12 estimates.\n\nThings to check:\n(1) The native metric is the standardized beta column. The 95% CI in Table 3 is on the unstandardized Est. scale, so beta CIs are null. I kept Est., SE and CI in each estimate's note. This means the d values will have no CIs.\n(2) The covariance rows are latent correlations between growth factors, not directional effects. Please decide whether to convert them to d with the r -> d formula, or to keep only the directional paths.\n(3) Table 3 is inconsistent with itself in two places. For i_sm -> s_cryst, SE = 0.12 is printed next to CI [-0.15, -0.07] and p < .001. For i_cryst <-> i_sm, the CI [-0.33, 0.01] includes 0 but p = .024.\n(4) For i_flanker <-> i_sm, beta = +.06, but the zero-order correlation is negative and the Discussion says the two were negatively linked at baseline.\n(5) The analytic N per model is not printed (FIML). Y2 N is printed as '100,972', which is probably a typo for about 10,972. The listwise sensitivity N is 4289 and is reported only as narrative.\n(6) Race appears as a covariate in the Table 3 note but not in the Covariates section.\n(7) Social media hours were log-transformed. It is unclear whether the SMU M/SD in Table 1 are raw or log values; this does not matter for converting the standardized betas.\n(8) For p < .001 I set p to null and kept p_label as '<.001'.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Latent growth factors (i_sm, s_sm, i_cog, s_cog) are continuous; Table 3 p.8"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x cryst",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": -0.09,
+    "se_unstd": 0.01,
+    "ci_unstd": [
+     -0.11,
+     -0.07
+    ],
+    "p_adjusted": "<.001"
+   },
+   "where": "Table 3, Model 5 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x cryst",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x cryst",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": -0.11,
+    "se_unstd": 0.12,
+    "ci_unstd": [
+     -0.15,
+     -0.07
+    ],
+    "p_adjusted": "<.001"
+   },
+   "where": "Table 3, Model 5 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x cryst",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x cryst",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.0,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     -0.01,
+     0.01
+    ],
+    "p_adjusted": ".665"
+   },
+   "where": "Table 3, Model 5 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x cryst",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x cryst",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": -0.19,
+    "se_unstd": 0.02,
+    "ci_unstd": [
+     -0.33,
+     0.01
+    ],
+    "p_adjusted": ".041"
+   },
+   "where": "Table 3, Model 5 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x cryst",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x flanker",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": -0.04,
+    "se_unstd": 0.02,
+    "ci_unstd": [
+     -0.07,
+     -0.01
+    ],
+    "p_adjusted": ".046"
+   },
+   "where": "Table 3, Model 6 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x flanker",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x flanker",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": -0.06,
+    "se_unstd": 0.04,
+    "ci_unstd": [
+     -0.13,
+     0.04
+    ],
+    "p_adjusted": ".138"
+   },
+   "where": "Table 3, Model 6 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x flanker",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x flanker",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.01,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     -0.01,
+     0.02
+    ],
+    "p_adjusted": ".124"
+   },
+   "where": "Table 3, Model 6 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x flanker",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x flanker",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.39,
+    "se_unstd": 0.12,
+    "ci_unstd": [
+     0.16,
+     0.7
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 6 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x flanker",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x pattern",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.12,
+    "se_unstd": 0.04,
+    "ci_unstd": [
+     0.05,
+     0.21
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 7 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 s_cog_s_sm x pattern",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x pattern",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.22,
+    "se_unstd": 0.08,
+    "ci_unstd": [
+     0.08,
+     0.41
+    ],
+    "p_adjusted": ".006"
+   },
+   "where": "Table 3, Model 7 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_sm_to_s_cog x pattern",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x pattern",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.02,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     0.01,
+     0.03
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 7 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_to_s_sm x pattern",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x pattern",
+   "action": "filled_ci_input",
+   "value": {
+    "est_unstd": 0.14,
+    "se_unstd": 0.19,
+    "ci_unstd": [
+     -0.23,
+     0.62
+    ],
+    "p_adjusted": ".496"
+   },
+   "where": "Table 3, Model 7 p.8 (unstandardized scale; stored as structured est_unstd/se_unstd/ci_unstd_lo/hi, NOT as 'se' because they do not belong to the standardized beta)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 i_cog_i_sm x pattern",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi (standardized CI/SE)",
+   "where": "Checked Tables 1-3, text pp.5-9, all 13 pages; standardized CI/SE not printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x cryst",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.36,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true,
+    "est_unstd": -0.09,
+    "se_unstd": 0.01,
+    "ci_unstd": [
+     -0.11,
+     -0.07
+    ],
+    "p_adjusted": "<.001"
+   },
+   "where": "Table 3, Model 5, row s_cryst <-> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x cryst",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x cryst",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.22,
+    "p": null,
+    "p_label": "<.001",
+    "sig": true,
+    "est_unstd": -0.11,
+    "se_unstd": 0.12,
+    "ci_unstd": [
+     -0.15,
+     -0.07
+    ],
+    "p_adjusted": "<.001"
+   },
+   "where": "Table 3, Model 5, row i_sm -> s_cryst p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x cryst",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x cryst",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.01,
+    "p": 0.665,
+    "p_label": ".665",
+    "sig": false,
+    "est_unstd": 0.0,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     -0.01,
+     0.01
+    ],
+    "p_adjusted": ".665"
+   },
+   "where": "Table 3, Model 5, row i_cryst -> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x cryst",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x cryst",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.04,
+    "p": 0.024,
+    "p_label": ".024",
+    "sig": true,
+    "est_unstd": -0.19,
+    "se_unstd": 0.02,
+    "ci_unstd": [
+     -0.33,
+     0.01
+    ],
+    "p_adjusted": ".041"
+   },
+   "where": "Table 3, Model 5, row i_cryst <-> i_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x cryst",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x flanker",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.09,
+    "p": 0.031,
+    "p_label": ".031",
+    "sig": true,
+    "est_unstd": -0.04,
+    "se_unstd": 0.02,
+    "ci_unstd": [
+     -0.07,
+     -0.01
+    ],
+    "p_adjusted": ".046"
+   },
+   "where": "Table 3, Model 6, row s_flanker <-> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x flanker",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x flanker",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": -0.06,
+    "p": 0.115,
+    "p_label": ".115",
+    "sig": false,
+    "est_unstd": -0.06,
+    "se_unstd": 0.04,
+    "ci_unstd": [
+     -0.13,
+     0.04
+    ],
+    "p_adjusted": ".138"
+   },
+   "where": "Table 3, Model 6, row i_sm -> s_flanker p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x flanker",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x flanker",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.04,
+    "p": 0.093,
+    "p_label": ".093",
+    "sig": false,
+    "est_unstd": 0.01,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     -0.01,
+     0.02
+    ],
+    "p_adjusted": ".124"
+   },
+   "where": "Table 3, Model 6, row i_flanker -> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x flanker",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x flanker",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.06,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true,
+    "est_unstd": 0.39,
+    "se_unstd": 0.12,
+    "ci_unstd": [
+     0.16,
+     0.7
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 6, row i_flanker <-> i_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x flanker",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x pattern",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.11,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true,
+    "est_unstd": 0.12,
+    "se_unstd": 0.04,
+    "ci_unstd": [
+     0.05,
+     0.21
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 7, row s_pattern <-> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 s_cog_s_sm x pattern",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x pattern",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.1,
+    "p": 0.003,
+    "p_label": ".003",
+    "sig": true,
+    "est_unstd": 0.22,
+    "se_unstd": 0.08,
+    "ci_unstd": [
+     0.08,
+     0.41
+    ],
+    "p_adjusted": ".006"
+   },
+   "where": "Table 3, Model 7, row i_sm -> s_pattern p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_sm_to_s_cog x pattern",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x pattern",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.06,
+    "p": 0.001,
+    "p_label": ".001",
+    "sig": true,
+    "est_unstd": 0.02,
+    "se_unstd": 0.0,
+    "ci_unstd": [
+     0.01,
+     0.03
+    ],
+    "p_adjusted": ".002"
+   },
+   "where": "Table 3, Model 7, row i_pattern -> s_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_to_s_sm x pattern",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x pattern",
+   "action": "confirmed",
+   "was": null,
+   "value": {
+    "beta": 0.01,
+    "p": 0.455,
+    "p_label": ".455",
+    "sig": false,
+    "est_unstd": 0.14,
+    "se_unstd": 0.19,
+    "ci_unstd": [
+     -0.23,
+     0.62
+    ],
+    "p_adjusted": ".496"
+   },
+   "where": "Table 3, Model 7, row i_pattern <-> i_sm p.8 (pdftotext layout re-check of every cell); sig matches BH p-adjusted < .05"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 i_cog_i_sm x pattern",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se / beta_lo / beta_hi / z on the standardized (beta) scale",
+   "where": "Searched all 13 pp. (Tables 1-3, text pp.5-9, notes); no supplement in docs/pdfs. Table 3 SE and 95% CI belong to unstandardized Est. (kept as se_unstd/ci_unstd_*), so 'se' left unset to avoid mis-scaling"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis/dv_axis descriptives",
+   "action": "confirmed",
+   "was": null,
+   "value": "SMU M/SD .12/.42, .68/1.32, 1.71/2.05; cryst 87.66/6.59, 91.97/6.81, 96.93/9.15; flanker 93.99/9.14, 100.14/7.71, 104.34/7.31; pattern 88.06/14.59, 103.53/15.09, 115.66/16.73; parent ed 3.74/1.17",
+   "where": "Table 1 p.6, M and SD rows"
+  },
+  {
+   "stage": "audit",
+   "item": "M1",
+   "action": "confirmed",
+   "was": null,
+   "value": "iv_type continuous (latent growth factors); estimates set complete: Table 3 prints exactly 4 SM-cognition paths x 3 models = 12, all present",
+   "where": "Table 3 p.8; Analytic plan p.5"
+  }
+ ],
  "supplements": []
 }

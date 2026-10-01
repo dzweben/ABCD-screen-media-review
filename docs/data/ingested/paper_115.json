@@ -109,7 +109,7 @@
      "p_label": null,
      "sig": false,
      "location": "p. 6 text (not reported)",
-     "note": "Not reported. The text lists texting as predicting only stress problems, implying this estimate was not significant after FDR correction.",
+     "note": "Not reported. The text lists texting as predicting only stress problems, implying this estimate was not significant after FDR correction. Complete-pass check: not printed anywhere in the 12-page PDF (text p.6, Tables 1-5); possibly in online Table S2, not bundled.",
      "derived_d": null,
      "derived_d_method": "beta missing"
     },
@@ -123,7 +123,7 @@
      "p_label": null,
      "sig": false,
      "location": "p. 6 text (not reported)",
-     "note": "Not reported; implied non-significant after FDR correction.",
+     "note": "Not reported; implied non-significant after FDR correction. Complete-pass check: not printed anywhere in the 12-page PDF (text p.6, Tables 1-5); possibly in online Table S2, not bundled.",
      "derived_d": null,
      "derived_d_method": "beta missing"
     },
@@ -131,72 +131,76 @@
      "iv": "texting",
      "dv": "stress",
      "beta": 0.051,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0173,
+     "beta_hi": 0.0847,
      "p": 0.003,
      "p_label": "pfdr = 0.003",
      "sig": true,
      "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
-     "note": "FDR-corrected p. No SE or CI reported.",
+     "note": "FDR-corrected p. No SE or CI reported. Complete-pass check: read all 12 pages (Tables 1-5, Fig 2, text pp.4-9); for media-specific LMMs only beta and pfdr printed, no SE, t, df or CI anywhere. Table S2 (supplement) not bundled; no supplement file in docs/pdfs. sd_iv for texting/social media/video chat not printed (Table 1 gives only total SMA 3.530 +/- 2.896).",
+     "ci_source": "computed from exact p = 0.003 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.051) / \u221a(1 \u2212 0.051\u00b2) = 0.1021",
      "derived_d": 0.1021,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0346,
+     "derived_d_hi": 0.17,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "social_media",
      "dv": "internalizing",
      "beta": 0.032,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0018,
+     "beta_hi": 0.0622,
      "p": 0.038,
      "p_label": "pfdr = 0.038",
      "sig": true,
      "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
-     "note": "FDR-corrected p. No SE or CI reported.",
+     "note": "FDR-corrected p. No SE or CI reported. Complete-pass check: read all 12 pages (Tables 1-5, Fig 2, text pp.4-9); for media-specific LMMs only beta and pfdr printed, no SE, t, df or CI anywhere. Table S2 (supplement) not bundled; no supplement file in docs/pdfs. sd_iv for texting/social media/video chat not printed (Table 1 gives only total SMA 3.530 +/- 2.896).",
+     "ci_source": "computed from exact p = 0.038 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.032) / \u221a(1 \u2212 0.032\u00b2) = 0.064",
      "derived_d": 0.064,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0036,
+     "derived_d_hi": 0.1246,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "social_media",
      "dv": "externalizing",
      "beta": 0.055,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0222,
+     "beta_hi": 0.0878,
      "p": 0.001,
      "p_label": "pfdr = 0.001",
      "sig": true,
      "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
-     "note": "FDR-corrected p. No SE or CI reported.",
+     "note": "FDR-corrected p. No SE or CI reported. Complete-pass check: read all 12 pages (Tables 1-5, Fig 2, text pp.4-9); for media-specific LMMs only beta and pfdr printed, no SE, t, df or CI anywhere. Table S2 (supplement) not bundled; no supplement file in docs/pdfs. sd_iv for texting/social media/video chat not printed (Table 1 gives only total SMA 3.530 +/- 2.896).",
+     "ci_source": "computed from exact p = 0.001 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.055) / \u221a(1 \u2212 0.055\u00b2) = 0.1102",
      "derived_d": 0.1102,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0444,
+     "derived_d_hi": 0.1763,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "social_media",
      "dv": "stress",
      "beta": 0.055,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0222,
+     "beta_hi": 0.0878,
      "p": 0.001,
      "p_label": "pfdr =0.001",
      "sig": true,
      "location": "p. 6, top of right column",
-     "note": "FDR-corrected p. No SE or CI reported.",
+     "note": "FDR-corrected p. No SE or CI reported. Complete-pass check: read all 12 pages (Tables 1-5, Fig 2, text pp.4-9); for media-specific LMMs only beta and pfdr printed, no SE, t, df or CI anywhere. Table S2 (supplement) not bundled; no supplement file in docs/pdfs. sd_iv for texting/social media/video chat not printed (Table 1 gives only total SMA 3.530 +/- 2.896).",
+     "ci_source": "computed from exact p = 0.001 (Altman & Bland 2011)",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.055) / \u221a(1 \u2212 0.055\u00b2) = 0.1102",
      "derived_d": 0.1102,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0444,
+     "derived_d_hi": 0.1763,
      "derived_d_method": "standardized beta -> d"
     },
     {
@@ -209,7 +213,7 @@
      "p_label": null,
      "sig": false,
      "location": "p. 6 text (not reported)",
-     "note": "Not reported. Video chat is not among the media types the text says predicted mental health problems, implying non-significance; the referenced supplement (Table S2) is not bundled in the PDF.",
+     "note": "Not reported. Video chat is not among the media types the text says predicted mental health problems, implying non-significance; the referenced supplement (Table S2) is not bundled in the PDF. Complete-pass check: not printed anywhere in the 12-page PDF (text p.6, Tables 1-5); possibly in online Table S2, not bundled.",
      "derived_d": null,
      "derived_d_method": "beta missing"
     },
@@ -223,7 +227,7 @@
      "p_label": null,
      "sig": false,
      "location": "p. 6 text (not reported)",
-     "note": "Not reported; implied non-significant.",
+     "note": "Not reported; implied non-significant. Complete-pass check: not printed anywhere in the 12-page PDF (text p.6, Tables 1-5); possibly in online Table S2, not bundled.",
      "derived_d": null,
      "derived_d_method": "beta missing"
     },
@@ -237,11 +241,12 @@
      "p_label": null,
      "sig": false,
      "location": "p. 6 text (not reported)",
-     "note": "Not reported; implied non-significant.",
+     "note": "Not reported; implied non-significant. Complete-pass check: not printed anywhere in the 12-page PDF (text p.6, Tables 1-5); possibly in online Table S2, not bundled.",
      "derived_d": null,
      "derived_d_method": "beta missing"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -303,57 +308,64 @@
      "iv": "video_chat_bl",
      "dv": "internalizing_2y",
      "beta": -0.021,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": -0.0426,
+     "beta_hi": 0.0006,
      "p": 0.069,
      "p_label": "pfdr = 0.069",
      "sig": false,
      "location": "p. 6, right column, 'Regarding the causal influence between media-specific SMA and mental health problems'",
-     "note": "SE = 0.011. Described by authors as leading to less internalizing, but pfdr > .05.",
+     "note": "SE = 0.011. Described by authors as leading to less internalizing, but pfdr > .05. SE 0.011 printed in text p.6 right column; CI derivable as beta +/- 1.96*SE. Printed p is FDR-corrected (pfdr); no t/z or df printed. 2-year SDs of DV not printed (Table 1 is baseline only).",
+     "se": 0.011,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.021) / \u221a(1 \u2212 (-0.021)\u00b2) = -0.042",
      "derived_d": -0.042,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": -0.0853,
+     "derived_d_hi": 0.0012,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "externalizing_bl",
      "dv": "texting_2y",
      "beta": 0.038,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0106,
+     "beta_hi": 0.0654,
      "p": 0.005,
      "p_label": "pfdr = 0.005",
      "sig": true,
      "location": "p. 6, right column, 'Mental health problems at baseline also had a causal influence...'",
-     "note": "SE = 0.014. Phone/SM is the outcome.",
+     "note": "SE = 0.014. Phone/SM is the outcome. SE 0.014 printed in text p.6 right column; CI derivable as beta +/- 1.96*SE. Printed p is FDR-corrected (pfdr); no t/z or df printed. 2-year SDs of DV not printed (Table 1 is baseline only).",
+     "se": 0.014,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.038) / \u221a(1 \u2212 0.038\u00b2) = 0.0761",
      "derived_d": 0.0761,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0212,
+     "derived_d_hi": 0.1311,
      "derived_d_method": "standardized beta -> d"
     },
     {
      "iv": "externalizing_bl",
      "dv": "social_media_2y",
      "beta": 0.037,
-     "beta_lo": null,
-     "beta_hi": null,
+     "beta_lo": 0.0096,
+     "beta_hi": 0.0644,
      "p": 0.007,
      "p_label": "pfdr = 0.007",
      "sig": true,
      "location": "p. 6, right column, same paragraph",
-     "note": "SE = 0.014. Phone/SM is the outcome.",
+     "note": "SE = 0.014. Phone/SM is the outcome. SE 0.014 printed in text p.6 right column; CI derivable as beta +/- 1.96*SE. Printed p is FDR-corrected (pfdr); no t/z or df printed. 2-year SDs of DV not printed (Table 1 is baseline only).",
+     "se": 0.014,
+     "ci_source": "computed: estimate \u00b1 1.96 \u00d7 SE",
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.037) / \u221a(1 \u2212 0.037\u00b2) = 0.0741",
      "derived_d": 0.0741,
-     "derived_d_lo": null,
-     "derived_d_hi": null,
+     "derived_d_lo": 0.0192,
+     "derived_d_hi": 0.1291,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M3",
@@ -426,10 +438,13 @@
      "beta_lo": 0.0229,
      "beta_hi": 0.0456,
      "p": 0.0466,
-     "p_label": "0.0466",
+     "p_label": "pfdr = 0.0466",
      "sig": true,
      "location": "Table 4, Stress problem, Texting / SHN-cerebellum-cortex row",
-     "note": "Direct effect (Path C') controlling for the mediator; pfdr.",
+     "note": "Direct effect (Path C') controlling for the mediator; pfdr. Table 4/5 print beta, pfdr and 95% bootstrap CI only (no SE); all variables standardized so no SDs needed. Mediation N not printed. Audit: values re-verified against the printed table row (Table 4 p.7 / Table 5 p.8: Stress problem, Texting, SHN-cerebellum-cortex). Consistency flag (CI much narrower than p implies) is a property of the paper itself, not an extraction error: the printed p is Benjamini-Hochberg FDR-adjusted (pfdr), and the 95% CI is a 10,000-sample bootstrap CI on the standardized estimate; the CI implies a raw p far below .001. The CI belongs to this row (adjacent rows have different CIs). Kept as printed; treat the CI, not pfdr, as the uncertainty measure. No SE printed.",
+     "consistency_flags": [
+      "p = 0.0466 implies a CI width of 0.0689, printed width is 0.0227"
+     ],
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.035) / \u221a(1 \u2212 0.035\u00b2) = 0.07",
      "derived_d": 0.07,
@@ -444,10 +459,13 @@
      "beta_lo": 0.0038,
      "beta_hi": 0.0061,
      "p": 0.0338,
-     "p_label": "0.0338",
+     "p_label": "pfdr = 0.0338",
      "sig": true,
      "location": "Table 5, Stress problem, Texting / SHN-cerebellum-cortex row; text p. 7 gives pfdr = 0.034",
-     "note": "Standardized indirect (a*b) effect; not a total association and not intended for d conversion.",
+     "note": "Standardized indirect (a*b) effect; not a total association and not intended for d conversion. Table 4/5 print beta, pfdr and 95% bootstrap CI only (no SE); all variables standardized so no SDs needed. Mediation N not printed. Audit: values re-verified against the printed table row (Table 4 p.7 / Table 5 p.8: Stress problem, Texting, SHN-cerebellum-cortex). Consistency flag (CI much narrower than p implies) is a property of the paper itself, not an extraction error: the printed p is Benjamini-Hochberg FDR-adjusted (pfdr), and the 95% CI is a 10,000-sample bootstrap CI on the standardized estimate; the CI implies a raw p far below .001. The CI belongs to this row (adjacent rows have different CIs). Kept as printed; treat the CI, not pfdr, as the uncertainty measure. No SE printed.",
+     "consistency_flags": [
+      "p = 0.0338 implies a CI width of 0.00923, printed width is 0.0023"
+     ],
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(0.005) / \u221a(1 \u2212 0.005\u00b2) = 0.01",
      "derived_d": 0.01,
@@ -455,7 +473,8 @@
      "derived_d_hi": 0.0122,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -510,8 +529,292 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta / sqrt(1 - beta^2). If M1 betas were in fact unstandardized B (t-score points per hour), beta_std = B * SD_IV / SD_DV would be required, and SD_IV for the individual media types is not reported.",
   "contrast_type": "per 1 SD of the media-specific IV (if standardized); the authors' own wording for the general-SMA LMM is per additional hour of screen time",
   "transformable": "partial",
-  "notes": "M3 is unambiguously standardized (all variables z-scored, Table 4/5 footnotes), so the direct effect c' (0.035, CI 0.0229-0.0456) converts; the indirect a*b effect should not be converted as a total association. M1 and M2 report beta without saying whether it is standardized; for the general-SMA CLPM the authors describe beta = 0.03 as the increase in internalizing per additional screen hour (p. 6), which suggests unstandardized slopes, but a per-hour change of 0.03 t-points is implausibly small relative to t-score scaling, so standardized coefficients are likely. SD_DV values recorded in M1 are baseline sample SDs from Table 1 (p. 5): externalizing 9.543, internalizing 10.516, stress 5.694; year-3 SDs are not reported. SD_IV for texting, social media and video chat is not reported (Table 1 gives only total SMA 3.530 +/- 2.896 h). M1 and M2 report no CIs (M2 gives SE only, recorded in notes), so d CIs cannot be derived for them. Five of nine M1 cells are not reported and are recorded as null."
+  "notes": "M3 is unambiguously standardized (all variables z-scored, Table 4/5 footnotes), so the direct effect c' (0.035, CI 0.0229-0.0456) converts; the indirect a*b effect should not be converted as a total association. M1 and M2 report beta without saying whether it is standardized; for the general-SMA CLPM the authors describe beta = 0.03 as the increase in internalizing per additional screen hour (p. 6), which suggests unstandardized slopes, but a per-hour change of 0.03 t-points is implausibly small relative to t-score scaling, so standardized coefficients are likely. SD_DV values recorded in M1 are baseline sample SDs from Table 1 (p. 5): externalizing 9.543, internalizing 10.516, stress 5.694; year-3 SDs are not reported. SD_IV for texting, social media and video chat is not reported (Table 1 gives only total SMA 3.530 +/- 2.896 h). M1 and M2 report no CIs (M2 gives SE only, recorded in notes), so d CIs cannot be derived for them. Five of nine M1 cells are not reported and are recorded as null. Complete-pass (verification): M2 SEs moved into 'se' fields (0.011, 0.014, 0.014; p.6) so CIs can be derived for M2; all models set iv_type continuous. Re-read entire PDF: no media-specific SDs, no SE/CI for M1, no supplement bundled. Verified p.6 values: video chat -> internalizing beta -0.021, SE 0.011, pfdr 0.069."
  },
  "extraction_flags": "1) M1 and M2 never say whether the beta is standardized. For the general-SMA CLPM, the authors read beta = 0.03 as \"per additional hour\" (p. 6), which would mean an unstandardized slope. I coded beta_std because the mediation analysis is explicitly standardized and a per-hour effect of 0.03 t-points is implausibly small. A human should decide this. If the betas are unstandardized, d cannot be computed: the paper gives no SD for texting, social media or video chat (Table 1 has only the total SMA SD, 2.896). 2) All media-specific LMM (M1) and CLPM (M2) estimates appear only in the text. There are no CIs (M2 gives SEs, which I put in notes), and only significant or near-significant cells are printed. Five of the nine M1 cells (texting with internalizing and externalizing, all three video chat cells) are null and marked as implied non-significant. 3) Supplement Table S2 holds the media-specific SMA-to-brain estimates for texting, video chat and social media. It is not bundled in the PDF, so I did not extract them. Obtain the supplement and extract them. 4) The sd_dv values in M1 are baseline SDs from Table 1, not year-3 SDs. 5) M2 includes reverse paths where phone/SM is the DV (baseline externalizing to 2-year texting and social media). Those are cross-lagged, so they qualify, but a human should confirm. 6) The tables look internally inconsistent. Table 2 reports a direct effect of 0.676 for total SMA via CON-RTN on externalizing, which is implausible against the LMM beta of 0.058. Table 4 also lists one row with pfdr 0.5715, even though the table claims all rows are significant. This casts some doubt on how the mediation tables were reported. In M3, both the texting c' (0.035, Table 4) and the indirect a*b (0.005, Table 5) are extracted; the indirect effect should not be converted to d. 7) The N for each media-specific model and for the imaging mediation subsample is not reported (cohort N = 4557).json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "IVs are hours/day of screen time (M1, M2 forward path, M3) or CBCL t-score (M2 reverse paths); methods pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "IVs are hours/day of screen time (M1, M2 forward path, M3) or CBCL t-score (M2 reverse paths); methods pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M3",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "IVs are hours/day of screen time (M1, M2 forward path, M3) or CBCL t-score (M2 reverse paths); methods pp.3-4"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 video_chat_bl x internalizing_2y",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.011
+   },
+   "where": "p.6 right column text"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 externalizing_bl x texting_2y",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.014
+   },
+   "where": "p.6 right column text"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 externalizing_bl x social_media_2y",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.014
+   },
+   "where": "p.6 right column text"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x internalizing",
+   "action": "confirmed_missing",
+   "value": "beta",
+   "where": "text p.6; Tables 1-5; online supplement not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x externalizing",
+   "action": "confirmed_missing",
+   "value": "beta",
+   "where": "text p.6; Tables 1-5; online supplement not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x stress",
+   "action": "confirmed_missing",
+   "value": "CI/SE/sd_iv",
+   "where": "Checked Tables 1-5, Fig 2, text pp.4-9; no supplement bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x internalizing",
+   "action": "confirmed_missing",
+   "value": "CI/SE/sd_iv",
+   "where": "Checked Tables 1-5, Fig 2, text pp.4-9; no supplement bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x externalizing",
+   "action": "confirmed_missing",
+   "value": "CI/SE/sd_iv",
+   "where": "Checked Tables 1-5, Fig 2, text pp.4-9; no supplement bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x stress",
+   "action": "confirmed_missing",
+   "value": "CI/SE/sd_iv",
+   "where": "Checked Tables 1-5, Fig 2, text pp.4-9; no supplement bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x internalizing",
+   "action": "confirmed_missing",
+   "value": "beta",
+   "where": "text p.6; Tables 1-5; online supplement not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x externalizing",
+   "action": "confirmed_missing",
+   "value": "beta",
+   "where": "text p.6; Tables 1-5; online supplement not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x stress",
+   "action": "confirmed_missing",
+   "value": "beta",
+   "where": "text p.6; Tables 1-5; online supplement not bundled"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv texting",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.5 gives only total SMA SD; media-specific SDs not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.5 gives only total SMA SD; media-specific SDs not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv video_chat",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.5 gives only total SMA SD; media-specific SDs not printed"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 texting_bl x stress_direct",
+   "action": "confirmed_missing",
+   "value": "se (CI already present)",
+   "where": "Tables 4-5 pp.7-8"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 texting_bl x stress_indirect",
+   "action": "confirmed_missing",
+   "value": "se (CI already present)",
+   "where": "Tables 4-5 pp.7-8"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 texting_bl x stress_direct",
+   "action": "corrected",
+   "was": {
+    "p_label": "0.0466"
+   },
+   "value": {
+    "p_label": "pfdr = 0.0466"
+   },
+   "where": "Table 4, Stress problem, Texting / SHN-cerebellum-cortex row; column header is pfdr"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 texting_bl x stress_direct",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se/t/z not printed; consistency flag resolved: CI and pfdr both as printed (pfdr is FDR-adjusted, CI is bootstrap)",
+   "where": "Table 4, Stress problem, Texting / SHN-cerebellum-cortex row"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 texting_bl x stress_indirect",
+   "action": "corrected",
+   "was": {
+    "p_label": "0.0338"
+   },
+   "value": {
+    "p_label": "pfdr = 0.0338"
+   },
+   "where": "Table 5, Stress problem, Texting / SHN-cerebellum-cortex row; text p. 7 gives pfdr = 0.034; column header is pfdr"
+  },
+  {
+   "stage": "audit",
+   "item": "M3 texting_bl x stress_indirect",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se/t/z not printed; consistency flag resolved: CI and pfdr both as printed (pfdr is FDR-adjusted, CI is bootstrap)",
+   "where": "Table 5, Stress problem, Texting / SHN-cerebellum-cortex row; text p. 7 gives pfdr = 0.034"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x internalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6 text (not reported)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x externalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6 text (not reported)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x stress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, 'SMA's differential effect on mental health and the brain'"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x internalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, 'SMA's differential effect on mental health and the brain'"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x externalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, 'SMA's differential effect on mental health and the brain'"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x stress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, top of right column"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x internalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6 text (not reported)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x externalizing",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6 text (not reported)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x stress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6 text (not reported)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 video_chat_bl x internalizing_2y",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, right column, 'Regarding the causal influence between media-specific SMA and mental health problems'"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 externalizing_bl x texting_2y",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, right column, 'Mental health problems at baseline also had a causal influence...'"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 externalizing_bl x social_media_2y",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "native value/p/se re-verified against p.6 text; CI, t/z, df not printed; no supplement file in docs/pdfs (online Table S2 not available)",
+   "where": "p. 6, right column, same paragraph"
+  }
+ ],
  "supplements": []
 }

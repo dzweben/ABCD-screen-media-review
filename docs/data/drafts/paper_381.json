@@ -63,39 +63,45 @@
      "id": "sns_t",
      "label": "Social media (wave t)",
      "meta": "hours/day; baseline M = 0.09, SD = 0.34",
-     "sd_iv": null
+     "sd_iv": 0.34,
+     "sd_note": "Wave-t SD (baseline shown); SNS SD 0.34 baseline / 0.50 Year 1 / 0.78 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     },
     {
      "id": "chat_t",
      "label": "Online chat: texting + video chat (wave t)",
      "meta": "hours/day; baseline M = 0.31, SD = 0.58",
-     "sd_iv": null
+     "sd_iv": 0.58,
+     "sd_note": "Wave-t SD (baseline shown); Chat SD 0.58 baseline / 0.77 Year 1 / 0.90 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     },
     {
      "id": "irr_t",
      "label": "Irritability (wave t)",
      "meta": "CBCL 5-item mean, 0-2; baseline M = 0.30, SD = 0.39",
-     "sd_iv": null
+     "sd_iv": 0.39,
+     "sd_note": "Wave-t SD (baseline shown); Irritability SD 0.39 baseline / 0.38 Year 1 / 0.37 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     }
    ],
    "dv_axis": [
     {
      "id": "irr_t1",
      "label": "Irritability (wave t+1)",
-     "sd_dv": null,
-     "p0": null
+     "sd_dv": 0.38,
+     "p0": null,
+     "sd_note": "Wave t+1 SD (Year 1 shown); Irritability SD 0.38 Year 1 / 0.37 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     },
     {
      "id": "chat_t1",
      "label": "Online chat (wave t+1)",
-     "sd_dv": null,
-     "p0": null
+     "sd_dv": 0.77,
+     "p0": null,
+     "sd_note": "Wave t+1 SD (Year 1 shown); Chat SD 0.77 Year 1 / 0.90 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     },
     {
      "id": "sns_t1",
      "label": "Social media (wave t+1)",
-     "sd_dv": null,
-     "p0": null
+     "sd_dv": 0.5,
+     "p0": null,
+     "sd_note": "Wave t+1 SD (Year 1 shown); SNS SD 0.50 Year 1 / 0.78 Year 2 (Table 2, pp.23-24, analytic N=8979). Descriptive raw-scale SD only: GVAR edges are partial correlations on detrended variables, so this SD is NOT a conversion input (paper non-transformable)."
     }
    ],
    "estimates": [
@@ -109,7 +115,7 @@
      "p_label": null,
      "sig": true,
      "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
-     "note": "Social media predicted increased irritability over time. Retained after stepup pruning (alpha = .05) and >=50% bootstrap inclusion; no CI or p printed."
+     "note": "Social media predicted increased irritability over time. Retained after stepup pruning (alpha = .05) and >=50% bootstrap inclusion; no CI or p printed. [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF)."
     },
     {
      "iv": "chat_t",
@@ -121,7 +127,7 @@
      "p_label": null,
      "sig": true,
      "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
-     "note": "Online chat predicted decreased irritability over time. Sign reverses to positive in the unadjusted network (Discussion p. 11; Figure S8, values not printed)."
+     "note": "Online chat predicted decreased irritability over time. Sign reverses to positive in the unadjusted network (Discussion p. 11; Figure S8, values not printed). [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF)."
     },
     {
      "iv": "irr_t",
@@ -133,7 +139,7 @@
      "p_label": null,
      "sig": true,
      "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
-     "note": "Irritability predicted increased time on online chat. Phone/SM is the DV for this edge."
+     "note": "Irritability predicted increased time on online chat. Phone/SM is the DV for this edge. [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF)."
     },
     {
      "iv": "irr_t",
@@ -145,9 +151,10 @@
      "p_label": null,
      "sig": false,
      "location": "Results, Temporal Network, p. 9 (not reported); Figure 3 / Table S2 not in PDF",
-     "note": "Not among the edges the text reports as retained; the Discussion describes social media as unidirectionally predicting irritability, implying this edge was pruned or unstable. Exact weight only in Table S2, which is not in the PDF."
+     "note": "Not among the edges the text reports as retained; the Discussion describes social media as unidirectionally predicting irritability, implying this edge was pruned or unstable. Exact weight only in Table S2, which is not in the PDF. [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF). Edge value itself also not printed anywhere in the text."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -171,7 +178,8 @@
      "id": "chat_t",
      "label": "Online chat: texting + video chat (wave t)",
      "meta": "hours/day",
-     "sd_iv": null
+     "sd_iv": null,
+     "sd_note": "Sex-specific SDs not printed (Table 2 is pooled only)."
     }
    ],
    "dv_axis": [
@@ -179,13 +187,15 @@
      "id": "irr_t1_male",
      "label": "Irritability (wave t+1), males",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "sd_note": "Sex-specific SDs not printed (Table 2 is pooled only; Table 1 has no CBCL by sex)."
     },
     {
      "id": "irr_t1_female",
      "label": "Irritability (wave t+1), females",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "sd_note": "Sex-specific SDs not printed (Table 2 is pooled only; Table 1 has no CBCL by sex)."
     }
    ],
    "estimates": [
@@ -195,11 +205,12 @@
      "value": 0.37,
      "value_lo": null,
      "value_hi": null,
-     "p": 0.047,
-     "p_label": "p=.047",
+     "p": null,
+     "p_label": null,
      "sig": true,
      "location": "Supplementary Results p. 10; Figure S4",
-     "note": "Edge reported as stronger in males (0.37) than in females (0.14). p = .047 is for the sex difference. Positive sign contrasts with the pooled adjusted edge of -0.03 in M1 and the magnitude is much larger; check Figure S4."
+     "note": "Edge reported as stronger in males (0.37) than in females (0.14). p = .047 is for the sex difference. Positive sign contrasts with the pooled adjusted edge of -0.03 in M1 and the magnitude is much larger; check Figure S4. [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF). [audit] p moved to p_sex_difference: the printed p=.047 is for the sex difference in edge strength (p. 10), not a test of this edge against zero; no edge-level p printed. sig=true kept on the basis that the edge is non-zero in the stepup-pruned (alpha=.05) network.",
+     "p_sex_difference": 0.047
     },
     {
      "iv": "chat_t",
@@ -207,13 +218,15 @@
      "value": 0.14,
      "value_lo": null,
      "value_hi": null,
-     "p": 0.047,
-     "p_label": "p=.047",
+     "p": null,
+     "p_label": null,
      "sig": true,
      "location": "Supplementary Results p. 10; Figure S4",
-     "note": "Same sex-difference p-value as the male cell. Whether the female edge alone differs from zero is not stated."
+     "note": "Same sex-difference p-value as the male cell. Whether the female edge alone differs from zero is not stated. [complete pass] CI/SE/exact p/t not printed for this edge. Checked full 24-page author manuscript (text pp.1-15, Table 1, Table 2 pp.23-24); PDF contains no figures (pdfimages lists none) and no bundled supplement exists in docs/pdfs. Edge CIs/SEs/p-values would be in Figure S2 / Tables S1-S2 (online supplement only, not in this PDF). [audit] p moved to p_sex_difference: the printed p=.047 is for the sex difference in edge strength (p. 10), not a test of this edge against zero; no edge-level p printed. sig=true kept on the basis that the edge is non-zero in the stepup-pruned (alpha=.05) network.",
+     "p_sex_difference": 0.047
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -265,10 +278,191 @@
  ],
  "d_transformation": {
   "native_metric": "other:temporal network edge weight (lagged partial correlation from panel GVAR)",
-  "conversion_formula": "None applied. Guidelines \u00a74a list network edge weights as non-convertible; display native metric alone with 'no common-scale d available'.",
+  "conversion_formula": "None applied. Guidelines §4a list network edge weights as non-convertible; display native metric alone with 'no common-scale d available'.",
   "contrast_type": "Edge weight between detrended (and, for irritability/CBCL nodes, ordinal-treated) node at wave t and another node at wave t+1, conditional on all other nodes at wave t; not a per-unit or per-SD contrast.",
   "transformable": false,
-  "notes": "Edge weights come from a regularized/pruned panel GVAR with ULS estimation on detrended variables, so they are not regression slopes on the raw hour scale and cannot be mapped to d with SD_IV/SD_DV. Descriptive SDs are available if a later level wants them (Table 2, pp. 23-24): SNS 0.34/0.50/0.78, Chat 0.58/0.77/0.90, irritability 0.39/0.38/0.37 at baseline/Year 1/Year 2. No CIs or p-values for edges are printed in the main text (bootstrap CIs are in Figure S2 / Tables S1-S2, not in the PDF). Paper goes to the later review level for non-convertible metrics."
+  "notes": "Edge weights come from a regularized/pruned panel GVAR with ULS estimation on detrended variables, so they are not regression slopes on the raw hour scale and cannot be mapped to d with SD_IV/SD_DV. Descriptive SDs are available if a later level wants them (Table 2, pp. 23-24): SNS 0.34/0.50/0.78, Chat 0.58/0.77/0.90, irritability 0.39/0.38/0.37 at baseline/Year 1/Year 2. No CIs or p-values for edges are printed in the main text (bootstrap CIs are in Figure S2 / Tables S1-S2, not in the PDF). Paper goes to the later review level for non-convertible metrics. [complete pass] Re-read whole PDF: no additional numeric edge information, CIs, SEs or exact p for any focal edge; no figures embedded; no supplement file available. Raw-scale SDs from Table 2 added to M1 axes for reference only. M2 iv_type continuous; p=.047 is for the sex difference only."
  },
- "extraction_flags": "1) The PDF is a 24-page author manuscript with no figures and no supplement. Figures 1-3 and Tables S1-S2 (the exact edge weights and bootstrap CIs) are missing, so every edge value comes from the Results text on pp. 9-10. No CIs or p-values exist for M1 edges; sig=true is inferred from retention after stepup pruning (alpha=.05) plus at least 50% bootstrap inclusion. 2) I added an irritability-to-social-media cell with value null and sig=false, inferred because the text never reports that edge and the Discussion calls social media \"unidirectional.\" Please verify against Table S2/Figure 3. 3) M2 (sex comparison, Figure S4) gives online chat to irritability as 0.37 in males and 0.14 in females. Both are positive and much larger than the pooled adjusted -0.03, which may be an error in the paper or a different model (unadjusted?). The p=.047 tests the sex difference, not the edge vs. zero. Decide whether M2 should be kept as a primary model. 4) Online chat is a texting + video chat composite. It qualifies under FT-IC2 Step 2, but texting and video chat are never broken out separately. 5) The journal name is not printed in the PDF. I filled in Journal of Child and Adolescent Psychopharmacology from the DOI/ISSN prefix 1044-5463, so confirm it. 6) The cross-sectional GGM phone/SM edges are implied to be zero but not printed (excluded). The internalizing/externalizing temporal network (Figure S6) gives only a 0.02-0.04 range (excluded). 7) Edge weights cannot be converted to Cohen's d, so this paper goes to the later review level.json"
+ "extraction_flags": "1) The PDF is a 24-page author manuscript with no figures and no supplement. Figures 1-3 and Tables S1-S2 (the exact edge weights and bootstrap CIs) are missing, so every edge value comes from the Results text on pp. 9-10. No CIs or p-values exist for M1 edges; sig=true is inferred from retention after stepup pruning (alpha=.05) plus at least 50% bootstrap inclusion. 2) I added an irritability-to-social-media cell with value null and sig=false, inferred because the text never reports that edge and the Discussion calls social media \"unidirectional.\" Please verify against Table S2/Figure 3. 3) M2 (sex comparison, Figure S4) gives online chat to irritability as 0.37 in males and 0.14 in females. Both are positive and much larger than the pooled adjusted -0.03, which may be an error in the paper or a different model (unadjusted?). The p=.047 tests the sex difference, not the edge vs. zero. Decide whether M2 should be kept as a primary model. 4) Online chat is a texting + video chat composite. It qualifies under FT-IC2 Step 2, but texting and video chat are never broken out separately. 5) The journal name is not printed in the PDF. I filled in Journal of Child and Adolescent Psychopharmacology from the DOI/ISSN prefix 1044-5463, so confirm it. 6) The cross-sectional GGM phone/SM edges are implied to be zero but not printed (excluded). The internalizing/externalizing temporal network (Figure S6) gives only a 0.02-0.04 range (excluded). 7) Edge weights cannot be converted to Cohen's d, so this paper goes to the later review level.json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods: screen time hours/day and CBCL irritability mean, both continuous nodes"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods: screen time hours/day and CBCL irritability mean, both continuous nodes"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_axis sns_t",
+   "action": "filled_sd",
+   "value": 0.34,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_axis chat_t",
+   "action": "filled_sd",
+   "value": 0.58,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_axis irr_t",
+   "action": "filled_sd",
+   "value": 0.39,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis irr_t1",
+   "action": "filled_sd",
+   "value": 0.38,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis chat_t1",
+   "action": "filled_sd",
+   "value": 0.77,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis sns_t1",
+   "action": "filled_sd",
+   "value": 0.5,
+   "where": "Table 2 pp.23-24"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sns_t x irr_t1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 chat_t x irr_t1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 irr_t x chat_t1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 irr_t x sns_t1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 chat_t x irr_t1_male",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 chat_t x irr_t1_female",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results p.9-10; Figure S2/Tables S1-S2 (supplement, not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 chat_t x irr_t1_male",
+   "action": "corrected",
+   "field": "p/p_label",
+   "was": {
+    "p": 0.047,
+    "p_label": "p=.047"
+   },
+   "value": {
+    "p": null,
+    "p_label": null,
+    "p_sex_difference": 0.047
+   },
+   "where": "Supplementary Results p. 10: p=.047 tests male vs female edge difference, not the edge vs zero"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 chat_t x irr_t1_female",
+   "action": "corrected",
+   "field": "p/p_label",
+   "was": {
+    "p": 0.047,
+    "p_label": "p=.047"
+   },
+   "value": {
+    "p": null,
+    "p_label": null,
+    "p_sex_difference": 0.047
+   },
+   "where": "Supplementary Results p. 10: p=.047 tests male vs female edge difference, not the edge vs zero"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sns_t x irr_t1",
+   "action": "confirmed",
+   "value": 0.12,
+   "where": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 chat_t x irr_t1",
+   "action": "confirmed",
+   "value": -0.03,
+   "where": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 irr_t x chat_t1",
+   "action": "confirmed",
+   "value": 0.03,
+   "where": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 irr_t x sns_t1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Results, Temporal Network, p. 9 (not reported); Figure 3 / Table S2 not in PDF; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 chat_t x irr_t1_male",
+   "action": "confirmed",
+   "value": 0.37,
+   "where": "Supplementary Results p. 10; Figure S4; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 chat_t x irr_t1_female",
+   "action": "confirmed",
+   "value": 0.14,
+   "where": "Supplementary Results p. 10; Figure S4; re-read full 24-page PDF; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 axes SDs",
+   "action": "confirmed",
+   "value": "SNS 0.34/0.50/0.78; Chat 0.58/0.77/0.90; IRR 0.39/0.38/0.37",
+   "where": "Table 2 pp.23-24"
+  }
+ ]
 }

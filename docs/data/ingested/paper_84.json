@@ -75,13 +75,15 @@
      "id": "text",
      "label": "Texting",
      "meta": "daily hours, weighted weekday/weekend average",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed: article Table 2 (p.3) reports only total screen time (3.79 +/- 3.07 h/day, n=11,843); no per-device descriptives in article or supplement (mmc1.docx Tables S1-S2, Fig S1)."
     },
     {
      "id": "vchat",
      "label": "Video chat",
      "meta": "daily hours, weighted weekday/weekend average",
-     "sd_iv": null
+     "sd_iv": null,
+     "note": "SD not printed: article Table 2 (p.3) reports only total screen time (3.79 +/- 3.07 h/day, n=11,843); no per-device descriptives in article or supplement (mmc1.docx Tables S1-S2, Fig S1)."
     }
    ],
    "dv_axis": [
@@ -127,7 +129,9 @@
      "p_label": "0.017",
      "sig": false,
      "location": "Supplementary Table S1, row 'texting / executive function'",
-     "note": "t = -2.385, d.f. = 9955.263, r2 = 0.057, FDR p = 0.071 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction.",
+     "note": "t = -2.385, d.f. = 9955.263, r2 = 0.057, FDR p = 0.071 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of texting hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -2.385,
+     "df": 9955.263,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.025) / \u221a(1 \u2212 (-0.025)\u00b2) = -0.05",
      "derived_d": -0.05,
@@ -145,7 +149,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'texting / episodic memory'",
-     "note": "t = -5.466, d.f. = 9954.056, r2 = 0.068, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -5.466, d.f. = 9954.056, r2 = 0.068, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of texting hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -5.466,
+     "df": 9954.056,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.057) / \u221a(1 \u2212 (-0.057)\u00b2) = -0.1142",
      "derived_d": -0.1142,
@@ -163,7 +169,9 @@
      "p_label": "0.000",
      "sig": true,
      "location": "Supplementary Table S1, row 'texting / language'",
-     "note": "t = -6.068, d.f. = 9823.132, r2 = 0.223, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p printed as '0.000' (i.e., <.0005); left as null.",
+     "note": "t = -6.068, d.f. = 9823.132, r2 = 0.223, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p printed as '0.000' (i.e., <.0005); left as null. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of texting hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -6.068,
+     "df": 9823.132,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.056) / \u221a(1 \u2212 (-0.056)\u00b2) = -0.1122",
      "derived_d": -0.1122,
@@ -181,7 +189,9 @@
      "p_label": "0.023",
      "sig": false,
      "location": "Supplementary Table S1, row 'texting / processing speed'",
-     "note": "t = -2.274, d.f. = 9949.972, r2 = 0.036, FDR p = 0.064 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction.",
+     "note": "t = -2.274, d.f. = 9949.972, r2 = 0.036, FDR p = 0.064 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of texting hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -2.274,
+     "df": 9949.972,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.024) / \u221a(1 \u2212 (-0.024)\u00b2) = -0.048",
      "derived_d": -0.048,
@@ -199,7 +209,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'texting / working memory'",
-     "note": "t = -4.308, d.f. = 9938.337, r2 = 0.117, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -4.308, d.f. = 9938.337, r2 = 0.117, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of texting hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -4.308,
+     "df": 9938.337,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.044) / \u221a(1 \u2212 (-0.044)\u00b2) = -0.0881",
      "derived_d": -0.0881,
@@ -217,7 +229,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'video chat / executive function'",
-     "note": "t = -5.053, d.f. = 9893.460, r2 = 0.059, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -5.053, d.f. = 9893.460, r2 = 0.059, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of video chat hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -5.053,
+     "df": 9893.46,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.052) / \u221a(1 \u2212 (-0.052)\u00b2) = -0.1041",
      "derived_d": -0.1041,
@@ -235,7 +249,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'video chat / episodic memory'",
-     "note": "t = -6.628, d.f. = 9789.545, r2 = 0.069, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -6.628, d.f. = 9789.545, r2 = 0.069, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of video chat hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -6.628,
+     "df": 9789.545,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.069) / \u221a(1 \u2212 (-0.069)\u00b2) = -0.1383",
      "derived_d": -0.1383,
@@ -253,7 +269,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'video chat / language'",
-     "note": "t = -7.681, d.f. = 9742.772, r2 = 0.225, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -7.681, d.f. = 9742.772, r2 = 0.225, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of video chat hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -7.681,
+     "df": 9742.772,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.071) / \u221a(1 \u2212 (-0.071)\u00b2) = -0.1424",
      "derived_d": -0.1424,
@@ -271,7 +289,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'video chat / processing speed'",
-     "note": "t = -3.939, d.f. = 9944.146, r2 = 0.037, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -3.939, d.f. = 9944.146, r2 = 0.037, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of video chat hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -3.939,
+     "df": 9944.146,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.041) / \u221a(1 \u2212 (-0.041)\u00b2) = -0.0821",
      "derived_d": -0.0821,
@@ -289,7 +309,9 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Supplementary Table S1, row 'video chat / working memory'",
-     "note": "t = -6.864, d.f. = 9799.444, r2 = 0.120, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "note": "t = -6.864, d.f. = 9799.444, r2 = 0.120, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Re-verified against Supplementary Table S1 (mmc1.docx): beta, CI, t, d.f., p all match. SE not printed (not needed: 95% CI printed). SD of video chat hours not printed anywhere (Table 2 gives only total screen time SD 3.07 h/day); checked article Tables 1-2, Figs 1-2, text pp.1-6, and supplement Tables S1-S2/Fig S1.",
+     "t": -6.864,
+     "df": 9799.444,
      "derived_d_formula": "d = 2\u03b2 / \u221a(1 \u2212 \u03b2\u00b2)",
      "derived_d_calc": "d = 2(-0.069) / \u221a(1 \u2212 (-0.069)\u00b2) = -0.1383",
      "derived_d": -0.1383,
@@ -297,7 +319,8 @@
      "derived_d_hi": -0.0981,
      "derived_d_method": "standardized beta -> d"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -332,8 +355,277 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta / sqrt(1 - beta^2) (guidelines section 4a); applied to each CI endpoint for the d CI.",
   "contrast_type": "Per 1 SD increase in daily texting or video chat hours, assuming the Table S1 'beta' is standardized",
   "transformable": true,
-  "notes": "Table S1 column is labeled 'beta' without stating whether it is standardized. The main text distinguishes unstandardized b from standardized beta for total screen time (e.g., executive function b = -0.212, beta = -0.051), and the Table S1 magnitudes (-0.024 to -0.071) match the scale of those standardized betas, so beta_std is assumed. If the betas were instead unstandardized per hour, B -> d would need SD_IV for texting and video chat, which the paper does not report (only total screen time SD = 3.07 h, Table 2). SD_DV values in dv_axis come from Table 2, p. 3 (full sample, not the per-cell analytic sample) and are given for reference only. Table S1 comes from the online supporting information (mmc1.docx from the publisher's site), not the article PDF."
+  "notes": "Table S1 column is labeled 'beta' without stating whether it is standardized. The main text distinguishes unstandardized b from standardized beta for total screen time (e.g., executive function b = -0.212, beta = -0.051), and the Table S1 magnitudes (-0.024 to -0.071) match the scale of those standardized betas, so beta_std is assumed. If the betas were instead unstandardized per hour, B -> d would need SD_IV for texting and video chat, which the paper does not report (only total screen time SD = 3.07 h, Table 2). SD_DV values in dv_axis come from Table 2, p. 3 (full sample, not the per-cell analytic sample) and are given for reference only. Table S1 comes from the online supporting information (mmc1.docx from the publisher's site), not the article PDF. [complete-stage check] Main text: total screen time EF b=-0.212 with beta=-0.051; b*SD_IV/SD_DV = -0.212*3.07/12.22 = -0.053, consistent with the main-text beta being standardized and supporting the beta_std reading of Table S1. No per-device SDs anywhere, so B-scale conversion remains impossible if Table S1 were unstandardized. Supplement is not stored in docs/pdfs; values verified from scratchpad copy p84_mmc1.docx."
  },
  "extraction_flags": "1) The article PDF is only 6 pages and does not contain the qualifying estimates. They are only in Supplementary Table S1. I got that table from the publisher's open-access supplement (ars.els-cdn.com, 1-s2.0-S0001691826005433-mmc1.docx), saved a copy to the scratchpad as p84_mmc1.docx, and parsed the values directly from the docx table, so they match it exactly. A human should confirm this is the official supplement and consider saving it next to the PDF. 2) The Table S1 column is just labeled 'beta' and the supplement never says whether it is standardized. I coded it as beta_std because its magnitudes (-0.02 to -0.07) match the standardized betas in the main text, and the main text reports unstandardized b of about -0.2 to -0.4. If the betas are actually unstandardized, d cannot be computed: the paper reports no SD for texting or video chat, only for total screen time (3.07 h/day). 3) Table S1 does not print per-cell N. The paper also never says whether each device was modeled on its own or all devices were entered together; the r2 values differ by device, which suggests separate models. 4) I set significance using the FDR p, which the authors corrected across all 25 tests in Table S1. On that basis texting is not significant for executive function (raw p .017, FDR .071) or processing speed (raw p .023, FDR .064). 5) The covariate list follows Section 2.6. Section 2.5 points to the Table 2 variables as covariates, and those also include total brain size and handedness, so the exact covariate set is somewhat ambiguous. Section 2.5 actually cites 'Table 1', which looks like a typo for Table 2. 6) The paper does not name the ABCD wave. Mean age 119 months points to baseline, and the authors describe the design as cross-sectional. 7) The SD_DV values come from the full sample in Table 2, not the analytic sample. They are listed for reference only, since a standardized-beta conversion does not need them.json",
- "supplements": []
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Section 2.2 p.2 (daily hours per device)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Executive function",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -2.385,
+    "df": 9955.263
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Executive function",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Episodic memory",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -5.466,
+    "df": 9954.056
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Episodic memory",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Language",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -6.068,
+    "df": 9823.132
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Language",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Processing speed",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -2.274,
+    "df": 9949.972
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Processing speed",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Working memory",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -4.308,
+    "df": 9938.337
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x Working memory",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Executive function",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -5.053,
+    "df": 9893.46
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Executive function",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Episodic memory",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -6.628,
+    "df": 9789.545
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Episodic memory",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Language",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -7.681,
+    "df": 9742.772
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Language",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Processing speed",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -3.939,
+    "df": 9944.146
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Processing speed",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Working memory",
+   "action": "filled_ci_input",
+   "value": {
+    "t": -6.864,
+    "df": 9799.444
+   },
+   "where": "Supplementary Table S1 (mmc1.docx)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video chat x Working memory",
+   "action": "confirmed_missing",
+   "value": "se, sd_iv",
+   "where": "Checked article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement mmc1.docx (Tables S1-S2, Fig S1)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x ef",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x em",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x lang",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x ps",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x wm",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video chat x ef",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video chat x em",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video chat x lang",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video chat x ps",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video chat x wm",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, n (per cell), sd_iv not printed; beta, CI, t, d.f., p, FDR-based sig re-checked and match",
+   "where": "Supplementary Table S1 (mmc1.docx, now saved as docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx); article pp.1-6 Tables 1-2, Figs 1-2, Sections 2.2-3.2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis sd_dv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "sd_dv 12.22/22.07/14.79/16.10/15.62 match Table 2 p.3 (full sample; analytic-sample SDs not printed); iv_type continuous confirmed (Section 2.2 daily hours); estimate set complete (2 phone/SM devices x 5 domains = all Table S1 phone/SM cells)",
+   "where": "Table 2 p.3; Section 2.2 p.2; Supplementary Table S1"
+  }
+ ],
+ "supplements": [
+  "pdfs/10.1016_j.actpsy.2026.106742_supplement.docx"
+ ]
 }

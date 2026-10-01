@@ -95,7 +95,7 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 4B (p. 393), rank 11 of top 20",
-     "note": "Mean |SHAP| (log-odds). Red bar: more texting associated with higher predicted probability of elevated depressive symptoms. n=3,063. No CI or p-value; SHAP importances are not significance-tested.",
+     "note": "Mean |SHAP| (log-odds). Red bar: more texting associated with higher predicted probability of elevated depressive symptoms. n=3,063. No CI or p-value; SHAP importances are not significance-tested. [complete pass] Value re-verified against bar data label. Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Mean |SHAP| has no CI, SE, p, test statistic or df; none printed. SDs of the IV item and of the continuous outcome scores are not printed (outcomes binary).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     },
@@ -109,7 +109,7 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 3 (p. 392), rank 11 of top 20",
-     "note": "Mean |SHAP|. Red bar: more frequent on-line communication associated with higher predicted probability of elevated anxiety. n=3,193. Discussion p. 392 interprets this as 'connecting digitally' predicting anxiety.",
+     "note": "Mean |SHAP|. Red bar: more frequent on-line communication associated with higher predicted probability of elevated anxiety. n=3,193. Discussion p. 392 interprets this as 'connecting digitally' predicting anxiety. [complete pass] Value re-verified against bar data label. Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Mean |SHAP| has no CI, SE, p, test statistic or df; none printed. SDs of the IV item and of the continuous outcome scores are not printed (outcomes binary).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     },
@@ -123,7 +123,7 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 2 (p. 391), rank 13 of top 20",
-     "note": "Mean |SHAP|. Blue bar: more frequent on-line communication associated with lower predicted probability of high perceived stress. n=3,193.",
+     "note": "Mean |SHAP|. Blue bar: more frequent on-line communication associated with lower predicted probability of high perceived stress. n=3,193. [complete pass] Value re-verified against bar data label. Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Mean |SHAP| has no CI, SE, p, test statistic or df; none printed. SDs of the IV item and of the continuous outcome scores are not printed (outcomes binary).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     },
@@ -137,7 +137,7 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 3 (p. 392)",
-     "note": "Texting not among the printed top-20 features for anxiety; no value reported.",
+     "note": "Texting not among the printed top-20 features for anxiety; no value reported. [complete pass] Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Feature ranks below the printed top 20; value not printed anywhere in this PDF (full importance lists, if any, would be in the online supplement Appendix A/B).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     },
@@ -151,7 +151,7 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 2 (p. 391)",
-     "note": "Texting not among the printed top-20 features for stress; no value reported.",
+     "note": "Texting not among the printed top-20 features for stress; no value reported. [complete pass] Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Feature ranks below the printed top 20; value not printed anywhere in this PDF (full importance lists, if any, would be in the online supplement Appendix A/B).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     },
@@ -165,11 +165,12 @@
      "p_label": "",
      "sig": null,
      "location": "Figure 4B (p. 393)",
-     "note": "On-line communication not among the printed top-20 features for depressive symptoms (Survey 1); no value reported.",
+     "note": "On-line communication not among the printed top-20 features for depressive symptoms (Survey 1); no value reported. [complete pass] Checked all 9 PDF pages: Table 1 (demographics only, no screen-time or outcome descriptives), Methods/Results text pp.389-390, Figures 1-4 data labels pp.391-393, Discussion, Supplementary Data note p.394. No supplement file bundled in docs/pdfs. Feature ranks below the printed top 20; value not printed anywhere in this PDF (full importance lists, if any, would be in the online supplement Appendix A/B).",
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -214,8 +215,159 @@
   "conversion_formula": "None. Mean absolute SHAP values from XGBoost are model-specific, unsigned (direction shown only by bar colour), conditional on all other features, and have no sampling distribution; guidelines \u00a74a list ML feature importance as non-convertible.",
   "contrast_type": "Average absolute contribution of the feature to the predicted log-odds of the elevated outcome across participants; not a per-unit or group contrast.",
   "transformable": false,
-  "notes": "No SD of the texting or on-line communication items, no item response scales, and no CIs or p-values are reported. Baseline event rate is reported only for depressive symptoms (16.49% at Survey 1, Fig. 4A). Values are read from data labels printed on the bar charts (two decimal places), not from a table. Only the top 20 features per model are shown, so absence of a phone/SM feature from a figure means it ranked lower, not that its importance was zero. Paper goes to the later review level for non-convertible estimates."
+  "notes": "No SD of the texting or on-line communication items, no item response scales, and no CIs or p-values are reported. Baseline event rate is reported only for depressive symptoms (16.49% at Survey 1, Fig. 4A). Values are read from data labels printed on the bar charts (two decimal places), not from a table. Only the top 20 features per model are shown, so absence of a phone/SM feature from a figure means it ranked lower, not that its importance was zero. Paper goes to the later review level for non-convertible estimates. Completion pass (2026-10-01): re-read all 9 pages; no additional CIs, SEs, p-values, SDs or prevalences for anxiety/stress are printed. Note p0=0.1649 for depressive symptoms is from Fig 4A (Survey 1 prevalence among the N=2,080 with both surveys)."
  },
  "extraction_flags": "1) Every value comes from data labels printed on the bar charts in Figures 2, 3 and 4B. None comes from a table. They are mean |SHAP| values with no CI or p, so sig is set to null instead of true or false. Check that the renderer accepts null. 2) Texting -> depressive symptoms (Survey 1, Fig 4B, 0.07, red bar) is the only clearly qualifying estimate. 3) I also extracted 'frequency of on-line communication - yr.' for anxiety (Fig 3, 0.06, red/increase) and stress (Fig 2, 0.05, blue/decrease). Whether this item qualifies needs a human call: the authors file it under Relationships, not Screentime, and the item wording is only in Appendix B, which is not in the PDF. Strike these two if it does not count as digital socializing under FT-IC2. 4) Three of the 6 estimate cells are null placeholders: texting x anxiety, texting x stress, and online communication x depression. Neither feature reached the printed top 20 for those outcomes. 5) The online supplement (Appendix A/B, Table A1, Supplementary Figure A4 for the Survey 3 depression model) is not bundled in the PDF. A4 might show texting or other phone/SM features for Survey 3. 6) Social media time was in the feature set but appears in no printed top 20, so it has no estimate. 7) SDs and response scales for the IV items are not reported. Not convertible to d.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.389: COVID survey frequency/time items entered as ordinal-numeric features in XGBoost; response scales only in Appendix B (not in PDF)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x depr_s1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "CI/SE/p not printed; SHAP importances not significance-tested (Methods p.390)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 online_comm x anxiety_s2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "CI/SE/p not printed; SHAP importances not significance-tested (Methods p.390)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 online_comm x stress_s2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "CI/SE/p not printed; SHAP importances not significance-tested (Methods p.390)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x anxiety_s2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Figs 2-4B top-20 lists; whole PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x stress_s2",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Figs 2-4B top-20 lists; whole PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 online_comm x depr_s1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Figs 2-4B top-20 lists; whole PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_axis texting sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No descriptives for COVID survey screen-time/communication items in Table 1 or text; Appendix B not in PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_axis online_comm sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "No descriptives for COVID survey screen-time/communication items in Table 1 or text; Appendix B not in PDF"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis anxiety_s2 p0",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Prevalence above cutoff printed only for depressive symptoms (Fig 4A); anxiety/stress prevalence not printed (Fig A2 in supplement)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 dv_axis stress_s2 p0",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Prevalence above cutoff printed only for depressive symptoms (Fig 4A); anxiety/stress prevalence not printed (Fig A2 in supplement)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x depr_s1 value",
+   "action": "confirmed",
+   "was": 0.07,
+   "value": 0.07,
+   "where": "Figure 4B p.393 (zoomed 200dpi): 'texting on a cell phone, tablet, computer - yr.' rank 11, data label 0.07, red (increase) bar"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 online_comm x anxiety_s2 value",
+   "action": "confirmed",
+   "was": 0.06,
+   "value": 0.06,
+   "where": "Figure 3 p.392 (zoomed): 'frequency of on-line communication - yr.' rank 11, data label 0.06, red (increase) bar"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 online_comm x stress_s2 value",
+   "action": "confirmed",
+   "was": 0.05,
+   "value": 0.05,
+   "where": "Figure 2 p.391 (zoomed): 'frequency of on-line communication - yr.' rank 13, data label 0.05, blue (decrease) bar"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x anxiety_s2 / texting x stress_s2 / online_comm x depr_s1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Figures 2, 3, 4B top-20 lists re-read: feature absent; no supplement file in docs/pdfs (only main PDF exists for this DOI stem)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 CI/se/p/sig for all cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Methods p.390: mean |SHAP| importances, no inferential statistics anywhere in pp.387-395; sig=null retained"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis depr_s1 p0",
+   "action": "confirmed",
+   "was": 0.1649,
+   "value": 0.1649,
+   "where": "Figure 4A p.393 and Results p.390: 16.49% at Survey 1 (computed among N=2,080 with Surveys 1 and 3, not the n=3,063 model sample)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_type",
+   "action": "confirmed",
+   "was": "continuous",
+   "value": "continuous",
+   "where": "Methods p.389: frequency/time items enter as numeric features; no dichotomization described"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sd_iv / sd_dv / p0 anxiety, stress",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 1 p.389 is demographics only; no item descriptives or anxiety/stress prevalence in text or figures (Fig A2 is online supplement, not available)"
+  },
+  {
+   "stage": "audit",
+   "item": "Completeness of phone/SM cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "All four figures re-read: no other phone/SM-specific (texting, social media, online communication) feature appears in any printed top-20 list; Fig 1 positive affect has none"
+  }
+ ],
  "supplements": []
 }

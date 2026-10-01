@@ -97,7 +97,8 @@
      "p_label": ".056",
      "sig": false,
      "location": "Table 3, Model 3, Texting row",
-     "note": "Lower CI bound printed as 1.00; not bold, p = .056."
+     "note": "Lower CI bound printed as 1.00; not bold, p = .056. Verified vs Table 3 Model 3 (p.394). Exact OR, 95% CI and exact p printed; no SE, z or Wald statistic printed anywhere (checked Tables 1-3, Results/Discussion text pp.392-394, Abstract, footnotes; Appendices A/B are online-only and not in this PDF). SD_IV from Table 1 No-OCD-baseline column (n=8,542, Model 3 sample).",
+     "se_scale": "log"
     },
     {
      "iv": "video_chat",
@@ -108,7 +109,9 @@
      "p": 0.483,
      "p_label": ".483",
      "sig": false,
-     "location": "Table 3, Model 3, Video chat row"
+     "location": "Table 3, Model 3, Video chat row",
+     "se_scale": "log",
+     "note": "Verified vs Table 3 Model 3 (p.394). Exact OR, 95% CI and exact p printed; no SE, z or Wald statistic printed anywhere (checked Tables 1-3, Results/Discussion text pp.392-394, Abstract, footnotes; Appendices A/B are online-only and not in this PDF). SD_IV from Table 1 No-OCD-baseline column (n=8,542, Model 3 sample)."
     },
     {
      "iv": "social_networking",
@@ -119,9 +122,12 @@
      "p": 0.604,
      "p_label": ".604",
      "sig": false,
-     "location": "Table 3, Model 3, Social networking row"
+     "location": "Table 3, Model 3, Social networking row",
+     "se_scale": "log",
+     "note": "Verified vs Table 3 Model 3 (p.394). Exact OR, 95% CI and exact p printed; no SE, z or Wald statistic printed anywhere (checked Tables 1-3, Results/Discussion text pp.392-394, Abstract, footnotes; Appendices A/B are online-only and not in this PDF). SD_IV from Table 1 No-OCD-baseline column (n=8,542, Model 3 sample)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -171,7 +177,89 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); CI endpoints converted the same way.",
   "contrast_type": "per 1 additional hour/day of the baseline phone/SM modality (weighted weekday/weekend average)",
   "transformable": true,
-  "notes": "OR converts to d directly via Chinn without p0 or SDs. SD_IV for the Model 3 analytic sample comes from Table 1 (p. 393), No OCD (baseline) column, n = 8,542: texting 0.43, video chat 0.48, social networking 0.40 hours/day; these are recorded in case a per-SD rescaling (ln(OR) * SD_IV) is wanted, since 1 hour/day is more than 2 SD for every phone/SM modality here. p0 = 0.044 is the Results-text rate of new-onset OCD from baseline to year 2 (p. 392); the denominator is not stated and may be the 9,208 sample rather than the 8,542 Model 3 sample. SD_DV not applicable (binary DV)."
+  "notes": "OR converts to d directly via Chinn without p0 or SDs. SD_IV for the Model 3 analytic sample comes from Table 1 (p. 393), No OCD (baseline) column, n = 8,542: texting 0.43, video chat 0.48, social networking 0.40 hours/day; these are recorded in case a per-SD rescaling (ln(OR) * SD_IV) is wanted, since 1 hour/day is more than 2 SD for every phone/SM modality here. p0 = 0.044 is the Results-text rate of new-onset OCD from baseline to year 2 (p. 392); the denominator is not stated and may be the 9,208 sample rather than the 8,542 Model 3 sample. SD_DV not applicable (binary DV). Completion pass: all Model 3 OR/CI/exact p verified against Table 3; no SE or z printed in the PDF; CI available so no CI-input needed."
  },
- "extraction_flags": "1) Which model to use: I extracted Table 3 Model 3 (n=8,542, baseline OCD cases excluded, so the outcome is new-onset OCD), because the Abstract and Results report Model 3's aORs. Model 2 (n=9,208, baseline OCD entered as a covariate) is also adjusted. I put it in excluded_models with its values in case coders prefer it. 2) Age is listed as a covariate in the Statistical analysis text, but it is missing from the Table 3 footnote and from the Abstract. Check whether it was actually in the model. 3) Videos (YouTube) and video games are excluded as non-phone/non-SM, following the paper 156 reference. However, the stage2_reason cites them, and FT-IC2 names YouTube as a platform. Coders should confirm that \"Videos (YouTube)\" (watching videos, e.g., YouTube, on any device) does not qualify. Its Model 3 aOR is 1.11 (1.01-1.23), p=.038. 4) None of the three phone/SM estimates is significant. Texting comes closest: aOR 1.20 (1.00-1.44), p=.056. 5) p0=0.044 is from the Results text and its denominator is unclear (probably the 9,208 sample). It is not needed for the Chinn OR-to-d conversion. 6) The SD_IV values come from the Table 1 No-OCD-baseline column (n=8,542), which is the Model 3 sample. Because the contrast is per 1 hour/day and that is more than 2 SD for every modality, the derived d per hour is large relative to the typical exposure. 7) The paper is inconsistent on percent non-White: the Abstract says 43.5% (matches Table 1) and the Results text says 47.8%. 8) No multiple-comparison correction across the 7 modalities. Site was entered as a covariate, not as a random effect."
+ "extraction_flags": "1) Which model to use: I extracted Table 3 Model 3 (n=8,542, baseline OCD cases excluded, so the outcome is new-onset OCD), because the Abstract and Results report Model 3's aORs. Model 2 (n=9,208, baseline OCD entered as a covariate) is also adjusted. I put it in excluded_models with its values in case coders prefer it. 2) Age is listed as a covariate in the Statistical analysis text, but it is missing from the Table 3 footnote and from the Abstract. Check whether it was actually in the model. 3) Videos (YouTube) and video games are excluded as non-phone/non-SM, following the paper 156 reference. However, the stage2_reason cites them, and FT-IC2 names YouTube as a platform. Coders should confirm that \"Videos (YouTube)\" (watching videos, e.g., YouTube, on any device) does not qualify. Its Model 3 aOR is 1.11 (1.01-1.23), p=.038. 4) None of the three phone/SM estimates is significant. Texting comes closest: aOR 1.20 (1.00-1.44), p=.056. 5) p0=0.044 is from the Results text and its denominator is unclear (probably the 9,208 sample). It is not needed for the Chinn OR-to-d conversion. 6) The SD_IV values come from the Table 1 No-OCD-baseline column (n=8,542), which is the Model 3 sample. Because the contrast is per 1 hour/day and that is more than 2 SD for every modality, the derived d per hour is large relative to the typical exposure. 7) The paper is inconsistent on percent non-White: the Abstract says 43.5% (matches Table 1) and the Results text says 47.8%. 8) No multiple-comparison correction across the 7 modalities. Site was entered as a covariate, not as a random effect.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.391-392: weighted daily hours entered as continuous variable"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting x new-onset OCD",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 3 Model 3 p.394"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Video chat x new-onset OCD",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 3 Model 3 p.394"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social networking x new-onset OCD",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 3 Model 3 p.394"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting sd_iv",
+   "action": "confirmed_missing",
+   "value": "sd_iv 0.43 already present, verified",
+   "where": "Table 1 No OCD (baseline) column p.393"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Video chat sd_iv",
+   "action": "confirmed_missing",
+   "value": "sd_iv 0.48 already present, verified",
+   "where": "Table 1 No OCD (baseline) column p.393"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social networking sd_iv",
+   "action": "confirmed_missing",
+   "value": "sd_iv 0.4 already present, verified",
+   "where": "Table 1 No OCD (baseline) column p.393"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 p0",
+   "action": "confirmed_missing",
+   "value": "0.044 retained; no count or denominator printed for new-onset OCD in Model 3 sample",
+   "where": "Results p.392; Tables 1-3 give no outcome counts"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x ocd_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.2 (1.0-1.44), p 0.056, sig false confirmed; sd_iv confirmed; se/z not printed (no supplement file in docs/pdfs; Appendices A/B online only)",
+   "where": "Table 3 Model 3 p.394; Table 1 No OCD column p.393"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x ocd_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 0.91 (0.7-1.18), p 0.483, sig false confirmed; sd_iv confirmed; se/z not printed (no supplement file in docs/pdfs; Appendices A/B online only)",
+   "where": "Table 3 Model 3 p.394; Table 1 No OCD column p.393"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_networking x ocd_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "OR 1.07 (0.83-1.39), p 0.604, sig false confirmed; sd_iv confirmed; se/z not printed (no supplement file in docs/pdfs; Appendices A/B online only)",
+   "where": "Table 3 Model 3 p.394; Table 1 No OCD column p.393"
+  }
+ ]
 }

@@ -87,25 +87,29 @@
      "id": "alcohol",
      "label": "Alcohol experimentation (Y3)",
      "sd_dv": null,
-     "p0": 0.12
+     "p0": 0.12,
+     "note": "Binary outcome; no SD printed; not needed for OR->d. p0 = weighted Year 3 prevalence, Table 2 p.3."
     },
     {
      "id": "nicotine",
      "label": "Nicotine experimentation (Y3)",
      "sd_dv": null,
-     "p0": 0.025
+     "p0": 0.025,
+     "note": "Binary outcome; no SD printed; not needed for OR->d. p0 = weighted Year 3 prevalence, Table 2 p.3."
     },
     {
      "id": "cannabis",
      "label": "Cannabis experimentation (Y3)",
      "sd_dv": null,
-     "p0": 0.01
+     "p0": 0.01,
+     "note": "Binary outcome; no SD printed; not needed for OR->d. p0 = weighted Year 3 prevalence, Table 2 p.3."
     },
     {
      "id": "any",
      "label": "Any substance use experimentation (Y3)",
      "sd_dv": null,
-     "p0": 0.132
+     "p0": 0.132,
+     "note": "Binary outcome; no SD printed; not needed for OR->d. p0 = weighted Year 3 prevalence, Table 2 p.3."
     }
    ],
    "estimates": [
@@ -119,7 +123,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Alcohol Experimentation panel, Texting row",
-     "note": "Also reported in Results text p. 3: 1.14 (95 % CI:1.08-1.20). Figure label prints the CI with a missing opening parenthesis ('1.14 1.08, 1.20)*'). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also reported in Results text p. 3: 1.14 (95 % CI:1.08-1.20). Figure label prints the CI with a missing opening parenthesis ('1.14 1.08, 1.20)*'). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "texting",
@@ -131,7 +135,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Nicotine Experimentation panel, Texting row",
-     "note": "Also in Results text p. 3: 1.16 (95 % CI:1.06-1.26). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.16 (95 % CI:1.06-1.26). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "texting",
@@ -143,7 +147,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Cannabis Experimentation panel, Texting row",
-     "note": "Also in Results text p. 3: 1.18 (95 % CI:1.08-1.29). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.18 (95 % CI:1.08-1.29). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "texting",
@@ -155,7 +159,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Any Substance Use Experimentation panel, Texting row",
-     "note": "Also in Abstract and Results text p. 3 (AOR 1.18; 95 % CI 1.12-1.24). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Abstract and Results text p. 3 (AOR 1.18; 95 % CI 1.12-1.24). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "social_media",
@@ -167,7 +171,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Alcohol Experimentation panel, Social media row",
-     "note": "Also in Results text p. 3: 1.15 (95 % CI:1.10-1.21). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.15 (95 % CI:1.10-1.21). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "social_media",
@@ -179,7 +183,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Nicotine Experimentation panel, Social media row",
-     "note": "Also in Results text p. 3: 1.23 (95 % CI:1.14-1.32). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.23 (95 % CI:1.14-1.32). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "social_media",
@@ -191,7 +195,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Cannabis Experimentation panel, Social media row",
-     "note": "Also in Results text p. 3: 1.22 (95 % CI:1.13-1.33). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.22 (95 % CI:1.13-1.33). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "social_media",
@@ -203,7 +207,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Any Substance Use Experimentation panel, Social media row",
-     "note": "Also in Abstract and Results text p. 3 (AOR 1.20; 95 % CI 1.14-1.26). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Abstract and Results text p. 3 (AOR 1.20; 95 % CI 1.14-1.26). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "video_chat",
@@ -215,7 +219,7 @@
      "p_label": "",
      "sig": false,
      "location": "Fig. 1 (p. 4), Alcohol Experimentation panel, Video chat row",
-     "note": "Figure only; not discussed in text. No asterisk (not significant after Benjamini-Hochberg). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Figure only; not discussed in text. No asterisk (not significant after Benjamini-Hochberg). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "video_chat",
@@ -227,7 +231,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Nicotine Experimentation panel, Video chat row",
-     "note": "Also in Results text p. 3: 1.14 (95 % CI:1.07-1.22). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.14 (95 % CI:1.07-1.22). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "video_chat",
@@ -239,7 +243,7 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Cannabis Experimentation panel, Video chat row",
-     "note": "Also in Results text p. 3: 1.13 (95 % CI:1.03-1.24). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Results text p. 3: 1.13 (95 % CI:1.03-1.24). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     },
     {
      "iv": "video_chat",
@@ -251,9 +255,10 @@
      "p_label": "*",
      "sig": true,
      "location": "Fig. 1 (p. 4), Any Substance Use Experimentation panel, Video chat row",
-     "note": "Also in Abstract and Results text p. 3 (AOR 1.09; 95 % CI 1.03-1.16). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg)."
+     "note": "Also in Abstract and Results text p. 3 (AOR 1.09; 95 % CI 1.03-1.16). No p-value printed; sig reflects the Fig. 1 asterisk (significant after Benjamini-Hochberg). Completion pass: OR and 95% CI already complete from Fig. 1; no SE, exact p, or z printed anywhere (checked all 7 pages: Abstract, Results p.3, Tables 1-2 p.3, Fig. 1 p.4, Discussion pp.4-5); Appendix A is online-only and not in this PDF. sd_dv not applicable (binary DV, OR->d via Chinn)."
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -288,7 +293,225 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to the OR and to each CI bound.",
   "contrast_type": "per 1 additional hour/day of the Year 2 modality (texting, social media, or video chat)",
   "transformable": true,
-  "notes": "The ORs are per hour/day, so the Chinn d is a per-1-hour contrast, not a per-SD contrast. Year 2 SD_IV values come from Table 1 (p. 3): texting 1.5, social media 1.6, video chat 1.3 hours/day; these can be used to rescale ln(OR) to a per-SD contrast if needed (ln(OR) x SD_IV). p0 values are the weighted marginal Year 3 prevalences from Table 2 (p. 3), not unexposed-group rates; they are not needed for the OR -> d conversion. Outcomes are rare (nicotine 2.5%, cannabis 1.0% at Year 3; cannabis N = 65), so ORs approximate risk ratios. All values were read from the printed labels on the Fig. 1 forest plot, and 11 of the 12 also appear verbatim in the Results text (video chat -> alcohol appears only in the figure). No p-values are reported."
+  "notes": "The ORs are per hour/day, so the Chinn d is a per-1-hour contrast, not a per-SD contrast. Year 2 SD_IV values come from Table 1 (p. 3): texting 1.5, social media 1.6, video chat 1.3 hours/day; these can be used to rescale ln(OR) to a per-SD contrast if needed (ln(OR) x SD_IV). p0 values are the weighted marginal Year 3 prevalences from Table 2 (p. 3), not unexposed-group rates; they are not needed for the OR -> d conversion. Outcomes are rare (nicotine 2.5%, cannabis 1.0% at Year 3; cannabis N = 65), so ORs approximate risk ratios. All values were read from the printed labels on the Fig. 1 forest plot, and 11 of the 12 also appear verbatim in the Results text (video chat -> alcohol appears only in the figure). No p-values are reported. Completion pass (2026-10-01): re-read all 7 PDF pages; all 12 ORs and CIs confirmed against Fig. 1; no SEs or exact p-values exist in the paper; no supplement file bundled. iv_type set to continuous."
  },
- "extraction_flags": "It holds one model (M1) with 12 estimates: 3 IVs (texting, social media, video chat) by 4 outcomes (alcohol, nicotine, cannabis, any substance). All 12 ORs and CIs were checked against a zoomed render of Fig. 1, and they match.\n\nWhat a human should verify:\n(1) Every estimate comes from the printed labels on the Fig. 1 forest plot. The paper has no results table. 11 of the 12 also appear in the Results text, but video chat -> alcohol (OR 1.04, CI 0.98-1.11, not significant) appears only in the figure. The figure label for texting -> alcohol is missing its opening parenthesis.\n(2) The paper prints no p-values. \"sig\" comes from the Fig. 1 asterisk, which marks significance after Benjamini-Hochberg correction. p is null and p_label is \"*\" when significant.\n(3) The paper never says whether each modality was fitted in its own model or all modalities were entered together. I assumed one modality per model.\n(4) Study site is listed as a covariate, but the paper doesn't say whether it is a fixed or random effect.\n(5) The ABCD release version is not stated in the PDF. Appendix A, which compares included and excluded participants, is an online supplement and was not in the PDF.\n(6) The p0 values are weighted marginal Year 3 prevalences from Table 2. They are not unexposed-group rates, and the OR conversion doesn't need them.\n(7) The derived d is per 1 hour/day, not per SD. Year 2 SD_IV values from Table 1 (texting 1.5, social media 1.6, video chat 1.3) are recorded in case they are needed.\n(8) Cannabis at Year 3 is rare (N=65, 1.0%)."
+ "extraction_flags": "It holds one model (M1) with 12 estimates: 3 IVs (texting, social media, video chat) by 4 outcomes (alcohol, nicotine, cannabis, any substance). All 12 ORs and CIs were checked against a zoomed render of Fig. 1, and they match.\n\nWhat a human should verify:\n(1) Every estimate comes from the printed labels on the Fig. 1 forest plot. The paper has no results table. 11 of the 12 also appear in the Results text, but video chat -> alcohol (OR 1.04, CI 0.98-1.11, not significant) appears only in the figure. The figure label for texting -> alcohol is missing its opening parenthesis.\n(2) The paper prints no p-values. \"sig\" comes from the Fig. 1 asterisk, which marks significance after Benjamini-Hochberg correction. p is null and p_label is \"*\" when significant.\n(3) The paper never says whether each modality was fitted in its own model or all modalities were entered together. I assumed one modality per model.\n(4) Study site is listed as a covariate, but the paper doesn't say whether it is a fixed or random effect.\n(5) The ABCD release version is not stated in the PDF. Appendix A, which compares included and excluded participants, is an online supplement and was not in the PDF.\n(6) The p0 values are weighted marginal Year 3 prevalences from Table 2. They are not unexposed-group rates, and the OR conversion doesn't need them.\n(7) The derived d is per 1 hour/day, not per SD. Year 2 SD_IV values from Table 1 (texting 1.5, social media 1.6, video chat 1.3) are recorded in case they are needed.\n(8) Cannabis at Year 3 is rare (N=65, 1.0%).",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.2 p.2 (hours/day); Fig. 1 legend p.4 (OR per additional hour)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x nicotine",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x cannabis",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 texting x any",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x nicotine",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x cannabis",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 social_media x any",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x alcohol",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x nicotine",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x cannabis",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 video_chat x any",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "OR/CI present in Fig. 1 p.4; SE/exact p not printed anywhere in PDF (pp.1-7); Appendix A online-only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv texting",
+   "action": "confirmed_missing",
+   "value": 1.5,
+   "where": "Already filled from Table 1 p.3 (Year 2, weighted, N=8006); verified"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv social_media",
+   "action": "confirmed_missing",
+   "value": 1.6,
+   "where": "Already filled from Table 1 p.3 (Year 2, weighted, N=8006); verified"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sd_iv video_chat",
+   "action": "confirmed_missing",
+   "value": 1.3,
+   "where": "Already filled from Table 1 p.3 (Year 2, weighted, N=8006); verified"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x any",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_media x any",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x any",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "OR/CI/asterisk re-verified against Fig. 1 p.4 (rendered at 220 dpi) and Results p.3; se, exact p, z not printed anywhere in pp.1-7; no supplement file in docs/pdfs (Appendix A online-only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 axes",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "sd_iv 1.5/1.6/1.3 match Table 1 p.3 (Year 2, weighted, N=8006); p0 0.12/0.025/0.01/0.132 match Table 2 Year 3 p.3; iv_type continuous (hours/day, OR per additional hour, Results p.3); no missing phone/SM IV x DV cells (3 modalities x 4 outcomes all present)"
+  }
+ ]
 }

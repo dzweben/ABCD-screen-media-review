@@ -100,8 +100,8 @@
      "p": 0.014,
      "p_label": "0.014",
      "sig": true,
-     "location": "Table 2, Texting row, adjusted columns",
-     "note": "Unadjusted OR 1.43 (1.15-1.79), p = 0.001 (not extracted).",
+     "location": "Table 2 (manuscript p. 11), Texting row, 'Suicidal behaviors, adjusted' columns",
+     "note": "Unadjusted OR 1.43 (1.15-1.79), p = 0.001 (not extracted). Completion check: OR, 95% CI and exact p verified against Table 2 p.11 (adjusted columns). No SE, z or Wald statistic printed anywhere (checked Tables 1-2, text pp.2-6, footnotes; no supplement in this PDF/folder); CI is printed so none needed. sd_iv from Table 1 p.10 (propensity-weighted baseline); outcome binary with p0 = 0.0138 (Table 1), sd_dv not applicable for OR->d via Chinn.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.36) \u00d7 0.5513 = 0.3075 \u00d7 0.5513 = 0.1695",
      "derived_d": 0.1695,
@@ -118,8 +118,8 @@
      "p": 0.028,
      "p_label": "0.028",
      "sig": true,
-     "location": "Table 2, Video chat row, adjusted columns",
-     "note": "Unadjusted OR 1.35 (1.08-1.67), p = 0.008 (not extracted).",
+     "location": "Table 2 (manuscript p. 11), Video chat row, 'Suicidal behaviors, adjusted' columns",
+     "note": "Unadjusted OR 1.35 (1.08-1.67), p = 0.008 (not extracted). Completion check: OR, 95% CI and exact p verified against Table 2 p.11 (adjusted columns). No SE, z or Wald statistic printed anywhere (checked Tables 1-2, text pp.2-6, footnotes; no supplement in this PDF/folder); CI is printed so none needed. sd_iv from Table 1 p.10 (propensity-weighted baseline); outcome binary with p0 = 0.0138 (Table 1), sd_dv not applicable for OR->d via Chinn.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.3) \u00d7 0.5513 = 0.2624 \u00d7 0.5513 = 0.1446",
      "derived_d": 0.1446,
@@ -136,8 +136,8 @@
      "p": 0.076,
      "p_label": "0.076",
      "sig": false,
-     "location": "Table 2, Social networking row, adjusted columns",
-     "note": "Unadjusted OR 1.40 (1.10-1.79), p = 0.007 (not extracted). Authors note the adjusted association was not significant (p. 6).",
+     "location": "Table 2 (manuscript p. 11), Social networking row, 'Suicidal behaviors, adjusted' columns",
+     "note": "Unadjusted OR 1.40 (1.10-1.79), p = 0.007 (not extracted). Authors note the adjusted association was not significant (p. 6). Completion check: OR, 95% CI and exact p verified against Table 2 p.11 (adjusted columns). No SE, z or Wald statistic printed anywhere (checked Tables 1-2, text pp.2-6, footnotes; no supplement in this PDF/folder); CI is printed so none needed. sd_iv from Table 1 p.10 (propensity-weighted baseline); outcome binary with p0 = 0.0138 (Table 1), sd_dv not applicable for OR->d via Chinn.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.27) \u00d7 0.5513 = 0.239 \u00d7 0.5513 = 0.1318",
      "derived_d": 0.1318,
@@ -145,7 +145,8 @@
      "derived_d_hi": 0.2794,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -175,8 +176,102 @@
   "conversion_formula": "d = ln(OR) * sqrt(3)/pi (Chinn 2000), applied to the OR and to each CI bound.",
   "contrast_type": "per 1 additional hour/day of the modality at baseline",
   "transformable": true,
-  "notes": "OR converts directly via Chinn, so no SD or base rate is needed. The resulting d is per 1 hour/day, not per 1 SD. Baseline SDs from Table 1 (p. 10, propensity-weighted): texting 0.56, video chat 0.52, social networking 0.45 h/day; a 1 hour/day contrast is about 1.8-2.2 SDs of these right-skewed IVs, so a per-SD rescaling (ln(OR)*SD_IV) would give smaller values. Outcome base rate p0 = 0.0138 (1.38% at two-year follow-up, Table 1 and Results p. 4), so the outcome is rare and the OR approximates the RR. The Chinn conversion assumes an underlying logistic latent variable."
+  "notes": "OR converts directly via Chinn, so no SD or base rate is needed. The resulting d is per 1 hour/day, not per 1 SD. Baseline SDs from Table 1 (p. 10, propensity-weighted): texting 0.56, video chat 0.52, social networking 0.45 h/day; a 1 hour/day contrast is about 1.8-2.2 SDs of these right-skewed IVs, so a per-SD rescaling (ln(OR)*SD_IV) would give smaller values. Outcome base rate p0 = 0.0138 (1.38% at two-year follow-up, Table 1 and Results p. 4), so the outcome is rare and the OR approximates the RR. The Chinn conversion assumes an underlying logistic latent variable. Completion pass (2026-10-01): all ORs/CIs/exact p re-verified vs Table 2; no SEs printed; no supplementary file available."
  },
  "extraction_flags": "1) The analytic N conflicts inside the paper: the abstract and Results say 11,633, but the Table 1 title says 11,363. I used 11,633. 2) Age is listed as a confounder in Methods 2.4 but is missing from the Table 2 footnote, so it is unclear whether the final adjusted model includes age. 3) There is another inconsistency about baseline suicidal behaviors. Methods says participants missing baseline suicidal behaviors were excluded, the Table 2 footnote lists baseline suicidal behaviors as a covariate, and a sensitivity analysis that excluded baseline cases is described only as \"unchanged\", with no numbers printed. 4) The paper never says whether each modality was run as its own model or all were entered together. I assumed separate models, based on the one-row-per-modality layout next to a separate total-screen-time row. 5) The ORs are per 1 hour/day of each modality. The baseline SDs are 0.45-0.56 h/day, so one hour is about 2 SDs, and the derived d will not be on the per-SD scale used by some other papers. 6) Social networking was not significant in the adjusted model (OR 1.27, CI 0.97-1.66, p=0.076). It is extracted as a null estimate. 7) Table 1 has a copy-paste error in its title (\"binge eating characteristics\"). Values were checked against both the page images and pdftotext output: Table 2 adjusted ORs, CIs and p-values, and the Table 1 SDs.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods p.3 (hours/day continuous); Table 2 OR per hour"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting x suicidal behaviors Y2",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.11; Table 1 p.10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Video chat x suicidal behaviors Y2",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.11; Table 1 p.10"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social networking x suicidal behaviors Y2",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.11; Table 1 p.10"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Texting x suicidal_y2",
+   "action": "confirmed",
+   "was": "Table 2, Texting row, adjusted columns",
+   "value": "OR 1.36 (1.06-1.74), p=0.014, sig=True; location made page-specific",
+   "where": "Table 2 p.11 adjusted columns; abstract p.2 (texting, video chat)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Texting x suicidal_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed",
+   "where": "All 12 PDF pages read (text, Tables 1-2, footnotes); no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Video chat x suicidal_y2",
+   "action": "confirmed",
+   "was": "Table 2, Video chat row, adjusted columns",
+   "value": "OR 1.3 (1.03-1.65), p=0.028, sig=True; location made page-specific",
+   "where": "Table 2 p.11 adjusted columns; abstract p.2 (texting, video chat)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Video chat x suicidal_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed",
+   "where": "All 12 PDF pages read (text, Tables 1-2, footnotes); no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Social networking x suicidal_y2",
+   "action": "confirmed",
+   "was": "Table 2, Social networking row, adjusted columns",
+   "value": "OR 1.27 (0.97-1.66), p=0.076, sig=False; location made page-specific",
+   "where": "Table 2 p.11 adjusted columns; abstract p.2 (texting, video chat)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Social networking x suicidal_y2",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z not printed",
+   "where": "All 12 PDF pages read (text, Tables 1-2, footnotes); no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis/dv_axis/iv_type",
+   "action": "confirmed",
+   "was": null,
+   "value": "sd_iv 0.56/0.52/0.45, p0 0.0138, iv_type continuous",
+   "where": "Table 1 p.10; Methods 2.2 p.3"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 completeness",
+   "action": "confirmed",
+   "was": null,
+   "value": "All phone/SM rows of Table 2 adjusted model present (texting, video chat, social networking); alpha .05, no correction",
+   "where": "Table 2 p.11"
+  }
+ ],
  "supplements": []
 }

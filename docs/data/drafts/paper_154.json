@@ -145,7 +145,8 @@
      "p_label": ".348",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.018 min of sleep-onset delay per additional minute of use (printed as 0.018); standardized beta printed as 0.019. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.018 min of sleep-onset delay per additional minute of use (printed as 0.018); standardized beta printed as 0.019. No CI or SE printed in the table. [complete pass] Unstandardized B (0.018) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.348 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.018
     },
     {
      "iv": "app_day",
@@ -157,7 +158,8 @@
      "p_label": ".395",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.020 min of wake-time delay per additional minute of use (printed as 0.020); standardized beta printed as 0.020. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.020 min of wake-time delay per additional minute of use (printed as 0.020); standardized beta printed as 0.020. No CI or SE printed in the table. [complete pass] Unstandardized B (0.02) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.395 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.02
     },
     {
      "iv": "app_day",
@@ -169,7 +171,8 @@
      "p_label": ".718",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.006 min of sleep per additional minute of use (printed as 0.006); standardized beta printed as 0.009. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.006 min of sleep per additional minute of use (printed as 0.006); standardized beta printed as 0.009. No CI or SE printed in the table. [complete pass] Unstandardized B (0.006) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.718 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.006
     },
     {
      "iv": "app_day",
@@ -181,7 +184,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.046 min of MVPA per additional minute of use (printed as -0.046); standardized beta printed as -0.128. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.046 min of MVPA per additional minute of use (printed as -0.046); standardized beta printed as -0.128. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.046) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.046
     },
     {
      "iv": "app_day",
@@ -193,7 +197,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.169 min sedentary per additional minute of use (printed as 0.169); standardized beta printed as 0.069. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.169 min sedentary per additional minute of use (printed as 0.169); standardized beta printed as 0.069. No CI or SE printed in the table. [complete pass] Unstandardized B (0.169) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.169
     },
     {
      "iv": "app_day",
@@ -205,7 +210,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = -7.105 steps per additional minute of use (printed as -7.105); standardized beta printed as -0.209. No CI or SE printed in the table."
+     "note": "Unstandardized B = -7.105 steps per additional minute of use (printed as -7.105); standardized beta printed as -0.209. No CI or SE printed in the table. [complete pass] Unstandardized B (-7.105) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -7.105
     },
     {
      "iv": "app_eve",
@@ -217,7 +223,8 @@
      "p_label": ".244",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.082 min of sleep-onset delay per additional minute of use (printed as 0.082); standardized beta printed as 0.023. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.082 min of sleep-onset delay per additional minute of use (printed as 0.082); standardized beta printed as 0.023. No CI or SE printed in the table. [complete pass] Unstandardized B (0.082) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.244 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.082
     },
     {
      "iv": "app_eve",
@@ -229,7 +236,8 @@
      "p_label": ".167",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.118 min of wake-time delay per additional minute of use (printed as 0.118); standardized beta printed as 0.031. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.118 min of wake-time delay per additional minute of use (printed as 0.118); standardized beta printed as 0.031. No CI or SE printed in the table. [complete pass] Unstandardized B (0.118) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.167 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.118
     },
     {
      "iv": "app_eve",
@@ -241,7 +249,8 @@
      "p_label": ".295",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.063 min of sleep per additional minute of use (printed as -0.063); standardized beta printed as -0.024. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.063 min of sleep per additional minute of use (printed as -0.063); standardized beta printed as -0.024. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.063) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.295 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.063
     },
     {
      "iv": "app_eve",
@@ -253,7 +262,8 @@
      "p_label": ".073",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.038 min of MVPA per additional minute of use (printed as -0.038); standardized beta printed as -0.028. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.038 min of MVPA per additional minute of use (printed as -0.038); standardized beta printed as -0.028. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.038) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.073 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.038
     },
     {
      "iv": "app_eve",
@@ -265,7 +275,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.222 min sedentary per additional minute of use (printed as 0.222); standardized beta printed as 0.024. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.222 min sedentary per additional minute of use (printed as 0.222); standardized beta printed as 0.024. No CI or SE printed in the table. [complete pass] Unstandardized B (0.222) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.222
     },
     {
      "iv": "app_eve",
@@ -277,7 +288,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = -6.783 steps per additional minute of use (printed as -6.783); standardized beta printed as -0.052. No CI or SE printed in the table."
+     "note": "Unstandardized B = -6.783 steps per additional minute of use (printed as -6.783); standardized beta printed as -0.052. No CI or SE printed in the table. [complete pass] Unstandardized B (-6.783) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -6.783
     },
     {
      "iv": "app_night",
@@ -289,7 +301,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.369 min of sleep-onset delay per additional minute of use (printed as 0.369); standardized beta printed as 0.269. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.369 min of sleep-onset delay per additional minute of use (printed as 0.369); standardized beta printed as 0.269. No CI or SE printed in the table. [complete pass] Unstandardized B (0.369) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.369
     },
     {
      "iv": "app_night",
@@ -301,7 +314,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.246 min of wake-time delay per additional minute of use (printed as 0.246); standardized beta printed as 0.176. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.246 min of wake-time delay per additional minute of use (printed as 0.246); standardized beta printed as 0.176. No CI or SE printed in the table. [complete pass] Unstandardized B (0.246) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.246
     },
     {
      "iv": "app_night",
@@ -313,7 +327,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.158 min of sleep per additional minute of use (printed as -0.158); standardized beta printed as -0.161. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.158 min of sleep per additional minute of use (printed as -0.158); standardized beta printed as -0.161. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.158) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.158
     },
     {
      "iv": "app_night",
@@ -325,7 +340,8 @@
      "p_label": ".356",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.008 min of MVPA per additional minute of use (printed as -0.008); standardized beta printed as -0.015. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.008 min of MVPA per additional minute of use (printed as -0.008); standardized beta printed as -0.015. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.008) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.356 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.008
     },
     {
      "iv": "app_night",
@@ -337,7 +353,8 @@
      "p_label": ".001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.067 min sedentary per additional minute of use (printed as 0.067); standardized beta printed as 0.019. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.067 min sedentary per additional minute of use (printed as 0.067); standardized beta printed as 0.019. No CI or SE printed in the table. [complete pass] Unstandardized B (0.067) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.001 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.067
     },
     {
      "iv": "app_night",
@@ -349,7 +366,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = -3.218 steps per additional minute of use (printed as -3.218); standardized beta printed as -0.065. No CI or SE printed in the table."
+     "note": "Unstandardized B = -3.218 steps per additional minute of use (printed as -3.218); standardized beta printed as -0.065. No CI or SE printed in the table. [complete pass] Unstandardized B (-3.218) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -3.218
     },
     {
      "iv": "kb_day",
@@ -361,7 +379,8 @@
      "p_label": ".038",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.196 min of sleep-onset delay per additional minute of use (printed as 0.196); standardized beta printed as 0.030. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.196 min of sleep-onset delay per additional minute of use (printed as 0.196); standardized beta printed as 0.030. No CI or SE printed in the table. [complete pass] Unstandardized B (0.196) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.038 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.196
     },
     {
      "iv": "kb_day",
@@ -373,7 +392,8 @@
      "p_label": ".952",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = -0.006 min of wake-time delay per additional minute of use (printed as -0.006); standardized beta printed as -0.001. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.006 min of wake-time delay per additional minute of use (printed as -0.006); standardized beta printed as -0.001. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.006) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.952 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.006
     },
     {
      "iv": "kb_day",
@@ -385,7 +405,8 @@
      "p_label": ".167",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.107 min of sleep per additional minute of use (printed as -0.107); standardized beta printed as -0.023. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.107 min of sleep per additional minute of use (printed as -0.107); standardized beta printed as -0.023. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.107) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.167 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.107
     },
     {
      "iv": "kb_day",
@@ -397,7 +418,8 @@
      "p_label": ".005",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.087 min of MVPA per additional minute of use (printed as -0.087); standardized beta printed as -0.034. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.087 min of MVPA per additional minute of use (printed as -0.087); standardized beta printed as -0.034. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.087) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.005 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.087
     },
     {
      "iv": "kb_day",
@@ -409,7 +431,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.344 min sedentary per additional minute of use (printed as 0.344); standardized beta printed as 0.020. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.344 min sedentary per additional minute of use (printed as 0.344); standardized beta printed as 0.020. No CI or SE printed in the table. [complete pass] Unstandardized B (0.344) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.344
     },
     {
      "iv": "kb_day",
@@ -421,7 +444,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = -12.287 steps per additional minute of use (printed as -12.287); standardized beta printed as -0.052. No CI or SE printed in the table."
+     "note": "Unstandardized B = -12.287 steps per additional minute of use (printed as -12.287); standardized beta printed as -0.052. No CI or SE printed in the table. [complete pass] Unstandardized B (-12.287) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -12.287
     },
     {
      "iv": "kb_eve",
@@ -433,7 +457,8 @@
      "p_label": ".045",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.503 min of sleep-onset delay per additional minute of use (printed as 0.503); standardized beta printed as 0.026. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.503 min of sleep-onset delay per additional minute of use (printed as 0.503); standardized beta printed as 0.026. No CI or SE printed in the table. [complete pass] Unstandardized B (0.503) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.045 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.503
     },
     {
      "iv": "kb_eve",
@@ -445,7 +470,8 @@
      "p_label": ".501",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.192 min of wake-time delay per additional minute of use (printed as 0.192); standardized beta printed as 0.010. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.192 min of wake-time delay per additional minute of use (printed as 0.192); standardized beta printed as 0.010. No CI or SE printed in the table. [complete pass] Unstandardized B (0.192) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.501 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.192
     },
     {
      "iv": "kb_eve",
@@ -457,7 +483,8 @@
      "p_label": ".298",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.220 min of sleep per additional minute of use (printed as -0.220); standardized beta printed as -0.016. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.220 min of sleep per additional minute of use (printed as -0.220); standardized beta printed as -0.016. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.22) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.298 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.22
     },
     {
      "iv": "kb_eve",
@@ -469,7 +496,8 @@
      "p_label": ".211",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.103 min of MVPA per additional minute of use (printed as 0.103); standardized beta printed as 0.014. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.103 min of MVPA per additional minute of use (printed as 0.103); standardized beta printed as 0.014. No CI or SE printed in the table. [complete pass] Unstandardized B (0.103) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.211 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.103
     },
     {
      "iv": "kb_eve",
@@ -481,7 +509,8 @@
      "p_label": ".284",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.217 min sedentary per additional minute of use (printed as 0.217); standardized beta printed as 0.004. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.217 min sedentary per additional minute of use (printed as 0.217); standardized beta printed as 0.004. No CI or SE printed in the table. [complete pass] Unstandardized B (0.217) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.284 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.217
     },
     {
      "iv": "kb_eve",
@@ -493,7 +522,8 @@
      "p_label": ".995",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = 0.045 steps per additional minute of use (printed as 0.045); standardized beta printed as 0.000. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.045 steps per additional minute of use (printed as 0.045); standardized beta printed as 0.000. No CI or SE printed in the table. [complete pass] Unstandardized B (0.045) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.995 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.045
     },
     {
      "iv": "kb_night",
@@ -505,7 +535,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 1.548 min of sleep-onset delay per additional minute of use (printed as 1.548); standardized beta printed as 0.134. No CI or SE printed in the table."
+     "note": "Unstandardized B = 1.548 min of sleep-onset delay per additional minute of use (printed as 1.548); standardized beta printed as 0.134. No CI or SE printed in the table. [complete pass] Unstandardized B (1.548) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 1.548
     },
     {
      "iv": "kb_night",
@@ -517,7 +548,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Combined Effect columns",
-     "note": "Unstandardized B = 0.942 min of wake-time delay per additional minute of use (printed as 0.942); standardized beta printed as 0.080. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.942 min of wake-time delay per additional minute of use (printed as 0.942); standardized beta printed as 0.080. No CI or SE printed in the table. [complete pass] Unstandardized B (0.942) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.942
     },
     {
      "iv": "kb_night",
@@ -529,7 +561,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.707 min of sleep per additional minute of use (printed as -0.707); standardized beta printed as -0.086. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.707 min of sleep per additional minute of use (printed as -0.707); standardized beta printed as -0.086. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.707) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.707
     },
     {
      "iv": "kb_night",
@@ -541,7 +574,8 @@
      "p_label": ".220",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Combined Effect columns",
-     "note": "Unstandardized B = 0.065 min of MVPA per additional minute of use (printed as 0.065); standardized beta printed as 0.014. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.065 min of MVPA per additional minute of use (printed as 0.065); standardized beta printed as 0.014. No CI or SE printed in the table. [complete pass] Unstandardized B (0.065) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.22 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.065
     },
     {
      "iv": "kb_night",
@@ -553,7 +587,8 @@
      "p_label": ".446",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
-     "note": "Unstandardized B = -0.097 min sedentary per additional minute of use (printed as -0.097); standardized beta printed as -0.003. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.097 min sedentary per additional minute of use (printed as -0.097); standardized beta printed as -0.003. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.097) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.446 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.097
     },
     {
      "iv": "kb_night",
@@ -565,9 +600,11 @@
      "p_label": ".976",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Combined Effect columns",
-     "note": "Unstandardized B = 0.142 steps per additional minute of use (printed as 0.142); standardized beta printed as 0.000. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.142 steps per additional minute of use (printed as 0.142); standardized beta printed as 0.000. No CI or SE printed in the table. [complete pass] Unstandardized B (0.142) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.976 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.142
     }
-   ]
+   ],
+   "iv_type": "continuous"
   },
   {
    "model_id": "M2",
@@ -618,7 +655,7 @@
     {
      "id": "app_day_within",
      "label": "Smartphone application use, 6:00AM-7:59PM (min/day) - within-person",
-     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -630,7 +667,7 @@
     {
      "id": "app_eve_within",
      "label": "Smartphone application use, 8:00PM-9:59PM (min/day) - within-person",
-     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -642,7 +679,7 @@
     {
      "id": "app_night_within",
      "label": "Smartphone application use, 10:00PM-5:59AM (min/night) - within-person",
-     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 5993 days",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 5993 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -654,7 +691,7 @@
     {
      "id": "kb_day_within",
      "label": "Keyboard use, 6:00AM-7:59PM (min/day) - within-person",
-     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -666,7 +703,7 @@
     {
      "id": "kb_eve_within",
      "label": "Keyboard use, 8:00PM-9:59PM (min/day) - within-person",
-     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -678,7 +715,7 @@
     {
      "id": "kb_night_within",
      "label": "Keyboard use, 10:00PM-5:59AM (min/night) - within-person",
-     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 10,159 days",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 10,159 days | sd_iv null: SD of within-person (person-mean-centred) daily deviations is not printed; Table 2 (p.5) gives only grand SD and SD of participant means. Not needed because native metric is beta_std.",
      "sd_iv": null
     },
     {
@@ -737,7 +774,8 @@
      "p_label": ".820",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.005 min of sleep-onset delay per additional minute of use (printed as 0.005); standardized beta printed as 0.005. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.005 min of sleep-onset delay per additional minute of use (printed as 0.005); standardized beta printed as 0.005. No CI or SE printed in the table. [complete pass] Unstandardized B (0.005) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.82 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.005
     },
     {
      "iv": "app_day_between",
@@ -749,7 +787,8 @@
      "p_label": ".038",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.116 min of sleep-onset delay per additional minute of use (printed as 0.116); standardized beta printed as 0.123. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.116 min of sleep-onset delay per additional minute of use (printed as 0.116); standardized beta printed as 0.123. No CI or SE printed in the table. [complete pass] Unstandardized B (0.116) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.038 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.116
     },
     {
      "iv": "app_day_within",
@@ -761,7 +800,8 @@
      "p_label": ".668",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.011 min of wake-time delay per additional minute of use (printed as 0.011); standardized beta printed as 0.011. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.011 min of wake-time delay per additional minute of use (printed as 0.011); standardized beta printed as 0.011. No CI or SE printed in the table. [complete pass] Unstandardized B (0.011) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.668 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.011
     },
     {
      "iv": "app_day_between",
@@ -773,7 +813,8 @@
      "p_label": ".276",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.062 min of wake-time delay per additional minute of use (printed as 0.062); standardized beta printed as 0.063. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.062 min of wake-time delay per additional minute of use (printed as 0.062); standardized beta printed as 0.063. No CI or SE printed in the table. [complete pass] Unstandardized B (0.062) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.276 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.062
     },
     {
      "iv": "app_day_within",
@@ -785,7 +826,8 @@
      "p_label": ".274",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.020 min of sleep per additional minute of use (printed as 0.020); standardized beta printed as 0.030. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.020 min of sleep per additional minute of use (printed as 0.020); standardized beta printed as 0.030. No CI or SE printed in the table. [complete pass] Unstandardized B (0.02) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.274 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.02
     },
     {
      "iv": "app_day_between",
@@ -797,7 +839,8 @@
      "p_label": ".209",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.043 min of sleep per additional minute of use (printed as -0.043); standardized beta printed as -0.064. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.043 min of sleep per additional minute of use (printed as -0.043); standardized beta printed as -0.064. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.043) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.209 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.043
     },
     {
      "iv": "app_day_within",
@@ -809,7 +852,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.052 min of MVPA per additional minute of use (printed as -0.052); standardized beta printed as -0.144. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.052 min of MVPA per additional minute of use (printed as -0.052); standardized beta printed as -0.144. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.052) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.052
     },
     {
      "iv": "app_day_between",
@@ -821,7 +865,8 @@
      "p_label": ".811",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.004 min of MVPA per additional minute of use (printed as -0.004); standardized beta printed as -0.011. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.004 min of MVPA per additional minute of use (printed as -0.004); standardized beta printed as -0.011. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.004) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.811 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.004
     },
     {
      "iv": "app_day_within",
@@ -833,7 +878,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.168 min sedentary per additional minute of use (printed as 0.168); standardized beta printed as 0.068. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.168 min sedentary per additional minute of use (printed as 0.168); standardized beta printed as 0.068. No CI or SE printed in the table. [complete pass] Unstandardized B (0.168) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.168
     },
     {
      "iv": "app_day_between",
@@ -845,7 +891,8 @@
      "p_label": ".017",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.369 min sedentary per additional minute of use (printed as 0.369); standardized beta printed as 0.151. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.369 min sedentary per additional minute of use (printed as 0.369); standardized beta printed as 0.151. No CI or SE printed in the table. [complete pass] Unstandardized B (0.369) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.017 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.369
     },
     {
      "iv": "app_day_within",
@@ -857,7 +904,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = -7.344 steps per additional minute of use (printed as -7.344); standardized beta printed as -0.216. No CI or SE printed in the table."
+     "note": "Unstandardized B = -7.344 steps per additional minute of use (printed as -7.344); standardized beta printed as -0.216. No CI or SE printed in the table. [complete pass] Unstandardized B (-7.344) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -7.344
     },
     {
      "iv": "app_day_between",
@@ -869,7 +917,8 @@
      "p_label": ".037",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = -4.103 steps per additional minute of use (printed as -4.103); standardized beta printed as -0.120. No CI or SE printed in the table."
+     "note": "Unstandardized B = -4.103 steps per additional minute of use (printed as -4.103); standardized beta printed as -0.120. No CI or SE printed in the table. [complete pass] Unstandardized B (-4.103) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.037 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -4.103
     },
     {
      "iv": "app_eve_within",
@@ -881,7 +930,8 @@
      "p_label": ".979",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.002 min of sleep-onset delay per additional minute of use (printed as -0.002); standardized beta printed as -0.001. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.002 min of sleep-onset delay per additional minute of use (printed as -0.002); standardized beta printed as -0.001. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.002) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.979 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.002
     },
     {
      "iv": "app_eve_between",
@@ -893,7 +943,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.925 min of sleep-onset delay per additional minute of use (printed as 0.925); standardized beta printed as 0.257. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.925 min of sleep-onset delay per additional minute of use (printed as 0.925); standardized beta printed as 0.257. No CI or SE printed in the table. [complete pass] Unstandardized B (0.925) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.925
     },
     {
      "iv": "app_eve_within",
@@ -905,7 +956,8 @@
      "p_label": ".406",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.076 min of wake-time delay per additional minute of use (printed as 0.076); standardized beta printed as 0.021. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.076 min of wake-time delay per additional minute of use (printed as 0.076); standardized beta printed as 0.021. No CI or SE printed in the table. [complete pass] Unstandardized B (0.076) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.406 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.076
     },
     {
      "iv": "app_eve_between",
@@ -917,7 +969,8 @@
      "p_label": ".102",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.387 min of wake-time delay per additional minute of use (printed as 0.387); standardized beta printed as 0.105. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.387 min of wake-time delay per additional minute of use (printed as 0.387); standardized beta printed as 0.105. No CI or SE printed in the table. [complete pass] Unstandardized B (0.387) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.102 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.387
     },
     {
      "iv": "app_eve_within",
@@ -929,7 +982,8 @@
      "p_label": ".712",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.024 min of sleep per additional minute of use (printed as 0.024); standardized beta printed as 0.009. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.024 min of sleep per additional minute of use (printed as 0.024); standardized beta printed as 0.009. No CI or SE printed in the table. [complete pass] Unstandardized B (0.024) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.712 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.024
     },
     {
      "iv": "app_eve_between",
@@ -941,7 +995,8 @@
      "p_label": ".001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.462 min of sleep per additional minute of use (printed as -0.462); standardized beta printed as -0.179. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.462 min of sleep per additional minute of use (printed as -0.462); standardized beta printed as -0.179. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.462) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.001 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.462
     },
     {
      "iv": "app_eve_within",
@@ -953,7 +1008,8 @@
      "p_label": ".058",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.043 min of MVPA per additional minute of use (printed as -0.043); standardized beta printed as -0.031. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.043 min of MVPA per additional minute of use (printed as -0.043); standardized beta printed as -0.031. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.043) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.058 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.043
     },
     {
      "iv": "app_eve_between",
@@ -965,7 +1021,8 @@
      "p_label": ".970",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.003 min of MVPA per additional minute of use (printed as 0.003); standardized beta printed as 0.002. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.003 min of MVPA per additional minute of use (printed as 0.003); standardized beta printed as 0.002. No CI or SE printed in the table. [complete pass] Unstandardized B (0.003) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.97 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.003
     },
     {
      "iv": "app_eve_within",
@@ -977,7 +1034,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.218 min sedentary per additional minute of use (printed as 0.218); standardized beta printed as 0.023. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.218 min sedentary per additional minute of use (printed as 0.218); standardized beta printed as 0.023. No CI or SE printed in the table. [complete pass] Unstandardized B (0.218) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.218
     },
     {
      "iv": "app_eve_between",
@@ -989,7 +1047,8 @@
      "p_label": ".153",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.908 min sedentary per additional minute of use (printed as 0.908); standardized beta printed as 0.097. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.908 min sedentary per additional minute of use (printed as 0.908); standardized beta printed as 0.097. No CI or SE printed in the table. [complete pass] Unstandardized B (0.908) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.153 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.908
     },
     {
      "iv": "app_eve_within",
@@ -1001,7 +1060,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = -6.846 steps per additional minute of use (printed as -6.846); standardized beta printed as -0.053. No CI or SE printed in the table."
+     "note": "Unstandardized B = -6.846 steps per additional minute of use (printed as -6.846); standardized beta printed as -0.053. No CI or SE printed in the table. [complete pass] Unstandardized B (-6.846) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -6.846
     },
     {
      "iv": "app_eve_between",
@@ -1013,7 +1073,8 @@
      "p_label": ".484",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = -5.73 steps per additional minute of use (printed as -5.73); standardized beta printed as -0.044. No CI or SE printed in the table."
+     "note": "Unstandardized B = -5.73 steps per additional minute of use (printed as -5.73); standardized beta printed as -0.044. No CI or SE printed in the table. [complete pass] Unstandardized B (-5.73) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.484 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -5.73
     },
     {
      "iv": "app_night_within",
@@ -1025,7 +1086,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.330 min of sleep-onset delay per additional minute of use (printed as 0.330); standardized beta printed as 0.240. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.330 min of sleep-onset delay per additional minute of use (printed as 0.330); standardized beta printed as 0.240. No CI or SE printed in the table. [complete pass] Unstandardized B (0.33) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.33
     },
     {
      "iv": "app_night_between",
@@ -1037,7 +1099,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.599 min of sleep-onset delay per additional minute of use (printed as 0.599); standardized beta printed as 0.436. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.599 min of sleep-onset delay per additional minute of use (printed as 0.599); standardized beta printed as 0.436. No CI or SE printed in the table. [complete pass] Unstandardized B (0.599) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.599
     },
     {
      "iv": "app_night_within",
@@ -1049,7 +1112,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.190 min of wake-time delay per additional minute of use (printed as 0.190); standardized beta printed as 0.136. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.190 min of wake-time delay per additional minute of use (printed as 0.190); standardized beta printed as 0.136. No CI or SE printed in the table. [complete pass] Unstandardized B (0.19) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.19
     },
     {
      "iv": "app_night_between",
@@ -1061,7 +1125,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.495 min of wake-time delay per additional minute of use (printed as 0.495); standardized beta printed as 0.353. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.495 min of wake-time delay per additional minute of use (printed as 0.495); standardized beta printed as 0.353. No CI or SE printed in the table. [complete pass] Unstandardized B (0.495) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.495
     },
     {
      "iv": "app_night_within",
@@ -1073,7 +1138,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.154 min of sleep per additional minute of use (printed as -0.154); standardized beta printed as -0.158. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.154 min of sleep per additional minute of use (printed as -0.154); standardized beta printed as -0.158. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.154) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.154
     },
     {
      "iv": "app_night_between",
@@ -1085,7 +1151,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.170 min of sleep per additional minute of use (printed as -0.170); standardized beta printed as -0.173. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.170 min of sleep per additional minute of use (printed as -0.170); standardized beta printed as -0.173. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.17) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.17
     },
     {
      "iv": "app_night_within",
@@ -1097,7 +1164,8 @@
      "p_label": ".530",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.006 min of MVPA per additional minute of use (printed as -0.006); standardized beta printed as -0.011. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.006 min of MVPA per additional minute of use (printed as -0.006); standardized beta printed as -0.011. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.006) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.53 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.006
     },
     {
      "iv": "app_night_between",
@@ -1109,7 +1177,8 @@
      "p_label": ".361",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.022 min of MVPA per additional minute of use (printed as -0.022); standardized beta printed as -0.041. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.022 min of MVPA per additional minute of use (printed as -0.022); standardized beta printed as -0.041. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.022) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.361 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.022
     },
     {
      "iv": "app_night_within",
@@ -1121,7 +1190,8 @@
      "p_label": ".002",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.064 min sedentary per additional minute of use (printed as 0.064); standardized beta printed as 0.018. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.064 min sedentary per additional minute of use (printed as 0.064); standardized beta printed as 0.018. No CI or SE printed in the table. [complete pass] Unstandardized B (0.064) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.002 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.064
     },
     {
      "iv": "app_night_between",
@@ -1133,7 +1203,8 @@
      "p_label": ".124",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.322 min sedentary per additional minute of use (printed as 0.322); standardized beta printed as 0.091. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.322 min sedentary per additional minute of use (printed as 0.322); standardized beta printed as 0.091. No CI or SE printed in the table. [complete pass] Unstandardized B (0.322) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.124 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.322
     },
     {
      "iv": "app_night_within",
@@ -1145,7 +1216,8 @@
      "p_label": ".001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = -2.655 steps per additional minute of use (printed as -2.655); standardized beta printed as -0.054. No CI or SE printed in the table."
+     "note": "Unstandardized B = -2.655 steps per additional minute of use (printed as -2.655); standardized beta printed as -0.054. No CI or SE printed in the table. [complete pass] Unstandardized B (-2.655) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.001 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -2.655
     },
     {
      "iv": "app_night_between",
@@ -1157,7 +1229,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = -9.204 steps per additional minute of use (printed as -9.204); standardized beta printed as -0.186. No CI or SE printed in the table."
+     "note": "Unstandardized B = -9.204 steps per additional minute of use (printed as -9.204); standardized beta printed as -0.186. No CI or SE printed in the table. [complete pass] Unstandardized B (-9.204) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -9.204
     },
     {
      "iv": "kb_day_within",
@@ -1169,7 +1242,8 @@
      "p_label": ".129",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.155 min of sleep-onset delay per additional minute of use (printed as 0.155); standardized beta printed as 0.023. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.155 min of sleep-onset delay per additional minute of use (printed as 0.155); standardized beta printed as 0.023. No CI or SE printed in the table. [complete pass] Unstandardized B (0.155) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.129 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.155
     },
     {
      "iv": "kb_day_between",
@@ -1181,7 +1255,8 @@
      "p_label": ".079",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.451 min of sleep-onset delay per additional minute of use (printed as 0.451); standardized beta printed as 0.068. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.451 min of sleep-onset delay per additional minute of use (printed as 0.451); standardized beta printed as 0.068. No CI or SE printed in the table. [complete pass] Unstandardized B (0.451) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.079 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.451
     },
     {
      "iv": "kb_day_within",
@@ -1193,7 +1268,8 @@
      "p_label": ".742",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.039 min of wake-time delay per additional minute of use (printed as -0.039); standardized beta printed as -0.006. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.039 min of wake-time delay per additional minute of use (printed as -0.039); standardized beta printed as -0.006. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.039) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.742 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.039
     },
     {
      "iv": "kb_day_between",
@@ -1205,7 +1281,8 @@
      "p_label": ".596",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.129 min of wake-time delay per additional minute of use (printed as 0.129); standardized beta printed as 0.019. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.129 min of wake-time delay per additional minute of use (printed as 0.129); standardized beta printed as 0.019. No CI or SE printed in the table. [complete pass] Unstandardized B (0.129) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.596 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.129
     },
     {
      "iv": "kb_day_within",
@@ -1217,7 +1294,8 @@
      "p_label": ".258",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.101 min of sleep per additional minute of use (printed as -0.101); standardized beta printed as -0.021. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.101 min of sleep per additional minute of use (printed as -0.101); standardized beta printed as -0.021. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.101) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.258 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.101
     },
     {
      "iv": "kb_day_between",
@@ -1229,7 +1307,8 @@
      "p_label": ".431",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.124 min of sleep per additional minute of use (printed as -0.124); standardized beta printed as -0.026. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.124 min of sleep per additional minute of use (printed as -0.124); standardized beta printed as -0.026. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.124) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.431 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.124
     },
     {
      "iv": "kb_day_within",
@@ -1241,7 +1320,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.116 min of MVPA per additional minute of use (printed as -0.116); standardized beta printed as -0.046. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.116 min of MVPA per additional minute of use (printed as -0.116); standardized beta printed as -0.046. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.116) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.116
     },
     {
      "iv": "kb_day_between",
@@ -1253,7 +1333,8 @@
      "p_label": ".440",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.059 min of MVPA per additional minute of use (printed as 0.059); standardized beta printed as 0.023. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.059 min of MVPA per additional minute of use (printed as 0.059); standardized beta printed as 0.023. No CI or SE printed in the table. [complete pass] Unstandardized B (0.059) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.44 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.059
     },
     {
      "iv": "kb_day_within",
@@ -1265,7 +1346,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.329 min sedentary per additional minute of use (printed as 0.329); standardized beta printed as 0.019. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.329 min sedentary per additional minute of use (printed as 0.329); standardized beta printed as 0.019. No CI or SE printed in the table. [complete pass] Unstandardized B (0.329) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.329
     },
     {
      "iv": "kb_day_between",
@@ -1277,7 +1359,8 @@
      "p_label": ".027",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 1.578 min sedentary per additional minute of use (printed as 1.578); standardized beta printed as 0.092. No CI or SE printed in the table."
+     "note": "Unstandardized B = 1.578 min sedentary per additional minute of use (printed as 1.578); standardized beta printed as 0.092. No CI or SE printed in the table. [complete pass] Unstandardized B (1.578) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.027 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 1.578
     },
     {
      "iv": "kb_day_within",
@@ -1289,7 +1372,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = -12.95 steps per additional minute of use (printed as -12.95); standardized beta printed as -0.054. No CI or SE printed in the table."
+     "note": "Unstandardized B = -12.95 steps per additional minute of use (printed as -12.95); standardized beta printed as -0.054. No CI or SE printed in the table. [complete pass] Unstandardized B (-12.95) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -12.95
     },
     {
      "iv": "kb_day_between",
@@ -1301,7 +1385,8 @@
      "p_label": ".408",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = -7.029 steps per additional minute of use (printed as -7.029); standardized beta printed as -0.030. No CI or SE printed in the table."
+     "note": "Unstandardized B = -7.029 steps per additional minute of use (printed as -7.029); standardized beta printed as -0.030. No CI or SE printed in the table. [complete pass] Unstandardized B (-7.029) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.408 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -7.029
     },
     {
      "iv": "kb_eve_within",
@@ -1313,7 +1398,8 @@
      "p_label": ".152",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.375 min of sleep-onset delay per additional minute of use (printed as 0.375); standardized beta printed as 0.019. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.375 min of sleep-onset delay per additional minute of use (printed as 0.375); standardized beta printed as 0.019. No CI or SE printed in the table. [complete pass] Unstandardized B (0.375) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.152 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.375
     },
     {
      "iv": "kb_eve_between",
@@ -1325,7 +1411,8 @@
      "p_label": ".028",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 2.021 min of sleep-onset delay per additional minute of use (printed as 2.021); standardized beta printed as 0.104. No CI or SE printed in the table."
+     "note": "Unstandardized B = 2.021 min of sleep-onset delay per additional minute of use (printed as 2.021); standardized beta printed as 0.104. No CI or SE printed in the table. [complete pass] Unstandardized B (2.021) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.028 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 2.021
     },
     {
      "iv": "kb_eve_within",
@@ -1337,7 +1424,8 @@
      "p_label": ".793",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.080 min of wake-time delay per additional minute of use (printed as 0.080); standardized beta printed as 0.004. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.080 min of wake-time delay per additional minute of use (printed as 0.080); standardized beta printed as 0.004. No CI or SE printed in the table. [complete pass] Unstandardized B (0.08) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.793 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.08
     },
     {
      "iv": "kb_eve_between",
@@ -1349,7 +1437,8 @@
      "p_label": ".207",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 1.112 min of wake-time delay per additional minute of use (printed as 1.112); standardized beta printed as 0.056. No CI or SE printed in the table."
+     "note": "Unstandardized B = 1.112 min of wake-time delay per additional minute of use (printed as 1.112); standardized beta printed as 0.056. No CI or SE printed in the table. [complete pass] Unstandardized B (1.112) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.207 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 1.112
     },
     {
      "iv": "kb_eve_within",
@@ -1361,7 +1450,8 @@
      "p_label": ".423",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.184 min of sleep per additional minute of use (printed as -0.184); standardized beta printed as -0.013. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.184 min of sleep per additional minute of use (printed as -0.184); standardized beta printed as -0.013. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.184) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.423 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.184
     },
     {
      "iv": "kb_eve_between",
@@ -1373,7 +1463,8 @@
      "p_label": ".441",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -0.444 min of sleep per additional minute of use (printed as -0.444); standardized beta printed as -0.032. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.444 min of sleep per additional minute of use (printed as -0.444); standardized beta printed as -0.032. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.444) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.441 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.444
     },
     {
      "iv": "kb_eve_within",
@@ -1385,7 +1476,8 @@
      "p_label": ".476",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.062 min of MVPA per additional minute of use (printed as 0.062); standardized beta printed as 0.008. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.062 min of MVPA per additional minute of use (printed as 0.062); standardized beta printed as 0.008. No CI or SE printed in the table. [complete pass] Unstandardized B (0.062) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.476 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.062
     },
     {
      "iv": "kb_eve_between",
@@ -1397,7 +1489,8 @@
      "p_label": ".081",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.441 min of MVPA per additional minute of use (printed as 0.441); standardized beta printed as 0.059. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.441 min of MVPA per additional minute of use (printed as 0.441); standardized beta printed as 0.059. No CI or SE printed in the table. [complete pass] Unstandardized B (0.441) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.081 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.441
     },
     {
      "iv": "kb_eve_within",
@@ -1409,7 +1502,8 @@
      "p_label": ".360",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.186 min sedentary per additional minute of use (printed as 0.186); standardized beta printed as 0.004. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.186 min sedentary per additional minute of use (printed as 0.186); standardized beta printed as 0.004. No CI or SE printed in the table. [complete pass] Unstandardized B (0.186) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.36 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.186
     },
     {
      "iv": "kb_eve_between",
@@ -1421,7 +1515,8 @@
      "p_label": ".074",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 4.071 min sedentary per additional minute of use (printed as 4.071); standardized beta printed as 0.081. No CI or SE printed in the table."
+     "note": "Unstandardized B = 4.071 min sedentary per additional minute of use (printed as 4.071); standardized beta printed as 0.081. No CI or SE printed in the table. [complete pass] Unstandardized B (4.071) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.074 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 4.071
     },
     {
      "iv": "kb_eve_within",
@@ -1433,7 +1528,8 @@
      "p_label": ".993",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.069 steps per additional minute of use (printed as -0.069); standardized beta printed as -0.000. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.069 steps per additional minute of use (printed as -0.069); standardized beta printed as -0.000. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.069) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.993 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.069
     },
     {
      "iv": "kb_eve_between",
@@ -1445,7 +1541,8 @@
      "p_label": ".957",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = 1.517 steps per additional minute of use (printed as 1.517); standardized beta printed as 0.002. No CI or SE printed in the table."
+     "note": "Unstandardized B = 1.517 steps per additional minute of use (printed as 1.517); standardized beta printed as 0.002. No CI or SE printed in the table. [complete pass] Unstandardized B (1.517) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.957 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 1.517
     },
     {
      "iv": "kb_night_within",
@@ -1457,7 +1554,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 1.356 min of sleep-onset delay per additional minute of use (printed as 1.356); standardized beta printed as 0.118. No CI or SE printed in the table."
+     "note": "Unstandardized B = 1.356 min of sleep-onset delay per additional minute of use (printed as 1.356); standardized beta printed as 0.118. No CI or SE printed in the table. [complete pass] Unstandardized B (1.356) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 1.356
     },
     {
      "iv": "kb_night_between",
@@ -1469,7 +1567,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 3.937 min of sleep-onset delay per additional minute of use (printed as 3.937); standardized beta printed as 0.341. No CI or SE printed in the table."
+     "note": "Unstandardized B = 3.937 min of sleep-onset delay per additional minute of use (printed as 3.937); standardized beta printed as 0.341. No CI or SE printed in the table. [complete pass] Unstandardized B (3.937) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 3.937
     },
     {
      "iv": "kb_night_within",
@@ -1481,7 +1580,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.755 min of wake-time delay per additional minute of use (printed as 0.755); standardized beta printed as 0.064. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.755 min of wake-time delay per additional minute of use (printed as 0.755); standardized beta printed as 0.064. No CI or SE printed in the table. [complete pass] Unstandardized B (0.755) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 0.755
     },
     {
      "iv": "kb_night_between",
@@ -1493,7 +1593,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
-     "note": "Unstandardized B = 2.588 min of wake-time delay per additional minute of use (printed as 2.588); standardized beta printed as 0.219. No CI or SE printed in the table."
+     "note": "Unstandardized B = 2.588 min of wake-time delay per additional minute of use (printed as 2.588); standardized beta printed as 0.219. No CI or SE printed in the table. [complete pass] Unstandardized B (2.588) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": 2.588
     },
     {
      "iv": "kb_night_within",
@@ -1505,7 +1606,8 @@
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.661 min of sleep per additional minute of use (printed as -0.661); standardized beta printed as -0.080. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.661 min of sleep per additional minute of use (printed as -0.661); standardized beta printed as -0.080. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.661) now stored in field 'B' (supplementary; native metric remains beta_std). CI inputs confirmed missing: Table 3 (p.6) prints only B, beta_std and p (here '<0.001', an inequality); no SE, t, z, df or CI in Tables 1-3, Results text pp.4-6 (text gives only ranges of betas with 'all P<=' bounds), or Abstract; Fig. 1 (p.7) shows 95% CIs only as unlabelled error bars (not read off the plot). Model output with SEs is only in the online supplementary material, which is not in this repo's PDF folder.",
+     "B": -0.661
     },
     {
      "iv": "kb_night_between",
@@ -1517,7 +1619,8 @@
      "p_label": ".005",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = -1.017 min of sleep per additional minute of use (printed as -1.017); standardized beta printed as -0.124. No CI or SE printed in the table."
+     "note": "Unstandardized B = -1.017 min of sleep per additional minute of use (printed as -1.017); standardized beta printed as -0.124. No CI or SE printed in the table. [complete pass] Unstandardized B (-1.017) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.005 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -1.017
     },
     {
      "iv": "kb_night_within",
@@ -1529,7 +1632,8 @@
      "p_label": ".248",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = 0.064 min of MVPA per additional minute of use (printed as 0.064); standardized beta printed as 0.015. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.064 min of MVPA per additional minute of use (printed as 0.064); standardized beta printed as 0.015. No CI or SE printed in the table. [complete pass] Unstandardized B (0.064) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.248 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.064
     },
     {
      "iv": "kb_night_between",
@@ -1541,7 +1645,8 @@
      "p_label": ".648",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 0.080 min of MVPA per additional minute of use (printed as 0.080); standardized beta printed as 0.018. No CI or SE printed in the table."
+     "note": "Unstandardized B = 0.080 min of MVPA per additional minute of use (printed as 0.080); standardized beta printed as 0.018. No CI or SE printed in the table. [complete pass] Unstandardized B (0.08) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.648 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 0.08
     },
     {
      "iv": "kb_night_within",
@@ -1553,7 +1658,8 @@
      "p_label": ".374",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
-     "note": "Unstandardized B = -0.113 min sedentary per additional minute of use (printed as -0.113); standardized beta printed as -0.004. No CI or SE printed in the table."
+     "note": "Unstandardized B = -0.113 min sedentary per additional minute of use (printed as -0.113); standardized beta printed as -0.004. No CI or SE printed in the table. [complete pass] Unstandardized B (-0.113) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.374 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -0.113
     },
     {
      "iv": "kb_night_between",
@@ -1565,7 +1671,8 @@
      "p_label": ".069",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
-     "note": "Unstandardized B = 2.991 min sedentary per additional minute of use (printed as 2.991); standardized beta printed as 0.100. No CI or SE printed in the table."
+     "note": "Unstandardized B = 2.991 min sedentary per additional minute of use (printed as 2.991); standardized beta printed as 0.100. No CI or SE printed in the table. [complete pass] Unstandardized B (2.991) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.069 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 2.991
     },
     {
      "iv": "kb_night_within",
@@ -1577,7 +1684,8 @@
      "p_label": ".626",
      "sig": false,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Within-Person Effect columns",
-     "note": "Unstandardized B = 2.371 steps per additional minute of use (printed as 2.371); standardized beta printed as 0.006. No CI or SE printed in the table."
+     "note": "Unstandardized B = 2.371 steps per additional minute of use (printed as 2.371); standardized beta printed as 0.006. No CI or SE printed in the table. [complete pass] Unstandardized B (2.371) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.626 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": 2.371
     },
     {
      "iv": "kb_night_between",
@@ -1589,9 +1697,11 @@
      "p_label": ".038",
      "sig": true,
      "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Between-Person Effect columns",
-     "note": "Unstandardized B = -41.43 steps per additional minute of use (printed as -41.43); standardized beta printed as -0.100. No CI or SE printed in the table."
+     "note": "Unstandardized B = -41.43 steps per additional minute of use (printed as -41.43); standardized beta printed as -0.100. No CI or SE printed in the table. [complete pass] Unstandardized B (-41.43) now stored in field 'B' (supplementary; native metric remains beta_std). No CI or SE is printed anywhere in the paper; Fig. 1 (p.7) plots 95% CIs for within/between betas only as unlabelled error bars (not read). Exact p = 0.038 printed in Table 3 is the CI input (CI derivable from beta and exact p). No t, z, df or per-model N printed.",
+     "B": -41.43
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -1621,7 +1731,1290 @@
   "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines section 4a). Alternative from raw B: beta_std = B * SD_IV / SD_DV, then the same formula.",
   "contrast_type": "per 1 SD of daily minutes of smartphone app or keyboard use in the given time window (combined effect, M1); per 1 SD of the within-person daily deviation (M2 within) or of the participant mean (M2 between)",
   "transformable": true,
-  "notes": "The paper prints standardized betas directly in Table 3 (p. 6), so d can be derived without SDs. No CIs or SEs are printed in the table, so d CIs cannot be computed from the table; Fig. 1 (p. 7) plots 95% CIs for M2 betas but these were not read off the figure. sd_iv for M1 is the grand (all-observation) SD from Table 2 (p. 5); sd_iv for M2 between-person terms is the participant-mean SD from Table 2; the within-person deviation SD is not reported (null). sd_dv is the grand SD from Table 2: steps 4578.02, sedentary 333.41, exercise 47.52, total sleep 95.39; sleep onset SD printed as '2 h, 14 m' and wake time as '2 h, 17 m', converted to 134 and 137 min. The paper does not state exactly how beta_std was standardized (e.g., grand vs. within SDs); recomputing B*SD_IV/SD_DV with the grand SDs reproduces the printed beta_std only approximately (e.g., app 6AM-7:59PM on exercise: -0.046*140.26/47.52 = -0.136 vs. printed -0.128), so the printed beta_std should be used. Effects are per-day associations from intensive longitudinal data and are not directly comparable to between-person cross-sectional d's from questionnaire-based papers."
+  "notes": "The paper prints standardized betas directly in Table 3 (p. 6), so d can be derived without SDs. No CIs or SEs are printed in the table, so d CIs cannot be computed from the table; Fig. 1 (p. 7) plots 95% CIs for M2 betas but these were not read off the figure. sd_iv for M1 is the grand (all-observation) SD from Table 2 (p. 5); sd_iv for M2 between-person terms is the participant-mean SD from Table 2; the within-person deviation SD is not reported (null). sd_dv is the grand SD from Table 2: steps 4578.02, sedentary 333.41, exercise 47.52, total sleep 95.39; sleep onset SD printed as '2 h, 14 m' and wake time as '2 h, 17 m', converted to 134 and 137 min. The paper does not state exactly how beta_std was standardized (e.g., grand vs. within SDs); recomputing B*SD_IV/SD_DV with the grand SDs reproduces the printed beta_std only approximately (e.g., app 6AM-7:59PM on exercise: -0.046*140.26/47.52 = -0.136 vs. printed -0.128), so the printed beta_std should be used. Effects are per-day associations from intensive longitudinal data and are not directly comparable to between-person cross-sectional d's from questionnaire-based papers. [complete pass 2026-10-01] Re-read the full 10-page PDF (no supplement file exists in docs/pdfs for this DOI). All 108 beta_std/p values re-verified against Table 3. Added unstandardized B (field 'B', per minute) to every estimate from Table 3; set iv_type = continuous on M1 and M2. No SE, t, z, df or numeric CI is printed anywhere; exact p (Table 3) is the only CI input and exists for cells with p >= .001; cells printed as '<0.001' have no CI input. Within-person deviation SDs are not reported."
  },
- "extraction_flags": "1) The authors interpret both the combined-effect models and the within/between decomposition (both appear in the Abstract), so I extracted two cards: M1 with 36 combined estimates and M2 with 72 within- and between-person estimates. A reviewer should decide whether both cards belong in the meta-matrix or only one; they share the same data. 2) Native metric is set to the standardized beta printed in Table 3. Each estimate's note gives the unstandardized B per minute. No CIs or SEs are printed in Table 3. Fig. 1 plots 95% CIs for the M2 betas, but I did not read values off the figure, so beta_lo and beta_hi are null. 3) The paper does not say how beta_std was standardized. Recomputing it from B and the grand SDs in Table 2 matches the printed values only approximately (e.g., -0.136 vs. -0.128), so use the printed beta_std. 4) The covariate set \"varied by model\" per the Table 3 note. The 'school night' covariate is listed in that note but not in the Methods, and the paper does not say which models include which covariates. OS was included only in the keyboard models. 5) The analytic N per model (days and participants) is not reported, since each model uses pairwise-complete days. App-use IVs are Android-only (302 participants); keyboard IVs cover 791. 6) The sleep-onset and wake-time SDs were printed as '2 h, 14 m' and '2 h, 17 m' and converted to 134 and 137 minutes. 7) I counted significance at P<.05 with no multiple-comparison correction, across 108 tests. 8) The hourly-binned models (Supplementary Fig. S1) and all sensitivity analyses are supplementary and not printed in the PDF, so they are excluded; reviewers may want to check the online supplement.json"
+ "extraction_flags": "1) The authors interpret both the combined-effect models and the within/between decomposition (both appear in the Abstract), so I extracted two cards: M1 with 36 combined estimates and M2 with 72 within- and between-person estimates. A reviewer should decide whether both cards belong in the meta-matrix or only one; they share the same data. 2) Native metric is set to the standardized beta printed in Table 3. Each estimate's note gives the unstandardized B per minute. No CIs or SEs are printed in Table 3. Fig. 1 plots 95% CIs for the M2 betas, but I did not read values off the figure, so beta_lo and beta_hi are null. 3) The paper does not say how beta_std was standardized. Recomputing it from B and the grand SDs in Table 2 matches the printed values only approximately (e.g., -0.136 vs. -0.128), so use the printed beta_std. 4) The covariate set \"varied by model\" per the Table 3 note. The 'school night' covariate is listed in that note but not in the Methods, and the paper does not say which models include which covariates. OS was included only in the keyboard models. 5) The analytic N per model (days and participants) is not reported, since each model uses pairwise-complete days. App-use IVs are Android-only (302 participants); keyboard IVs cover 791. 6) The sleep-onset and wake-time SDs were printed as '2 h, 14 m' and '2 h, 17 m' and converted to 134 and 137 minutes. 7) I counted significance at P<.05 with no multiple-comparison correction, across 108 tests. 8) The hourly-binned models (Supplementary Fig. S1) and all sensitivity analyses are supplementary and not printed in the PDF, so they are excluded; reviewers may want to check the online supplement.json",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 (all cells)",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.3.9-2.3.10 and 2.4 p.3-4: IVs are minutes of app/keyboard use (continuous); Table 3 note: beta = effect of one additional minute"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.018
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.02
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": 0.006
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.046
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x exer",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.169
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -7.105
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_day x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.082
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.118
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.063
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.038
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.222
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -6.783
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_eve x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.369
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.246
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.158
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x sleep",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.008
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.067
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -3.218
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 app_night x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.196
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x wake",
+   "action": "filled_value",
+   "value": {
+    "B": -0.006
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.107
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.087
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.344
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -12.287
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_day x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.503
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.192
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.22
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.103
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.217
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_eve x steps",
+   "action": "filled_value",
+   "value": {
+    "B": 0.045
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 1.548
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.942
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.707
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x sleep",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.065
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x sed",
+   "action": "filled_value",
+   "value": {
+    "B": -0.097
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 kb_night x steps",
+   "action": "filled_value",
+   "value": {
+    "B": 0.142
+   },
+   "where": "Table 3 p.6, Combined Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 (all cells)",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.3.9-2.3.10 and 2.4 p.3-4: IVs are minutes of app/keyboard use (continuous); Table 3 note: beta = effect of one additional minute"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.005
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.116
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.011
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.062
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": 0.02
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.043
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.052
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x exer",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.004
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.168
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.369
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -7.344
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_within x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_day_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -4.103
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": -0.002
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.925
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.076
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.387
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": 0.024
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.462
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.043
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.003
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.218
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.908
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -6.846
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_within x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_eve_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -5.73
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.33
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.599
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.19
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.495
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.154
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x sleep",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.17
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x sleep",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.006
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.022
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.064
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.322
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -2.655
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -9.204
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 app_night_between x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.155
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.451
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": -0.039
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.129
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.101
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.124
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": -0.116
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x exer",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.059
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.329
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x sed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 1.578
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -12.95
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_within x steps",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_day_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -7.029
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.375
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 2.021
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.08
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 1.112
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.184
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.444
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.062
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.441
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 0.186
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 4.071
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -0.069
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_eve_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": 1.517
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 1.356
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x bed",
+   "action": "filled_value",
+   "value": {
+    "B": 3.937
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x bed",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 0.755
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x wake",
+   "action": "filled_value",
+   "value": {
+    "B": 2.588
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x wake",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -0.661
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x sleep",
+   "action": "confirmed_missing",
+   "value": "beta_lo/beta_hi/se (p printed only as <0.001)",
+   "where": "Checked Table 3 p.6, text pp.4-6, Fig. 1 p.7 (unlabelled bars), Abstract; online supplement not available"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x sleep",
+   "action": "filled_value",
+   "value": {
+    "B": -1.017
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.064
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x exer",
+   "action": "filled_value",
+   "value": {
+    "B": 0.08
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x sed",
+   "action": "filled_value",
+   "value": {
+    "B": -0.113
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x sed",
+   "action": "filled_value",
+   "value": {
+    "B": 2.991
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_within x steps",
+   "action": "filled_value",
+   "value": {
+    "B": 2.371
+   },
+   "where": "Table 3 p.6, Within-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 kb_night_between x steps",
+   "action": "filled_value",
+   "value": {
+    "B": -41.43
+   },
+   "where": "Table 3 p.6, Between-Person Effect column 'ß' (unstandardized, per additional minute)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis app_day_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis app_eve_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis app_night_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis kb_day_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis kb_eve_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_axis kb_night_within",
+   "action": "confirmed_missing",
+   "value": "sd_iv (within-person deviation SD)",
+   "where": "Table 2 p.5 (grand SD and participant-mean SD only), text pp.3-6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 + M2, all 108 estimates",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "beta_lo/beta_hi, se, t/z, df: not printed anywhere (Table 3 gives only B, beta_std, P; Fig. 1 p.7 shows 95% CIs only as unlabelled error bars; no supplement file in docs/pdfs). Audit re-checked all 108 B, beta_std, p/p_label, sig and location values against Table 3 p.6 and all sd_iv/sd_dv against Table 2 p.5: no discrepancies; iv_type continuous confirmed for M1 and M2; estimate set complete (6 IVs x 6 DVs x combined/within/between = 108).",
+   "where": "Table 3 p.6; Table 2 p.5; Fig. 1 p.7; Results pp.4-6"
+  }
+ ]
 }

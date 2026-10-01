@@ -77,7 +77,11 @@
      "p_label": "0.74",
      "sig": false,
      "location": "Table 2, Social and video chat, Boy",
-     "note": "Means 16.9 (autism) vs 15.5 (TD) min/day.",
+     "note": "Means 16.9 (autism) vs 15.5 (TD) min/day. n1/n0 = 159 autism / 795 TD (Table 2 'Sample size'). SD of minutes/day not printed: checked Table 1 (demographics only), Table 2 (n, mean, ratio, CI, p only), Results text pp.3-4 (only overall means 17.1 / 12.4 min), Tables 3-5, Discussion/limitations pp.6-8; no supplement exists (9-page PDF, no supplementary material section). SE not printed; CI and exact p printed.",
+     "n1": 159,
+     "n0": 795,
+     "mean1": 16.9,
+     "mean0": 15.5,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:ratio_of_means' (flagged for later review level)"
     },
@@ -91,7 +95,11 @@
      "p_label": "0.04",
      "sig": true,
      "location": "Table 2, Social and video chat, Girl",
-     "note": "Means 45.5 (autism) vs 21.9 (TD) min/day. Authors interpret as girls with autism spending 108% more time on social networking/video chat.",
+     "note": "Means 45.5 (autism) vs 21.9 (TD) min/day. Authors interpret as girls with autism spending 108% more time on social networking/video chat. n1/n0 = 27 autism / 135 TD (Table 2 'Sample size'). SD of minutes/day not printed: checked Table 1 (demographics only), Table 2 (n, mean, ratio, CI, p only), Results text pp.3-4 (only overall means 17.1 / 12.4 min), Tables 3-5, Discussion/limitations pp.6-8; no supplement exists (9-page PDF, no supplementary material section). SE not printed; CI and exact p printed.",
+     "n1": 27,
+     "n0": 135,
+     "mean1": 45.5,
+     "mean0": 21.9,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:ratio_of_means' (flagged for later review level)"
     },
@@ -105,7 +113,11 @@
      "p_label": "0.65",
      "sig": false,
      "location": "Table 2, Texting, Boy",
-     "note": "Means 11.4 (autism) vs 12.5 (TD) min/day.",
+     "note": "Means 11.4 (autism) vs 12.5 (TD) min/day. n1/n0 = 159 autism / 795 TD (Table 2 'Sample size'). SD of minutes/day not printed: checked Table 1 (demographics only), Table 2 (n, mean, ratio, CI, p only), Results text pp.3-4 (only overall means 17.1 / 12.4 min), Tables 3-5, Discussion/limitations pp.6-8; no supplement exists (9-page PDF, no supplementary material section). SE not printed; CI and exact p printed.",
+     "n1": 159,
+     "n0": 795,
+     "mean1": 11.4,
+     "mean0": 12.5,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:ratio_of_means' (flagged for later review level)"
     },
@@ -119,11 +131,16 @@
      "p_label": "0.83",
      "sig": false,
      "location": "Table 2, Texting, Girl",
-     "note": "Means 14.6 (autism) vs 13.8 (TD) min/day.",
+     "note": "Means 14.6 (autism) vs 13.8 (TD) min/day. n1/n0 = 27 autism / 135 TD (Table 2 'Sample size'). SD of minutes/day not printed: checked Table 1 (demographics only), Table 2 (n, mean, ratio, CI, p only), Results text pp.3-4 (only overall means 17.1 / 12.4 min), Tables 3-5, Discussion/limitations pp.6-8; no supplement exists (9-page PDF, no supplementary material section). SE not printed; CI and exact p printed.",
+     "n1": 27,
+     "n0": 135,
+     "mean1": 14.6,
+     "mean0": 13.8,
      "derived_d": null,
      "derived_d_method": "no Cohen's d conversion for 'other:ratio_of_means' (flagged for later review level)"
     }
-   ]
+   ],
+   "iv_type": "binary"
   },
   {
    "model_id": "M2",
@@ -208,7 +225,9 @@
      "sig": false,
      "p0": 0.148,
      "location": "Table 3, Social and video chat, 1-44 min",
-     "note": "Prevalence ratio. Reference (0 min) prevalence 14.8%. Overall p for social/video chat = 0.58.",
+     "note": "Prevalence ratio. Reference (0 min) prevalence 14.8%. Overall p for social/video chat = 0.58. Exposed n = 338, reference (0 min) n = 670 (Table 3 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 338,
+     "n0": 670,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.08(1 \u2212 0.148) / (1 \u2212 1.08\u00d70.148) = 1.0952;  d = ln(1.0952) \u00d7 0.5513 = 0.0501",
      "derived_d": 0.0501,
@@ -227,7 +246,9 @@
      "sig": false,
      "p0": 0.148,
      "location": "Table 3, Social and video chat, 45 min or more",
-     "note": "Prevalence ratio; 17.8% obese vs 14.8% in reference.",
+     "note": "Prevalence ratio; 17.8% obese vs 14.8% in reference. Exposed n = 108, reference (0 min) n = 670 (Table 3 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 108,
+     "n0": 670,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.2(1 \u2212 0.148) / (1 \u2212 1.2\u00d70.148) = 1.2432;  d = ln(1.2432) \u00d7 0.5513 = 0.12",
      "derived_d": 0.12,
@@ -246,7 +267,9 @@
      "sig": false,
      "p0": 0.152,
      "location": "Table 3, Texting, 1-29 min",
-     "note": "Prevalence ratio. Reference prevalence 15.2%. Overall p for texting = 0.04 in Table 3 and Results text; abstract states 0.02.",
+     "note": "Prevalence ratio. Reference prevalence 15.2%. Overall p for texting = 0.04 in Table 3 and Results text; abstract states 0.02. Exposed n = 306, reference (0 min) n = 671 (Table 3 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 306,
+     "n0": 671,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 0.88(1 \u2212 0.152) / (1 \u2212 0.88\u00d70.152) = 0.8615;  d = ln(0.8615) \u00d7 0.5513 = -0.0822",
      "derived_d": -0.0822,
@@ -265,7 +288,9 @@
      "sig": false,
      "p0": 0.152,
      "location": "Table 3, Texting, 30 min or more",
-     "note": "Prevalence ratio; 21.5% vs 15.2%. Printed p = 0.05 with CI lower bound 1.00; pairwise significance borderline. The omnibus texting test (overall p = 0.04) is significant and the authors report texting as significantly associated with obesity.",
+     "note": "Prevalence ratio; 21.5% vs 15.2%. Printed p = 0.05 with CI lower bound 1.00; pairwise significance borderline. The omnibus texting test (overall p = 0.04) is significant and the authors report texting as significantly associated with obesity. Exposed n = 139, reference (0 min) n = 671 (Table 3 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 139,
+     "n0": 671,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.42(1 \u2212 0.152) / (1 \u2212 1.42\u00d70.152) = 1.5356;  d = ln(1.5356) \u00d7 0.5513 = 0.2365",
      "derived_d": 0.2365,
@@ -284,7 +309,9 @@
      "sig": false,
      "p0": 0.176,
      "location": "Table 5, Social and video chat, children with autism, 1-44 min",
-     "note": "Reference prevalence 17.6%. Overall p = 0.82.",
+     "note": "Reference prevalence 17.6%. Overall p = 0.82. Exposed n = 45, reference (0 min) n = 119 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 45,
+     "n0": 119,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.13(1 \u2212 0.176) / (1 \u2212 1.13\u00d70.176) = 1.1623;  d = ln(1.1623) \u00d7 0.5513 = 0.0829",
      "derived_d": 0.0829,
@@ -303,6 +330,9 @@
      "sig": false,
      "p0": 0.176,
      "location": "Table 5, Social and video chat, children with autism, 45 min or more",
+     "n1": 22,
+     "n0": 119,
+     "note": "Exposed n = 22, reference (0 min) n = 119 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.29(1 \u2212 0.176) / (1 \u2212 1.29\u00d70.176) = 1.3752;  d = ln(1.3752) \u00d7 0.5513 = 0.1756",
      "derived_d": 0.1756,
@@ -321,7 +351,9 @@
      "sig": false,
      "p0": 0.142,
      "location": "Table 5, Social and video chat, typically developing, 1-44 min",
-     "note": "Reference prevalence 14.2%. Overall p = 0.80.",
+     "note": "Reference prevalence 14.2%. Overall p = 0.80. Exposed n = 293, reference (0 min) n = 551 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 293,
+     "n0": 551,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.08(1 \u2212 0.142) / (1 \u2212 1.08\u00d70.142) = 1.0945;  d = ln(1.0945) \u00d7 0.5513 = 0.0498",
      "derived_d": 0.0498,
@@ -340,6 +372,9 @@
      "sig": false,
      "p0": 0.142,
      "location": "Table 5, Social and video chat, typically developing, 45 min or more",
+     "n1": 86,
+     "n0": 551,
+     "note": "Exposed n = 86, reference (0 min) n = 551 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.17(1 \u2212 0.142) / (1 \u2212 1.17\u00d70.142) = 1.2039;  d = ln(1.2039) \u00d7 0.5513 = 0.1023",
      "derived_d": 0.1023,
@@ -358,7 +393,9 @@
      "sig": false,
      "p0": 0.166,
      "location": "Table 5, Texting, children with autism, 1-29 min",
-     "note": "Reference prevalence 16.6%. Overall p = 0.42.",
+     "note": "Reference prevalence 16.6%. Overall p = 0.42. Exposed n = 45, reference (0 min) n = 121 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 45,
+     "n0": 121,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.34(1 \u2212 0.166) / (1 \u2212 1.34\u00d70.166) = 1.4373;  d = ln(1.4373) \u00d7 0.5513 = 0.2",
      "derived_d": 0.2,
@@ -377,7 +414,9 @@
      "sig": false,
      "p0": 0.166,
      "location": "Table 5, Texting, children with autism, 30 min or more",
-     "note": "n = 20 in exposure category.",
+     "note": "n = 20 in exposure category. Exposed n = 20, reference (0 min) n = 121 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 20,
+     "n0": 121,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.44(1 \u2212 0.166) / (1 \u2212 1.44\u00d70.166) = 1.5782;  d = ln(1.5782) \u00d7 0.5513 = 0.2516",
      "derived_d": 0.2516,
@@ -396,7 +435,9 @@
      "sig": false,
      "p0": 0.148,
      "location": "Table 5, Texting, typically developing, 1-29 min",
-     "note": "Reference prevalence 14.8%. Overall p = 0.01.",
+     "note": "Reference prevalence 14.8%. Overall p = 0.01. Exposed n = 261, reference (0 min) n = 550 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
+     "n1": 261,
+     "n0": 550,
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 0.79(1 \u2212 0.148) / (1 \u2212 0.79\u00d70.148) = 0.7622;  d = ln(0.7622) \u00d7 0.5513 = -0.1497",
      "derived_d": -0.1497,
@@ -415,6 +456,9 @@
      "sig": false,
      "p0": 0.148,
      "location": "Table 5, Texting, typically developing, 30 min or more",
+     "n1": 119,
+     "n0": 550,
+     "note": "Exposed n = 119, reference (0 min) n = 550 (Table 5 'Sample size'). RR, 95% CI, exact p and p0 all printed; SE not printed (not needed).",
      "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "OR = 1.42(1 \u2212 0.148) / (1 \u2212 1.42\u00d70.148) = 1.5318;  d = ln(1.5318) \u00d7 0.5513 = 0.2351",
      "derived_d": 0.2351,
@@ -422,7 +466,8 @@
      "derived_d_hi": 0.5183,
      "derived_d_method": "RR -> OR -> d (p0=0.148)"
     }
-   ]
+   ],
+   "iv_type": "categorical"
   }
  ],
  "excluded_models": [
@@ -457,8 +502,252 @@
   "conversion_formula": "M2: OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3)/pi (Chinn 2000), with p0 = printed obesity prevalence in the 0-min reference category of the same panel. M1: if treated as a Poisson rate ratio per guidelines \u00a74a, d ~ ln(ratio) * sqrt(3)/pi as a first approximation; an exact d = (M_autism - M_TD)/SD_pooled is not possible because SDs of minutes/day are not reported.",
   "contrast_type": "M1: autism vs typically developing (within boys, within girls), on phone/SM minutes per day. M2: duration category (1-44 or 45+ min social/video chat; 1-29 or 30+ min texting) vs 0 min, on obesity.",
   "transformable": "partial",
-  "notes": "p0 for M2 comes from the reference-row prevalences in Table 3 (14.8% social/video chat, 15.2% texting) and Table 5 (autism 17.6% / TD 14.2% social/video chat; autism 16.6% / TD 14.8% texting), p. 5-6. Exposure prevalence is not small (e.g., 30+ min texting 12.5% of sample) but p0 is the unexposed-group rate, so the RR-to-OR conversion is exact under the guideline formula. M1 has no SD for any DV (only group means in Table 2), so its d is only the Poisson-rate-ratio approximation, which is weak for skewed continuous minutes; treat M1 d's with caution. Neither contrast is a per-SD contrast, so these d's are not directly comparable to per-SD d's from papers like 394."
+  "notes": "p0 for M2 comes from the reference-row prevalences in Table 3 (14.8% social/video chat, 15.2% texting) and Table 5 (autism 17.6% / TD 14.2% social/video chat; autism 16.6% / TD 14.8% texting), p. 5-6. Exposure prevalence is not small (e.g., 30+ min texting 12.5% of sample) but p0 is the unexposed-group rate, so the RR-to-OR conversion is exact under the guideline formula. M1 has no SD for any DV (only group means in Table 2), so its d is only the Poisson-rate-ratio approximation, which is weak for skewed continuous minutes; treat M1 d's with caution. Neither contrast is a per-SD contrast, so these d's are not directly comparable to per-SD d's from papers like 394. [complete-stage check 2026-10-01] Whole 9-page PDF re-read (no supplementary file exists). All M1/M2 native values, 95% CIs and exact p are printed and present. M1 SDs of minutes/day are not printed anywhere, so a mean-difference d cannot be formed; group sizes and group means added per estimate."
  },
  "extraction_flags": "1) M1 (Table 2) treats phone/SM minutes as the DV and parent-reported autism status as the IV. Autism counts as a clinical-diagnosis trait, so it qualifies, but please confirm. The native metric is a Poisson-GEE ratio of means. No SDs are reported for minutes/day, so d can only be approximated by the rough rate-ratio-as-OR route, which makes M1 effectively non-convertible. 2) \"Social and video chat\" combines social networking sites with video chat. That composite is entirely phone/SM, so it is extracted as a qualifying IV/DV. 3) The overall p-value for texting and obesity conflicts within the paper: the abstract says 0.02, while Table 3 and the Results text say 0.04. Separately, the pairwise texting 30+ min PR is 1.42 (1.00-2.01) with printed p = 0.05, which I coded sig=false. Please check that call. 4) The paper does not say whether Table 3's all-children PRs come from a model that includes the autism factor or are marginal. Tables 3 and 5 are in one card (M2), with obesity columns for all children, autism and TD. p0 varies by panel, so I put it on each estimate (reference-row prevalence) and left it null on dv_axis. Please confirm the pipeline reads p0 per estimate. 5) The printed prevalences do not equal raw n/N (for example 5/20 is shown as 23.9%), which suggests they are model-based. 6) The ABCD data release is not stated. There are no covariates beyond propensity matching on age, gender, race/ethnicity and SEP, and no multiple-comparison correction.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods 2.6 p.3; Table 2 p.5 (autism vs TD)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2",
+   "action": "set_iv_type",
+   "value": "categorical",
+   "where": "Tables 3, 5 (3-level duration category vs 0 min)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_boys x svc_min",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 159,
+    "n0": 795
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_boys x svc_min",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-5, text pp.3-8; not printed anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_girls x svc_min",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 27,
+    "n0": 135
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_girls x svc_min",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-5, text pp.3-8; not printed anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_boys x text_min",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 159,
+    "n0": 795
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_boys x text_min",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-5, text pp.3-8; not printed anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_girls x text_min",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 27,
+    "n0": 135
+   },
+   "where": "Table 2 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 autism_girls x text_min",
+   "action": "confirmed_missing",
+   "value": "sd_dv",
+   "where": "Tables 1-5, text pp.3-8; not printed anywhere"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_1_44 x obese_all",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 338,
+    "n0": 670
+   },
+   "where": "Table 3 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_45 x obese_all",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 108,
+    "n0": 670
+   },
+   "where": "Table 3 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_1_29 x obese_all",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 306,
+    "n0": 671
+   },
+   "where": "Table 3 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_30 x obese_all",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 139,
+    "n0": 671
+   },
+   "where": "Table 3 p.5"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_1_44 x obese_autism",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 45,
+    "n0": 119
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_45 x obese_autism",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 22,
+    "n0": 119
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_1_44 x obese_td",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 293,
+    "n0": 551
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 svc_45 x obese_td",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 86,
+    "n0": 551
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_1_29 x obese_autism",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 45,
+    "n0": 121
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_30 x obese_autism",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 20,
+    "n0": 121
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_1_29 x obese_td",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 261,
+    "n0": 550
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 text_30 x obese_td",
+   "action": "filled_ci_input",
+   "value": {
+    "n1": 119,
+    "n0": 550
+   },
+   "where": "Table 5 p.6"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 autism_boys x svc_min",
+   "action": "corrected",
+   "was": "note: 'n1/n0 = %d autism / %d TD' (unfilled placeholder)",
+   "value": "note: 'n1/n0 = 159 autism / 795 TD'",
+   "where": "Table 2, Social and video chat, Boy p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 autism_girls x svc_min",
+   "action": "corrected",
+   "was": "note: 'n1/n0 = %d autism / %d TD' (unfilled placeholder)",
+   "value": "note: 'n1/n0 = 27 autism / 135 TD'",
+   "where": "Table 2, Social and video chat, Girl p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 autism_boys x text_min",
+   "action": "corrected",
+   "was": "note: 'n1/n0 = %d autism / %d TD' (unfilled placeholder)",
+   "value": "note: 'n1/n0 = 159 autism / 795 TD'",
+   "where": "Table 2, Texting, Boy p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 autism_girls x text_min",
+   "action": "corrected",
+   "was": "note: 'n1/n0 = %d autism / %d TD' (unfilled placeholder)",
+   "value": "note: 'n1/n0 = 27 autism / 135 TD'",
+   "where": "Table 2, Texting, Girl p.5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1, M2 all estimates",
+   "action": "confirmed",
+   "was": null,
+   "value": "All 16 estimates: native value, 95% CI, exact p, sig (alpha .05, p<.05 rule; Table 3 texting 30+ p=0.05 correctly non-sig), n1/n0, group means, p0 match the PDF exactly. No SE, t/z or SD printed; no supplement exists. Estimate set complete for social/video chat and texting in Tables 2, 3, 5.",
+   "where": "Table 2 p.5; Table 3 p.5; Table 5 p.6; text pp.3-4"
+  }
+ ],
  "supplements": []
 }

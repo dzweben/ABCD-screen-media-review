@@ -97,11 +97,11 @@
      "OR": 1.34,
      "OR_lo": 1.18,
      "OR_hi": 1.51,
-     "p": 0.001,
+     "p": null,
      "p_label": "<0.001",
      "sig": true,
      "location": "Table 2 row 'Mobile phone ownership' (p. 4); Results text p. 3",
-     "note": "b = 0.29 (0.16, 0.41). Std Err cell blank in Table 2 for this row."
+     "note": "b = 0.29 (0.16, 0.41). Std Err cell blank in Table 2 for this row. Completion pass: p printed only as inequality 'p < 0.001' (Results p.3), so exact p set to null; SE cell for this row in Table 2 is empty (invisible character in PDF), no SE printed anywhere. CI printed, so no further CI inputs needed."
     },
     {
      "iv": "phone",
@@ -113,7 +113,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3 (Supplementary Table 1, not in PDF)",
-     "note": "b = 0.53 [0.19, 0.87]. p not reported; significance from CI and text."
+     "note": "b = 0.53 [0.19, 0.87]. p not reported; significance from CI and text. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "phone",
@@ -125,7 +125,7 @@
      "p_label": "",
      "sig": false,
      "location": "Results text pp. 3 (Supplementary Table 'S', not in PDF)",
-     "note": "b = 0.27 [-0.20, 0.74]. p not reported."
+     "note": "b = 0.27 [-0.20, 0.74]. p not reported. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm",
@@ -137,7 +137,9 @@
      "p_label": "",
      "sig": true,
      "location": "Table 3 row 'Social media use' (p. 5)",
-     "note": "Table 3: b = 0.41 (0.27, 0.54), SE 0.04; effect at time 0 since SM x time retained. CONFLICT: Results text p. 3 reports a non-significant SM main effect b = 0.04 [-0.18, 0.26], OR = 1.06 [0.92, 1.21] for the same model. Table value entered here; human must decide."
+     "note": "Table 3: b = 0.41 (0.27, 0.54), SE 0.04; effect at time 0 since SM x time retained. CONFLICT: Results text p. 3 reports a non-significant SM main effect b = 0.04 [-0.18, 0.26], OR = 1.06 [0.92, 1.21] for the same model. Table value entered here; human must decide. Completion pass: Table 3 Std Err 0.04 entered as se (logit-coefficient scale). Caution: printed SE is inconsistent with the printed coefficient CI (0.27-0.54 implies SE ~0.069); CI preferred. Exact p not printed.",
+     "se": 0.04,
+     "se_scale": "log"
     },
     {
      "iv": "sm",
@@ -149,7 +151,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3 (Supplementary Table 3, not in PDF)",
-     "note": "b = 0.21 [0.06. 0.37] (sic). Effect at time 0 since SM x time retained. p not reported."
+     "note": "b = 0.21 [0.06. 0.37] (sic). Effect at time 0 since SM x time retained. p not reported. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm",
@@ -161,7 +163,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3 (Supplementary Table 4, not in PDF)",
-     "note": "b = 1.59 [1.04, 2.14]. Interaction dropped, so averaged across 4 timepoints. p not reported."
+     "note": "b = 1.59 [1.04, 2.14]. Interaction dropped, so averaged across 4 timepoints. p not reported. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm_x_time",
@@ -173,7 +175,9 @@
      "p_label": "",
      "sig": true,
      "location": "Table 3 row 'Social media use X time' (p. 5)",
-     "note": "b = 0.09 (0.01, 0.16), SE 0.04. Text p. 3 prints the OR CI as [1.01, 1.017] (typo)."
+     "note": "b = 0.09 (0.01, 0.16), SE 0.04. Text p. 3 prints the OR CI as [1.01, 1.017] (typo). Completion pass: Table 3 Std Err 0.04 entered as se (logit-coefficient scale). Caution: printed SE is inconsistent with the printed coefficient CI (0.01-0.16 implies SE ~0.038, consistent); CI preferred. Exact p not printed.",
+     "se": 0.04,
+     "se_scale": "log"
     },
     {
      "iv": "sm_x_time",
@@ -185,9 +189,10 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3 (Supplementary Table 3, not in PDF)",
-     "note": "b = 0.08 [0.05, 0.11]."
+     "note": "b = 0.08 [0.05, 0.11]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     }
-   ]
+   ],
+   "iv_type": "binary"
   },
   {
    "model_id": "M2",
@@ -229,19 +234,22 @@
      "id": "alcohol",
      "label": "Any alcohol use",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 for the substance-naive subsample not printed; Figs 1-2 show full-sample unadjusted prevalence only. Not needed for OR->d."
     },
     {
      "id": "nicotine",
      "label": "Any nicotine/tobacco use",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 for the substance-naive subsample not printed; Figs 1-2 show full-sample unadjusted prevalence only. Not needed for OR->d."
     },
     {
      "id": "cannabis",
      "label": "Any cannabis use",
      "sd_dv": null,
-     "p0": null
+     "p0": null,
+     "note": "p0 for the substance-naive subsample not printed; Figs 1-2 show full-sample unadjusted prevalence only. Not needed for OR->d."
     }
    ],
    "estimates": [
@@ -255,7 +263,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3, Sensitivity Analyses",
-     "note": "b = 0.25 [0.10, 0.41]."
+     "note": "b = 0.25 [0.10, 0.41]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "phone",
@@ -267,7 +275,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 3, Sensitivity Analyses",
-     "note": "b = 0.65 [0.22, 1.08]."
+     "note": "b = 0.65 [0.22, 1.08]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "phone",
@@ -279,7 +287,7 @@
      "p_label": "",
      "sig": false,
      "location": "Results text p. 3, Sensitivity Analyses",
-     "note": "b = 0.54 [-0.05, 1.13]."
+     "note": "b = 0.54 [-0.05, 1.13]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm",
@@ -291,7 +299,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 4, Sensitivity Analyses",
-     "note": "b = 0.47 [0.33, 0.61]."
+     "note": "b = 0.47 [0.33, 0.61]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm",
@@ -303,7 +311,7 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 4, Sensitivity Analyses",
-     "note": "b = 1.42 [0.99, 1.84]."
+     "note": "b = 1.42 [0.99, 1.84]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     },
     {
      "iv": "sm",
@@ -315,9 +323,10 @@
      "p_label": "",
      "sig": true,
      "location": "Results text p. 4, Sensitivity Analyses",
-     "note": "b = 1.24 [0.67, 1.81]."
+     "note": "b = 1.24 [0.67, 1.81]. Completion pass: CI printed (Results text). Exact p, SE, z not printed anywhere in the PDF (checked Tables 1-3, Figs 1-2 (unadjusted prevalence only), text pp.2-6). Supplementary Tables 1/'S'/3/4 are online only (Appendix A, doi link p.6), not bundled in docs/pdfs. No SD/p0 needed for OR->d (Chinn)."
     }
-   ]
+   ],
+   "iv_type": "binary"
   }
  ],
  "excluded_models": [
@@ -357,7 +366,303 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); CI endpoints converted the same way.",
   "contrast_type": "Binary contrast: phone owner vs non-owner, or has >= 1 social media account vs none, at age 11-12. For sm_x_time rows, the per-timepoint (about 6-month) change in the SM log-odds difference.",
   "transformable": true,
-  "notes": "OR converts directly via Chinn; no SDs needed. p0 values in M1 dv_axis are the marginal age 11-12 prevalences from Table 1 (p. 3), not the unexposed-group rate, and are not needed for the OR conversion. Caveats: (1) In M1 SM-alcohol and SM-nicotine/tobacco, the SM OR is the difference at time 0 with an interaction retained, so it is not comparable to averaged effects in the other cells. (2) The SM-alcohol main effect in Table 3 (OR 1.50) conflicts with the Results text (OR 1.06, non-significant). (3) The sm_x_time interaction ORs are not a group contrast and probably should not be converted to d alongside the main effects. (4) Five of the six M1 models come from supplementary tables not included in the PDF; values were copied from the Results text."
+  "notes": "OR converts directly via Chinn; no SDs needed. p0 values in M1 dv_axis are the marginal age 11-12 prevalences from Table 1 (p. 3), not the unexposed-group rate, and are not needed for the OR conversion. Caveats: (1) In M1 SM-alcohol and SM-nicotine/tobacco, the SM OR is the difference at time 0 with an interaction retained, so it is not comparable to averaged effects in the other cells. (2) The SM-alcohol main effect in Table 3 (OR 1.50) conflicts with the Results text (OR 1.06, non-significant). (3) The sm_x_time interaction ORs are not a group contrast and probably should not be converted to d alongside the main effects. (4) Five of the six M1 models come from supplementary tables not included in the PDF; values were copied from the Results text. Completion pass: both models iv_type binary; ORs with printed CIs for all 14 cells, no SDs needed. Table 3 SE (0.04) added for SM and SMxtime alcohol rows; the SM row SE does not match its CI width. Phone x alcohol p corrected to p_label '<0.001' (p null)."
  },
- "extraction_flags": "1) The values for social media and alcohol disagree within the paper. Table 3 gives the SM main effect as OR 1.50 (1.31, 1.72), b 0.41. The Results text on p. 3 gives OR 1.06 [0.92, 1.21], b 0.04, not significant. The draft uses the table value, so a human needs to decide which is correct. 2) The supplementary tables (Supp Tables 1, 3, 4 and the one printed as 'S') are not in the PDF. Five of the six full-sample models were therefore copied from the Results text, and their p-values and SEs are missing. 3) In the SM-alcohol and SM-nicotine/tobacco models the SM x time interaction was kept. That makes the SM main effect the difference at time 0, not an average over follow-up. The two interaction ORs are entered as a separate 'sm_x_time' IV row and probably should not be converted to d alongside the main effects. 4) M2 is the post-hoc sensitivity analysis in substance-naive youth (n=9,628). It is reported in the text only, but the authors interpret it in the Discussion. Its covariates are assumed to match M1 because the text only says the models were 're-fit'. 5) For phone and alcohol, p was entered as 0.001 with the label '<0.001'. The p0 values are the marginal age 11-12 prevalences from Table 1, not the rates in the unexposed group. 6) There are typos in the source: the CI '[1.01, 1.017]' for the SM x time OR, and '[0.06. 0.37]'. 7) The ABCD release is not stated, and per-model analytic N is not reported; only the total of 10,907 is given."
+ "extraction_flags": "1) The values for social media and alcohol disagree within the paper. Table 3 gives the SM main effect as OR 1.50 (1.31, 1.72), b 0.41. The Results text on p. 3 gives OR 1.06 [0.92, 1.21], b 0.04, not significant. The draft uses the table value, so a human needs to decide which is correct. 2) The supplementary tables (Supp Tables 1, 3, 4 and the one printed as 'S') are not in the PDF. Five of the six full-sample models were therefore copied from the Results text, and their p-values and SEs are missing. 3) In the SM-alcohol and SM-nicotine/tobacco models the SM x time interaction was kept. That makes the SM main effect the difference at time 0, not an average over follow-up. The two interaction ORs are entered as a separate 'sm_x_time' IV row and probably should not be converted to d alongside the main effects. 4) M2 is the post-hoc sensitivity analysis in substance-naive youth (n=9,628). It is reported in the text only, but the authors interpret it in the Discussion. Its covariates are assumed to match M1 because the text only says the models were 're-fit'. 5) For phone and alcohol, p was entered as 0.001 with the label '<0.001'. The p0 values are the marginal age 11-12 prevalences from Table 1, not the rates in the unexposed group. 6) There are typos in the source: the CI '[1.01, 1.017]' for the SM x time OR, and '[0.06. 0.37]'. 7) The ABCD release is not stated, and per-model analytic N is not reported; only the total of 10,907 is given.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.2 (phone and SM coded 0/1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 model",
+   "action": "set_iv_type",
+   "value": "binary",
+   "where": "Methods p.2 (phone and SM coded 0/1)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone x alcohol",
+   "action": "filled_ci_input",
+   "value": {
+    "p": null,
+    "p_label": "<0.001"
+   },
+   "where": "Results text p.3; Table 2 p.4 (Std Err blank)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm x alcohol",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04,
+    "se_scale": "log"
+   },
+   "where": "Table 3 p.5, Std Err column"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x alcohol",
+   "action": "filled_ci_input",
+   "value": {
+    "se": 0.04,
+    "se_scale": "log"
+   },
+   "where": "Table 3 p.5, Std Err column"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone x nicotine",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 phone x cannabis",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm x nicotine",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm x cannabis",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sm_x_time x nicotine",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 phone x alcohol",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 phone x nicotine",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 phone x cannabis",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm x alcohol",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm x nicotine",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sm x cannabis",
+   "action": "confirmed_missing",
+   "value": "p/SE not printed; CI present",
+   "where": "Results pp.3-4; supplement online only"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 dv_axis p0",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.3 is full sample; Figs 1-2 p.4-5"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Table 2 row 'Mobile phone ownership' (p. 4); Results text p. 3"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3 (Supplementary Table 1, not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 phone x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text pp. 3 (Supplementary Table 'S', not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Table 3 row 'Social media use' (p. 5)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3 (Supplementary Table 3, not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3 (Supplementary Table 4, not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Table 3 row 'Social media use X time' (p. 5)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sm_x_time x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3 (Supplementary Table 3, not in PDF)"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3, Sensitivity Analyses"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3, Sensitivity Analyses"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 phone x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 3, Sensitivity Analyses"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm x alcohol",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 4, Sensitivity Analyses"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm x nicotine",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 4, Sensitivity Analyses"
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sm x cannabis",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "fields": [
+    "se",
+    "p"
+   ],
+   "where": "Full PDF pp.1-7 re-read (Tables 1-3, Results pp.3-4, Figs 1-2); no supplement file in docs/pdfs; OR/CI/b re-verified exactly against Results text p. 4, Sensitivity Analyses"
+  }
+ ]
 }

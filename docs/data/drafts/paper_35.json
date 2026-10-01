@@ -67,19 +67,22 @@
      "id": "smt",
      "label": "Social media time (per 1 h/day), same wave as DV",
      "meta": "continuous, hours/day",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "continuous"
     },
     {
      "id": "sma_mild",
      "label": "SMA mild symptoms (score 7-23) vs. no symptoms",
      "meta": "W1 n=477 (24.6%); W3 n=365 (18.8%)",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     },
     {
      "id": "sma_addiction",
      "label": "SMA addiction (score >=24) vs. no symptoms",
      "meta": "W1 n=55 (2.8%); W3 n=69 (3.6%)",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     }
    ],
    "dv_axis": [
@@ -107,7 +110,7 @@
      "p_label": "",
      "sig": false,
      "location": "Table 2, row 'Wave 1 SMT, h', Model 2",
-     "note": "PR per 1 h/day. p not reported; significance judged from CI and text ('SMT was not cross-sectionally associated with BE')."
+     "note": "PR per 1 h/day. p not reported; significance judged from CI and text ('SMT was not cross-sectionally associated with BE'). SD of SMT not printed: checked Table 1 (no SMT row), Figure 1 (prints only BE-profile means 1.0-3.3 h/day, no SD), Results/Methods pp.348-351; Table S-series not bundled. Not needed for the RR/PR->OR->d route (uses p0), but a per-SD rescaling is impossible."
     },
     {
      "iv": "smt",
@@ -119,7 +122,7 @@
      "p_label": "",
      "sig": false,
      "location": "Table 2, row 'Wave 3 SMT, h', Model 2",
-     "note": "PR per 1 h/day. p not reported."
+     "note": "PR per 1 h/day. p not reported. SD of SMT not printed: checked Table 1 (no SMT row), Figure 1 (prints only BE-profile means 1.0-3.3 h/day, no SD), Results/Methods pp.348-351; Table S-series not bundled. Not needed for the RR/PR->OR->d route (uses p0), but a per-SD rescaling is impossible."
     },
     {
      "iv": "sma_mild",
@@ -169,7 +172,8 @@
      "location": "Table 2, Wave 3 SMA 'Addiction', Model 2",
      "note": "Quoted in text p. 350."
     }
-   ]
+   ],
+   "iv_type": "categorical"
   },
   {
    "model_id": "M2",
@@ -229,19 +233,22 @@
      "id": "smt_w1",
      "label": "Wave 1 social media time (per 1 h/day)",
      "meta": "continuous, hours/day",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "continuous"
     },
     {
      "id": "sma_mild_w1",
      "label": "Wave 1 SMA mild symptoms vs. no symptoms",
      "meta": "n=477 (24.6%)",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     },
     {
      "id": "sma_addiction_w1",
      "label": "Wave 1 SMA addiction vs. no symptoms",
      "meta": "n=55 (2.8%)",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     }
    ],
    "dv_axis": [
@@ -263,7 +270,7 @@
      "p_label": "",
      "sig": false,
      "location": "Table 3, row 'Wave 1 SMT, h', Model 3",
-     "note": "RR per 1 h/day. p not reported."
+     "note": "RR per 1 h/day. p not reported. SD of SMT not printed: checked Table 1 (no SMT row), Figure 1 (prints only BE-profile means 1.0-3.3 h/day, no SD), Results/Methods pp.348-351; Table S-series not bundled. Not needed for the RR/PR->OR->d route (uses p0), but a per-SD rescaling is impossible."
     },
     {
      "iv": "sma_mild_w1",
@@ -289,7 +296,8 @@
      "location": "Table 3, Wave 1 SMA 'Addiction', Model 3",
      "note": "Quoted in text p. 350."
     }
-   ]
+   ],
+   "iv_type": "categorical"
   },
   {
    "model_id": "M3",
@@ -325,19 +333,22 @@
      "id": "traj_decreased",
      "label": "Decreased SMA trajectory vs. consistently low",
      "meta": "n=143 per Fig 2 (text says 455); 7.4%",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     },
     {
      "id": "traj_increased",
      "label": "Increased SMA trajectory vs. consistently low",
      "meta": "n=455 per Fig 2 (text says 143); 23.5%",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     },
     {
      "id": "traj_high",
      "label": "Consistently high SMA trajectory vs. consistently low",
      "meta": "n=79 (4.1%)",
-     "sd_iv": null
+     "sd_iv": null,
+     "iv_type": "categorical"
     }
    ],
    "dv_axis": [
@@ -385,7 +396,8 @@
      "location": "Table 4, row 'High SMA', Model 3",
      "note": "Quoted in text p. 350 as the fully adjusted model."
     }
-   ]
+   ],
+   "iv_type": "categorical"
   }
  ],
  "excluded_models": [
@@ -445,7 +457,393 @@
   "conversion_formula": "Treat PR as RR. OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Apply the same conversion to each CI bound.",
   "contrast_type": "SMT: per 1 hour/day of average daily social media time. SMA (M1, M2): mild symptoms (score 7-23) or addiction (score >=24) vs. no symptoms (score 6). Trajectories (M3): decreased, increased or consistently high SMA class vs. consistently low SMA class.",
   "transformable": true,
-  "notes": "p0 values are marginal sample BE prevalences computed from reported counts, not unexposed-group rates (the paper does not report BE rates within the reference SMA group or trajectory class): Wave 1 BE = 249/1940 = 0.128 (Table 1, p. 349); Wave 3 BE = 237/1940 = 0.122 (text p. 351). Because the mild-SMA group (24.6% at Wave 1, 18.8% at Wave 3) and the increased-SMA trajectory class (23.5%) are well above 10% of the sample and these groups have elevated BE, the marginal rate overstates the reference-group rate, so the RR-to-OR conversion is approximate. For SMT, the derived d is a per-1-hour/day contrast rather than a standardized contrast; no SD of SMT is reported (Table 1 has no SMT descriptives; Figure 1 shows only group means), so a per-SD rescaling is not possible. No SDs are needed for the categorical SMA contrasts. p-values are not reported anywhere in the tables; significance flags are based on whether the 95% CI excludes 1 and on the authors' text (two CIs have a lower bound printed as 1.00 and are treated as non-significant, consistent with the text)."
+  "notes": "p0 values are marginal sample BE prevalences computed from reported counts, not unexposed-group rates (the paper does not report BE rates within the reference SMA group or trajectory class): Wave 1 BE = 249/1940 = 0.128 (Table 1, p. 349); Wave 3 BE = 237/1940 = 0.122 (text p. 351). Because the mild-SMA group (24.6% at Wave 1, 18.8% at Wave 3) and the increased-SMA trajectory class (23.5%) are well above 10% of the sample and these groups have elevated BE, the marginal rate overstates the reference-group rate, so the RR-to-OR conversion is approximate. For SMT, the derived d is a per-1-hour/day contrast rather than a standardized contrast; no SD of SMT is reported (Table 1 has no SMT descriptives; Figure 1 shows only group means), so a per-SD rescaling is not possible. No SDs are needed for the categorical SMA contrasts. p-values are not reported anywhere in the tables; significance flags are based on whether the 95% CI excludes 1 and on the authors' text (two CIs have a lower bound printed as 1.00 and are treated as non-significant, consistent with the text). Verification pass (2026-10-01): all 12 Model 2/Model 3 estimates and CIs re-checked against Tables 2-4 (pp.351-352) and match; no estimate or CI is null. No p-values are printed anywhere. SDs are not required (binary DV, RR/PR converted via p0); SMT SD is genuinely not printed (Table 1 has no SMT row, Figure 1 shows only group means), and no supplement PDF is available locally. iv_type set to categorical at model level with per-axis iv_type (SMT continuous, SMA groups/trajectories categorical). Completion pass (2026-10-01): full 10-page PDF re-read; no additional SE, exact p, test statistics, SMT SD or reference-group BE rates are printed. No supplement file exists locally (Tables S1-S7 are online only). Nothing further fillable."
  },
- "extraction_flags": "All 12 estimates were checked against the table images on pp. 351-352 and match.\n\nItems to verify:\n\n(1) The paper prints no p-values. The sig flags come from whether the 95% CI excludes 1 and from what the authors say in the text. Two CIs have a lower bound printed as 1.00: Table 2 Wave 1 mild SMA, Model 2, PR 1.35 (1.00-1.84), and Table 3 mild SMA, Model 3, RR 1.37 (1.00-1.87). The authors call both non-significant, so I set sig false.\n\n(2) The p0 values are marginal BE prevalences I computed from reported counts: Wave 1 is 249/1940 = 0.128 and Wave 3 is 237/1940 = 0.122. The paper does not report the BE rate in the reference group. The mild SMA group (24.6%) and the increased trajectory class (23.5%) are each more than 10% of the sample, so the RR-to-OR step is approximate for those cells.\n\n(3) M1 is cross-sectional and reports prevalence ratios. I coded it as native_metric \"other:PR\" with value fields. A PR converts to d the same way as an RR, so check whether the pipeline needs \"RR\" here instead.\n\n(4) SMT is per 1 hour/day and the paper reports no SD for it, so the d for SMT is per hour, not standardized.\n\n(5) The trajectory class sizes contradict each other. The text on p. 350 says decreased n=455 (7.4%) and increased n=143 (23.5%). Figure 2 gives decreased N=143 and increased N=455, and the percentages fit the Figure 2 counts. I used the Figure 2 assignment in the axis meta.\n\n(6) The paper does not say whether SMT and SMA were entered in the same model or in separate models.\n\n(7) M3's IV is a latent SMA trajectory across Waves 1-3, which includes Wave 3, the outcome wave. It is unclear which wave the BMI and behavioral covariates come from in M3.\n\n(8) Supplementary Tables S3-S7 are not in the PDF: frequent BE among cases (the high-SMA RR of 1.57 is quoted in the text), sex and BMI interactions and stratified results, the reporter sensitivity analysis, and the larger sample without a social media account. These are listed in excluded_models. Add them if someone obtains the supplement.\n\n(9) Including the paper is not in doubt. The SMA measure is a six-item scale adapted from the Bergen Facebook Addiction Scale, and SMT is time on social media."
+ "extraction_flags": "All 12 estimates were checked against the table images on pp. 351-352 and match.\n\nItems to verify:\n\n(1) The paper prints no p-values. The sig flags come from whether the 95% CI excludes 1 and from what the authors say in the text. Two CIs have a lower bound printed as 1.00: Table 2 Wave 1 mild SMA, Model 2, PR 1.35 (1.00-1.84), and Table 3 mild SMA, Model 3, RR 1.37 (1.00-1.87). The authors call both non-significant, so I set sig false.\n\n(2) The p0 values are marginal BE prevalences I computed from reported counts: Wave 1 is 249/1940 = 0.128 and Wave 3 is 237/1940 = 0.122. The paper does not report the BE rate in the reference group. The mild SMA group (24.6%) and the increased trajectory class (23.5%) are each more than 10% of the sample, so the RR-to-OR step is approximate for those cells.\n\n(3) M1 is cross-sectional and reports prevalence ratios. I coded it as native_metric \"other:PR\" with value fields. A PR converts to d the same way as an RR, so check whether the pipeline needs \"RR\" here instead.\n\n(4) SMT is per 1 hour/day and the paper reports no SD for it, so the d for SMT is per hour, not standardized.\n\n(5) The trajectory class sizes contradict each other. The text on p. 350 says decreased n=455 (7.4%) and increased n=143 (23.5%). Figure 2 gives decreased N=143 and increased N=455, and the percentages fit the Figure 2 counts. I used the Figure 2 assignment in the axis meta.\n\n(6) The paper does not say whether SMT and SMA were entered in the same model or in separate models.\n\n(7) M3's IV is a latent SMA trajectory across Waves 1-3, which includes Wave 3, the outcome wave. It is unclear which wave the BMI and behavioral covariates come from in M3.\n\n(8) Supplementary Tables S3-S7 are not in the PDF: frequent BE among cases (the high-SMA RR of 1.57 is quoted in the text), sex and BMI interactions and stratified results, the reporter sensitivity analysis, and the larger sample without a social media account. These are listed in excluded_models. Add them if someone obtains the supplement.\n\n(9) Including the paper is not in doubt. The SMA measure is a six-item scale adapted from the Bergen Facebook Addiction Scale, and SMT is time on social media.",
+ "verification_log": [
+  {
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model); SMT axis entries continuous, SMA group/trajectory entries categorical",
+   "where": "Methods p.348; Tables 2-4"
+  },
+  {
+   "item": "M1 smt x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.05 (0.99-1.12) re-checked against Table 2, row 'Wave 1 SMT, h', Model 2 and matches."
+  },
+  {
+   "item": "M1 smt x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.03 (0.98-1.09) re-checked against Table 2, row 'Wave 3 SMT, h', Model 2 and matches."
+  },
+  {
+   "item": "M1 sma_mild x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.35 (1.0-1.84) re-checked against Table 2, Wave 1 SMA 'Mild symptoms', Model 2 and matches."
+  },
+  {
+   "item": "M1 sma_mild x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.73 (1.07-2.8) re-checked against Table 2, Wave 3 SMA 'Mild symptoms', Model 2 and matches."
+  },
+  {
+   "item": "M1 sma_addiction x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 2.17 (1.22-3.84) re-checked against Table 2, Wave 1 SMA 'Addiction', Model 2 and matches."
+  },
+  {
+   "item": "M1 sma_addiction x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 3.45 (1.83-6.49) re-checked against Table 2, Wave 3 SMA 'Addiction', Model 2 and matches."
+  },
+  {
+   "item": "M1 smt sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.349 has no SMT row; Figure 1 p.350 prints group means only; no SE/N for SMT anywhere; no supplement PDF in docs/pdfs"
+  },
+  {
+   "item": "M1 be_w1 p0",
+   "action": "confirmed_missing",
+   "value": 0.128,
+   "where": "Reference-group BE rate not printed; p0 kept as marginal prevalence (249/1940 Table 1; 237/1940 p.351). sd_dv not applicable: DV binary, metric RR/PR."
+  },
+  {
+   "item": "M1 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group BE rate not printed; p0 kept as marginal prevalence (249/1940 Table 1; 237/1940 p.351). sd_dv not applicable: DV binary, metric RR/PR."
+  },
+  {
+   "item": "M2 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model); SMT axis entries continuous, SMA group/trajectory entries categorical",
+   "where": "Methods p.348; Tables 2-4"
+  },
+  {
+   "item": "M2 smt_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 0.99 (0.93-1.06) re-checked against Table 3, row 'Wave 1 SMT, h', Model 3 and matches."
+  },
+  {
+   "item": "M2 sma_mild_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.37 (1.0-1.87) re-checked against Table 3, Wave 1 SMA 'Mild symptoms', Model 3 and matches."
+  },
+  {
+   "item": "M2 sma_addiction_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.9 (1.1-3.27) re-checked against Table 3, Wave 1 SMA 'Addiction', Model 3 and matches."
+  },
+  {
+   "item": "M2 smt_w1 sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.349 has no SMT row; Figure 1 p.350 prints group means only; no SE/N for SMT anywhere; no supplement PDF in docs/pdfs"
+  },
+  {
+   "item": "M2 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group BE rate not printed; p0 kept as marginal prevalence (249/1940 Table 1; 237/1940 p.351). sd_dv not applicable: DV binary, metric RR/PR."
+  },
+  {
+   "item": "M3 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model); SMT axis entries continuous, SMA group/trajectory entries categorical",
+   "where": "Methods p.348; Tables 2-4"
+  },
+  {
+   "item": "M3 traj_decreased x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 1.92 (1.33-2.78) re-checked against Table 4, row 'Decreased SMA', Model 3 and matches."
+  },
+  {
+   "item": "M3 traj_increased x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 2.09 (1.59-2.74) re-checked against Table 4, row 'Increased SMA', Model 3 and matches."
+  },
+  {
+   "item": "M3 traj_high x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "p-value: not printed anywhere (Tables 2-4 give only estimate and 95% CI; text pp.350-351 gives no p). Estimate 3.01 (2.07-4.37) re-checked against Table 4, row 'High SMA', Model 3 and matches."
+  },
+  {
+   "item": "M3 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group BE rate not printed; p0 kept as marginal prevalence (249/1940 Table 1; 237/1940 p.351). sd_dv not applicable: DV binary, metric RR/PR."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model; per-axis: SMT continuous, SMA groups/trajectories categorical)",
+   "where": "Methods p.348; Tables 2-4 pp.351-352"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smt x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.05 (0.99-1.12) re-verified against Table 2, row 'Wave 1 SMT, h', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smt sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.349 has no SMT row (only age, BMI percentile means/SDs); Fig 1 p.350 prints BE-profile means only (1.0-3.3 h/day), no SD; no supplement file in docs/pdfs (Tables S1-S7 online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smt x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.03 (0.98-1.09) re-verified against Table 2, row 'Wave 3 SMT, h', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 smt sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.349 has no SMT row (only age, BMI percentile means/SDs); Fig 1 p.350 prints BE-profile means only (1.0-3.3 h/day), no SD; no supplement file in docs/pdfs (Tables S1-S7 online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sma_mild x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.35 (1.0-1.84) re-verified against Table 2, Wave 1 SMA 'Mild symptoms', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sma_mild x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.73 (1.07-2.8) re-verified against Table 2, Wave 3 SMA 'Mild symptoms', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sma_addiction x be_w1",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 2.17 (1.22-3.84) re-verified against Table 2, Wave 1 SMA 'Addiction', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 sma_addiction x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 3.45 (1.83-6.49) re-verified against Table 2, Wave 3 SMA 'Addiction', Model 2. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 be_w1 p0",
+   "action": "confirmed_missing",
+   "value": 0.128,
+   "where": "Reference-group (no SMA symptoms / consistently low SMA) BE rate not printed in Tables 1-4 or text; marginal prevalence retained (249/1940 Table 1 p.349; 237/1940 p.351). Wave 3 BE by SMA group would be in Table S2 (online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M1 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group (no SMA symptoms / consistently low SMA) BE rate not printed in Tables 1-4 or text; marginal prevalence retained (249/1940 Table 1 p.349; 237/1940 p.351). Wave 3 BE by SMA group would be in Table S2 (online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model; per-axis: SMT continuous, SMA groups/trajectories categorical)",
+   "where": "Methods p.348; Tables 2-4 pp.351-352"
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smt_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 0.99 (0.93-1.06) re-verified against Table 3, row 'Wave 1 SMT, h', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 smt_w1 sd_iv",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Table 1 p.349 has no SMT row (only age, BMI percentile means/SDs); Fig 1 p.350 prints BE-profile means only (1.0-3.3 h/day), no SD; no supplement file in docs/pdfs (Tables S1-S7 online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sma_mild_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.37 (1.0-1.87) re-verified against Table 3, Wave 1 SMA 'Mild symptoms', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 sma_addiction_w1 x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.9 (1.1-3.27) re-verified against Table 3, Wave 1 SMA 'Addiction', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M2 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group (no SMA symptoms / consistently low SMA) BE rate not printed in Tables 1-4 or text; marginal prevalence retained (249/1940 Table 1 p.349; 237/1940 p.351). Wave 3 BE by SMA group would be in Table S2 (online only)."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 iv_type",
+   "action": "set_iv_type",
+   "value": "categorical (model; per-axis: SMT continuous, SMA groups/trajectories categorical)",
+   "where": "Methods p.348; Tables 2-4 pp.351-352"
+  },
+  {
+   "stage": "complete",
+   "item": "M3 traj_decreased x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 1.92 (1.33-2.78) re-verified against Table 4, row 'Decreased SMA', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 traj_increased x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 2.09 (1.59-2.74) re-verified against Table 4, row 'Increased SMA', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 traj_high x be_w3",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "Value 3.01 (2.07-4.37) re-verified against Table 4, row 'High SMA', Model 3. SE/exact p/z not printed. Re-read all 10 pages (pp.346-355): Tables 2-4 print only estimate (95% CI); no SE, p, z anywhere; text pp.350-351 quotes CIs only. CI already present, so CI computable from bounds."
+  },
+  {
+   "stage": "complete",
+   "item": "M3 be_w3 p0",
+   "action": "confirmed_missing",
+   "value": 0.122,
+   "where": "Reference-group (no SMA symptoms / consistently low SMA) BE rate not printed in Tables 1-4 or text; marginal prevalence retained (249/1940 Table 1 p.349; 237/1940 p.351). Wave 3 BE by SMA group would be in Table S2 (online only)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smt x be_w1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, row 'Wave 1 SMT, h', Model 2: estimate 1.05 (0.99-1.12) and sig=False re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 smt x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, row 'Wave 3 SMT, h', Model 2: estimate 1.03 (0.98-1.09) and sig=False re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sma_mild x be_w1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, Wave 1 SMA 'Mild symptoms', Model 2: estimate 1.35 (1.0-1.84) and sig=False re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sma_mild x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, Wave 3 SMA 'Mild symptoms', Model 2: estimate 1.73 (1.07-2.8) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sma_addiction x be_w1",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, Wave 1 SMA 'Addiction', Model 2: estimate 2.17 (1.22-3.84) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M1 sma_addiction x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 2, Wave 3 SMA 'Addiction', Model 2: estimate 3.45 (1.83-6.49) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M2 smt_w1 x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 3, row 'Wave 1 SMT, h', Model 3: estimate 0.99 (0.93-1.06) and sig=False re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sma_mild_w1 x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 3, Wave 1 SMA 'Mild symptoms', Model 3: estimate 1.37 (1.0-1.87) and sig=False re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M2 sma_addiction_w1 x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 3, Wave 1 SMA 'Addiction', Model 3: estimate 1.9 (1.1-3.27) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M3 traj_decreased x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 4, row 'Decreased SMA', Model 3: estimate 1.92 (1.33-2.78) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M3 traj_increased x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 4, row 'Increased SMA', Model 3: estimate 2.09 (1.59-2.74) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "M3 traj_high x be_w3",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Table 4, row 'High SMA', Model 3: estimate 3.01 (2.07-4.37) and sig=True re-verified against the printed table (p.351-352). SE, exact p, t/z not printed anywhere in the 10-page PDF (tables give only estimate and 95% CI); no supplement file exists locally (only 10.1002_oby.24199.pdf in docs/pdfs)."
+  },
+  {
+   "stage": "audit",
+   "item": "axes p0 / class sizes",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "p0 W1 = 249/1940 (Table 1; = remitted 165 + persistent 84, Fig 1); W3 = 237/1940 (text p.351; = developed 153 + persistent 84). Trajectory n: Fig 2 decreased 143, increased 455 (matches 7.4%/23.5% of 1940); text p.350 swaps the counts. Reference-group BE rates and SMT SD are not printed."
+  }
+ ]
 }

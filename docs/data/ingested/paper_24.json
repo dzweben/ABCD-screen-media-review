@@ -93,6 +93,7 @@
      "p_label": ".011",
      "sig": true,
      "location": "Table 2, adjusted columns, Texting row (p. 890)",
+     "note": "Native aOR, 95% CI and exact p all printed in Table 2 (p.890). No SE, z or Wald statistic printed anywhere (checked Abstract, Methods 2.3, Results text p.890, Tables 1-2, all 6 pages; no supplement bundled); CI is printed so none is needed. sd_iv from Table 1 (weighted baseline, analytic N=11,025). sd_dv not applicable (binary DV, OR converted via Chinn). p0 = 0.011 is the weighted full-sample 1-yr BED prevalence (Table 1), not an unexposed-group rate; not needed for OR.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.4) \u00d7 0.5513 = 0.3365 \u00d7 0.5513 = 0.1855",
      "derived_d": 0.1855,
@@ -110,6 +111,7 @@
      "p_label": ".057",
      "sig": false,
      "location": "Table 2, adjusted columns, Video chat row (p. 890)",
+     "note": "Native aOR, 95% CI and exact p all printed in Table 2 (p.890). No SE, z or Wald statistic printed anywhere (checked Abstract, Methods 2.3, Results text p.890, Tables 1-2, all 6 pages; no supplement bundled); CI is printed so none is needed. sd_iv from Table 1 (weighted baseline, analytic N=11,025). sd_dv not applicable (binary DV, OR converted via Chinn). p0 = 0.011 is the weighted full-sample 1-yr BED prevalence (Table 1), not an unexposed-group rate; not needed for OR.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.32) \u00d7 0.5513 = 0.2776 \u00d7 0.5513 = 0.1531",
      "derived_d": 0.1531,
@@ -127,6 +129,7 @@
      "p_label": ".003",
      "sig": true,
      "location": "Table 2, adjusted columns, Social networking row (p. 890)",
+     "note": "Native aOR, 95% CI and exact p all printed in Table 2 (p.890). No SE, z or Wald statistic printed anywhere (checked Abstract, Methods 2.3, Results text p.890, Tables 1-2, all 6 pages; no supplement bundled); CI is printed so none is needed. sd_iv from Table 1 (weighted baseline, analytic N=11,025). sd_dv not applicable (binary DV, OR converted via Chinn). p0 = 0.011 is the weighted full-sample 1-yr BED prevalence (Table 1), not an unexposed-group rate; not needed for OR.",
      "derived_d_formula": "d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
      "derived_d_calc": "d = ln(1.62) \u00d7 0.5513 = 0.4824 \u00d7 0.5513 = 0.266",
      "derived_d": 0.266,
@@ -134,7 +137,8 @@
      "derived_d_hi": 0.4397,
      "derived_d_method": "OR -> d (Chinn 2000)"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -174,8 +178,62 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); applied to OR, OR_lo and OR_hi.",
   "contrast_type": "per 1 additional hour/day of the modality at baseline",
   "transformable": true,
-  "notes": "Chinn conversion of the aOR yields d for a 1 hour/day contrast, not a 1-SD contrast. Baseline SDs of the IVs are in Table 1 (p. 889): texting 0.56, video chat 0.52, social networking 0.45 h/day, so 1 hour/day is roughly 1.8-2.2 SD of these IVs; a per-SD rescaling would be ln(OR)*SD_IV before the Chinn step if needed for comparability. p0 = 0.011 is the weighted one-year follow-up BED prevalence in the full sample (Table 1), not an unexposed-group rate; it is not needed for the OR conversion. The outcome is rare (1.1%), so OR approximates RR."
+  "notes": "Chinn conversion of the aOR yields d for a 1 hour/day contrast, not a 1-SD contrast. Baseline SDs of the IVs are in Table 1 (p. 889): texting 0.56, video chat 0.52, social networking 0.45 h/day, so 1 hour/day is roughly 1.8-2.2 SD of these IVs; a per-SD rescaling would be ln(OR)*SD_IV before the Chinn step if needed for comparability. p0 = 0.011 is the weighted one-year follow-up BED prevalence in the full sample (Table 1), not an unexposed-group rate; it is not needed for the OR conversion. The outcome is rare (1.1%), so OR approximates RR. Completion pass (2026-10-01): re-read all 6 pages; aOR/CI/p verified against Table 2; no SE or test statistics printed; no supplementary file exists for this paper."
  },
  "extraction_flags": "The adjustment set is reported inconsistently. The Table 2 footnote and the Abstract include BMI percentile, but the Statistical analysis paragraph (p. 889) leaves it out. Age is listed as a covariate in Section 2.2.3 but is not named in any adjustment set. I followed the Table 2 footnote. Site is entered as a covariate, but the paper does not say whether as fixed dummies or a random effect. Each modality was modeled separately, so each estimate is not adjusted for the other modalities. The aORs are per additional hour/day, while the IV SDs are only about 0.45-0.56 h/day, so the Chinn d corresponds to roughly a 2-SD contrast; reviewers should decide whether to rescale it to a per-SD contrast. p0 (0.011) is the weighted full-sample prevalence at follow-up (Table 1), not the rate in the unexposed group. Video chat (aOR 1.32, 0.99-1.76, p = .057) is recorded as non-significant.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Methods 2.2.1 p.888 (hours/day as continuous); Table 2 p.890 (per hour/day)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting x BED 1-yr",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.890; Table 1 p.889"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Video chat x BED 1-yr",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.890; Table 1 p.889"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social networking x BED 1-yr",
+   "action": "confirmed_missing",
+   "value": "se/z not printed; OR, CI, exact p already present and verified",
+   "where": "Table 2 p.890; Table 1 p.889"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 texting x bed_1yr",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z/Wald not printed; OR/CI/p, sig (alpha .05, bold in Table 2), sd_iv (Table 1) and p0 (Table 1, 1.1%) re-verified against PDF text",
+   "where": "Table 2 p.890 adjusted columns; Table 1 p.889; all 6 pages read; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 video_chat x bed_1yr",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z/Wald not printed; OR/CI/p, sig (alpha .05, bold in Table 2), sd_iv (Table 1) and p0 (Table 1, 1.1%) re-verified against PDF text",
+   "where": "Table 2 p.890 adjusted columns; Table 1 p.889; all 6 pages read; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 social_networking x bed_1yr",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "se, z/Wald not printed; OR/CI/p, sig (alpha .05, bold in Table 2), sd_iv (Table 1) and p0 (Table 1, 1.1%) re-verified against PDF text",
+   "where": "Table 2 p.890 adjusted columns; Table 1 p.889; all 6 pages read; no supplement file in docs/pdfs"
+  }
+ ],
  "supplements": []
 }

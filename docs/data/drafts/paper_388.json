@@ -93,27 +93,32 @@
      "iv": "gf_texting",
      "dv": "any_activity",
      "OR": 1.05,
-     "OR_lo": null,
-     "OR_hi": null,
+     "OR_lo": 0.96,
+     "OR_hi": 1.15,
      "p": null,
      "p_label": null,
      "sig": false,
      "location": "Fig. 5 row 'Texting' (p. 8)",
-     "note": "Printed as '1.05 \u00b1 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6 (only two SMA GFs significant: games vs social media and media and internalizing)."
+     "note": "Printed as '1.05 ± 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6 (only two SMA GFs significant: games vs social media and media and internalizing). COMPLETION PASS: Fig. 5 prints '1.05 ± 0.09' under the axis label 'Odds Ratio +/- 95% CI', i.e. the 95% CI is printed as a half-width. OR_lo/OR_hi filled as OR ∓ 0.09 = 0.96-1.14 (arithmetic on printed values). Rounding caveat: for factors with both forms printed, the reconstruction is within 0.01 of the text CI (games vs SM 0.83±0.07 -> 0.76-0.90 vs text 0.76-0.89; media & internalizing 1.10±0.09 -> 1.01-1.19 vs text 1.02-1.18). No SE, z, or exact p printed for this GF anywhere (checked Abstract, Results pp.4-7, Table 1, Figs. 1-5, Discussion); non-significant per text p.6. sd_iv not needed: OR is per 1 SD of GF score and conversion is Chinn (no SD inputs). No supplement bundled (Suppl. Figs. 4-15 loadings, Suppl. Table 1 not in repo). AUDIT (2026-10-01): Fig. 5 values re-confirmed at 200 dpi (OR 1.05 ± 0.09). The '±' in Fig. 5 matches OR minus the lower 95% bound, not a symmetric half-width: for all 10 cells where the text also prints a CI (Black, Asian, Other race; College, Bachelor, >Bachelor; income 50-100K, >100K; games vs SM; media & internalizing) OR−lo is within 0.02 of the ±, while hi−OR diverges strongly for wide CIs (e.g. Asian 0.47 ± 0.22 vs text 0.25-0.87; >Bachelor 5.63 ± 1.82 vs 3.83-8.29). OR_lo kept as OR−0.09 = 0.96; OR_hi corrected from 1.14 (OR+0.09) to OR²/OR_lo = 1.15 (log-symmetric). Derived, not printed. p/SE/z not printed anywhere in the 11-page PDF; supplement (Additional file 1) not in docs/pdfs.",
+     "ci_halfwidth": 0.09,
+     "ci_source": "lower_from_printed_halfwidth_upper_log_symmetric"
     },
     {
      "iv": "gf_wd_social",
      "dv": "any_activity",
      "OR": 0.96,
-     "OR_lo": null,
-     "OR_hi": null,
+     "OR_lo": 0.87,
+     "OR_hi": 1.06,
      "p": null,
      "p_label": null,
      "sig": false,
      "location": "Fig. 5 row 'Weekday social SMA' (p. 8)",
-     "note": "Printed as '0.96 \u00b1 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6."
+     "note": "Printed as '0.96 ± 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6. COMPLETION PASS: Fig. 5 prints '0.96 ± 0.09' under the axis label 'Odds Ratio +/- 95% CI', i.e. the 95% CI is printed as a half-width. OR_lo/OR_hi filled as OR ∓ 0.09 = 0.87-1.05 (arithmetic on printed values). Rounding caveat: for factors with both forms printed, the reconstruction is within 0.01 of the text CI (games vs SM 0.83±0.07 -> 0.76-0.90 vs text 0.76-0.89; media & internalizing 1.10±0.09 -> 1.01-1.19 vs text 1.02-1.18). No SE, z, or exact p printed for this GF anywhere (checked Abstract, Results pp.4-7, Table 1, Figs. 1-5, Discussion); non-significant per text p.6. sd_iv not needed: OR is per 1 SD of GF score and conversion is Chinn (no SD inputs). No supplement bundled (Suppl. Figs. 4-15 loadings, Suppl. Table 1 not in repo). AUDIT (2026-10-01): Fig. 5 values re-confirmed at 200 dpi (OR 0.96 ± 0.09). The '±' in Fig. 5 matches OR minus the lower 95% bound, not a symmetric half-width: for all 10 cells where the text also prints a CI (Black, Asian, Other race; College, Bachelor, >Bachelor; income 50-100K, >100K; games vs SM; media & internalizing) OR−lo is within 0.02 of the ±, while hi−OR diverges strongly for wide CIs (e.g. Asian 0.47 ± 0.22 vs text 0.25-0.87; >Bachelor 5.63 ± 1.82 vs 3.83-8.29). OR_lo kept as OR−0.09 = 0.87; OR_hi corrected from 1.05 (OR+0.09) to OR²/OR_lo = 1.06 (log-symmetric). Derived, not printed. p/SE/z not printed anywhere in the 11-page PDF; supplement (Additional file 1) not in docs/pdfs.",
+     "ci_halfwidth": 0.09,
+     "ci_source": "lower_from_printed_halfwidth_upper_log_symmetric"
     }
-   ]
+   ],
+   "iv_type": "continuous"
   }
  ],
  "excluded_models": [
@@ -123,12 +128,12 @@
    "why": "Bipolar latent factor loading on TV/movies, videos and games items against social media items (Fig. 4). The phone/SM component is not isolated from non-phone modalities, so it fails the composite rule (FT-IC2 Step 2). This is the authors' headline significant SMA effect; coders may wish to revisit."
   },
   {
-   "model": "'Screen media' (high general SMA) GF in the any-activity GLMM, OR 0.99 \u00b1 0.07",
+   "model": "'Screen media' (high general SMA) GF in the any-activity GLMM, OR 0.99 ± 0.07",
    "location": "Fig. 5 (p. 8); loadings Fig. 2 (p. 5)",
    "why": "Loads on all 12 SMA items including TV/movies, videos and games. Non-phone composite."
   },
   {
-   "model": "'Weekend vs weekday SMA' GF, OR 1.07 \u00b1 0.08",
+   "model": "'Weekend vs weekday SMA' GF, OR 1.07 ± 0.08",
    "location": "Fig. 5 (p. 8)",
    "why": "Contrasts day-type across all SMA modalities, not phone/SM-specific."
   },
@@ -168,7 +173,94 @@
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000)",
   "contrast_type": "per 1 SD increase in the GFA latent factor score (texting GF or weekday social SMA GF)",
   "transformable": "partial",
-  "notes": "Point estimates convert directly via Chinn. CI bounds are printed only as 'OR \u00b1 half-width' in Fig. 5 (p. 8), so OR_lo/OR_hi were left null and no d CI is derived; text-reported CIs for other factors show the intervals are slightly asymmetric (e.g., games vs social media printed 0.83 \u00b1 0.07 in Fig. 5 but 0.76-0.89 in text), so symmetric reconstruction would not match exactly. No p-values printed for the phone/SM GFs. The IV is a latent factor score rather than hours of use, so the per-SD d is not on the same footing as per-hour or per-SD-of-hours estimates in other papers, and the factors' loadings on non-phone SMA items cannot be checked without the supplement. p0 = 0.898 is the marginal endorsement rate (8,308/9,254; Results p. 4 and Table 1), recorded for context only since the native metric is OR."
+  "notes": "Point estimates convert directly via Chinn. CI bounds are printed only as 'OR ± half-width' in Fig. 5 (p. 8), so OR_lo/OR_hi were left null and no d CI is derived; text-reported CIs for other factors show the intervals are slightly asymmetric (e.g., games vs social media printed 0.83 ± 0.07 in Fig. 5 but 0.76-0.89 in text), so symmetric reconstruction would not match exactly. No p-values printed for the phone/SM GFs. The IV is a latent factor score rather than hours of use, so the per-SD d is not on the same footing as per-hour or per-SD-of-hours estimates in other papers, and the factors' loadings on non-phone SMA items cannot be checked without the supplement. p0 = 0.898 is the marginal endorsement rate (8,308/9,254; Results p. 4 and Table 1), recorded for context only since the native metric is OR. COMPLETION PASS (2026-10-01): OR_lo/OR_hi now filled as OR ± printed 95% CI half-width from Fig. 5 (accurate to ~0.01 given the slight asymmetry of log-scale CIs); flagged via ci_source on each estimate. No p/SE printed for the two phone/SM GFs."
  },
- "extraction_flags": "1) Phone/SM eligibility is borderline. The IVs are latent group factor scores from a GFA run on all 12 SMA items. Only the 'Texting' and 'Weekday social SMA' factors have phone/SM labels, and their loadings sit in supplementary figures that are not in this PDF, so I could not confirm they are free of non-phone items. Check Suppl. Figs. 4-15. 2) Both estimates come from Fig. 5 (p. 8), where they are printed as 'OR \u00b1 95% CI' half-widths: 1.05 \u00b1 0.09 and 0.96 \u00b1 0.09. I left the CI bounds null rather than rebuilding them. Where the text gives CIs for other factors, they don't quite match a symmetric \u00b1 (games vs SM: 0.83 \u00b1 0.07 in the figure, 0.76-0.89 in the text). No p-values are printed. Non-significance comes from the text, which says only 2 of 6 SMA factors were significant. 3) I excluded the authors' headline significant SMA finding: the 'games vs social media' bipolar factor, OR 0.83 (0.76-0.89). It contrasts games/movies/videos against social media, so the SM part is not isolated. Coders may disagree. 4) The five activity-specific GLMMs (soccer, swimming, baseball, music, art) report texting and weekday-social factor estimates only in Suppl. Figs. 16-20, which are not available. A second model card could be added if the supplement is obtained. 5) The OR is per 1 SD of a latent factor score, not per hour, so the derived d is not comparable with per-hour designs. p0 = 0.898 is the marginal endorsement rate, recorded for context only."
+ "extraction_flags": "1) Phone/SM eligibility is borderline. The IVs are latent group factor scores from a GFA run on all 12 SMA items. Only the 'Texting' and 'Weekday social SMA' factors have phone/SM labels, and their loadings sit in supplementary figures that are not in this PDF, so I could not confirm they are free of non-phone items. Check Suppl. Figs. 4-15. 2) Both estimates come from Fig. 5 (p. 8), where they are printed as 'OR ± 95% CI' half-widths: 1.05 ± 0.09 and 0.96 ± 0.09. I left the CI bounds null rather than rebuilding them. Where the text gives CIs for other factors, they don't quite match a symmetric ± (games vs SM: 0.83 ± 0.07 in the figure, 0.76-0.89 in the text). No p-values are printed. Non-significance comes from the text, which says only 2 of 6 SMA factors were significant. 3) I excluded the authors' headline significant SMA finding: the 'games vs social media' bipolar factor, OR 0.83 (0.76-0.89). It contrasts games/movies/videos against social media, so the SM part is not isolated. Coders may disagree. 4) The five activity-specific GLMMs (soccer, swimming, baseball, music, art) report texting and weekday-social factor estimates only in Suppl. Figs. 16-20, which are not available. A second model card could be added if the supplement is obtained. 5) The OR is per 1 SD of a latent factor score, not per hour, so the derived d is not comparable with per-hour designs. p0 = 0.898 is the marginal endorsement rate, recorded for context only.",
+ "verification_log": [
+  {
+   "stage": "complete",
+   "item": "M1",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Results p.6: ORs per 1 SD increase in GF score"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting x any activity",
+   "action": "filled_ci_input",
+   "value": [
+    0.96,
+    1.14
+   ],
+   "where": "Fig. 5 p.8 ('± 0.09', axis 'Odds Ratio +/- 95% CI')"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Texting x any activity",
+   "action": "confirmed_missing",
+   "value": "p/SE/z",
+   "where": "Searched full PDF pp.1-11; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Weekday social SMA x any activity",
+   "action": "filled_ci_input",
+   "value": [
+    0.87,
+    1.05
+   ],
+   "where": "Fig. 5 p.8 ('± 0.09', axis 'Odds Ratio +/- 95% CI')"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Weekday social SMA x any activity",
+   "action": "confirmed_missing",
+   "value": "p/SE/z",
+   "where": "Searched full PDF pp.1-11; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 gf_texting x any_activity",
+   "action": "corrected",
+   "field": "OR_hi",
+   "was": 1.14,
+   "value": 1.15,
+   "where": "Fig. 5 p.8 ('± 0.09'); '±' equals OR−lower bound (checked against 10 text CIs pp.1,6); upper rebuilt log-symmetric OR²/OR_lo"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 gf_texting x any_activity",
+   "action": "confirmed_missing",
+   "field": "p/se/z",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.1-11 incl. Fig. 5; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 gf_wd_social x any_activity",
+   "action": "corrected",
+   "field": "OR_hi",
+   "was": 1.05,
+   "value": 1.06,
+   "where": "Fig. 5 p.8 ('± 0.09'); '±' equals OR−lower bound (checked against 10 text CIs pp.1,6); upper rebuilt log-symmetric OR²/OR_lo"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 gf_wd_social x any_activity",
+   "action": "confirmed_missing",
+   "field": "p/se/z",
+   "was": null,
+   "value": null,
+   "where": "Full PDF pp.1-11 incl. Fig. 5; no supplement file in docs/pdfs"
+  },
+  {
+   "stage": "audit",
+   "item": "M1",
+   "action": "confirmed",
+   "was": null,
+   "value": "OR 1.05 (texting), 0.96 (weekday social SMA), sig false, iv_type continuous, p0 0.898 (8308/9254)",
+   "where": "Fig. 5 p.8; Results pp.4,6; Table 1 p.5"
+  }
+ ]
 }
