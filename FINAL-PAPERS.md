@@ -2,7 +2,7 @@
 
 These are the papers that survived the Stage 2 full-text screen (`02-L2/`) and are being extracted in Stage 3 (`03-model-extraction/`). See [`02-L2/2L-criteria.md`](02-L2/2L-criteria.md) for the eligibility criteria and [`02-L2/2L-scoring.csv`](02-L2/2L-scoring.csv) for the per-paper screening decisions.
 
-**Extraction progress:** all 69 drafted (65 by extraction agents, attributed to Danny; 394 and 156 hand-reviewed; 393 and 436 are duplicate records). Review and edit at https://dzweben.github.io/ABCD-screen-media-review/ (password ABCD).
+**Extraction progress:** all 69 drafted (65 by extraction agents, attributed to Danny; 394 and 156 extracted by hand; 393 and 436 are duplicate records). Review and edit at https://dzweben.github.io/ABCD-screen-media-review/ (password ABCD).
 
 ## The 69 papers
 
@@ -41,7 +41,7 @@ These are the papers that survived the Stage 2 full-text screen (`02-L2/`) and a
 | 31 | 150 | Social media use and early adolescent brain structure: Findings from the Adolescent Brain Cognitive Development (ABCD) Study | 2026 | [`10.1016/j.neuroimage.2026.121860`](https://doi.org/10.1016/j.neuroimage.2026.121860) | draft |
 | 32 | 152 | COVID information and masking behaviors in U.S. adolescents: Findings from the Adolescent Brain Cognitive Development (ABCD) Study | 2022 | [`10.1016/j.pmedr.2022.101900`](https://doi.org/10.1016/j.pmedr.2022.101900) | draft |
 | 33 | 154 | Adolescent smartphone use, sleep, and physical activity: daily associations between sensor-based measures in the adolescent brain cognitive development (ABCD) study | 2025 | [`10.1016/j.psychres.2025.116523`](https://doi.org/10.1016/j.psychres.2025.116523) | draft |
-| 34 | 156 | Screen media use and sleep disturbance symptom severity in children | 2020 | [`10.1016/j.sleh.2020.07.002`](https://doi.org/10.1016/j.sleh.2020.07.002) | ✅ reviewed |
+| 34 | 156 | Screen media use and sleep disturbance symptom severity in children | 2020 | [`10.1016/j.sleh.2020.07.002`](https://doi.org/10.1016/j.sleh.2020.07.002) | draft |
 | 35 | 157 | Bedtime screen use behaviors and sleep outcomes: Findings from the Adolescent Brain Cognitive Development (ABCD) Study | 2023 | [`10.1016/j.sleh.2023.02.005`](https://doi.org/10.1016/j.sleh.2023.02.005) | draft |
 | 36 | 158 | Social epidemiology of bedtime screen use behaviors and sleep outcomes in early adolescence | 2025 | [`10.1016/j.sleh.2025.05.005`](https://doi.org/10.1016/j.sleh.2025.05.005) | draft |
 | 37 | 160 | Screen time and suicidal behaviors among U.S. children 9-11 years old: A prospective cohort study | 2023 | [`10.1016/j.ypmed.2023.107452`](https://doi.org/10.1016/j.ypmed.2023.107452) | draft |
@@ -66,7 +66,7 @@ These are the papers that survived the Stage 2 full-text screen (`02-L2/`) and a
 | 56 | 388 | Screen media activity does not displace other recreational activities among 9-10 year-old youth: a cross-sectional ABCD study(R) | 2020 | [`10.1186/s12889-020-09894-w`](https://doi.org/10.1186/s12889-020-09894-w) | draft |
 | 57 | 389 | Problematic social media use and alcohol expectancies in early adolescents | 2023 | [`10.1186/s12889-023-15298-3`](https://doi.org/10.1186/s12889-023-15298-3) | draft |
 | 58 | 393 | Screen time and mental health: a prospective analysis of the Adolescent Brain Cognitive Development (ABCD) Study | 2024 | [`10.1186/s12889-024-20102-x`](https://doi.org/10.1186/s12889-024-20102-x) | dup of #394 |
-| 59 | 394 | Screen time and mental health: a prospective analysis of the Adolescent Brain Cognitive Development (ABCD) Study | 2024 | [`10.1186/s12889-024-20102-x`](https://doi.org/10.1186/s12889-024-20102-x) | ✅ reviewed |
+| 59 | 394 | Screen time and mental health: a prospective analysis of the Adolescent Brain Cognitive Development (ABCD) Study | 2024 | [`10.1186/s12889-024-20102-x`](https://doi.org/10.1186/s12889-024-20102-x) | draft |
 | 60 | 395 | Adolescent screen time, anxiety/depression, and alcohol/e-cigarette use: evidence from the ABCD study | 2025 | [`10.1186/s12889-025-25956-3`](https://doi.org/10.1186/s12889-025-25956-3) | draft |
 | 61 | 398 | Screen time and problem behaviors in children: exploring the mediating role of sleep duration | 2019 | [`10.1186/s12966-019-0862-x`](https://doi.org/10.1186/s12966-019-0862-x) | draft |
 | 62 | 400 | Longitudinal associations of screen time, physical activity, and sleep duration with body mass index in U.S. youth | 2024 | [`10.1186/s12966-024-01587-6`](https://doi.org/10.1186/s12966-024-01587-6) | draft |
