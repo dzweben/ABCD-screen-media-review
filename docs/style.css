@@ -616,3 +616,8 @@ table.est-matrix .dline.none { color: var(--muted); font-weight: 400; font-style
 .flags-box { margin-top: 12px; background: #fffbe6; border: 1px solid #e6d27a; border-radius: 6px; padding: 8px 14px; font-size: 12.5px; }
 .flags-box summary { cursor: pointer; font-weight: 700; color: #7a5b00; }
 .flags-text { white-space: pre-wrap; margin-top: 6px; color: var(--ink); line-height: 1.55; }
+
+/* textareas grow with content — no inner scrollbars */
+#paper-view textarea { overflow: hidden; resize: none; min-height: 30px; line-height: 1.5; }
+.ex-table textarea { min-height: 26px; }
+.model-name { resize: none; overflow: hidden; font-family: inherit; line-height: 1.35; }

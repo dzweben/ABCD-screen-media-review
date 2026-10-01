@@ -268,7 +268,27 @@ function renderPaper(paper) {
   wirePrimaryModels(view, paper);
   wireExcludedModels(view, paper);
   wireSectionApprovals(view, paper);
+  requestAnimationFrame(() => autosizeAll(view));
 }
+
+/* ── auto-growing textareas ─────────────────────────── */
+function autosize(ta) {
+  ta.style.height = "auto";
+  ta.style.height = ta.scrollHeight + 2 + "px";
+}
+function autosizeAll(root) {
+  root.querySelectorAll("textarea").forEach((ta) => {
+    autosize(ta);
+    if (!ta.dataset.autosized) {
+      ta.addEventListener("input", () => autosize(ta));
+      ta.dataset.autosized = "1";
+    }
+  });
+}
+window.addEventListener("resize", () => {
+  const v = document.getElementById("paper-view");
+  if (v && !v.hidden) autosizeAll(v);
+});
 
 /* ── text field wiring ──────────────────────────────── */
 function wireTextField(root, paper, field, placeholder) {
@@ -360,6 +380,7 @@ function wirePrimaryModels(root, paper) {
   (paper.primary_models || []).forEach((model, idx) => {
     list.appendChild(buildModelCard(paper, model, idx));
   });
+  requestAnimationFrame(() => autosizeAll(list));
   root.querySelector('button[data-add="primary_model"]').addEventListener("click", () => {
     paper.primary_models = paper.primary_models || [];
     const newIdx = paper.primary_models.length + 1;
@@ -528,6 +549,7 @@ function wireExcludedModels(root, paper) {
   (paper.excluded_models || []).forEach((row, idx) => {
     tbody.appendChild(buildExcludedRow(paper, row, idx));
   });
+  requestAnimationFrame(() => autosizeAll(tbody));
   root.querySelector('button[data-add="excluded_model"]').addEventListener("click", () => {
     paper.excluded_models = paper.excluded_models || [];
     paper.excluded_models.push({ model: "", location: "", why: "" });
@@ -541,9 +563,9 @@ function buildExcludedRow(paper, row, idx) {
   const tr = document.createElement("tr");
   if (strikeInfo) tr.classList.add("struck");
   tr.innerHTML = `
-    <td><input type="text" data-field="model"></td>
-    <td><input type="text" data-field="location"></td>
-    <td><textarea rows="2" data-field="why"></textarea></td>
+    <td><textarea rows="1" data-field="model"></textarea></td>
+    <td><textarea rows="1" data-field="location"></textarea></td>
+    <td><textarea rows="1" data-field="why"></textarea></td>
     <td>
       <button class="strike-btn" data-action="strike-row" title="${strikeInfo ? "Struck by " + escapeHtml(coderName(strikeInfo.coder)) : "Cross this row out (kept for audit)"}">${strikeInfo ? "Un-strike" : "Strike"}</button>
     </td>
