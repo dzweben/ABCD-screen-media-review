@@ -146,6 +146,15 @@ class TestToD(unittest.TestCase):
         out = to_d({"kind": "d_passthrough", "d": -0.28})
         self.assertEqual(out["d"], -0.28)
 
+    def test_dispatch_r(self):
+        out = to_d({"kind": "r", "r": 0.1, "r_lo": 0.05, "r_hi": 0.15})
+        self.assertAlmostEqual(out["d"], 0.20101, places=4)
+        self.assertLess(out["d_lo"], out["d"])
+
+    def test_dispatch_irr(self):
+        out = to_d({"kind": "irr", "IRR": 2.0})
+        self.assertAlmostEqual(out["d"], or_to_d(2.0), places=10)
+
     def test_dispatch_unknown_raises(self):
         with self.assertRaises(ValueError):
             to_d({"kind": "wat"})

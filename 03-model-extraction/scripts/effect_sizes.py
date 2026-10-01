@@ -153,6 +153,20 @@ def to_d(spec):
     if kind == "d_passthrough":
         return {"d": d_passthrough(spec["d"]), "method": "passthrough"}
 
+    if kind == "r":
+        d = _r_to_d(spec["r"])
+        out = {"d": d, "method": "r -> d = 2r/sqrt(1-r^2)"}
+        if spec.get("r_lo") is not None and spec.get("r_hi") is not None:
+            out["d_lo"], out["d_hi"] = ci_endpoints(spec["r_lo"], spec["r_hi"], _r_to_d)
+        return out
+
+    if kind == "irr":
+        d = or_to_d(spec["IRR"])
+        out = {"d": d, "method": "IRR treated as OR -> d (Chinn 2000); approximation"}
+        if spec.get("IRR_lo") is not None and spec.get("IRR_hi") is not None:
+            out["d_lo"], out["d_hi"] = ci_endpoints(spec["IRR_lo"], spec["IRR_hi"], or_to_d)
+        return out
+
     if kind == "standardized_beta":
         d = standardized_beta_to_d(spec["beta"])
         out = {"d": d, "method": "standardized beta -> d"}

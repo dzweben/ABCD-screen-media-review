@@ -8,7 +8,7 @@
 
 const STATUS_LABELS = {
   empty: "Empty",
-  ai_draft: "AI Draft",
+  ai_draft: "Draft",
   human_reviewed: "Reviewed",
   disputed: "Disputed",
   complete: "Complete",
@@ -123,6 +123,7 @@ function selectCoder(id) {
   AppState.currentCoder = id;
   localStorage.setItem("abcd-review-current-coder", id);
   renderCoderChipRow();
+  if (AppState.currentPaperId) loadPaper(AppState.currentPaperId);
 }
 
 function renderCoderChipRow() {
@@ -246,6 +247,13 @@ function renderPaper(paper) {
     pdfMissing.hidden = false;
   }
 
+  if (paper.duplicate_of) {
+    const b = document.createElement("div");
+    b.className = "dup-banner";
+    b.innerHTML = `Duplicate record — same paper as <a href="#" data-goto="${escapeHtml(paper.duplicate_of)}">#${escapeHtml(paper.duplicate_of)}</a>. Review and edit there; this copy is kept only so the PRISMA counts reconcile.`;
+    b.querySelector("a").onclick = (ev) => { ev.preventDefault(); loadPaper(paper.duplicate_of); };
+    view.querySelector(".paper-head").prepend(b);
+  }
   wireStatusBadge(view, paper);
   wireDottedFields(view, paper);
   wireReviewBar(view, paper);
@@ -446,20 +454,56 @@ function buildModelCard(paper, model, idx) {
   return card;
 }
 
+const NATIVE_KEYS = { B: "B", beta_std: "beta", OR: "OR", RR: "RR", IRR: "IRR", d: "d", r: "r" };
+
+function fmtNum(v, places) {
+  if (v === null || v === undefined || v === "") return "";
+  if (typeof v !== "number") return escapeHtml(String(v));
+  const p = places ?? (Math.abs(v) < 0.1 && v !== 0 ? 3 : 2);
+  return (Object.is(Math.round(v * 10 ** p), -0) ? 0 : v).toFixed(p);
+}
+
 function renderEstimatesTable(model) {
   const ests = model.estimates || [];
   if (!ests.length) {
-    return `<em style="color:var(--muted);">No estimates yet. Edit the underlying JSON to add them (a results-table editor is coming).</em>`;
+    return `<em style="color:var(--muted);">No phone/SM estimates recorded for this model.</em>`;
   }
   const nm = model.native_metric || "?";
-  const keys = new Set();
-  ests.forEach((e) => Object.keys(e).forEach((k) => keys.add(k)));
-  const cols = ["iv", "dv", nm, `${nm}_lo`, `${nm}_hi`, "p", "sig"].filter((c) => keys.has(c) || c === nm);
-  const rows = ests.map((e) => {
-    const cells = cols.map((c) => `<td>${formatCell(e[c])}</td>`).join("");
-    return `<tr class="${e.sig ? "sig" : ""}">${cells}</tr>`;
+  const key = NATIVE_KEYS[nm] || "value";
+  const label = nm.startsWith("other:") ? nm.slice(6) : nm;
+  const ivs = (model.iv_axis && model.iv_axis.length) ? model.iv_axis : [...new Set(ests.map((e) => e.iv))].map((id) => ({ id, label: id }));
+  const dvs = (model.dv_axis && model.dv_axis.length) ? model.dv_axis : [...new Set(ests.map((e) => e.dv))].map((id) => ({ id, label: id }));
+  const lookup = new Map(ests.map((e) => [`${e.iv}||${e.dv}`, e]));
+
+  const head = `<tr><th></th>${dvs.map((d) => `<th class="col-head">${d.label}</th>`).join("")}</tr>`;
+  const body = ivs.map((iv) => {
+    const cells = dvs.map((dv) => {
+      const e = lookup.get(`${iv.id}||${dv.id}`);
+      if (!e) return `<td class="mcell empty">—</td>`;
+      const v = e[key];
+      const lo = e[`${key}_lo`], hi = e[`${key}_hi`];
+      const ci = (lo !== null && lo !== undefined && hi !== null && hi !== undefined) ? `<span class="ci">[${fmtNum(lo)}, ${fmtNum(hi)}]</span>` : "";
+      const p = e.p_label ? `p ${escapeHtml(e.p_label.replace(/^p\s*/i, ""))}` : (e.p !== null && e.p !== undefined ? (e.p < 0.001 ? "p &lt; .001" : `p = ${e.p.toFixed(3).replace(/^0/, "")}`) : "");
+      let dLine;
+      if (nm === "d") {
+        dLine = "";
+      } else if (e.derived_d !== null && e.derived_d !== undefined) {
+        const dci = (e.derived_d_lo !== null && e.derived_d_lo !== undefined) ? ` <span class="dci">[${fmtNum(e.derived_d_lo, 3)}, ${fmtNum(e.derived_d_hi, 3)}]</span>` : "";
+        dLine = `<span class="dline" title="${escapeHtml(e.derived_d_method || "")}">d ≈ ${fmtNum(e.derived_d, 3)}${dci}</span>`;
+      } else {
+        dLine = `<span class="dline none" title="${escapeHtml(e.derived_d_method || "")}">d: n/a</span>`;
+      }
+      return `<td class="mcell ${e.sig ? "sig" : ""}" title="${escapeHtml(e.location || "")}${e.note ? " — " + escapeHtml(e.note) : ""}">
+        <span class="nv">${escapeHtml(label)} = ${fmtNum(v)}</span>${ci}${p ? `<span class="pv">${p}</span>` : ""}${dLine}</td>`;
+    }).join("");
+    return `<tr><td class="row-head">${escapeHtml(iv.label)}${iv.meta ? `<div class="iv-meta">${escapeHtml(iv.meta)}</div>` : ""}</td>${cells}</tr>`;
   }).join("");
-  return `<table><thead><tr>${cols.map((c) => `<th>${c}</th>`).join("")}</tr></thead><tbody>${rows}</tbody></table>`;
+
+  const naReasons = [...new Set(ests.filter((e) => nm !== "d" && (e.derived_d === null || e.derived_d === undefined)).map((e) => e.derived_d_method).filter(Boolean))];
+  const legend = nm === "d"
+    ? `Native metric is already Cohen's d.`
+    : `Top: native ${escapeHtml(label)} [95% CI], p. Purple: computed Cohen's d [95% CI].` + (naReasons.length ? ` d not computed where: ${naReasons.map(escapeHtml).join("; ")}.` : "");
+  return `<table class="est-matrix"><thead>${head}</thead><tbody>${body}</tbody></table><div class="est-legend">${legend} Green = significant at the paper's α. Hover a cell for its table location.</div>`;
 }
 function formatCell(v) {
   if (v === null || v === undefined) return "";
@@ -541,6 +585,7 @@ function wireReviewBar(root, paper) {
     unagreeBtn.hidden = true;
   }
   agreeBtn.onclick = () => {
+    const me = AppState.currentCoder;
     if (!me) return;
     paper.agreements = paper.agreements || {};
     paper.agreements.paper = paper.agreements.paper || {};
@@ -549,6 +594,7 @@ function wireReviewBar(root, paper) {
     wireReviewBar(root, paper);
   };
   unagreeBtn.onclick = () => {
+    const me = AppState.currentCoder;
     if (!me) return;
     if (paper.agreements?.paper) delete paper.agreements.paper[me];
     autoSave(paper, `${coderName(me)} retracted agreement`);
@@ -571,10 +617,11 @@ function wireSectionApprovals(root, paper) {
     btn.textContent = iAgreed ? "Retract ✓" : "✓ Looks right";
     btn.classList.toggle("done", !!iAgreed);
     btn.onclick = () => {
+      const me = AppState.currentCoder;
       if (!me) { alert("Pick a coder identity first."); return; }
       paper.agreements = paper.agreements || {};
       paper.agreements[key] = paper.agreements[key] || {};
-      if (iAgreed) {
+      if (paper.agreements[key][me]) {
         delete paper.agreements[key][me];
         autoSave(paper, `${coderName(me)} retracted approval of ${key}`);
       } else {
