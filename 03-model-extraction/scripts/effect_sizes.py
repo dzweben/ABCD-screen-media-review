@@ -153,6 +153,29 @@ def to_d(spec):
     if kind == "d_passthrough":
         return {"d": d_passthrough(spec["d"]), "method": "passthrough"}
 
+    if kind == "group_diff":
+        sd = spec["sd_dv"]
+        if sd <= 0:
+            raise ValueError("sd_dv must be positive")
+        out = {"d": spec["B"] / sd, "method": f"group difference: d = B / SD_DV (SD_DV={sd})"}
+        if spec.get("B_lo") is not None and spec.get("B_hi") is not None:
+            out["d_lo"], out["d_hi"] = sorted((spec["B_lo"] / sd, spec["B_hi"] / sd))
+        return out
+
+    if kind == "F1":
+        F, df = spec["F"], spec["df"]
+        if F < 0 or df <= 0:
+            raise ValueError("F must be >= 0 and df > 0")
+        r = math.sqrt(F / (F + df)) * (1 if spec.get("sign", 1) >= 0 else -1)
+        return {"d": _r_to_d(r), "method": "F(1,df) -> r = sqrt(F/(F+df)) -> d"}
+
+    if kind == "chi2_1":
+        X, N = spec["chi2"], spec["N"]
+        if X < 0 or N <= 0:
+            raise ValueError("chi2 must be >= 0 and N > 0")
+        r = math.sqrt(X / N) * (1 if spec.get("sign", 1) >= 0 else -1)
+        return {"d": _r_to_d(r), "method": "chi2(1) -> r = sqrt(chi2/N) -> d"}
+
     if kind == "r":
         d = _r_to_d(spec["r"])
         out = {"d": d, "method": "r -> d = 2r/sqrt(1-r^2)"}

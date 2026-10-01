@@ -520,7 +520,9 @@ function renderEstimatesTable(model) {
       if (!e) return `<td class="mcell empty">—</td>`;
       const v = e[key];
       const lo = e[`${key}_lo`], hi = e[`${key}_hi`];
-      const ci = (lo !== null && lo !== undefined && hi !== null && hi !== undefined) ? `<span class="ci">[${fmtNum(lo)}, ${fmtNum(hi)}]</span>` : "";
+      const dag = e.ci_source ? `<span class="dag" title="${escapeHtml(e.ci_source)}">†</span>` : "";
+      const ci = (lo !== null && lo !== undefined && hi !== null && hi !== undefined) ? `<span class="ci">[${fmtNum(lo)}, ${fmtNum(hi)}]${dag}</span>` : "";
+      const cflag = (e.consistency_flags || []).length ? `<span class="cflag" title="${escapeHtml(e.consistency_flags.join("; "))}">⚠ check</span>` : "";
       const p = e.p_label ? `p ${escapeHtml(e.p_label.replace(/^p\s*/i, ""))}` : (e.p !== null && e.p !== undefined ? (e.p < 0.001 ? "p &lt; .001" : `p = ${e.p.toFixed(3).replace(/^0/, "")}`) : "");
       let dLine;
       if (nm === "d") {
@@ -532,7 +534,7 @@ function renderEstimatesTable(model) {
         dLine = `<span class="dline none" title="${escapeHtml(e.derived_d_method || "")}">d: n/a</span>`;
       }
       return `<td class="mcell ${e.sig ? "sig" : ""}" title="${escapeHtml(e.location || "")}${e.note ? " — " + escapeHtml(e.note) : ""}">
-        <span class="nv">${escapeHtml(label)} = ${fmtNum(v)}</span>${ci}${p ? `<span class="pv">${p}</span>` : ""}${dLine}</td>`;
+        <span class="nv">${escapeHtml(label)} = ${fmtNum(v)}</span>${ci}${p ? `<span class="pv">${p}</span>` : ""}${dLine}${cflag}</td>`;
     }).join("");
     return `<tr><td class="row-head">${escapeHtml(iv.label)}${iv.meta ? `<div class="iv-meta">${escapeHtml(iv.meta)}</div>` : ""}</td>${cells}</tr>`;
   }).join("");
@@ -540,7 +542,7 @@ function renderEstimatesTable(model) {
   const naReasons = [...new Set(ests.filter((e) => nm !== "d" && (e.derived_d === null || e.derived_d === undefined)).map((e) => e.derived_d_method).filter(Boolean))];
   const legend = nm === "d"
     ? `Native metric is already Cohen's d.`
-    : `Top: native ${escapeHtml(label)} [95% CI], p. Purple: computed Cohen's d [95% CI].` + (naReasons.length ? ` d not computed where: ${naReasons.map(escapeHtml).join("; ")}.` : "");
+    : `Top: native ${escapeHtml(label)} [95% CI], p. † = CI not printed in the paper; computed from its SE or exact p (hover for the method). Purple: computed Cohen's d [95% CI].` + (naReasons.length ? ` d not computed where: ${naReasons.map(escapeHtml).join("; ")}.` : "");
   return `<table class="est-matrix"><thead>${head}</thead><tbody>${body}</tbody></table><div class="est-legend">${legend} Green = significant at the paper's α. Hover a cell for its table location.</div>`;
 }
 function formatCell(v) {
@@ -616,6 +618,8 @@ function renderDComputed(el, paper) {
     const rows = ests.map((e) => {
       const native = e[key] !== null && e[key] !== undefined
         ? `${escapeHtml(label)} = ${fmtNum(e[key])}` + ((e[key + "_lo"] ?? null) !== null ? ` [${fmtNum(e[key + "_lo"])}, ${fmtNum(e[key + "_hi"])}]` : "")
+          + (e.ci_source ? `<div class="dc-src">† CI ${escapeHtml(e.ci_source.replace(/^computed:?\s*/, "computed: "))}</div>` : "")
+          + ((e.consistency_flags || []).length ? `<div class="cflag-line">⚠ ${escapeHtml(e.consistency_flags.join("; "))}</div>` : "")
         : `<span class="dc-na">not reported</span>`;
       let d, calc;
       if (m.native_metric === "d" && e.d !== null && e.d !== undefined) {
@@ -626,7 +630,8 @@ function renderDComputed(el, paper) {
         calc = escapeHtml(e.derived_d_calc || e.derived_d_method || "");
       } else {
         d = `<span class="dc-na">n/a</span>`;
-        calc = `<span class="dc-na">${escapeHtml(e.derived_d_method || "not computable")}</span>`;
+        calc = `<span class="dc-na">${escapeHtml(e.derived_d_method || "not computable")}</span>`
+          + (e.note ? `<div class="dc-where">${escapeHtml(e.note)}</div>` : "");
       }
       return `<tr class="${e.sig ? "sig" : ""}"><td>${escapeHtml(ivL[e.iv] || e.iv)}</td><td>${escapeHtml((dvL[e.dv] || e.dv).replace(/<[^>]+>/g, " "))}</td><td class="mono">${native}</td><td class="mono calc">${calc}</td><td class="mono dval">${d}</td></tr>`;
     }).join("");
@@ -639,9 +644,13 @@ function renderDComputed(el, paper) {
       <table class="dc-table"><thead><tr><th>IV</th><th>DV</th><th>Native estimate [95% CI]</th><th>Worked calculation</th><th>Cohen's d [95% CI]</th></tr></thead><tbody>${rows}</tbody></table>
     </div>`;
   }).join("");
+  const vlog = paper.verification_log || [];
+  const vhtml = vlog.length ? `<details class="vlog"><summary>Verification log: ${vlog.length} checks against the PDF (${vlog.filter((x) => /fill|add|correct/.test(x.action || "")).length} values filled or corrected)</summary><table class="dc-table"><thead><tr><th>Stage</th><th>Item</th><th>Action</th><th>Value</th><th>Where</th></tr></thead><tbody>${
+    vlog.map((x) => `<tr><td>${escapeHtml(x.stage || "")}</td><td>${escapeHtml(x.item || "")}</td><td>${escapeHtml(x.action || "")}</td><td class="mono">${escapeHtml(x.was !== undefined ? String(x.was) + " → " + String(x.value) : String(x.value ?? ""))}</td><td>${escapeHtml(x.where || "")}</td></tr>`).join("")
+  }</tbody></table></details>` : "";
   el.innerHTML = `<h3 class="dc-title">Computed Cohen's d</h3>
     <p class="dc-note">Generated from the extracted numbers by <code>docs/scripts/ingest_drafts.py</code> (conversion functions in <code>03-model-extraction/scripts/effect_sizes.py</code>, unit-tested). CIs on d come from applying the same formula to each CI endpoint. √3/π = 0.5513. Green rows are significant at the paper's α. If you correct a number above, the d here updates on the next ingest.</p>
-    ${blocks}`;
+    ${blocks}${vhtml}`;
 }
 
 /* ── review bar (paper-level agreement chips) ────────── */

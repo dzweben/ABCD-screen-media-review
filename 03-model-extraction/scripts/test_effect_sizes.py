@@ -155,6 +155,24 @@ class TestToD(unittest.TestCase):
         out = to_d({"kind": "irr", "IRR": 2.0})
         self.assertAlmostEqual(out["d"], or_to_d(2.0), places=10)
 
+    def test_group_diff(self):
+        out = to_d({"kind": "group_diff", "B": 2.0, "sd_dv": 10.0, "B_lo": 1.0, "B_hi": 3.0})
+        self.assertAlmostEqual(out["d"], 0.2)
+        self.assertAlmostEqual(out["d_lo"], 0.1)
+        self.assertAlmostEqual(out["d_hi"], 0.3)
+
+    def test_F1(self):
+        # F=4, df=96 -> r = sqrt(4/100) = 0.2 -> d = 0.4/sqrt(0.96)
+        out = to_d({"kind": "F1", "F": 4.0, "df": 96})
+        self.assertAlmostEqual(out["d"], 0.4 / math.sqrt(0.96), places=10)
+
+    def test_chi2_1(self):
+        # chi2=9, N=900 -> r = 0.1 -> d = 0.2/sqrt(0.99)
+        out = to_d({"kind": "chi2_1", "chi2": 9.0, "N": 900})
+        self.assertAlmostEqual(out["d"], 0.2 / math.sqrt(0.99), places=10)
+        neg = to_d({"kind": "chi2_1", "chi2": 9.0, "N": 900, "sign": -1})
+        self.assertAlmostEqual(neg["d"], -out["d"], places=10)
+
     def test_dispatch_unknown_raises(self):
         with self.assertRaises(ValueError):
             to_d({"kind": "wat"})

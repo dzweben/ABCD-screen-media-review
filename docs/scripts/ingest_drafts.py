@@ -13,6 +13,7 @@ Run from repo root:  python3 docs/scripts/ingest_drafts.py
 import glob
 import json
 import math
+from statistics import NormalDist
 import os
 import sys
 
@@ -29,9 +30,20 @@ REQUIRED_MODEL = ["model_id", "name", "location_in_paper", "design", "sample", "
                   "covariates", "equation", "estimation", "native_metric", "iv_axis", "dv_axis", "estimates"]
 
 
-def spec_for(est, metric, iv_meta, dv_meta):
+def spec_for(est, metric, iv_meta, dv_meta, iv_type=None):
     """Translate one estimate into an effect_sizes.to_d spec, or (None, reason)."""
     m = (metric or "").strip()
+    if m == "B" and iv_type in ("binary", "categorical"):
+        # B is an adjusted group mean difference vs the reference group: d = B / SD_DV
+        if est.get("B") is None:
+            return None, "B missing"
+        sd_dv = est.get("sd_dv") or dv_meta.get("sd_dv")
+        if not sd_dv:
+            return None, "SD_DV not reported (group-contrast IV, so SD_IV not needed)"
+        s = {"kind": "group_diff", "B": est["B"], "sd_dv": sd_dv}
+        if est.get("B_lo") is not None and est.get("B_hi") is not None:
+            s.update(B_lo=est["B_lo"], B_hi=est["B_hi"])
+        return s, None
     if m == "B":
         if est.get("B") is None:
             return None, "B missing"
@@ -88,6 +100,16 @@ def spec_for(est, metric, iv_meta, dv_meta):
     # 'other:' metrics with a legitimate closed-form conversion
     v, lo, hi = est.get("value"), est.get("value_lo"), est.get("value_hi")
     has_ci = lo is not None and hi is not None
+    if m in ("other:F(1,df)", "F1"):
+        F, df = est.get("value"), est.get("df")
+        if F is None or not df:
+            return None, "F or its error df not reported"
+        return {"kind": "F1", "F": F, "df": df, "sign": est.get("sign", 1)}, None
+    if m in ("other:chi2", "chi2_1"):
+        X, N = est.get("value"), est.get("n")
+        if X is None or not N or (est.get("chi2_df") not in (None, 1)):
+            return None, "χ² needs 1 df and its N to convert"
+        return {"kind": "chi2_1", "chi2": X, "N": N, "sign": est.get("sign", 1)}, None
     if m == "other:standardized_beta_x100":
         if v is None:
             return None, "value missing"
@@ -137,6 +159,22 @@ def worked(spec, metric, est):
             return "d reported by the paper", f"d = {g(spec['d'])} (no conversion)"
         return ("d = β (β is a Y-standardized mean difference for a binary IV)",
                 f"d = β = {g(spec['d'])}")
+    if k == "group_diff":
+        B, b = spec["B"], spec["sd_dv"]
+        return ("d = B / SD_DV  (B = adjusted mean difference vs reference group)",
+                f"d = {g(B)} / {g(b)} = {g(B / b)}")
+    if k == "F1":
+        F, df = spec["F"], spec["df"]
+        r = math.sqrt(F / (F + df))
+        d = 2 * r / math.sqrt(1 - r ** 2)
+        return ("r = √(F / (F + df_error));  d = 2r / √(1 − r²)  (F with 1 numerator df)",
+                f"r = √({g(F)} / ({g(F)} + {g(df)})) = {g(r)};  d = 2({g(r)}) / √(1 − {sq(r)}) = {g(d)}")
+    if k == "chi2_1":
+        X, N = spec["chi2"], spec["N"]
+        r = math.sqrt(X / N)
+        d = 2 * r / math.sqrt(1 - r ** 2)
+        return ("r = √(χ² / N);  d = 2r / √(1 − r²)  (χ² with 1 df; sign from direction of effect)",
+                f"r = √({g(X)} / {g(N)}) = {g(r)};  d = 2({g(r)}) / √(1 − {sq(r)}) = {g(d)}")
     if k == "linear_continuous":
         B, a, b = spec["B"], spec["sd_iv"], spec["sd_dv"]
         beta = B * a / b
@@ -173,6 +211,92 @@ def worked(spec, metric, est):
     return "", ""
 
 
+RATIO = {"OR", "RR", "IRR", "other:PR", "other:ratio_of_means"}
+# Metrics where a Wald CI from SE / exact p is valid
+WALD_OK = {"B", "beta_std", "OR", "RR", "IRR", "d", "other:PR", "other:ratio_of_means", "other:logit_B",
+           "other:ordered_logit_coefficient", "other:standardized_beta_x100"}
+NATIVE_KEY = {"B": "B", "beta_std": "beta", "OR": "OR", "RR": "RR", "IRR": "IRR", "d": "d", "r": "r"}
+
+
+def fill_ci(est, metric):
+    """Fill a missing 95% CI on the native estimate from what the paper prints.
+
+    Order: (1) printed SE -> estimate ± 1.96·SE (log scale for ratios);
+           (2) exact p -> z = Φ⁻¹(1 − p/2), SE = |θ|/z (Altman & Bland 2011);
+           (3) Cohen's d with group sizes -> SE(d) = √((n1+n0)/(n1·n0) + d²/(2(n1+n0))).
+    Records how the CI was obtained in est["ci_source"]. Never overwrites a printed CI.
+    """
+    if metric not in WALD_OK:
+        return
+    k = NATIVE_KEY.get(metric, "value")
+    v = est.get(k)
+    if v is None or (est.get(k + "_lo") is not None and est.get(k + "_hi") is not None):
+        return
+    ratio = metric in RATIO or est.get("se_scale") == "log"
+    if ratio and v <= 0:
+        return
+    theta = math.log(v) if ratio else v
+    se = est.get("se")
+    src = None
+    if isinstance(se, (int, float)) and se > 0:
+        src = "computed: estimate ± 1.96 × SE" + (" (log scale)" if ratio else "")
+    elif isinstance(est.get("t") or est.get("z"), (int, float)) and (est.get("t") or est.get("z")) != 0 and theta != 0:
+        stat = est.get("t") or est.get("z")
+        se = abs(theta) / abs(stat)
+        src = f"computed: SE = |estimate| / |{'t' if est.get('t') else 'z'}| = {abs(theta):.4g} / {abs(stat):.4g}" + (" (log scale)" if ratio else "")
+    elif metric == "d" and est.get("n1") and est.get("n0"):
+        n1, n0 = est["n1"], est["n0"]
+        se = math.sqrt((n1 + n0) / (n1 * n0) + v ** 2 / (2 * (n1 + n0)))
+        src = f"computed: SE(d) from group sizes n1={n1}, n0={n0}"
+    else:
+        p = est.get("p")
+        lab = str(est.get("p_label") or "")
+        exact = isinstance(p, (int, float)) and 0 < p < 1 and not lab.strip().startswith(("<", ">", "≤", "≥"))
+        if exact and theta != 0:
+            z = NormalDist().inv_cdf(1 - p / 2)
+            if z > 0:
+                se = abs(theta) / z
+                src = f"computed from exact p = {p} (Altman & Bland 2011)" + (" on log scale" if ratio else "")
+    if not src:
+        return
+    lo, hi = theta - 1.959964 * se, theta + 1.959964 * se
+    if ratio:
+        lo, hi = math.exp(lo), math.exp(hi)
+    est[k + "_lo"], est[k + "_hi"] = round(lo, 4), round(hi, 4)
+    est["ci_source"] = src
+
+
+def consistency(est, metric):
+    """Flag internally inconsistent numbers (likely extraction errors)."""
+    k = NATIVE_KEY.get(metric, "value")
+    v, lo, hi = est.get(k), est.get(k + "_lo"), est.get(k + "_hi")
+    flags = []
+    if None not in (v, lo, hi) and not est.get("ci_source"):
+        if lo > hi:
+            flags.append("CI lower bound > upper bound")
+        elif not (lo - 1e-9 <= v <= hi + 1e-9):
+            flags.append("estimate lies outside its own CI")
+        p, lab = est.get("p"), str(est.get("p_label") or "")
+        if metric in WALD_OK and isinstance(p, (int, float)) and 0 < p < 1 and not lab.strip().startswith("<"):
+            ratio = metric in RATIO
+            if (not ratio or (v > 0 and lo > 0 and hi > 0)):
+                th = math.log(v) if ratio else v
+                w = (math.log(hi) - math.log(lo)) if ratio else (hi - lo)
+                z = NormalDist().inv_cdf(1 - p / 2)
+                if th != 0 and w > 0 and z > 0:
+                    implied = 2 * 1.959964 * abs(th) / z
+                    if abs(implied - w) / w > 0.5:
+                        flags.append(f"p = {p} implies a CI width of {implied:.3g}, printed width is {w:.3g}")
+        excl = (1 if metric in RATIO else 0)
+        crosses = lo < excl < hi
+        if est.get("sig") is True and crosses:
+            flags.append("marked significant but CI includes the null")
+    if flags:
+        est["consistency_flags"] = flags
+    else:
+        est.pop("consistency_flags", None)
+
+
 def process(paper):
     issues = []
     for k in REQUIRED_TOP:
@@ -187,6 +311,9 @@ def process(paper):
         dvs = {x.get("id"): x for x in model.get("dv_axis") or []}
         for est in model.get("estimates") or []:
             n_est += 1
+            consistency(est, model.get("native_metric"))
+            if not est.get("ci_source"):
+                fill_ci(est, model.get("native_metric"))
             if est.get("iv") not in ivs:
                 issues.append(f"M{mi+1}: estimate iv '{est.get('iv')}' not in iv_axis")
             if est.get("dv") not in dvs:
@@ -194,7 +321,8 @@ def process(paper):
             if model.get("d_kind") == "beta_is_y_standardized_group_difference" and est.get("beta") is not None:
                 spec, why = {"kind": "d_passthrough", "d": est["beta"]}, None
             else:
-                spec, why = spec_for(est, model.get("native_metric"), ivs.get(est.get("iv"), {}), dvs.get(est.get("dv"), {}))
+                spec, why = spec_for(est, model.get("native_metric"), ivs.get(est.get("iv"), {}), dvs.get(est.get("dv"), {}),
+                                     iv_type=model.get("iv_type"))
             for k in ("d", "d_lo", "d_hi") if model.get("native_metric") != "d" else ():
                 est.pop("derived_" + k, None)
             est.pop("derived_d_formula", None)
