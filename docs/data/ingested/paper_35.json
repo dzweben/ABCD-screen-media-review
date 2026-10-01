@@ -1,0 +1,499 @@
+{
+ "paper_id": "35",
+ "title": "Concurrent and prospective associations of social media usage with binge eating symptoms in early adolescence",
+ "doi": "10.1002/oby.24199",
+ "year": "2025",
+ "authors": "Shi X, Duck SA, Jansen E, Borsarini B, Blackwell CK, Li Y, Carnell S",
+ "journal": "Obesity (Silver Spring)",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Modified Poisson regression (robust variance) of concurrent binge eating on social media time and social media addiction group, adjusted for demographics, BMI percentile and behavioral recommendations (Model 2)",
+   "location_in_paper": "Table 2, Model 2 column (p. 351); results text p. 350 ('Table 2 shows cross-sectional results'); discussed p. 352-353.",
+   "design": "Cross-sectional, run separately at two waves. Wave 1 = ABCD 2-year follow-up (ages 11-12) and Wave 3 = ABCD 4-year follow-up (ages 13-14). At each wave, SMT or SMA measured at that wave is related to BE presence at the same wave. One observation per participant per fitted model; no repeated-measures structure and no wave x IV interaction. The table presents a crude model and stepwise Model 1 (demographics) and Model 2 (plus BMI percentile and behavioral recommendations); Model 2 is the most adjusted cross-sectional model and is the one quoted in the Results text (e.g., addiction group PR 2.17 at Wave 1, 3.45 at Wave 3).",
+   "sample": "ABCD Release 5.1 (data collected September 1, 2016 to January 15, 2022). Of 4754 participants with the 4-year follow-up, those with missing exposure, outcome, or covariate data (except household income and BMI) were excluded, and the main analysis was restricted to participants who reported having a social media account (Discussion p. 353 says accounts at all three waves), leaving N = 1940 (Figure S1, not in this PDF). Wave 1 mean age 11.6 (SD 0.50). 875 male (45.1%), 1065 female (54.9%). White 961 (49.5%), Black 267 (13.8%), Hispanic 468 (24.1%), Asian 39 (2.01%), Other 205 (10.6%). Household income <$50k 30.5%, $50-100k 26.6%, $100-200k 25.8%, >$200k 10.1%, not available 7.06%. Overweight/obesity at Wave 1 40.4%. BE present at Wave 1 in 249 (No BE 1691) per Table 1; BE at Wave 3 in 237 (p. 351). The sample had more female and lower-SES adolescents than the full ABCD baseline (Table S1, not in this PDF).",
+   "iv": "Two social media IVs, each entered at the same wave as the DV. (1) SMT: average daily time on social media in hours, computed from youth self-reported weekday and weekend social media time as ([weekday x 5] + [weekend x 2])/7; entered continuously, so the PR is per 1 hour/day. No SD for SMT is reported; Figure 1 gives only BE-profile means (about 1.0-1.3 h/day at Wave 1 and 2.4-3.3 h/day at Wave 3). (2) SMA: six-item social media addiction questionnaire adapted from the Bergen Facebook Addiction Scale (Cronbach alpha = 0.84), items rated 1 (never) to 6 (very often), administered to youth with at least one social media account. Total score categorized as no symptoms (score 6, reference), mild symptoms (7-23), and addiction (>=24). At Wave 1: no symptoms 1408 (72.6%), mild 477 (24.6%), addiction 55 (2.8%). At Wave 3: no symptoms 1506 (77.6%), mild 365 (18.8%), addiction 69 (3.6%).",
+   "dv": "Presence of binge eating (BE) symptoms (binary), from KSADS-5 youth and parent reports: any episode of losing control and consuming more than needed while eating in the past 2 weeks. The main analysis uses the combined report (case if either child or parent reports it). Wave 1 BE: 249/1940 (Table 1). Wave 3 BE: 237/1940 (p. 351).",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Female or male, collected at baseline"
+    },
+    {
+     "name": "Age",
+     "detail": "Age at assessment (listed in table note; units not stated)"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "American Indian, Asian, Black, Hispanic or Latinx, White, or other (Table 1 shows White, Black, Hispanic, Asian, Other), collected at baseline"
+    },
+    {
+     "name": "Annual household income",
+     "detail": "<$50,000; $50,000-$100,000; $100,000-$200,000; >$200,000; or not available, collected at baseline"
+    },
+    {
+     "name": "Highest parental education",
+     "detail": "Below undergraduate, undergraduate, or above undergraduate, collected at baseline"
+    },
+    {
+     "name": "BMI percentile",
+     "detail": "CDC age- and sex-specific BMI percentile from measured height and weight (R package cdcanthro), measured at the same wave as SMT/SMA and BE"
+    },
+    {
+     "name": "Meeting sleep duration recommendation",
+     "detail": "Binary, parent-reported Sleep Disturbance Scale for Children; 9-11 h counts as meeting the recommendation; same wave"
+    },
+    {
+     "name": "Meeting physical activity recommendation",
+     "detail": "Binary, Youth Risk Behavior Survey self-report; active >=60 min on 7 days/week; same wave"
+    },
+    {
+     "name": "Meeting screen time recommendation",
+     "detail": "Binary, total daily screen time <=2 h, computed like SMT; same wave"
+    }
+   ],
+   "equation": "log(P(BE_w[i] = 1)) = b0 + b1*SM_w[i] + b2*sex + b3*age + b4..*race_ethnicity + b..*income + b..*parent_education + b..*BMI_percentile_w + b..*sleep_rec_w + b..*PA_rec_w + b..*screen_rec_w, with w = Wave 1 or Wave 3 and SM_w either SMT (hours/day) or SMA group dummies (mild, addiction vs. no symptoms). PR = exp(b1). Poisson log-link with robust (sandwich) error variance.",
+   "estimation": "Modified Poisson regression with robust error variance, reporting prevalence ratios (PR) with 95% CI, in R version 4.3.1; two-sided p < 0.05. No survey weights, no random effects for site or family, and no multiple-comparison correction are described. The paper does not state whether SMT and SMA were entered in the same model or separately (the table layout suggests separate models). Interactions of sex and BMI percentile with SMT/SMA and stratified analyses were run only for the prospective association (Tables S4-S5, not in this PDF). Sensitivity analyses by child-only and parent-only report (Table S6) and SMT analyses in a larger sample that did not require a social media account (Table S7) are in the supplement, not in this PDF.",
+   "native_metric": "other:PR",
+   "iv_axis": [
+    {
+     "id": "smt",
+     "label": "Social media time (per 1 h/day), same wave as DV",
+     "meta": "continuous, hours/day",
+     "sd_iv": null
+    },
+    {
+     "id": "sma_mild",
+     "label": "SMA mild symptoms (score 7-23) vs. no symptoms",
+     "meta": "W1 n=477 (24.6%); W3 n=365 (18.8%)",
+     "sd_iv": null
+    },
+    {
+     "id": "sma_addiction",
+     "label": "SMA addiction (score >=24) vs. no symptoms",
+     "meta": "W1 n=55 (2.8%); W3 n=69 (3.6%)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "be_w1",
+     "label": "BE presence, Wave 1 (2-year follow-up)",
+     "sd_dv": null,
+     "p0": 0.128
+    },
+    {
+     "id": "be_w3",
+     "label": "BE presence, Wave 3 (4-year follow-up)",
+     "sd_dv": null,
+     "p0": 0.122
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "smt",
+     "dv": "be_w1",
+     "value": 1.05,
+     "value_lo": 0.99,
+     "value_hi": 1.12,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Table 2, row 'Wave 1 SMT, h', Model 2",
+     "note": "PR per 1 h/day. p not reported; significance judged from CI and text ('SMT was not cross-sectionally associated with BE').",
+     "derived_d": 0.031,
+     "derived_d_lo": -0.0063,
+     "derived_d_hi": 0.0723,
+     "derived_d_method": "RR -> OR -> d (p0=0.128)"
+    },
+    {
+     "iv": "smt",
+     "dv": "be_w3",
+     "value": 1.03,
+     "value_lo": 0.98,
+     "value_hi": 1.09,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Table 2, row 'Wave 3 SMT, h', Model 2",
+     "note": "PR per 1 h/day. p not reported.",
+     "derived_d": 0.0186,
+     "derived_d_lo": -0.0127,
+     "derived_d_hi": 0.0545,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "sma_mild",
+     "dv": "be_w1",
+     "value": 1.35,
+     "value_lo": 1.0,
+     "value_hi": 1.84,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Table 2, Wave 1 SMA 'Mild symptoms', Model 2",
+     "note": "Lower CI bound printed as 1.00; authors describe the Wave 1 mild-symptom association as not significant.",
+     "derived_d": 0.1945,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.4087,
+     "derived_d_method": "RR -> OR -> d (p0=0.128)"
+    },
+    {
+     "iv": "sma_mild",
+     "dv": "be_w3",
+     "value": 1.73,
+     "value_lo": 1.07,
+     "value_hi": 2.8,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 2, Wave 3 SMA 'Mild symptoms', Model 2",
+     "note": "Quoted in text p. 350.",
+     "derived_d": 0.3612,
+     "derived_d_lo": 0.0427,
+     "derived_d_hi": 0.7264,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "sma_addiction",
+     "dv": "be_w1",
+     "value": 2.17,
+     "value_lo": 1.22,
+     "value_hi": 3.84,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 2, Wave 1 SMA 'Addiction', Model 2",
+     "note": "Quoted in text p. 350.",
+     "derived_d": 0.531,
+     "derived_d_lo": 0.1277,
+     "derived_d_hi": 1.0392,
+     "derived_d_method": "RR -> OR -> d (p0=0.128)"
+    },
+    {
+     "iv": "sma_addiction",
+     "dv": "be_w3",
+     "value": 3.45,
+     "value_lo": 1.83,
+     "value_hi": 6.49,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 2, Wave 3 SMA 'Addiction', Model 2",
+     "note": "Quoted in text p. 350.",
+     "derived_d": 0.9122,
+     "derived_d_lo": 0.4007,
+     "derived_d_hi": 1.8245,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Modified Poisson regression (robust variance) of Wave 3 binge eating on Wave 1 social media time and social media addiction group, adjusted for demographics, BMI percentile, behavioral recommendations and Wave 1 BE (Model 3)",
+   "location_in_paper": "Table 3, Model 3 column (p. 351); results text p. 350; Methods p. 348-349 state Model 3 is 'used for the longitudinal analysis'; discussed p. 352-353.",
+   "design": "Prospective. IV (SMT or SMA group) measured at Wave 1 (ABCD 2-year follow-up, ages 11-12); DV is BE presence at Wave 3 (ABCD 4-year follow-up, about 2 years later). Single follow-up outcome, one observation per participant, no repeated measures and no time interaction. Model 3 adds Wave 1 BE status to the Model 2 covariates, so the estimate is the association with Wave 3 BE conditional on Wave 1 BE. Crude, Model 1 and Model 2 are reported as stepwise scaffolding.",
+   "sample": "Same analytic sample as M1: ABCD Release 5.1, N = 1940 youth with complete data who reported having a social media account; Wave 1 mean age 11.6 (SD 0.50); 54.9% female; 49.5% White, 13.8% Black, 24.1% Hispanic, 2.01% Asian, 10.6% Other. Wave 3 BE cases n = 237.",
+   "iv": "Wave 1 SMT (average daily hours on social media, ([weekday x 5] + [weekend x 2])/7, continuous; RR per 1 h/day; SD not reported) and Wave 1 SMA group from the six-item Bergen-adapted SMA questionnaire: no symptoms (score 6; n = 1408, 72.6%, reference), mild symptoms (7-23; n = 477, 24.6%), addiction (>=24; n = 55, 2.8%).",
+   "dv": "Presence of BE symptoms at Wave 3 (binary; KSADS-5 combined child or parent report of any loss-of-control overeating episode in the past 2 weeks). 237 of 1940 at Wave 3.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Female or male, baseline"
+    },
+    {
+     "name": "Age",
+     "detail": "Age (listed in table note)"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Categorical, baseline"
+    },
+    {
+     "name": "Annual household income",
+     "detail": "Four bands plus not available, baseline"
+    },
+    {
+     "name": "Highest parental education",
+     "detail": "Below undergraduate, undergraduate, above undergraduate, baseline"
+    },
+    {
+     "name": "BMI percentile",
+     "detail": "CDC age- and sex-specific percentile, measured at the same wave as SMA/SMT (Wave 1)"
+    },
+    {
+     "name": "Meeting sleep duration recommendation",
+     "detail": "Binary, 9-11 h per parent report, Wave 1"
+    },
+    {
+     "name": "Meeting physical activity recommendation",
+     "detail": "Binary, >=60 min 7 days/week, Wave 1"
+    },
+    {
+     "name": "Meeting screen time recommendation",
+     "detail": "Binary, <=2 h/day screen time, Wave 1"
+    },
+    {
+     "name": "Wave 1 BE status",
+     "detail": "Binary presence of BE symptoms at Wave 1 (combined report)"
+    }
+   ],
+   "equation": "log(P(BE_W3[i] = 1)) = b0 + b1*SM_W1[i] + b2*sex + b3*age + b..*race_ethnicity + b..*income + b..*parent_education + b..*BMI_percentile_W1 + b..*sleep_rec_W1 + b..*PA_rec_W1 + b..*screen_rec_W1 + b..*BE_W1, where SM_W1 is SMT (hours/day) or SMA group dummies (mild, addiction vs. no symptoms). RR = exp(b1). Robust (sandwich) variance.",
+   "estimation": "Modified Poisson regression with robust error variance, reporting relative risks (RR) with 95% CI, R version 4.3.1, two-sided p < 0.05. No weights, random effects, or multiple-comparison correction described. Whether SMT and SMA were entered jointly or separately is not stated. Interactions of sex and BMI percentile with SMT/SMA were tested and stratified estimates by sex and BMI group are reported only in Tables S4-S5 (not in this PDF); text says SMA showed a stronger prospective association in males and differed by baseline weight status. Sensitivity analyses by reporter (Table S6) and SMT in the larger sample including youth without accounts (Table S7) are supplementary and not in this PDF.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "smt_w1",
+     "label": "Wave 1 social media time (per 1 h/day)",
+     "meta": "continuous, hours/day",
+     "sd_iv": null
+    },
+    {
+     "id": "sma_mild_w1",
+     "label": "Wave 1 SMA mild symptoms vs. no symptoms",
+     "meta": "n=477 (24.6%)",
+     "sd_iv": null
+    },
+    {
+     "id": "sma_addiction_w1",
+     "label": "Wave 1 SMA addiction vs. no symptoms",
+     "meta": "n=55 (2.8%)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "be_w3",
+     "label": "BE presence, Wave 3 (4-year follow-up)",
+     "sd_dv": null,
+     "p0": 0.122
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "smt_w1",
+     "dv": "be_w3",
+     "RR": 0.99,
+     "RR_lo": 0.93,
+     "RR_hi": 1.06,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Table 3, row 'Wave 1 SMT, h', Model 3",
+     "note": "RR per 1 h/day. p not reported.",
+     "derived_d": -0.0063,
+     "derived_d_lo": -0.0453,
+     "derived_d_hi": 0.0367,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "sma_mild_w1",
+     "dv": "be_w3",
+     "RR": 1.37,
+     "RR_lo": 1.0,
+     "RR_hi": 1.87,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Table 3, Wave 1 SMA 'Mild symptoms', Model 3",
+     "note": "Lower CI bound printed as 1.00; text: 'No prospective associations were observed for the mild SMA symptom group.'",
+     "derived_d": 0.2027,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.4161,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "sma_addiction_w1",
+     "dv": "be_w3",
+     "RR": 1.9,
+     "RR_lo": 1.1,
+     "RR_hi": 3.27,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 3, Wave 1 SMA 'Addiction', Model 3",
+     "note": "Quoted in text p. 350.",
+     "derived_d": 0.4275,
+     "derived_d_lo": 0.0603,
+     "derived_d_hi": 0.8621,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Modified Poisson regression (robust variance) of Wave 3 binge eating on latent SMA trajectory class (Waves 1-3), adjusted for demographics, BMI percentile, behavioral recommendations and Wave 1 BE (Model 3)",
+   "location_in_paper": "Table 4, Model 3 column (p. 352); trajectory classes in Figure 2 (p. 352) and Figure S2 (not in this PDF); results text p. 350-351; discussed p. 352-353.",
+   "design": "Longitudinal, two-stage. Stage 1: latent class trajectory modeling (R package lcmm, quadratic time term, 1 to 5 classes compared by BIC, entropy, ICL1/ICL2 and interpretability) of SMA scores across Waves 1, 2 and 3 (ABCD 2-, 3- and 4-year follow-ups); a four-class solution was chosen. Stage 2: modified Poisson regression of Wave 3 BE presence on class membership. The SMA trajectory overlaps in time with the outcome (Wave 3 SMA is part of the trajectory), and Model 3 adjusts for Wave 1 BE. Single outcome per participant.",
+   "sample": "Same N = 1940 as M1/M2 (ABCD Release 5.1, social-media-account holders with complete data). Trajectory classes: consistently low SMA n = 1263 (65.1%, reference), consistently high SMA n = 79 (4.1%). The text (p. 350) gives decreased SMA n = 455 (7.4%) and increased SMA n = 143 (23.5%), but Figure 2's legend gives Decreased SMA N = 143 and Increased SMA N = 455, and the percentages fit the Figure 2 counts (143/1940 = 7.4%, 455/1940 = 23.5%).",
+   "iv": "Latent SMA trajectory class across Waves 1-3, from the six-item Bergen-adapted SMA total score (range 6-36). Classes: consistently low (reference), decreased, increased, consistently high (Figure 2 shows the high class at about 22-23 throughout, decreased falling from about 20 to about 12, increased rising from about 12 to about 19, low near 9-10; values read from figure, approximate).",
+   "dv": "Presence of BE symptoms at Wave 3 (binary, KSADS-5 combined child or parent report). 237 of 1940.",
+   "covariates": [
+    {
+     "name": "Sex, age, race and ethnicity, household income, highest parental education",
+     "detail": "Demographic covariates as in M1/M2 (Model 1 set)"
+    },
+    {
+     "name": "BMI percentile",
+     "detail": "Table note says collected at the same wave as SMA/time on social media and BE; the exact wave used for a three-wave trajectory exposure is not stated"
+    },
+    {
+     "name": "Meeting sleep, physical activity and screen time recommendations",
+     "detail": "Binary indicators, same wave convention as BMI percentile"
+    },
+    {
+     "name": "Wave 1 BE status",
+     "detail": "Binary presence of BE symptoms at Wave 1"
+    }
+   ],
+   "equation": "log(P(BE_W3[i] = 1)) = b0 + b1*Decreased[i] + b2*Increased[i] + b3*High[i] + b..*sex + b..*age + b..*race_ethnicity + b..*income + b..*parent_education + b..*BMI_percentile + b..*sleep_rec + b..*PA_rec + b..*screen_rec + b..*BE_W1; reference = consistently low SMA. RR = exp(b). Class membership assigned from the lcmm latent class trajectory model (assignment method, e.g. modal posterior probability, not stated).",
+   "estimation": "Latent class trajectory model in R lcmm (quadratic, four classes selected), followed by modified Poisson regression with robust error variance reporting RR with 95% CI; R version 4.3.1; two-sided p < 0.05. Classification uncertainty is not propagated into the Poisson model. No weights, random effects, or multiple-comparison correction described. Interactions with BMI percentile and stratified results by BMI group and sex are in Tables S4-S5 (not in this PDF). A related analysis of frequent BE among Wave 3 BE cases (n = 237) is in Table S3 (not in this PDF).",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "traj_decreased",
+     "label": "Decreased SMA trajectory vs. consistently low",
+     "meta": "n=143 per Fig 2 (text says 455); 7.4%",
+     "sd_iv": null
+    },
+    {
+     "id": "traj_increased",
+     "label": "Increased SMA trajectory vs. consistently low",
+     "meta": "n=455 per Fig 2 (text says 143); 23.5%",
+     "sd_iv": null
+    },
+    {
+     "id": "traj_high",
+     "label": "Consistently high SMA trajectory vs. consistently low",
+     "meta": "n=79 (4.1%)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "be_w3",
+     "label": "BE presence, Wave 3 (4-year follow-up)",
+     "sd_dv": null,
+     "p0": 0.122
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "traj_decreased",
+     "dv": "be_w3",
+     "RR": 1.92,
+     "RR_lo": 1.33,
+     "RR_hi": 2.78,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 4, row 'Decreased SMA', Model 3",
+     "note": "Quoted in text p. 351.",
+     "derived_d": 0.4351,
+     "derived_d_lo": 0.1831,
+     "derived_d_hi": 0.7204,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "traj_increased",
+     "dv": "be_w3",
+     "RR": 2.09,
+     "RR_lo": 1.59,
+     "RR_hi": 2.74,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 4, row 'Increased SMA', Model 3",
+     "note": "Quoted in text p. 351.",
+     "derived_d": 0.497,
+     "derived_d_lo": 0.3028,
+     "derived_d_hi": 0.7083,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    },
+    {
+     "iv": "traj_high",
+     "dv": "be_w3",
+     "RR": 3.01,
+     "RR_lo": 2.07,
+     "RR_hi": 4.37,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 4, row 'High SMA', Model 3",
+     "note": "Quoted in text p. 350 as the fully adjusted model.",
+     "derived_d": 0.7881,
+     "derived_d_lo": 0.4899,
+     "derived_d_hi": 1.1613,
+     "derived_d_method": "RR -> OR -> d (p0=0.122)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Crude and Model 1 (demographics only) cross-sectional PRs for SMT and SMA",
+   "location": "Table 2, Crude model and Model 1 columns (p. 351)",
+   "why": "Stepwise scaffolding; the most adjusted cross-sectional model (Model 2) is the one quoted in the Results and extracted as M1."
+  },
+  {
+   "model": "Crude, Model 1 and Model 2 prospective RRs for Wave 1 SMT/SMA on Wave 3 BE",
+   "location": "Table 3, Crude model, Model 1 and Model 2 columns (p. 351)",
+   "why": "Stepwise scaffolding; Methods state Model 3 is used for the longitudinal analysis, and the text quotes Model 3 (RR 1.90). Extracted as M2."
+  },
+  {
+   "model": "Crude, Model 1 and Model 2 RRs for SMA trajectory classes on Wave 3 BE",
+   "location": "Table 4, Crude model, Model 1 and Model 2 columns (p. 352)",
+   "why": "Stepwise scaffolding; text anchors on the fully adjusted Model 3 (RR 3.01, 1.92, 2.09). Extracted as M3."
+  },
+  {
+   "model": "Latent class trajectory model of SMA scores (class selection by BIC, entropy, ICL)",
+   "location": "Methods p. 348; Figure 2 (p. 352); Figure S2 (supplement, not in this PDF)",
+   "why": "Measurement/classification step that defines the M3 exposure; produces no SM-to-trait association estimate on its own."
+  },
+  {
+   "model": "Descriptive SMT and SMA means across Waves 1-3 by four BE profiles",
+   "location": "Figure 1 (p. 350)",
+   "why": "Descriptive trends only (means by group), no model estimate."
+  },
+  {
+   "model": "Frequent BE at Wave 3 among Wave 3 BE cases by SMA trajectory (consistently high SMA RR 1.57, 95% CI 1.04-2.38)",
+   "location": "Table S3 (supplement, not in this PDF); quoted in text p. 351",
+   "why": "Secondary outcome restricted to BE cases; only the high-SMA estimate is quoted in the text and the table and its model specification are not in the PDF, so the full matrix cannot be extracted. Coders may wish to add it if the supplement is obtained."
+  },
+  {
+   "model": "Interaction tests of sex and BMI percentile with SMT/SMA, and stratified prospective estimates by sex and BMI group",
+   "location": "Tables S4 and S5 (supplement, not in this PDF); described narratively p. 351",
+   "why": "Numbers are not printed in the article PDF; only narrative description is available."
+  },
+  {
+   "model": "Sensitivity analyses using child-only and parent-only BE reports",
+   "location": "Table S6 (supplement, not in this PDF); described p. 351",
+   "why": "Sensitivity analysis described narratively as comparable to the combined report (except the increased SMA group); no numbers in this PDF."
+  },
+  {
+   "model": "SMT-BE associations in a larger sample including youth without their own social media account",
+   "location": "Table S7 (supplement, not in this PDF); described p. 351 and p. 353",
+   "why": "Sensitivity analysis described narratively as non-significant; no numbers in this PDF."
+  },
+  {
+   "model": "ANOVA and chi-square comparisons of demographic and behavioral covariates by BE status",
+   "location": "Table 1 (p. 349); Table S2 (supplement)",
+   "why": "Descriptive group comparisons that do not involve a social media variable (screen time recommendation is total screen time, not phone/SM-specific)."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "Prevalence ratio (M1, cross-sectional) and relative risk (M2, M3, prospective), both from modified Poisson regression with robust variance",
+  "conversion_formula": "Treat PR as RR. OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Apply the same conversion to each CI bound.",
+  "contrast_type": "SMT: per 1 hour/day of average daily social media time. SMA (M1, M2): mild symptoms (score 7-23) or addiction (score >=24) vs. no symptoms (score 6). Trajectories (M3): decreased, increased or consistently high SMA class vs. consistently low SMA class.",
+  "transformable": true,
+  "notes": "p0 values are marginal sample BE prevalences computed from reported counts, not unexposed-group rates (the paper does not report BE rates within the reference SMA group or trajectory class): Wave 1 BE = 249/1940 = 0.128 (Table 1, p. 349); Wave 3 BE = 237/1940 = 0.122 (text p. 351). Because the mild-SMA group (24.6% at Wave 1, 18.8% at Wave 3) and the increased-SMA trajectory class (23.5%) are well above 10% of the sample and these groups have elevated BE, the marginal rate overstates the reference-group rate, so the RR-to-OR conversion is approximate. For SMT, the derived d is a per-1-hour/day contrast rather than a standardized contrast; no SD of SMT is reported (Table 1 has no SMT descriptives; Figure 1 shows only group means), so a per-SD rescaling is not possible. No SDs are needed for the categorical SMA contrasts. p-values are not reported anywhere in the tables; significance flags are based on whether the 95% CI excludes 1 and on the authors' text (two CIs have a lower bound printed as 1.00 and are treated as non-significant, consistent with the text)."
+ },
+ "extraction_flags": "All 12 estimates were checked against the table images on pp. 351-352 and match.\n\nItems to verify:\n\n(1) The paper prints no p-values. The sig flags come from whether the 95% CI excludes 1 and from what the authors say in the text. Two CIs have a lower bound printed as 1.00: Table 2 Wave 1 mild SMA, Model 2, PR 1.35 (1.00-1.84), and Table 3 mild SMA, Model 3, RR 1.37 (1.00-1.87). The authors call both non-significant, so I set sig false.\n\n(2) The p0 values are marginal BE prevalences I computed from reported counts: Wave 1 is 249/1940 = 0.128 and Wave 3 is 237/1940 = 0.122. The paper does not report the BE rate in the reference group. The mild SMA group (24.6%) and the increased trajectory class (23.5%) are each more than 10% of the sample, so the RR-to-OR step is approximate for those cells.\n\n(3) M1 is cross-sectional and reports prevalence ratios. I coded it as native_metric \"other:PR\" with value fields. A PR converts to d the same way as an RR, so check whether the pipeline needs \"RR\" here instead.\n\n(4) SMT is per 1 hour/day and the paper reports no SD for it, so the d for SMT is per hour, not standardized.\n\n(5) The trajectory class sizes contradict each other. The text on p. 350 says decreased n=455 (7.4%) and increased n=143 (23.5%). Figure 2 gives decreased N=143 and increased N=455, and the percentages fit the Figure 2 counts. I used the Figure 2 assignment in the axis meta.\n\n(6) The paper does not say whether SMT and SMA were entered in the same model or in separate models.\n\n(7) M3's IV is a latent SMA trajectory across Waves 1-3, which includes Wave 3, the outcome wave. It is unclear which wave the BMI and behavioral covariates come from in M3.\n\n(8) Supplementary Tables S3-S7 are not in the PDF: frequent BE among cases (the high-SMA RR of 1.57 is quoted in the text), sex and BMI interactions and stratified results, the reporter sensitivity analysis, and the larger sample without a social media account. These are listed in excluded_models. Add them if someone obtains the supplement.\n\n(9) Including the paper is not in doubt. The SMA measure is a six-item scale adapted from the Bergen Facebook Addiction Scale, and SMT is time on social media."
+}

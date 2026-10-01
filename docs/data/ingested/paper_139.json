@@ -1,0 +1,644 @@
+{
+ "paper_id": "139",
+ "title": "Bedtime Screen Use Behaviors and Sleep Outcomes in Early Adolescents: A Prospective Cohort Study",
+ "doi": "10.1016/j.jadohealth.2024.06.006",
+ "year": "2024",
+ "authors": "Nagata JM, Cheng CM, Shim J, Kiss O, Ganson KT, Testa A, He J, Baker FC",
+ "journal": "Journal of Adolescent Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted logistic regression of binary total sleep disturbance (Year 3) on Year 2 bedtime phone/SM behaviors, adjusted for Year 2 sleep disturbance and sociodemographic/clinical covariates",
+   "location_in_paper": "Table 3, 'Total sleep disturbance' OR column (p. 654); Results p. 652-653; Discussion p. 653",
+   "design": "Prospective cohort, two waves. Bedtime screen behaviors measured at Year 2; sleep outcome measured at Year 3 (one year later), adjusting for the same sleep variable at Year 2. One observation per participant; no repeated-measures structure, no time interaction.",
+   "sample": "ABCD Study (release not stated in the paper), Year 2 follow-up (2018-2020) used for exposures and Year 3 (2019-2021) for outcomes. Analytic N = 9,398 participants with complete data; 2,564 of the 11,875 baseline participants were excluded (comparison of included vs. excluded in Appendix A, not bundled in the PDF). Year 2 mean age 12.02 (SD 0.66). 48.4% female, 51.6% male. Race/ethnicity: 54.9% White, 19.6% Latino/Hispanic, 15.4% Black, 5.5% Asian, 3.1% Native American, 1.4% Other. Household income: 15.9% <$25K, 19.9% $25-50K, 18.0% $50-75K, 14.2% $75-100K, 24.3% $100-200K, 7.7% >=$200K. Parent education: 17.5% high school or less, 82.5% college or more. Mean ACEs 1.84 (SD 1.70); mean CBCL depression t-score at Year 2 53.89 (SD 6.07); melatonin use at Year 2 4.4% (Table 1, p. 652). Same N printed for all Table 3 cells.",
+   "iv": "Phone/SM bedtime behaviors from the ABCD Screen Usage Around Bedtime measure, youth self-report at Year 2 (Table 2, p. 653). (a) 'What do you usually do with your phone when you are ready to go to sleep?' entered as a categorical variable: turn the phone off (reference, 54.9%), put the ringer on silent or vibrate (18.4%), leave the ringer on (11.2%), put it outside of the room where I sleep (15.5%). (b) Past-week frequency of 'Talk on the phone or text' and 'Spend time online on social media (e.g., Facebook)' while already in bed before going to sleep. Methods describe a five-point Likert scale from 1 (never) to 5 (every night), but Table 2 tabulates four categories (0, 1-2, 3-4, 5-7 nights); one coefficient per item is reported, implying the item was entered as a single ordinal/continuous term (per one-step increase), but the exact coding is not stated. Distribution: talk/text 66.7% 0 nights, 19.6% 1-2, 7.4% 3-4, 6.3% 5-7; social media 70.1%, 16.5%, 7.1%, 6.2%. (c) 'In the past week, how often have you had phone calls, text messages, or e-mails that wake you up after trying to go to sleep?' (83.8% 0, 10.6% 1-2, 3.4% 3-4, 2.2% 5-7 nights), same coding caveat. No means or SDs reported for any IV. Each exposure appears as its own row in Table 3; the paper does not state whether exposures were entered in separate models or jointly.",
+   "dv": "Total sleep disturbance at Year 3, caregiver-reported 26-item Sleep Disturbance Scale for Children (each item 1 never to 5 daily, past six months), summed and binarized at the clinical cutoff of 39. 25.5% of the analytic sample met the cutoff at Year 3 (Table 1). Year 2 binary total sleep disturbance enters as a covariate.",
+   "covariates": [
+    {
+     "name": "Respective sleep variable at Year 2",
+     "detail": "Year 2 value of the same outcome (binary total sleep disturbance / DIMS subscale / weekly sleep duration)"
+    },
+    {
+     "name": "Age",
+     "detail": "Years, Year 2"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth, female vs. male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian/Pacific Islander, Native American, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Binary, more vs. less than $75,000 (Year 2) per Methods"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs. college or more (Year 2)"
+    },
+    {
+     "name": "Adverse childhood experiences",
+     "detail": "Count of ACEs"
+    },
+    {
+     "name": "Depression symptoms",
+     "detail": "CBCL depression t-score at Year 2"
+    },
+    {
+     "name": "Melatonin use",
+     "detail": "Binary, Year 2"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as an adjustment variable (no random effect described)"
+    }
+   ],
+   "equation": "logit(P(SleepDisturbance_Y3[i]=1)) = b0 + b1*PhoneSM_Y2[i] (or b1a..b1c for the three phone-action dummies) + b2*SleepDisturbance_Y2 + b3*age + b4*sex + b5..b9*race/ethnicity + b10*income + b11*parent_ed + b12*ACEs + b13*CBCL_depression + b14*melatonin + b15..*site dummies; weighted by ABCD ACS propensity weights",
+   "estimation": "Stata 18 (StataCorp). ABCD propensity weights based on the American Community Survey applied. Study site entered as a covariate; no random effects or family clustering described. Significance at p < .05 (bold in Table 3); no multiple-comparison correction reported. No interaction or stratified analyses reported. Binary logistic regression; ORs with 95% CIs reported. A supplemental ordinal logistic model on the total sleep disturbance score (Appendix D) is described only narratively.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "ringer_silent",
+     "label": "Ringer silent/vibrate (vs. phone off)",
+     "meta": "18.4% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "ringer_on",
+     "label": "Leave ringer on (vs. phone off)",
+     "meta": "11.2% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "phone_outside",
+     "label": "Phone outside bedroom (vs. phone off)",
+     "meta": "15.5% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "talk_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "0 nights 66.7%, 1-2 19.6%, 3-4 7.4%, 5-7 6.3%",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "0 nights 70.1%, 1-2 16.5%, 3-4 7.1%, 5-7 6.2%",
+     "sd_iv": null
+    },
+    {
+     "id": "woken_by_phone",
+     "label": "Woken by calls/texts/e-mails",
+     "meta": "0 nights 83.8%, 1-2 10.6%, 3-4 3.4%, 5-7 2.2%",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "total_dist",
+     "label": "Total sleep disturbance (SDSC >= 39), Year 3",
+     "sd_dv": null,
+     "p0": 0.255
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "ringer_silent",
+     "dv": "total_dist",
+     "OR": 0.96,
+     "OR_lo": 0.8,
+     "OR_hi": 1.16,
+     "p": 0.668,
+     "p_label": ".668",
+     "sig": false,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": -0.0225,
+     "derived_d_lo": -0.123,
+     "derived_d_hi": 0.0818,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "ringer_on",
+     "dv": "total_dist",
+     "OR": 1.25,
+     "OR_lo": 1.0,
+     "OR_hi": 1.56,
+     "p": 0.046,
+     "p_label": ".046",
+     "sig": true,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": 0.123,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.2452,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "phone_outside",
+     "dv": "total_dist",
+     "OR": 1.11,
+     "OR_lo": 0.92,
+     "OR_hi": 1.34,
+     "p": 0.292,
+     "p_label": ".292",
+     "sig": false,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Total sleep disturbance OR column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": 0.0575,
+     "derived_d_lo": -0.046,
+     "derived_d_hi": 0.1614,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "talk_text",
+     "dv": "total_dist",
+     "OR": 1.13,
+     "OR_lo": 1.05,
+     "OR_hi": 1.23,
+     "p": 0.002,
+     "p_label": ".002",
+     "sig": true,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Total sleep disturbance OR column (p. 654)",
+     "derived_d": 0.0674,
+     "derived_d_lo": 0.0269,
+     "derived_d_hi": 0.1141,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "social_media",
+     "dv": "total_dist",
+     "OR": 1.1,
+     "OR_lo": 1.01,
+     "OR_hi": 1.2,
+     "p": 0.025,
+     "p_label": ".025",
+     "sig": true,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Total sleep disturbance OR column (p. 654)",
+     "derived_d": 0.0525,
+     "derived_d_lo": 0.0055,
+     "derived_d_hi": 0.1005,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "woken_by_phone",
+     "dv": "total_dist",
+     "OR": 0.98,
+     "OR_lo": 0.87,
+     "OR_hi": 1.11,
+     "p": 0.788,
+     "p_label": ".788",
+     "sig": false,
+     "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Total sleep disturbance OR column (p. 654)",
+     "derived_d": -0.0111,
+     "derived_d_lo": -0.0768,
+     "derived_d_hi": 0.0575,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Weighted ordinal logistic regression of DIMS subscale score (Year 3) on Year 2 bedtime phone/SM behaviors, adjusted for Year 2 DIMS and covariates",
+   "location_in_paper": "Table 3, 'Disorders of initiating and maintaining sleep' B column (p. 654); Results p. 653; Discussion p. 653",
+   "design": "Prospective cohort, two waves. Bedtime screen behaviors measured at Year 2; sleep outcome measured at Year 3 (one year later), adjusting for the same sleep variable at Year 2. One observation per participant; no repeated-measures structure, no time interaction.",
+   "sample": "ABCD Study (release not stated in the paper), Year 2 follow-up (2018-2020) used for exposures and Year 3 (2019-2021) for outcomes. Analytic N = 9,398 participants with complete data; 2,564 of the 11,875 baseline participants were excluded (comparison of included vs. excluded in Appendix A, not bundled in the PDF). Year 2 mean age 12.02 (SD 0.66). 48.4% female, 51.6% male. Race/ethnicity: 54.9% White, 19.6% Latino/Hispanic, 15.4% Black, 5.5% Asian, 3.1% Native American, 1.4% Other. Household income: 15.9% <$25K, 19.9% $25-50K, 18.0% $50-75K, 14.2% $75-100K, 24.3% $100-200K, 7.7% >=$200K. Parent education: 17.5% high school or less, 82.5% college or more. Mean ACEs 1.84 (SD 1.70); mean CBCL depression t-score at Year 2 53.89 (SD 6.07); melatonin use at Year 2 4.4% (Table 1, p. 652). Same N printed for all Table 3 cells.",
+   "iv": "Phone/SM bedtime behaviors from the ABCD Screen Usage Around Bedtime measure, youth self-report at Year 2 (Table 2, p. 653). (a) 'What do you usually do with your phone when you are ready to go to sleep?' entered as a categorical variable: turn the phone off (reference, 54.9%), put the ringer on silent or vibrate (18.4%), leave the ringer on (11.2%), put it outside of the room where I sleep (15.5%). (b) Past-week frequency of 'Talk on the phone or text' and 'Spend time online on social media (e.g., Facebook)' while already in bed before going to sleep. Methods describe a five-point Likert scale from 1 (never) to 5 (every night), but Table 2 tabulates four categories (0, 1-2, 3-4, 5-7 nights); one coefficient per item is reported, implying the item was entered as a single ordinal/continuous term (per one-step increase), but the exact coding is not stated. Distribution: talk/text 66.7% 0 nights, 19.6% 1-2, 7.4% 3-4, 6.3% 5-7; social media 70.1%, 16.5%, 7.1%, 6.2%. (c) 'In the past week, how often have you had phone calls, text messages, or e-mails that wake you up after trying to go to sleep?' (83.8% 0, 10.6% 1-2, 3.4% 3-4, 2.2% 5-7 nights), same coding caveat. No means or SDs reported for any IV. Each exposure appears as its own row in Table 3; the paper does not state whether exposures were entered in separate models or jointly.",
+   "dv": "Disorders of initiating and maintaining sleep (DIMS) subscale of the caregiver-reported Sleep Disturbance Scale for Children, seven items, Year 3; analyzed as an ordinal outcome. Year 3 mean 12.30 (SD 4.01) (Table 1). Year 2 DIMS score enters as a covariate.",
+   "covariates": [
+    {
+     "name": "Respective sleep variable at Year 2",
+     "detail": "Year 2 value of the same outcome (binary total sleep disturbance / DIMS subscale / weekly sleep duration)"
+    },
+    {
+     "name": "Age",
+     "detail": "Years, Year 2"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth, female vs. male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian/Pacific Islander, Native American, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Binary, more vs. less than $75,000 (Year 2) per Methods"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs. college or more (Year 2)"
+    },
+    {
+     "name": "Adverse childhood experiences",
+     "detail": "Count of ACEs"
+    },
+    {
+     "name": "Depression symptoms",
+     "detail": "CBCL depression t-score at Year 2"
+    },
+    {
+     "name": "Melatonin use",
+     "detail": "Binary, Year 2"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as an adjustment variable (no random effect described)"
+    }
+   ],
+   "equation": "logit(P(DIMS_Y3[i] <= k)) = tau_k - (b1*PhoneSM_Y2[i] + b2*DIMS_Y2 + b3*age + b4*sex + b5..b9*race/ethnicity + b10*income + b11*parent_ed + b12*ACEs + b13*CBCL_depression + b14*melatonin + site dummies); weighted by ABCD ACS propensity weights",
+   "estimation": "Stata 18 (StataCorp). ABCD propensity weights based on the American Community Survey applied. Study site entered as a covariate; no random effects or family clustering described. Significance at p < .05 (bold in Table 3); no multiple-comparison correction reported. No interaction or stratified analyses reported. Ordered (ordinal) logistic regression. Table 3 reports the raw ordered-logit coefficient B (log-odds scale) with 95% CI, not an exponentiated OR.",
+   "native_metric": "other:ordered_logit_coefficient",
+   "iv_axis": [
+    {
+     "id": "ringer_silent",
+     "label": "Ringer silent/vibrate (vs. phone off)",
+     "meta": "18.4% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "ringer_on",
+     "label": "Leave ringer on (vs. phone off)",
+     "meta": "11.2% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "phone_outside",
+     "label": "Phone outside bedroom (vs. phone off)",
+     "meta": "15.5% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "talk_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "0 nights 66.7%, 1-2 19.6%, 3-4 7.4%, 5-7 6.3%",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "0 nights 70.1%, 1-2 16.5%, 3-4 7.1%, 5-7 6.2%",
+     "sd_iv": null
+    },
+    {
+     "id": "woken_by_phone",
+     "label": "Woken by calls/texts/e-mails",
+     "meta": "0 nights 83.8%, 1-2 10.6%, 3-4 3.4%, 5-7 2.2%",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "dims",
+     "label": "DIMS subscale score, Year 3",
+     "sd_dv": 4.01,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "ringer_silent",
+     "dv": "dims",
+     "value": -0.06,
+     "value_lo": -0.27,
+     "value_hi": 0.15,
+     "p": 0.563,
+     "p_label": ".563",
+     "sig": false,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": -0.0331,
+     "derived_d_lo": -0.1489,
+     "derived_d_hi": 0.0827,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "ringer_on",
+     "dv": "dims",
+     "value": 0.15,
+     "value_lo": -0.1,
+     "value_hi": 0.4,
+     "p": 0.237,
+     "p_label": ".237",
+     "sig": false,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": 0.0827,
+     "derived_d_lo": -0.0551,
+     "derived_d_hi": 0.2205,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "phone_outside",
+     "dv": "dims",
+     "value": 0.2,
+     "value_lo": 0.01,
+     "value_hi": 0.39,
+     "p": 0.043,
+     "p_label": ".043",
+     "sig": true,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Disorders of initiating and maintaining sleep B column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": 0.1103,
+     "derived_d_lo": 0.0055,
+     "derived_d_hi": 0.215,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "talk_text",
+     "dv": "dims",
+     "value": 0.12,
+     "value_lo": 0.03,
+     "value_hi": 0.22,
+     "p": 0.012,
+     "p_label": ".012",
+     "sig": true,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Disorders of initiating and maintaining sleep B column (p. 654)",
+     "derived_d": 0.0662,
+     "derived_d_lo": 0.0165,
+     "derived_d_hi": 0.1213,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "social_media",
+     "dv": "dims",
+     "value": 0.09,
+     "value_lo": -0.0,
+     "value_hi": 0.19,
+     "p": 0.058,
+     "p_label": ".058",
+     "sig": false,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Disorders of initiating and maintaining sleep B column (p. 654)",
+     "note": "Lower CI bound printed as '-0.00'.",
+     "derived_d": 0.0496,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.1048,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "woken_by_phone",
+     "dv": "dims",
+     "value": -0.06,
+     "value_lo": -0.2,
+     "value_hi": 0.07,
+     "p": 0.357,
+     "p_label": ".357",
+     "sig": false,
+     "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Disorders of initiating and maintaining sleep B column (p. 654)",
+     "derived_d": -0.0331,
+     "derived_d_lo": -0.1103,
+     "derived_d_hi": 0.0386,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Weighted multiple linear regression of weekly sleep duration (Year 3) on Year 2 bedtime phone/SM behaviors, adjusted for Year 2 sleep duration and covariates",
+   "location_in_paper": "Table 3, 'Weekly sleep duration' B column (p. 654); Results p. 652-653; Discussion p. 653",
+   "design": "Prospective cohort, two waves. Bedtime screen behaviors measured at Year 2; sleep outcome measured at Year 3 (one year later), adjusting for the same sleep variable at Year 2. One observation per participant; no repeated-measures structure, no time interaction.",
+   "sample": "ABCD Study (release not stated in the paper), Year 2 follow-up (2018-2020) used for exposures and Year 3 (2019-2021) for outcomes. Analytic N = 9,398 participants with complete data; 2,564 of the 11,875 baseline participants were excluded (comparison of included vs. excluded in Appendix A, not bundled in the PDF). Year 2 mean age 12.02 (SD 0.66). 48.4% female, 51.6% male. Race/ethnicity: 54.9% White, 19.6% Latino/Hispanic, 15.4% Black, 5.5% Asian, 3.1% Native American, 1.4% Other. Household income: 15.9% <$25K, 19.9% $25-50K, 18.0% $50-75K, 14.2% $75-100K, 24.3% $100-200K, 7.7% >=$200K. Parent education: 17.5% high school or less, 82.5% college or more. Mean ACEs 1.84 (SD 1.70); mean CBCL depression t-score at Year 2 53.89 (SD 6.07); melatonin use at Year 2 4.4% (Table 1, p. 652). Same N printed for all Table 3 cells.",
+   "iv": "Phone/SM bedtime behaviors from the ABCD Screen Usage Around Bedtime measure, youth self-report at Year 2 (Table 2, p. 653). (a) 'What do you usually do with your phone when you are ready to go to sleep?' entered as a categorical variable: turn the phone off (reference, 54.9%), put the ringer on silent or vibrate (18.4%), leave the ringer on (11.2%), put it outside of the room where I sleep (15.5%). (b) Past-week frequency of 'Talk on the phone or text' and 'Spend time online on social media (e.g., Facebook)' while already in bed before going to sleep. Methods describe a five-point Likert scale from 1 (never) to 5 (every night), but Table 2 tabulates four categories (0, 1-2, 3-4, 5-7 nights); one coefficient per item is reported, implying the item was entered as a single ordinal/continuous term (per one-step increase), but the exact coding is not stated. Distribution: talk/text 66.7% 0 nights, 19.6% 1-2, 7.4% 3-4, 6.3% 5-7; social media 70.1%, 16.5%, 7.1%, 6.2%. (c) 'In the past week, how often have you had phone calls, text messages, or e-mails that wake you up after trying to go to sleep?' (83.8% 0, 10.6% 1-2, 3.4% 3-4, 2.2% 5-7 nights), same coding caveat. No means or SDs reported for any IV. Each exposure appears as its own row in Table 3; the paper does not state whether exposures were entered in separate models or jointly.",
+   "dv": "Weekly sleep duration at Year 3, adolescent-reported Munich Chronotype Questionnaire; weighted average of school-day and free-day sleep durations. Table 1 labels it 'Sleep duration at Year 3 (hours per night)', mean 8.94 (SD 1.62). Year 2 sleep duration enters as a covariate.",
+   "covariates": [
+    {
+     "name": "Respective sleep variable at Year 2",
+     "detail": "Year 2 value of the same outcome (binary total sleep disturbance / DIMS subscale / weekly sleep duration)"
+    },
+    {
+     "name": "Age",
+     "detail": "Years, Year 2"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth, female vs. male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian/Pacific Islander, Native American, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Binary, more vs. less than $75,000 (Year 2) per Methods"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs. college or more (Year 2)"
+    },
+    {
+     "name": "Adverse childhood experiences",
+     "detail": "Count of ACEs"
+    },
+    {
+     "name": "Depression symptoms",
+     "detail": "CBCL depression t-score at Year 2"
+    },
+    {
+     "name": "Melatonin use",
+     "detail": "Binary, Year 2"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as an adjustment variable (no random effect described)"
+    }
+   ],
+   "equation": "SleepDuration_Y3[i] = b0 + b1*PhoneSM_Y2[i] (or b1a..b1c for phone-action dummies) + b2*SleepDuration_Y2 + b3*age + b4*sex + b5..b9*race/ethnicity + b10*income + b11*parent_ed + b12*ACEs + b13*CBCL_depression + b14*melatonin + site dummies + e[i]; weighted by ABCD ACS propensity weights",
+   "estimation": "Stata 18 (StataCorp). ABCD propensity weights based on the American Community Survey applied. Study site entered as a covariate; no random effects or family clustering described. Significance at p < .05 (bold in Table 3); no multiple-comparison correction reported. No interaction or stratified analyses reported. Multiple linear regression; unstandardized B in hours with 95% CI. Supplemental analysis of change in sleep duration from Year 2 to Year 3 (Appendix C) described only narratively ('not associated').",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "ringer_silent",
+     "label": "Ringer silent/vibrate (vs. phone off)",
+     "meta": "18.4% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "ringer_on",
+     "label": "Leave ringer on (vs. phone off)",
+     "meta": "11.2% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "phone_outside",
+     "label": "Phone outside bedroom (vs. phone off)",
+     "meta": "15.5% of sample; ref = turn phone off (54.9%)",
+     "sd_iv": null
+    },
+    {
+     "id": "talk_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "0 nights 66.7%, 1-2 19.6%, 3-4 7.4%, 5-7 6.3%",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "0 nights 70.1%, 1-2 16.5%, 3-4 7.1%, 5-7 6.2%",
+     "sd_iv": null
+    },
+    {
+     "id": "woken_by_phone",
+     "label": "Woken by calls/texts/e-mails",
+     "meta": "0 nights 83.8%, 1-2 10.6%, 3-4 3.4%, 5-7 2.2%",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sleep_dur",
+     "label": "Weekly sleep duration (h/night), Year 3",
+     "sd_dv": 1.62,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "ringer_silent",
+     "dv": "sleep_dur",
+     "B": -0.15,
+     "B_lo": -0.26,
+     "B_hi": -0.05,
+     "p": 0.005,
+     "p_label": ".005",
+     "sig": true,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put the ringer on silent or vibrate' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "ringer_on",
+     "dv": "sleep_dur",
+     "B": -0.27,
+     "B_lo": -0.4,
+     "B_hi": -0.13,
+     "p": null,
+     "p_label": "< .001",
+     "sig": true,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Leave the ringer on' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
+     "note": "p printed only as '< .001'. Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "phone_outside",
+     "dv": "sleep_dur",
+     "B": 0.05,
+     "B_lo": -0.03,
+     "B_hi": 0.14,
+     "p": 0.227,
+     "p_label": ".227",
+     "sig": false,
+     "location": "Table 3, row 'Phone action when ready to go to sleep: Put it outside of the room where I sleep' (vs. 'Turn the phone off'), Weekly sleep duration B column (p. 654)",
+     "note": "Categorical dummy contrast against 'Turn the phone off'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "talk_text",
+     "dv": "sleep_dur",
+     "B": -0.17,
+     "B_lo": -0.22,
+     "B_hi": -0.12,
+     "p": null,
+     "p_label": "< .001",
+     "sig": true,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Talk on the phone or text', Weekly sleep duration B column (p. 654)",
+     "note": "p printed only as '< .001'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "social_media",
+     "dv": "sleep_dur",
+     "B": -0.21,
+     "B_lo": -0.26,
+     "B_hi": -0.16,
+     "p": null,
+     "p_label": "< .001",
+     "sig": true,
+     "location": "Table 3, row 'Past week engagement in bed before going to sleep: Spend time online on social media (e.g., Facebook)', Weekly sleep duration B column (p. 654)",
+     "note": "p printed only as '< .001'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "woken_by_phone",
+     "dv": "sleep_dur",
+     "B": -0.16,
+     "B_lo": -0.24,
+     "B_hi": -0.08,
+     "p": null,
+     "p_label": "< .001",
+     "sig": true,
+     "location": "Table 3, row 'Woken up by phone calls, text messages, or e-mails after trying to go to sleep', Weekly sleep duration B column (p. 654)",
+     "note": "p printed only as '< .001'.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "TV set or Internet-connected electronic device in bedroom",
+   "location": "Table 3, first row (p. 654)",
+   "why": "Device item bundles TV, computer, iPad and phone; no phone-only breakout. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Bedtime watching/streaming movies, videos or TV; playing video games; playing music; browsing the Internet; using a computer/laptop for studying; reading",
+   "location": "Table 3, 'Past week engagement in bed' rows (p. 654)",
+   "why": "Non-phone/non-SM modalities (platform unspecified). Fail FT-IC2."
+  },
+  {
+   "model": "Spend time in chat rooms",
+   "location": "Table 3 (p. 654)",
+   "why": "Chat rooms are not on the FT-IC2 list of phone/SM-specific items and the device is unspecified; excluded pending coder review (OR 1.14, 0.99-1.31; DIMS B 0.15, -0.02 to 0.32; sleep duration B -0.21, -0.30 to -0.11)."
+  },
+  {
+   "model": "Used phone or other device when woke up during the night",
+   "location": "Table 3 (p. 654); Results p. 653",
+   "why": "Item bundles phone with 'another device' and activities include games, Internet browsing and reading/writing e-mails alongside messaging and social media; no phone-only breakout. Fails FT-IC2 Step 2 (multi-device rule)."
+  },
+  {
+   "model": "Total recreational screen time",
+   "location": "Table 3 last row (p. 654); Results p. 653",
+   "why": "Composite of gaming, texting, social media, video chat, browsing and TV/movie viewing; includes non-phone ingredients. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Change in sleep duration from Year 2 to Year 3",
+   "location": "Appendix C (supplementary, not bundled in the PDF); described p. 653",
+   "why": "Supplementary; text reports only that bedtime screen use was not associated. No per-modality numbers available in the reviewed PDF."
+  },
+  {
+   "model": "Ordinal logistic regression of total sleep disturbance score",
+   "location": "Appendix D (supplementary, not bundled in the PDF); described p. 653",
+   "why": "Supplementary; text says only total screen time and playing music were associated. No phone/SM numbers available in the reviewed PDF."
+  },
+  {
+   "model": "Descriptive frequencies of bedtime screen behaviors at Years 2 and 3",
+   "location": "Table 2 (p. 653); Appendix B",
+   "why": "Descriptive only, no inferential association with an outcome."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (M1); ordered-logit coefficient on log-odds scale (M2); unstandardized B in hours (M3)",
+  "conversion_formula": "M1: d = ln(OR) * sqrt(3)/pi (Chinn 2000). M2: OR = exp(B); d = B * sqrt(3)/pi (Chinn applied to the proportional-odds OR). M3, phone-action dummies (binary contrast vs. phone off): d ~= B / SD_DV with SD_DV = 1.62. M3, frequency items: beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein 2009 eq 7.1), requires SD_IV which is not reported.",
+  "contrast_type": "Phone-action rows: each category vs. 'turn the phone off'. Talk/text, social media and woken-by-phone rows: per one-step increase on the bedtime frequency item (coding not explicitly stated; Likert 1-5 per Methods vs. 4 night-count categories in Table 2).",
+  "transformable": "partial",
+  "notes": "M1 (OR) and M2 (ordered-logit B) convert to d without SDs. p0 for M1 = 0.255 is the Year 3 marginal rate of total sleep disturbance (Table 1, p. 652); not needed for OR conversion. SD_DV for M3 = 1.62 h (Table 1, 'Sleep duration at Year 3 (hours per night)'); M3 phone-action dummy cells convertible via B/SD_DV (uses total-sample SD in place of pooled within-group SD). M3 frequency-item cells (talk/text, social media, woken by calls/texts) are not convertible from reported statistics because the paper gives no mean/SD for the items; SD could be approximated from the Table 2 category percentages only under an assumed coding, which was not done. ABCD propensity weights used throughout."
+ },
+ "extraction_flags": "1) Which IVs count as phone/SM. I included 'Talk on the phone or text', 'Spend time online on social media', the three phone-action categories (ringer silent/vibrate, ringer on, phone outside room, each vs. turning the phone off) and 'Woken up by phone calls, text messages, or e-mails'. The phone-action and woken-by items are phone-specific but are not texting/SM time as such, so please check they belong. I excluded 'Spend time in chat rooms' (not on the FT-IC2 list, device not specified) and 'Used phone or other device when woke up during the night' (bundles other devices and mixed activities). Both are borderline; their numbers are recorded in excluded_models. 2) The IV coding is unclear. Methods describe a 1-5 Likert scale, but Table 2 shows four night-count categories, so 'per one step' is ambiguous. The paper also does not say whether each exposure was fit in its own model or entered jointly. 3) No SDs are reported for any IV, so the M3 (linear, sleep duration) frequency-item cells cannot be converted to d. The phone-action dummies are converted with B/1.62, using the total-sample SD rather than the pooled SD. 4) M2 reports raw ordered-logit coefficients (log-odds) labelled B, not ORs. I stored them in the value fields and convert them with B*sqrt(3)/pi. 5) The DV is called 'weekly sleep duration', but Table 1 gives it in hours per night (SD 1.62). 6) Appendices A-D (supplement) are not in the PDF. Appendices C and D are described only in the text, and the supplement may hold extra phone/SM numbers. 7) The ABCD release version is not stated. pdftotext drops non-bold minus signs, so every sign was checked against a 220-dpi render of Table 3. For p shown as '< .001', p is set to null and only p_label is kept."
+}

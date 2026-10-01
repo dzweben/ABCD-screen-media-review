@@ -1,0 +1,1006 @@
+{
+ "paper_id": "167",
+ "title": "The role of smartphones in adolescent-parent discrepancy in reporting adolescents' internalizing problems",
+ "doi": "10.1017/s0954579425100618",
+ "year": "2025",
+ "authors": "Carvalho C, Koss K, Ravindran N",
+ "journal": "Development and Psychopathology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multi-group two-level model of parent- and youth-reported internalizing problems on time, informant, and time x informant, grouped by age of smartphone ownership, adjusted for screen time, puberty, sex, and parent education",
+   "location_in_paper": "Table 3 (p. 7) for beta1, beta2, beta3 by group; Table 4 (p. 8) for probes of the informant effect at each year; Figure 2 (p. 7); Results pp. 6-8; interpreted in Discussion pp. 8-9.",
+   "design": "Longitudinal, four annual waves (Year 1 to Year 4 follow-ups, mean ages 10.9, 12.0, 12.9, 14.1). Internalizing problems from both reporters (youth BPM and parent CBCL) at each wave are stacked as repeated observations nested within dyads; informant (youth = 0, parent = 1) and time are level-1 predictors and the time x informant product tests whether the parent-youth discrepancy changes over time. Age of smartphone ownership (parent-reported, earliest reported age used) does not enter as a predictor; it defines five groups (8 & under, 9 & 10, 11 & 12, 13 & 14, No Phone) for a multi-group model in which all parameters are estimated separately by group. The phone variable therefore functions as a grouping/moderating variable: the phone 'effect' is the between-group difference in the informant effect and in its change over time, tested with post-hoc Wald tests for adjacent groups. Per the Results (p. 6), beta1 and beta2 in Table 3 come from the model before the time x informant term was added; beta3 comes from the final model with the product term. Table 4 probes the informant effect at each year from the interaction model.",
+   "sample": "ABCD Release 5.1, complete parent-adolescent dyads. Wave Ns: baseline 11,876 (mean age 9.9), Year 1 11,219 (10.9), Year 2 10,972 (12.0), Year 3 10,335 (12.9), Year 4 4,754 (14.1; about half of the sample per ABCD's release schedule). Abstract and Participants: 52.0% White, 20.3% Hispanic, 15.0% Black, 2.1% Asian, 10.5% Other; 47.8% female. Parent reporters 85.3% biological mothers, 10.0% biological fathers, 2.3% adoptive, 1.0% custodial, 1.4% other. Smartphone ownership groups (Table 2): 8 & under n = 677, 9 & 10 n = 2,641, 11 & 12 n = 5,037, 13 & 14 n = 744, No Phone n = 376 (sum 9,475). Attrition about 15% by Year 3 for internalizing and 17.9% missing for smartphone age; boys and youth of less-educated parents were more likely to drop out. Missing data handled with FIML under MAR.",
+   "iv": "Age of first smartphone ownership. Parents were asked whether the child owns a smartphone and, annually, at what age the child first owned a cell phone; if answers changed, the earlier response was used. Youth whose parent answered 'No' to ownership at Year 4 were coded 5 (No Phone). Recoded into five groups: 8 & under, 9 & 10, 11 & 12, 13 & 14, No Phone. Used as the multi-group grouping variable, not as a regressor. Within-group level-1 predictors are time (wave) and informant (youth = 0, parent = 1).",
+   "dv": "Internalizing problems, the six items shared by the parent-report CBCL and the youth-report BPM (3 anxious/depressed, 3 withdrawn/depressed items), each 0-2, sum range 0-12, measured Years 1-4. Parent alphas .756/.762/.776/.783; youth alphas .619/.615/.619/.616. Right skewed. Means/SDs in Table 1 (youth Y1-Y4: 1.74 (2.11), 1.81 (2.23), 2.02 (2.38), 2.27 (2.56); parent Y1-Y4: 1.49 (1.88), 1.43 (1.88), 1.46 (1.93), 1.48 (1.96)) and by group in Table 2. Columns of the estimate matrix are model parameters within each group: beta1 time, beta2 informant (parent minus youth difference averaged over waves), beta3 time x informant, and the probed informant effect at each year.",
+   "covariates": [
+    {
+     "name": "Total screen time (within level)",
+     "detail": "Time-varying; youth Screen Time Questionnaire, weighted mean of weekday and weekend non-educational hours (2/7 weekend + 5/7 weekday), winsorized at +/- 3 SD"
+    },
+    {
+     "name": "Pubertal development (within level)",
+     "detail": "Time-varying; parent-reported Pubertal Development Scale, mean of five items on a 1-4 scale"
+    },
+    {
+     "name": "Person-mean screen time (between level)",
+     "detail": "STmean regressed on person-level mean internalizing"
+    },
+    {
+     "name": "Person-mean pubertal development (between level)",
+     "detail": "PDmean regressed on person-level mean internalizing"
+    },
+    {
+     "name": "Youth biological sex (between level)",
+     "detail": "0 = female, 1 = male"
+    },
+    {
+     "name": "Parent education (between level)",
+     "detail": "Five ordered levels: did not graduate high school, high school/GED, some college/Associate's, Bachelor's, graduate degree"
+    },
+    {
+     "name": "Random effects",
+     "detail": "Random intercept and random slopes for time, informant, and time x informant (u0i-u3i) across dyads"
+    }
+   ],
+   "equation": "Level 1: IP[ijk] = beta0i + beta1i*Time[ij] + beta2i*Informant[k] + beta3i*(Time[ij] x Informant[k]) + b_PD*Puberty[ij] + b_ST*ScreenTime[ij] + e[ijk]. Level 2: beta0i = gamma0 + g1*Sex[i] + g2*ParentEd[i] + g3*PDmean[i] + g4*STmean[i] + u0i; beta1i = gamma1 + u1i; beta2i = gamma2 + u2i; beta3i = gamma3 + u3i. All parameters estimated separately in each of the five smartphone-ownership groups (multi-group). Probe: informant effect at year t = beta2 + beta3*t.",
+   "estimation": "Mplus 8.3, maximum likelihood with robust standard errors (MLR), FIML for missing data (MAR). ABCD propensity weights (ACS-calibrated) applied in all models. Random vs fixed effects compared in the full sample with the Satorra-Bentler scaled chi-square difference test (chi2_SB(2) = 8753.51, p < .001), so random effects retained. Group differences in the informant effect tested with post-hoc Wald tests for adjacent groups (9 & 10 vs 11 & 12, 11 & 12 vs 13 & 14, 13 & 14 vs No Phone; 8 & under vs 9 & 10 not reported as significant). Interaction probed by computing the informant effect at each year (Table 4, Figure 2). Alpha = .05; no multiple-comparison correction reported. No sex interaction tested. A full-sample (not grouped) version was also run (time b = 0.04, informant b = -0.47, time x informant b = -0.21).",
+   "native_metric": "other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts",
+   "iv_axis": [
+    {
+     "id": "u8",
+     "label": "8 & under",
+     "meta": "n = 677; 47% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a910",
+     "label": "9 & 10",
+     "meta": "n = 2641; 49% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a1112",
+     "label": "11 & 12",
+     "meta": "n = 5037; 52% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a1314",
+     "label": "13 & 14",
+     "meta": "n = 744; 61% male",
+     "sd_iv": null
+    },
+    {
+     "id": "nophone",
+     "label": "No phone",
+     "meta": "n = 376; 63% male",
+     "sd_iv": null
+    },
+    {
+     "id": "cmp_910_1112",
+     "label": "Wald: 9 & 10 vs 11 & 12",
+     "meta": "chi-square(1), equality of beta2",
+     "sd_iv": null
+    },
+    {
+     "id": "cmp_1112_1314",
+     "label": "Wald: 11 & 12 vs 13 & 14",
+     "meta": "chi-square(1), equality of beta2",
+     "sd_iv": null
+    },
+    {
+     "id": "cmp_1314_np",
+     "label": "Wald: 13 & 14 vs No Phone",
+     "meta": "chi-square(1), equality of beta2",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "time",
+     "label": "beta1 Time (pooled reporters)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "informant",
+     "label": "beta2 Informant (parent vs youth)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "time_x_inf",
+     "label": "beta3 Time x Informant",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "inf_y1",
+     "label": "Informant effect, Year 1 (age 10.9)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "inf_y2",
+     "label": "Informant effect, Year 2 (age 12.0)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "inf_y3",
+     "label": "Informant effect, Year 3 (age 12.9)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "inf_y4",
+     "label": "Informant effect, Year 4 (age 14.1)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "u8",
+     "dv": "time",
+     "value": 0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.426,
+     "p_label": ".426",
+     "sig": false,
+     "location": "Table 3, beta1 Time -> IP, 8 & under column (p. 7)",
+     "note": "SE = .03."
+    },
+    {
+     "iv": "a910",
+     "dv": "time",
+     "value": 0.06,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.002,
+     "p_label": ".002",
+     "sig": true,
+     "location": "Table 3, beta1 Time -> IP, 9 & 10 column (p. 7)",
+     "note": "SE = .02."
+    },
+    {
+     "iv": "a1112",
+     "dv": "time",
+     "value": 0.09,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta1 Time -> IP, 11 & 12 column (p. 7)",
+     "note": "SE = .01."
+    },
+    {
+     "iv": "a1314",
+     "dv": "time",
+     "value": 0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.276,
+     "p_label": ".276",
+     "sig": false,
+     "location": "Table 3, beta1 Time -> IP, 13 & 14 column (p. 7)",
+     "note": "SE = .03."
+    },
+    {
+     "iv": "nophone",
+     "dv": "time",
+     "value": 0.06,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.401,
+     "p_label": ".401",
+     "sig": false,
+     "location": "Table 3, beta1 Time -> IP, No phone column (p. 7)",
+     "note": "SE = .07. Discrepancy: Results text p. 6 reports the No Phone time effect as b = -.09, SE = .05, p = .068; Table 3 prints .06/.07/.401, identical to the No Phone Puberty row, so the Table 3 cell is probably a transcription error. Value here is copied from Table 3."
+    },
+    {
+     "iv": "u8",
+     "dv": "informant",
+     "value": -0.85,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta2 Informant -> IP, 8 & under column (p. 7)",
+     "note": "SE = .08."
+    },
+    {
+     "iv": "a910",
+     "dv": "informant",
+     "value": -0.68,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta2 Informant -> IP, 9 & 10 column (p. 7)",
+     "note": "SE = .04."
+    },
+    {
+     "iv": "a1112",
+     "dv": "informant",
+     "value": -0.44,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta2 Informant -> IP, 11 & 12 column (p. 7)",
+     "note": "SE = .03. Results text p. 6 prints SE = .17 for this estimate; Table 3 prints SE = .03."
+    },
+    {
+     "iv": "a1314",
+     "dv": "informant",
+     "value": -0.27,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta2 Informant -> IP, 13 & 14 column (p. 7)",
+     "note": "SE = .06."
+    },
+    {
+     "iv": "nophone",
+     "dv": "informant",
+     "value": 0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.064,
+     "p_label": ".064",
+     "sig": false,
+     "location": "Table 3, beta2 Informant -> IP, No phone column (p. 7)",
+     "note": "SE = .02. Discrepancy: Results text p. 6 reports the No Phone informant effect as b = -.04, SE = .06, p = .694; Table 3 prints .03/.02/.064, identical to the No Phone Screen time row, so the Table 3 cell is probably a transcription error. Value here is copied from Table 3."
+    },
+    {
+     "iv": "u8",
+     "dv": "time_x_inf",
+     "value": -0.25,
+     "value_lo": -0.35,
+     "value_hi": -0.15,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta3 Time x Inf. -> IP, 8 & under column (p. 7)",
+     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3)."
+    },
+    {
+     "iv": "a910",
+     "dv": "time_x_inf",
+     "value": -0.19,
+     "value_lo": -0.23,
+     "value_hi": -0.14,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta3 Time x Inf. -> IP, 9 & 10 column (p. 7)",
+     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3)."
+    },
+    {
+     "iv": "a1112",
+     "dv": "time_x_inf",
+     "value": -0.2,
+     "value_lo": -0.23,
+     "value_hi": -0.16,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta3 Time x Inf. -> IP, 11 & 12 column (p. 7)",
+     "note": "SE = .02. 95% CI from Results text p. 7 (not in Table 3)."
+    },
+    {
+     "iv": "a1314",
+     "dv": "time_x_inf",
+     "value": -0.2,
+     "value_lo": -0.27,
+     "value_hi": -0.14,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, beta3 Time x Inf. -> IP, 13 & 14 column (p. 7)",
+     "note": "SE = .04. 95% CI from Results text p. 7 (not in Table 3)."
+    },
+    {
+     "iv": "nophone",
+     "dv": "time_x_inf",
+     "value": -0.02,
+     "value_lo": -0.12,
+     "value_hi": 0.09,
+     "p": 0.747,
+     "p_label": ".747",
+     "sig": false,
+     "location": "Table 3, beta3 Time x Inf. -> IP, No phone column (p. 7)",
+     "note": "SE = .05. 95% CI from Results text p. 7 (not in Table 3)."
+    },
+    {
+     "iv": "u8",
+     "dv": "inf_y1",
+     "value": -0.31,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.023,
+     "p_label": ".023",
+     "sig": true,
+     "location": "Table 4, Year 1, 8 & under columns (p. 8)",
+     "note": "z = -2.28."
+    },
+    {
+     "iv": "a910",
+     "dv": "inf_y1",
+     "value": -0.26,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 1, 9 & 10 columns (p. 8)",
+     "note": "z = -4.31."
+    },
+    {
+     "iv": "a1112",
+     "dv": "inf_y1",
+     "value": -0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.901,
+     "p_label": ".901",
+     "sig": false,
+     "location": "Table 4, Year 1, 11 & 12 columns (p. 8)",
+     "note": "z = -.09."
+    },
+    {
+     "iv": "a1314",
+     "dv": "inf_y1",
+     "value": 0.22,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.039,
+     "p_label": ".039",
+     "sig": true,
+     "location": "Table 4, Year 1, 13 & 14 columns (p. 8)",
+     "note": "z = .22. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error. p = .039 would make this a significant positive informant effect at Year 1, but the Results text (p. 8) says informant discrepancy was significant only at Y4 for the 13 & 14 group; verify."
+    },
+    {
+     "iv": "nophone",
+     "dv": "inf_y1",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.973,
+     "p_label": ".973",
+     "sig": false,
+     "location": "Table 4, Year 1, No phone columns (p. 8)",
+     "note": "z = .03."
+    },
+    {
+     "iv": "u8",
+     "dv": "inf_y2",
+     "value": -0.56,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 2, 8 & under columns (p. 8)",
+     "note": "z = -3.82."
+    },
+    {
+     "iv": "a910",
+     "dv": "inf_y2",
+     "value": -0.45,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 2, 9 & 10 columns (p. 8)",
+     "note": "z = -6.61."
+    },
+    {
+     "iv": "a1112",
+     "dv": "inf_y2",
+     "value": -0.2,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 2, 11 & 12 columns (p. 8)",
+     "note": "z = -4.14."
+    },
+    {
+     "iv": "a1314",
+     "dv": "inf_y2",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.904,
+     "p_label": ".904",
+     "sig": false,
+     "location": "Table 4, Year 2, 13 & 14 columns (p. 8)",
+     "note": "z = .01. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error."
+    },
+    {
+     "iv": "nophone",
+     "dv": "inf_y2",
+     "value": -0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.952,
+     "p_label": ".952",
+     "sig": false,
+     "location": "Table 4, Year 2, No phone columns (p. 8)",
+     "note": "z = -.06."
+    },
+    {
+     "iv": "u8",
+     "dv": "inf_y3",
+     "value": -0.81,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 3, 8 & under columns (p. 8)",
+     "note": "z = -4.67."
+    },
+    {
+     "iv": "a910",
+     "dv": "inf_y3",
+     "value": -0.64,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 3, 9 & 10 columns (p. 8)",
+     "note": "z = -8.36."
+    },
+    {
+     "iv": "a1112",
+     "dv": "inf_y3",
+     "value": -0.39,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 3, 11 & 12 columns (p. 8)",
+     "note": "z = -6.98."
+    },
+    {
+     "iv": "a1314",
+     "dv": "inf_y3",
+     "value": -0.19,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.131,
+     "p_label": ".131",
+     "sig": false,
+     "location": "Table 4, Year 3, 13 & 14 columns (p. 8)",
+     "note": "z = -.19. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error."
+    },
+    {
+     "iv": "nophone",
+     "dv": "inf_y3",
+     "value": -0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.892,
+     "p_label": ".892",
+     "sig": false,
+     "location": "Table 4, Year 3, No phone columns (p. 8)",
+     "note": "z = -.14."
+    },
+    {
+     "iv": "u8",
+     "dv": "inf_y4",
+     "value": -1.05,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 4, 8 & under columns (p. 8)",
+     "note": "z = -5.04."
+    },
+    {
+     "iv": "a910",
+     "dv": "inf_y4",
+     "value": -0.83,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 4, 9 & 10 columns (p. 8)",
+     "note": "z = -8.98."
+    },
+    {
+     "iv": "a1112",
+     "dv": "inf_y4",
+     "value": -0.59,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 4, 11 & 12 columns (p. 8)",
+     "note": "z = -8.66."
+    },
+    {
+     "iv": "a1314",
+     "dv": "inf_y4",
+     "value": -0.4,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, Year 4, 13 & 14 columns (p. 8)",
+     "note": "z = .40. The printed z equals the printed b in every 13 & 14 cell (and the Year 4 z has the opposite sign of b), so the z column for this group looks like a typesetting error."
+    },
+    {
+     "iv": "nophone",
+     "dv": "inf_y4",
+     "value": -0.05,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.848,
+     "p_label": ".848",
+     "sig": false,
+     "location": "Table 4, Year 4, No phone columns (p. 8)",
+     "note": "z = -.19."
+    },
+    {
+     "iv": "cmp_910_1112",
+     "dv": "informant",
+     "value": 26.98,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 6-7 (post-hoc Wald tests)",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient."
+    },
+    {
+     "iv": "cmp_1112_1314",
+     "dv": "informant",
+     "value": 5.83,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.015,
+     "p_label": ".015",
+     "sig": true,
+     "location": "Results text p. 6-7 (post-hoc Wald tests)",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient."
+    },
+    {
+     "iv": "cmp_1314_np",
+     "dv": "informant",
+     "value": 3.93,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.04,
+     "p_label": ".040",
+     "sig": true,
+     "location": "Results text p. 6-7 (post-hoc Wald tests)",
+     "note": "Value is a Wald chi-square with df = 1 testing equality of the informant effect (beta2) between the two adjacent groups; not a coefficient."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Post-hoc multi-group latent growth curve model of youth- and parent-reported internalizing problems, grouped by age of smartphone ownership",
+   "location_in_paper": "Results p. 5 (text) and Figure 1 (p. 6); interpreted in Discussion p. 9 ('latent growth analyses revealed...').",
+   "design": "Longitudinal, four annual waves (Years 1-4). Separate linear latent growth trajectories for youth-reported and parent-reported internalizing problems, estimated separately in each of the five smartphone-ownership groups (multi-group). As in M1, smartphone ownership age is the grouping variable, not a regressor; the phone contrast is the difference in slopes across groups, which the paper does not formally test.",
+   "sample": "Same ABCD Release 5.1 sample and ownership groups as M1 (8 & under n = 677, 9 & 10 n = 2,641, 11 & 12 n = 5,037, 13 & 14 n = 744, No Phone n = 376).",
+   "iv": "Age of first smartphone ownership as five groups (grouping variable); within-group, the slope is per one-year wave.",
+   "dv": "Six-item internalizing problems score (0-12), youth-report (BPM) and parent-report (CBCL), Years 1-4.",
+   "covariates": [
+    {
+     "name": "Not reported",
+     "detail": "The paper does not state whether covariates were included in the latent growth curve models."
+    }
+   ],
+   "equation": "IP[t, reporter, i] = intercept[reporter, i] + slope[reporter, i]*t + e; intercept and slope latent factors estimated per reporter, separately within each smartphone-ownership group.",
+   "estimation": "Described as post-hoc. Presumably Mplus 8.3 with MLR and ABCD propensity weights as for all models, but estimator details for this analysis are not given separately. No formal between-group test of slopes reported. Alpha = .05. Figure 1 also shows full-sample slopes (youth beta = .26***, parent beta = -.03), not extracted.",
+   "native_metric": "other:within-group latent growth slope b (standardized beta in note)",
+   "iv_axis": [
+    {
+     "id": "u8",
+     "label": "8 & under",
+     "meta": "n = 677; 47% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a910",
+     "label": "9 & 10",
+     "meta": "n = 2641; 49% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a1112",
+     "label": "11 & 12",
+     "meta": "n = 5037; 52% male",
+     "sd_iv": null
+    },
+    {
+     "id": "a1314",
+     "label": "13 & 14",
+     "meta": "n = 744; 61% male",
+     "sd_iv": null
+    },
+    {
+     "id": "nophone",
+     "label": "No phone",
+     "meta": "n = 376; 63% male",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "slope_youth",
+     "label": "Youth-report slope",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "slope_parent",
+     "label": "Parent-report slope",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "u8",
+     "dv": "slope_youth",
+     "value": 0.39,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Results text p. 5 (8 & under); Figure 1 (p. 6)",
+     "note": "SE = .12. Standardized beta = .29."
+    },
+    {
+     "iv": "a910",
+     "dv": "slope_youth",
+     "value": 0.19,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 5 (9 & 10); Figure 1 (p. 6)",
+     "note": "SE = .02. Standardized beta = .29."
+    },
+    {
+     "iv": "a1112",
+     "dv": "slope_youth",
+     "value": 0.2,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 5 (11 & 12); Figure 1 (p. 6)",
+     "note": "SE = .02. Standardized beta = .32."
+    },
+    {
+     "iv": "a1314",
+     "dv": "slope_youth",
+     "value": 0.21,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 5 (13 & 14); Figure 1 (p. 6)",
+     "note": "SE = .06. Standardized beta = .39."
+    },
+    {
+     "iv": "nophone",
+     "dv": "slope_youth",
+     "value": -0.05,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.216,
+     "p_label": ".216",
+     "sig": false,
+     "location": "Results text p. 5 (No phone); Figure 1 (p. 6)",
+     "note": "SE = .04. Standardized beta = -.09."
+    },
+    {
+     "iv": "u8",
+     "dv": "slope_parent",
+     "value": -0.07,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.013,
+     "p_label": ".013",
+     "sig": true,
+     "location": "Results text p. 5 (8 & under); Figure 1 (p. 6)",
+     "note": "SE = .03. Standardized beta = -.24."
+    },
+    {
+     "iv": "a910",
+     "dv": "slope_parent",
+     "value": 0.0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.858,
+     "p_label": ".858",
+     "sig": false,
+     "location": "Results text p. 5 (9 & 10); Figure 1 (p. 6)",
+     "note": "SE = .01. Standardized beta = .01."
+    },
+    {
+     "iv": "a1112",
+     "dv": "slope_parent",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.439,
+     "p_label": ".439",
+     "sig": false,
+     "location": "Results text p. 5 (11 & 12); Figure 1 (p. 6)",
+     "note": "SE = .02. Standardized beta = .02."
+    },
+    {
+     "iv": "a1314",
+     "dv": "slope_parent",
+     "value": -0.02,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.308,
+     "p_label": ".308",
+     "sig": false,
+     "location": "Results text p. 5 (13 & 14); Figure 1 (p. 6)",
+     "note": "SE = .02. Standardized beta = -.06."
+    },
+    {
+     "iv": "nophone",
+     "dv": "slope_parent",
+     "value": -0.07,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.044,
+     "p_label": ".044",
+     "sig": true,
+     "location": "Results text p. 5 (No phone); Figure 1 (p. 6)",
+     "note": "SE = .03. Standardized beta = -.19."
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Bivariate Pearson correlations of smartphone ownership age (coded group) with youth- and parent-reported internalizing problems at Years 1-4, unadjusted",
+   "location_in_paper": "Table 1 (p. 5), row 11 'Cellphone age'. Descriptive statistics section p. 4; the pattern (earlier ownership, higher youth-reported internalizing) is discussed on p. 9.",
+   "design": "Bivariate correlations between one smartphone-ownership-age variable and internalizing at each of four annual waves (Years 1-4). Not a regression; no adjustment, no nesting.",
+   "sample": "ABCD Release 5.1 sample described for M1; pairwise N per correlation not reported (likely FIML/pairwise; unclear).",
+   "iv": "'Cellphone age', the ordered smartphone ownership age category (Table 1 M = 2.72, SD = 0.85). Coding not printed explicitly; per Methods, No Phone was assigned 5, so presumably 1 = 8 & under, 2 = 9 & 10, 3 = 11 & 12, 4 = 13 & 14, 5 = No Phone. Higher values mean later (or no) ownership.",
+   "dv": "Six-item internalizing score (0-12), youth-report (BPM) and parent-report (CBCL), each of Years 1-4. Table 1 SDs: youth 2.11, 2.23, 2.38, 2.56; parent 1.88, 1.88, 1.93, 1.96.",
+   "covariates": [
+    {
+     "name": "None",
+     "detail": "Zero-order correlations"
+    }
+   ],
+   "equation": "r(CellphoneAge, IP[reporter, year]) for reporter in {youth, parent}, year in 1-4.",
+   "estimation": "Pearson correlations, presumably Mplus 8.3 (software for descriptive statistics not stated separately). Significance by asterisks (*** p < .001, ** p < .01, * p < .05). No correction for multiple comparisons.",
+   "native_metric": "r",
+   "iv_axis": [
+    {
+     "id": "cellphone_age",
+     "label": "Smartphone ownership age (coded 1-5, higher = later/none)",
+     "meta": "M = 2.72, SD = 0.85",
+     "sd_iv": 0.85
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "youth_y1",
+     "label": "Youth-report internalizing Y1",
+     "sd_dv": 2.11,
+     "p0": null
+    },
+    {
+     "id": "youth_y2",
+     "label": "Youth-report internalizing Y2",
+     "sd_dv": 2.23,
+     "p0": null
+    },
+    {
+     "id": "youth_y3",
+     "label": "Youth-report internalizing Y3",
+     "sd_dv": 2.38,
+     "p0": null
+    },
+    {
+     "id": "youth_y4",
+     "label": "Youth-report internalizing Y4",
+     "sd_dv": 2.56,
+     "p0": null
+    },
+    {
+     "id": "parent_y1",
+     "label": "Parent-report internalizing Y1",
+     "sd_dv": 1.88,
+     "p0": null
+    },
+    {
+     "id": "parent_y2",
+     "label": "Parent-report internalizing Y2",
+     "sd_dv": 1.88,
+     "p0": null
+    },
+    {
+     "id": "parent_y3",
+     "label": "Parent-report internalizing Y3",
+     "sd_dv": 1.93,
+     "p0": null
+    },
+    {
+     "id": "parent_y4",
+     "label": "Parent-report internalizing Y4",
+     "sd_dv": 1.96,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "cellphone_age",
+     "dv": "youth_y1",
+     "r": -0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .01",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 1 (Internal (Y) 1) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "youth_y2",
+     "r": -0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .01",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 2 (Internal (Y) 2) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "youth_y3",
+     "r": -0.07,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .001",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 3 (Internal (Y) 3) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "youth_y4",
+     "r": -0.06,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .001",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 4 (Internal (Y) 4) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "parent_y1",
+     "r": 0.03,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .01",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 5 (Internal (P) 1) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "parent_y2",
+     "r": 0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .01",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 6 (Internal (P) 2) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "parent_y3",
+     "r": 0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "p < .01",
+     "sig": true,
+     "location": "Table 1, row 11 (Cellphone age) x column 7 (Internal (P) 3) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    },
+    {
+     "iv": "cellphone_age",
+     "dv": "parent_y4",
+     "r": 0.03,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "ns (no asterisk)",
+     "sig": false,
+     "location": "Table 1, row 11 (Cellphone age) x column 8 (Internal (P) 4) (p. 5)",
+     "note": "Exact p not printed; significance from asterisks."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Full-sample (ungrouped) multilevel model of time, informant, and time x informant",
+   "location": "Results p. 6; Figure 2 grey line",
+   "why": "Does not involve the smartphone variable; estimates the parent-youth discrepancy in the whole sample (time b = 0.04, informant b = -0.47, time x informant b = -0.21 with printed 95% CI [-.29, -.23], which does not contain the point estimate). Not a phone/SM estimate."
+  },
+  {
+   "model": "Within-group covariate effects (screen time, puberty, sex, parent education on internalizing)",
+   "location": "Table 3 covariate rows (p. 7)",
+   "why": "Total screen time is a multi-device composite (all non-educational screen use) and appears only as a covariate; the other rows are covariates. No phone/SM estimate."
+  },
+  {
+   "model": "One-way ANOVAs of internalizing and covariates across smartphone ownership groups",
+   "location": "Descriptive statistics p. 4; Table 2 (p. 5)",
+   "why": "Only the minimum and maximum F per reporter are printed (youth Y2 F_min = 26.08, Y4 F_max = 65.43, df = 4; parent Y1 F_min = 14.84, Y2 F_max = 20.13; parent Y4 F = 8.69, p = .060), unadjusted and omnibus across five groups; per-wave F values are incomplete. Table 2 group means/SDs are descriptive and could support unadjusted group-difference d's, but the authors do not model them as such."
+  },
+  {
+   "model": "Chi-square tests of sex composition within ownership groups and correlations of cellphone age with sex and parent education",
+   "location": "Descriptive statistics p. 4; Table 1",
+   "why": "Smartphone ownership age paired with demographic variables only (sex, parent education); fails the individual-trait other-side requirement."
+  },
+  {
+   "model": "Full-sample latent growth slopes and within-time parent-child correlations",
+   "location": "Figure 1 'Full Sample' panel; Results p. 6",
+   "why": "Do not involve the smartphone variable."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: other (within-group unstandardized b, Wald chi-square); M2: other (within-group latent growth slope); M3: r",
+  "conversion_formula": "M3 only: d = 2r / sqrt(1 - r^2) (Borenstein et al. 2009). M1 and M2: no conversion.",
+  "contrast_type": "M3: per unit of the coded ownership-age variable expressed as a correlation (higher code = later or no smartphone ownership); sign is negative for youth-report internalizing, so later ownership goes with fewer youth-reported problems. M1/M2: smartphone age is a grouping variable; estimates are within-group parameters (parent vs youth difference, change per year), not effects of phone ownership.",
+  "transformable": "partial",
+  "notes": "M3 correlations are directly convertible; SD_IV (0.85) and SD_DV per wave/reporter are from Table 1 (p. 5) but are not needed for the r-to-d conversion. M3 is unadjusted and treats a five-category variable (with No Phone coded as the highest value) as continuous, so the derived d is a rough association, not the authors' focal estimate. M1 is the analysis the authors use to interpret the smartphone finding, but it is a multi-group model in which smartphone age only defines groups; the parameters are the informant (parent minus youth) effect and its change over time within each group, in raw internalizing-score units (0-12). A between-group phone contrast exists only as Wald chi-square tests (df = 1) with no effect size, so no Cohen's d for smartphone ownership can be derived from M1 or M2 without the raw between-group differences and their SEs, which are not reported. M2 slopes are within-group change over time, likewise not a phone effect."
+ },
+ "extraction_flags": "1) Eligibility: in this paper, age of smartphone ownership is used only to split the sample into 5 groups (8 & under, 9 & 10, 11 & 12, 13 & 14, No Phone) for multi-group models (M1 Table 3/4, M2 latent growth). It never enters a model as a regressor with its own coefficient, so in practice it works as a moderator, and FT-IC2 clarification 7 says moderators do not qualify. The only direct phone-trait numbers are the unadjusted bivariate r values in Table 1 (M3: 'Cellphone age' with youth/parent internalizing Y1-Y4) and three Wald chi-square tests comparing adjacent groups' informant effects. A human should confirm whether Stage-2 inclusion holds. 2) M1 is the analysis the authors use to interpret their findings, but it is not convertible to d. Only M3 converts (r to d), and M3 is unadjusted. It also treats the coded group variable (No Phone presumably = 5) as continuous, and the coding is not printed explicitly. 3) Table 3 errors in the No Phone column: the informant row (.03/.02/.064) and the time row (.06/.07/.401) duplicate the screen-time and puberty rows. The text reports b = -.04, SE = .06, p = .694 and b = -.09, SE = .05, p = .068. I extracted the table values and flagged them in notes. 4) The text gives SE = .17 for the 11 & 12 informant effect; Table 3 gives .03. 5) Table 4, 13 & 14 column: every printed z equals b, and Y4 z = .40 vs b = -.40, which looks like a typesetting error. Y1 b = .22, p = .039 contradicts the text's claim that 13 & 14 was significant only at Y4. 6) Per the text, beta1/beta2 in Table 3 come from the model before the interaction was added and beta3 from the interaction model. 7) M2 (post-hoc latent growth curve) values come from the Results text p. 5, which matches Figure 1. Covariates for that model are not reported. 8) The full-sample interaction CI [-.29, -.23] does not contain b = -.21 (excluded, not phone-specific). 9) There is no supplement in the PDF; Supplemental Table 1 and Figure 1 are online only and were not reviewed."
+}

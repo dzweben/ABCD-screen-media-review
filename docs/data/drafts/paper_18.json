@@ -1,0 +1,1300 @@
+{
+ "paper_id": "18",
+ "title": "Causal Relationships Between Screen Use, Reading, and Brain Development in Early Adolescents",
+ "doi": "10.1002/advs.202307540",
+ "year": "2024",
+ "authors": "Li M, Zhao R, Dang X, Xu X, Chen R, Chen Y, Zhang Y, Zhao Z, Wu D",
+ "journal": "Advanced Science",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed-effects regression of NIH Toolbox cognition and CBCL syndrome scores on daily texting, social networking site, and video chat hours, fit separately at baseline and 2-year follow-up",
+   "location_in_paper": "Figure 2 heatmap, baseline and 2-year follow-up panels (p. 4); Results section 2.2 (pp. 3-4); full coefficients, SEs and p-values in Table S1 (Supporting Information, not bundled with the PDF). Methods only summarized in Experimental Section (p. 9) with details deferred to Supporting Information.",
+   "design": "Two separate cross-sectional analyses of ABCD data: one at baseline (ages ~9-10) and one at the 2-year follow-up (ages ~11-13). At each wave, screen use and the outcome are measured at the same wave. The authors treat associations significant at both waves as 'consistent' (Figure 2 right panel) and only carried those forward to Mendelian randomization. No pooled repeated-measures model and no wave-by-IV interaction is described in the main text. Each of the six screen activities and reading time is entered in a separate model per outcome (the figure reports one coefficient per activity x outcome); whether activities were entered jointly is not stated in the main text.",
+   "sample": "ABCD Study (release not stated in main text). Baseline analytic n = 7107; 2-year follow-up n = 4505 (Table 1, p. 3). Baseline age 9.87 +/- 0.62 years (follow-up 11.87 +/- 0.64). Sex: 53% male, 47% female at baseline (54%/46% at follow-up). Race at baseline: White 0.661, Black 0.137, Native American 0.005, Pacific Islander 0.001, Asian 0.022, Other 0.173; Hispanic/Latino 0.20. Household income <$11,999 0.28, $12,000-24,999 0.14, $25,000-49,999 0.23, $50,000-99,999 0.25, >$100,000 0.10 at baseline (follow-up proportions differ: 0.05/0.05/0.13/0.28/0.49). Parent college or more 0.86. Exclusion criteria are not described in the main text.",
+   "iv": "Daily hours of three phone/SM activities from the ABCD youth screen time questionnaire, each analysed as its own IV: Text = texting on a cell phone, tablet, or computer; SNS = visiting social networking sites; VC = video chatting. Units are hours per day (Table 1 reports M +/- SD in hours). Baseline: Text 0.19 +/- 0.42 (41% any use), SNS 0.09 +/- 0.31 (17%), VC 0.16 +/- 0.38 (36%). 2-year follow-up: Text 0.53 +/- 0.96 (67%), SNS 0.51 +/- 1.10 (45%), VC 0.33 +/- 0.77 (43%). The weekday/weekend weighting used to form daily hours is not described in the main text. The same models were also run for TVM, Video, Game, and reading time (not phone/SM; not extracted).",
+   "dv": "Five NIH Toolbox cognition scores (picture vocabulary, flanker, pattern comparison processing speed, picture sequence memory, oral reading recognition) and eight CBCL syndrome scales (anxious/depressed, withdrawn/depressed, somatic complaints, social problems, thought problems, attention problems, rule-breaking behavior, aggressive behavior). Higher cognition = better ability; higher CBCL = more problems. Whether NIH Toolbox scores are uncorrected or age-corrected standard scores, and whether CBCL scales are raw or T-scores, is not stated in the main text. No descriptive statistics for the DVs are given in the main text.",
+   "covariates": [
+    {
+     "name": "Covariates not enumerated in main text",
+     "detail": "The Experimental Section (p. 9) defers model details to the Supporting Information. The Discussion (p. 8) says sex, household income, and parental education were taken as covariates 'in our analysis'; the full LME covariate set and random-effects structure (e.g., site, family) are not stated in the main text."
+    },
+    {
+     "name": "Sex",
+     "detail": "Named as covariate in Discussion p. 8"
+    },
+    {
+     "name": "Household income",
+     "detail": "Named as covariate in Discussion p. 8"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Named as covariate in Discussion p. 8"
+    }
+   ],
+   "equation": "Outcome[i] = b0 + b1*ScreenActivity_hours[i] + b2..bk*covariates (sex, household income, parental education, others unspecified in main text) + random effect(s) (unspecified in main text) + e[i]; fit separately at baseline and 2-year follow-up for each activity x outcome pair",
+   "estimation": "Linear mixed-effects model (software not stated in main text). Significance defined by Bonferroni correction across tests (Figure 2 caption); only significant cells are colored and labeled with beta in Figure 2. SEs and p-values in Table S1. The coefficient is described as beta but, given magnitudes (e.g., -4.28 per daily hour), appears to be unstandardized. Associations significant at both waves were passed to one-sample Mendelian randomization (Figure 1, Figure 3). No sex or other interaction tests reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "text_bl",
+     "label": "Texting (baseline)",
+     "meta": "baseline: M = 0.19 h/day, SD = 0.42; 41% any use (Table 1)",
+     "sd_iv": 0.42
+    },
+    {
+     "id": "sns_bl",
+     "label": "Social networking sites (baseline)",
+     "meta": "baseline: M = 0.09 h/day, SD = 0.31; 17% any use (Table 1)",
+     "sd_iv": 0.31
+    },
+    {
+     "id": "vc_bl",
+     "label": "Video chat (baseline)",
+     "meta": "baseline: M = 0.16 h/day, SD = 0.38; 36% any use (Table 1)",
+     "sd_iv": 0.38
+    },
+    {
+     "id": "text_fu",
+     "label": "Texting (2-year follow-up)",
+     "meta": "2-year follow-up: M = 0.53 h/day, SD = 0.96; 67% any use (Table 1)",
+     "sd_iv": 0.96
+    },
+    {
+     "id": "sns_fu",
+     "label": "Social networking sites (2-year follow-up)",
+     "meta": "2-year follow-up: M = 0.51 h/day, SD = 1.1; 45% any use (Table 1)",
+     "sd_iv": 1.1
+    },
+    {
+     "id": "vc_fu",
+     "label": "Video chat (2-year follow-up)",
+     "meta": "2-year follow-up: M = 0.33 h/day, SD = 0.77; 43% any use (Table 1)",
+     "sd_iv": 0.77
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "pic_vocab",
+     "label": "Picture vocabulary (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "flanker",
+     "label": "Flanker (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pattern_comp",
+     "label": "Pattern comparison processing speed (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pic_seq_mem",
+     "label": "Picture sequence memory (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "oral_reading",
+     "label": "Oral reading recognition (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "anx_dep",
+     "label": "CBCL anxious/depressed",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "withdrawn_dep",
+     "label": "CBCL withdrawn/depressed",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "somatic",
+     "label": "CBCL somatic complaints",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "social",
+     "label": "CBCL social problems",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "thought",
+     "label": "CBCL thought problems",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "attention",
+     "label": "CBCL attention problems",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rule_breaking",
+     "label": "CBCL rule-breaking behavior",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "aggressive",
+     "label": "CBCL aggressive behavior",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "text_bl",
+     "dv": "pic_vocab",
+     "B": -2.2,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Figure 2 cell reads -2.20, but Results p. 3 reports Text with picture vocabulary as beta = -0.93 and -1.56 (corrected p < 0.004). -0.93 matches the follow-up cell; -1.56 does not appear in the figure. Figure value is entered here; check against Table S1."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "pattern_comp",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "pic_seq_mem",
+     "B": -1.4,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.003 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "oral_reading",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "somatic",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "thought",
+     "B": 0.51,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "rule_breaking",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_bl",
+     "dv": "aggressive",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "pic_vocab",
+     "B": -4.28,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-4 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "pattern_comp",
+     "B": -2.83,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "pic_seq_mem",
+     "B": -3.36,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-6 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "oral_reading",
+     "B": -2.17,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "somatic",
+     "B": 0.73,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "thought",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "rule_breaking",
+     "B": 0.73,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-4 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_bl",
+     "dv": "aggressive",
+     "B": 0.61,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.004 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "pic_vocab",
+     "B": -3.18,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Figure 2 cell reads -3.18, but Results p. 4 reports VC with picture vocabulary as beta = -2.11 and -2.64 (p < 10^-6). Figure value is entered here; check against Table S1."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "pattern_comp",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "pic_seq_mem",
+     "B": -2.43,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Figure 2 cell reads -2.43 and the follow-up cell is blank (not significant), but Results p. 4 reports VC with picture sequence memory as beta = -1.46 and -1.90 (p < 0.001). Figure value entered; check against Table S1."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "oral_reading",
+     "B": -2.35,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "somatic",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "thought",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "rule_breaking",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_bl",
+     "dv": "aggressive",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, baseline panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "pic_vocab",
+     "B": -0.93,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Matches Results p. 3 text (-0.93, the first of the two values given; corrected p < 0.004 in text)."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "pattern_comp",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "pic_seq_mem",
+     "B": -1.2,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.003 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "oral_reading",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "somatic",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "thought",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "rule_breaking",
+     "B": 0.26,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "text_fu",
+     "dv": "aggressive",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "pic_vocab",
+     "B": -1.31,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-4 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "pattern_comp",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "pic_seq_mem",
+     "B": -1.33,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-6 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "oral_reading",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "somatic",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "thought",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "rule_breaking",
+     "B": 0.42,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<10^-4 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "sns_fu",
+     "dv": "aggressive",
+     "B": 0.31,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.004 (text, pooled over both waves)",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "pic_vocab",
+     "B": -2.11,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Matches the first value in Results p. 4 (-2.11); text's second value -2.64 is not in the figure."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "flanker",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "pattern_comp",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "pic_seq_mem",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "oral_reading",
+     "B": -1.46,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF). Figure 2 follow-up VC x oral reading recognition cell reads -1.46; the same number appears in the text attributed to VC x picture sequence memory, suggesting a labeling error in either text or figure."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "anx_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "withdrawn_dep",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "somatic",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "social",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "thought",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "attention",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "rule_breaking",
+     "B": 0.34,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "Bonferroni-corrected p < .05 (colored cell); exact p in Table S1",
+     "sig": true,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Value read from the printed cell label in the Figure 2 heatmap; SE and exact p in Table S1 (Supporting Information, not bundled in the PDF)."
+    },
+    {
+     "iv": "vc_fu",
+     "dv": "aggressive",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "n.s. after Bonferroni (blank cell)",
+     "sig": false,
+     "location": "Figure 2, 2-year follow-up panel (p. 4)",
+     "note": "Cell is blank in Figure 2 (not significant after Bonferroni correction); coefficient printed only in Table S1, which is not in the PDF."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "One-sample Mendelian randomization of daily reading time on genetically predicted texting, social networking site, and video chat hours (ABCD baseline)",
+   "location_in_paper": "Table 2 (p. 8); Figure 6c (p. 7); Results section 2.4 (pp. 6-7); interpreted in Discussion pp. 8-9 as a displacement effect.",
+   "design": "One-sample Mendelian randomization using individual-level ABCD genotype data. Genetic instruments (SNPs) were identified by GWAS of each exposure phenotype within ABCD (Figure 1a). The analysis is described as using baseline data for the MR (Results p. 4); Table 2 does not state the wave. Exposure and outcome are measured at the same wave. The analysis was motivated by an LME showing all six screen activities negatively associated with reading time at both waves (Figure 6a, Table S6).",
+   "sample": "ABCD genotyped participants; the analytic n for the MR and any ancestry restriction are not stated in the main text (Supporting Information). The descriptive sample is that of Table 1 (baseline n = 7107).",
+   "iv": "Genetically predicted daily hours of Text (texting on a cell phone, tablet, or computer), SNS (visiting social networking sites), and VC (video chatting), each instrumented by ABCD-GWAS SNPs. One unit = 1 hour/day of screen activity (Figure 6c caption: change in daily reading time due to daily screen time per hour). Baseline SDs from Table 1: Text 0.42, SNS 0.31, VC 0.38.",
+   "dv": "Daily reading time in hours (Table 1 baseline 0.58 +/- 0.67 h, 71% any reading; follow-up 0.53 +/- 0.44 h).",
+   "covariates": [
+    {
+     "name": "Confounders",
+     "detail": "Figure 1c shows confounders adjusted in the one-sample MR; the specific confounders and genetic principal components are not listed in the main text."
+    }
+   ],
+   "equation": "Two-stage IV: stage 1 ScreenActivity_hours = a0 + a*SNPs + covariates; stage 2 ReadingTime_hours = b0 + b1*predicted ScreenActivity_hours + covariates + e",
+   "estimation": "One-sample MR (software and exact estimator not stated in main text). A causal effect was declared when it survived Bonferroni correction (corrected p < 0.05), passed the weak-instrument test (F > 10), and passed the Sargan overidentification test (p > 0.05); such effects are bolded in Table 2. Table 2 prints beta, SE, p, weak-IV F, and Sargan p; no CI printed.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "text",
+     "label": "Texting (genetically predicted)",
+     "meta": "per 1 h/day; baseline SD 0.42",
+     "sd_iv": 0.42
+    },
+    {
+     "id": "sns",
+     "label": "Social networking sites (genetically predicted)",
+     "meta": "per 1 h/day; baseline SD 0.31",
+     "sd_iv": 0.31
+    },
+    {
+     "id": "vc",
+     "label": "Video chat (genetically predicted)",
+     "meta": "per 1 h/day; baseline SD 0.38",
+     "sd_iv": 0.38
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "reading_time",
+     "label": "Daily reading time (h)",
+     "sd_dv": 0.67,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "text",
+     "dv": "reading_time",
+     "B": -0.188,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.045,
+     "p_label": "0.045",
+     "sig": false,
+     "location": "Table 2 row Text",
+     "note": "SE = 0.094; weak IV F = 17.340; Sargan p = 0.114. Not bolded: p = 0.045 does not survive the Bonferroni correction the authors require, so not declared causal."
+    },
+    {
+     "iv": "sns",
+     "dv": "reading_time",
+     "B": -0.382,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "0.000",
+     "sig": true,
+     "location": "Table 2 row SNS",
+     "note": "SE = 0.109; weak IV F = 17.379; Sargan p = 0.136. Bolded (significant causal effect). Text p. 7 reports p < 0.0005."
+    },
+    {
+     "iv": "vc",
+     "dv": "reading_time",
+     "B": -0.301,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.001,
+     "p_label": "0.001",
+     "sig": true,
+     "location": "Table 2 row VC",
+     "note": "SE = 0.087; weak IV F = 16.920; Sargan p = 0.331. Bolded. Text p. 7 reports p < 0.0006."
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Reverse one-sample Mendelian randomization of video chat hours on genetically predicted picture vocabulary (ABCD baseline)",
+   "location_in_paper": "Results p. 4 (text); Figure 3b forest plot (p. 5); full estimates in Table S2 (Supporting Information, not bundled). Interpreted in Discussion p. 8.",
+   "design": "Reverse-direction one-sample MR at baseline: cognition/behavior phenotypes instrumented by ABCD-GWAS SNPs predict screen activity hours. Phone/SM is the DV here. Same-wave exposure and outcome.",
+   "sample": "ABCD genotyped participants at baseline; analytic n not stated in main text.",
+   "iv": "Genetically predicted NIH Toolbox picture vocabulary score (score metric not stated in main text).",
+   "dv": "Daily video chat hours (baseline M 0.16, SD 0.38, Table 1).",
+   "covariates": [
+    {
+     "name": "Confounders",
+     "detail": "Not enumerated in the main text (Figure 1c)."
+    }
+   ],
+   "equation": "VC_hours = b0 + b1*predicted PictureVocabulary + covariates + e (two-stage IV)",
+   "estimation": "One-sample MR; significance required FDR correction, weak-instrument test, and overidentification test (Figure 3 caption says FDR; Results/Table 2 for the forward analysis say Bonferroni). Only this one phone/SM-as-DV reverse estimate is reported numerically in the main text; other reverse-MR estimates for Text, SNS, and VC as outcomes appear only as points in Figure 3b and in Table S2.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "pic_vocab",
+     "label": "Picture vocabulary (genetically predicted)",
+     "meta": "per 1 score point",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "vc_hours",
+     "label": "Video chat (h/day)",
+     "sd_dv": 0.38,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "pic_vocab",
+     "dv": "vc_hours",
+     "B": -0.001,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "corrected p < 10^-8",
+     "sig": true,
+     "location": "Results p. 4; Figure 3b; Table S2",
+     "note": "SE and CI only in Table S2 (not bundled)."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "LME associations of TVM, Video, Game, and reading time with cognition and CBCL",
+   "location": "Figure 2 (p. 4), Table S1",
+   "why": "Non-phone/SM exposures (television/movies, video watching, video games) and reading; only Text, SNS, and VC columns are extracted in M1."
+  },
+  {
+   "model": "Forward one-sample MR of Text, SNS, and VC on cognition and behavior",
+   "location": "Figure 3a (p. 5); Table S2 (Supporting Information)",
+   "why": "Phone/SM estimates are shown only as forest-plot points without printed values; none was significant per the Results text, and Table S2 is not bundled in the PDF. Values cannot be copied exactly; a coder with the supplement could add them."
+  },
+  {
+   "model": "Reverse one-sample MR of other cognition/behavior phenotypes on Text, SNS, VC hours",
+   "location": "Figure 3b (p. 5); Table S2",
+   "why": "Only picture vocabulary -> VC is reported numerically (extracted as M3); other phone/SM-outcome estimates exist only as plotted points and in the unbundled Table S2."
+  },
+  {
+   "model": "LME associations of screen activities with brain volume (148 cortical + 12 subcortical regions)",
+   "location": "Figure 4 (p. 6); Table S3",
+   "why": "Text, SNS, and VC rows of Figure 4 show no FDR-significant regions; per-region coefficients are only in Table S3, not bundled. No printed phone/SM estimates."
+  },
+  {
+   "model": "Forward/reverse one-sample MR on brain volume",
+   "location": "Figure 5 (p. 6); Table S4",
+   "why": "Run only for TVM, Game, and reading (the exposures with consistent LME brain associations); no phone/SM exposure."
+  },
+  {
+   "model": "Two-sample MR using UK Biobank leisure screen time GWAS",
+   "location": "Results pp. 4-5; Table S5; Figures S2-S4",
+   "why": "Exposure is UK Biobank total leisure screen time with no subcategories (non-phone/SM composite), in adults, not ABCD."
+  },
+  {
+   "model": "LME of six screen activities on daily reading time",
+   "location": "Figure 6a (p. 7); Table S6",
+   "why": "Main text gives only a range across all six activities (beta = -0.10 to -0.02, corrected p < 0.05); per-activity values for Text/SNS/VC are plotted without labels and are only in Table S6 (not bundled). The authors' interpreted spec for this relation is the MR in Table 2 (extracted as M2)."
+  },
+  {
+   "model": "Mediation analysis: screen use -> reading time -> picture vocabulary / oral reading recognition and brain volume",
+   "location": "Figure 6b (p. 7); Tables S7-S8",
+   "why": "Indirect effects shown only as plotted points; main text says all types except VC had significant mediation on the two language abilities, with no per-activity numbers. Supplement not bundled."
+  },
+  {
+   "model": "Two-step MR indirect effects of SNS and VC on picture vocabulary and oral reading recognition via reading time",
+   "location": "Figure 6d (p. 7); Table S9",
+   "why": "Main text gives only a pooled range for SNS and VC (beta = -2.86 to -1.90, p < 0.003) without assigning values to cells; Figure 6d points are unlabeled. Also a mediated (indirect) effect. Supplement not bundled; a coder with Table S9 could add these."
+  },
+  {
+   "model": "Two-step MR indirect effects on 22 reading-related brain volumes",
+   "location": "Figure 6e (p. 7); Table S10",
+   "why": "Main text gives a range across Video, SNS, and VC and all 22 regions (beta = -96.06 to -1.48, p < 0.03); no per-cell values printed."
+  },
+  {
+   "model": "Pearson correlations among exposures and reading time; LDSC genetic correlations",
+   "location": "Results p. 3; Figure S1; Supporting Results",
+   "why": "Exposure-exposure correlations, not a phone/SM <-> individual-trait outcome analysis (reading time correlations given only as a range)."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized; labeled beta by authors)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
+  "contrast_type": "per 1 hour/day of the screen activity (M1, M2); per 1 picture-vocabulary score point (M3); converted to per 1 SD of IV",
+  "transformable": "partial",
+  "notes": "SD_IV for Text, SNS, and VC at each wave comes from Table 1 (p. 3): baseline Text 0.42, SNS 0.31, VC 0.38; follow-up Text 0.96, SNS 1.10, VC 0.77. M2 is convertible: SD_DV for daily reading time is 0.67 at baseline (Table 1); the MR wave is taken as baseline from Results p. 4. M1 is not convertible as extracted because no SDs for the NIH Toolbox or CBCL scores are reported in the main text and the score metric (raw vs. T-score; uncorrected vs. age-corrected) is not stated, so SD_DV cannot be assumed to be 10 or 15. M3 is not convertible because the SD of picture vocabulary is not reported. No CIs are printed anywhere in the main text (Table 2 gives SE only), so derived d CIs are unavailable. Non-significant M1 cells have no printed value (Table S1 only)."
+ },
+ "extraction_flags": "1) The Supporting Information (Tables S1-S10) is not in the PDF. M1 has 78 cells, and only the 23 significant ones have values. I copied those values from the cell labels in the Figure 2 heatmap; the figure is an image, so I read them off zoomed renders of the page. The other 55 cells are blank in the figure (not significant after Bonferroni), so their B is null. SEs and exact p-values exist only in Table S1. Someone with the supplement should fill these in.\n\n2) The Results text and Figure 2 disagree in several places:\n- Text x picture vocabulary: the text says -0.93 and -1.56. The figure shows -2.20 at baseline and -0.93 at follow-up.\n- VC x picture vocabulary: the text says -2.11 and -2.64. The figure shows -3.18 and -2.11.\n- VC x picture sequence memory: the text says -1.46 and -1.90. The figure shows -2.43 at baseline and a blank (not significant) cell at follow-up. The -1.46 in the figure belongs to VC x oral reading recognition at follow-up.\nI entered the figure values and explained each mismatch in the cell notes. Check these against Table S1.\n\n3) The main text does not list the LME covariates, the random effects, the software, or whether the DV scores are raw, T-scores or age-corrected. The only covariates named are sex, income and parental education (Discussion, p. 8). Because of this, SD_DV is unknown for M1 and its cells cannot be converted to d. The coefficients are called beta but look unstandardized.\n\n4) M1 is two separate cross-sectional LMEs: baseline (n=7107) and 2-year follow-up (n=4505). I coded the IVs by wave so each cell gets the SD for its own wave.\n\n5) M2 is the one-sample MR of Text, SNS and VC on daily reading time (Table 2). I treated reading time as a qualifying behavioral outcome; please confirm that eligibility call. Only SEs are printed, so CI fields are null. SNS p is printed as \"0.000\". Text has p=0.045 but is not bolded, so I marked it non-significant under the authors' Bonferroni rule. Its d conversion uses the baseline reading-time SD of 0.67, on the assumption that the MR used baseline data.\n\n6) M3 is a single reverse-MR estimate with phone/SM as the outcome: picture vocabulary -> VC hours, B=-0.001, corrected p<10^-8. It comes from the text only. The MR analytic n and confounders are not reported in the main text.\n\n7) Several analyses were excluded because the main text gives only a range or unlabeled plot points: the forward MR for Text, SNS and VC (Figure 3a), the mediation and two-step MR indirect effects (Figure 6b/6d, Tables S7/S9), and the LME of screen use on reading time (Figure 6a/Table S6). A coder with the supplement could add them."
+}

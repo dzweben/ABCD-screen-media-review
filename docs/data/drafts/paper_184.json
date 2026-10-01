@@ -1,0 +1,270 @@
+{
+ "paper_id": "184",
+ "title": "Associations between media parenting practices and early adolescent screen use",
+ "doi": "10.1038/s41390-024-03243-y",
+ "year": "2025",
+ "authors": "Nagata JM, Paul A, Yen F, Smith-Russack Z, Shao IY, Al-shoaibi AAA, Ganson KT, Testa A, Kiss O, He J, Baker FC",
+ "journal": "Pediatric Research",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Propensity-weighted multiple linear regression of problematic social media use (SMAQ) and problematic mobile phone use (MPIQ) on media parenting practices, adjusted for sociodemographics, site and COVID-19 period",
+   "location_in_paper": "Table 3, 'Problematic screen use scores' Social media and Mobile phone columns (p. 407); results text pp. 405-406; interpreted in Discussion pp. 406-408",
+   "design": "Cross-sectional analysis of the ABCD Year 3 follow-up visit (2019-2022). Parent-reported media parenting practices (IV) and youth-reported problematic social media and mobile phone use (DV) were measured at the same visit. One observation per adolescent; no repeated measures. Phone/SM is the dependent variable. Each parenting practice category was entered in its own model; Table 3 reports output from 24 separate linear regression models (6 parenting categories x 4 outcomes), of which the 12 with SMAQ or MPIQ as outcome are extracted here.",
+   "sample": "ABCD Study release 5.0, Year 3 follow-up. N = 10,048 adolescents with media parenting practices and any screen use (screen time or problematic screen use) data were included in any part of the analysis; 1,827 were excluded due to missing outcome data (comparison in Appendix A, not bundled in the PDF). The SMAQ was asked only of adolescents reporting at least one social media account (n = 6916) and the MPIQ only of those reporting mobile phone use (n = 8310), so the per-outcome analytic Ns are at most these values; exact per-model Ns are not reported. Mean age 12.47 (SD 0.77) years; 48.3% female, 51.7% male; 5.5% Asian, 15.6% Black, 19.9% Latino, 3.1% Native American, 54.4% White, 1.5% Other (45.6% racial/ethnic minorities). Household income: 16.2% <$25,000, 19.9% $25-50k, 17.9% $50-75k, 14.0% $75-100k, 24.2% $100-200k, 7.7% >=$200,000. Parent highest education: 17.8% less than high school, 82.2% college or more (Table 1, propensity weighted).",
+   "iv": "Six media parenting practice categories from a 14-item parent-report questionnaire (adapted from Tang et al. 2018), each item rated on a 4-point Likert scale from 1 'Strongly Disagree' to 4 'Strongly Agree'; items were summed and averaged into a mean score per category: parental screen time modeling (2 items; 'I try to limit how much I use a screen-based device when I am with my child' reverse coded), mealtime screen use (2 items), bedroom screen use (3 items), use of screens to control behavior (2 items: reward and punishment), parental monitoring of screen time (2 items), and limiting screen time (3 items). Weighted means (SD) in Table 1: modeling 3.05 (0.63), mealtime 1.86 (0.94), bedroom 1.82 (0.89), control behavior 2.54 (0.89), monitoring 2.75 (0.95), limiting 3.14 (0.72). Coefficients are per 1-point increase in the category mean score.",
+   "dv": "Problematic social media use: 6-item Social Media Addiction Questionnaire (SMAQ; mood modification, salience, relapse, conflict, tolerance), youth self-report, summed total score; asked only of youth with at least one social media account (n = 6916); alpha = 0.89; weighted mean 8.3 (SD 7.50). Problematic mobile phone use: 8-item Mobile Phone Involvement Questionnaire (MPIQ), 7-point Likert from 'Strongly Disagree' to 'Strongly Agree', summed total score; asked of youth reporting mobile phone use (n = 8310); alpha = 0.88; weighted mean 21.39 (SD 13.07).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Adolescent age at Year 3 (coding not specified)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female/male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Asian, Black, Latino, Native American, White, Other"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parental education (Table 1 shows less than high school vs college or more)"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six income categories as in Table 1"
+    },
+    {
+     "name": "Study site",
+     "detail": "ABCD study site entered as a covariate (not a random effect)"
+    },
+    {
+     "name": "Data collection period",
+     "detail": "Pre- versus during the COVID-19 pandemic (March 13, 2020 cutoff)"
+    }
+   ],
+   "equation": "ProblematicUse[i] = b0 + b1*ParentingPractice_k[i] + b2*age + b3*sex + b4*race/ethnicity + b5*parent_education + b6*household_income + b7*site + b8*COVID_period + e[i], fitted separately for each of the 6 parenting practice categories k and each outcome (SMAQ total, MPIQ total), with ABCD propensity weights.",
+   "estimation": "Multiple linear regression in Stata 18.0, one model per parenting category x outcome (24 separate models in Table 3). ABCD propensity weights applied to approximate the American Community Survey distribution. Site entered as a fixed covariate; no family clustering or random effects reported. Significance at p < 0.05 (bold in Table 3); no multiple-comparison correction reported. No interaction or stratified analyses and no sensitivity analyses reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "model",
+     "label": "Parental screen time modeling",
+     "meta": "2 items; mean score 1-4",
+     "sd_iv": 0.63
+    },
+    {
+     "id": "mealtime",
+     "label": "Mealtime screen use",
+     "meta": "2 items; mean score 1-4",
+     "sd_iv": 0.94
+    },
+    {
+     "id": "bedroom",
+     "label": "Bedroom screen use",
+     "meta": "3 items; mean score 1-4",
+     "sd_iv": 0.89
+    },
+    {
+     "id": "control",
+     "label": "Use of screens to control behavior",
+     "meta": "2 items (reward/punishment); mean score 1-4",
+     "sd_iv": 0.89
+    },
+    {
+     "id": "monitor",
+     "label": "Parental monitoring of screen time",
+     "meta": "2 items; mean score 1-4",
+     "sd_iv": 0.95
+    },
+    {
+     "id": "limit",
+     "label": "Limiting screen time",
+     "meta": "3 items; mean score 1-4",
+     "sd_iv": 0.72
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "smaq",
+     "label": "Problematic social media use (SMAQ)",
+     "sd_dv": 7.5,
+     "p0": null
+    },
+    {
+     "id": "mpiq",
+     "label": "Problematic mobile phone use (MPIQ)",
+     "sd_dv": 13.07,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "model",
+     "dv": "smaq",
+     "B": 0.82,
+     "B_lo": 0.55,
+     "B_hi": 1.1,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 1 (Parental screen time modeling), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "mealtime",
+     "dv": "smaq",
+     "B": 0.83,
+     "B_lo": 0.64,
+     "B_hi": 1.02,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 2 (Mealtime screen use), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "bedroom",
+     "dv": "smaq",
+     "B": 1.91,
+     "B_lo": 1.71,
+     "B_hi": 2.11,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 3 (Bedroom screen use), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "control",
+     "dv": "smaq",
+     "B": 0.07,
+     "B_lo": -0.13,
+     "B_hi": 0.27,
+     "p": 0.489,
+     "p_label": "0.489",
+     "sig": false,
+     "location": "Table 3 row 4 (Use of screens to control behavior), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "monitor",
+     "dv": "smaq",
+     "B": -0.86,
+     "B_lo": -1.04,
+     "B_hi": -0.68,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 5 (Parental monitoring of screen time), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "limit",
+     "dv": "smaq",
+     "B": -1.58,
+     "B_lo": -1.83,
+     "B_hi": -1.34,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 6 (Limiting screen time), Problematic screen use scores: Social media column (p. 407)"
+    },
+    {
+     "iv": "model",
+     "dv": "mpiq",
+     "B": 1.31,
+     "B_lo": 0.82,
+     "B_hi": 1.81,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 1 (Parental screen time modeling), Problematic screen use scores: Mobile phone column (p. 407)"
+    },
+    {
+     "iv": "mealtime",
+     "dv": "mpiq",
+     "B": 1.33,
+     "B_lo": 1.01,
+     "B_hi": 1.65,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 2 (Mealtime screen use), Problematic screen use scores: Mobile phone column (p. 407)"
+    },
+    {
+     "iv": "bedroom",
+     "dv": "mpiq",
+     "B": 2.91,
+     "B_lo": 2.56,
+     "B_hi": 3.26,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 3 (Bedroom screen use), Problematic screen use scores: Mobile phone column (p. 407)"
+    },
+    {
+     "iv": "control",
+     "dv": "mpiq",
+     "B": -0.12,
+     "B_lo": -0.47,
+     "B_hi": 0.22,
+     "p": 0.488,
+     "p_label": "0.488",
+     "sig": false,
+     "location": "Table 3 row 4 (Use of screens to control behavior), Problematic screen use scores: Mobile phone column (p. 407)"
+    },
+    {
+     "iv": "monitor",
+     "dv": "mpiq",
+     "B": -1.12,
+     "B_lo": -1.44,
+     "B_hi": -0.81,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 5 (Parental monitoring of screen time), Problematic screen use scores: Mobile phone column (p. 407)"
+    },
+    {
+     "iv": "limit",
+     "dv": "mpiq",
+     "B": -2.24,
+     "B_lo": -2.66,
+     "B_hi": -1.81,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 row 6 (Limiting screen time), Problematic screen use scores: Mobile phone column (p. 407)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Linear regressions of total recreational screen time (hours/day) on each of the six media parenting practices",
+   "location": "Table 3, 'Total screen time' column (p. 407)",
+   "why": "Total screen time is a composite of single- and multi-player gaming, texting, social media, browsing the internet, video chatting and watching/streaming movies, videos or TV; it bundles non-phone/non-SM activities and no phone/SM breakout is reported."
+  },
+  {
+   "model": "Linear regressions of problematic video game use (VGAQ) on each of the six media parenting practices",
+   "location": "Table 3, 'Problematic screen use scores: Video game' column (p. 407)",
+   "why": "Generic gaming problematic-use scale without phone/mobile modality; does not qualify under FT-IC2 clarification 2."
+  },
+  {
+   "model": "Descriptive frequencies of media parenting practice items",
+   "location": "Table 2 (p. 406)",
+   "why": "Descriptive only; no phone/SM variable or inferential estimate."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1), applied to B, B_lo and B_hi.",
+  "contrast_type": "Per 1-point increase in the parenting practice category mean score (1-4 Likert scale), on the SMAQ or MPIQ total score.",
+  "transformable": true,
+  "notes": "SD_IV and SD_DV are the propensity-weighted SDs from Table 1 (p. 405): modeling 0.63, mealtime 0.94, bedroom 0.89, control behavior 0.89, monitoring 0.95, limiting 0.72; SMAQ 7.50 (computed among n = 6916 social media account holders), MPIQ 13.07 (among n = 8310 phone users). The parenting SDs are for the full N = 10,048 sample rather than the SMAQ/MPIQ subsamples, so the standardization is approximate. Exact p-values are printed only for the non-significant control-behavior cells; all others are '<0.001'."
+ },
+ "extraction_flags": "Phone/SM is the DV here: SMAQ and MPIQ regressed on six parent-reported media parenting practices. Parenting practices count as individual-trait under FT-IC2, but problematic-use scales are themselves the phone/SM variable, so a reviewer may want to confirm this pairing is in scope. Table 3 is printed rotated, and I read it from a re-rotated render. I checked all 12 values against that render and against the results text on pp. 405-406. Per-outcome analytic Ns are not reported. SMAQ was asked of n=6916 and MPIQ of n=8310, while the parenting SDs in Table 1 come from the full N=10,048 sample, so the standardization behind the derived d is approximate. Exact p-values are printed only for the two non-significant control-behavior cells; the rest are '<0.001'. Appendix A, which compares included and excluded participants, is not in the PDF. The total screen time column is excluded because it is a mixed composite, and the VGAQ column is excluded because it measures generic gaming.json"
+}

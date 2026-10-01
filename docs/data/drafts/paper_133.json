@@ -1,0 +1,177 @@
+{
+ "paper_id": "133",
+ "title": "Screen Time and Obsessive-Compulsive Disorder Among Children 9-10 Years Old: A Prospective Cohort Study",
+ "doi": "10.1016/j.jadohealth.2022.10.023",
+ "year": "2023",
+ "authors": "Nagata JM, Chu J, Zamora G, Ganson KT, Testa A, Jackson DB, Costello CR, Murray SB, Baker FC",
+ "journal": "Journal of Adolescent Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Propensity-weighted logistic regression of new-onset OCD at 2-year follow-up on baseline phone/SM hours per day, adjusted for sociodemographics, site, baseline MDD and family psychopathology, excluding baseline OCD",
+   "location_in_paper": "Table 3, Model 3 (p. 394); reported in Results p. 392 and Abstract; interpreted in Discussion pp. 392-394 (texting, video chat and social media discussed as nonsignificant on p. 394).",
+   "design": "Prospective longitudinal cohort. Screen time (IV) measured at ABCD baseline (2016-2018, ages 9-10); OCD diagnosis (DV) measured at the 2-year follow-up (2018-2020, ages 11-12). Single binary outcome at one follow-up wave, one observation per child, no repeated measures and no time x IV interaction. Because participants with OCD at baseline are excluded, the outcome is effectively new-onset OCD by year 2. Each screen modality is entered in a separate model (one IV per model).",
+   "sample": "ABCD Release 4.0, 21 U.S. sites. Of 11,875 enrolled, 2,667 were excluded for missing screen time, OCD or confounder data, leaving 9,208; Model 3 further excludes the 666 participants with OCD at baseline, giving analytic N = 8,542. Table 1 (No OCD baseline column, n = 8,542): age mean 9.93 (SD 0.63); 49.7% female, 50.3% male; White 56.9%, Latino/Hispanic 18.5%, Black 14.9%, Asian 5.3%, Native American 3.0%, Other 1.4%; parent with college education or more 84.4%; baseline major depressive disorder 0.2%; family history of psychopathology 58.9%. Full 9,208 sample: 48.9% female, White 56.5% (Abstract says 43.5% non-White; Results text says 47.8% non-White). Table 1 percentages are propensity weighted.",
+   "iv": "Baseline self-reported hours per day of each screen modality from the ABCD Youth Screen Time Survey (typical hours per day on weekdays and weekends). Weighted daily average = (weekday x 5 + weekend x 2) / 7, entered as a continuous variable in hours/day. Qualifying modalities: texting; video chatting (e.g., Skype, FaceTime); social media/social networking (e.g., Facebook, Instagram, Twitter). Baseline means (SD) in the Model 3 sample (Table 1, No OCD baseline column, n = 8,542): texting 0.21 (0.43); video chat 0.19 (0.48); social networking 0.11 (0.40) hours/day. Each modality is a separate IV; the OR is per additional hour per day.",
+   "dv": "Binary OCD diagnosis at the 2-year follow-up from the caregiver-completed computerized KSADS-5, scored to DSM-5 criteria: presence of obsessions or compulsions plus at least one of time-consuming obsessions, time-consuming compulsions, impairment, or distress. With baseline OCD cases excluded, a positive outcome is new-onset OCD. Results text: 6.1% of the sample met OCD criteria at year 2 and 4.4% developed new-onset OCD from baseline to year 2 (denominator not stated; appears to be the 9,208 sample).",
+   "covariates": [
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female, male"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories: <$25,000; $25,000-$49,999; $50,000-$74,999; $75,000-$99,999; $100,000-$199,999; >=$200,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs college or more"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as a covariate (21 sites); listed in the Table 3 footnote; no random effect described"
+    },
+    {
+     "name": "Baseline major depressive disorder",
+     "detail": "From KSADS-5 at baseline"
+    },
+    {
+     "name": "Family history of psychopathology",
+     "detail": "Modified Family History Assessment"
+    },
+    {
+     "name": "Age",
+     "detail": "Years; listed in the Statistical analysis text for Models 2 and 3 but omitted from the Table 3 footnote and the Abstract, so inclusion is uncertain"
+    }
+   ],
+   "equation": "logit(P(OCD_Y2[i] = 1)) = b0 + b1*phoneSM_hours[i] + b2..b6*race_ethnicity + b7*sex + b8..b12*income + b13*parent_ed + b14..b33*site + b34*baseline_MDD + b35*family_history_psychopathology (+ b36*age, per Statistical analysis text), estimated among participants without OCD at baseline, with ACS propensity weights. OR = exp(b1) per additional hour/day; phoneSM_hours is texting, video chat, or social networking in separate models.",
+   "estimation": "Multiple logistic regression in Stata 15.1. Propensity weights applied to yield estimates representative of the American Community Survey. Site entered as a covariate; no clustering or random effects for site or family described. Significance at p < .05 (bold in Table 3). No multiple-comparison correction reported across the 7 screen modalities. No interaction or stratified analyses reported. Model 1 (unadjusted, n = 9,208) and Model 2 (adjusted plus baseline OCD as covariate, n = 9,208) reported alongside in Table 3; the Abstract and Results anchor the reported aORs to Model 3, stating findings were mostly similar to Model 2.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "M = 0.21 h/day, SD = 0.43 (n = 8,542)",
+     "sd_iv": 0.43
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "meta": "M = 0.19 h/day, SD = 0.48 (n = 8,542)",
+     "sd_iv": 0.48
+    },
+    {
+     "id": "social_networking",
+     "label": "Social networking",
+     "meta": "M = 0.11 h/day, SD = 0.40 (n = 8,542)",
+     "sd_iv": 0.4
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "ocd_y2",
+     "label": "New-onset OCD at 2-year follow-up (KSADS-5)",
+     "sd_dv": null,
+     "p0": 0.044
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "ocd_y2",
+     "OR": 1.2,
+     "OR_lo": 1.0,
+     "OR_hi": 1.44,
+     "p": 0.056,
+     "p_label": ".056",
+     "sig": false,
+     "location": "Table 3, Model 3, Texting row",
+     "note": "Lower CI bound printed as 1.00; not bold, p = .056."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "ocd_y2",
+     "OR": 0.91,
+     "OR_lo": 0.7,
+     "OR_hi": 1.18,
+     "p": 0.483,
+     "p_label": ".483",
+     "sig": false,
+     "location": "Table 3, Model 3, Video chat row"
+    },
+    {
+     "iv": "social_networking",
+     "dv": "ocd_y2",
+     "OR": 1.07,
+     "OR_lo": 0.83,
+     "OR_hi": 1.39,
+     "p": 0.604,
+     "p_label": ".604",
+     "sig": false,
+     "location": "Table 3, Model 3, Social networking row"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Model 1 (unadjusted logistic regression, n = 9,208)",
+   "location": "Table 3, left columns (p. 394)",
+   "why": "Unadjusted transparency model; the paper anchors its reported aORs to Model 3. Phone/SM values: texting OR 1.10 (0.93-1.29), p = .275; video chat 1.00 (0.82-1.24), p = .937; social networking 1.09 (0.90-1.31), p = .391."
+  },
+  {
+   "model": "Model 2 (adjusted logistic regression including baseline OCD as covariate, n = 9,208)",
+   "location": "Table 3, middle columns (p. 394)",
+   "why": "Alternative adjusted specification; Results and Abstract report Model 3 values and describe Model 3 as mostly similar to Model 2. Phone/SM values: texting AOR 1.13 (0.94-1.36), p = .194; video chat 0.99 (0.80-1.22), p = .917; social networking 1.01 (0.81-1.27), p = .927."
+  },
+  {
+   "model": "Total screen time IV (all models)",
+   "location": "Table 3, Total screen time row; Abstract",
+   "why": "Composite sum of six modalities including TV shows/movies, videos and video games. Includes non-phone/non-SM ingredients; fails FT-IC2 Step 2 (per-modality breakouts are extracted instead)."
+  },
+  {
+   "model": "Television shows/movies IV",
+   "location": "Table 3",
+   "why": "Non-phone/non-SM modality. Fails FT-IC2."
+  },
+  {
+   "model": "Videos (YouTube) IV",
+   "location": "Table 3 (Model 3 AOR 1.11, 1.01-1.23, p = .038)",
+   "why": "Item is watching videos (e.g., YouTube) with device unspecified; treated as a non-phone/non-SM video-streaming modality, consistent with the reference extraction for paper 156. Flagged for coder review because FT-IC2 names YouTube as a platform."
+  },
+  {
+   "model": "Video games IV",
+   "location": "Table 3 (Model 3 AOR 1.15, 1.03-1.28, p = .015)",
+   "why": "Generic video gaming, platform unspecified. Fails FT-IC2 clarification 2."
+  },
+  {
+   "model": "Baseline screen time by baseline OCD status (t-tests)",
+   "location": "Table 1 (p. 393)",
+   "why": "Descriptive bivariate comparison (independent-samples t-tests, p-values only), cross-sectional, no effect estimate; texting p = .144, video chat p = .866, social networking p = .184."
+  },
+  {
+   "model": "Baseline screen time by year-2 OCD status (t-tests)",
+   "location": "Table 2 (p. 393)",
+   "why": "Unadjusted descriptive comparison of means with p-values only; no effect estimate and not the specification the authors interpret. Texting p = .320, video chat p = .937, social networking p = .430."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (adjusted odds ratio)",
+  "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); CI endpoints converted the same way.",
+  "contrast_type": "per 1 additional hour/day of the baseline phone/SM modality (weighted weekday/weekend average)",
+  "transformable": true,
+  "notes": "OR converts to d directly via Chinn without p0 or SDs. SD_IV for the Model 3 analytic sample comes from Table 1 (p. 393), No OCD (baseline) column, n = 8,542: texting 0.43, video chat 0.48, social networking 0.40 hours/day; these are recorded in case a per-SD rescaling (ln(OR) * SD_IV) is wanted, since 1 hour/day is more than 2 SD for every phone/SM modality here. p0 = 0.044 is the Results-text rate of new-onset OCD from baseline to year 2 (p. 392); the denominator is not stated and may be the 9,208 sample rather than the 8,542 Model 3 sample. SD_DV not applicable (binary DV)."
+ },
+ "extraction_flags": "1) Which model to use: I extracted Table 3 Model 3 (n=8,542, baseline OCD cases excluded, so the outcome is new-onset OCD), because the Abstract and Results report Model 3's aORs. Model 2 (n=9,208, baseline OCD entered as a covariate) is also adjusted. I put it in excluded_models with its values in case coders prefer it. 2) Age is listed as a covariate in the Statistical analysis text, but it is missing from the Table 3 footnote and from the Abstract. Check whether it was actually in the model. 3) Videos (YouTube) and video games are excluded as non-phone/non-SM, following the paper 156 reference. However, the stage2_reason cites them, and FT-IC2 names YouTube as a platform. Coders should confirm that \"Videos (YouTube)\" (watching videos, e.g., YouTube, on any device) does not qualify. Its Model 3 aOR is 1.11 (1.01-1.23), p=.038. 4) None of the three phone/SM estimates is significant. Texting comes closest: aOR 1.20 (1.00-1.44), p=.056. 5) p0=0.044 is from the Results text and its denominator is unclear (probably the 9,208 sample). It is not needed for the Chinn OR-to-d conversion. 6) The SD_IV values come from the Table 1 No-OCD-baseline column (n=8,542), which is the Model 3 sample. Because the contrast is per 1 hour/day and that is more than 2 SD for every modality, the derived d per hour is large relative to the typical exposure. 7) The paper is inconsistent on percent non-White: the Abstract says 43.5% (matches Table 1) and the Results text says 47.8%. 8) No multiple-comparison correction across the 7 modalities. Site was entered as a covariate, not as a random effect."
+}

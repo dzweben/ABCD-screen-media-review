@@ -1,0 +1,274 @@
+{
+ "paper_id": "381",
+ "title": "Bidirectional Associations Between Screen Time and Irritability in Preadolescence: A Temporal Network Analysis",
+ "doi": "10.1177/10445463251415497",
+ "year": "2026",
+ "authors": "Zhang L, Bellaert N, Zhuo H, Liew Z, Tseng WL",
+ "journal": "Journal of Child and Adolescent Psychopharmacology (inferred from DOI prefix; the PDF is an author manuscript without journal name)",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Panel graphical vector autoregressive (GVAR) temporal network of irritability and five screen activities, adjusted for co-occurring ADHD, depression, and anxiety",
+   "location_in_paper": "Results, Temporal Network (p. 9); Figure 3 (not included in the PDF); stable edges in Supplementary Table S1 and exact edge weights in Supplementary Table S2 (supplement not included in the PDF); interpreted in Abstract and Discussion pp. 10-12, 15 (conclusion).",
+   "design": "Longitudinal three-wave panel (baseline, Year 1, Year 2). All variables measured at every wave. The temporal network gives lagged within-person associations from one wave to the next (t to t+1), averaged over the two lag intervals, controlling for all variables at the previous wave, estimated as partial correlations. Bidirectional by construction: each screen node predicts later irritability and irritability predicts later screen nodes in the same model. The panel GVAR also estimates contemporaneous and between-person networks, but the authors interpret only the temporal edges. No wave-specific lagged estimates.",
+   "sample": "ABCD Data Release 4.0, baseline (2016-2018), Year 1 and Year 2 follow-ups (full cohort data collected until December 31, 2019), 21 U.S. sites. Analytic N = 8979 with complete screen time and CBCL data at all three waves; n = 2897 excluded for missing screen time or CBCL data (of 11,875 baseline participants). Table 1 (baseline): age 9.48 years (SD 0.51); 4574 male (50.90%), 4405 female (49.10%). Race: White 6144 (68.43%), Black 1014 (11.29%), Asian 52 (0.58%), Native American 196 (2.18%), Mixed 479 (5.33%), No Answer/Other 1094 (12.18%). Ethnicity: Hispanic 1707 (19.03%), not Hispanic 7160 (79.81%), no answer 104 (1.16%). Household income: <=$25,000 10.53%; $25,000-49,999 12.14%; $50,000-74,999 12.49%; $75,000-99,999 14.42%; $100,000-199,999 31.24%; >=$200,000 11.79%; no answer 7.39%. Parent 1 education: below high school 5.15%, HS/GED 8.68%, some college/associate 27.00%, bachelor 30.84%, postgraduate 28.21%. Limitations section notes excluded participants were more likely to be non-White and lower income.",
+   "iv": "Youth self-report ABCD Youth Screen Time Survey, typical hours per day on weekdays and weekends, 7-point scale recoded to hours: none (0), <30 min (0.25), 30 min (0.5), 1 h (1), 2 h (2), 3 h (3), 4+ h (4). Weighted daily average = [(weekday x 5) + (weekend x 2)]/7; Year 2 items were rephrased slightly and recoded for consistency. Continuous. Social media (SNS) is a single modality item (e.g., Instagram). Online chat is a composite the authors formed because of low engagement: texting + video chatting (e.g., FaceTime), so it is built exclusively from phone/SM items (FT-IC2 Step 2 met). Table 2 M (SD), hours/day: SNS baseline 0.09 (0.34), Year 1 0.18 (0.50), Year 2 0.41 (0.78); Chat baseline 0.31 (0.58), Year 1 0.49 (0.77), Year 2 0.60 (0.90). Variables showing significant trends (video, videogame, online chat, social media, irritability, co-occurring symptoms) were detrended before GVAR estimation. Because the model is bidirectional, social media and online chat are both predictors (wave t) and outcomes (wave t+1); the irritability-to-chat edge treats chat as the DV.",
+   "dv": "Irritability: mean of five parent-rated CBCL items (e.g., mood swings, temper tantrums) per the validated irritability measure of Cordova et al. (2022), each 0-2; Cronbach's alpha 0.806-0.810 across the three waves; treated as ordinal in the network analysis. Table 2 M (SD): baseline 0.30 (0.39), Year 1 0.29 (0.38), Year 2 0.28 (0.37). For the irritability-to-screen edges, the DV is next-wave online chat or social media hours/day (as described in the IV field).",
+   "covariates": [
+    {
+     "name": "CBCL DSM-5 ADHD scale",
+     "detail": "Parent-report; entered as a node in the network, so all screen-irritability edges are conditional on it (lagged and contemporaneous)."
+    },
+    {
+     "name": "CBCL DSM-5 Depression scale",
+     "detail": "Parent-report; network node; treated as ordinal; detrended."
+    },
+    {
+     "name": "CBCL DSM-5 Anxiety scale",
+     "detail": "Parent-report; network node; treated as ordinal; detrended."
+    },
+    {
+     "name": "TV/movie watching (hours/day)",
+     "detail": "Other screen node in the network; each edge is conditional on all other nodes at the previous wave."
+    },
+    {
+     "name": "Video watching/streaming, e.g., YouTube (hours/day)",
+     "detail": "Other screen node in the network; detrended."
+    },
+    {
+     "name": "Videogame playing (hours/day)",
+     "detail": "Other screen node in the network; detrended."
+    },
+    {
+     "name": "Autoregressive term",
+     "detail": "Each node's own value at the previous wave (GVAR temporal network controls for all variables at the previous timepoint)."
+    },
+    {
+     "name": "Sociodemographics",
+     "detail": "NOT included; authors state socio-demographic data were only assessed at baseline and could not be controlled in the temporal network (Limitations, p. 14)."
+    }
+   ],
+   "equation": "Panel GVAR (psychometrics::panelgvar): for person i and wave t, y[i,t] = mu_i + B*(y[i,t-1] - mu_i) + zeta[i,t], where y = {irritability, TV, video, videogame, social media, online chat, ADHD, depression, anxiety} (detrended where trends were significant). Focal temporal edges are elements of B, reported as partial correlations: B[irr <- SNS], B[irr <- chat], B[chat <- irr], B[SNS <- irr]. mu_i are person-level random means (between-person network); zeta covariance gives the contemporaneous network.",
+   "estimation": "R; psychometrics package panelgvar function; unweighted least squares estimator (because irritability and co-occurring symptoms were treated as ordinal). Variables with significant trends detrended to facilitate stationarity. Saturated model fit: CFI = 0.99, TLI = 0.98, RMSEA = 0.092. Pruned with the 'stepup' estimator at alpha = .05. 1000 bootstrap iterations; only edges with at least a 50% chance of replication in the bootstrapped model were retained (Table S1). No survey weights; no site or family clustering reported; no multiple-comparison correction beyond stepup pruning. Visualized with qgraph. Sex differences tested in a supplementary analysis (Figure S4; see M2). Unadjusted version (no ADHD/depression/anxiety nodes) in Figure S8. Edge CIs and p-values are not printed in the main text.",
+   "native_metric": "other:temporal network edge weight (lagged partial correlation)",
+   "iv_axis": [
+    {
+     "id": "sns_t",
+     "label": "Social media (wave t)",
+     "meta": "hours/day; baseline M = 0.09, SD = 0.34",
+     "sd_iv": null
+    },
+    {
+     "id": "chat_t",
+     "label": "Online chat: texting + video chat (wave t)",
+     "meta": "hours/day; baseline M = 0.31, SD = 0.58",
+     "sd_iv": null
+    },
+    {
+     "id": "irr_t",
+     "label": "Irritability (wave t)",
+     "meta": "CBCL 5-item mean, 0-2; baseline M = 0.30, SD = 0.39",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "irr_t1",
+     "label": "Irritability (wave t+1)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "chat_t1",
+     "label": "Online chat (wave t+1)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sns_t1",
+     "label": "Social media (wave t+1)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sns_t",
+     "dv": "irr_t1",
+     "value": 0.12,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
+     "note": "Social media predicted increased irritability over time. Retained after stepup pruning (alpha = .05) and >=50% bootstrap inclusion; no CI or p printed."
+    },
+    {
+     "iv": "chat_t",
+     "dv": "irr_t1",
+     "value": -0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
+     "note": "Online chat predicted decreased irritability over time. Sign reverses to positive in the unadjusted network (Discussion p. 11; Figure S8, values not printed)."
+    },
+    {
+     "iv": "irr_t",
+     "dv": "chat_t1",
+     "value": 0.03,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Results, Temporal Network, p. 9 (text); Figure 3; Table S2",
+     "note": "Irritability predicted increased time on online chat. Phone/SM is the DV for this edge."
+    },
+    {
+     "iv": "irr_t",
+     "dv": "sns_t1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Results, Temporal Network, p. 9 (not reported); Figure 3 / Table S2 not in PDF",
+     "note": "Not among the edges the text reports as retained; the Discussion describes social media as unidirectionally predicting irritability, implying this edge was pruned or unstable. Exact weight only in Table S2, which is not in the PDF."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Sex-comparison GVAR temporal network of irritability and screen activities (online chat to irritability edge by sex)",
+   "location_in_paper": "Supplementary Results, p. 10 (text); Figure S4 (supplement not included in the PDF); interpreted in Discussion p. 13.",
+   "design": "Same three-wave panel GVAR temporal network as M1, estimated separately for females and males with a test of sex differences in edge strength.",
+   "sample": "Same analytic sample as M1 split by sex: 4405 females and 4574 males (Table 1).",
+   "iv": "Online chat (texting + video chat), hours/day at wave t, as in M1. The text reports by-sex values only for the online chat, video streaming, and videogame edges to irritability; no by-sex social media edges are printed.",
+   "dv": "Irritability (CBCL 5-item mean) at wave t+1, as in M1.",
+   "covariates": [
+    {
+     "name": "(same nodes as M1)",
+     "detail": "Presumably the same network nodes as M1 (ADHD, depression, anxiety, other screen activities); the supplementary methods describing this model are not in the PDF."
+    }
+   ],
+   "equation": "Separate panel GVAR per sex: y[i,t] = mu_i + B_sex*(y[i,t-1] - mu_i) + zeta[i,t]; focal element B_sex[irr <- chat]; the p-value tests B_female[irr <- chat] = B_male[irr <- chat].",
+   "estimation": "As in M1 (R, psychometrics). The method for the sex-difference test is described only in the Supplement, which is not in the PDF. The single p-value refers to the female vs. male difference, not to either edge vs. zero.",
+   "native_metric": "other:temporal network edge weight (lagged partial correlation)",
+   "iv_axis": [
+    {
+     "id": "chat_t",
+     "label": "Online chat: texting + video chat (wave t)",
+     "meta": "hours/day",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "irr_t1_male",
+     "label": "Irritability (wave t+1), males",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "irr_t1_female",
+     "label": "Irritability (wave t+1), females",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "chat_t",
+     "dv": "irr_t1_male",
+     "value": 0.37,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.047,
+     "p_label": "p=.047",
+     "sig": true,
+     "location": "Supplementary Results p. 10; Figure S4",
+     "note": "Edge reported as stronger in males (0.37) than in females (0.14). p = .047 is for the sex difference. Positive sign contrasts with the pooled adjusted edge of -0.03 in M1 and the magnitude is much larger; check Figure S4."
+    },
+    {
+     "iv": "chat_t",
+     "dv": "irr_t1_female",
+     "value": 0.14,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.047,
+     "p_label": "p=.047",
+     "sig": true,
+     "location": "Supplementary Results p. 10; Figure S4",
+     "note": "Same sex-difference p-value as the male cell. Whether the female edge alone differs from zero is not stated."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Cross-sectional Gaussian graphical models (GGM), one per wave",
+   "location": "Results, Cross-sectional Networks, p. 9; Figure 1 (not in PDF); centrality in Figure 2",
+   "why": "The text says the only edge linked to irritability was video streaming (-0.03 at Year 2), so the social media-irritability and online chat-irritability partial correlations were regularized to zero or not printed. No numeric phone/SM edge is reported, and Figure 1 is not in the PDF. Video streaming is a non-phone modality."
+  },
+  {
+   "model": "Bivariate correlations of SNS/online chat with irritability",
+   "location": "Table 2 (pp. 23-24); Results, Descriptive Results, pp. 8-9",
+   "why": "Zero-order Pearson correlations reported as descriptive statistics with no adjustment; the authors anchor their claims to the GVAR. Values are printed (e.g., SNS_1 with IRR_2 = .03*, Chat with IRR = .01), but they are not the model the authors interpret."
+  },
+  {
+   "model": "TV, video streaming, and videogame edges in the temporal network",
+   "location": "Results p. 9; Figure 3",
+   "why": "Non-phone/non-SM modalities (TV to irritability = 0.03). They fail FT-IC2; they enter M1 only as conditioning nodes."
+  },
+  {
+   "model": "Video streaming and videogame to irritability edges by sex",
+   "location": "Supplementary Results p. 10; Figure S4",
+   "why": "Non-phone modalities (females 0.29 and 0.04; males zero)."
+  },
+  {
+   "model": "Temporal network with CBCL internalizing and externalizing problems",
+   "location": "Supplementary Results p. 10; Figure S6 (not in PDF); Discussion p. 14",
+   "why": "Online chat and social media are said to predict increases in both, but only a range is printed ('estimates ranging from 0.02 to 0.04') with no edge-specific values. Cannot assign values to cells without Figure S6."
+  },
+  {
+   "model": "Cross-sectional network with general psychopathology",
+   "location": "Supplementary Results p. 10; Figure S5 (not in PDF)",
+   "why": "No numeric values are printed in the main text."
+  },
+  {
+   "model": "Unadjusted cross-sectional and temporal networks (no ADHD/depression/anxiety nodes)",
+   "location": "Figures S7 and S8 (not in PDF); Discussion pp. 11-12",
+   "why": "Transparency models; the authors anchor on the adjusted network. Discussion states chat predicted increased irritability without covariates, but no values are printed."
+  },
+  {
+   "model": "Centrality indices (strength, closeness, betweenness) and bootstrap stability",
+   "location": "Figure 2; Figure S2; Results p. 9",
+   "why": "Node-level summaries, not phone/SM-to-outcome estimates."
+  },
+  {
+   "model": "Demographic-adjusted correlation check",
+   "location": "Results p. 9; Figure S1",
+   "why": "Concerns videogame-irritability correlations only; non-phone modality."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:temporal network edge weight (lagged partial correlation from panel GVAR)",
+  "conversion_formula": "None applied. Guidelines \u00a74a list network edge weights as non-convertible; display native metric alone with 'no common-scale d available'.",
+  "contrast_type": "Edge weight between detrended (and, for irritability/CBCL nodes, ordinal-treated) node at wave t and another node at wave t+1, conditional on all other nodes at wave t; not a per-unit or per-SD contrast.",
+  "transformable": false,
+  "notes": "Edge weights come from a regularized/pruned panel GVAR with ULS estimation on detrended variables, so they are not regression slopes on the raw hour scale and cannot be mapped to d with SD_IV/SD_DV. Descriptive SDs are available if a later level wants them (Table 2, pp. 23-24): SNS 0.34/0.50/0.78, Chat 0.58/0.77/0.90, irritability 0.39/0.38/0.37 at baseline/Year 1/Year 2. No CIs or p-values for edges are printed in the main text (bootstrap CIs are in Figure S2 / Tables S1-S2, not in the PDF). Paper goes to the later review level for non-convertible metrics."
+ },
+ "extraction_flags": "1) The PDF is a 24-page author manuscript with no figures and no supplement. Figures 1-3 and Tables S1-S2 (the exact edge weights and bootstrap CIs) are missing, so every edge value comes from the Results text on pp. 9-10. No CIs or p-values exist for M1 edges; sig=true is inferred from retention after stepup pruning (alpha=.05) plus at least 50% bootstrap inclusion. 2) I added an irritability-to-social-media cell with value null and sig=false, inferred because the text never reports that edge and the Discussion calls social media \"unidirectional.\" Please verify against Table S2/Figure 3. 3) M2 (sex comparison, Figure S4) gives online chat to irritability as 0.37 in males and 0.14 in females. Both are positive and much larger than the pooled adjusted -0.03, which may be an error in the paper or a different model (unadjusted?). The p=.047 tests the sex difference, not the edge vs. zero. Decide whether M2 should be kept as a primary model. 4) Online chat is a texting + video chat composite. It qualifies under FT-IC2 Step 2, but texting and video chat are never broken out separately. 5) The journal name is not printed in the PDF. I filled in Journal of Child and Adolescent Psychopharmacology from the DOI/ISSN prefix 1044-5463, so confirm it. 6) The cross-sectional GGM phone/SM edges are implied to be zero but not printed (excluded). The internalizing/externalizing temporal network (Figure S6) gives only a 0.02-0.04 range (excluded). 7) Edge weights cannot be converted to Cohen's d, so this paper goes to the later review level.json"
+}

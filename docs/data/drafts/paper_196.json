@@ -1,0 +1,675 @@
+{
+ "paper_id": "196",
+ "title": "Probing the digital exposome: associations of social media use patterns with youth mental health",
+ "doi": "10.1038/s44277-024-00006-9",
+ "year": "2024",
+ "authors": "Pagliaccio D, Tran KT, Visoki E, DiDomenico GE, Auerbach RP, Barzilay R",
+ "journal": "NPP - Digital Psychiatry and Neuroscience",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Exposome-wide association study (separate linear mixed-effects models) of BPM Total Problems T-score on each digital/social media exposure, adjusted for age, sex, race, and Hispanic ethnicity",
+   "location_in_paper": "Methods, Statistical analysis (ExWAS steps a-f, p. 3); Results 'ExWAS (training sample)' pp. 3-4; Fig. 2A (Manhattan plot) and Fig. 2B (forest plot of coefficients with 95% CI), p. 4; full coefficients in Supplementary Table S1 (not in PDF). Interpreted in Discussion pp. 6-7.",
+   "design": "Cross-sectional. Both exposures and outcome come from the ABCD 2-year follow-up visit (2019-2020, mean age about 12). One observation per child. Each of 41 retained digital exposures was entered as the sole exposure in its own LME model; there is no time structure and no exposure-by-time interaction. The ABCD sample was first split into matched training and testing subsamples (ABCD Reproducible Matched Samples); the ExWAS was run in the training subsample and its coefficients were used as weights to build the digital exposomic risk score applied in the testing subsample.",
+   "sample": "ABCD Data Release 4.0, participants who completed the 2-year follow-up including screentime and social media assessment (N = 10,147). ExWAS run in the training subsample, n = 5082 (testing subsample n = 5065). Training subsample (Table 1, p. 4): age M = 12.01 (SD 0.66); 2446 (48.13%) female; SGM identity 406 (7.99%); race White 3901 (76.76%), Black 985 (19.38%), American Indian/Alaska Native 169 (3.33%), Native Hawaiian or Pacific Islander 34 (0.67%), Asian 313 (6.16%), other 317 (6.24%), mixed 608 (11.96%); Hispanic ethnicity 1014 (19.95%); non-social screentime 24.88 (SD 13.97) hours/week. Missing exposure data were imputed with missForest separately within each subsample; outcome values were not imputed. The per-model analytic N for the ExWAS is not reported in the main text.",
+   "iv": "Each of 41 digital and social media exposure variables, one per model, drawn from the ABCD Cyber Bullying Questionnaire and the Youth and Parent Screen Time Surveys (youth and parent report). Of 52 candidate variables, 7 were dropped for <1% endorsement and 4 for collinearity (|r| > 0.9); extreme values on continuous variables (e.g., number of followers) were removed. Exposures span five domains: screentime (minutes/hours per day by weekend/weekday), parental monitoring of social media (e.g., parent suspects secret accounts), apps used (yes/no per platform, platform-specific screentime, most-used app), overuse/addictive patterns of use (e.g., 'I use social media apps so much that it has had a bad effect on my schoolwork or job'), and peer interaction (e.g., connectedness via phone). Exact coding and units per variable are in Supplementary Table S1 and the Supplement, not the main text. Of the 35 FDR-significant exposures, 31 are phone/SM-specific and are extracted here; cyberbullying and three video-game screentime items are not. No descriptive statistics for the exposures are given in the main text, apart from 48% reporting a public account and 16% reporting TikTok as most-used app.",
+   "dv": "Brief Problem Monitor (BPM) Total Problems T-score, youth self-report, age- and sex-normed; reflects internalizing, externalizing, and attentional problems. Measured at the 2-year follow-up. No descriptive statistics for BPM T-scores reported in the main text.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years at 2-year follow-up"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth"
+    },
+    {
+     "name": "Race",
+     "detail": "Two binary indicators: identifying as Black; identifying as White"
+    },
+    {
+     "name": "Hispanic ethnicity",
+     "detail": "Binary"
+    },
+    {
+     "name": "Family",
+     "detail": "Random intercept, nested within site"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "BPM_T[i] = b0 + b1*exposure_k[i] + b2*age + b3*sex + b4*Black + b5*White + b6*Hispanic + u_site + u_family(site) + e[i], estimated separately for each exposure k = 1..41",
+   "estimation": "R, lme4::lmer linear mixed-effects models with random intercepts for family nested within study site. Missing exposure data imputed with missForest (random forest) within each subsample. Collinear exposures (Pearson r > 0.9) removed with caret::findCorrelation. FDR correction across the 41 comparisons; exposures with FDR-corrected p < 0.05 and coefficient > 0 treated as risk factors, < 0 as protective; 35 of 41 survived. Sensitivity: ExWAS rerun with list-wise deletion instead of imputation yielded 31 significant variables (Table S1, not in PDF); per-variable sensitivity estimates not in main text. No interaction tests at the ExWAS level. No survey weights reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "secret_acct",
+     "label": "Secret social media accounts [9]",
+     "meta": "youth report; has SM account(s) secret from parents",
+     "sd_iv": null
+    },
+    {
+     "id": "public_acct",
+     "label": "Public social media account [38]",
+     "meta": "youth report; public vs private account on most-used platform; 48% public",
+     "sd_iv": null
+    },
+    {
+     "id": "st_tumblr",
+     "label": "Screentime Tumblr [18]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "parent_secret",
+     "label": "Parent suspects secret account [11]",
+     "meta": "parent report",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_school",
+     "label": "Social media affects school [33]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_forget",
+     "label": "Social media to forget [30]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_need",
+     "label": "Need for social media [29]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_upset",
+     "label": "Upset to stop social media [32]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_lessen",
+     "label": "Can't lessen social media [31]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "st_youtube",
+     "label": "Screentime YouTube [16]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_thinks",
+     "label": "Thinks about social media [28]",
+     "meta": "addictive-use item",
+     "sd_iv": null
+    },
+    {
+     "id": "st_twitter",
+     "label": "Screentime Twitter [15]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "st_reddit",
+     "label": "Screentime Reddit [19]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "night_phone",
+     "label": "Night awakening for phone [36]",
+     "meta": "overuse item",
+     "sd_iv": null
+    },
+    {
+     "id": "st_tiktok",
+     "label": "Screentime TikTok [21]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "st_other_apps",
+     "label": "Screentime other apps [22]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_time",
+     "label": "Social media time [8]",
+     "meta": "general SM screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "phone_connect",
+     "label": "Connectedness via phone [39]",
+     "meta": "peer-interaction item",
+     "sd_iv": null
+    },
+    {
+     "id": "st_facebook",
+     "label": "Screentime Facebook [12]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "night_sm",
+     "label": "Night social media use [34]",
+     "meta": "overuse item",
+     "sd_iv": null
+    },
+    {
+     "id": "st_sm_weekend",
+     "label": "Screentime social media weekend [6]",
+     "meta": "Youth Screen Time Survey",
+     "sd_iv": null
+    },
+    {
+     "id": "top_tiktok",
+     "label": "Top app TikTok [27]",
+     "meta": "most-used app is TikTok (16% of youth)",
+     "sd_iv": null
+    },
+    {
+     "id": "st_snapchat",
+     "label": "Screentime Snapchat [14]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "following",
+     "label": "Following count [41]",
+     "meta": "number of accounts followed",
+     "sd_iv": null
+    },
+    {
+     "id": "st_text_wkday",
+     "label": "Screentime texting weekday [2]",
+     "meta": "Youth Screen Time Survey",
+     "sd_iv": null
+    },
+    {
+     "id": "st_text_wkend",
+     "label": "Screentime texting weekend [5]",
+     "meta": "Youth Screen Time Survey",
+     "sd_iv": null
+    },
+    {
+     "id": "st_instagram",
+     "label": "Screentime Instagram [13]",
+     "meta": "app-specific screentime",
+     "sd_iv": null
+    },
+    {
+     "id": "night_chat",
+     "label": "Night chatroom use [35]",
+     "meta": "overuse item; platform not specified in main text",
+     "sd_iv": null
+    },
+    {
+     "id": "followers",
+     "label": "Follower count [40]",
+     "meta": "number of followers",
+     "sd_iv": null
+    },
+    {
+     "id": "st_vc_wkend",
+     "label": "Screentime videochat weekend [7]",
+     "meta": "Youth Screen Time Survey",
+     "sd_iv": null
+    },
+    {
+     "id": "st_vc_wkday",
+     "label": "Screentime videochat weekday [3]",
+     "meta": "Youth Screen Time Survey",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bpm_total",
+     "label": "BPM Total Problems T-score",
+     "sd_dv": 10,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "secret_acct",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "public_acct",
+     "dv": "bpm_total",
+     "B": 2.13,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Discussion p. 6 (text); Fig. 2B (p. 4); Supplementary Table S1",
+     "note": "Text: public (vs private) account associated with 'estimate = 2.13 T-score points higher on the BPM on average'. CI not printed in text (shown only graphically in Fig. 2B). Binary exposure, so B is an adjusted mean difference in BPM T-score points."
+    },
+    {
+     "iv": "st_tumblr",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "parent_secret",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_school",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_forget",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_need",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_upset",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_lessen",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_youtube",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_thinks",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_twitter",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_reddit",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "night_phone",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_tiktok",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_other_apps",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "sm_time",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "phone_connect",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_facebook",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "night_sm",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_sm_weekend",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "top_tiktok",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_snapchat",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "following",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_text_wkday",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_text_wkend",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_instagram",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "night_chat",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "followers",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_vc_wkend",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    },
+    {
+     "iv": "st_vc_wkday",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "FDR-corrected p < 0.05",
+     "sig": true,
+     "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score)."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "ExWAS LME for Cyberbullied [37]",
+   "location": "Fig. 2B (p. 4); Discussion p. 6 (estimate = 3.57); Table S1",
+   "why": "Cyberbullying alone is not a qualifying phone/SM variable under FT-IC2 clarification 3."
+  },
+  {
+   "model": "ExWAS LME for video-game screentime items: Screentime Video Games [20], Screentime Multiplayer Video Games Weekend [4], Screentime Video Games Weekday [1]",
+   "location": "Fig. 2B (p. 4); Table S1",
+   "why": "Generic gaming without explicit mobile/phone modality does not qualify (FT-IC2 clarification 2). Item [20] sits in the 'App type' domain in Fig. 2A, so it may be app-based gaming; coders should check Table S1."
+  },
+  {
+   "model": "ExWAS LME for the 6 non-significant exposures (numbers 10, 17, 23, 24, 25, 26 in Table S1)",
+   "location": "Supplementary Table S1 only",
+   "why": "Not plotted in Fig. 2B and not named in the main text; labels, estimates and CIs exist only in the unavailable supplement. Some are probably phone/SM-specific and would be null-result cells for M1 if the supplement is obtained."
+  },
+  {
+   "model": "Digital exposomic risk score validation LMEs (Models 1-4), BPM T-score on exposomic score",
+   "location": "Table 2 (Model-4, p. 5); Table S2; Fig. S2; Results p. 4",
+   "why": "The exposomic score is a weighted composite of all 35 significant ExWAS exposures, including cyberbullying and three video-game screentime items, so it is not exclusively phone/SM (FT-IC2 Step 2). Phone/SM items are not broken out within these models. Model-4: estimate = 1.78, 95% CI 1.58-1.98, t = 17.41, p < 0.001, n = 4004."
+  },
+  {
+   "model": "Logistic regression of lifetime suicide attempt on exposomic score",
+   "location": "Table S3; Results pp. 4-6",
+   "why": "Same mixed composite IV. OR = 1.76 [1.39-2.23] with demographics and non-social screentime; OR = 2.76 [1.88-4.05] in final model."
+  },
+  {
+   "model": "Disparity analyses of exposomic score by race/ethnicity, sex, SGM (Kruskal-Wallis, Mann-Whitney) and exposomic score x group interaction LMEs",
+   "location": "Fig. 3A-F (p. 5); Results p. 6",
+   "why": "Composite IV; group comparisons have only demographic variables on the other side."
+  },
+  {
+   "model": "Sensitivity analyses of exposomic score (outliers retained, excluding youth without a smartphone or not using social media, list-wise deletion, BPM Internalizing and CBCL Total outcomes, E-value logistic on top-10% BPM)",
+   "location": "Tables S4-S8; Results p. 6",
+   "why": "All use the mixed composite score. The no-smartphone/no-SM exclusion is a sample restriction, not a phone ownership estimate."
+  },
+  {
+   "model": "Non-social screentime covariate",
+   "location": "Table 2",
+   "why": "Non-phone composite (13 screen-time items) entered as covariate only."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized LME coefficient, BPM T-score points per unit of exposure)",
+  "conversion_formula": "Binary exposures: d = B / SD_DV (adjusted mean difference over SD 10). Continuous exposures: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1).",
+  "contrast_type": "Per one unit of each exposure as coded in Table S1: yes vs no for binary items (e.g., public vs private account), per unit of time or count for continuous items. Units are not given in the main text.",
+  "transformable": "partial",
+  "notes": "SD_DV = 10 by construction for BPM T-scores (normed), but BPM T-scores are floor-truncated in community samples so the observed SD may differ; the paper reports no BPM descriptives. SD_IV is not reported for any exposure in the main text, and exposure units/coding are only in the Supplement. Only one qualifying coefficient is printed as a number in the main text (public social media account, B = 2.13, Discussion p. 6, no CI); this is binary, so d is computable with SD_DV = 10. All other 30 qualifying coefficients and all CIs are in Fig. 2B (graphic only) and Supplementary Table S1, which is not in the PDF. With Table S1, the binary items become convertible; continuous items still need SD_IV."
+ },
+ "extraction_flags": "1. Missing supplement. The PDF is the 10-page main article only. All per-exposure ExWAS coefficients and CIs are in Supplementary Table S1, which was not available. In the main text they appear only as a forest plot (Fig. 2B). The only qualifying number printed in the text is public (vs private) social media account, B = 2.13 (Discussion p. 6), with no CI. The other 30 qualifying cells are B = null on purpose: I did not read values off the plot. To fill them, get Table S1 from the online supplement at 10.1038/s44277-024-00006-9.\n\n2. Sample label conflict. The Methods and Results headings say the ExWAS ran in the training subsample (n = 5082). The Fig. 2 caption says \"testing subsample\". I followed the Methods; please check.\n\n3. Units and coding of exposures are not given in the main text. SD_IV and per-model N are not reported. SD_DV is set to 10 because BPM scores are normed T-scores, but BPM T-scores are floor-truncated, so the observed SD may differ.\n\n4. Six non-significant exposures (Table S1 numbers 10, 17, 23, 24, 25, 26) are not named in the main text. Some are probably phone/SM null results and should be added once Table S1 is available.\n\n5. Eligibility calls a coder should check:\n- Included: \"Night chatroom use\" (platform not specified), \"Connectedness via phone\", \"Parent suspects secret account\" (parent report) and \"Follower/Following count\".\n- Excluded as gaming: \"Screentime Video Games [20]\", although Fig. 2A puts it in the App-type domain, so it may be app-based.\n- Excluded: cyberbullying, per FT-IC2 clarification 3.\n- Excluded: the headline exposomic risk score (Table 2, and the suicide-attempt ORs in Table S3). It is a weighted composite that includes cyberbullying and video-game items, so it fails FT-IC2 Step 2.\n\n6. Spot-checked against the page images: Table 1 training demographics, Table 2 Model-4 (1.78, 1.58-1.98, t = 17.41, n = 4004), the text values 2.13 and 3.57, and the suicide ORs 1.76 [1.39-2.23] and 2.76 [1.88-4.05]."
+}

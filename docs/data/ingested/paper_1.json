@@ -1,0 +1,306 @@
+{
+ "paper_id": "1",
+ "title": "Social Media Use Trajectories and Cognitive Performance in Adolescents",
+ "doi": "10.1001/jama.2025.16613",
+ "year": "2025",
+ "authors": "Nagata JM, Wong JH, Kim KE, Richardson RA, Nayak S, Potes C, Rauschecker AM, Scheffler A, Sugrue LP, Baker FC, Testa A",
+ "journal": "JAMA (Research Letter)",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted multiple linear regression of year-2 NIH Toolbox cognition scores on social media time trajectory group (low increasing and high increasing vs no or very low use), adjusted for baseline cognitive score, other screen time, and sociodemographic and psychiatric covariates",
+   "location_in_paper": "Table, bottom panel 'Difference in mean (95% CI)' (p. 1949); results text p. 1948; interpreted in Discussion p. 1948. Trajectory derivation described in eMethods in Supplement 1 (not bundled in this PDF).",
+   "design": "Prospective longitudinal design using three ABCD time points: baseline (2016-2018, ages 9-10), year 1 (2017-2019) and year 2 (2018-2020). Social media time (hours per day) from baseline to year 2 was summarized into trajectory groups with group-based trajectory modeling; the Figure plots trajectories over ages 9 to 13 years. Trajectory group is the IV; cognitive performance at year 2 is the DV (one score per child, not repeated measures), with the respective baseline cognitive score entered as a covariate. Note that the IV window (baseline to year 2) overlaps the DV time point (year 2), so the exposure is not strictly prior to the outcome. No interaction or stratified analyses are reported.",
+   "sample": "ABCD Study, release not stated in the letter. Analytic N = 6554 adolescents; 51.1% male and 48.9% female. Baseline ages 9-10 years. Exclusion criteria and race/ethnicity breakdown are not reported in the letter (possibly in Supplement 1, which is not in this PDF). Trajectory group sizes: no or very low social media use 57.6%, low increasing 36.6%, high increasing 5.8%.",
+   "iv": "Social media time trajectory group, a 3-level categorical variable derived by group-based trajectory modeling of youth-reported social media time (hours per day) from baseline to year 2. Groups: no or very low social media use (57.6%, +0.3 h/d by age 13 years; reference), low increasing social media use (36.6%, +1.3 h/d), high increasing social media use (5.8%, +3.0 h/d). Entered as two indicator variables against the reference group, so each estimate is an adjusted mean difference between a trajectory group and the no or very low use group. The underlying social media time item and GBTM specification are described only in eMethods (Supplement 1).",
+   "dv": "Year-2 NIH Toolbox Cognition Battery scores, run as six separate outcomes: Flanker test, Oral Reading Recognition Test (ORRT), Picture Sequence Memory Test (PSMT), Pattern Comparison Processing Speed, Picture Vocabulary Test (PVT), and total composite score. Score type (uncorrected vs age-corrected standard scores) is not stated; the Discussion refers to an NIH Toolbox standard deviation of 15. Unadjusted weighted means (SD) for the reference group (no or very low use): Flanker 97.6 (14.2), ORRT 103.5 (16.9), PSMT 108.2 (16.2), Pattern comparison 108.3 (20.8), PVT 106.3 (15.6), Total composite 104.8 (10.6). Low increasing group: 95.4 (14.0), 99.4 (15.9), 104.7 (16.5), 107.8 (20.7), 99.6 (14.6), 101.4 (10.4). High increasing group: 94.3 (14.6), 96.7 (14.1), 100.3 (16.1), 106.9 (21.3), 94.8 (14.4), 98.6 (10.4). No whole-sample SD is reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline; coding not reported"
+    },
+    {
+     "name": "Sex",
+     "detail": "Baseline; coding not reported"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Baseline; categories not reported"
+    },
+    {
+     "name": "Household income",
+     "detail": "Baseline; coding not reported"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Baseline; coding not reported"
+    },
+    {
+     "name": "Attention-deficit/hyperactivity symptoms",
+     "detail": "Baseline; instrument not reported in the letter"
+    },
+    {
+     "name": "Depression symptoms",
+     "detail": "Baseline; instrument not reported in the letter"
+    },
+    {
+     "name": "Respective baseline cognitive score",
+     "detail": "Baseline score on the same NIH Toolbox measure as the outcome"
+    },
+    {
+     "name": "Other screen time",
+     "detail": "Baseline; components not specified in the letter"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as a covariate ('site location'); not described as a random effect"
+    }
+   ],
+   "equation": "Cog_DV_Y2[i] = b0 + b1*LowIncreasing[i] + b2*HighIncreasing[i] + b3*Cog_DV_baseline[i] + b4*age + b5*sex + b6..*race_ethnicity + b*income + b*parent_ed + b*ADHD_symptoms + b*depression_symptoms + b*other_screen_time + b*site + e[i]; reference = no or very low social media use trajectory; weighted to ACS, robust SEs",
+   "estimation": "Multiple linear regression with robust standard errors, one model per cognitive outcome (6 outcomes). Software not reported in the letter. Sampling weights based on the American Community Survey (US Census) applied. Site entered as a covariate; no random effects described. Trajectory groups estimated beforehand with group-based trajectory modeling (details in eMethods, Supplement 1). Alpha not stated (P < .05 treated as significant in text). No multiple-comparison correction reported. No interaction tests, stratified models or sensitivity analyses reported in the letter.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "low_inc",
+     "label": "Low increasing SM trajectory vs no/very low",
+     "meta": "36.6% of sample; +1.3 h/d by age 13",
+     "sd_iv": null
+    },
+    {
+     "id": "high_inc",
+     "label": "High increasing SM trajectory vs no/very low",
+     "meta": "5.8% of sample; +3.0 h/d by age 13",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "flanker",
+     "label": "Flanker test",
+     "sd_dv": 14.2,
+     "p0": null
+    },
+    {
+     "id": "orrt",
+     "label": "Oral reading recognition",
+     "sd_dv": 16.9,
+     "p0": null
+    },
+    {
+     "id": "psmt",
+     "label": "Picture sequence memory",
+     "sd_dv": 16.2,
+     "p0": null
+    },
+    {
+     "id": "pattern",
+     "label": "Pattern comparison processing speed",
+     "sd_dv": 20.8,
+     "p0": null
+    },
+    {
+     "id": "pvt",
+     "label": "Picture vocabulary",
+     "sd_dv": 15.6,
+     "p0": null
+    },
+    {
+     "id": "composite",
+     "label": "Total composite score",
+     "sd_dv": 10.6,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "low_inc",
+     "dv": "flanker",
+     "B": -0.67,
+     "B_lo": -1.45,
+     "B_hi": 0.11,
+     "p": 0.09,
+     "p_label": ".09",
+     "sig": false,
+     "location": "Table, Difference in mean panel, Flanker test row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "orrt",
+     "B": -1.39,
+     "B_lo": -2.1,
+     "B_hi": -0.68,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Oral reading recognition row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "psmt",
+     "B": -2.03,
+     "B_lo": -2.91,
+     "B_hi": -1.15,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Picture sequence memory row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "pattern",
+     "B": 0.65,
+     "B_lo": -0.48,
+     "B_hi": 1.78,
+     "p": 0.26,
+     "p_label": ".26",
+     "sig": false,
+     "location": "Table, Difference in mean panel, Pattern comparison processing speed row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "pvt",
+     "B": -2.09,
+     "B_lo": -2.78,
+     "B_hi": -1.41,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Picture vocabulary row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "composite",
+     "B": -0.85,
+     "B_lo": -1.3,
+     "B_hi": -0.4,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Total composite score row, Low increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "flanker",
+     "B": -0.9,
+     "B_lo": -2.72,
+     "B_hi": 0.92,
+     "p": 0.33,
+     "p_label": ".33",
+     "sig": false,
+     "location": "Table, Difference in mean panel, Flanker test row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "orrt",
+     "B": -1.68,
+     "B_lo": -3.08,
+     "B_hi": -0.28,
+     "p": 0.02,
+     "p_label": ".02",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Oral reading recognition row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "psmt",
+     "B": -4.51,
+     "B_lo": -6.48,
+     "B_hi": -2.54,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Picture sequence memory row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "pattern",
+     "B": 1.61,
+     "B_lo": -0.75,
+     "B_hi": 3.98,
+     "p": 0.18,
+     "p_label": ".18",
+     "sig": false,
+     "location": "Table, Difference in mean panel, Pattern comparison processing speed row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "pvt",
+     "B": -3.85,
+     "B_lo": -5.34,
+     "B_hi": -2.37,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Picture vocabulary row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "composite",
+     "B": -1.76,
+     "B_lo": -2.72,
+     "B_hi": -0.81,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table, Difference in mean panel, Total composite score row, High increasing column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Group-based trajectory model of social media time (baseline to year 2)",
+   "location": "Methods p. 1948; Figure p. 1948; eMethods in Supplement 1 (not in this PDF)",
+   "why": "Measurement step that derives the IV (trajectory classes); it pairs social media time only with age/time, not with an individual-trait outcome, and produces no phone/SM-trait estimate."
+  },
+  {
+   "model": "Unadjusted weighted means (SD) by trajectory group",
+   "location": "Table, top panel (p. 1949)",
+   "why": "Descriptive group means with no inferential test; used here only as the source of SD_DV. The authors anchor claims to the adjusted mean differences."
+  },
+  {
+   "model": "Adjusted means (95% CI) by trajectory group",
+   "location": "Table, middle panel (p. 1949)",
+   "why": "Model-predicted group means from the same regression as M1; the contrasts against the reference group are already captured by the Difference in mean estimates."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (adjusted mean difference vs reference trajectory group)",
+  "conversion_formula": "Dichotomous (group-contrast) IV on continuous DV: d = (M_group - M_reference) / SD_pooled, using the adjusted mean difference B as the numerator and SD_DV as the denominator; CI endpoints converted the same way (d_lo = B_lo / SD_DV, d_hi = B_hi / SD_DV).",
+  "contrast_type": "Trajectory group vs no or very low social media use trajectory group (low increasing vs reference; high increasing vs reference), adjusted mean difference in year-2 NIH Toolbox score points",
+  "transformable": true,
+  "notes": "No whole-sample or pooled SD of the cognitive outcomes is reported. sd_dv is set to the unadjusted weighted SD of the reference group (no or very low use) from the Table top panel (p. 1949): Flanker 14.2, ORRT 16.9, PSMT 16.2, Pattern comparison 20.8, PVT 15.6, Total composite 10.6. Comparison-group SDs are similar (low increasing: 14.0, 15.9, 16.5, 20.7, 14.6, 10.4; high increasing: 14.6, 14.1, 16.1, 21.3, 14.4, 10.4), so a pooled SD would differ little; coders may instead compute a pooled SD from the two groups' SDs and their shares (57.6%, 36.6%, 5.8% of N = 6554, weighted), or use the normative NIH Toolbox SD of 15 that the authors cite in the Discussion. sd_iv is not applicable (categorical IV). The resulting d is a group contrast, not a per-1-SD or per-hour effect, so it is not directly comparable to continuous-IV d values from other papers. Outcome score type (uncorrected vs age-corrected) is not stated in the letter."
+ },
+ "extraction_flags": "This paper is a 2-page JAMA Research Letter.What was extracted: one model, M1. It is a weighted multiple linear regression with robust standard errors, comparing 2 social media trajectory groups (low increasing and high increasing) against the no-or-very-low-use reference group, across 6 NIH Toolbox outcomes at year 2. That gives 12 estimates, all copied from the Table on p. 1949. I checked every value against the PDF text layer and they all match.\n\nThings a human should verify:\n1. Supplement missing. Supplement 1 (eMethods: how the trajectory model was built, the social media item, exclusions, ABCD release, race breakdown) is not in the PDF. Those fields are marked \"not reported in the letter.\"\n2. sd_dv is my choice, not the paper's. The paper gives no whole-sample or pooled SD. I used the reference group's unadjusted weighted SD from the Table. Coders may prefer a pooled SD or the normed SD of 15 the authors cite. All group SDs are recorded in the notes.\n3. IV and DV overlap in time. Trajectories cover baseline to year 2 (the Figure shows ages 9-13), and the outcome is measured at year 2. So the exposure is not strictly before the outcome.\n4. Exact p-values missing for some cells. Cells printed as \"<.001\" have p set to null, with the printed label kept in p_label.\n5. d is a group contrast. It compares groups rather than measuring per hour or per SD, so it is not directly comparable to estimates from continuous-IV papers.\n6. Covariate details are thin. Site is entered as a covariate, not a random effect. \"Other screen time\" components and the score type (uncorrected vs age-corrected) are not specified."
+}

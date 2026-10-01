@@ -1,0 +1,527 @@
+{
+ "paper_id": "190",
+ "title": "The impact of digital media on children's intelligence while controlling for genetic differences in cognition and socioeconomic background",
+ "doi": "10.1038/s41598-022-11341-2",
+ "year": "2022",
+ "authors": "Sauce B, Liebherr M, Judd N, Klingberg T",
+ "journal": "Scientific Reports",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Strong measurement-invariant latent change score SEM of baseline intelligence and 2-year change in intelligence on Socializing screen time (texting + social networking + video chat), adjusted for Watching, Gaming, cogPGS and SES",
+   "location_in_paper": "Results, 'Latent change score models with cogPGS, SES, and screen time types' (p. 3); Figure 1 path diagram (p. 4); abstract (p. 1); interpreted in Discussion 'Baseline association with screen time' and opening paragraph (p. 6).",
+   "design": "Longitudinal two-wave design. Screen time (Watching, Socializing, Gaming), cogPGS and SES are exogenous variables measured at baseline (ages 9-10). Intelligence is a latent factor measured at baseline and at the 2-year follow-up (ages 11-12) from the same five cognitive tasks with loadings and intercepts constrained equal across waves (strong invariance). The model estimates two outcomes simultaneously: the baseline latent intelligence (a cross-sectional association with baseline Socializing) and the latent change in intelligence from baseline to 2-year follow-up (a prospective association, with baseline intelligence also predicting change). Screen time is measured only at baseline; no repeated measurement of the IV and no time x IV interaction.",
+   "sample": "ABCD Release 3.0. Baseline N = 9855 (M age = 9.90 years, SD = 0.62; 4686 females); 2-year follow-up N = 5374 (M age = 11.92, SD = 0.63; 2512 females) per Methods p. 8, but the Introduction (p. 2) says 5169 were followed up; the smaller follow-up N reflects the partial release, and missing follow-up data are handled by FIML. Inclusion required demographics (age, gender, SES), cognitive tasks, SNP genotypes and screen time. One participant per family retained at random (siblings/twins dropped). Children missing more than one of the three SES components excluded (n = 45). Race/ethnicity breakdown not reported; authors state the sample is representative of the U.S. on sex, race, ethnicity, SES and urbanicity.",
+   "iv": "Socializing screen time at baseline: mean of the youth-reported weekday and weekend daily time on three items of the ABCD Youth Screen Time Survey, (4) text on a cell phone, tablet or computer, (5) visit social networking sites (Facebook, Twitter, Instagram), and (6) video chat (Skype, Facetime). Response scale none, <30 min, 30 min, 1 h, 2 h, 3 h, >4 h. Units are hours, but the variable entered the SEM as a standardized residual after regression on age, site and 20 genetic PCs, so coefficients are in SD units. Raw means reported only by sex: boys 0.47 (SE = 0.02), girls 0.65 (SE = 0.02) (p. 4). No overall SD reported. Watching (TV shows/movies + videos e.g. YouTube) and Gaming (video games on any device) are entered simultaneously as competing exogenous predictors.",
+   "dv": "Latent general intelligence factor from five cognitive tasks (NIH Toolbox Picture Vocabulary, Flanker, Oral Reading Recognition; Rey Auditory Verbal Learning Test; Little Man Task), each residualized for age, site and 20 genetic PCs. Two latent DVs: baseline intelligence (ages 9-10) and latent change in intelligence from baseline to 2-year follow-up (ages 11-12). Standardized loadings at baseline: Vocab 0.63, Flanker 0.28, Reading 0.70, RAVLT 0.41, LMT 0.36 (Fig. 1). Latent intelligence increased by beta = 0.24 (p < 0.001; 3.64 IQ points) over two years. Also reported in Figure 1: the covariance of Socializing with cogPGS (a genetic, individual-trait variable).",
+   "covariates": [
+    {
+     "name": "Watching screen time",
+     "detail": "Baseline TV/movies + online videos (items 1 + 2); simultaneous exogenous predictor"
+    },
+    {
+     "name": "Gaming screen time",
+     "detail": "Baseline video games on computer, console, phone or other device (item 3); simultaneous exogenous predictor"
+    },
+    {
+     "name": "cogPGS",
+     "detail": "Polygenic score for cognitive performance (PRSice-2, 5255 SNPs, MTAG of cognitive performance/educational attainment/math GWAS), standardized"
+    },
+    {
+     "name": "SES",
+     "detail": "First component of probabilistic PCA of household income, parental education and neighborhood area deprivation index; standardized"
+    },
+    {
+     "name": "Baseline intelligence",
+     "detail": "Associated with latent change in intelligence (-0.05, n.s.); drawn as a covariance in Figure 1"
+    },
+    {
+     "name": "Age",
+     "detail": "Residualized out of every variable before modeling (age at baseline and at follow-up)"
+    },
+    {
+     "name": "Study site",
+     "detail": "Residualized out of every variable before modeling"
+    },
+    {
+     "name": "20 genetic principal components",
+     "detail": "Residualized out of every variable to correct for population stratification"
+    }
+   ],
+   "equation": "Measurement: Task_k,t = lambda_k * INT_t + tau_k + e_k,t (k = 5 tasks, t = baseline, follow-up; lambda and tau equal across t; residual covariances of same task across waves). Change: INT_follow-up = 1*INT_baseline + 1*dINT. Structural: INT_baseline = a1*Watching + a2*Socializing + a3*Gaming + a4*cogPGS + a5*SES + z1; dINT = b1*Watching + b2*Socializing + b3*Gaming + b4*cogPGS + b5*SES + z2; exogenous covariances among Watching, Socializing, Gaming, cogPGS, SES; residual covariance between INT_baseline and dINT (-0.05, n.s.; drawn as a double-headed arrow in Fig. 1, although the gender section describes it as an effect of baseline intelligence on change). All observed variables are residuals from regressions on age, site and 20 genetic PCs. Focal: a2 and b2.",
+   "estimation": "R 4.0.3, lavaan 0.6-9 (also semTools). Full-information maximum likelihood with robust ML (Yuan-Bentler scaled test statistic). Fit: RMSEA = 0.023, CFI = 0.975. Covariates handled by prior residualization (Frisch-Waugh-Lovell argument) rather than in the SEM. No random effects; one child per family. No survey weights. No multiple-comparison correction stated for SEM paths; alpha 0.05 implied. Standardized betas reported, no CIs or SEs. Gender moderation tested by multigroup SEM (free vs constrained, chi-square difference = 1093, p < 0.001) with planned contrasts: Socializing -> baseline intelligence not different by gender (chi-square difference = 0.84, p = 0.357); Socializing -> change not different (chi-square difference = 0.94, p = 0.331); gender-specific Socializing betas not reported. Post hoc sensitivity analyses (SES replaced by parental education; Watching split into TV vs online video) did not report Socializing estimates. Separate Socializing-only models are said to be in the Supplementary Information (not in this PDF).",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "socializing",
+     "label": "Socializing (texting + social networking + video chat)",
+     "meta": "Baseline hours/day, standardized residual; boys M = 0.47, girls M = 0.65",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "int_baseline",
+     "label": "Intelligence at baseline (latent)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "int_change",
+     "label": "Change in intelligence, baseline to 2-year follow-up (latent)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cogpgs_cov",
+     "label": "cogPGS (covariance with Socializing)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "socializing",
+     "dv": "int_baseline",
+     "beta": -0.1,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results p. 3; Figure 1 (p. 4); abstract",
+     "note": "Abstract reports this as r = -0.10. No CI or SE reported. p is an upper bound.",
+     "derived_d": -0.201,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "socializing",
+     "dv": "int_change",
+     "beta": -0.07,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.22,
+     "p_label": "0.220",
+     "sig": false,
+     "location": "Results p. 3; Figure 1 (p. 4)",
+     "note": "Marked n.s. in Figure 1. No CI or SE reported.",
+     "derived_d": -0.1403,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "socializing",
+     "dv": "cogpgs_cov",
+     "beta": -0.04,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1 (p. 4), curved arrow cogPGS <-> Screen Time",
+     "note": "Standardized exogenous covariance (non-directional), read from the figure label; no p printed. Treated as significant because Figure 1 marks non-significant values with 'n.s.' and this one is not marked; text p. 3 says all screen time types were negatively associated with cogPGS and SES.",
+     "derived_d": -0.0801,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Pairwise Pearson correlations of baseline Socializing screen time with cognitive tasks, cogPGS and lack of perseverance (Holm-corrected)",
+   "location_in_paper": "Table 1 (correlation heatmap, p. 3); referenced in Results p. 2 and Discussion p. 8.",
+   "design": "Cross-sectional, ABCD baseline (ages 9-10). Bivariate correlations; IV and DV measured at the same visit.",
+   "sample": "ABCD Release 3.0 baseline sample, N = 9855 (M age = 9.90, SD = 0.62; 4686 females), one child per family. The N per correlation is not printed in Table 1.",
+   "iv": "Socializing screen time at baseline (texting + social networking sites + video chat; mean of weekday and weekend hours), as in M1. Per the Methods (p. 10), all variables were residualized for age, site and 20 genetic PCs before all analyses; Table 1 caption does not state whether these correlations use the residualized values.",
+   "dv": "Each of the five baseline cognitive tasks (Picture Vocabulary, Flanker, Oral Reading Recognition, RAVLT total recall across five trials, Little Man Task percent correct), the cognitive polygenic score (cogPGS), and lack of perseverance (4-item UPPS-P Youth subscale, 1-4 scale).",
+   "covariates": [
+    {
+     "name": "None in the correlation",
+     "detail": "Bivariate Pearson r; variables possibly pre-residualized for age, site and 20 genetic PCs (see iv note)"
+    }
+   ],
+   "equation": "r = cor(Socializing, Y) for each Y in {Picture Vocabulary, Flanker, Reading, RAVLT, LMT, cogPGS, lack of perseverance}.",
+   "estimation": "R 4.0.3. Pearson correlations with Holm correction for multiple comparisons across the full matrix. Non-significant correlations are crossed out; all others are significant at p < 0.05 or lower. Exact p-values and CIs not reported.",
+   "native_metric": "r",
+   "iv_axis": [
+    {
+     "id": "socializing",
+     "label": "Socializing (texting + social networking + video chat)",
+     "meta": "Baseline hours/day",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "picture",
+     "label": "Picture Vocabulary",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "flanker",
+     "label": "Flanker",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "reading",
+     "label": "Oral Reading Recognition",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ravlt",
+     "label": "RAVLT",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "lmt",
+     "label": "Little Man Task",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cogpgs",
+     "label": "cogPGS",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "lack_persev",
+     "label": "Lack of perseverance",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "socializing",
+     "dv": "picture",
+     "r": -0.19,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, Picture row x Socializing column",
+     "derived_d": -0.3871,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "flanker",
+     "r": -0.07,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, Flanker row x Socializing column",
+     "derived_d": -0.1403,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "reading",
+     "r": -0.13,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, Reading row x Socializing column",
+     "derived_d": -0.2622,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "ravlt",
+     "r": -0.12,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, RAVLT row x Socializing column",
+     "derived_d": -0.2417,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "lmt",
+     "r": -0.09,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, LMT row x Socializing column",
+     "derived_d": -0.1807,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "cogpgs",
+     "r": -0.17,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "<0.05 (Holm)",
+     "sig": true,
+     "location": "Table 1, cogPGS row x Socializing column",
+     "derived_d": -0.345,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "lack_persev",
+     "r": -0.01,
+     "r_lo": null,
+     "r_hi": null,
+     "p": null,
+     "p_label": "n.s. (crossed out)",
+     "sig": false,
+     "location": "Table 1, Lack Persev row x Socializing column",
+     "note": "Crossed out in Table 1 as non-significant after Holm correction.",
+     "derived_d": -0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "r -> d = 2r/sqrt(1-r^2)"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Within/between-family mixed-effects models of baseline intelligence and change in intelligence on Socializing screen time in the sibling subsample (post hoc)",
+   "location_in_paper": "Results, 'Sibling analyses' (p. 6); Methods p. 11; interpreted in Discussion 'Sibling analysis' (p. 8).",
+   "design": "Post hoc analysis suggested by a reviewer, same two-wave structure as M1: baseline Socializing predicting baseline intelligence (cross-sectional) and change in intelligence from baseline to 2-year follow-up. Siblings/twins retained (except one member of each monozygotic pair) so cogPGS can be split into within-family and between-family components.",
+   "sample": "ABCD Release 3.0 families with at least two non-identical siblings: about 400 families and 1102 individuals (about 10% of the main sample; Discussion p. 8). Demographics for this subsample not reported.",
+   "iv": "Socializing screen time at baseline, as in M1.",
+   "dv": "Intelligence at baseline and change in intelligence (baseline to 2-year follow-up). The paper does not state whether these are latent factor scores or another index in the mixed models.",
+   "covariates": [
+    {
+     "name": "cogPGS within-family (beta_w) and between-family (beta_b)",
+     "detail": "Selzam et al. procedure"
+    },
+    {
+     "name": "Watching and Gaming",
+     "detail": "Not explicitly stated whether entered jointly with Socializing; estimates for all three screen types are reported"
+    },
+    {
+     "name": "Age",
+     "detail": "Covariate"
+    },
+    {
+     "name": "Site",
+     "detail": "Covariate"
+    },
+    {
+     "name": "20 genetic ancestry PCs",
+     "detail": "Covariate"
+    },
+    {
+     "name": "SES",
+     "detail": "Covariate"
+    },
+    {
+     "name": "Family",
+     "detail": "Mixed-effects model accounting for family clustering (random-effect structure not specified)"
+    }
+   ],
+   "equation": "INT_ij = b0 + b_w*(cogPGS_ij - mean_cogPGS_j) + b_b*mean_cogPGS_j + b_S*Socializing_ij + [other screen types?] + covariates(age, site, 20 PCs, SES) + u_j + e_ij; same form for change in intelligence. Exact specification not printed.",
+   "estimation": "R 4.0.3, lme4 (listed among packages used). Mixed-effects models; details of random effects, estimator and standardization not reported. alpha 0.05 implied; no multiple-comparison correction stated.",
+   "native_metric": "other:mixed-model coefficient (reported as r for baseline, beta for change; scaling not stated)",
+   "iv_axis": [
+    {
+     "id": "socializing",
+     "label": "Socializing (texting + social networking + video chat)",
+     "meta": "Baseline, sibling subsample",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "int_baseline",
+     "label": "Intelligence at baseline",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "int_change",
+     "label": "Change in intelligence",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "socializing",
+     "dv": "int_baseline",
+     "value": -0.04,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results p. 6, Sibling analyses",
+     "note": "Printed as 'r = -0.04'. p is an upper bound.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mixed-model coefficient (reported as r for baseline, beta for change; scaling not stated)' (flagged for later review level)"
+    },
+    {
+     "iv": "socializing",
+     "dv": "int_change",
+     "value": -0.001,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.307,
+     "p_label": "0.307",
+     "sig": false,
+     "location": "Results p. 6, Sibling analyses",
+     "note": "Printed as 'beta = -0.001'.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mixed-model coefficient (reported as r for baseline, beta for change; scaling not stated)' (flagged for later review level)"
+    }
+   ]
+  },
+  {
+   "model_id": "M4",
+   "name": "SEM mediation of the effect of Socializing screen time on change in intelligence via lack of perseverance (indirect effect, bootstrap CI)",
+   "location_in_paper": "Results, 'Mediation by lack of perseverance' (pp. 5-6); Methods p. 11; interpreted in Discussion p. 8.",
+   "design": "Longitudinal latent change score model as in M1 (exogenous Watching, Socializing, Gaming, cogPGS, SES), extended with baseline lack of perseverance as a mediator between screen time and change in intelligence from baseline to 2-year follow-up.",
+   "sample": "Same as M1 (baseline N = 9855; follow-up N = 5374).",
+   "iv": "Socializing screen time at baseline, as in M1.",
+   "dv": "Latent change in intelligence (baseline to 2-year follow-up); mediator is lack of perseverance (4-item UPPS-P Youth subscale, 1-4 scale) at baseline.",
+   "covariates": [
+    {
+     "name": "Watching, Gaming, cogPGS, SES",
+     "detail": "Exogenous variables as in M1"
+    },
+    {
+     "name": "Age, site, 20 genetic PCs",
+     "detail": "Residualized out of all variables"
+    }
+   ],
+   "equation": "LackPersev = a*Socializing + ...; dINT = b*LackPersev + c'*Socializing + ... (as M1); indirect effect = a*b. The paper refers to three mediation models (one per screen type) all including the full set of exogenous variables.",
+   "estimation": "R 4.0.3, lavaan. SEM mediation with 1000 bootstrap runs for bias-corrected CIs; product-of-paths indirect effect. Fit across the three mediation models: RMSEA < 0.027, CFI > 0.968. The a-path (Socializing -> lack of perseverance) and b-path for this model are not printed separately; lack of perseverance had no effect on change in intelligence (all beta = 0.08, p > 0.138).",
+   "native_metric": "other:standardized indirect effect",
+   "iv_axis": [
+    {
+     "id": "socializing",
+     "label": "Socializing (texting + social networking + video chat)",
+     "meta": "Baseline",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "int_change_via_lp",
+     "label": "Change in intelligence via lack of perseverance (indirect)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "socializing",
+     "dv": "int_change_via_lp",
+     "value": -0.001,
+     "value_lo": -0.002,
+     "value_hi": 0.002,
+     "p": 0.909,
+     "p_label": "0.909",
+     "sig": false,
+     "location": "Results p. 6, Mediation by lack of perseverance",
+     "note": "Bias-corrected bootstrap 95% CI [-0.002, 0.002].",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:standardized indirect effect' (flagged for later review level)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Watching and Gaming paths in the latent change score model",
+   "location": "Figure 1 (p. 4); Results p. 3",
+   "why": "Watching (TV + online videos) and Gaming (video games on any device including consoles) are not phone/SM-specific modalities. Fail FT-IC2."
+  },
+  {
+   "model": "Gaming-only latent change score model",
+   "location": "Figure 2 (p. 5); Results p. 4",
+   "why": "IV is Gaming only; not a phone/SM variable."
+  },
+  {
+   "model": "Separate models with only Watching and only Socializing",
+   "location": "Supplementary Information (not bundled in the PDF)",
+   "why": "A Socializing-only model is reported in the online supplement, which was not available in this PDF; no numbers extractable here. The authors interpret the joint model (M1)."
+  },
+  {
+   "model": "Post hoc model replacing SES with parental education",
+   "location": "Results p. 3; Discussion p. 7",
+   "why": "Only Watching and cogPGS results are printed; text says results were 'mostly the same' with no Socializing estimate."
+  },
+  {
+   "model": "Post hoc model splitting Watching into TV and online video",
+   "location": "Results p. 3",
+   "why": "Only TV and online video estimates are printed; no Socializing estimate reported; non-phone modalities."
+  },
+  {
+   "model": "Gender multigroup SEM contrasts",
+   "location": "Results pp. 4-5; Methods p. 11",
+   "why": "Socializing contrasts reported only as chi-square difference tests (baseline 0.84, p = 0.357; change 0.94, p = 0.331); no gender-specific Socializing coefficients. Gender differences in raw Socializing means (boys 0.47 vs girls 0.65) are a demographic correlate, not an individual-trait pairing."
+  },
+  {
+   "model": "Socializing correlation/covariance with SES",
+   "location": "Table 1 (r = -0.15); Figure 1 (-0.07)",
+   "why": "SES is a demographic/contextual variable; fails the individual-trait other-side requirement."
+  },
+  {
+   "model": "Socializing correlations with Watching (0.33) and Gaming (0.24)",
+   "location": "Table 1",
+   "why": "Screen-time with screen-time; other side is not an individual-trait variable."
+  },
+  {
+   "model": "Measurement invariance / CFA of intelligence",
+   "location": "Results p. 2; Methods p. 10",
+   "why": "No phone/SM variable."
+  },
+  {
+   "model": "cogPGS, SES and baseline-intelligence paths; within/between-family cogPGS effects",
+   "location": "Figure 1; Results pp. 3, 6",
+   "why": "No phone/SM variable on either side."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (M1); r (M2); other: mixed-model coefficient (M3); other: standardized indirect effect (M4)",
+  "conversion_formula": "M1: standardized SEM path treated as beta_std ~ r; d = 2*beta_std / sqrt(1 - beta_std^2). M2: d = 2r / sqrt(1 - r^2). M3 and M4: no conversion.",
+  "contrast_type": "M1 and M2: per 1 SD of baseline Socializing screen time (all variables standardized residuals), latent intelligence in SD units. M3: unclear scaling. M4: indirect effect.",
+  "transformable": "partial",
+  "notes": "M1 coefficients are fully standardized betas from Figure 1 and the Results text (p. 3), so no SD_IV or SD_DV is needed; no CIs or SEs are printed, so no d CI can be formed. The Figure 1 covariance of Socializing with cogPGS (-0.04) is a standardized covariance (correlation) and is convertible the same way. M2 correlations come from Table 1 (p. 3) and convert directly; no CIs or exact p-values. M3 (sibling analysis) prints 'r = -0.04' and 'beta = -0.001' without saying whether variables were standardized, so these are not converted. M4 is a mediation indirect effect (product of paths), not convertible to d. Socializing raw descriptive SD is not reported anywhere in the paper (only sex-specific means with SEs, p. 4)."
+ },
+ "extraction_flags": "1. The qualifying IV is 'Socializing', which combines texting, social networking sites and video chat. It counts as a phone/SM-only composite under FT-IC2 Step 2, but the texting item says 'cell phone, tablet, or computer'. 2. M1 (the latent change score SEM) is the anchor model. A coder should decide whether to keep M2 (the Table 1 correlations, which are descriptive and Holm-corrected but have no exact p-values or N), M3 (the post hoc sibling mixed models, where the paper prints 'r' for the baseline result and 'beta' for the change result and does not state the scaling) and M4 (the mediation indirect effect, which is not convertible). 3. The Socializing<->cogPGS covariance (-0.04) was read from the Figure 1 labels. No p-value is printed; I marked it significant only because the figure does not label it 'n.s.' 4. The follow-up N is inconsistent: 5374 in Methods (p. 8) versus 5169 in the Introduction (p. 2). 5. No raw SD for Socializing is reported, but the SEM coefficients are fully standardized, so the d conversion does not need it. No CIs or SEs are given for the M1 paths. 6. A Socializing-only model is in the online Supplementary Information, which is not in this PDF. 7. Figure 1 draws the baseline-intelligence/change link as a double-headed arrow, but the gender section calls it an 'effect'. The M1 equation treats it as a covariance.json"
+}

@@ -1,0 +1,429 @@
+{
+ "paper_id": "177",
+ "title": "Effects of the COVID-19 pandemic on screen time and sleep in early adolescents",
+ "doi": "10.1037/hea0001251",
+ "year": "2023",
+ "authors": "Kiss O, Nagata JM, de Zambotti M, Dick AS, Marshall AT, Sowell ER, Van Rinsveld A, Guillaume M, Pelham WE III, Gonzalez MR, Brown SA, Dowling GJ, Lisdahl KM, Tapert SF, Baker FC",
+ "journal": "Health Psychology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed model of continuous sleep outcomes (time in bed, bedtime, sleep onset latency) on standardized social media time, with assessment x social media interaction, adjusted for video game time, age, sex, school, race, ethnicity and parental education",
+   "location_in_paper": "Results pp. 6-8 (Time in bed p. 7; Bedtime pp. 7-8; Sleep onset latency p. 8). Full model outputs are in Supplementary Tables S2 (TIB), S3 (bedtime), S4 (SOL), which are not bundled in this PDF. Simple-slope plots in Figures S4, S6A, S8A (supplement). Interpreted in Discussion pp. 10-12.",
+   "design": "Longitudinal repeated-measures design with seven assessments: one pre-pandemic assessment (ABCD Year 2 follow-up, 2018-2020) and six ABCD COVID-19 Rapid Response Research surveys (May 2020, June 2020, August 2020, October 2020, December 2020, March 2021). Social media time and sleep are both measured at each assessment and enter concurrently (time-varying predictor, same-assessment outcome), so each slope is a within-assessment association rather than a prospective one. Assessment is a 7-level factor; an assessment x social media interaction was included and probed with simple slopes at each assessment. Pre-pandemic sleep items referred to typical sleep with school/free days harmonized; pandemic items referred to the past week without weekday/weekend distinction.",
+   "sample": "ABCD Release 3.0 (Year 2 follow-up) plus ABCD COVID-19 Survey first and second data releases. N = 5,027 adolescents (2,424 girls, 2,603 boys) who completed the Year 2 visit and at least one COVID-19 survey; per-assessment and per-outcome Ns not reported in the main text (selection pipeline in Figure S1). Pre-pandemic age 10-13 years (mean 11.94); pandemic-survey age 11-14 years. Table 1: female 48.2%, male 51.8%; White 77.5%, Black 9.6%, Asian 4.6%, multi-racial/multi-ethnic 1.1%, Other 5.8%, unknown 1.1%; Hispanic/Latino 17.8%, not Hispanic 81.0%, unknown 1.1%; parental education <high school 6.7%, HS/GED 1.3%, some college 22.7%, bachelor's 29.0%, postgraduate 40.1%. Analytic sample was less likely to be Black or Latino and had higher parental education than the full ABCD cohort.",
+   "iv": "Time spent on social media platforms (minutes per day), from the ABCD Youth Screen Time Survey at Year 2 (typical hours/day excluding school-related activity, weekday and weekend asked separately and combined as a weighted average) and from the same items in the COVID-19 surveys (past week, no weekday/weekend split). Pseudo-continuous response scale from 0 minutes to 9 hours or more. Continuous predictors were standardized before entry, so slopes are per 1 SD of social media time. Social media and single-player video game time were the two screen variables retained out of six because they had the lowest intercorrelation (Spearman rho = 0.13, Table S1). No mean or SD of social media time is printed in the main text; p. 9 reports that 92% (pre-pandemic) and 72% (pandemic average) used social media less than 1 hour per day, 2% vs 12% used it 2-6 hours, and 0.5% vs 2% used it more than 6 hours; Figure 2A plots means by sex and assessment.",
+   "dv": "Three continuous sleep outcomes from items of the Munich Chronotype Questionnaire (youth version), harmonized across timepoints: (1) time in bed (TIB), hours, computed from reported bedtime and wake-up time; (2) bedtime, clock time from the item 'I go to bed at...' (responses 7 PM to 6 AM), modeled in hours; (3) sleep onset latency, minutes, from 'I need __ minutes to fall asleep' (0 minutes to 4 hours, pseudo-continuous). All sleep variables winsorized at the 1st and 99th percentiles. Means and SDs are not printed in the main text; Figure 1A-C plots means by sex and assessment.",
+   "covariates": [
+    {
+     "name": "Assessment",
+     "detail": "Factor with 7 levels (pre-pandemic, COVID-19 surveys 1-6)"
+    },
+    {
+     "name": "Age",
+     "detail": "Pre-pandemic age in months at the Year 2 assessment, standardized"
+    },
+    {
+     "name": "School",
+     "detail": "Binary no school / school, from the COVID-19 survey item on when schoolwork started in the past week ('Not applicable' coded as no school); Year 2 treated as the pre-pandemic period"
+    },
+    {
+     "name": "Single-player video game time",
+     "detail": "Minutes per day, standardized; entered simultaneously with social media time"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex at birth, male/female"
+    },
+    {
+     "name": "Race",
+     "detail": "Factor with six levels (White, Black, Asian, Multiple, Other, Not reported)"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "Factor with three levels (Hispanic/Latino, non-Hispanic, not reported)"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Highest level of parental education (less than HS diploma, HS/GED, some college, bachelor's, postgraduate)"
+    },
+    {
+     "name": "Interactions",
+     "detail": "Age x assessment, sex x assessment, sex x social media, sex x video game, assessment x social media, assessment x video game; assessment x school also reported in results"
+    },
+    {
+     "name": "Random effects",
+     "detail": "Participant ID and ABCD collection site as random terms"
+    }
+   ],
+   "equation": "Sleep[i,t] = b0 + b1..b6*assessment[t] + b7*age[i] + b8*school[i,t] + b9*SM[i,t] + b10*VG[i,t] + b11*sex[i] + race[i] + ethnicity[i] + parent_ed[i] + age x assessment + sex x assessment + sex x SM + sex x VG + b(6 terms)*assessment x SM + assessment x VG + u_participant(i) + u_site(i) + e[i,t]. Focal estimates are the simple slopes of SM at each assessment level (b9 plus the relevant assessment x SM term), in DV units per 1 SD of social media time.",
+   "estimation": "Linear mixed models in R lme4 (Bates et al., 2015). Random terms for participant ID and collection site. Continuous predictors standardized. Sleep variables winsorized at 1st/99th percentiles. Significance of terms assessed with likelihood ratio tests (chi-square and p reported); interactions probed with simple slope analysis (R package 'interactions'). No CIs or SEs for the slopes are printed in the main text. No survey weights and no multiple-comparison correction reported; alpha appears to be .05. Sex x social media interactions were tested and reported as non-significant for TIB and bedtime. An additional cross-sectional comparison of 12-year-olds (May 2020 vs pre-pandemic) addresses pandemic vs developmental effects but does not involve social media as a predictor of sleep.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_overall",
+     "label": "Social media time (main effect, LRT)",
+     "meta": "chi-square likelihood ratio test only; no slope printed",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_pre",
+     "label": "Social media time, pre-pandemic (Year 2)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_may20",
+     "label": "Social media time, May 2020 (S1)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_jun20",
+     "label": "Social media time, June 2020 (S2)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_aug20",
+     "label": "Social media time, August 2020 (S3)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_oct20",
+     "label": "Social media time, October 2020 (S4)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_dec20",
+     "label": "Social media time, December 2020 (S5)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    },
+    {
+     "id": "sm_mar21",
+     "label": "Social media time, March 2021 (S6)",
+     "meta": "simple slope per 1 SD",
+     "sd_iv": 1
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "tib",
+     "label": "Time in bed (hours)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "bedtime",
+     "label": "Bedtime (hours)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sol",
+     "label": "Sleep onset latency (minutes)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_overall",
+     "dv": "tib",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed",
+     "note": "Main effect LRT chi2(1) = 114.56, p < .01. Social media x assessment interaction chi2(6) = 29.39, p < .01. No sex x screen time interaction. More social media associated with shorter TIB."
+    },
+    {
+     "iv": "sm_overall",
+     "dv": "bedtime",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results pp. 7-8, Bedtime",
+     "note": "Main effect LRT chi2(1) = 456.52, p < .01. Social media x assessment interaction chi2(6) = 117.19, p < .01. Interaction with sex not significant. More social media associated with later bedtime."
+    },
+    {
+     "iv": "sm_overall",
+     "dv": "sol",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Sleep onset latency; Figure S8A",
+     "note": "LRT chi2(1) = 33.74, p < .01; more social media associated with longer sleep onset latency. No social media x assessment simple slopes reported for SOL, so only this main effect is available."
+    },
+    {
+     "iv": "sm_pre",
+     "dv": "tib",
+     "B": -0.24,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes",
+     "note": "Hours of TIB per 1 SD social media; no CI or SE printed. The seven social media x TIB simple slopes (-0.24, -0.08, -0.07, 0.05, -0.15, -0.13, -0.12) are numerically identical (apart from the August sign) to the age x TIB simple slopes printed just above on p. 7, which suggests a possible copy error in one of the two lists; verify against Table S2 / Figure S4."
+    },
+    {
+     "iv": "sm_may20",
+     "dv": "tib",
+     "B": -0.08,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.01,
+     "p_label": "= .01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes"
+    },
+    {
+     "iv": "sm_jun20",
+     "dv": "tib",
+     "B": -0.07,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes"
+    },
+    {
+     "iv": "sm_aug20",
+     "dv": "tib",
+     "B": 0.05,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.02,
+     "p_label": "= .02",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes",
+     "note": "Printed as positive 0.05 in the social media paragraph, although the text states social media was associated with shorter TIB at all assessments and the analogous age simple slope on p. 7 is printed as -0.05. Possible sign typo; verify against Table S2 / Figure S4."
+    },
+    {
+     "iv": "sm_oct20",
+     "dv": "tib",
+     "B": -0.15,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes"
+    },
+    {
+     "iv": "sm_dec20",
+     "dv": "tib",
+     "B": -0.13,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes"
+    },
+    {
+     "iv": "sm_mar21",
+     "dv": "tib",
+     "B": -0.12,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 7, Time in bed simple slopes"
+    },
+    {
+     "iv": "sm_pre",
+     "dv": "bedtime",
+     "B": 0.19,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes; Figure S6A",
+     "note": "Hours later bedtime per 1 SD social media; no CI or SE printed."
+    },
+    {
+     "iv": "sm_may20",
+     "dv": "bedtime",
+     "B": 0.24,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    },
+    {
+     "iv": "sm_jun20",
+     "dv": "bedtime",
+     "B": 0.27,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    },
+    {
+     "iv": "sm_aug20",
+     "dv": "bedtime",
+     "B": 0.23,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    },
+    {
+     "iv": "sm_oct20",
+     "dv": "bedtime",
+     "B": 0.1,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    },
+    {
+     "iv": "sm_dec20",
+     "dv": "bedtime",
+     "B": 0.1,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    },
+    {
+     "iv": "sm_mar21",
+     "dv": "bedtime",
+     "B": 0.09,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results p. 8, Bedtime simple slopes"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Poisson generalized linear mixed model of number of night awakenings on standardized social media time, same predictors and random terms as M1",
+   "location_in_paper": "Results pp. 8-9, Number of awakenings; full output in Supplementary Table S5 (not bundled); Figure S10 (supplement). Interpreted in Discussion p. 10-11 ('more frequent awakenings').",
+   "design": "Same longitudinal repeated-measures structure as M1: seven assessments (Year 2 pre-pandemic and six COVID-19 surveys May 2020-March 2021), social media time and awakenings measured concurrently at each assessment, assessment x screen time interactions included.",
+   "sample": "Same as M1: N = 5,027 ABCD participants (Release 3.0 Year 2 plus COVID-19 surveys), ages 10-13 pre-pandemic and 11-14 during the pandemic; per-model N not reported.",
+   "iv": "Time spent on social media platforms (minutes per day), standardized; identical to M1.",
+   "dv": "Number of awakenings, from the MCTQ item 'After falling asleep, I wake up __ times during the night' (0 to 10), treated as discrete non-negative count data; winsorized at 1st/99th percentiles. No descriptive statistics in main text; Figure 1D plots means by sex and assessment.",
+   "covariates": [
+    {
+     "name": "(same as M1)",
+     "detail": "Assessment (7 levels), standardized pre-pandemic age, school, single-player video game time, sex, race, ethnicity, parental education, age x assessment, sex x assessment, sex x screen time and assessment x screen time interactions; participant ID and site random terms"
+    }
+   ],
+   "equation": "log(E[Awakenings[i,t]]) = b0 + assessment[t] + b*age[i] + school[i,t] + b_SM*SM[i,t] + VG[i,t] + sex[i] + race[i] + ethnicity[i] + parent_ed[i] + age x assessment + sex x assessment + sex x SM + sex x VG + assessment x SM + assessment x VG + u_participant(i) + u_site(i)",
+   "estimation": "Generalized linear mixed model, Poisson distribution, R lme4 (glmer). Random terms for participant ID and site. Term significance by likelihood ratio chi-square tests. Only the LRT statistic for social media is printed; no rate ratio, coefficient, SE or CI for social media appears in the main text. No social media x assessment simple slopes reported (those reported on pp. 8-9 are for video games). No weights, no multiple-comparison correction reported.",
+   "native_metric": "other:likelihood ratio chi-square",
+   "iv_axis": [
+    {
+     "id": "sm_overall",
+     "label": "Social media time (main effect, LRT)",
+     "meta": "chi-square(1); standardized predictor",
+     "sd_iv": 1
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "awakenings",
+     "label": "Number of night awakenings (count)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_overall",
+     "dv": "awakenings",
+     "value": 6.94,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.008,
+     "p_label": "=.008",
+     "sig": true,
+     "location": "Results p. 8, Number of awakenings",
+     "note": "chi2(1) = 6.94 for social media use; more social media associated with higher frequency of awakenings (Figure S10). Value is the LRT chi-square, not an effect size."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Single-player video game time as predictor of TIB, bedtime, SOL and awakenings (main effects, interactions, simple slopes)",
+   "location": "Results pp. 7-9; Tables S2-S5",
+   "why": "Generic single-player video gaming with no phone/mobile platform specified; does not qualify under FT-IC2 clarification 2. Social media is separately estimated in the same models and is extracted in M1/M2."
+  },
+  {
+   "model": "LMM of changes in screen time (social media and video game time) across assessments",
+   "location": "Results p. 9; Figure 2; Tables S6 and S9",
+   "why": "Social media time is the DV, but predictors are assessment (COVID-19 timing), sex, age, school, race, ethnicity and parental education, all demographic or contextual. No individual-trait variable on the other side (FT-IC2)."
+  },
+  {
+   "model": "Cross-sectional comparison of 12-year-olds in May 2020 vs pre-pandemic on social media and video game time",
+   "location": "Results p. 9 (t = -9.96, p < 0.01, CI printed as [38.85, -26.08])",
+   "why": "Contrast of social media time by pandemic period (contextual) only; no individual-trait variable. Same-section comparisons of bedtime and TIB do not involve social media."
+  },
+  {
+   "model": "Remaining screen time items (internet browsing, texting, video chatting, multiplayer video games)",
+   "location": "Methods p. 5; Table S1",
+   "why": "Collected but dropped from all models to avoid multicollinearity; only correlations among screen variables in Table S1 (supplement, not bundled). No estimates against sleep reported, so texting and video chat cannot be extracted."
+  },
+  {
+   "model": "Non-screen terms in the sleep LMMs/GLMM (assessment, age, sex, school and their interactions)",
+   "location": "Results pp. 6-9; Tables S2-S5",
+   "why": "Not phone/SM variables."
+  },
+  {
+   "model": "Sex x social media interaction tests",
+   "location": "Results p. 7 (TIB, bedtime)",
+   "why": "Reported only as non-significant, with no statistic or sex-stratified social media slopes printed."
+  },
+  {
+   "model": "Full likelihood ratio test tables for the LMM/GLMM models",
+   "location": "Supplementary Tables S2-S7 (web supplement)",
+   "why": "Not included in this PDF; could contain coefficients/SEs for the social media terms and descriptives needed for d conversion. Not extracted here."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: unstandardized simple slope B (DV raw units per 1 SD of social media time) plus LRT chi-square for main effects; M2: LRT chi-square only",
+  "conversion_formula": "M1 simple slopes: beta_std = B * SD_IV / SD_DV with SD_IV = 1 (predictor standardized), so beta_std = B / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). Requires SD_DV, which is not reported. LRT chi-square cells and M2: no conversion defined in guidelines section 4a.",
+  "contrast_type": "Per 1 SD of social media time (minutes/day), within a given assessment (simple slope), on TIB in hours, bedtime in hours, or sleep onset latency in minutes.",
+  "transformable": false,
+  "notes": "The main text gives no SDs for time in bed, bedtime or sleep onset latency, and no SD for social media time (not needed for the slope because predictors were standardized). Figure 1 shows means with CIs only. Supplementary Tables S2-S5 (web only, not in this PDF) may contain descriptive statistics or model coefficients that would allow conversion of the M1 simple slopes; if SD_DV can be located there, M1 simple slopes become transformable. The LRT chi-square statistics (main effects and M2 awakenings) are omnibus model-comparison tests that are not convertible without the coefficient and its SE. No CIs or SEs are printed for any slope, so a d CI could not be computed even with SD_DV."
+ },
+ "extraction_flags": "1. The PDF does not include Supplementary Tables S1-S9. The full LMM/GLMM coefficients (Tables S2-S5) are only in the web supplement. Because of that, the extraction relies on the in-text likelihood ratio chi-squares and simple slopes. Someone should get the supplement and check for social media coefficients, SEs and SDs of the sleep outcomes.\n\n2. The seven simple slopes for social media and time in bed (p. 7: -0.24, -0.08, -0.07, 0.05, -0.15, -0.13, -0.12) are the same numbers as the age and time-in-bed slopes printed just above them. The only difference is the sign of the August value, which is printed as -0.05 for age and +0.05 for social media. This looks like a copy error in the paper. The August +0.05 also contradicts the text saying social media was linked to shorter time in bed. The bedtime slopes for social media and age are different from each other, so they look fine. A human should verify against Table S2 / Figure S4.\n\n3. d is marked not transformable. The slopes are in raw sleep units (hours or minutes) per 1 SD of social media time, since predictors were standardized. The paper gives no SD for any sleep outcome and no CI or SE for any slope. Sleep onset latency and awakenings have only likelihood ratio chi-squares, with no coefficient. If the supplement gives SDs for the outcomes, the M1 slopes could be converted, so the status might change to partial.\n\n4. The design is concurrent: social media and sleep are measured at the same assessment across 7 timepoints. It is not a prospective design. The model names were built from the methods text, because the full term list is only in the supplement. Results on p. 8 also mention an age x video game interaction that the methods do not list.\n\n5. p-values printed as 'p < .01' are entered as p = null with p_label '<.01'. Page numbers in locations use the manuscript's printed page numbers. Texting and video chat were collected but dropped from all models because of multicollinearity, so no estimates for them can be extracted."
+}

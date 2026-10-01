@@ -1,0 +1,363 @@
+{
+ "paper_id": "195",
+ "title": "Examining measurement discrepancies in adolescent screen media activity with insights from the ABCD study",
+ "doi": "10.1038/s44184-025-00131-z",
+ "year": "2025",
+ "authors": "Zhao Y, Han X, Bagot KS, Tapert SF, Potenza MN, Paulus MP",
+ "journal": "npj Mental Health Research",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed model (family random effect, standardized betas) of CBCL, NIH Toolbox cognition and Fitbit sleep outcomes on EARS-logged and self-reported social media / smartphone app time",
+   "location_in_paper": "Fig. 3 forest plot (p. 6); same estimates described in Results 'Social media use relationships with behavioral problems and problematic technology usage' (p. 3) and Abstract (p. 1); interpreted in Discussion pp. 4-5.",
+   "design": "Cross-sectional. All measures come from the ABCD Year-4 follow-up visit. EARS passive sensing ran for 3 weeks around that visit; the self-report measures are the Year-4 ABCD Screen Time Questionnaire (typical day over the past 12 months) and a post-sensing survey covering the 3-week sensing period. CBCL, NIH Toolbox and Fitbit outcomes are from the same follow-up. One observation per youth; no repeated measures and no time interactions. Each SMA measure (EARS, SR 3-week, SR 12-month) and each category (total, social media, gaming) was entered in a separate model against each outcome.",
+   "sample": "ABCD Release 5.1, Year-4 follow-up. Of 4,754 youth at Year 4, 1,483 agreed to install EARS, and EARS-logged app data were available only for 495 Android users (Apple blocked app scraping). Analytic sample N = 495; CBCL available for n = 492; NIH Toolbox cognition missing for at most 20; paired EARS vs self-report comparisons used n = 395 for social media and gaming and n = 376 for total time (Table 2). N for the Fitbit sleep outcomes is not reported. Seven participants with family income still missing after LOCF imputation were excluded from relevant analyses. Sample (Table 1): age 14.01 (SD 0.70) years; 288 male (58.18%), 207 female (41.82%); White 281 (56.77%), Black 54 (10.91%), Hispanic 97 (19.60%), Other 63 (12.73%); family income >=$100k 202 (40.81%), $50-100k 154 (31.11%), <$50k 132 (26.67%), missing 7 (1.41%); parents married 338 (68.28%). Compared with excluded Year-4 participants, the EARS sample had more boys, was slightly younger, and had lower parental education and income.",
+   "iv": "Screen media activity (SMA) time in hours per day, entered as a standardized predictor. EARS measures: foreground app usage time passively logged on the youth's Android smartphone over 3 weeks, averaged over days with at least one upload; system apps excluded. EARS social media = summed time in apps classified as social media by Google Play (Snapchat recoded from communication to social media); EARS gaming = summed time in apps classified as games (some entertainment apps such as Google Play Games, Xbox, PlayStation App and Steam recoded as games); EARS total = summed time across all non-system apps. Self-report measures: youth-reported social media hours on a typical day over the past 12 months from the ABCD Screen Time Questionnaire (SR 12-mos), and post-sensing survey social media hours for the 3-week sensing period (SR 3-wks). Descriptives in the paired subsample (Table 2): EARS social media 1.64 (SD 1.93) h, SR 3-wks social media 1.63 (1.93) h, SR 12-mos social media 1.44 (1.97) h (n = 395); EARS gaming 0.52 (0.73) h (n = 395); EARS total 4.89 (2.87) h (n = 376). Per self-report, 94.26% of social media time occurred on smartphones.",
+   "dv": "Six outcomes, each modelled separately: CBCL internalizing and externalizing problems (parent report; internalizing = withdrawn/depressed, anxious/depressed, somatic complaints; externalizing = rule-breaking and aggressive behavior; the paper does not say whether raw or T-scores were used); NIH Toolbox picture vocabulary and picture sequencing memory (Year-4 cognition, higher = better); Fitbit average sleep duration and sleep duration variability (Fitbit measures are not described in Methods). All estimates are standardized.",
+   "covariates": [
+    {
+     "name": "Demographics from Table 1",
+     "detail": "Methods state that basic demographic variables in Table 1 (age, sex at birth, race/ethnicity, family annual income, parental education, parental marital status) 'were considered as potential covariates'. Which of these entered the Fig. 3 linear mixed models is not stated explicitly."
+    },
+    {
+     "name": "Family",
+     "detail": "Random intercept for family"
+    },
+    {
+     "name": "Pubertal development stage",
+     "detail": "Added only in a sensitivity analysis; reported results (Supplementary Table 7) concern the reporting-bias models, not Fig. 3."
+    }
+   ],
+   "equation": "z(Outcome)[i] = b0 + b1*z(SMA_measure)[i] + (demographic covariates from Table 1, as applicable) + u_family(i) + e[i], fitted separately for each SMA measure (EARS / SR 3-wks / SR 12-mos x total / social media / gaming) and each outcome; b1 is the standardized estimate in Fig. 3.",
+   "estimation": "Linear mixed models in R using lme4, with family as a random effect. Standardized estimates reported. Two-sided tests, alpha = 0.05. No multiple-comparison correction reported despite many SMA-measure x outcome tests. Missing family income, parental education and marital status imputed by last observation carried forward from earlier waves; no imputation for cognition or self-reported SMA. Fig. 3 prints only associations with p < 0.05; non-significant combinations are not printed. No interaction or stratified analyses for these models. A pubertal-stage sensitivity analysis is reported only for the reporting-bias models.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_ears",
+     "label": "Social media (EARS-logged)",
+     "meta": "Passively sensed smartphone app time; M = 1.64 h/day, SD = 1.93 (n = 395)",
+     "sd_iv": 1.93
+    },
+    {
+     "id": "sm_sr3w",
+     "label": "Social media (self-report, 3-week sensing period)",
+     "meta": "Post-sensing survey; M = 1.63 h/day, SD = 1.93 (n = 395)",
+     "sd_iv": 1.93
+    },
+    {
+     "id": "sm_sr12m",
+     "label": "Social media (self-report, past 12 months)",
+     "meta": "ABCD Screen Time Questionnaire; M = 1.44 h/day, SD = 1.97 (n = 395)",
+     "sd_iv": 1.97
+    },
+    {
+     "id": "total_ears",
+     "label": "Total smartphone app time (EARS-logged)",
+     "meta": "All non-system foreground apps; M = 4.89 h/day, SD = 2.87 (n = 376)",
+     "sd_iv": 2.87
+    },
+    {
+     "id": "game_ears",
+     "label": "Gaming app time (EARS-logged)",
+     "meta": "Smartphone gaming apps; M = 0.52 h/day, SD = 0.73 (n = 395)",
+     "sd_iv": 0.73
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cbcl_int",
+     "label": "CBCL internalizing",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cbcl_ext",
+     "label": "CBCL externalizing",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pic_vocab",
+     "label": "Picture vocabulary (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pic_seq",
+     "label": "Picture sequencing memory (NIH Toolbox)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_dur",
+     "label": "Average sleep duration (Fitbit)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_var",
+     "label": "Sleep duration variability (Fitbit)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_sr3w",
+     "dv": "cbcl_int",
+     "beta": 0.06,
+     "beta_lo": 0.01,
+     "beta_hi": 0.11,
+     "p": 0.019,
+     "p_label": "0.019",
+     "sig": true,
+     "location": "Fig. 3, CBCL Internalizing, 'SocialMedia - SR(3-wks)'; also Results p. 3",
+     "derived_d": 0.1202,
+     "derived_d_lo": 0.02,
+     "derived_d_hi": 0.2213,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_sr12m",
+     "dv": "cbcl_int",
+     "beta": 0.05,
+     "beta_lo": 0.01,
+     "beta_hi": 0.09,
+     "p": 0.028,
+     "p_label": "0.028",
+     "sig": true,
+     "location": "Fig. 3, CBCL Internalizing, 'SocialMedia - SR(12-mos)'; also Abstract and Results p. 3",
+     "derived_d": 0.1001,
+     "derived_d_lo": 0.02,
+     "derived_d_hi": 0.1807,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_ears",
+     "dv": "cbcl_ext",
+     "beta": 0.07,
+     "beta_lo": 0.03,
+     "beta_hi": 0.12,
+     "p": 0.002,
+     "p_label": "0.002",
+     "sig": true,
+     "location": "Fig. 3, CBCL Externalizing, 'SocialMedia - EARS'; also Abstract and Results p. 3",
+     "derived_d": 0.1403,
+     "derived_d_lo": 0.06,
+     "derived_d_hi": 0.2417,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_sr3w",
+     "dv": "cbcl_ext",
+     "beta": 0.12,
+     "beta_lo": 0.07,
+     "beta_hi": 0.17,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Fig. 3, CBCL Externalizing, 'SocialMedia - SR(3-wks)'; also Results p. 3",
+     "derived_d": 0.2417,
+     "derived_d_lo": 0.1403,
+     "derived_d_hi": 0.345,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_sr12m",
+     "dv": "cbcl_ext",
+     "beta": 0.06,
+     "beta_lo": 0.01,
+     "beta_hi": 0.11,
+     "p": 0.014,
+     "p_label": "0.014",
+     "sig": true,
+     "location": "Fig. 3, CBCL Externalizing, 'SocialMedia - SR(12-mos)'; also Abstract and Results p. 3",
+     "derived_d": 0.1202,
+     "derived_d_lo": 0.02,
+     "derived_d_hi": 0.2213,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_ears",
+     "dv": "pic_vocab",
+     "beta": -0.09,
+     "beta_lo": -0.13,
+     "beta_hi": -0.05,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Fig. 3, Picture Vocabulary, 'SocialMedia - EARS'",
+     "note": "Not discussed in the Results text; shown only in Fig. 3.",
+     "derived_d": -0.1807,
+     "derived_d_lo": -0.2622,
+     "derived_d_hi": -0.1001,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_sr12m",
+     "dv": "pic_vocab",
+     "beta": -0.06,
+     "beta_lo": -0.1,
+     "beta_hi": -0.01,
+     "p": 0.01,
+     "p_label": "0.01",
+     "sig": true,
+     "location": "Fig. 3, Picture Vocabulary, 'SocialMedia - SR(12-mos)'",
+     "note": "Not discussed in the Results text; shown only in Fig. 3.",
+     "derived_d": -0.1202,
+     "derived_d_lo": -0.201,
+     "derived_d_hi": -0.02,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "game_ears",
+     "dv": "pic_seq",
+     "beta": 0.14,
+     "beta_lo": 0.02,
+     "beta_hi": 0.26,
+     "p": 0.021,
+     "p_label": "0.021",
+     "sig": true,
+     "location": "Fig. 3, Picture Sequencing Memory, 'Game - EARS'",
+     "note": "Smartphone gaming-app time; qualifies only as phone-based (mobile) gaming.",
+     "derived_d": 0.2828,
+     "derived_d_lo": 0.04,
+     "derived_d_hi": 0.5385,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "total_ears",
+     "dv": "sleep_dur",
+     "beta": -0.06,
+     "beta_lo": -0.1,
+     "beta_hi": -0.02,
+     "p": 0.006,
+     "p_label": "0.006",
+     "sig": true,
+     "location": "Fig. 3, Average Sleep Duration (Fitbit), 'Total - EARS'",
+     "note": "Fitbit N not reported.",
+     "derived_d": -0.1202,
+     "derived_d_lo": -0.201,
+     "derived_d_hi": -0.04,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_ears",
+     "dv": "sleep_dur",
+     "beta": -0.08,
+     "beta_lo": -0.14,
+     "beta_hi": -0.01,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": true,
+     "location": "Fig. 3, Average Sleep Duration (Fitbit), 'SocialMedia - EARS'",
+     "note": "Fitbit N not reported.",
+     "derived_d": -0.1605,
+     "derived_d_lo": -0.2828,
+     "derived_d_hi": -0.02,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "total_ears",
+     "dv": "sleep_var",
+     "beta": 0.07,
+     "beta_lo": 0.03,
+     "beta_hi": 0.11,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Fig. 3, Sleep Duration Variability (Fitbit), 'Total - EARS'",
+     "note": "Fitbit N not reported.",
+     "derived_d": 0.1403,
+     "derived_d_lo": 0.06,
+     "derived_d_hi": 0.2213,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_ears",
+     "dv": "sleep_var",
+     "beta": 0.13,
+     "beta_lo": 0.07,
+     "beta_hi": 0.19,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Fig. 3, Sleep Duration Variability (Fitbit), 'SocialMedia - EARS'",
+     "note": "Fitbit N not reported.",
+     "derived_d": 0.2622,
+     "derived_d_lo": 0.1403,
+     "derived_d_hi": 0.3871,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_sr3w",
+     "dv": "sleep_var",
+     "beta": 0.1,
+     "beta_lo": 0.03,
+     "beta_hi": 0.17,
+     "p": 0.007,
+     "p_label": "0.007",
+     "sig": true,
+     "location": "Fig. 3, Sleep Duration Variability (Fitbit), 'SocialMedia - SR(3-wks)'",
+     "note": "Fitbit N not reported.",
+     "derived_d": 0.201,
+     "derived_d_lo": 0.06,
+     "derived_d_hi": 0.345,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Non-significant SMA measure x outcome combinations from the same linear mixed models",
+   "location": "Fig. 3 (omitted rows)",
+   "why": "Fig. 3 prints only associations with p < 0.05. Estimates for the remaining combinations (e.g., EARS social media with internalizing, any phone/SM measure with picture sequencing memory other than EARS gaming) are not reported anywhere in the main text, so they cannot be extracted. The matrix therefore contains only significant cells."
+  },
+  {
+   "model": "Self-reported total screen time and self-reported gaming as IVs (SR 12-mos / SR 3-wks Total and Game rows)",
+   "location": "Fig. 3 rows 'Total - SR(12-mos)', 'Game - SR(12-mos)', 'Game - SR(3-wks)'",
+   "why": "Self-reported total screen time bundles TV/video and other non-phone activities, and self-reported gaming is not restricted to phones (only 33.47% of reported gaming was on smartphones). Fail FT-IC2 Step 2."
+  },
+  {
+   "model": "Social media time (EARS, SR 3-wks, SR 12-mos) associated with SMAQ, and SR 12-mos social media with VGAQ",
+   "location": "Results p. 3 (text only): SMAQ EARS beta = 0.06 (0.01-0.11), SR 3-wks 0.08 (0.03-0.14), SR 12-mos 0.15 (0.10-0.20); VGAQ SR 12-mos 0.05 (0.01-0.10); also Abstract",
+   "why": "Per 2L-criteria FT-IC2 clarification 1, SMAQ and VGAQ are themselves smartphone/SM (or gaming) use scales, so these are SM-use-to-SM-use associations without an individual-trait variable on the other side. Recorded here for reviewer judgment."
+  },
+  {
+   "model": "Multinomial logistic regression of social media reporting bias (over-/under-reporting vs accurate) on picture vocabulary",
+   "location": "Table 3a,b (p. 5); Results p. 3; Supplementary Tables 4-7 (picture sequencing, list sorting, oral reading, pubertal sensitivity; not bundled in PDF)",
+   "why": "The DV is a self-report vs EARS discrepancy category, not a measure of phone/SM use amount; this is a measurement-concordance analysis (FT-IC2 clarification 6). Under-reporting at 0.5 h cutoff: picture vocabulary OR = 0.96 [0.93-0.99], p = 0.010; at 1 h: OR = 0.96 [0.93-0.99], p = 0.007. Over-reporting: OR = 0.98 [0.95-1.01] and 0.98 [0.95-1.02]. Flagged for reviewer in case the team counts reporting bias as a phone/SM variable."
+  },
+  {
+   "model": "Correlation of absolute self-report vs EARS social media discrepancy with picture vocabulary and picture sequencing memory",
+   "location": "Fig. 2 (p. 6)",
+   "why": "Discrepancy measure, not phone/SM use; unadjusted Pearson correlations (r = -0.21, p < 0.001; r = -0.06, p = 0.177)."
+  },
+  {
+   "model": "Pairwise correlations among SMA measures and SMAQ/VGAQ",
+   "location": "Fig. 1 (p. 4); Results p. 3",
+   "why": "Measurement concordance among screen-use measures and addiction scales; no individual-trait variable on the other side."
+  },
+  {
+   "model": "Paired t-tests of EARS vs self-reported usage time",
+   "location": "Table 2 (p. 4)",
+   "why": "Compares measurement methods; no individual-trait outcome."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized LMM coefficient)",
+  "conversion_formula": "Treat beta_std as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2), applied to each CI endpoint for the d CI.",
+  "contrast_type": "per 1 SD of the phone/SM time measure (h/day), in SD units of the outcome",
+  "transformable": true,
+  "notes": "Fig. 3 caption states 'Beta estimates were standardized', so no SD_IV/SD_DV is needed for conversion. SD_IV values in iv_axis are from Table 2 (p. 4, paired subsamples n = 395 / 376) and are for reference only; outcome SDs are not reported (sd_dv null). The betas are adjusted for family clustering, but the covariate set is not stated explicitly. Only significant cells are reported, so any pooled estimate built from this paper is biased toward non-null results."
+ },
+ "extraction_flags": "1. Fig. 3 shows only significant results (p < 0.05), so the matrix holds only the 13 significant cells and pooled estimates would lean toward non-null findings. 2. The covariates in the LMMs are unclear. Methods say only that the Table 1 demographics \"were considered as potential covariates\", plus a family random effect. 3. Total-EARS (all smartphone app time) and Game-EARS (smartphone gaming apps) are included as passively sensed phone or app time, and as mobile gaming for Game-EARS. Please confirm these count under FT-IC2. Self-reported total and gaming rows are excluded. 4. The Methods never describe the Fitbit sleep outcomes and give no N for them. 5. The SM-time vs SMAQ/VGAQ betas (text p. 3, e.g. SR 12-mos SMAQ beta = 0.15) are excluded under FT-IC2 clarification 1, which treats them as SM-to-SM associations. The reporting-bias multinomial logistic models (Table 3, picture vocabulary OR = 0.96) are excluded as measurement-concordance analyses. Please check both decisions. 6. It is not stated whether the CBCL scores are raw or T-scores. sd_dv is null, which does not matter here because the betas are already standardized. 7. The supplementary tables (4-7) are not bundled with the PDF. Values were read from the high-resolution Fig. 3 image and cross-checked against the Results text and Abstract where these report them."
+}

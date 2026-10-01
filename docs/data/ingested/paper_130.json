@@ -1,0 +1,220 @@
+{
+ "paper_id": "130",
+ "title": "The Pandemic's Toll on Young Adolescents: Prevention and Intervention Targets to Preserve Their Mental Health",
+ "doi": "10.1016/j.jadohealth.2021.11.023",
+ "year": "2022",
+ "authors": "Kiss O, Alzueta E, Yuksel D, Pohl KM, de Zambotti M, Muller-Oehring EM, Prouty D, Durley I, Pelham WE III, McCabe CJ, Gonzalez MR, Brown SA, Wade NE, Marshall AT, Sowell ER, Breslin FJ, Lisdahl KM, Dick AS, Sheth CS, McCandliss BD, Guillaume M, Van Rinsveld AM, Dowling GJ, Tapert SF, Baker FC",
+ "journal": "Journal of Adolescent Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "XGBoost gradient-boosted tree classifiers of binary pandemic mental-health outcomes on ~230 prepandemic and pandemic features, with mean |SHAP| feature importance (texting and online-communication features)",
+   "location_in_paper": "Methods pp. 389-390 (Training and evaluation of classification models; Feature importance in final models); Results p. 390; Figure 2 (stress, p. 391), Figure 3 (anxiety, p. 392), Figure 4B (depressive symptoms, Survey 1, p. 393); interpreted in Discussion p. 392 ('Connecting digitally and screen time use predicted anxiety and depression'). Hyperparameter grid and nested cross-validation details are in Appendix A / Figure A3 / Table A1, which are online supplementary material not bundled in this PDF.",
+   "design": "Prediction (classification) design using ABCD prepandemic data plus the ABCD COVID-19 Rapid Response surveys. Prepandemic predictors (CBCL externalizing, BPM internalizing, Sleep Disturbance Scale for Children, Munich Chronotype Questionnaire) come from the Year 2 assessment, with change scores Baseline to Year 1 and Year 1 to Year 2 for sleep subscales; demographics from the prepandemic baseline year. Pandemic predictors (>200 youth- and parent-reported psychosocial and lifestyle items, including screen-time items) and outcomes come from the same COVID-19 survey, so pandemic features and outcomes are cross-sectional. Separate models per outcome: positive affect, perceived stress and anxiety from Survey 2; depressive symptoms from Survey 1 (and from Survey 3 in Supplementary Figure A4, not in this PDF). Surveys were administered approximately 40 days apart between May and August 2020. Not a repeated-measures model; each outcome-survey combination is fit as its own classifier.",
+   "sample": "ABCD 3.0 data release, participants who completed the Year 2 assessment by February 2020 and the COVID-19 youth surveys (May-August 2020). Respondents with <65% survey completion for both youth and parent report were removed (~20% of youth data and ~7% of parent data excluded; Appendix A). Table 1 analytic subsets: Survey 1 N=3,091 (mean age 12.86, range 11-14; 49.3% female; race 80.2% White, 6.8% Black, 5.5% Asian, 0.8% multiracial, 5.4% other, 1.0% unknown; 16.5% Hispanic/Latino), Survey 2 N=3,193 (mean age 12.94; 48.9% female; 78.9% White, 8.3% Black, 5.3% Asian; 16.3% Hispanic/Latino), Survey 3 N=2,934 (mean age 13.05; 48.9% female). Model-specific n from figure captions: positive affect n=2,896 (Fig. 1); stress n=3,193 (Fig. 2); anxiety n=3,193 (Fig. 3); depressive symptoms Survey 1 n=3,063 (Fig. 4B). Compared with the full ABCD baseline sample, the subsample was less Hispanic/Latino, less Black, more Asian, and had more highly educated parents (42% vs. 34% postgraduate degree).",
+   "iv": "Two phone/SM-type features from the ABCD COVID-19 Youth Survey surface in the printed top-20 feature lists. (1) 'texting on a cell phone, tablet, computer - yr.' (youth report), categorized by the authors as Screentime; appears in the Survey 1 depressive-symptoms model (Fig. 4B). (2) 'frequency of on-line communication - yr.' (youth report), categorized by the authors as Relationships, not Screentime; appears in the stress (Fig. 2) and anxiety (Fig. 3) models. Response scales, units and descriptive statistics for these items are not reported in the main text (Appendix B, not in this PDF). Other screen-time features (e.g., time spent on social media, cited by the authors as an example of the Screentime domain) were in the feature set but did not reach any printed top-20 list, so no value is reported for them.",
+   "dv": "Binary indicators of clinically elevated pandemic mental-health outcomes (1 = high score, 0 = below cutoff). Depressive symptoms (Survey 1; NIH Toolbox eight-item depression scale), anxiety (Survey 2; eight-item NIH Toolbox anxiety scale) and positive affect (Survey 2; nine-item NIH Toolbox scale) were dichotomized at T-score 60 (1 SD above the US adolescent population mean). Perceived stress (Survey 2; 4-item Perceived Stress Scale) was dichotomized at raw score >10, based on the sample distribution. Prevalence of elevated depressive symptoms: 16.49% at Survey 1 and 14.04% at Survey 3 (Fig. 4A; McNemar chi2(1)=9.803, p=.001, N=2,080). Prevalence for anxiety and stress cutoffs not reported in the main text.",
+   "covariates": [
+    {
+     "name": "Not covariates in the regression sense",
+     "detail": "XGBoost is a multivariable classifier; every feature enters simultaneously and each SHAP value is the feature's contribution conditional on all others in the model. The full feature set is described only by domain in the main text; item lists are in Appendix B (not in this PDF)."
+    },
+    {
+     "name": "Demographics",
+     "detail": "Sex, race, ethnicity, number of siblings, research site, parent/caregiver education, number of people living at the same address (prepandemic baseline year); age in months at the respective survey"
+    },
+    {
+     "name": "Prepandemic internalizing and externalizing symptoms",
+     "detail": "Parent-reported CBCL externalizing (aggressive, rule-breaking) and youth-reported Brief Problem Monitor internalizing, Year 2"
+    },
+    {
+     "name": "Prepandemic sleep",
+     "detail": "Parent-reported Sleep Disturbance Scale for Children (six subscales) at Year 2 plus percent change scores Baseline-Y1 and Y1-Y2; youth Munich Chronotype Questionnaire variables (timing, duration, latency, inertia, chronotype proxy)"
+    },
+    {
+     "name": "Pandemic psychosocial and lifestyle items",
+     "detail": ">200 youth- and parent-reported COVID-19 survey items grouped by the authors into coping, physical activities, relationships, resources, screen time, sleep and other (e.g., COVID-related worry, discrimination)"
+    },
+    {
+     "name": "Feature selection",
+     "detail": "Features with >98% missing and quasi-constant (>99%) features removed; for pairs with Spearman |rho| > 0.6, the feature more correlated with the outcome was kept. Final feature counts: positive affect 231, stress 228, anxiety 228, depressive symptoms Survey 1 240, Survey 3 223."
+    }
+   ],
+   "equation": "logit P(Y_outcome = 1) = F(x) = sum_k f_k(x), f_k = regression trees fit by extreme gradient boosting on all retained features x (including texting / on-line communication); importance_j = mean over participants of |phi_j(i)|, where phi_j(i) is the TreeSHAP contribution of feature j to participant i's predicted log-odds",
+   "estimation": "XGBoost gradient-boosted trees (GBT) implemented in Python 3.6.8 with scikit-learn 18.2; regularized logistic regression fit in parallel for comparison. Hyperparameters chosen by grid search, aiming for interpretability by limiting model complexity. Model comparison by nested cross-validation, evaluated with AUC; mean AUC >= 0.70 for both GBT and LogReg in all four outcomes (Table A1, supplementary, not in this PDF). Because GBT performed higher or roughly equal, the final GBT models were refit on the entire dataset with the best hyperparameters and interpreted with SHAP values (mean absolute SHAP in log-odds units). Only the top 20 features per model are printed; bar colour indicates direction (red: higher feature values associated with higher SHAP scores, i.e., higher predicted probability of the elevated outcome; blue: lower). No significance tests, confidence intervals, sampling weights, clustering by site/family, or multiple-comparison correction apply. Models were not stratified by sex.",
+   "native_metric": "other:mean_abs_SHAP",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting on a cell phone, tablet, computer (youth report)",
+     "meta": "COVID-19 Youth Survey item; authors' Screentime domain; units not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "online_comm",
+     "label": "Frequency of on-line communication (youth report)",
+     "meta": "COVID-19 Youth Survey item; authors' Relationships domain; eligibility to be verified",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "depr_s1",
+     "label": "Elevated depressive symptoms, Survey 1 (NIH Toolbox T > 60)",
+     "sd_dv": null,
+     "p0": 0.1649
+    },
+    {
+     "id": "anxiety_s2",
+     "label": "Elevated anxiety, Survey 2 (NIH Toolbox T > 60)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "stress_s2",
+     "label": "High perceived stress, Survey 2 (PSS-4 raw > 10)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "depr_s1",
+     "value": 0.07,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 4B (p. 393), rank 11 of top 20",
+     "note": "Mean |SHAP| (log-odds). Red bar: more texting associated with higher predicted probability of elevated depressive symptoms. n=3,063. No CI or p-value; SHAP importances are not significance-tested.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    },
+    {
+     "iv": "online_comm",
+     "dv": "anxiety_s2",
+     "value": 0.06,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 3 (p. 392), rank 11 of top 20",
+     "note": "Mean |SHAP|. Red bar: more frequent on-line communication associated with higher predicted probability of elevated anxiety. n=3,193. Discussion p. 392 interprets this as 'connecting digitally' predicting anxiety.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    },
+    {
+     "iv": "online_comm",
+     "dv": "stress_s2",
+     "value": 0.05,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 2 (p. 391), rank 13 of top 20",
+     "note": "Mean |SHAP|. Blue bar: more frequent on-line communication associated with lower predicted probability of high perceived stress. n=3,193.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    },
+    {
+     "iv": "texting",
+     "dv": "anxiety_s2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 3 (p. 392)",
+     "note": "Texting not among the printed top-20 features for anxiety; no value reported.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    },
+    {
+     "iv": "texting",
+     "dv": "stress_s2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 2 (p. 391)",
+     "note": "Texting not among the printed top-20 features for stress; no value reported.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    },
+    {
+     "iv": "online_comm",
+     "dv": "depr_s1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "",
+     "sig": null,
+     "location": "Figure 4B (p. 393)",
+     "note": "On-line communication not among the printed top-20 features for depressive symptoms (Survey 1); no value reported.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:mean_abs_SHAP' (flagged for later review level)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "GBT positive affect model (Survey 2)",
+   "location": "Figure 1 (p. 391)",
+   "why": "No texting, on-line communication, social media or other phone/SM-specific feature appears in the printed top 20. The only screen-time feature shown is 'time spent browsing the internet - yr.' (0.04, higher browsing associated with lower positive affect), which is generic internet browsing and does not qualify under FT-IC2."
+  },
+  {
+   "model": "GBT depressive symptoms model, Survey 3 (223 features)",
+   "location": "Supplementary Figure A4 (online supplement, not in this PDF)",
+   "why": "Feature importances are printed only in the online supplement, which is not bundled in the PDF; whether any phone/SM item appears in its top 20 could not be checked."
+  },
+  {
+   "model": "Non-phone screen-time features in the anxiety and depression models",
+   "location": "Figure 3 (p. 392): time spent browsing the internet 0.10; watching coronavirus news on television 0.06; watching coronavirus news using the internet 0.05; play single-player video games 0.03. Figure 4B (p. 393): time spent on multi-player video games - pr. 0.03",
+   "why": "Generic internet browsing, television/internet news viewing and platform-unspecified video gaming are not phone/SM modalities under FT-IC2."
+  },
+  {
+   "model": "Duration of listening to music/watching music videos",
+   "location": "Figures 2, 3 and 4B",
+   "why": "Classified by the authors as a coping variable; music listening is a disqualifying ingredient under FT-IC2."
+  },
+  {
+   "model": "Communication with friends / parents and tone/quality of relationships",
+   "location": "Figures 1-4B (e.g., 'frequency of communication with friends - yr.', 'frequency of communication with parents - yr.')",
+   "why": "Not specified as online or phone-based communication; relationship variables, not phone/SM modalities."
+  },
+  {
+   "model": "Regularized logistic regression (LogReg) classifiers",
+   "location": "Methods p. 390; Table A1 (supplement, not in this PDF)",
+   "why": "Fit only for model comparison (AUC); no feature-level coefficients are reported and the authors interpret only the GBT models."
+  },
+  {
+   "model": "McNemar test of change in proportion with elevated depressive symptoms, Survey 1 vs Survey 3",
+   "location": "Figure 4A, Results p. 390",
+   "why": "No phone/SM variable involved."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:mean_abs_SHAP",
+  "conversion_formula": "None. Mean absolute SHAP values from XGBoost are model-specific, unsigned (direction shown only by bar colour), conditional on all other features, and have no sampling distribution; guidelines \u00a74a list ML feature importance as non-convertible.",
+  "contrast_type": "Average absolute contribution of the feature to the predicted log-odds of the elevated outcome across participants; not a per-unit or group contrast.",
+  "transformable": false,
+  "notes": "No SD of the texting or on-line communication items, no item response scales, and no CIs or p-values are reported. Baseline event rate is reported only for depressive symptoms (16.49% at Survey 1, Fig. 4A). Values are read from data labels printed on the bar charts (two decimal places), not from a table. Only the top 20 features per model are shown, so absence of a phone/SM feature from a figure means it ranked lower, not that its importance was zero. Paper goes to the later review level for non-convertible estimates."
+ },
+ "extraction_flags": "1) Every value comes from data labels printed on the bar charts in Figures 2, 3 and 4B. None comes from a table. They are mean |SHAP| values with no CI or p, so sig is set to null instead of true or false. Check that the renderer accepts null. 2) Texting -> depressive symptoms (Survey 1, Fig 4B, 0.07, red bar) is the only clearly qualifying estimate. 3) I also extracted 'frequency of on-line communication - yr.' for anxiety (Fig 3, 0.06, red/increase) and stress (Fig 2, 0.05, blue/decrease). Whether this item qualifies needs a human call: the authors file it under Relationships, not Screentime, and the item wording is only in Appendix B, which is not in the PDF. Strike these two if it does not count as digital socializing under FT-IC2. 4) Three of the 6 estimate cells are null placeholders: texting x anxiety, texting x stress, and online communication x depression. Neither feature reached the printed top 20 for those outcomes. 5) The online supplement (Appendix A/B, Table A1, Supplementary Figure A4 for the Survey 3 depression model) is not bundled in the PDF. A4 might show texting or other phone/SM features for Survey 3. 6) Social media time was in the feature set but appears in no printed top 20, so it has no estimate. 7) SDs and response scales for the IV items are not reported. Not convertible to d."
+}

@@ -1,0 +1,947 @@
+{
+ "paper_id": "96",
+ "title": "Pixels and perception: Mapping the association between digital media and psychotic-like experiences in adolescents",
+ "doi": "10.1016/j.comppsych.2024.152509",
+ "year": "2024",
+ "authors": "Hein K, Zarate D, Burleigh TL, Stavropoulos V",
+ "journal": "Comprehensive Psychiatry",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Regularized (graphical LASSO) partial-correlation network of six screen-time nodes and seven PLE item nodes, estimated separately at three ABCD time points; phone/SM-to-PLE edges",
+   "location_in_paper": "Methods 3.4 (p. 4); network plots Figs. 1-3 (pp. 4-5); edge weights Table 2 (T1, p. 5), Table 3 (T2, p. 5), Table 4 (T3, p. 6); edges interpreted in Results 4.2, 4.4, 4.6 (pp. 7-8) and Discussion p. 9.",
+   "design": "Three separate cross-sectional networks, one per ABCD wave (T1 at ages 9-10, T2 and T3 at roughly 12-month intervals; the last wave was collected in 2019 when participants were 11-12). Each network is estimated on that wave's data only; there are no cross-lagged or temporal (between-wave) edges, so every edge is a same-wave undirected association. The paper calls the approach longitudinal network analysis, but longitudinal content is limited to comparing the three cross-sectional networks with the Network Comparison Test. Phone/SM nodes and PLE nodes are both nodes; neither is formally an IV or DV. For this extraction the phone/SM nodes are placed on the IV axis and the PLE nodes on the DV axis.",
+   "sample": "ABCD Study data accessed from the NIMH Data Archive; data release not stated. N = 11,876 adolescents (mean age 9.92, SD 0.62; 6,196 male [52.2%], 5,680 female [47.8%]). Retention 94.5% from Wave 1 to Wave 2 and 87.7% from Wave 1 to Wave 3; the paper states 10,414 participants at the smallest time point. Per-wave analytic Ns and missing-data handling are not otherwise reported. Race/ethnicity not reported. An attrition t-test (Table 1, p. 3) found retained vs. lost participants did not differ on age or sex but differed on all screen-time variables and some PLE items, with small effects (Cohen's d < 0.2).",
+   "iv": "Three phone/SM screen-time nodes from the ABCD Youth Screen Time Survey: ScrText (texting), ScrVChat (video calling on services such as Skype and Discord), and ScrSM (social media, e.g. Facebook, Instagram). Youth reported hours/minutes spent on each activity on a typical weekday, with a second set of questions for weekends. The paper does not say whether the node uses weekday, weekend, or a combined value, and does not report means or SDs for any screen variable. The same network also contains three non-phone screen nodes (ScrOnlineV online video such as YouTube/Twitch, ScrTV, ScrVG video games on any device) that are partialled out of every phone/SM-PLE edge.",
+   "dv": "Seven item-level nodes from the Prodromal Questionnaire - Brief Child Version (PQ-BC; 21 items, each with a follow-up distress question rated 1 [strongly disagree] to 5 [strongly agree]; reported alpha = 0.84, omega = 0.92): PLE 5 delusion of control, PLE 10 auditory hallucinations, PLE 14 experiential hallucinations, PLE 16 somatic delusions, PLE 19 visual hallucinations, PLE 20 struggling to concentrate, PLE 21 difficulty communicating. The paper does not explain why these 7 of the 21 items were chosen, and does not say whether each node is the yes/no endorsement or the 1-5 distress rating. No item descriptives reported.",
+   "covariates": [
+    {
+     "name": "All other network nodes",
+     "detail": "Each edge is a partial correlation conditional on the other 11 nodes: the three non-phone screen nodes (online video, TV, video games), the other two phone/SM nodes, and the remaining six PLE items."
+    },
+    {
+     "name": "Demographic covariates",
+     "detail": "None. No age, sex, SES, site, or family adjustment is reported."
+    }
+   ],
+   "equation": "Gaussian graphical model per wave t: precision matrix K_t estimated by graphical LASSO, minimizing -log det(K) + tr(S_t K) + lambda * sum|k_ij| over the 13 nodes {ScrOnlineV, ScrTV, ScrVG, ScrText, ScrVChat, ScrSM, PLE_5, PLE_10, PLE_14, PLE_16, PLE_19, PLE_20, PLE_21}. Edge weight w_ij = -k_ij / sqrt(k_ii * k_jj) = partial correlation between node i (phone/SM) and node j (PLE item) given all 11 other nodes; small edges shrunk to exactly 0. Tuning-parameter selection (e.g. EBIC gamma) not reported.",
+   "estimation": "R packages qgraph (network estimation, graphical LASSO) and networktools (centrality, bridge indices). The correlation type (Pearson vs. polychoric/Spearman), lambda selection criterion, and missing-data handling are not reported. Stability assessed by case-dropping bootstrap (correlation-stability coefficient; acceptable > 0.25, preferable > 0.5): edge CS = 0.75 at each of T1, T2, T3. Edge and centrality difference tests used bootnet (Figs. S8, S10, S12 in the supplement, not in this PDF). No p-values, CIs, or significance flags are printed for individual edges in Tables 2-4. Network Comparison Test (NetworkComparisonTest package, alpha = 0.05) compared global structure and strength between wave pairs. No multiple-comparison correction beyond LASSO regularization. No sex or other moderation tests. Centrality (expected influence, betweenness, closeness) and bridge centrality reported in Figs. 4-9; the authors state closeness and betweenness were too unstable to interpret.",
+   "native_metric": "other:regularized partial correlation (graphical LASSO edge weight)",
+   "iv_axis": [
+    {
+     "id": "text_t1",
+     "label": "Texting, T1",
+     "meta": "T1 (ages 9-10) network node ScrText; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "vchat_t1",
+     "label": "Video chat, T1",
+     "meta": "T1 (ages 9-10) network node ScrVChat; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_t1",
+     "label": "Social media, T1",
+     "meta": "T1 (ages 9-10) network node ScrSM; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "text_t2",
+     "label": "Texting, T2",
+     "meta": "T2 (1-year follow-up) network node ScrText; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "vchat_t2",
+     "label": "Video chat, T2",
+     "meta": "T2 (1-year follow-up) network node ScrVChat; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_t2",
+     "label": "Social media, T2",
+     "meta": "T2 (1-year follow-up) network node ScrSM; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "text_t3",
+     "label": "Texting, T3",
+     "meta": "T3 (2-year follow-up) network node ScrText; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "vchat_t3",
+     "label": "Video chat, T3",
+     "meta": "T3 (2-year follow-up) network node ScrVChat; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_t3",
+     "label": "Social media, T3",
+     "meta": "T3 (2-year follow-up) network node ScrSM; hours/minutes per typical day; descriptives not reported",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "ple5",
+     "label": "PLE 5: delusion of control",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple10",
+     "label": "PLE 10: auditory hallucinations",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple14",
+     "label": "PLE 14: experiential hallucinations",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple16",
+     "label": "PLE 16: somatic delusions",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple19",
+     "label": "PLE 19: visual hallucinations",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple20",
+     "label": "PLE 20: struggling to concentrate",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ple21",
+     "label": "PLE 21: difficulty communicating",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "text_t1",
+     "dv": "ple5",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 7 (PLE_5), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple10",
+     "value": 0.002,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 8 (PLE_10), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple14",
+     "value": 0.013,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 9 (PLE_14), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 10 (PLE_16), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple19",
+     "value": 0.003,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 11 (PLE_19), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple20",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 12 (PLE_20), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t1",
+     "dv": "ple21",
+     "value": 0.006,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 13 (PLE_21), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple5",
+     "value": 0.007,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 7 (PLE_5), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple10",
+     "value": 0.011,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 8 (PLE_10), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple14",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 9 (PLE_14), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple16",
+     "value": 0.002,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 10 (PLE_16), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple19",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 11 (PLE_19), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple20",
+     "value": 0.031,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 12 (PLE_20), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t1",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 13 (PLE_21), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple5",
+     "value": -0.007,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 7 (PLE_5), column 6 (ScrSM)",
+     "note": "Negative regularized partial correlation; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple10",
+     "value": 0.018,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 8 (PLE_10), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple14",
+     "value": 0.014,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 9 (PLE_14), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 10 (PLE_16), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple19",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 11 (PLE_19), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple20",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 12 (PLE_20), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t1",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 2 (p. 5), row 13 (PLE_21), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple5",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 7 (PLE_5), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple10",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 8 (PLE_10), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple14",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 9 (PLE_14), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 10 (PLE_16), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple19",
+     "value": 0.009,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 11 (PLE_19), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple20",
+     "value": 0.001,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 12 (PLE_20), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t2",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 13 (PLE_21), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple5",
+     "value": 0.01,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 7 (PLE_5), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple10",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 8 (PLE_10), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple14",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 9 (PLE_14), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 10 (PLE_16), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple19",
+     "value": 0.004,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 11 (PLE_19), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple20",
+     "value": 0.004,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 12 (PLE_20), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t2",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 13 (PLE_21), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple5",
+     "value": 0.001,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 7 (PLE_5), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple10",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 8 (PLE_10), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple14",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 9 (PLE_14), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 10 (PLE_16), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple19",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 11 (PLE_19), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple20",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 12 (PLE_20), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t2",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 3 (p. 5), row 13 (PLE_21), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple5",
+     "value": 0.009,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 7 (PLE_5), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple10",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 8 (PLE_10), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple14",
+     "value": 0.002,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 9 (PLE_14), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple16",
+     "value": -0.007,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 10 (PLE_16), column 4 (ScrText)",
+     "note": "Negative regularized partial correlation; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple19",
+     "value": 0.002,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 11 (PLE_19), column 4 (ScrText)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple20",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 12 (PLE_20), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "text_t3",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 13 (PLE_21), column 4 (ScrText)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple5",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 7 (PLE_5), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple10",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 8 (PLE_10), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple14",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 9 (PLE_14), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple16",
+     "value": 0.037,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 10 (PLE_16), column 5 (ScrVChat)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple19",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 11 (PLE_19), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple20",
+     "value": -0.005,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 12 (PLE_20), column 5 (ScrVChat)",
+     "note": "Negative regularized partial correlation; no CI or p-value reported."
+    },
+    {
+     "iv": "vchat_t3",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 13 (PLE_21), column 5 (ScrVChat)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple5",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 7 (PLE_5), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple10",
+     "value": 0.004,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 8 (PLE_10), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple14",
+     "value": 0.024,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 9 (PLE_14), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple16",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 10 (PLE_16), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple19",
+     "value": 0.006,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 11 (PLE_19), column 6 (ScrSM)",
+     "note": "Nonzero edge retained by the graphical LASSO; no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple20",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 12 (PLE_20), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    },
+    {
+     "iv": "sm_t3",
+     "dv": "ple21",
+     "value": 0,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Table 4 (p. 6), row 13 (PLE_21), column 6 (ScrSM)",
+     "note": "Edge shrunk to exactly 0 by the graphical LASSO (printed as 0); no CI or p-value reported."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Edges between non-phone screen nodes (ScrOnlineV, ScrTV, ScrVG) and PLE items",
+   "location": "Tables 2-4 (pp. 5-6), columns 1-3, rows 7-13",
+   "why": "Online video, TV and video games (any device) are not phone/SM modalities under FT-IC2."
+  },
+  {
+   "model": "Edges among screen-time nodes (e.g. ScrText-ScrSM, ScrText-ScrVChat, ScrSM-ScrOnlineV)",
+   "location": "Tables 2-4, rows 1-6",
+   "why": "Both ends are screen-use variables; no individual-trait variable on the other side."
+  },
+  {
+   "model": "Edges among PLE items",
+   "location": "Tables 2-4, rows 7-13, columns 7-13",
+   "why": "No phone/SM variable involved."
+  },
+  {
+   "model": "Node centrality (expected influence, betweenness, closeness) for ScrText, ScrVChat, ScrSM",
+   "location": "Figs. 4, 6, 8 (pp. 6, 8, 10); Results 4.2, 4.4, 4.6",
+   "why": "Node-level summaries across all connections (including to other screen nodes), not a phone/SM-to-trait association; values shown only as standardized points in figures. Authors deem betweenness and closeness unreliable (CS 0-0.28). Texting's high expected influence is driven mainly by its edges to other screen nodes."
+  },
+  {
+   "model": "Bridge centrality (bridge expected influence, betweenness, closeness) for phone/SM nodes",
+   "location": "Figs. 5, 7, 9 (pp. 7, 9, 11); Results 4.3, 4.5, 4.7",
+   "why": "Summed connections from each screen node to the whole PLE cluster, printed only as figure points with no table of values. Not a pairwise estimate. Bridge EI stability was 0.52 (T1), 0.44 (T2), 0.21 (T3, below the acceptable threshold). Could be revisited at a later review level if read off the figures."
+  },
+  {
+   "model": "Network Comparison Test across waves",
+   "location": "Results 4.8 (p. 8)",
+   "why": "Global tests of network structure (M = 0.13, p = .005 for T1 vs T2; M = 0.10, p = .29 for T2 vs T3; M = 0.16, p = .007 for T1 vs T3) and global strength (p = .50, .43, .19). Whole-network statistics, not phone/SM-specific estimates."
+  },
+  {
+   "model": "Attrition t-tests",
+   "location": "Table 1 (p. 3)",
+   "why": "Compare screen-time and PLE variables between retained and lost participants; retention status is not an individual-trait outcome and these are sample-description checks."
+  },
+  {
+   "model": "Edge and centrality difference tests and stability plots",
+   "location": "Supplementary Figs. S7-S12 (online supplement, not bundled in this PDF)",
+   "why": "Bootstrapped difference tests between edges/centralities; not separate phone/SM-to-trait estimates, and not available in the PDF."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:regularized partial correlation (graphical LASSO edge weight)",
+  "conversion_formula": "None applied. Network edge weights are non-convertible under guidelines section 4a.",
+  "contrast_type": "Edge = partial correlation between a phone/SM screen-time node and a PLE item node at the same wave, conditional on the 11 other nodes and shrunk by L1 regularization; no unit contrast on the IV.",
+  "transformable": false,
+  "notes": "Guidelines section 4a lists network edge weights as non-convertible. Formally an edge is a partial correlation and r -> d (d = 2r / sqrt(1 - r^2)) could be applied, but the values are LASSO-shrunk (many set to exactly 0), conditioned on the other screen nodes and PLE items, and lack CIs and p-values, so a derived d would not be comparable to regression-based d's. No SDs for screen-time or PLE nodes are reported anywhere in the paper. All 63 phone/SM-PLE edges are small: the largest is 0.037 (video chat - somatic delusions, T3); the rest range from -0.007 to 0.031, and 35 are exactly 0."
+ },
+ "extraction_flags": "1. How the model card is built. There is one model card: a glasso network fit separately at T1, T2 and T3. It has 9 IV rows (texting, video chat and social media at each of the 3 waves) and 7 PLE item columns, so 63 edges. All edge values come from Tables 2-4. The 28 nonzero edges match the pdftotext output of the PDF; the 35 others are exactly 0. A reviewer might prefer three cards, one per wave.\n\n2. sig and p are null for every edge. The paper prints no p-values, CIs or significance flags for single edges; the bootnet difference tests are only in the supplement. If the renderer requires a boolean for sig, this needs fixing. Each edge's note says whether it was shrunk to 0 or kept as nonzero.\n\n3. Missing details:\n   - The paper does not say whether each screen node is weekday time, weekend time or a combination.\n   - It does not say whether each PLE node is the yes/no endorsement or the 1-5 distress rating, or why these 7 of the 21 PQ-BC items were chosen.\n   - Not reported: ABCD release, correlation type, lambda/EBIC tuning, per-wave N, missing-data handling, race/ethnicity breakdown, and any descriptives or SDs for the nodes.\n\n4. Design. The paper calls itself a \"longitudinal network analysis\", but it fits three same-wave networks. There are no cross-wave edges.\n\n5. Possible later use. Bridge expected influence and centrality for the phone/SM nodes appear only as figure points (Figs. 4-9) and were excluded. These figures are the authors' main interpretive output, so a later review level might want values read off them.\n\n6. All phone/SM-PLE edges are tiny (largest 0.037). The authors' claims about texting's centrality rest mostly on its edges to other screen nodes, not to PLEs.\n\n7. Cohen's d was not computed. Section 4a of the guidelines lists network edge weights as non-convertible."
+}

@@ -1,0 +1,268 @@
+{
+ "paper_id": "80",
+ "title": "Associations of Contemporary Screen Time Modalities With Early Adolescent Nutrition",
+ "doi": "10.1016/j.acap.2024.01.023",
+ "year": "2024",
+ "authors": "Nagata JM, Weinstein S, Bashir A, Lee S, Al-shoaibi AAA, Shao IY, Ganson KT, Testa A, He J, Garber AK",
+ "journal": "Academic Pediatrics",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted multivariable linear regression of year-1 MIND diet score on baseline (year 0) texting, video chat, or social media hours/day (prospective), adjusted for sociodemographics, depressive symptoms, parent monitoring, and site",
+   "location_in_paper": "Table 2, Prospective Analysis columns, rows Texting, Video chat, Social media (p. 752); Methods: Statistical Analysis (p. 751); Results p. 751; Discussion pp. 752-753",
+   "design": "Prospective (longitudinal) analysis with two waves. The IV is screen time at the ABCD baseline visit (year 0, 2016-2018, ages 9-10) and the DV is the MIND diet score from the caregiver-reported Child Nutrition Assessment at the 1-year follow-up (year 1, 2017-2019, ages 10-11). The outcome is a single follow-up measurement, not repeated measures. There is no baseline nutrition score (the nutrition assessment was only collected at year 1), so the model does not adjust for prior diet; the authors list this as a limitation. Each screen modality was entered in its own regression (the paper reports 16 separate regression models in Table 2: 7 continuous IVs plus the categorical total-screen-time IV, at each of two waves), so each phone/SM estimate comes from a model containing only that one modality plus covariates.",
+   "sample": "ABCD Release 4.0, baseline and 1-year follow-up. Analytic N = 8267 after excluding 3695 participants missing Youth Screen Time Survey, Child Nutrition Assessment, or demographic data (flowchart in Supplementary Appendix A, not bundled in the PDF). Baseline age 9.94 (SD 0.63) years; 49.0% female, 50.1% male; 56.9% White, 19.2% Latino/Hispanic, 14.3% Black, 5.4% Asian, 3.0% Native American, 1.3% Other (43.1% non-White). Household income: 15.3% <$25,000, 18.1% $25,000-$49,999, 15.7% $50,000-$74,999, 14.8% $75,000-$99,999, 26.9% $100,000-$199,999, 9.4% >=$200,000. 89.7% had a parent with college education or more. Percentages in Table 1 are propensity-weighted.",
+   "iv": "Baseline (year 0) self-reported hours per day on one phone/SM modality per model: texting, video chat (eg, Skype, FaceTime), or social media (eg, Facebook, Instagram, Twitter). Instrument: ABCD Youth Screen Time Survey, weekday and weekend items combined as a weighted daily average ([weekday x 5] + [weekend x 2]) / 7. Continuous, units of hours per day, so B is the change in MIND score per additional hour per day. Baseline distributions from Table 1: texting 0.23 (SD 0.53), video chat 0.19 (SD 0.47), social media 0.11 (SD 0.39) h/d. The same survey items are listed as the year-1 screen variables; texting and social media are activity-defined items (device not restricted to phone).",
+   "dv": "MIND (Mediterranean-DASH Intervention for Neurodegenerative Delay) diet sum score at the 1-year follow-up, from the parent-completed ABCD Child Nutrition Assessment, a 14-item food frequency questionnaire modeled on the MIND diet questionnaire (wine item omitted, so the maximum is 14). Items cover intake of protective food groups (whole grains, vegetables, berries, nuts, poultry, beans, fish, olive oil) and neurodegenerative food groups (fried foods, pastries and sweets, butter, cheese) over a week. Higher score indicates better diet quality. Table 1 reports MIND diet sum score 8.00 (SD 2.45); Results text says the average at year 1 was 8 points out of 14.",
+   "covariates": [
+    {
+     "name": "Race and ethnicity",
+     "detail": "Asian, Black, Latino, Native American, White, or other (parent report, baseline)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex at birth, male or female"
+    },
+    {
+     "name": "Age",
+     "detail": "Baseline age in years"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories: <$25K, $25K-$50K, $50K-$75K, $75K-$100K, $100K-$200K, >$200K"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, college education or more vs high school education or less"
+    },
+    {
+     "name": "Depressive symptoms",
+     "detail": "CBCL depressive problems T-score at baseline (Table 1 mean 53.8, SD 5.92)"
+    },
+    {
+     "name": "Parental monitoring",
+     "detail": "Parent Monitoring Scale sum score at baseline (Table 1 mean 4.38, SD 0.51)"
+    },
+    {
+     "name": "Study site",
+     "detail": "Listed as a covariate in the Table 2 footnote; the paper does not say whether it was entered as fixed effects or a random effect"
+    }
+   ],
+   "equation": "MIND_Y1[i] = b0 + b1*phoneSM_Y0[i] + b2*race_eth[i] + b3*sex[i] + b4*age[i] + b5*income[i] + b6*parent_ed[i] + b7*CBCL_depression[i] + b8*parent_monitoring[i] + b9*site[i] + e[i], where phoneSM_Y0 is one of texting, video chat, or social media hours/day at year 0 (separate model per modality), with ABCD propensity weights.",
+   "estimation": "Multivariable linear regression in Stata 15.1, with ABCD propensity weights applied to match the ACS (US Census) on key sociodemographic variables. The paper does not state the variance estimator, clustering by family, or how site was modeled. Significance at P < .05 (bold in Table 2). No multiple-comparison correction reported. No interaction or stratified analyses reported. Covariates measured at year 0.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "texting_y0",
+     "label": "Texting (year 0)",
+     "meta": "M = 0.23 h/day, SD = 0.53",
+     "sd_iv": 0.53
+    },
+    {
+     "id": "videochat_y0",
+     "label": "Video chat (year 0)",
+     "meta": "M = 0.19 h/day, SD = 0.47",
+     "sd_iv": 0.47
+    },
+    {
+     "id": "sm_y0",
+     "label": "Social media (year 0)",
+     "meta": "M = 0.11 h/day, SD = 0.39",
+     "sd_iv": 0.39
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "mind_y1",
+     "label": "MIND diet score (year 1)",
+     "sd_dv": 2.45,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting_y0",
+     "dv": "mind_y1",
+     "B": -0.09,
+     "B_lo": -0.22,
+     "B_hi": 0.04,
+     "p": 0.17,
+     "p_label": ".17",
+     "sig": false,
+     "location": "Table 2, Prospective Analysis, Texting row (p. 752)",
+     "derived_d": -0.0389,
+     "derived_d_lo": -0.0953,
+     "derived_d_hi": 0.0173,
+     "derived_d_method": "linear (SD_IV=0.53, SD_DV=2.45)"
+    },
+    {
+     "iv": "videochat_y0",
+     "dv": "mind_y1",
+     "B": 0.05,
+     "B_lo": -0.1,
+     "B_hi": 0.19,
+     "p": 0.53,
+     "p_label": ".53",
+     "sig": false,
+     "location": "Table 2, Prospective Analysis, Video chat row (p. 752)",
+     "derived_d": 0.0192,
+     "derived_d_lo": -0.0384,
+     "derived_d_hi": 0.0729,
+     "derived_d_method": "linear (SD_IV=0.47, SD_DV=2.45)"
+    },
+    {
+     "iv": "sm_y0",
+     "dv": "mind_y1",
+     "B": -0.12,
+     "B_lo": -0.29,
+     "B_hi": 0.05,
+     "p": 0.17,
+     "p_label": ".17",
+     "sig": false,
+     "location": "Table 2, Prospective Analysis, Social media row (p. 752)",
+     "derived_d": -0.0382,
+     "derived_d_lo": -0.0924,
+     "derived_d_hi": 0.0159,
+     "derived_d_method": "linear (SD_IV=0.39, SD_DV=2.45)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Weighted multivariable linear regression of year-1 MIND diet score on concurrent (year 1) texting, video chat, or social media hours/day (cross-sectional), adjusted for sociodemographics, depressive symptoms, parent monitoring, and site",
+   "location_in_paper": "Table 2, Cross-Sectional Analysis columns, rows Texting, Video chat, Social media (p. 752); Figure panels E (texting) and F (social media) show adjusted predicted MIND scores from the same models (p. 750); Results p. 751; Discussion p. 752 (texting and social media associated with lower nutrition cross-sectionally, with stronger associations than television)",
+   "design": "Cross-sectional analysis at the 1-year follow-up: screen time at year 1 and MIND diet score at year 1, measured at the same visit. Covariates are baseline (year 0) values. One observation per participant. As in M1, each modality was entered in its own regression.",
+   "sample": "Same analytic sample as M1: ABCD Release 4.0, N = 8267, ages 10-11 at year 1 (baseline age 9.94, SD 0.63); same sex, race/ethnicity, income, and parent-education distribution as M1.",
+   "iv": "Year-1 self-reported hours per day on one phone/SM modality per model: texting, video chat, or social media, from the ABCD Youth Screen Time Survey, weekday/weekend weighted daily average ([weekday x 5] + [weekend x 2]) / 7. Continuous, hours per day. Year-1 distributions from Table 1: texting 0.41 (SD 0.73), video chat 0.28 (SD 0.63), social media 0.23 (SD 0.60) h/d.",
+   "dv": "Same as M1: year-1 MIND diet sum score (0-14) from the caregiver-reported Child Nutrition Assessment; Table 1 mean 8.00 (SD 2.45).",
+   "covariates": [
+    {
+     "name": "Same 8 covariates as M1",
+     "detail": "Race/ethnicity, sex, age, household income, parent education, CBCL depressive problems T-score, parent monitoring sum score, study site; all measured at year 0"
+    }
+   ],
+   "equation": "MIND_Y1[i] = b0 + b1*phoneSM_Y1[i] + b2*race_eth[i] + b3*sex[i] + b4*age[i] + b5*income[i] + b6*parent_ed[i] + b7*CBCL_depression[i] + b8*parent_monitoring[i] + b9*site[i] + e[i], where phoneSM_Y1 is one of texting, video chat, or social media hours/day at year 1 (separate model per modality), with ABCD propensity weights.",
+   "estimation": "Same estimation as M1: multivariable linear regression in Stata 15.1 with ABCD propensity weights (ACS-matched); P < .05; no multiple-comparison correction; no interaction tests. After these cross-sectional regressions the authors computed marginal predicted values (described as predicted probabilities) of MIND score across 0-6 h/day of each modality and plotted them with 95% CIs in the Figure for significant modalities (texting panel E, social media panel F).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "texting_y1",
+     "label": "Texting (year 1)",
+     "meta": "M = 0.41 h/day, SD = 0.73",
+     "sd_iv": 0.73
+    },
+    {
+     "id": "videochat_y1",
+     "label": "Video chat (year 1)",
+     "meta": "M = 0.28 h/day, SD = 0.63",
+     "sd_iv": 0.63
+    },
+    {
+     "id": "sm_y1",
+     "label": "Social media (year 1)",
+     "meta": "M = 0.23 h/day, SD = 0.60",
+     "sd_iv": 0.6
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "mind_y1",
+     "label": "MIND diet score (year 1)",
+     "sd_dv": 2.45,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting_y1",
+     "dv": "mind_y1",
+     "B": -0.15,
+     "B_lo": -0.24,
+     "B_hi": -0.05,
+     "p": 0.01,
+     "p_label": ".01",
+     "sig": true,
+     "location": "Table 2, Cross-Sectional Analysis, Texting row (p. 752)",
+     "note": "Also reported in Results text p. 751 and shown in Figure panel E.",
+     "derived_d": -0.0895,
+     "derived_d_lo": -0.1434,
+     "derived_d_hi": -0.0298,
+     "derived_d_method": "linear (SD_IV=0.73, SD_DV=2.45)"
+    },
+    {
+     "iv": "videochat_y1",
+     "dv": "mind_y1",
+     "B": -0.09,
+     "B_lo": -0.19,
+     "B_hi": 0.02,
+     "p": 0.1,
+     "p_label": ".10",
+     "sig": false,
+     "location": "Table 2, Cross-Sectional Analysis, Video chat row (p. 752)",
+     "derived_d": -0.0463,
+     "derived_d_lo": -0.0978,
+     "derived_d_hi": 0.0103,
+     "derived_d_method": "linear (SD_IV=0.63, SD_DV=2.45)"
+    },
+    {
+     "iv": "sm_y1",
+     "dv": "mind_y1",
+     "B": -0.16,
+     "B_lo": -0.28,
+     "B_hi": -0.05,
+     "p": 0.01,
+     "p_label": ".01",
+     "sig": true,
+     "location": "Table 2, Cross-Sectional Analysis, Social media row (p. 752)",
+     "note": "Also reported in Results text p. 751 and shown in Figure panel F.",
+     "derived_d": -0.0784,
+     "derived_d_lo": -0.1375,
+     "derived_d_hi": -0.0245,
+     "derived_d_method": "linear (SD_IV=0.6, SD_DV=2.45)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Total screen time (continuous) regressions, prospective and cross-sectional",
+   "location": "Table 2, Total screen time row (p. 752)",
+   "why": "Composite of TV/movies, videos, video games, texting, video chat, and social media; includes non-phone/non-SM ingredients. Fails FT-IC2 Step 2 (phone/SM modalities are extracted separately in M1/M2)."
+  },
+  {
+   "model": "Total screen time categories (0-2 reference, >2-4, >4-6, >6 h/d), prospective and cross-sectional",
+   "location": "Table 2, Total screen time categories rows (p. 752)",
+   "why": "Same mixed composite as above, categorized. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Television, video games, and videos (YouTube) regressions, prospective and cross-sectional",
+   "location": "Table 2, rows Television, Video games, Videos (YouTube) (p. 752)",
+   "why": "Non-phone/non-SM modalities."
+  },
+  {
+   "model": "Baseline total screen time plus change in total screen time (year 0 to year 1) predicting year-1 MIND score",
+   "location": "Table 3 (p. 752)",
+   "why": "Both IVs are mixed total-screen-time composites; no per-modality phone/SM terms."
+  },
+  {
+   "model": "Adjusted predicted MIND scores by hours/day of each significant modality",
+   "location": "Figure, panels A-F (p. 750)",
+   "why": "Panels E (texting) and F (social media) are graphical marginal predictions from the M2 cross-sectional models, not separate analyses; no new numeric estimates beyond the Table 2 coefficients. Panels A-D are total screen time, TV, video games, and videos."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized linear regression coefficient, MIND score points per hour/day)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). CI endpoints converted the same way.",
+  "contrast_type": "per 1 SD of the IV (hours/day of the modality at the wave of measurement), derived from per-1-hour/day B",
+  "transformable": true,
+  "notes": "SD_IV from Table 1 (p. 751): baseline texting 0.53, video chat 0.47, social media 0.39 h/d (used for M1); year-1 texting 0.73, video chat 0.63, social media 0.60 h/d (used for M2). SD_DV = 2.45 from Table 1 'MIND diet sum score 8.00 (2.45)'. That row sits under the 'Sociodemographic Characteristics (Baseline)' heading, but the MIND score was only collected at year 1 (Results text: average at year 1 was 8 points out of 14), so it is taken as the year-1 outcome SD for the analytic sample. Table 1 values are propensity-weighted. Each B comes from a single-modality model, so it is not mutually adjusted for the other screen modalities."
+ },
+ "extraction_flags": "The PDF at the listed path is the wrong paper...) is actually Nagata et al., \"Neighborhood Quality and Screen Use\", Acad Pediatr 2026;26:103164...), and the extraction comes from that file. The copy in docs/pdfs should be replaced; I did not change it. The same mismatch exists in the archive data/pdfs/ folder, so other papers' PDFs may have been swapped the same way.\n\nOn the extraction: the prospective model (year-0 IV) and the cross-sectional model (year-1 IV) are split into M1 and M2 because they have different designs. The authors interpret both, but stress the cross-sectional findings for texting and social media. Texting and social media are significant only cross-sectionally (M2). In the prospective model (M1) all phone/SM estimates are null.\n\nThree things need human checks:\n- SD_DV = 2.45 is the Table 1 \"MIND diet sum score\" row. It sits under the \"Baseline\" heading, but MIND was only measured at year 1, so the label is ambiguous.\n- How study site was modeled (fixed or random) is not stated.\n- Supplementary Appendix A (the exclusion flowchart) is not bundled in the PDF.\n\nEach modality is its own single-IV regression, so the estimates are not mutually adjusted for other modalities. All 6 B values, CIs, p-values and all 6 SD_IV values were checked against Table 2 and Table 1."
+}

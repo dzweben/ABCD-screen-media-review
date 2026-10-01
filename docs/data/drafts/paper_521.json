@@ -1,0 +1,383 @@
+{
+ "paper_id": "521",
+ "title": "Passive and social screen time in children with autism and in association with obesity",
+ "doi": "10.3389/fped.2023.1198033",
+ "year": "2023",
+ "authors": "Must A, Eliasziw M, Stanish H, Curtin C, Bandini LG, Bowling A",
+ "journal": "Frontiers in Pediatrics",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Poisson GEE (log link) of child-reported social/video chat and texting minutes per day on autism status, crossed with gender, in a propensity-matched sample",
+   "location_in_paper": "Table 2, rows 'Social and video chat minutes per day' and 'Texting minutes per day' (p. 5); methods p. 3; results p. 4; discussed pp. 6 and 8 (higher social screen time in girls with autism).",
+   "design": "Cross-sectional, ABCD baseline only. Phone/SM use is the dependent variable and autism status (parent-reported diagnosis) is the independent variable. One observation per child; clustering within study site handled by GEE. For each screen-time category a separate model was fit with two fully crossed factors (gender and autism status), and the autism-vs-TD contrast is reported separately for boys and for girls.",
+   "sample": "ABCD baseline (enrollment September 2016 to October 2018, 21 U.S. sites); data release not stated. 10,842 children were included, of whom 187 (1.7%) had parent-reported autism. Propensity-score matching (1:5 nine-digit greedy match) produced an analytic sample of 186 children with autism and 930 typically developing (TD) children (N = 1,116); one child with autism could not be matched and was dropped. Matched sample (Table 1, p. 4): age 9 years 45.2%, 10 years 54.8%; mean age 10.0 (SD 0.6); 85.5% boys (159 autism, 795 TD) and 14.5% girls (27 autism, 135 TD); 53.8% non-Hispanic White, 15.6% Hispanic, 13.4% non-Hispanic Black, 1.6% non-Hispanic Asian, 15.6% non-Hispanic other/multi-race; distributions identical across autism and TD groups by design. 35 of 186 (18.8%) children with autism and 134 of 930 (14.4%) TD children were obese. Cell sizes in this model: boys 159 autism vs 795 TD; girls 27 autism vs 135 TD.",
+   "iv": "Autism status (yes/no), from a single parent-report item on the ABCD screening questionnaire ('Has your child been diagnosed with autism spectrum disorder?'). Children not reporting autism were classified as typically developing. The contrast is autism vs TD, estimated within boys and within girls.",
+   "dv": "Two phone/SM screen-time categories from the child-reported ABCD Youth Screen Time Survey, each in minutes per day: (1) social and video chat = visiting social networking sites (e.g., Facebook, Twitter, Instagram) plus video chatting; (2) texting. The 7-point responses (none, <30 min, 30 min, 1 h, 2 h, 3 h, 4+ h) were recoded to 0, 15, 30, 60, 120, 180, 240 min, and daily time = [(weekday x 5) + (weekend x 2)]/7. Overall sample means: 17.1 min/day social networking or video chat and 12.4 min/day texting (p. 4). Group means are in Table 2: social/video chat boys 16.9 (autism) vs 15.5 (TD), girls 45.5 vs 21.9; texting boys 11.4 vs 12.5, girls 14.6 vs 13.8. SDs not reported.",
+   "covariates": [
+    {
+     "name": "Gender",
+     "detail": "Boy/girl, entered as a factor fully crossed with autism status; autism contrasts reported within each gender"
+    },
+    {
+     "name": "Propensity-score matching (design, not covariates)",
+     "detail": "Matched on child age, gender, race/ethnicity and household socioeconomic position (SEP score 1-10 from household education and income); authors state no further covariate adjustment was needed"
+    },
+    {
+     "name": "Study site",
+     "detail": "Within-site clustering handled by GEE compound-symmetry working correlation (not a covariate)"
+    }
+   ],
+   "equation": "log(E[minutes_per_day[i,site]]) = b0 + b1*autism[i] + b2*girl[i] + b3*autism[i]*girl[i]; ratio of means autism vs TD = exp(b1) for boys and exp(b1 + b3) for girls; Poisson GEE, compound-symmetry working correlation within site. Fit separately for social/video chat minutes and texting minutes.",
+   "estimation": "SAS 9.4. Generalized linear models estimated with generalized estimating equations; Poisson distribution with log link chosen because screen time was count-like and positively skewed; compound-symmetry working correlation for within-site clustering. Effect reported as ratio of means (autism / TD) with 95% CI. Alpha = 0.05; no multiple-comparison correction. No sample or propensity weights beyond 1:5 matching. No sensitivity analyses reported.",
+   "native_metric": "other:ratio_of_means",
+   "iv_axis": [
+    {
+     "id": "autism_boys",
+     "label": "Autism vs TD, boys",
+     "meta": "159 autism vs 795 TD",
+     "sd_iv": null
+    },
+    {
+     "id": "autism_girls",
+     "label": "Autism vs TD, girls",
+     "meta": "27 autism vs 135 TD",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "svc_min",
+     "label": "Social and video chat (min/day)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "text_min",
+     "label": "Texting (min/day)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "autism_boys",
+     "dv": "svc_min",
+     "value": 1.09,
+     "value_lo": 0.67,
+     "value_hi": 1.76,
+     "p": 0.74,
+     "p_label": "0.74",
+     "sig": false,
+     "location": "Table 2, Social and video chat, Boy",
+     "note": "Means 16.9 (autism) vs 15.5 (TD) min/day."
+    },
+    {
+     "iv": "autism_girls",
+     "dv": "svc_min",
+     "value": 2.08,
+     "value_lo": 1.01,
+     "value_hi": 4.28,
+     "p": 0.04,
+     "p_label": "0.04",
+     "sig": true,
+     "location": "Table 2, Social and video chat, Girl",
+     "note": "Means 45.5 (autism) vs 21.9 (TD) min/day. Authors interpret as girls with autism spending 108% more time on social networking/video chat."
+    },
+    {
+     "iv": "autism_boys",
+     "dv": "text_min",
+     "value": 0.91,
+     "value_lo": 0.61,
+     "value_hi": 1.36,
+     "p": 0.65,
+     "p_label": "0.65",
+     "sig": false,
+     "location": "Table 2, Texting, Boy",
+     "note": "Means 11.4 (autism) vs 12.5 (TD) min/day."
+    },
+    {
+     "iv": "autism_girls",
+     "dv": "text_min",
+     "value": 1.06,
+     "value_lo": 0.63,
+     "value_hi": 1.77,
+     "p": 0.83,
+     "p_label": "0.83",
+     "sig": false,
+     "location": "Table 2, Texting, Girl",
+     "note": "Means 14.6 (autism) vs 13.8 (TD) min/day."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Log-binomial GEE of obesity on categorized social/video chat and texting duration, crossed with autism status, in a propensity-matched sample",
+   "location_in_paper": "Table 3 (all children, p. 5) and Table 5 (stratified by autism status, p. 6); methods p. 3; results p. 4; abstract and Discussion section 4.2 (p. 7).",
+   "design": "Cross-sectional, ABCD baseline only. Phone/SM duration category is the independent variable and obesity (yes/no) the dependent variable. One observation per child; within-site clustering handled by GEE. For each screen-time category a separate model was fit with two fully crossed factors (three-level duration category and autism status). Table 3 reports duration effects for all children; Table 5 reports them separately for children with autism and TD children. Duration x autism interactions were all non-significant (p > 0.05), so the authors anchor on the all-children estimates in Table 3 and describe Tables 4-5 as showing similar patterns.",
+   "sample": "ABCD baseline (enrollment September 2016 to October 2018, 21 U.S. sites); data release not stated. 10,842 children were included, of whom 187 (1.7%) had parent-reported autism. Propensity-score matching (1:5 nine-digit greedy match) produced an analytic sample of 186 children with autism and 930 typically developing (TD) children (N = 1,116); one child with autism could not be matched and was dropped. Matched sample (Table 1, p. 4): age 9 years 45.2%, 10 years 54.8%; mean age 10.0 (SD 0.6); 85.5% boys (159 autism, 795 TD) and 14.5% girls (27 autism, 135 TD); 53.8% non-Hispanic White, 15.6% Hispanic, 13.4% non-Hispanic Black, 1.6% non-Hispanic Asian, 15.6% non-Hispanic other/multi-race; distributions identical across autism and TD groups by design. 35 of 186 (18.8%) children with autism and 134 of 930 (14.4%) TD children were obese. Table 3 cell sizes: social/video chat 0 min n = 670, 1-44 min n = 338, 45+ min n = 108; texting 0 min n = 671, 1-29 min n = 306, 30+ min n = 139. Table 5: autism social/video chat 119/45/22, TD 551/293/86; autism texting 121/45/20, TD 550/261/119.",
+   "iv": "Three-category daily duration of each phone/SM screen type, derived from the child-reported ABCD Youth Screen Time Survey (weighted daily minutes = [(weekday x 5) + (weekend x 2)]/7, responses recoded 0-240 min). Social and video chat (social networking sites plus video chat): 0 min (reference), 1-44 min, 45 min or more. Texting: 0 min (reference), 1-29 min, 30 min or more. Each non-zero category is contrasted with the 0-min reference.",
+   "dv": "Obesity (binary): sex- and age-specific BMI z-score at or above the 95th percentile of the CDC 2000 growth reference, from measured height and weight (average of up to three measurements). Prevalence in the matched sample 15.1% overall (169/1,116; 18.8% autism, 14.4% TD). Reference-group (0 min) prevalences printed in Tables 3 and 5 are used as p0 per estimate.",
+   "covariates": [
+    {
+     "name": "Autism status",
+     "detail": "Factor fully crossed with duration category; in Table 5 estimates are within autism and within TD strata"
+    },
+    {
+     "name": "Propensity-score matching (design, not covariates)",
+     "detail": "Matched on age, gender, race/ethnicity and SEP; no other covariates in the obesity models"
+    },
+    {
+     "name": "Study site",
+     "detail": "Within-site clustering via GEE compound-symmetry working correlation"
+    }
+   ],
+   "equation": "log(P(obese[i,site]=1)) = b0 + b1*dur_low[i] + b2*dur_high[i] + b3*autism[i] + b4*dur_low[i]*autism[i] + b5*dur_high[i]*autism[i]; prevalence ratio = exp(coefficient) for each duration category vs 0 min; binomial GEE with log link, compound-symmetry working correlation within site. Fit separately for social/video chat and for texting.",
+   "estimation": "SAS 9.4. GEE with binomial distribution and log link (log-binomial), compound-symmetry working correlation for within-site clustering. Effects reported as prevalence ratios with 95% CI, each non-zero duration category vs 0 min, plus an overall (omnibus) p-value per screen type. Alpha = 0.05; no multiple-comparison correction. Duration x autism interactions all p > 0.05 (values not printed). No covariates beyond matching; no weights. No sensitivity analyses reported. Printed prevalences (e.g., Table 5 autism texting 30+ min: 5 of 20 shown as 23.9%) do not equal raw n/N, suggesting model-based prevalences.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "svc_1_44",
+     "label": "Social/video chat 1-44 min vs 0 min",
+     "meta": "per-day duration category",
+     "sd_iv": null
+    },
+    {
+     "id": "svc_45",
+     "label": "Social/video chat 45+ min vs 0 min",
+     "meta": "per-day duration category",
+     "sd_iv": null
+    },
+    {
+     "id": "text_1_29",
+     "label": "Texting 1-29 min vs 0 min",
+     "meta": "per-day duration category",
+     "sd_iv": null
+    },
+    {
+     "id": "text_30",
+     "label": "Texting 30+ min vs 0 min",
+     "meta": "per-day duration category",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "obese_all",
+     "label": "Obesity, all children",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "obese_autism",
+     "label": "Obesity, children with autism",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "obese_td",
+     "label": "Obesity, typically developing",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "svc_1_44",
+     "dv": "obese_all",
+     "RR": 1.08,
+     "RR_lo": 0.8,
+     "RR_hi": 1.46,
+     "p": 0.61,
+     "p_label": "0.61",
+     "sig": false,
+     "p0": 0.148,
+     "location": "Table 3, Social and video chat, 1-44 min",
+     "note": "Prevalence ratio. Reference (0 min) prevalence 14.8%. Overall p for social/video chat = 0.58."
+    },
+    {
+     "iv": "svc_45",
+     "dv": "obese_all",
+     "RR": 1.2,
+     "RR_lo": 0.84,
+     "RR_hi": 1.73,
+     "p": 0.32,
+     "p_label": "0.32",
+     "sig": false,
+     "p0": 0.148,
+     "location": "Table 3, Social and video chat, 45 min or more",
+     "note": "Prevalence ratio; 17.8% obese vs 14.8% in reference."
+    },
+    {
+     "iv": "text_1_29",
+     "dv": "obese_all",
+     "RR": 0.88,
+     "RR_lo": 0.66,
+     "RR_hi": 1.17,
+     "p": 0.37,
+     "p_label": "0.37",
+     "sig": false,
+     "p0": 0.152,
+     "location": "Table 3, Texting, 1-29 min",
+     "note": "Prevalence ratio. Reference prevalence 15.2%. Overall p for texting = 0.04 in Table 3 and Results text; abstract states 0.02."
+    },
+    {
+     "iv": "text_30",
+     "dv": "obese_all",
+     "RR": 1.42,
+     "RR_lo": 1.0,
+     "RR_hi": 2.01,
+     "p": 0.05,
+     "p_label": "0.05",
+     "sig": false,
+     "p0": 0.152,
+     "location": "Table 3, Texting, 30 min or more",
+     "note": "Prevalence ratio; 21.5% vs 15.2%. Printed p = 0.05 with CI lower bound 1.00; pairwise significance borderline. The omnibus texting test (overall p = 0.04) is significant and the authors report texting as significantly associated with obesity."
+    },
+    {
+     "iv": "svc_1_44",
+     "dv": "obese_autism",
+     "RR": 1.13,
+     "RR_lo": 0.49,
+     "RR_hi": 2.62,
+     "p": 0.77,
+     "p_label": "0.77",
+     "sig": false,
+     "p0": 0.176,
+     "location": "Table 5, Social and video chat, children with autism, 1-44 min",
+     "note": "Reference prevalence 17.6%. Overall p = 0.82."
+    },
+    {
+     "iv": "svc_45",
+     "dv": "obese_autism",
+     "RR": 1.29,
+     "RR_lo": 0.56,
+     "RR_hi": 2.98,
+     "p": 0.54,
+     "p_label": "0.54",
+     "sig": false,
+     "p0": 0.176,
+     "location": "Table 5, Social and video chat, children with autism, 45 min or more"
+    },
+    {
+     "iv": "svc_1_44",
+     "dv": "obese_td",
+     "RR": 1.08,
+     "RR_lo": 0.77,
+     "RR_hi": 1.53,
+     "p": 0.65,
+     "p_label": "0.65",
+     "sig": false,
+     "p0": 0.142,
+     "location": "Table 5, Social and video chat, typically developing, 1-44 min",
+     "note": "Reference prevalence 14.2%. Overall p = 0.80."
+    },
+    {
+     "iv": "svc_45",
+     "dv": "obese_td",
+     "RR": 1.17,
+     "RR_lo": 0.69,
+     "RR_hi": 1.97,
+     "p": 0.56,
+     "p_label": "0.56",
+     "sig": false,
+     "p0": 0.142,
+     "location": "Table 5, Social and video chat, typically developing, 45 min or more"
+    },
+    {
+     "iv": "text_1_29",
+     "dv": "obese_autism",
+     "RR": 1.34,
+     "RR_lo": 0.78,
+     "RR_hi": 2.3,
+     "p": 0.29,
+     "p_label": "0.29",
+     "sig": false,
+     "p0": 0.166,
+     "location": "Table 5, Texting, children with autism, 1-29 min",
+     "note": "Reference prevalence 16.6%. Overall p = 0.42."
+    },
+    {
+     "iv": "text_30",
+     "dv": "obese_autism",
+     "RR": 1.44,
+     "RR_lo": 0.59,
+     "RR_hi": 3.47,
+     "p": 0.42,
+     "p_label": "0.42",
+     "sig": false,
+     "p0": 0.166,
+     "location": "Table 5, Texting, children with autism, 30 min or more",
+     "note": "n = 20 in exposure category."
+    },
+    {
+     "iv": "text_1_29",
+     "dv": "obese_td",
+     "RR": 0.79,
+     "RR_lo": 0.55,
+     "RR_hi": 1.13,
+     "p": 0.19,
+     "p_label": "0.19",
+     "sig": false,
+     "p0": 0.148,
+     "location": "Table 5, Texting, typically developing, 1-29 min",
+     "note": "Reference prevalence 14.8%. Overall p = 0.01."
+    },
+    {
+     "iv": "text_30",
+     "dv": "obese_td",
+     "RR": 1.42,
+     "RR_lo": 0.97,
+     "RR_hi": 2.08,
+     "p": 0.07,
+     "p_label": "0.07",
+     "sig": false,
+     "p0": 0.148,
+     "location": "Table 5, Texting, typically developing, 30 min or more"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Ratio of means for TV/movies/videos and video-game minutes by autism status and gender",
+   "location": "Table 2, first two screen types (p. 5)",
+   "why": "Non-phone/non-SM modalities (passive viewing, video games). Fail FT-IC2."
+  },
+  {
+   "model": "Obesity prevalence ratios for TV/movies/videos and video-game duration",
+   "location": "Table 3 first two panels (p. 5); Table 4 (p. 5)",
+   "why": "Non-phone/non-SM modalities. Table 4 is entirely passive viewing and video games."
+  },
+  {
+   "model": "Propensity-score model for autism status",
+   "location": "Methods 2.6 (p. 3)",
+   "why": "Binomial GEE predicting autism from age, gender, race/ethnicity and SEP, used only to build the matched sample; no phone/SM variable."
+  },
+  {
+   "model": "Screen-time duration x autism status interaction tests for obesity",
+   "location": "Results p. 4 (in text)",
+   "why": "Reported only as 'all p-values > 0.05'; no interaction estimates printed. Stratified estimates are captured in M2 (Table 5)."
+  },
+  {
+   "model": "Overall (omnibus) p-values per screen type",
+   "location": "Table 3 and Table 5 panel headers",
+   "why": "Type-3 style tests across duration categories with no effect estimate; recorded in M2 estimate notes rather than as separate cells."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: ratio of means (Poisson GEE, log link); M2: prevalence ratio (log-binomial GEE)",
+  "conversion_formula": "M2: OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3)/pi (Chinn 2000), with p0 = printed obesity prevalence in the 0-min reference category of the same panel. M1: if treated as a Poisson rate ratio per guidelines \u00a74a, d ~ ln(ratio) * sqrt(3)/pi as a first approximation; an exact d = (M_autism - M_TD)/SD_pooled is not possible because SDs of minutes/day are not reported.",
+  "contrast_type": "M1: autism vs typically developing (within boys, within girls), on phone/SM minutes per day. M2: duration category (1-44 or 45+ min social/video chat; 1-29 or 30+ min texting) vs 0 min, on obesity.",
+  "transformable": "partial",
+  "notes": "p0 for M2 comes from the reference-row prevalences in Table 3 (14.8% social/video chat, 15.2% texting) and Table 5 (autism 17.6% / TD 14.2% social/video chat; autism 16.6% / TD 14.8% texting), p. 5-6. Exposure prevalence is not small (e.g., 30+ min texting 12.5% of sample) but p0 is the unexposed-group rate, so the RR-to-OR conversion is exact under the guideline formula. M1 has no SD for any DV (only group means in Table 2), so its d is only the Poisson-rate-ratio approximation, which is weak for skewed continuous minutes; treat M1 d's with caution. Neither contrast is a per-SD contrast, so these d's are not directly comparable to per-SD d's from papers like 394."
+ },
+ "extraction_flags": "1) M1 (Table 2) treats phone/SM minutes as the DV and parent-reported autism status as the IV. Autism counts as a clinical-diagnosis trait, so it qualifies, but please confirm. The native metric is a Poisson-GEE ratio of means. No SDs are reported for minutes/day, so d can only be approximated by the rough rate-ratio-as-OR route, which makes M1 effectively non-convertible. 2) \"Social and video chat\" combines social networking sites with video chat. That composite is entirely phone/SM, so it is extracted as a qualifying IV/DV. 3) The overall p-value for texting and obesity conflicts within the paper: the abstract says 0.02, while Table 3 and the Results text say 0.04. Separately, the pairwise texting 30+ min PR is 1.42 (1.00-2.01) with printed p = 0.05, which I coded sig=false. Please check that call. 4) The paper does not say whether Table 3's all-children PRs come from a model that includes the autism factor or are marginal. Tables 3 and 5 are in one card (M2), with obesity columns for all children, autism and TD. p0 varies by panel, so I put it on each estimate (reference-row prevalence) and left it null on dv_axis. Please confirm the pipeline reads p0 per estimate. 5) The printed prevalences do not equal raw n/N (for example 5/20 is shown as 23.9%), which suggests they are model-based. 6) The ABCD data release is not stated. There are no covariates beyond propensity matching on age, gender, race/ethnicity and SEP, and no multiple-comparison correction."
+}

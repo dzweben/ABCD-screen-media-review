@@ -1,0 +1,185 @@
+{
+ "paper_id": "136",
+ "title": "Examining the Bidirectional Associations Between Sleep Duration, Screen Time, and Internalizing Symptoms in the ABCD Study",
+ "doi": "10.1016/j.jadohealth.2023.09.001",
+ "year": "2024",
+ "authors": "Zink J, O'Connor SG, Blachman-Demner DR, Wolff-Hughes DL, Berrigan D",
+ "journal": "Journal of Adolescent Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Exploratory multilevel logistic regression of follow-up withdrawn/depressed symptoms (CBCL t >= 65) on baseline weekend screen-time categories, including texting, video chatting and social networking (supplementary Table A7; values not in the available PDF)",
+   "location_in_paper": "Supplementary Table A7 (online supplement only; not bundled in the local PDF). Described in Discussion p. 501, right column: exploratory analyses of weekend screen-time categories and withdrawn/depressed symptoms, reported as not associated.",
+   "design": "Prospective longitudinal, two waves. Baseline (ABCD Y0, age ~9.9) weekend screen-time category predicts withdrawn/depressed symptoms at the one-year follow-up (Y1, age ~10.9). Single follow-up outcome, not repeated measures. The exploratory analysis was run to unpack the main finding that >2 h/day of total weekend screen time predicted withdrawn/depressed symptoms in females (Table 3). The Discussion does not state whether the A7 models were female-only, gender-stratified, adjusted, or whether categories entered separately or simultaneously; all of this needs checking against Table A7.",
+   "sample": "ABCD Release 4.0 (September 2021), baseline and one-year follow-up, collected before the COVID-19 pandemic. Main analytic N = 10,828 with complete exposure and outcome data at both time points and complete baseline covariates; 243 youth reporting >18 h/day total screen time on weekdays or weekends were removed beforehand. Analyses stratified by gender: females N = 5,177, males N = 5,651 (gender queer N = 2 and different gender N = 4 not analyzed). Mean age 9.9 (SD 0.6) at baseline; 54.3% non-Hispanic White, 19.8% Hispanic, 13.3% non-Hispanic Black, 10.4% other/mixed race, 2.2% non-Hispanic Asian (Table 1). The N for Table A7 is not known from the PDF; the Discussion context suggests females (N = 5,177).",
+   "iv": "Baseline weekend screen time by category from the ABCD Youth Screen Time Survey, youth self-report of usual hours/day for six screen types (TV shows or movies; watching/streaming videos such as YouTube; videogames; texting; video chatting; social networking sites), with response options none, <30 minutes, 1 hour, 2 hours, 3 hours, 4+ hours. Only texting, video chatting and social networking qualify as phone/SM IVs here; the TV, video and videogame categories are excluded below. How each category was coded in Table A7 (hours/day continuous or dichotomized) is not stated in the PDF. No per-category descriptive statistics are printed in the main text.",
+   "dv": "Withdrawn/depressed symptoms at one-year follow-up, caregiver-reported CBCL/4-18 subscale t-score (mean 50, SD 10), dichotomized at >= 65 (borderline clinical and above, at or above the 93rd percentile) vs < 65. Follow-up prevalence: females 282 (5.5%), males 550 (9.7%); baseline prevalence females 236 (4.6%), males 529 (9.4%) (Table 2).",
+   "covariates": [
+    {
+     "name": "Baseline withdrawn/depressed (t >= 65)",
+     "detail": "Respective outcome at baseline, as in the main adjusted models (assumed; confirm in Table A7 note)"
+    },
+    {
+     "name": "Baseline sleep duration",
+     "detail": "9-11 h/night vs < 9 h/night, caregiver-reported (main adjusted models; inclusion in A7 unconfirmed)"
+    },
+    {
+     "name": "Age",
+     "detail": "Continuous, years at baseline"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Non-Hispanic Asian, non-Hispanic Black, Hispanic, Other (including mixed race), non-Hispanic White"
+    },
+    {
+     "name": "Income-to-needs ratio",
+     "detail": "Categorical: <= 0.99, 1.00-1.99, 2.00-3.99, >= 4.00, not reported"
+    },
+    {
+     "name": "Overweight/obesity",
+     "detail": "BMI >= 85th percentile vs < 85th (CDC 2000 growth charts), staff-measured height and weight"
+    },
+    {
+     "name": "Physical activity",
+     "detail": "YRBSS item, days/week with >= 60 min activity, continuous"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random effect"
+    }
+   ],
+   "equation": "logit(P(WithDep_t65[i, Y1] = 1)) = b0 + b1*WeekendCategory[i, Y0] + (b2*SleepDuration[i, Y0]) + b3*WithDep_t65[i, Y0] + b4*age + b5..b8*race/ethnicity + b9..b12*income-to-needs + b13*overweight/obesity + b14*physical_activity + u_site(i) + e[i]. Covariate set is taken from the main adjusted models and is unconfirmed for Table A7; whether the screen categories enter one at a time or jointly is unknown.",
+   "estimation": "Multilevel logistic regression with study site as a random effect, SAS GLIMMIX procedure, SAS version 9.4. All analyses performed separately by gender a priori. No multiple-comparison correction reported; significance flagged at p < .05. Main models: sleep duration, weekday and weekend screen time as simultaneous predictors; sleep x screen-time interactions tested and not significant. Sensitivity analyses (survey-weighted SAS SURVEYLOGISTIC with ACS-raked weights, Tables A1-A2; pubertal status instead of age, Tables A3-A4; continuous CBCL t-scores, Tables A5-A6) all use the total screen time composite.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "we_text",
+     "label": "Weekend texting",
+     "meta": "coding in A7 unknown",
+     "sd_iv": null
+    },
+    {
+     "id": "we_vc",
+     "label": "Weekend video chatting",
+     "meta": "coding in A7 unknown",
+     "sd_iv": null
+    },
+    {
+     "id": "we_sns",
+     "label": "Weekend social networking sites",
+     "meta": "coding in A7 unknown",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "withdep",
+     "label": "Withdrawn/depressed (CBCL t >= 65) at Y1",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "we_text",
+     "dv": "withdep",
+     "OR": null,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Supplementary Table A7",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501) that specific weekend screen-time categories were not associated with withdrawn/depressed symptoms.",
+     "derived_d": null,
+     "derived_d_method": "OR missing"
+    },
+    {
+     "iv": "we_vc",
+     "dv": "withdep",
+     "OR": null,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Supplementary Table A7",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501).",
+     "derived_d": null,
+     "derived_d_method": "OR missing"
+    },
+    {
+     "iv": "we_sns",
+     "dv": "withdep",
+     "OR": null,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Supplementary Table A7",
+     "note": "Value not available: Table A7 is in the online supplement, not in the PDF. sig=false is based on the Discussion statement (p. 501).",
+     "derived_d": null,
+     "derived_d_method": "OR missing"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Baseline sleep duration and total weekday/weekend screen time (> 2 vs <= 2 h/day) predicting follow-up CBCL withdrawn/depressed, anxious/depressed and somatic complaints (t >= 65), adjusted and unadjusted, by gender",
+   "location": "Table 3 (p. 500)",
+   "why": "Screen time is a total composite of TV/movies, YouTube-type video, videogames, texting, video chatting and social networking, dichotomized at 2 h/day. It contains non-phone/SM items with no per-modality breakout in this table, so it fails FT-IC2 Step 2. This is the headline finding (females, weekend > 2 h/day: adjusted OR 1.6, 95% CI 1.1-2.2)."
+  },
+  {
+   "model": "Reverse direction: baseline internalizing symptoms (t >= 65) predicting follow-up sleep duration and total weekday/weekend screen time, by gender",
+   "location": "Table 4 (p. 500)",
+   "why": "Screen-time DV is the same mixed total composite; fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Survey-weighted sensitivity models (SAS SURVEYLOGISTIC, site as cluster, ACS weights)",
+   "location": "Supplementary Tables A1-A2; Results p. 501",
+   "why": "Total screen time composite only; also not in the available PDF."
+  },
+  {
+   "model": "Pubertal status instead of age sensitivity models (N = 8,716)",
+   "location": "Supplementary Tables A3-A4; Results p. 501 and Discussion p. 502",
+   "why": "Total screen time composite only."
+  },
+  {
+   "model": "Continuous CBCL t-score models (both directions)",
+   "location": "Supplementary Tables A5-A6; Results p. 501",
+   "why": "Total screen time composite only."
+  },
+  {
+   "model": "Sleep duration x screen time interaction terms",
+   "location": "Statistical analysis p. 498; Discussion p. 501",
+   "why": "Composite screen time; interactions not significant and not retained, no estimates printed."
+  },
+  {
+   "model": "Weekend TV/movies, streaming video (YouTube) and videogame categories in the exploratory analysis",
+   "location": "Supplementary Table A7",
+   "why": "Non-phone/SM modalities; fail FT-IC2."
+  },
+  {
+   "model": "Ancillary analyses of which screen types drove weekend screen time",
+   "location": "Discussion p. 501 ('data not shown')",
+   "why": "Not printed; no extractable numbers, and descriptive rather than an association with a trait outcome."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (assumed; multilevel logistic regression)",
+  "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to OR and each CI bound.",
+  "contrast_type": "Unknown until Table A7 is read: either per 1 unit (h/day) of the weekend category or a dichotomized high vs low contrast.",
+  "transformable": false,
+  "notes": "The only phone/SM-isolated estimates (weekend texting, video chatting, social networking vs withdrawn/depressed) are in online supplementary Table A7, which is not bundled in the local PDF (the PDF is the 8-page article, pp. 496-503, only). No values could be extracted, so d cannot yet be computed. If Table A7 reports ORs with 95% CIs, the cells become convertible via Chinn and transformable should be updated to true. No SDs are needed for the OR route; p0 for the DV could be taken from Table 2 (follow-up withdrawn/depressed t >= 65: females 5.5%, males 9.7%) if a RR is reported instead."
+ },
+ "extraction_flags": "The local PDF has only the 8-page article (pp. 496-503). It has no supplement. Every analysis in the main text (Tables 3-4) uses a total screen-time composite that mixes TV, video, and games with texting, video chat, and social networking, so all of them fail FT-IC2 Step 2. The only phone/SM-isolated estimates are in online Supplementary Table A7. The Discussion (p. 501) describes these as exploratory weekend screen-type categories vs withdrawn/depressed symptoms and says none were associated. I wrote M1 as a placeholder card for Table A7 with three cells (weekend texting, video chat, SNS). All OR, CI, and p values are null. sig=false comes only from the Discussion sentence. Someone needs to get the supplement (mmc1 from the article's page at doi 10.1016/j.jadohealth.2023.09.001) and fill in the following: the values; how the IV is coded (continuous hours or dichotomized); whether the model is female-only or gender-stratified; the covariate set (my list assumes the main adjusted models); and whether the categories enter separately or together. Then set d_transformable to true if ORs with CIs are printed. Also re-check Stage 2 eligibility: the stage2_reason only notes that the headline composite fails Step 2. If Table A7 does not break out texting, video chat, and SNS with their own estimates, this paper fails FT-IC2."
+}

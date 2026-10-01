@@ -1,0 +1,357 @@
+{
+ "paper_id": "420",
+ "title": "Screen time and early adolescent mental health, academic, and social outcomes in 9- and 10- year old children: Utilizing the Adolescent Brain Cognitive Development (ABCD) Study",
+ "doi": "10.1371/journal.pone.0256591",
+ "year": "2021",
+ "authors": "Paulich KN, Ross JM, Lessem JM, Hewitt JK",
+ "journal": "PLoS ONE",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Sex-stratified OLS regression of mental health, academic, sleep and peer outcomes on weekday texting, social media and video chat hours, adjusted for SES and race/ethnicity",
+   "location_in_paper": "Supplementary S6-S18 Tables (one table per outcome, DOCX files listed pp. 18-21; not bundled in the PDF). Method described p. 6-7 (Statistical analysis); results summarized narratively on p. 9 ('We were secondarily interested in the relationships between our outcome measures and differing forms of weekday screen time use').",
+   "design": "Cross-sectional analysis of the ABCD baseline visit. The study is split into Part 1 (weekday screen time) and Part 2 (weekend screen time), each with its own exclusions and analytic sample; this card is Part 1 (weekday). Screen time and all outcomes come from the same baseline visit. One observation per child, no repeated measures.",
+   "sample": "ABCD baseline (NIMH Data Archive DOI 10.15154/1519271; release number not stated), 21 sites. Of 11,875 enrolled, 41 excluded for implausible self-reported weekday screen time of 18+ hours, 69 for implausible parent-reported weekday screen time of 18+ hours, 38 for missing data, leaving N = 11,727 aged 9 to 10.92 years (M = 9.91, SD = 0.62); 6111 males (52.1%), 5613 females (47.9%), 3 did not disclose sex. Full sample race/ethnicity: 52% White, 20.3% Hispanic, 15% Black, 2.1% Asian, 10.5% Other or prefer not to respond. Sample leans upper-middle SES (27.9% report $100,000-$199,999, 10.5% $200,000+). Per-regression N for listwise deletion on outcomes is not reported in the PDF.",
+   "iv": "Child-reported hours per typical weekday day spent on texting (on cellphone, tablet, or computer), visiting social media sites, and video chat, from the 14-item youth Screen Time Questionnaire (recreational, not schoolwork). Each item response runs from '0 h' to '4+ h' and is analyzed in hours. One modality per IV slot; analyses run separately for males and females. Descriptives (Table 1, Part 1): see iv_axis meta. Very low means and floor effects at age 9-10, as the authors note in the Limitations (p. 17).",
+   "dv": "Thirteen outcomes analyzed separately: parent-report CBCL T-scores for depression (withdrawn/depressed), anxiety, internalizing, externalizing, DSM-oriented oppositional defiant problems, DSM-oriented conduct problems, attention problems and DSM-oriented ADHD; academic performance (parent-reported average grades recoded 1 = Fs to 5 = As, N/A set to missing); sleep quantity (parent-reported typical nightly sleep recoded 1 = <5 h to 5 = 9-11 h); sleep quality (Sleep Disturbance Scale summed total across six disorder subscales, higher = worse sleep); number of close friends who are boys and number of close friends who are girls (child report). Sex-specific means and SDs are in Table 1.",
+   "covariates": [
+    {
+     "name": "Combined family income (SES)",
+     "detail": "Parent-reported total combined family income before taxes for the previous 12 months, coded 1 (<$5,000) to 10 ($200,000+); 'refuse to answer' and 'don't know' set to missing. In Tables 2 and 4 it enters as a single term ('Main effect of SES'), so it appears to be entered as one ordinal numeric predictor."
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Parent and self-report, coded 1 = White, 2 = Black, 3 = Hispanic, 4 = Asian, 5 = Other. Tables 2 and 4 show a single 'Main effect of R/E' coefficient, which suggests the 1-5 code was entered as one numeric predictor rather than as dummies; the paper does not say."
+    },
+    {
+     "name": "Sex (by stratification)",
+     "detail": "Not a covariate: models are run separately for males and females (females N = 5613 / 5598; males N = 6111 / 6071). Three participants who did not disclose sex are not in either stratum."
+    }
+   ],
+   "equation": "Within each sex stratum: Y[i] = b0 + b1*ScreenType[i] + b2*SES[i] + b3*RaceEth[i] + e[i], where ScreenType is texting, social media or video chat hours per weekday day and Y is one of the 13 outcomes (whether other screen types were entered simultaneously is not stated in the PDF).",
+   "estimation": "IBM SPSS Statistics Version 26. Ordinary least squares multiple linear regression, run separately by sex. Output reported as standardized beta, t statistic, p-value, standard error and partial correlation (format of main-text Tables 3 and 5; the supplementary tables are described as including effect sizes). No survey weights, no site or family random effects, no clustering adjustment (siblings/twins retained). Per-type-of-screen-time regressions are labelled secondary tests and evaluated at alpha = .05 with no multiple-comparison correction (the Bonferroni alpha of .004 applies only to the 13 primary total-screen-time regressions). Sex moderation was tested only for total screen time (sex x ST interaction, Tables 2/4); no sex x modality interaction is reported. The paper does not state whether each screen type was entered in its own regression or all types were entered jointly in one regression per outcome; the table titles ('regressed on various types of ... screen time') and Stage 2 notes suggest separate regressions per type, which needs checking against the supplement. No sensitivity analyses reported. The authors state that the analyses assume normality and that variables are only approximately normal.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "m_wd_text",
+     "label": "Weekday texting (males)",
+     "meta": "M = 0.17 h/day, SD = 0.47 (Table 1, Males, Part 1)",
+     "sd_iv": 0.47
+    },
+    {
+     "id": "m_wd_sm",
+     "label": "Weekday social media (males)",
+     "meta": "M = 0.08 h/day, SD = 0.35 (Table 1, Males, Part 1)",
+     "sd_iv": 0.35
+    },
+    {
+     "id": "m_wd_vc",
+     "label": "Weekday video chat (males)",
+     "meta": "M = 0.15 h/day, SD = 0.43 (Table 1, Males, Part 1)",
+     "sd_iv": 0.43
+    },
+    {
+     "id": "f_wd_text",
+     "label": "Weekday texting (females)",
+     "meta": "M = 0.24 h/day, SD = 0.55 (Table 1, Females, Part 1)",
+     "sd_iv": 0.55
+    },
+    {
+     "id": "f_wd_sm",
+     "label": "Weekday social media (females)",
+     "meta": "M = 0.12 h/day, SD = 0.41 (Table 1, Females, Part 1)",
+     "sd_iv": 0.41
+    },
+    {
+     "id": "f_wd_vc",
+     "label": "Weekday video chat (females)",
+     "meta": "M = 0.19 h/day, SD = 0.46 (Table 1, Females, Part 1)",
+     "sd_iv": 0.46
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "depression",
+     "label": "Depression",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "anxiety",
+     "label": "Anxiety",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "internalizing",
+     "label": "Internalizing",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "externalizing",
+     "label": "Externalizing",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "odd",
+     "label": "Oppositional defiance",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "conduct",
+     "label": "Conduct disorder",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "attention",
+     "label": "Attention problems",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "adhd",
+     "label": "ADHD",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "grades",
+     "label": "Academic performance (grades)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_qty",
+     "label": "Sleep quantity",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_qual",
+     "label": "Sleep disorder score",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "friends_m",
+     "label": "Num. close friends who are boys",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "friends_f",
+     "label": "Num. close friends who are girls",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": []
+  },
+  {
+   "model_id": "M2",
+   "name": "Sex-stratified OLS regression of mental health, academic, sleep and peer outcomes on weekend texting, social media and video chat hours, adjusted for SES and race/ethnicity",
+   "location_in_paper": "Supplementary S19-S31 Tables (one table per outcome, DOCX files listed pp. 18-21; not bundled in the PDF). Method described p. 6-7 (Statistical analysis); results summarized narratively on p. 12 and 14 ('We were secondarily interested in the relationships between our outcome measures and differing forms of weekend screen time use').",
+   "design": "Cross-sectional analysis of the ABCD baseline visit. The study is split into Part 1 (weekday screen time) and Part 2 (weekend screen time), each with its own exclusions and analytic sample; this card is Part 2 (weekend). Screen time and all outcomes come from the same baseline visit. One observation per child, no repeated measures.",
+   "sample": "ABCD baseline (NIMH Data Archive DOI 10.15154/1519271; release number not stated), 21 sites. Of 11,875 enrolled, 115 excluded for self-reported weekend screen time of 18+ hours per day, 49 for parent-reported weekend screen time of 18+ hours per day, 37 for missing data, leaving N = 11,672 aged 9 to 10.92 years (M = 9.91, SD = 0.62); 6071 males (52%), 5598 females (48%), 3 did not disclose sex. Full sample race/ethnicity: 52% White, 20.3% Hispanic, 15% Black, 2.1% Asian, 10.5% Other or prefer not to respond. Sample leans upper-middle SES (27.9% report $100,000-$199,999, 10.5% $200,000+). Per-regression N for listwise deletion on outcomes is not reported in the PDF.",
+   "iv": "Child-reported hours per typical weekend day spent on texting (on cellphone, tablet, or computer), visiting social media sites, and video chat, from the 14-item youth Screen Time Questionnaire (recreational, not schoolwork). Each item response runs from '0 h' to '4+ h' and is analyzed in hours. One modality per IV slot; analyses run separately for males and females. Descriptives (Table 1, Part 2): see iv_axis meta. Very low means and floor effects at age 9-10, as the authors note in the Limitations (p. 17).",
+   "dv": "Thirteen outcomes analyzed separately: parent-report CBCL T-scores for depression (withdrawn/depressed), anxiety, internalizing, externalizing, DSM-oriented oppositional defiant problems, DSM-oriented conduct problems, attention problems and DSM-oriented ADHD; academic performance (parent-reported average grades recoded 1 = Fs to 5 = As, N/A set to missing); sleep quantity (parent-reported typical nightly sleep recoded 1 = <5 h to 5 = 9-11 h); sleep quality (Sleep Disturbance Scale summed total across six disorder subscales, higher = worse sleep); number of close friends who are boys and number of close friends who are girls (child report). Sex-specific means and SDs are in Table 1.",
+   "covariates": [
+    {
+     "name": "Combined family income (SES)",
+     "detail": "Parent-reported total combined family income before taxes for the previous 12 months, coded 1 (<$5,000) to 10 ($200,000+); 'refuse to answer' and 'don't know' set to missing. In Tables 2 and 4 it enters as a single term ('Main effect of SES'), so it appears to be entered as one ordinal numeric predictor."
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Parent and self-report, coded 1 = White, 2 = Black, 3 = Hispanic, 4 = Asian, 5 = Other. Tables 2 and 4 show a single 'Main effect of R/E' coefficient, which suggests the 1-5 code was entered as one numeric predictor rather than as dummies; the paper does not say."
+    },
+    {
+     "name": "Sex (by stratification)",
+     "detail": "Not a covariate: models are run separately for males and females (females N = 5613 / 5598; males N = 6111 / 6071). Three participants who did not disclose sex are not in either stratum."
+    }
+   ],
+   "equation": "Within each sex stratum: Y[i] = b0 + b1*ScreenType[i] + b2*SES[i] + b3*RaceEth[i] + e[i], where ScreenType is texting, social media or video chat hours per weekend day and Y is one of the 13 outcomes (whether other screen types were entered simultaneously is not stated in the PDF).",
+   "estimation": "IBM SPSS Statistics Version 26. Ordinary least squares multiple linear regression, run separately by sex. Output reported as standardized beta, t statistic, p-value, standard error and partial correlation (format of main-text Tables 3 and 5; the supplementary tables are described as including effect sizes). No survey weights, no site or family random effects, no clustering adjustment (siblings/twins retained). Per-type-of-screen-time regressions are labelled secondary tests and evaluated at alpha = .05 with no multiple-comparison correction (the Bonferroni alpha of .004 applies only to the 13 primary total-screen-time regressions). Sex moderation was tested only for total screen time (sex x ST interaction, Tables 2/4); no sex x modality interaction is reported. The paper does not state whether each screen type was entered in its own regression or all types were entered jointly in one regression per outcome; the table titles ('regressed on various types of ... screen time') and Stage 2 notes suggest separate regressions per type, which needs checking against the supplement. No sensitivity analyses reported. The authors state that the analyses assume normality and that variables are only approximately normal.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "m_we_text",
+     "label": "Weekend texting (males)",
+     "meta": "M = 0.18 h/day, SD = 0.48 (Table 1, Males, Part 2)",
+     "sd_iv": 0.48
+    },
+    {
+     "id": "m_we_sm",
+     "label": "Weekend social media (males)",
+     "meta": "M = 0.08 h/day, SD = 0.35 (Table 1, Males, Part 2)",
+     "sd_iv": 0.35
+    },
+    {
+     "id": "m_we_vc",
+     "label": "Weekend video chat (males)",
+     "meta": "M = 0.16 h/day, SD = 0.48 (Table 1, Males, Part 2)",
+     "sd_iv": 0.48
+    },
+    {
+     "id": "f_we_text",
+     "label": "Weekend texting (females)",
+     "meta": "M = 0.26 h/day, SD = 0.59 (Table 1, Females, Part 2)",
+     "sd_iv": 0.59
+    },
+    {
+     "id": "f_we_sm",
+     "label": "Weekend social media (females)",
+     "meta": "M = 0.14 h/day, SD = 0.49 (Table 1, Females, Part 2)",
+     "sd_iv": 0.49
+    },
+    {
+     "id": "f_we_vc",
+     "label": "Weekend video chat (females)",
+     "meta": "M = 0.22 h/day, SD = 0.54 (Table 1, Females, Part 2)",
+     "sd_iv": 0.54
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "depression",
+     "label": "Depression",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "anxiety",
+     "label": "Anxiety",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "internalizing",
+     "label": "Internalizing",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "externalizing",
+     "label": "Externalizing",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "odd",
+     "label": "Oppositional defiance",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "conduct",
+     "label": "Conduct disorder",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "attention",
+     "label": "Attention problems",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "adhd",
+     "label": "ADHD",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "grades",
+     "label": "Academic performance (grades)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_qty",
+     "label": "Sleep quantity",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sleep_qual",
+     "label": "Sleep disorder score",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "friends_m",
+     "label": "Num. close friends who are boys",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "friends_f",
+     "label": "Num. close friends who are girls",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": []
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Total weekday / weekend screen time with sex x screen time interaction (combined-sex regressions)",
+   "location": "Table 2 (pp. 10-11, weekday) and Table 4 (pp. 13-14, weekend)",
+   "why": "IV is the child-reported total screen time composite summing all six types including TV/movies, videos and video games. Non-phone ingredients; fails FT-IC2 Step 2. These are the paper's primary (Bonferroni alpha .004) tests."
+  },
+  {
+   "model": "Sex-stratified regressions of outcomes on total weekday / weekend screen time",
+   "location": "Table 3 (p. 12, weekday) and Table 5 (p. 15, weekend)",
+   "why": "Same total screen time composite with non-phone content; no phone/SM breakout in these tables. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Non-phone screen types and parent-reported total screen time in the per-type regressions",
+   "location": "Supplementary S6-S31 Tables (rows for TV and movies, videos, video games, mature games, R-rated movies, parent-report total, child total)",
+   "why": "Non-phone/non-SM modalities or composites with non-phone content. Only the texting, social media and video chat rows of these tables qualify (M1, M2)."
+  },
+  {
+   "model": "Bivariate Pearson correlations by sex among all variables, including texting, social media and video chat with each outcome",
+   "location": "Supplementary S2 Table (weekday) and S4 Table (weekend); not bundled in PDF",
+   "why": "Zero-order correlations reported for descriptive/multicollinearity purposes; the authors interpret the covariate-adjusted per-type regressions (S6-S31). Unadjusted transparency output."
+  },
+  {
+   "model": "Sex differences (independent-samples t-tests) on each screen type and outcome",
+   "location": "Table 1 (pp. 8-9)",
+   "why": "Sex is a demographic grouping variable; these test whether boys and girls differ in texting/SM/video chat, not a phone/SM-trait association. Fails FT-IC2 other-side requirement. Table 1 is used only as the source of SD_IV."
+  },
+  {
+   "model": "Weekday vs weekend differences in screen time types",
+   "location": "Supplementary S1 Table; p. 4 text",
+   "why": "Within-person comparison of screen time across day types; no outcome variable."
+  },
+  {
+   "model": "Multicollinearity diagnostics (VIF, tolerance)",
+   "location": "Supplementary S3 and S5 Tables",
+   "why": "Model diagnostics, not estimates of association."
+  },
+  {
+   "model": "Replication of Fors & Barch (2019) in the early-release N = 4,528 sample",
+   "location": "Discussion p. 16",
+   "why": "Mentioned narratively ('We replicated their findings closely'); no numbers printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std",
+  "conversion_formula": "beta_std treated as approximate r; d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines section 4a). CI bounds, if a SE is used, are not computed here per extraction rules.",
+  "contrast_type": "per 1 SD of child-reported hours per weekday (M1) or weekend day (M2) of texting, social media or video chat, within sex",
+  "transformable": false,
+  "notes": "No d can be computed from the PDF itself: every texting, social media and video chat coefficient is in the supplementary S6-S31 Tables, which PLOS ONE distributes as separate DOCX files and which are not bundled in this PDF (pp. 18-21 list only their titles). The main text gives only narrative summaries (p. 9 and pp. 12/14: phone/SM associations with depression, anxiety and internalizing not significant in either sex; video chat and texting 'have the least reliable predictive power'). Once the DOCX supplements are obtained, the standardized betas convert directly via the r-to-d formula and the paper becomes transformable; SEs are presumably printed alongside (as in Tables 3 and 5) but CIs likely are not. SD_IV per modality, day type and sex is taken from Table 1 (p. 8): Part 1 males texting 0.47, SM 0.35, video chat 0.43; Part 1 females texting 0.55, SM 0.41, video chat 0.46; Part 2 males texting 0.48, SM 0.35, video chat 0.48; Part 2 females texting 0.59, SM 0.49, video chat 0.54 (hours). SD_DV set to 10 for CBCL T-score outcomes by construction, though Table 1 shows in-sample SDs of roughly 5-11 (e.g., Part 1 male depression SD 6.31). For non-CBCL outcomes Table 1 gives sex-specific SDs (e.g., Part 1 males: academic performance 0.84, sleep quantity 0.82, sleep quality 8.46, close male friends 6.92, close female friends 4.85). SDs are not needed for conversion because the native metric is already standardized."
+ },
+ "extraction_flags": "The qualifying estimates are missing from the PDF. All of the texting, social media and video chat coefficients are in Supplementary Tables S6-S31: S6-S18 cover weekday use and S19-S31 cover weekend use, with one table per outcome, each split by sex. PLOS ONE publishes these as separate DOCX files, and they are not bundled in the 23-page PDF. Pages 18-21 list only their titles. I did not download them, because downloading a file needs explicit permission.\n\nI set up two model cards. M1 covers weekday use (N=11,727) and M2 covers weekend use (N=11,672). Each card has the full specification, 6 IV slots (3 modalities x 2 sexes) and 13 DV slots, but the estimates are empty (n_estimates = 0). A human needs to get S6-S31, for example from journals.plos.org/plosone/article?id=10.1371/journal.pone.0256591, and fill in about 156 cells (2 day types x 2 sexes x 3 modalities x 13 outcomes).\n\nThings to check against the supplement:\n(1) Whether each screen type was its own regression or all types were entered together in one regression per outcome. The PDF does not say.\n(2) Whether the supplement tables report standardized beta, t, p, SE and partial r, like Tables 3 and 5. I assumed beta_std is the native metric.\n(3) Race/ethnicity (coded 1-5) and SES (coded 1-10) look like they were entered as single numeric predictors, because Tables 2 and 4 show one coefficient each. The paper does not confirm this.\n(4) These per-type analyses are labelled secondary and tested at alpha .05 with no correction.\n\nSD_IV for each modality, day type and sex comes from Table 1 (p. 8). I spot-checked all 12 against the table. SD_DV for the CBCL outcomes is set to 10 by construction, but the in-sample SDs are about 5-11. That does not matter for conversion, because beta_std converts directly once the values are in. d_transformable is false only because no values are available yet. It becomes true once the supplement is entered.\n\nThe ABCD release number is not stated; the paper cites only NDA DOI 10.15154/1519271. The headline total-screen-time models in Tables 2-5 were excluded because total screen time includes TV, videos and gaming."
+}

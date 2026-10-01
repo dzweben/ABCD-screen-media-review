@@ -1,0 +1,380 @@
+{
+ "paper_id": "97",
+ "title": "Impact of digital screen media activity on functional brain organization in late childhood: Evidence from the ABCD study",
+ "doi": "10.1016/j.cortex.2023.09.009",
+ "year": "2023",
+ "authors": "Miller J, Mills KL, Vuorre M, Orben A, Przybylski AK",
+ "journal": "Cortex",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Group factor analysis of 12 self-reported screen media activity items (including texting, video chat and social media) with resting-state network connectivity",
+   "location_in_paper": "Methods 2.5 (p. 296); Results 3.2 (pp. 297-298); Fig. 4 (p. 298), Fig. 5 (GFA grouping 1, p. 299), Fig. 6 (GFA grouping 2, p. 300); replication at 2-year follow-up in OSM-2 (not in PDF); interpreted in Discussion p. 302",
+   "design": "Cross-sectional at ABCD baseline. The GFA jointly decomposes two groups of variables measured at the same visit: the screen media activity items (weekday and weekend) and the Gordon-parcellation within- and between-network rs-fcMRI correlations. There is no IV/DV direction in this model; texting, video chat and social media items are observed variables whose loadings on latent factors are estimated alongside the brain network variables. A separate GFA was run on the same participants at the 2-year follow-up to test whether the factor structure replicated (reported in OSM-2; the paper says GFA 1 partly replicated and GFA 2 did not).",
+   "sample": "ABCD Data Release 4.0 baseline (11,878 participants). Participants needed >10 min of resting-state data with framewise displacement <0.2 mm and a T1 that passed DAIC QC; 86 had no MRI and 3,983 failed at least one benchmark, leaving 7,809 for confirmatory analyses (Fig. 1, p. 294; text p. 293). Ages 9-10 at baseline. 11,309 participants had valid screen time data, with mean weekly screen time 26.50 h (SD = 21.52) (p. 297). Sex and race/ethnicity breakdowns are in OSM-1, not in the PDF.",
+   "iv": "Screen media activity items from the ABCD youth screen time questionnaire, each asked for a typical weekday and a typical weekend day: TV shows or movies; watching videos (e.g., YouTube); video games; texting ('Text on a cell phone, tablet, or computer (GChat, Whatsapp, etc.)'); video chat ('Video chat (Skype, Facetime, etc.)'); and social networking sites ('Visit social networking sites like Facebook, Twitter, Instagram, etc.'). 7-point response recoded to hours: None = 0, <30 min = .25, 30 min = .5, 1 h = 1, 2 h = 2, 3 h = 3, 4+ h = 4 (p. 294). The qualifying phone/SM items are Text_wkdy, Text_wknd, VideoChat_wkdy, VideoChat_wknd, SocMedia_wkdy, SocMedia_wknd as labelled in Figs. 5-6. Item-level descriptives are not in the PDF (OSM-1).",
+   "dv": "Resting-state functional connectivity: ABCD-curated average Fisher-z correlations within and between Gordon-parcellation networks (auditory, cingulo-opercular, cingulo-parietal, default, dorsal attention, fronto-parietal, retrosplenial-temporal, sensorimotor hand, sensorimotor mouth, salience, ventral attention, visual), with sensorimotor mouth as a control network (pp. 294-295). In the GFA these are the second variable group rather than a dependent variable.",
+   "covariates": [],
+   "equation": "GFA: X_g = W_g * Z + E_g for each variable group g in {screen media items, rs-fcMRI network correlations}, where Z holds latent factor scores shared across groups, W_g the group-specific loadings, and E_g residual noise. Factors retained if they explain >1% of the variance (Methods p. 296; Results p. 297 states the three retained factors each explained >4%) and load on both groups.",
+   "estimation": "Group factor analysis following Klami et al. (2015) and Paulus et al. (2019); software not named in the PDF (code at github.com/Miller-Jack/cortex-rsfmri). The GFA identified 67 latent variables; three explained >4% of variance (together 22.7%). Factor 3 loaded only on resting-state variables and was dropped per the preregistration, leaving GFA grouping 1 (9.34% of variance) and GFA grouping 2 (8.56%). Loadings are shown with 95% CIs; a loading is called 'significant' when its 95% CI lies outside the mean of the metric, without multiple-comparison correction (p. 297). No covariates or random effects enter the GFA. Registered Report (Stage 1 protocol https://osf.io/z4eyv); deviation: models run on full baseline and replicated on the full 2-year follow-up rather than split-half of Release 1.1/2.0.",
+   "native_metric": "other:GFA factor loading",
+   "iv_axis": [
+    {
+     "id": "text_wkdy",
+     "label": "Texting, weekday",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    },
+    {
+     "id": "text_wknd",
+     "label": "Texting, weekend",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    },
+    {
+     "id": "vc_wkdy",
+     "label": "Video chat, weekday",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    },
+    {
+     "id": "vc_wknd",
+     "label": "Video chat, weekend",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_wkdy",
+     "label": "Social media, weekday",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_wknd",
+     "label": "Social media, weekend",
+     "meta": "hours/day, recoded 0-4",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "gfa1",
+     "label": "GFA grouping 1 (9.34% variance)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "gfa2",
+     "label": "GFA grouping 2 (8.56% variance)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "text_wkdy",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Loading shown only graphically on a radial plot (scale .63 to -.77); no number printed. Text (p. 298) says GFA 1 'loaded negatively onto all screen media activity variables'."
+    },
+    {
+     "iv": "text_wknd",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Graphical only; negative per text p. 298."
+    },
+    {
+     "iv": "vc_wkdy",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Graphical only; negative per text p. 298."
+    },
+    {
+     "iv": "vc_wknd",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Graphical only; negative per text p. 298."
+    },
+    {
+     "iv": "sm_wkdy",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Graphical only; negative per text p. 298."
+    },
+    {
+     "iv": "sm_wknd",
+     "dv": "gfa1",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 5 (p. 299)",
+     "note": "Graphical only; negative per text p. 298."
+    },
+    {
+     "iv": "text_wkdy",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only (scale .6 to -.7). Text (p. 298) describes GFA 2 as loading positively on weekday and weekend video game play; texting, video chat and social media loadings appear near zero in the figure but are not described numerically."
+    },
+    {
+     "iv": "text_wknd",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only; not described in text."
+    },
+    {
+     "iv": "vc_wkdy",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only; not described in text."
+    },
+    {
+     "iv": "vc_wknd",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only; not described in text."
+    },
+    {
+     "iv": "sm_wkdy",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only; not described in text."
+    },
+    {
+     "iv": "sm_wknd",
+     "dv": "gfa2",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 6 (p. 300)",
+     "note": "Graphical only; not described in text."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Generalized additive mixed models of 2-year follow-up cognitive and CBCL outcomes on baseline social media time, adjusted for demographics with site and family random effects",
+   "location_in_paper": "Methods 2.5 (p. 297); Results 3.7 (p. 301); full results in OSM-4 (online supplement, not bundled in the PDF); interpreted in Discussion p. 305",
+   "design": "Exploratory, longitudinal, added at Stage 2 at a reviewer's request. IV is average weekly social media use at ABCD baseline; DVs are the cognitive and wellbeing outcomes measured at the 2-year follow-up. One outcome per model; no repeated measures and no time interaction described.",
+   "sample": "ABCD Release 4.0. Inclusion criteria stated to be the same as the preregistered analysis (baseline N = 7,809 after imaging QC; complete-case on covariates and outcome). The analytic N for each social media model is not reported in the PDF (OSM-4).",
+   "iv": "Average weekly time on social networking sites ('Visit social networking sites like Facebook, Twitter, Instagram, etc.'), child self-report at baseline, built from weekday and weekend items recoded 0-4 h (p. 294). How weekday and weekend were combined into a weekly value is not stated in the PDF. Descriptives not reported in the PDF.",
+   "dv": "Outcomes at the 2-year follow-up, per 'all study outcomes' (p. 297): CBCL internalizing and externalizing T-scores (caregiver report), and NIH Toolbox / WISC-V cognitive scores: Picture Sequence Memory, List Sort Working Memory, Oral Reading Recognition, Picture Vocabulary, Flanker, Pattern Comparison Processing Speed, Dimensional Change Card Sort, and WISC-V Matrix Reasoning (Table 1, p. 295). Which scores (uncorrected/age-corrected) were used is not stated.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth"
+    },
+    {
+     "name": "Ethnicity/race",
+     "detail": "Coding not reported in the PDF"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Continuous, number of years"
+    },
+    {
+     "name": "Parental age",
+     "detail": "As listed in Results 3.3 (p. 298)"
+    },
+    {
+     "name": "Parental marital status",
+     "detail": "Coding not reported"
+    },
+    {
+     "name": "Child age",
+     "detail": "Continuous"
+    },
+    {
+     "name": "Annual family income",
+     "detail": "Four strata"
+    },
+    {
+     "name": "Random number variable",
+     "detail": "Included in the GAMMs to contextualize effect sizes (Figs. 7-8 captions)"
+    }
+   ],
+   "equation": "Outcome_2yr[i] = b0 + b1*SocialMedia_weekly_baseline[i] + b2*sex + b3*race/ethnicity + b4*parental_education + b5*parental_age + b6*parental_marital_status + b7*age + b8*income_stratum + b9*random_number + u_site + u_family + e[i]. Smooth terms, if any, are not specified in the PDF.",
+   "estimation": "Generalized additive mixed models with data-acquisition site and family as random effects, estimated by maximum likelihood; compared with a covariate-only null GAMM by AIC and likelihood-ratio tests (pp. 296, 298). Coefficients reported as standardized betas. The main GAMM series used alpha = .05/12 = .004; the paper says the social media series extends 'the same GAMMs and covariate measures'. Inference anchored to a smallest effect size of interest of r = .20 (p. 295). Software not named in the PDF. No interaction or stratified analyses reported for social media.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_weekly",
+     "label": "Social media, average weekly time (baseline)",
+     "meta": "self-report, recoded hours",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cbcl_int",
+     "label": "CBCL internalizing (2-yr)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "cbcl_ext",
+     "label": "CBCL externalizing (2-yr)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "pic_seq",
+     "label": "Picture Sequence Memory (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "list_sort",
+     "label": "List Sort Working Memory (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "oral_read",
+     "label": "Oral Reading Recognition (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pic_vocab",
+     "label": "Picture Vocabulary (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "flanker",
+     "label": "Flanker (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pattern",
+     "label": "Pattern Comparison (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "card_sort",
+     "label": "Card Sort (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "matrix",
+     "label": "Matrix Reasoning (2-yr)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": []
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "GAMMs of CBCL internalizing/externalizing on GFA factor scores 1 and 2 vs covariate-only null GAMM",
+   "location": "Table 2 (p. 300); Fig. 7 (p. 301); Results 3.4",
+   "why": "IV is a GFA factor score that mixes all screen media items (TV, videos, video games, texting, video chat, social media) with resting-state connectivity; no phone/SM-isolated estimate."
+  },
+  {
+   "model": "GAMMs of eight cognitive outcomes on GFA factor scores 1 and 2 (only Picture Vocabulary improved; GFA 1 beta = .052, p < .001; GFA 2 beta = .02, p = .057)",
+   "location": "Table 3 (p. 301); Fig. 8 (p. 302); Results 3.5 (p. 299)",
+   "why": "Same mixed screen + brain composite IV; not phone/SM-specific."
+  },
+  {
+   "model": "Generalized linear mixed models of change in network metrics (clustering, max degree, efficiency, betweenness centrality AUC) on total weekly screen time (square-root transformed); beta between .0067 and .025, non-significant",
+   "location": "Results 3.6.2 (p. 301); Fig. 10 (p. 304); full output in Online Supplement (OSM-3)",
+   "why": "IV is total screen time across all activities including TV, videos and video games; no phone/SM breakout."
+  },
+  {
+   "model": "Linear regressions of timepoint-2 network metrics on timepoint-1 network metrics",
+   "location": "Table 4 (p. 303); Fig. 9",
+   "why": "No screen media variable in the model."
+  },
+  {
+   "model": "GFA at the 2-year follow-up (replication)",
+   "location": "OSM-2 (not in PDF); summarized p. 298",
+   "why": "Reported only narratively in the main text; loadings are in the online supplement, not the PDF."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:GFA factor loading (M1); beta_std (M2)",
+  "conversion_formula": "M1: none, factor loadings are not convertible to Cohen's d. M2: beta_std treated as r, d = 2*beta / sqrt(1 - beta^2) (guidelines section 4a), applied per cell once OSM-4 values are retrieved.",
+  "contrast_type": "M1: loading of each texting/video chat/social media item on a latent factor shared with brain connectivity. M2: per 1 SD of baseline average weekly social media time (standardized coefficient).",
+  "transformable": false,
+  "notes": "No d can be computed from the PDF itself. M1 loadings are shown only on radial plots (Figs. 5-6) without printed values, and factor loadings are not effect sizes. M2 per-outcome coefficients are only in online supplement OSM-4; the main text gives only the range 'b's ranging from .013 to .026' (p. 301) and states none was significant above the smallest effect size of interest. If OSM-4 is obtained, its standardized betas would convert directly via the r-to-d formula, and the paper would become partially transformable. SD_IV for social media is not reported in the PDF (descriptives in OSM-1); CBCL T-score SD_DV = 10 by construction."
+ },
+ "extraction_flags": "M1 is the group factor analysis. It covers the texting, video chat and social media items (weekday and weekend) together with resting-state connectivity. Their loadings appear only on the radial plots in Figs. 5 and 6 (pp. 299-300), with no printed values. Its 12 estimate cells are therefore all null. Each cell has a note with the direction the text gives: GFA 1 loads negatively on all screen media variables, and GFA 2 loads on video games. Factor loadings also cannot be converted to Cohen's d.\n\nM2 is the exploratory GAMM series: baseline social media time predicting cognitive and CBCL outcomes at the 2-year follow-up. The main text gives only the range \"b's ranging from .013 to .026\" (p. 301). The per-outcome values are in online supplement OSM-4, which is not bundled in the PDF, so estimates is empty. A human should retrieve OSM-4 from the Cortex site. Its standardized betas would make the paper partly transformable. OSM-1 should also be retrieved for the social media SD and the sample demographics.\n\nOther items to check:\n- Social media variable: the PDF does not say how weekday and weekend were combined into \"average weekly social media usage.\"\n- Which outcomes: the analytic N per model is not given. The scope of \"all study outcomes\" is my reading, taken as the 2 CBCL scales plus the 8 cognitive tests in Table 1.\n- Covariates: the Methods list sex, ethnicity, age and caregiver education. Results 3.3 lists a longer set: parental age, marital status and income in 4 strata are added. I used the Results list.\n- Factor threshold: the Methods say a factor was retained at >1% of variance; Results say >4%.\n- Number of screen items: the Discussion says \"ten metrics,\" but the Methods describe 6 activities on weekdays and weekends, which is 12 items.\n- M1 as a primary model: whether a GFA should be a primary model or excluded is a judgment call. The Stage 2 inclusion was based on the GFA loadings."
+}

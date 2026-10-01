@@ -1,0 +1,31 @@
+{
+ "paper_id": "215",
+ "title": "Independent and Joint Prospective Associations of Screen Time and Sleep Disturbance with Body Mass Index and Waist Circumference Among U.S. Adolescents",
+ "doi": "10.1089/chi.2025.0022",
+ "year": "2025",
+ "authors": "Al-Shoaibi AAA, Helmer CK, Shim J, Choi W, Dooley EE, Gooding HC, Pettee Gabriel K, Baker FC, Nagata JM",
+ "journal": "Childhood Obesity",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [],
+ "excluded_models": [
+  {
+   "model": "All models (extraction not performed)",
+   "location": "n/a: source PDF missing",
+   "why": "The file docs/pdfs/10.1089_chi.2025.0022.pdf does not contain this paper. It is a 7-page reprint of Nagata JM et al., 'Associations of Contemporary Screen Time Modalities With Early Adolescent Nutrition', Academic Pediatrics 2024;24:748-754 (doi 10.1016/j.acap.2024.01.023), which is corpus paper 80. The Al-Shoaibi et al. 2025 Childhood Obesity article was not found anywhere in docs/pdfs. Nothing was extracted, so another paper's numbers are not attributed to paper 215. Per the Stage 2 note, the qualifying analysis should be the 'socializing' screen-time subtype (texting + video chatting + social media) predicting 2-year BMI and waist circumference in Supplementary Tables S6 and S7. Extraction needs the full article and its supplement."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "unknown (PDF missing; abstract reports unstandardized B from weighted multivariable linear regression)",
+  "conversion_formula": "Not applied. If the supplement reports B for the socializing subtype (h/day) on BMI (kg/m2) or WC (cm), use beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1).",
+  "contrast_type": "Unknown until the PDF is obtained. Probably per 1 hour/day of socializing screen time.",
+  "transformable": false,
+  "notes": "The PDF at the item's path is the wrong article: it is paper 80 (Nagata 2024, Academic Pediatrics, MIND diet nutrition). Paper 80's own PDF slot (10.1016_j.acap.2024.01.023.pdf) holds a third article, 'Neighborhood Quality and Screen Use: Findings From the Adolescent Brain Cognitive Development Study' (Nagata JM, Helmer CK, et al.). The PDFs look misfiled or misnamed, and the paper 215 PDF needs to be downloaded again. From the PubMed abstract only: N = 7445 (47.3% female), ages 9-10 at baseline (2016-2018), outcomes BMI and WC 2 years later, missing data imputed, weighted multivariable linear regression, analyses stratified by sex. The headline total screen time estimates (BMI B = 0.32, 95% CI 0.19-0.45; WC B = 0.40, 95% CI 0.23-0.56) use a mixed composite that includes TV and gaming, so they would not qualify under FT-IC2 Step 2 regardless."
+ },
+ "extraction_flags": "THE PDF IS WRONG, SO NOTHING WAS EXTRACTED. The file at docs/pdfs/10.1089_chi.2025.0022.pdf is not paper 215 (Al-Shoaibi 2025, Childhood Obesity, screen time/sleep and BMI/waist circumference). It is a 7-page reprint of paper 80: Nagata 2024, Academic Pediatrics, 'Associations of Contemporary Screen Time Modalities With Early Adolescent Nutrition' (doi 10.1016/j.acap.2024.01.023). Paper 80's own slot, docs/pdfs/10.1016_j.acap.2024.01.023.pdf, holds a third article, 'Neighborhood Quality and Screen Use' (Nagata, Helmer et al.). So paper 80's extraction is probably also built on the wrong PDF. The real paper 215 PDF is not in docs/pdfs.Next steps: download the Childhood Obesity article and its supplement, which the Stage 2 note says has the socializing subtype (texting + video chat + SM) in Tables S6/S7. Then rerun this extraction, re-check paper 80's PDF, and audit docs/pdfs for other misfiled files."
+}

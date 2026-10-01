@@ -1,0 +1,608 @@
+{
+ "paper_id": "398",
+ "title": "Screen time and problem behaviors in children: exploring the mediating role of sleep duration",
+ "doi": "10.1186/s12966-019-0862-x",
+ "year": "2019",
+ "authors": "Guerrero MD, Barnes JD, Chaput JP, Tremblay MS",
+ "journal": "International Journal of Behavioral Nutrition and Physical Activity",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Negative binomial SEM (direct effects) of eight CBCL syndrome raw scores on social media time, adjusted for other screen types, sleep duration, and demographics",
+   "location_in_paper": "Table 2 (pp. 5-6), Social media rows; Fig. 1 (p. 7); interpreted in Results p. 3 and Discussion pp. 3-7",
+   "design": "Cross-sectional, ABCD baseline only. IV, mediator (sleep duration), and DVs all measured at the same visit; one observation per child. The direct effect of social media on each CBCL syndrome comes from a single multivariate path model in which all six screen-time variables predict sleep duration and all eight CBCL scales, and sleep duration predicts all eight CBCL scales.",
+   "sample": "ABCD baseline (2016-2018) data; paper cites NIMH Data Archive DOI 10.15154/1412097 but does not name the release number. Full baseline sample N = 11,875 children aged 9-10 years (mean age 9.91, SD .62); missing values (<1%) were replaced by multiple imputation, so the model is fit on the full sample. Table 1: sex (n = 11,869) 5681 female, 6188 male; ethnicity (n = 11,755) 6176 White, 1779 African American, 2047 Hispanic, 255 Asian, 1498 multiracial. Mean parental income category 7.22 (SD 2.42; n = 10,857), parental education 17.06 (SD 2.67; n = 11,858), BMI 18.80 (SD 4.17; n = 11,832), physical activity 3.49 active days/week (SD 2.32; n = 11,844). Social media item n = 11,769.",
+   "iv": "Child self-reported social media time from the Youth Screen Time Survey (14 items). Social media is a composite of three items collapsed by the authors because of low use: texting, visiting social networking sites (e.g., Twitter, Instagram), and video chat (e.g., FaceTime); all three components are phone/SM items, so the composite qualifies under FT-IC2 Step 2. Each item asked hours on a typical weekday and weekend day on a 7-point scale (none, <30 min, 30 min, 1 h, 2 h, 3 h, >=4 h); daily time = (weekday hours x 5 + weekend hours x 2)/7. The Methods state ST behaviors were then categorized into four groups (<1 h, 1-1.99 h, 2-2.99 h, >=3 h) for analysis, yet the Results interpret coefficients as 'every one hour increase'; the exact coding entering the model is therefore ambiguous. Table 1 (p. 4): social media M = .54 h/day (SD 1.15); text .22 (.54), social networking sites .12 (.42), video chat .19 (.49).",
+   "dv": "Eight parent-reported CBCL syndrome scales scored as RAW counts (not T-scores), modeled as negative binomial counts. Table 1 (n = 11,864) M (SD): anxious/depressed 2.52 (3.01; range 0-26); withdrawn/depressed 1.03 (1.71; 0-15); somatic complaints 1.49 (1.95; 0-16); social problems 1.62 (2.27; 0-18); thought problems 1.62 (2.19; 0-18); attention problems 2.98 (3.49; 0-20); rule-breaking 1.19 (1.86; 0-20); aggressive 3.26 (4.35; 0-36).",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Child sex (female/male); coding not reported"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "White, African American, Hispanic, Asian, Multiracial; coding not reported"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Highest grade, 0-21 ordinal scale"
+    },
+    {
+     "name": "Family household income",
+     "detail": "Combined past-12-month income, 1-10 ordinal scale (1 = <$5000 ... 10 = >=$200,000)"
+    },
+    {
+     "name": "Body mass index",
+     "detail": "kg/m^2, continuous"
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Active days per week, continuous"
+    },
+    {
+     "name": "Other screen-time variables (simultaneous)",
+     "detail": "All six ST predictors (television/movies, videos, video games, social media, mature-rated video games, R-rated movies) enter the same SEM simultaneously, so each is adjusted for the others"
+    },
+    {
+     "name": "Sleep duration (for CBCL outcomes)",
+     "detail": "Parent-reported hours of sleep enters as a mediator; the social media -> CBCL coefficient in Table 2 is the direct effect net of sleep duration"
+    }
+   ],
+   "equation": "log E[CBCL_k] = b0k + b1k*SocialMedia + b2k*TV/movies + b3k*Videos + b4k*VideoGames + b5k*MatureVideoGames + b6k*RratedMovies + b7k*SleepDuration + b8k*sex + b9k*ethnicity + b10k*parent_ed + b11k*income + b12k*BMI + b13k*PA, CBCL_k ~ negative binomial, k = 1..8 syndrome scales, estimated jointly with the sleep-duration equation (M2). Focal term: b1k (direct effect); IRR = exp(b1k).",
+   "estimation": "Mplus 8.2 single structural equation model with negative binomial distribution for the eight CBCL count outcomes (overdispersion), maximum likelihood with robust standard errors (MLR), TYPE = COMPLEX to account for non-independence of observations (clustering variable not named; presumably site or family). Multiple imputation for <1% missing data. Mediation via MODEL INDIRECT, with bootstrapping (B = 5000) for 95% CIs run without TYPE = COMPLEX because Mplus 8.2 does not allow both. IRRs are exponentiated B. Significance at p <= .05 with CI excluding zero (bold in tables). No multiple-comparison correction. No interaction or stratified analyses. No sensitivity analyses reported. Covariate associations are in Additional file 1 (not bundled in the PDF).",
+   "native_metric": "IRR",
+   "iv_axis": [
+    {
+     "id": "sm",
+     "label": "Social media (texting + social networking sites + video chat)",
+     "meta": "child report, hours/day; M .54, SD 1.15",
+     "sd_iv": 1.15
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "anxdep",
+     "label": "Anxious/ depressed",
+     "sd_dv": 3.01,
+     "p0": null
+    },
+    {
+     "id": "withdep",
+     "label": "Withdrawn/ depressed",
+     "sd_dv": 1.71,
+     "p0": null
+    },
+    {
+     "id": "somatic",
+     "label": "Somatic complaints",
+     "sd_dv": 1.95,
+     "p0": null
+    },
+    {
+     "id": "social",
+     "label": "Social problems",
+     "sd_dv": 2.27,
+     "p0": null
+    },
+    {
+     "id": "thought",
+     "label": "Thought problems",
+     "sd_dv": 2.19,
+     "p0": null
+    },
+    {
+     "id": "attention",
+     "label": "Attention problems",
+     "sd_dv": 3.49,
+     "p0": null
+    },
+    {
+     "id": "rule",
+     "label": "Rule-breaking behavior",
+     "sd_dv": 1.86,
+     "p0": null
+    },
+    {
+     "id": "aggr",
+     "label": "Aggressive behavior",
+     "sd_dv": 4.35,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm",
+     "dv": "anxdep",
+     "IRR": 1.015,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.02,
+     "B_lo": -0.013,
+     "B_hi": 0.044,
+     "p": 0.291,
+     "p_label": ".291",
+     "sig": false,
+     "location": "Table 2, Anxious/depressed block, Social media row (p. 5)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": 0.0082,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "withdep",
+     "IRR": 0.985,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": -0.02,
+     "B_lo": -0.065,
+     "B_hi": 0.035,
+     "p": 0.558,
+     "p_label": ".558",
+     "sig": false,
+     "location": "Table 2, Withdrawn/depressed block, Social media row (p. 5)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": -0.0083,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "somatic",
+     "IRR": 0.993,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": -0.01,
+     "B_lo": -0.042,
+     "B_hi": 0.029,
+     "p": 0.716,
+     "p_label": ".716",
+     "sig": false,
+     "location": "Table 2, Somatic complaints block, Social media row (p. 5)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": -0.0039,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "social",
+     "IRR": 1.033,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.03,
+     "B_lo": -0.008,
+     "B_hi": 0.073,
+     "p": 0.114,
+     "p_label": ".114",
+     "sig": false,
+     "location": "Table 2, Social problems block, Social media row (p. 5)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": 0.0179,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "thought",
+     "IRR": 1.025,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.02,
+     "B_lo": -0.017,
+     "B_hi": 0.066,
+     "p": 0.252,
+     "p_label": ".252",
+     "sig": false,
+     "location": "Table 2, Thought problems block, Social media row (p. 5)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": 0.0136,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "attention",
+     "IRR": 1.033,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.03,
+     "B_lo": -0.005,
+     "B_hi": 0.071,
+     "p": 0.091,
+     "p_label": ".091",
+     "sig": false,
+     "location": "Table 2 (continued), Attention problems block, Social media row (p. 6)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed.",
+     "derived_d": 0.0179,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "rule",
+     "IRR": 1.084,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.08,
+     "B_lo": 0.046,
+     "B_hi": 0.115,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 2 (continued), Rule-breaking behavior block, Social media row (p. 6)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed. Change per count 8.4%. Also shown in Fig. 1 (p. 7) as 0.08*.",
+     "derived_d": 0.0445,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    },
+    {
+     "iv": "sm",
+     "dv": "aggr",
+     "IRR": 1.062,
+     "IRR_lo": null,
+     "IRR_hi": null,
+     "B": 0.06,
+     "B_lo": 0.029,
+     "B_hi": 0.053,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 2 (continued), Aggressive behavior block, Social media row (p. 6)",
+     "note": "95% CI is printed on the B (log-rate) scale only; IRR CI not printed. Change per count 6.2%. Printed 95% CI (.029, .053) does not contain the printed B (.06); likely a typesetting error in the paper; copied as printed. Also shown in Fig. 1 as 0.06*.",
+     "derived_d": 0.0332,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "IRR treated as OR -> d (Chinn 2000); approximation"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "SEM path (linear, presumed) of parent-reported sleep duration on social media time, adjusted for other screen types and demographics",
+   "location_in_paper": "Table 2 (continued), Sleep duration block, Social media row (p. 6); Fig. 1 (p. 7)",
+   "design": "Cross-sectional, ABCD baseline. Same single Mplus SEM as M1; this is the a-path from social media to the mediator sleep duration, which is a continuous outcome rather than a negative binomial count, so it is listed separately.",
+   "sample": "ABCD baseline (2016-2018) data; paper cites NIMH Data Archive DOI 10.15154/1412097 but does not name the release number. Full baseline sample N = 11,875 children aged 9-10 years (mean age 9.91, SD .62); missing values (<1%) were replaced by multiple imputation, so the model is fit on the full sample. Table 1: sex (n = 11,869) 5681 female, 6188 male; ethnicity (n = 11,755) 6176 White, 1779 African American, 2047 Hispanic, 255 Asian, 1498 multiracial. Mean parental income category 7.22 (SD 2.42; n = 10,857), parental education 17.06 (SD 2.67; n = 11,858), BMI 18.80 (SD 4.17; n = 11,832), physical activity 3.49 active days/week (SD 2.32; n = 11,844). Social media item n = 11,769.",
+   "iv": "Child self-reported social media time from the Youth Screen Time Survey (14 items). Social media is a composite of three items collapsed by the authors because of low use: texting, visiting social networking sites (e.g., Twitter, Instagram), and video chat (e.g., FaceTime); all three components are phone/SM items, so the composite qualifies under FT-IC2 Step 2. Each item asked hours on a typical weekday and weekend day on a 7-point scale (none, <30 min, 30 min, 1 h, 2 h, 3 h, >=4 h); daily time = (weekday hours x 5 + weekend hours x 2)/7. The Methods state ST behaviors were then categorized into four groups (<1 h, 1-1.99 h, 2-2.99 h, >=3 h) for analysis, yet the Results interpret coefficients as 'every one hour increase'; the exact coding entering the model is therefore ambiguous. Table 1 (p. 4): social media M = .54 h/day (SD 1.15); text .22 (.54), social networking sites .12 (.42), video chat .19 (.49).",
+   "dv": "Sleep duration, one parent-reported item from the Sleep Disturbance Scale for Children ('How many hours of sleep does your child get on most nights?'), in hours. Table 1 (n = 11,869): M = 9.00 h, SD 1.11. The paper does not state the distribution or link for this equation; it presumably is a linear (Gaussian) path, but Table 2 still prints an 'IRR' (exp(B)) for it.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Child sex (female/male); coding not reported"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "White, African American, Hispanic, Asian, Multiracial; coding not reported"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Highest grade, 0-21 ordinal scale"
+    },
+    {
+     "name": "Family household income",
+     "detail": "Combined past-12-month income, 1-10 ordinal scale (1 = <$5000 ... 10 = >=$200,000)"
+    },
+    {
+     "name": "Body mass index",
+     "detail": "kg/m^2, continuous"
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Active days per week, continuous"
+    },
+    {
+     "name": "Other screen-time variables (simultaneous)",
+     "detail": "All six ST predictors (television/movies, videos, video games, social media, mature-rated video games, R-rated movies) enter the same SEM simultaneously, so each is adjusted for the others"
+    }
+   ],
+   "equation": "SleepDuration = a0 + a1*SocialMedia + a2*TV/movies + a3*Videos + a4*VideoGames + a5*MatureVideoGames + a6*RratedMovies + a7*sex + a8*ethnicity + a9*parent_ed + a10*income + a11*BMI + a12*PA + e. Focal term: a1.",
+   "estimation": "Mplus 8.2 single structural equation model with negative binomial distribution for the eight CBCL count outcomes (overdispersion), maximum likelihood with robust standard errors (MLR), TYPE = COMPLEX to account for non-independence of observations (clustering variable not named; presumably site or family). Multiple imputation for <1% missing data. Mediation via MODEL INDIRECT, with bootstrapping (B = 5000) for 95% CIs run without TYPE = COMPLEX because Mplus 8.2 does not allow both. IRRs are exponentiated B. Significance at p <= .05 with CI excluding zero (bold in tables). No multiple-comparison correction. No interaction or stratified analyses. No sensitivity analyses reported. Covariate associations are in Additional file 1 (not bundled in the PDF).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm",
+     "label": "Social media (texting + social networking sites + video chat)",
+     "meta": "child report, hours/day; M .54, SD 1.15",
+     "sd_iv": 1.15
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sleep",
+     "label": "Sleep duration (hours)",
+     "sd_dv": 1.11,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm",
+     "dv": "sleep",
+     "B": -0.03,
+     "B_lo": -0.068,
+     "B_hi": 0.002,
+     "p": 0.064,
+     "p_label": ".064",
+     "sig": false,
+     "location": "Table 2 (continued), Sleep duration block, Social media row (p. 6)",
+     "note": "Table 2 also prints 'IRR' = .968 for this row. Fig. 1 shows -0.03 (not starred).",
+     "derived_d": -0.0622,
+     "derived_d_lo": -0.1413,
+     "derived_d_hi": 0.0041,
+     "derived_d_method": "linear (SD_IV=1.15, SD_DV=1.11)"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Indirect (mediated) effects of social media time on eight CBCL syndrome raw scores through sleep duration, from the same SEM",
+   "location_in_paper": "Table 3 (pp. 8-9), 'Social media -> ...' rows; mediation discussed in Results p. 3 and Discussion p. 6",
+   "design": "Cross-sectional, ABCD baseline. Product-of-paths indirect effect (social media -> sleep duration -> CBCL syndrome) from the M1/M2 SEM via Mplus MODEL INDIRECT.",
+   "sample": "ABCD baseline (2016-2018) data; paper cites NIMH Data Archive DOI 10.15154/1412097 but does not name the release number. Full baseline sample N = 11,875 children aged 9-10 years (mean age 9.91, SD .62); missing values (<1%) were replaced by multiple imputation, so the model is fit on the full sample. Table 1: sex (n = 11,869) 5681 female, 6188 male; ethnicity (n = 11,755) 6176 White, 1779 African American, 2047 Hispanic, 255 Asian, 1498 multiracial. Mean parental income category 7.22 (SD 2.42; n = 10,857), parental education 17.06 (SD 2.67; n = 11,858), BMI 18.80 (SD 4.17; n = 11,832), physical activity 3.49 active days/week (SD 2.32; n = 11,844). Social media item n = 11,769.",
+   "iv": "Child self-reported social media time from the Youth Screen Time Survey (14 items). Social media is a composite of three items collapsed by the authors because of low use: texting, visiting social networking sites (e.g., Twitter, Instagram), and video chat (e.g., FaceTime); all three components are phone/SM items, so the composite qualifies under FT-IC2 Step 2. Each item asked hours on a typical weekday and weekend day on a 7-point scale (none, <30 min, 30 min, 1 h, 2 h, 3 h, >=4 h); daily time = (weekday hours x 5 + weekend hours x 2)/7. The Methods state ST behaviors were then categorized into four groups (<1 h, 1-1.99 h, 2-2.99 h, >=3 h) for analysis, yet the Results interpret coefficients as 'every one hour increase'; the exact coding entering the model is therefore ambiguous. Table 1 (p. 4): social media M = .54 h/day (SD 1.15); text .22 (.54), social networking sites .12 (.42), video chat .19 (.49).",
+   "dv": "Eight parent-reported CBCL syndrome scales scored as RAW counts (not T-scores), modeled as negative binomial counts. Table 1 (n = 11,864) M (SD): anxious/depressed 2.52 (3.01; range 0-26); withdrawn/depressed 1.03 (1.71; 0-15); somatic complaints 1.49 (1.95; 0-16); social problems 1.62 (2.27; 0-18); thought problems 1.62 (2.19; 0-18); attention problems 2.98 (3.49; 0-20); rule-breaking 1.19 (1.86; 0-20); aggressive 3.26 (4.35; 0-36). Mediator: parent-reported sleep duration in hours (M 9.00, SD 1.11).",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Child sex (female/male); coding not reported"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "White, African American, Hispanic, Asian, Multiracial; coding not reported"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Highest grade, 0-21 ordinal scale"
+    },
+    {
+     "name": "Family household income",
+     "detail": "Combined past-12-month income, 1-10 ordinal scale (1 = <$5000 ... 10 = >=$200,000)"
+    },
+    {
+     "name": "Body mass index",
+     "detail": "kg/m^2, continuous"
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Active days per week, continuous"
+    },
+    {
+     "name": "Other screen-time variables (simultaneous)",
+     "detail": "All six ST predictors (television/movies, videos, video games, social media, mature-rated video games, R-rated movies) enter the same SEM simultaneously, so each is adjusted for the others"
+    }
+   ],
+   "equation": "Indirect_k = a1 * b7k, where a1 is the social media -> sleep duration path (M2) and b7k the sleep duration -> CBCL_k path (negative binomial, log link). IRR = exp(indirect B).",
+   "estimation": "Mplus 8.2 single structural equation model with negative binomial distribution for the eight CBCL count outcomes (overdispersion), maximum likelihood with robust standard errors (MLR), TYPE = COMPLEX to account for non-independence of observations (clustering variable not named; presumably site or family). Multiple imputation for <1% missing data. Mediation via MODEL INDIRECT, with bootstrapping (B = 5000) for 95% CIs run without TYPE = COMPLEX because Mplus 8.2 does not allow both. IRRs are exponentiated B. Significance at p <= .05 with CI excluding zero (bold in tables). No multiple-comparison correction. No interaction or stratified analyses. No sensitivity analyses reported. Covariate associations are in Additional file 1 (not bundled in the PDF). The indirect-effect CIs were bootstrapped without the TYPE = COMPLEX clustering correction.",
+   "native_metric": "other:indirect_effect_B",
+   "iv_axis": [
+    {
+     "id": "sm",
+     "label": "Social media (texting + social networking sites + video chat)",
+     "meta": "via sleep duration",
+     "sd_iv": 1.15
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "anxdep",
+     "label": "Anxious/ depressed",
+     "sd_dv": 3.01,
+     "p0": null
+    },
+    {
+     "id": "withdep",
+     "label": "Withdrawn/ depressed",
+     "sd_dv": 1.71,
+     "p0": null
+    },
+    {
+     "id": "somatic",
+     "label": "Somatic complaints",
+     "sd_dv": 1.95,
+     "p0": null
+    },
+    {
+     "id": "social",
+     "label": "Social problems",
+     "sd_dv": 2.27,
+     "p0": null
+    },
+    {
+     "id": "thought",
+     "label": "Thought problems",
+     "sd_dv": 2.19,
+     "p0": null
+    },
+    {
+     "id": "attention",
+     "label": "Attention problems",
+     "sd_dv": 3.49,
+     "p0": null
+    },
+    {
+     "id": "rule",
+     "label": "Rule-breaking behavior",
+     "sd_dv": 1.86,
+     "p0": null
+    },
+    {
+     "id": "aggr",
+     "label": "Aggressive behavior",
+     "sd_dv": 4.35,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm",
+     "dv": "anxdep",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.007,
+     "IRR": 1.003,
+     "p": 0.059,
+     "p_label": ".059",
+     "sig": false,
+     "location": "Table 3, 'Social media -> anxious/depressed' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "withdep",
+     "value": 0.01,
+     "value_lo": 0.0,
+     "value_hi": 0.01,
+     "IRR": 1.005,
+     "p": 0.059,
+     "p_label": ".059",
+     "sig": false,
+     "location": "Table 3, 'Social media -> withdrawn/depressed' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "somatic",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.006,
+     "IRR": 1.003,
+     "p": 0.065,
+     "p_label": ".065",
+     "sig": false,
+     "location": "Table 3, 'Social media -> somatic complaints' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "social",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.008,
+     "IRR": 1.004,
+     "p": 0.058,
+     "p_label": ".058",
+     "sig": false,
+     "location": "Table 3, 'Social media -> social problems' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "thought",
+     "value": 0.01,
+     "value_lo": 0.0,
+     "value_hi": 0.012,
+     "IRR": 1.006,
+     "p": 0.057,
+     "p_label": ".057",
+     "sig": false,
+     "location": "Table 3, 'Social media -> thought problems' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "attention",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.007,
+     "IRR": 1.004,
+     "p": 0.058,
+     "p_label": ".058",
+     "sig": false,
+     "location": "Table 3, 'Social media -> attention problems' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "rule",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.008,
+     "IRR": 1.004,
+     "p": 0.06,
+     "p_label": ".060",
+     "sig": false,
+     "location": "Table 3, 'Social media -> rule-breaking behavior' row (p. 8)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    },
+    {
+     "iv": "sm",
+     "dv": "aggr",
+     "value": 0.0,
+     "value_lo": 0.0,
+     "value_hi": 0.007,
+     "IRR": 1.004,
+     "p": 0.059,
+     "p_label": ".059",
+     "sig": false,
+     "location": "Table 3, 'Social media -> aggressive behavior' row (p. 9)",
+     "note": "Indirect effect (social media -> sleep duration -> CBCL), unstandardized B; bootstrapped 95% CI (B = 5000). Lower bound printed as .000; p > .05 so not significant per the paper's rule.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:indirect_effect_B' (flagged for later review level)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Direct effects of television/movies, videos, video games, mature-rated video games, and R-rated movies on CBCL syndromes and sleep duration",
+   "location": "Table 2 (pp. 5-6); Fig. 1 (p. 7)",
+   "why": "Non-phone/SM screen modalities (television, video streaming, gaming, content ratings); not qualifying under FT-IC2."
+  },
+  {
+   "model": "Indirect effects of television/movies, videos, video games, mature-rated video games, and R-rated movies through sleep duration",
+   "location": "Table 3 (pp. 8-9)",
+   "why": "Non-phone/SM screen modalities."
+  },
+  {
+   "model": "Sleep duration -> CBCL syndrome direct effects",
+   "location": "Table 2 (pp. 5-6), Sleep duration rows; Fig. 1",
+   "why": "Sleep is the mediator, not a phone/SM variable; no phone/SM IV in these paths."
+  },
+  {
+   "model": "Separate texting, social networking site, and video chat estimates",
+   "location": "Methods p. 2; Table 1 descriptives only (p. 4)",
+   "why": "Not estimated: the authors collapsed the three items into one social media composite before modeling, so no per-item estimates exist."
+  },
+  {
+   "model": "Covariate associations with sleep and problem behaviors",
+   "location": "Additional file 1, Material S1 (not bundled in the PDF)",
+   "why": "Covariate paths only; no phone/SM estimate. Supplement not available in the PDF."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "IRR (M1); B (M2); other:indirect_effect_B (M3)",
+  "conversion_formula": "M1: IRR treated as OR at first approximation, d = ln(IRR) * sqrt(3)/pi (Chinn 2000), with ln(IRR) = B; CI on d from the printed B CI endpoints, d_lo/hi = B_lo/hi * sqrt(3)/pi. M2: beta_std = B * SD_IV / SD_DV, d = 2*beta_std / sqrt(1 - beta_std^2). M3: not converted.",
+  "contrast_type": "Per one unit of the social media variable, which the authors describe as one hour/day; the Methods also state ST was categorized into four groups (<1 h, 1-1.99 h, 2-2.99 h, >=3 h), so one unit may be one category step.",
+  "transformable": "partial",
+  "notes": "SD_IV = 1.15 h/day for social media and SD_DV = 1.11 h for sleep duration and CBCL raw-score SDs are from Table 1 (p. 4), full baseline sample (n = 11,769 for social media, 11,869 for sleep, 11,864 for CBCL). CBCL scales are raw scores, not T-scores, so SD_DV is not 10. The M2 conversion assumes the IV is in hours/day; if the model used the 4-category coding, SD_IV in hours is the wrong scale. The IRR->d approximation for negative binomial count outcomes is rough and ignores overdispersion. The aggressive behavior CI (.029, .053) printed in Table 2 excludes its own point estimate (.06), so its d CI should be treated with caution. M3 indirect effects are products of paths across a linear and a log-link equation with no standardized metric reported; not convertible to d."
+ },
+ "extraction_flags": "It has three cards, all from one Mplus negative binomial SEM:\n- M1: 8 direct effects of social media on the 8 CBCL raw scales. The metric is IRR, and B with its CI is stored alongside.\n- M2: the social media -> sleep duration path. The metric is B.\n- M3: 8 indirect effects of social media through sleep, none significant.\n\nPlease check:\n(1) The IV units are unclear. The Methods say screen-time behaviors were binned into 4 groups (<1, 1-1.99, 2-2.99, >=3 h), but the Results read coefficients as per one hour. The SD_IV of 1.15 h/day comes from Table 1 and may be on the wrong scale for converting M2.\n(2) Table 2 prints the CIs on the B (log) scale only. No IRR CI is printed, so IRR_lo and IRR_hi are null.\n(3) In Table 2, the CI for social media -> aggressive behavior is printed as (.029, .053), which excludes its own B of .06. This looks like a typo in the paper. I copied it as printed.\n(4) The paper does not state the distribution of the sleep-duration path. I assumed it is linear, yet Table 2 still prints an 'IRR' of .968 for it.\n(5) Social media is a composite of texting, social networking sites, and video chat. All three are phone/SM items, so it qualifies under FT-IC2 Step 2. There are no per-item estimates.\n(6) The CBCL outcomes are raw counts, not T-scores. SD_DV values come from Table 1, which uses the full baseline sample. Converting IRR to d via Chinn is only a rough approximation for negative binomial outcomes.\n(7) The ABCD release number is not stated, and the TYPE=COMPLEX cluster variable is not named.\n(8) Supplement Additional file 1 was not bundled in the PDF.\n\nI checked every social media number against the PDF text layer (Tables 2 and 3) and all of them match."
+}

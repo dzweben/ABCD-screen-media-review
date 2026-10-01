@@ -613,3 +613,6 @@ table.est-matrix .dline.none { color: var(--muted); font-weight: 400; font-style
 .estimates-preview { overflow-x: auto; }
 .dup-banner { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn); border-radius: 6px; padding: 8px 12px; font-size: 13px; margin-bottom: 12px; }
 .dup-banner a { color: var(--warn); font-weight: 700; }
+.flags-box { margin-top: 12px; background: #fffbe6; border: 1px solid #e6d27a; border-radius: 6px; padding: 8px 14px; font-size: 12.5px; }
+.flags-box summary { cursor: pointer; font-weight: 700; color: #7a5b00; }
+.flags-text { white-space: pre-wrap; margin-top: 6px; color: var(--ink); line-height: 1.55; }

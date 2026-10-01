@@ -1,0 +1,173 @@
+{
+ "paper_id": "302",
+ "title": "Contemporary screen time usage among children 9-10-years-old is associated with higher body mass index percentile at 1-year follow-up: A prospective cohort study",
+ "doi": "10.1111/ijpo.12827",
+ "year": "2021",
+ "authors": "Nagata JM, Iyer P, Chu J, Baker FC, Pettee Gabriel K, Garber AK, Murray SB, Bibbins-Domingo K, Ganson KT",
+ "journal": "Pediatric Obesity",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted multiple linear regression of 1-year follow-up BMI percentile on baseline phone/SM hours per day (texting, video chat, social networking), fully adjusted including baseline BMI percentile",
+   "location_in_paper": "Table 2, right-hand columns 'BMI percentile at follow-up, fully adjusted' (Model 2) (p. 4); reported in Results p. 3 and Abstract; interpreted in Discussion pp. 3-4.",
+   "design": "Prospective longitudinal cohort with two waves. Screen time exposures measured at ABCD baseline (2016-2018, ages 9-10); the outcome, BMI percentile, measured once at the 1-year follow-up (2017-2019, ages 10-11). Baseline BMI percentile is entered as a covariate, so the coefficient is the association with follow-up BMI percentile net of baseline BMI percentile. Single follow-up outcome, not repeated measures; no time interaction. Each screen modality was examined in a separate regression model (Table 2 note: 14 regression models in total across the 7 exposures x 2 adjustment levels).",
+   "sample": "ABCD Release 3.0, baseline and 1-year follow-up. Of 11,875 children recruited at 21 U.S. sites, participants missing baseline screen time (N = 63) or 1-year follow-up BMI (N = 752) were excluded, leaving N = 11,066. Missing covariate data (N = 1016) were singly imputed by Gaussian normal regression. Baseline age mean 9.9 (SD 0.6); 48.8% female, 51.2% male; 52.2% White, 20.0% Latino/Hispanic, 17.3% Black, 5.5% Asian, 3.2% Native American, 1.9% Other. Household income: 18.7% <$25,000; 20.4% $25,000-49,999; 17.5% $50,000-74,999; 13.4% $75,000-99,999; 22.6% $100,000-199,999; 7.4% >=$200,000. 79.7% had a parent with college education or more. Major depressive disorder 0.2%; binge-eating disorder 0.7%. Baseline BMI category: 3.9% underweight, 62.5% normal, 15.9% overweight, 17.8% obese (Table 1, propensity-weighted).",
+   "iv": "Baseline hours per day on each phone/SM modality, each entered in a separate model: texting, video chatting (e.g., Skype, Facetime), and social networking (e.g., Facebook, Instagram, Twitter). Instrument: ABCD Youth Screen Time Survey, child self-report of typical hours per day, asked separately for weekdays and weekend days; a weighted average of weekday and weekend use gives a typical-day value, analyzed as continuous hours per day. Baseline means (SD), Table 1: texting 0.24 (0.56); video chat 0.21 (0.52); social networking 0.13 (0.45) h/day.",
+   "dv": "BMI percentile at 1-year follow-up. BMI computed from the average of two to three research-staff measurements of height and weight (kg/m^2) and converted to sex- and age-specific percentiles using CDC growth curves. Table 1: follow-up BMI percentile mean 63.5 (SD 30.5); baseline BMI percentile mean 62.1 (SD 30.7).",
+   "covariates": [
+    {
+     "name": "Baseline BMI percentile",
+     "detail": "Continuous; autoregressive adjustment"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Parent report; categories White, Latino/Hispanic, Black, Asian, Native American, Other (coding of reference group not stated)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Parent report; female/male"
+    },
+    {
+     "name": "Household income",
+     "detail": "Parent report; six brackets from <$25,000 to >=$200,000 as shown in Table 1"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, parent report; Table 1 shows college or more vs. less"
+    },
+    {
+     "name": "Major depressive disorder",
+     "detail": "KSADS-5 parent diagnostic interview (listed as 'depression' in Table 2 footnote)"
+    },
+    {
+     "name": "Binge-eating disorder",
+     "detail": "KSADS-5 parent diagnostic interview"
+    },
+    {
+     "name": "Site",
+     "detail": "Study site entered as a covariate; the paper does not say whether as fixed effects or a random intercept"
+    }
+   ],
+   "equation": "BMIpct_Y1[i] = b0 + b1*phoneSM_IV_baseline[i] + b2*BMIpct_baseline[i] + b3..*race_ethnicity + b*sex + b*household_income + b*parent_education + b*depression + b*binge_eating_disorder + b*site + e[i], where phoneSM_IV is one of texting, video chat, or social networking hours/day (one model per IV).",
+   "estimation": "Multiple linear regression in Stata 15.1 (analysis performed in 2020). ABCD pre-constructed propensity weights based on the American Community Survey were applied. Single imputation by Gaussian normal regression for missing covariates. Site entered as a covariate; no family clustering, but a sensitivity analysis including only one sibling per family gave similar findings (numbers not printed). Significance at p < 0.05 (bold in Table 2); no multiple-comparison correction reported. Effect modification of screen time by sex was tested and was not present (p for interaction > 0.05); no stratified estimates reported. Appendices A and B (online supporting information, not in this PDF) repeat the analyses with BMI and BMI z-score as outcomes.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "M = 0.24 h/day, SD = 0.56",
+     "sd_iv": 0.56
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "meta": "M = 0.21 h/day, SD = 0.52",
+     "sd_iv": 0.52
+    },
+    {
+     "id": "social_networking",
+     "label": "Social networking",
+     "meta": "M = 0.13 h/day, SD = 0.45",
+     "sd_iv": 0.45
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bmi_pct_y1",
+     "label": "BMI percentile, 1-year follow-up",
+     "sd_dv": 30.5,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "bmi_pct_y1",
+     "B": 0.92,
+     "B_lo": 0.29,
+     "B_hi": 1.55,
+     "p": 0.004,
+     "p_label": "0.004",
+     "sig": true,
+     "location": "Table 2, Texting row, fully adjusted columns",
+     "derived_d": 0.0338,
+     "derived_d_lo": 0.0106,
+     "derived_d_hi": 0.0569,
+     "derived_d_method": "linear (SD_IV=0.56, SD_DV=30.5)"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "bmi_pct_y1",
+     "B": 0.72,
+     "B_lo": 0.09,
+     "B_hi": 1.36,
+     "p": 0.025,
+     "p_label": "0.025",
+     "sig": true,
+     "location": "Table 2, Video chat row, fully adjusted columns",
+     "derived_d": 0.0246,
+     "derived_d_lo": 0.0031,
+     "derived_d_hi": 0.0464,
+     "derived_d_method": "linear (SD_IV=0.52, SD_DV=30.5)"
+    },
+    {
+     "iv": "social_networking",
+     "dv": "bmi_pct_y1",
+     "B": 0.67,
+     "B_lo": -0.07,
+     "B_hi": 1.41,
+     "p": 0.075,
+     "p_label": "0.075",
+     "sig": false,
+     "location": "Table 2, Social networking row, fully adjusted columns",
+     "derived_d": 0.0198,
+     "derived_d_lo": -0.0021,
+     "derived_d_hi": 0.0416,
+     "derived_d_method": "linear (SD_IV=0.45, SD_DV=30.5)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Model 1, adjusted for baseline BMI percentile only (texting B = 1.25, video chat B = 0.98, social networking B = 1.04)",
+   "location": "Table 2, left-hand columns (p. 4)",
+   "why": "Minimally adjusted model shown alongside the fully adjusted model; the abstract and results anchor the per-modality claims to the fully adjusted model."
+  },
+  {
+   "model": "Total screen time, television, videos (YouTube), and video games as IVs",
+   "location": "Table 2 rows (p. 4)",
+   "why": "Non-phone/non-SM modalities, and total screen time is a composite bundling TV, videos and gaming; fail FT-IC2. Phone/SM components are broken out separately and extracted in M1."
+  },
+  {
+   "model": "Sensitivity analyses with BMI (kg/m^2) and BMI z-score as outcomes",
+   "location": "Appendices A and B (online Supporting Information; not included in this PDF)",
+   "why": "Tables not available in the PDF read; the text only says findings were similar with all B coefficients positive and some modality associations no longer significant. Could be added if the supplement is obtained."
+  },
+  {
+   "model": "One-sibling-per-family sensitivity analysis",
+   "location": "Methods 2.3, p. 2",
+   "why": "Narrative only ('findings did not differ'); no estimates printed."
+  },
+  {
+   "model": "Sex x screen time interaction tests",
+   "location": "Methods 2.3, p. 2",
+   "why": "Only reported as p for interaction > 0.05; no stratified per-modality estimates."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
+  "contrast_type": "per 1 hour/day of the phone/SM modality, rescaled to per 1 SD of the IV",
+  "transformable": true,
+  "notes": "SD_IV from Table 1 (p. 3), baseline screen time hours per day for the analytic N = 11,066: texting 0.56, video chat 0.52, social networking 0.45. SD_DV = 30.5, the SD of BMI percentile at 1-year follow-up in Table 1 (p. 3). Table 1 values are propensity-weighted. Because baseline BMI percentile is a covariate, B reflects association with follow-up BMI percentile net of baseline; standardizing by the raw follow-up SD (not a residual/change SD) yields a very small d and is not directly comparable to cross-sectional estimates. IVs are heavily floor-skewed (means under 15 min/day)."
+ },
+ "extraction_flags": "The PDF is the 5-page short communication only. Appendices A and B are online supporting information that was not available, so the per-modality sensitivity estimates for BMI and BMI z-score were not extracted. Site is listed as a covariate, but the paper does not say whether it is a fixed effect or a random effect. Age is not among the covariates; this is presumably because BMI percentile is already age- and sex-specific. SD_DV is the raw SD of follow-up BMI percentile (30.5), but the model adjusts for baseline BMI percentile, so the derived d values will be very small and are not comparable to cross-sectional d values. The SDs in Table 1 are propensity-weighted. The social networking estimate was not significant (p=0.075). Texting and video chat were significant."
+}

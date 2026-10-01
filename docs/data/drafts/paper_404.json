@@ -1,0 +1,178 @@
+{
+ "paper_id": "404",
+ "title": "Dating app use and depression symptoms in adolescents",
+ "doi": "10.1186/s13104-026-07641-9",
+ "year": "2026",
+ "authors": "Nagata JM, Domingue SK, Diep T, Helmer CK, Al-Shoaibi AAA, Ganson KT, Testa A, He J, Baker FC, Lavender JM",
+ "journal": "BMC Research Notes",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multivariable linear regression of parent-reported CBCL depression symptoms on lifetime dating app use, adjusted for sociodemographics and site",
+   "location_in_paper": "Table 2, adjusted columns (p. 3); reported in Results p. 3-4 and Abstract; interpreted in Discussion p. 4",
+   "design": "Cross-sectional analysis of a single ABCD wave (Year 5 follow-up, 2021-2023). Dating app use and depression symptoms measured at the same visit. One observation per adolescent; no repeated measures and no time interactions.",
+   "sample": "ABCD Release 6.0, Year 5 follow-up, adolescents aged 13-16 years. Of those enrolled, 3,305 were missing depression symptom data, 51 missing dating app data and 162 missing sociodemographic data, giving 8,444 complete cases (Appendix A). Missing data were handled with multiple imputation by chained equations (predictive mean matching, MAR assumption), imputing dating app use and depression symptoms from covariate information; final analytic N = 11,530. Mean age 15.0 years (SD 0.6, range 13.3-16.7); 47.9% female, 52.1% male; 52.7% White, 19.9% Black, 17.0% Latino/Hispanic, 6.1% Asian, 3.5% Native American, 0.9% Other (47.3% racial and ethnic minorities). Household income: 12.7% <=$24,999, 12.6% $25,000-49,999, 11.2% $50,000-74,999, 11.4% $75,000-99,999, 33.3% $100,000-199,999, 18.8% >=$200,000. Parent education: 14.7% high school or less, 85.3% college or more (Table 1, post-imputation).",
+   "iv": "Lifetime dating app use from the adolescent item \"Have you ever used a dating app?\" (yes, no, don't know what that is), entered as a three-level categorical variable with \"never used\" as reference. Distribution after imputation: never used 98.8%, used 0.9%, don't know what it is 0.3% (Table 1). No information on recency, frequency, platform, or time spent was used; current use (4 participants) and weekly time on dating apps (0.4% >0 min) were judged too rare to analyze.",
+   "dv": "Parent/caregiver-reported CBCL DSM-oriented Affective (depression) Problems scale, 13 items scored 0-2, analyzed as a continuous sum score (scale range 0-26) at Year 5. Analytic sample M = 1.9, SD = 2.9, observed range 0-23 (Table 1). Residuals were right-skewed with many zeros.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years at Year 5 visit (continuous)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female or male"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Asian, Black, Latino/Hispanic, Native American, White, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories reflecting the US median household income"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parental education, high school or less vs. college education or more"
+    },
+    {
+     "name": "ABCD study site",
+     "detail": "Entered as a covariate (fixed adjustment; not described as a random effect)"
+    }
+   ],
+   "equation": "CBCL_depression[i] = b0 + b1*dating_app_used[i] + b2*dating_app_dont_know[i] + b3*age + b4*sex + b5*race_ethnicity + b6*household_income + b7*parent_education + b8*site + e[i]; reference category = never used; SEs cluster-robust at the family level",
+   "estimation": "Multivariable linear regression reported as standardized beta coefficients, pooled across multiply imputed datasets (MICE with predictive mean matching). Heteroskedasticity-robust (cluster-robust) standard errors clustered at the family level to address heteroskedasticity and non-normality of residuals. Software not reported. No survey weights (baseline weights judged inappropriate for Year 5). Two-sided alpha = 0.05; no multiple-comparison correction. No interaction or stratified analyses. Precision/stability checks and leave-one-site-out analyses reported narratively as stable (no numbers printed). Sensitivity model with additional covariates in Appendix D (see excluded_models). The unadjusted model in Table 2 is reported for comparison.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "dating_used",
+     "label": "Ever used a dating app (vs. never)",
+     "meta": "0.9% of sample",
+     "sd_iv": null
+    },
+    {
+     "id": "dating_dontknow",
+     "label": "Don't know what a dating app is (vs. never used)",
+     "meta": "0.3% of sample",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cbcl_dep",
+     "label": "CBCL depression symptoms sum score (parent report)",
+     "sd_dv": 2.9,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "dating_used",
+     "dv": "cbcl_dep",
+     "beta": 0.42,
+     "beta_lo": 0.08,
+     "beta_hi": 0.76,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": true,
+     "location": "Table 2, adjusted, row 'Used'",
+     "note": "Cluster-robust SE = 0.17. Unadjusted: 0.47 (0.12, 0.82), SE 0.18, p = 0.009."
+    },
+    {
+     "iv": "dating_dontknow",
+     "dv": "cbcl_dep",
+     "beta": 0.04,
+     "beta_lo": -0.33,
+     "beta_hi": 0.41,
+     "p": 0.817,
+     "p_label": "0.817",
+     "sig": false,
+     "location": "Table 2, adjusted, row 'Don't know what that is'",
+     "note": "SE = 0.19. This level reflects not knowing what a dating app is rather than use; coders may wish to strike it as not a phone/SM exposure contrast."
+    }
+   ],
+   "d_kind": "beta_is_y_standardized_group_difference"
+  },
+  {
+   "model_id": "M2",
+   "name": "Multivariable linear regression of youth-reported internalizing symptoms on lifetime dating app use (parallel outcome analysis)",
+   "location_in_paper": "Results p. 4 (Appendix E); referenced in Discussion limitations p. 4. Appendix E is in the online supplement and is not bundled in the PDF.",
+   "design": "Cross-sectional, Year 5 follow-up, same as M1. Parallel analysis run because adolescent-reported depression symptoms were not available at Year 5.",
+   "sample": "ABCD Year 5 (Release 6.0); the analytic N for this analysis is not stated in the main text (Appendix E not available in the PDF).",
+   "iv": "Lifetime dating app use, ever used vs. never used (same item as M1).",
+   "dv": "Year 5 adolescent-reported internalizing symptoms sum score. Instrument and descriptive statistics are not given in the main text (Appendix E not available).",
+   "covariates": [
+    {
+     "name": "Presumed same as M1",
+     "detail": "Main text describes this as a parallel analysis; covariate set not confirmed because Appendix E is not in the PDF"
+    }
+   ],
+   "equation": "Internalizing_youth[i] = b0 + b1*dating_app_used[i] + covariates (presumed as in M1) + e[i]",
+   "estimation": "Described as a parallel linear regression analysis with standardized beta coefficients; details beyond the main text are not available in the PDF.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "dating_used",
+     "label": "Ever used a dating app (vs. never)",
+     "meta": "0.9% of sample in M1",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "int_youth",
+     "label": "Youth-reported internalizing symptoms sum score",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "dating_used",
+     "dv": "int_youth",
+     "beta": 0.66,
+     "beta_lo": 0.34,
+     "beta_hi": 0.99,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results text p. 4 (Appendix E)",
+     "note": "Values copied from main-text Results; Appendix E itself not available in the PDF for verification."
+    }
+   ],
+   "d_kind": "beta_is_y_standardized_group_difference"
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted linear regression of CBCL depression on dating app use",
+   "location": "Table 2, unadjusted columns (p. 3)",
+   "why": "Transparency comparison; the authors anchor their claim to the adjusted model. Values: used 0.47 (0.12, 0.82), SE 0.18, p = 0.009; don't know -0.02 (-0.39, 0.35), SE 0.19, p = 0.921."
+  },
+  {
+   "model": "Sensitivity model adding daily recreational screen time, cyberbullying victimization, pubertal status, parental screen monitoring, age at first phone owned, average sleep duration, and relationship status",
+   "location": "Results p. 4; Appendix D (online supplement, not in PDF)",
+   "why": "Robustness check; authors state results stayed similar and interpret the main adjusted model. Ever used a dating app: beta 0.44 (95% CI 0.03-0.85), p = 0.035. Age at first phone owned is a covariate here, not a focal estimate."
+  },
+  {
+   "model": "Precision/stability checks and leave-one-site-out analyses",
+   "location": "Statistical analyses p. 3",
+   "why": "Reported narratively as stable; no numbers printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized beta coefficient)",
+  "conversion_formula": "Coefficients are treated as Y-standardized mean differences for a binary IV (ever used vs never used dating apps), i.e. already on the Cohen's d scale: d = beta. Not passed through r -> d.",
+  "contrast_type": "Ever used a dating app vs. never used (binary group contrast)",
+  "transformable": true,
+  "notes": "Paper labels them 'standardized betas' without saying which variables were standardized. With a binary IV at 0.9% prevalence a fully standardized beta of 0.42-0.66 is impossible, so they are read as Y-standardized group differences (SD units of the outcome) and used directly as d. Coders should confirm against Appendix E. The paper labels coefficients as standardized betas from linear regression but does not say whether X, Y, or both were standardized. With a binary IV at 0.9% prevalence, a fully standardized beta of 0.42 would be implausibly large, so the value most likely reflects Y-standardized units (i.e., a mean difference of about 0.42 SD of the depression score, d-like) or possibly raw score points. SD_DV for CBCL depression sum score = 2.9 (Table 1, p. 3). SD_IV not reported (binary indicator, 0.9% used, Table 1). Applying r-to-d to 0.42 gives a very different d than passthrough, so the human coder should decide which interpretation applies before conversion. M2 SD_DV not available (Appendix E not in PDF)."
+ },
+ "extraction_flags": "1) The paper calls its coefficients \"standardized beta\" but never says which variables were standardized. A fully standardized beta of 0.42 is implausible for a binary IV with 0.9% prevalence, so the value is probably standardized on Y only (d-like) or in raw score points. The r-to-d rule in guidelines 4a gives d of about 0.93, while passing the value through gives d of about 0.42. A human needs to choose before converting. 2) The PDF has only the 6 main-text pages. Appendices A-E are online-only, so the M2 values (youth-reported internalizing, Appendix E: 0.66, 0.34-0.99, p<0.001) and the Appendix D sensitivity values (0.44, 0.03-0.85, p=0.035) come from the Results text and could not be checked against the appendix tables. M2's covariates and N are assumed to match M1. 3) The 'don't know what a dating app is' vs never-used estimate (0.04, -0.33 to 0.41, p=0.817) is included in M1 with a note. It is not a use contrast, so coders may want to strike it. 4) N=11,530 is after multiple imputation of the exposure and the outcome; there are 8,444 complete cases. 5) SD_IV is not reported (binary exposure). SD_DV is 2.9 (Table 1).json"
+}

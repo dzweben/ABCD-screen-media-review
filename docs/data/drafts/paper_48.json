@@ -1,0 +1,388 @@
+{
+ "paper_id": "48",
+ "title": "Childhood internalizing, externalizing and attention symptoms predict changes in social and nonsocial screen time",
+ "doi": "10.1007/s00127-024-02669-3",
+ "year": "2024",
+ "authors": "Keyes K, Hamilton A, Finsaas M, Kreski N",
+ "journal": "Social Psychiatry and Psychiatric Epidemiology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted cumulative logistic regression of one-year follow-up social screen time category on baseline CBCL symptom category, adjusted for baseline screen use and demographics",
+   "location_in_paper": "Fig. 1 (p. 2283, forest plot without printed values); numeric ORs for social screen time printed only in Results text p. 2284; full ORs in Supplementary Table 1 (not bundled in the PDF). Interpreted in Discussion p. 2285.",
+   "design": "Longitudinal, two waves. Baseline (wave 1) CBCL symptom category is the IV and social screen time category one year later (wave 2) is the DV, controlling for the baseline level of the same screen time measure (residualized change model). One follow-up observation per child; no repeated measures and no time interactions. Social screen time is the DV in this model. Weekday and weekend social screen time are modelled as separate outcomes, and medium and high categories are each contrasted with 0 h.",
+   "sample": "ABCD Release 4.0. Baseline Sept 2016-Aug 2018 (N=11,876), one-year follow-up 2017-2019 (10,001 followed up with non-zero weight). Analytic N=9,066 with complete psychiatric symptom, screen time and demographic data (9.3% of the follow-up sample missing; not imputed). Mean age 119.3 months at baseline (range 107-132 months). 48.1% female (n=4,362), 51.9% male (n=4,704). Non-Hispanic White 55.2% (5,002), Non-Hispanic Black 13.8% (1,255), Hispanic/Latino 18.7% (1,693), Non-Hispanic other 12.3% (1,116). Household income <$50k 28.1%, $50-100k 27.9%, >$100k 43.9% (Table 1, p. 2282). Same N reported for all analyses.",
+   "iv": "Parent-report CBCL (112 items, 0-2 scale) T-scores at baseline for total problems, internalizing (subscales: anxious-depressive, withdrawn-depressive, plus DSM depressive), attention, externalizing (subscales: aggressive, rule-breaking). Because of right skew each scale was trichotomized using recommended cut-scores into non-significant (reference), borderline, and clinical (typically borderline 65-69 and clinical 70+; for internalizing, externalizing and total problems borderline 60-63 and clinical 64+), and dummy-coded. Baseline clinical prevalence (Table 1): total problems 6.8%, attention 2.8%, internalizing 9.8%, depressive 3.1%, anxious-depressive 2.9%, withdrawn-depressive 2.4%, externalizing 5.7%, aggressive 2.2%, rule breaking 2.1% (194). Only the contrasts for which a social screen time OR is printed are extracted here: clinical vs non-significant for total problems, internalizing, withdrawn-depressive, externalizing and rule breaking.",
+   "dv": "Social screen time = sum of youth-reported hours texting, using social media, and video chatting (Youth Screen Time Survey; each item on a 7-point scale 0=none, 0.25=<30 min, 0.5=30 min, 1, 2, 3, 4=4+ hours), computed separately for a typical weekday and weekend day. Because of right skew, trichotomized by percentile rank (1-33, 34-66, 67-100) pooled across waves 1 and 2: 0 h (reference), 0.25-0.5 h (medium), 0.75-12 h (high), for both weekday and weekend social. Composite is built exclusively from phone/SM/digital-socializing items, so it qualifies under FT-IC2 Step 2. Distribution at baseline: weekday social 0 h 47.8%, 0.25-0.5 h 33.5%, 0.75-12 h 18.7%; weekend social 50.1%/28.8%/21.2%. At follow-up: weekday social 36.8%/31.7%/31.5%; weekend social 37.2%/27.5%/35.3% (Table 1, p. 2282).",
+   "covariates": [
+    {
+     "name": "Baseline screen use",
+     "detail": "Baseline level of the same screen time outcome (residualized change model)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female (reference) vs male"
+    },
+    {
+     "name": "Age",
+     "detail": "Continuous, months at baseline (range 107-132)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Non-Hispanic White (reference), Non-Hispanic Black, Hispanic/Latino, Non-Hispanic Other"
+    },
+    {
+     "name": "Family income",
+     "detail": "<$50,000 (reference), $50,000-100,000, >$100,000, at baseline"
+    }
+   ],
+   "equation": "logit P(SocialST_followup[i] >= k) (or category-k vs 0 h contrast) = a_k + b1*CBCL_borderline[i] + b2*CBCL_clinical[i] + b3..*SocialST_baseline[i] + b4*male + b5*age_months + b6..b8*race/ethnicity + b9..b10*income, weighted by ABCD ACS propensity weight; fitted separately for each CBCL scale and for weekday vs weekend social screen time. Focal estimate exp(b2) for medium and high outcome categories.",
+   "estimation": "Cumulative logistic regression in R with the VGAM package, run separately for each CBCL scale x screen outcome combination. ABCD propensity weight approximating the American Community Survey sociodemographics of 9- and 10-year-olds applied. No random effects for site or family are described. No multiple-comparison correction reported. Alpha not stated; significance here is judged by whether the 95% CI excludes 1. No p-values printed. No sex or race interaction or stratified analyses reported. Separate ORs are reported for the medium and high outcome categories (Fig. 1), which is not what a single proportional-odds cumulative logit returns, so the exact parameterization (non-parallel cumulative logit or category-specific contrasts) is unclear. The very narrow CIs (e.g., 0.74-0.75) suggest the weights may have been treated as frequency weights.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "total_clin",
+     "label": "Total problems, clinical (vs non-significant)",
+     "meta": "T 64-83; 6.8% at baseline",
+     "sd_iv": null
+    },
+    {
+     "id": "int_clin",
+     "label": "Internalizing, clinical",
+     "meta": "T 64-93; 9.8%",
+     "sd_iv": null
+    },
+    {
+     "id": "wd_clin",
+     "label": "Withdrawn-depressive, clinical",
+     "meta": "T 70-97; 2.4%",
+     "sd_iv": null
+    },
+    {
+     "id": "ext_clin",
+     "label": "Externalizing, clinical",
+     "meta": "T 64-84; 5.7%",
+     "sd_iv": null
+    },
+    {
+     "id": "rb_clin",
+     "label": "Rule breaking, clinical",
+     "meta": "T 70+; 2.1%",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "wd_med",
+     "label": "Weekday social, medium (0.25-0.5 h vs 0 h)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "wd_high",
+     "label": "Weekday social, high (0.75-12 h vs 0 h)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "we_med",
+     "label": "Weekend social, medium (0.25-0.5 h vs 0 h)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "we_high",
+     "label": "Weekend social, high (0.75-12 h vs 0 h)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "total_clin",
+     "dv": "wd_high",
+     "OR": 1.02,
+     "OR_lo": 1.01,
+     "OR_hi": 1.02,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 1, para 2); point also plotted in Fig. 1 p. 2283; full table in Supplementary Table 1 (not bundled in PDF)",
+     "note": "Text says clinical total problems 'predicted higher levels of screen time' without naming medium vs high; assigned to the high category because the matching social point in Fig. 1 (Total Psych Problems panel) sits on the 'Clinical Symptoms -> High Screen Use' row. Verify against Supplementary Table 1."
+    },
+    {
+     "iv": "total_clin",
+     "dv": "we_high",
+     "OR": 1.15,
+     "OR_lo": 1.14,
+     "OR_hi": 1.15,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 1, para 2); point also plotted in Fig. 1 p. 2283; full table in Supplementary Table 1 (not bundled in PDF)",
+     "note": "Text says clinical total problems 'predicted higher levels of screen time' without naming medium vs high; assigned to the high category because the matching social point in Fig. 1 (Total Psych Problems panel) sits on the 'Clinical Symptoms -> High Screen Use' row. Verify against Supplementary Table 1."
+    },
+    {
+     "iv": "int_clin",
+     "dv": "wd_high",
+     "OR": 0.92,
+     "OR_lo": 0.92,
+     "OR_hi": 0.93,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 1, para 4); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)",
+     "note": "Text: children with clinical internalizing were less likely to be in a high screen time category one year later."
+    },
+    {
+     "iv": "int_clin",
+     "dv": "we_high",
+     "OR": 0.98,
+     "OR_lo": 0.97,
+     "OR_hi": 0.98,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 1, para 4); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "wd_clin",
+     "dv": "wd_high",
+     "OR": 0.74,
+     "OR_lo": 0.74,
+     "OR_hi": 0.75,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 1); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "wd_clin",
+     "dv": "we_high",
+     "OR": 0.86,
+     "OR_lo": 0.85,
+     "OR_hi": 0.86,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 1); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "wd_clin",
+     "dv": "wd_med",
+     "OR": 0.73,
+     "OR_lo": 0.73,
+     "OR_hi": 0.74,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 1); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "wd_clin",
+     "dv": "we_med",
+     "OR": 0.8,
+     "OR_lo": 0.8,
+     "OR_hi": 0.81,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 1); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "ext_clin",
+     "dv": "wd_high",
+     "OR": 1.15,
+     "OR_lo": 1.14,
+     "OR_hi": 1.15,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 2); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "ext_clin",
+     "dv": "we_high",
+     "OR": 1.27,
+     "OR_lo": 1.27,
+     "OR_hi": 1.28,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 2); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "rb_clin",
+     "dv": "wd_high",
+     "OR": 1.14,
+     "OR_lo": 1.13,
+     "OR_hi": 1.15,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 2); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    },
+    {
+     "iv": "rb_clin",
+     "dv": "we_high",
+     "OR": 1.35,
+     "OR_lo": 1.34,
+     "OR_hi": 1.36,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, para 2); Fig. 1 p. 2283; Supplementary Table 1 (not bundled)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Weighted cumulative logistic regression of one-year follow-up CBCL symptom category on baseline social screen time category, adjusted for baseline symptoms and demographics",
+   "location_in_paper": "Supplementary analysis: Supplementary Table 2 and Supplementary Fig. 1 (not bundled in the PDF); numeric social screen time ORs printed in Results text pp. 2284-2285; interpreted as evidence of bidirectionality in Results p. 2285 and Discussion p. 2285.",
+   "design": "Longitudinal, two waves, reverse direction of M1. Baseline social screen time category (weekday or weekend) is the IV and CBCL symptom category one year later is the DV, controlling for the baseline level of the same CBCL scale. One follow-up observation per child; no repeated measures or time interactions. Social screen time is the IV in this model.",
+   "sample": "ABCD Release 4.0. Baseline Sept 2016-Aug 2018 (N=11,876), one-year follow-up 2017-2019 (10,001 followed up with non-zero weight). Analytic N=9,066 with complete psychiatric symptom, screen time and demographic data (9.3% of the follow-up sample missing; not imputed). Mean age 119.3 months at baseline (range 107-132 months). 48.1% female (n=4,362), 51.9% male (n=4,704). Non-Hispanic White 55.2% (5,002), Non-Hispanic Black 13.8% (1,255), Hispanic/Latino 18.7% (1,693), Non-Hispanic other 12.3% (1,116). Household income <$50k 28.1%, $50-100k 27.9%, >$100k 43.9% (Table 1, p. 2282). Same N reported for all analyses.",
+   "iv": "Social screen time = sum of youth-reported hours texting, using social media, and video chatting (Youth Screen Time Survey; each item on a 7-point scale 0=none, 0.25=<30 min, 0.5=30 min, 1, 2, 3, 4=4+ hours), computed separately for a typical weekday and weekend day. Because of right skew, trichotomized by percentile rank (1-33, 34-66, 67-100) pooled across waves 1 and 2: 0 h (reference), 0.25-0.5 h (medium), 0.75-12 h (high), for both weekday and weekend social. Composite is built exclusively from phone/SM/digital-socializing items, so it qualifies under FT-IC2 Step 2. Distribution at baseline: weekday social 0 h 47.8%, 0.25-0.5 h 33.5%, 0.75-12 h 18.7%; weekend social 50.1%/28.8%/21.2%. At follow-up: weekday social 36.8%/31.7%/31.5%; weekend social 37.2%/27.5%/35.3% (Table 1, p. 2282). In M2 the baseline categories are the IV, with 0 h as reference.",
+   "dv": "Follow-up (wave 2) CBCL T-score category for each scale, trichotomized into non-significant (reference), borderline, clinical with the same cut-scores as at baseline. Extracted outcomes with printed social screen time ORs: clinical total problems and clinical withdrawn-depressive symptoms. Follow-up prevalence is not reported; baseline clinical prevalence was 6.8% (total problems) and 2.4% (withdrawn-depressive) (Table 1).",
+   "covariates": [
+    {
+     "name": "Baseline psychiatric symptoms",
+     "detail": "Baseline trichotomized level of the same CBCL scale being predicted"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female (reference) vs male"
+    },
+    {
+     "name": "Age",
+     "detail": "Continuous, months at baseline"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Non-Hispanic White (reference), Non-Hispanic Black, Hispanic/Latino, Non-Hispanic Other"
+    },
+    {
+     "name": "Family income",
+     "detail": "<$50,000 (reference), $50,000-100,000, >$100,000, at baseline"
+    }
+   ],
+   "equation": "logit P(CBCL_followup[i] >= k) (or clinical vs non-significant contrast) = a_k + b1*SocialST_medium[i] + b2*SocialST_high[i] + b3..*CBCL_baseline[i] + b4*male + b5*age_months + b6..b8*race/ethnicity + b9..b10*income, weighted by ABCD ACS propensity weight; fitted separately for each CBCL scale and for weekday vs weekend social screen time.",
+   "estimation": "Cumulative logistic regression in R with the VGAM package, run separately for each CBCL scale x screen outcome combination. ABCD propensity weight approximating the American Community Survey sociodemographics of 9- and 10-year-olds applied. No random effects for site or family are described. No multiple-comparison correction reported. Alpha not stated; significance here is judged by whether the 95% CI excludes 1. No p-values printed. No sex or race interaction or stratified analyses reported. Separate ORs are reported for the medium and high outcome categories (Fig. 1), which is not what a single proportional-odds cumulative logit returns, so the exact parameterization (non-parallel cumulative logit or category-specific contrasts) is unclear. The very narrow CIs (e.g., 0.74-0.75) suggest the weights may have been treated as frequency weights. Authors state that baseline screen time and future symptoms were structured identically to their counterparts in the primary analysis.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "wd_social_higher",
+     "label": "Weekday social screen time, 'higher' (category vs 0 h not specified)",
+     "meta": "Baseline: 0 h 47.8%, 0.25-0.5 h 33.5%, 0.75-12 h 18.7%",
+     "sd_iv": null
+    },
+    {
+     "id": "we_social_higher",
+     "label": "Weekend social screen time, 'higher' (category vs 0 h not specified)",
+     "meta": "Baseline: 0 h 50.1%, 0.25-0.5 h 28.8%, 0.75-12 h 21.2%",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "total_clin",
+     "label": "Total problems, clinical (follow-up)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "wd_clin",
+     "label": "Withdrawn-depressive, clinical (follow-up)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "wd_social_higher",
+     "dv": "total_clin",
+     "OR": 1.11,
+     "OR_lo": 1.1,
+     "OR_hi": 1.12,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, 'Association between screen use and future psychiatric symptoms', para 3); full table in Supplementary Table 2 and Supplementary Fig. 1 (not bundled in PDF)",
+     "note": "Text says 'Higher social weekday/weekend' screen time without stating whether this is the medium (0.25-0.5 h) or high (0.75-12 h) category vs 0 h; verify against Supplementary Table 2."
+    },
+    {
+     "iv": "we_social_higher",
+     "dv": "total_clin",
+     "OR": 1.12,
+     "OR_lo": 1.11,
+     "OR_hi": 1.13,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2284 (col 2, 'Association between screen use and future psychiatric symptoms', para 3); full table in Supplementary Table 2 and Supplementary Fig. 1 (not bundled in PDF)",
+     "note": "Text says 'Higher social weekday/weekend' screen time without stating whether this is the medium (0.25-0.5 h) or high (0.75-12 h) category vs 0 h; verify against Supplementary Table 2."
+    },
+    {
+     "iv": "wd_social_higher",
+     "dv": "wd_clin",
+     "OR": 0.7,
+     "OR_lo": 0.69,
+     "OR_hi": 0.71,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2285 (col 1, para 1); Supplementary Table 2 / Supplementary Fig. 1 (not bundled)",
+     "note": "Text says 'Higher social weekday/weekend' screen time without stating whether this is the medium (0.25-0.5 h) or high (0.75-12 h) category vs 0 h; verify against Supplementary Table 2."
+    },
+    {
+     "iv": "we_social_higher",
+     "dv": "wd_clin",
+     "OR": 0.67,
+     "OR_lo": 0.66,
+     "OR_hi": 0.68,
+     "p": null,
+     "p_label": "not reported (only OR and 95% CI printed)",
+     "sig": true,
+     "location": "Results text p. 2285 (col 1, para 1); Supplementary Table 2 / Supplementary Fig. 1 (not bundled)",
+     "note": "Text says 'Higher social weekday/weekend' screen time without stating whether this is the medium (0.25-0.5 h) or high (0.75-12 h) category vs 0 h; verify against Supplementary Table 2."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Nonsocial screen time (TV/movies, YouTube videos, video games) as DV in the primary analysis",
+   "location": "Fig. 1 (teal points), Results p. 2284, Supplementary Table 1",
+   "why": "Nonsocial composite bundles TV, YouTube and video games; not phone/SM. Fails FT-IC2."
+  },
+  {
+   "model": "Nonsocial screen time as IV in the reverse (supplementary) analysis",
+   "location": "Results pp. 2284-2285, Supplementary Table 2 / Supplementary Fig. 1",
+   "why": "Non-phone/SM modality. Fails FT-IC2."
+  },
+  {
+   "model": "Remaining social screen time cells of the primary analysis (borderline contrasts; medium outcome categories for most scales; attention/ADHD, depressive, anxious-depressive and aggressive scales)",
+   "location": "Fig. 1 p. 2283 (plotted only); Supplementary Table 1",
+   "why": "These social screen time ORs are shown only as unlabelled points in Fig. 1 and the numeric values are in Supplementary Table 1, which is not bundled in the PDF. Not read off the figure to avoid estimating values. They belong to M1 and should be added from Supplementary Table 1 if it is obtained."
+  },
+  {
+   "model": "Remaining social screen time cells of the reverse analysis (other CBCL scales, borderline outcomes, medium vs high exposure)",
+   "location": "Supplementary Table 2 / Supplementary Fig. 1",
+   "why": "Not printed in the PDF; supplementary file not available here. Belong to M2 if obtained."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (cumulative/ordinal logistic)",
+  "conversion_formula": "d = ln(OR) * sqrt(3)/pi (Chinn 2000), applied to the OR and to each CI bound",
+  "contrast_type": "M1: clinical vs non-significant baseline CBCL category; OR for being in the medium or high (vs 0 h) social screen time category one year later. M2: 'higher' baseline social screen time category vs 0 h; OR for clinical (vs non-significant) CBCL category one year later.",
+  "transformable": "partial",
+  "notes": "All extracted cells are ORs with 95% CIs from the Results text, so the Chinn conversion can be applied mechanically. Marked partial because (1) most of the paper's social screen time estimates are only plotted in Fig. 1 or in the unbundled Supplementary Tables 1-2, so only 16 of the social cells are numerically extractable; (2) the ORs come from an ordinal/categorical model whose exact parameterization (separate medium and high ORs) is unclear, so the logistic-latent-variable assumption behind Chinn is approximate; (3) both IV and DV are categorical, so the d reflects a group contrast (clinical vs non-significant, or exposure category vs 0 h), not a per-unit slope, and is not comparable to per-SD d's from continuous-IV papers. No SDs needed. Baseline prevalence for categories is in Table 1 p. 2282; follow-up CBCL prevalence is not reported. Very narrow CIs likely reflect weighting and should not be used for precision-weighting without checking."
+ },
+ "extraction_flags": "The bundled PDF has no supplement. Fig. 1 plots the main results with no printed values, and the full ORs are in Supplementary Tables 1 and 2, which are not in the PDF. Only the 16 social-screen-time ORs printed in the Results text (pp. 2284-2285) were extracted: 12 for M1 (symptoms predicting social screen time) and 4 for M2 (social screen time predicting symptoms). No values were read off the figure. The remaining social cells are listed under excluded_models and should be added from the supplementary tables if those can be obtained. Social screen time is texting + social media + video chat, which qualifies under FT-IC2 Step 2. The 0 / 0.25-0.5 / 0.75-12 h cut-points apply to social time; the nonsocial measure has its own cut-points. Ambiguities: (1) For total problems, the text does not say whether the weekday 1.02 and weekend 1.15 ORs are for the medium or high category. I assigned them to high based on where the points sit in Fig. 1; please verify. (2) In M2 the text says \"higher\" social screen time without naming medium or high vs 0 h. (3) The paper calls the method cumulative logistic regression in VGAM, yet it reports separate ORs for the medium and high categories. That does not fit a single proportional-odds model, so the parameterization is unclear and the Chinn conversion is only approximate. (4) No p-values are printed; sig is set from whether the 95% CI excludes 1. (5) The CIs are implausibly narrow (e.g., 0.74-0.75), which suggests the propensity weights were treated as frequency weights. Be careful using these CIs for precision weighting. (6) Follow-up CBCL prevalence is not reported, so p0 is null."
+}

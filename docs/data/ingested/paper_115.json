@@ -1,0 +1,498 @@
+{
+ "paper_id": "115",
+ "title": "The longitudinal impact of screen media activities on brain function, architecture and mental health in early adolescence",
+ "doi": "10.1016/j.ijchp.2025.100589",
+ "year": "2025",
+ "authors": "Dong N, Zhou Y, Lei L, Lee TMC, Lam CLM",
+ "journal": "International Journal of Clinical and Health Psychology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Three-level linear mixed model of year-3 CBCL internalizing, externalizing and stress problems on baseline media-specific screen time (texting, social media, video chat), adjusted for demographics and puberty",
+   "location_in_paper": "Results, 'SMA's differential effect on mental health and the brain' (p. 6, right column, continuing from left column); method in 'Predicting mental health problems with baseline SMA' and 'Media-specific analysis' (p. 4). No table prints these estimates; values are in-text only. Discussed in 'SMA's differential effect on mental health problems' (p. 9).",
+   "design": "Longitudinal, two time points used for this model. Media-specific weekly-average screen time measured at baseline (age 9-10) predicts CBCL internalizing, externalizing and stress problem t-scores at the 3-year follow-up. One model per outcome, with each media type entered in separate media-specific models (the paper repeats the general-SMA linear mixed model replacing general SMA with media-specific SMA time). Outcome is a single follow-up, not repeated measures. Baseline CBCL is not listed as a covariate. No time x IV interaction.",
+   "sample": "ABCD Release 4.0 (baseline 2017-2018, 21 U.S. sites), with 2-year and 3-year follow-up data. Analytic N = 4557 adolescents after excluding those missing data at any of the time points used; mean baseline age 9.955 (SD 0.164) years; 2107 (46.21%) female, 2450 (53.8%) male. Race (Table 1): White 3261 (71.6%), Black 498 (10.9%), Asian 90 (2%), Other/Mixed 708 (15.5%). Parental education: primary school 24 (0.5%), high school or less 199 (4.4%), college 1469 (32.2%), higher than college 2865 (62.9%). The N for each media-specific model is not separately reported.",
+   "iv": "Baseline weekly-average daily hours of one media type at a time, from the youth-reported ABCD Screen Usage Questionnaire: texting on a phone or tablet, social media, video chat. Weighted time = (5 x weekday hours + 2 x weekend hours) / 7 (adapted from Nagata et al. 2021). Descriptive statistics per media type are not reported; Table 1 gives only total SMA (all six types including TV, videos and video games) at baseline, 3.530 +/- 2.896 hours. Whether the IV was standardized before the LMM is not stated (only the mediation analysis is explicitly standardized).",
+   "dv": "Parent-reported CBCL sex- and age-normed t-scores at the 3-year follow-up, three outcomes run separately: internalizing problems (anxious/depressed, withdrawn/depressed, somatic complaints), externalizing problems (rule breaking, aggressive behavior), and stress problems. Baseline sample descriptives (Table 1): externalizing 44.622 +/- 9.543, internalizing 48.003 +/- 10.516, stress 53.209 +/- 5.694. Year-3 descriptives not reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Fixed effect; coding not described"
+    },
+    {
+     "name": "Gender",
+     "detail": "Fixed effect"
+    },
+    {
+     "name": "Race",
+     "detail": "Fixed effect; Table 1 categories White, Black, Asian, Other/Mixed"
+    },
+    {
+     "name": "Household income",
+     "detail": "Fixed effect; coding not described"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Fixed effect; Table 1 categories primary school, high school or less, college, higher than college"
+    },
+    {
+     "name": "Pubertal level",
+     "detail": "Fixed effect; instrument not described"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept"
+    },
+    {
+     "name": "Family nested within site",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "CBCL_DV_3y[i] = b0 + b1*SMA_mediatype_BL[i] + b2*age + b3*gender + b4*race + b5*household_income + b6*parental_education + b7*pubertal_level + u_site + u_family(site) + e[i]; fit separately for each media type and each of the three CBCL outcomes.",
+   "estimation": "Three-level linear mixed model (participants within families within sites). Software for the LMM not stated (R 4.3.2 and MATLAB R2022b are named for the CLPM and mediation analyses). No weights reported. Two-sided tests; Benjamini-Hochberg FDR correction at q = 0.05 across all analyses, with pfdr reported. Only the significant media-specific estimates are printed in text; neither SE nor 95% CI is given for these media-specific LMM estimates. No sex or other interaction tests or stratified results reported. The authors interpret the general-SMA LMM beta as the change in t-score per additional screen hour (p. 6), but whether the media-specific betas are standardized is not stated.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting (baseline)",
+     "meta": "hours/day, weekly weighted; youth report",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media (baseline)",
+     "meta": "hours/day, weekly weighted; youth report",
+     "sd_iv": null
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat (baseline)",
+     "meta": "hours/day, weekly weighted; youth report",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "internalizing",
+     "label": "CBCL internalizing (3YFU)",
+     "sd_dv": 10.516,
+     "p0": null
+    },
+    {
+     "id": "externalizing",
+     "label": "CBCL externalizing (3YFU)",
+     "sd_dv": 9.543,
+     "p0": null
+    },
+    {
+     "id": "stress",
+     "label": "CBCL stress problems (3YFU)",
+     "sd_dv": 5.694,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "internalizing",
+     "beta": null,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "p. 6 text (not reported)",
+     "note": "Not reported. The text lists texting as predicting only stress problems, implying this estimate was not significant after FDR correction.",
+     "derived_d": null,
+     "derived_d_method": "beta missing"
+    },
+    {
+     "iv": "texting",
+     "dv": "externalizing",
+     "beta": null,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "p. 6 text (not reported)",
+     "note": "Not reported; implied non-significant after FDR correction.",
+     "derived_d": null,
+     "derived_d_method": "beta missing"
+    },
+    {
+     "iv": "texting",
+     "dv": "stress",
+     "beta": 0.051,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.003,
+     "p_label": "pfdr = 0.003",
+     "sig": true,
+     "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
+     "note": "FDR-corrected p. No SE or CI reported.",
+     "derived_d": 0.1021,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "social_media",
+     "dv": "internalizing",
+     "beta": 0.032,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.038,
+     "p_label": "pfdr = 0.038",
+     "sig": true,
+     "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
+     "note": "FDR-corrected p. No SE or CI reported.",
+     "derived_d": 0.064,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "social_media",
+     "dv": "externalizing",
+     "beta": 0.055,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": "pfdr = 0.001",
+     "sig": true,
+     "location": "p. 6, 'SMA's differential effect on mental health and the brain'",
+     "note": "FDR-corrected p. No SE or CI reported.",
+     "derived_d": 0.1102,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "social_media",
+     "dv": "stress",
+     "beta": 0.055,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": "pfdr =0.001",
+     "sig": true,
+     "location": "p. 6, top of right column",
+     "note": "FDR-corrected p. No SE or CI reported.",
+     "derived_d": 0.1102,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "internalizing",
+     "beta": null,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "p. 6 text (not reported)",
+     "note": "Not reported. Video chat is not among the media types the text says predicted mental health problems, implying non-significance; the referenced supplement (Table S2) is not bundled in the PDF.",
+     "derived_d": null,
+     "derived_d_method": "beta missing"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "externalizing",
+     "beta": null,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "p. 6 text (not reported)",
+     "note": "Not reported; implied non-significant.",
+     "derived_d": null,
+     "derived_d_method": "beta missing"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "stress",
+     "beta": null,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "p. 6 text (not reported)",
+     "note": "Not reported; implied non-significant.",
+     "derived_d": null,
+     "derived_d_method": "beta missing"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Two-wave cross-lagged panel model of media-specific screen time and CBCL problems (baseline to 2-year follow-up)",
+   "location_in_paper": "Results, 'SMA's differential effect on mental health and the brain', last two paragraphs of p. 6 (right column) continuing to p. 7; method in 'Longitudinal relationships between SMA and mental health problems' and 'Media-specific analysis' (pp. 4-5). In-text only; no table.",
+   "design": "Longitudinal two-wave cross-lagged panel model. For media-specific analyses, media-specific SMA and CBCL problems at baseline predict both media-specific SMA and CBCL problems at the 2-year follow-up (the 3-year follow-up was not used because TV and video hours were missing in the updated questionnaire). Phone/SM appears both as predictor (video chat -> later internalizing) and as outcome (baseline externalizing -> later texting and social media). Autoregressive paths are included by construction of the CLPM.",
+   "sample": "Same ABCD Release 4.0 cohort as M1: N = 4557, mean baseline age 9.955 (SD 0.164), 46.21% female. N for each media-specific CLPM not separately reported.",
+   "iv": "For the video chat path: baseline weekly-average daily hours of video chat (youth-reported Screen Usage Questionnaire, (5 x weekday + 2 x weekend)/7). For the reverse paths: baseline CBCL externalizing t-score (parent report). Media-specific descriptives not reported.",
+   "dv": "For the video chat path: CBCL internalizing t-score at the 2-year follow-up. For the reverse paths: weekly-average daily hours of texting on a phone or tablet and of social media at the 2-year follow-up (updated Screen Usage Questionnaire, harmonized to the baseline format).",
+   "covariates": [
+    {
+     "name": "Autoregressive terms",
+     "detail": "Baseline value of each variable predicting its 2-year value, as part of the CLPM"
+    },
+    {
+     "name": "Other covariates",
+     "detail": "Not stated for the CLPM"
+    }
+   ],
+   "equation": "SMA_mediatype_2y = a1*SMA_mediatype_BL + c1*CBCL_BL + e1; CBCL_2y = a2*CBCL_BL + c2*SMA_mediatype_BL + e2; with BL and 2y within-wave covariances; fit per media type and CBCL outcome.",
+   "estimation": "Cross-lagged panel model in R package lavaan, R 4.3.2. Estimator not stated. Two-sided tests; Benjamini-Hochberg FDR correction (q = 0.05). Estimates reported as beta with SE and pfdr; no CIs. The paper does not state whether the CLPM betas are standardized solutions. Only selected paths (mostly significant ones plus the near-significant video chat path) are printed.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "video_chat_bl",
+     "label": "Video chat (baseline)",
+     "meta": "phone/SM as IV",
+     "sd_iv": null
+    },
+    {
+     "id": "externalizing_bl",
+     "label": "CBCL externalizing (baseline)",
+     "meta": "phone/SM as DV",
+     "sd_iv": 9.543
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "internalizing_2y",
+     "label": "CBCL internalizing (2YFU)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "texting_2y",
+     "label": "Texting (2YFU)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "social_media_2y",
+     "label": "Social media (2YFU)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "video_chat_bl",
+     "dv": "internalizing_2y",
+     "beta": -0.021,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.069,
+     "p_label": "pfdr = 0.069",
+     "sig": false,
+     "location": "p. 6, right column, 'Regarding the causal influence between media-specific SMA and mental health problems'",
+     "note": "SE = 0.011. Described by authors as leading to less internalizing, but pfdr > .05.",
+     "derived_d": -0.042,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "externalizing_bl",
+     "dv": "texting_2y",
+     "beta": 0.038,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.005,
+     "p_label": "pfdr = 0.005",
+     "sig": true,
+     "location": "p. 6, right column, 'Mental health problems at baseline also had a causal influence...'",
+     "note": "SE = 0.014. Phone/SM is the outcome.",
+     "derived_d": 0.0761,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "externalizing_bl",
+     "dv": "social_media_2y",
+     "beta": 0.037,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.007,
+     "p_label": "pfdr = 0.007",
+     "sig": true,
+     "location": "p. 6, right column, same paragraph",
+     "note": "SE = 0.014. Phone/SM is the outcome.",
+     "derived_d": 0.0741,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Bootstrap mediation model of year-3 CBCL stress problems on baseline texting via 2-year sensorimotor hand network-cerebellum cortex RSFC, covariates regressed out, all variables standardized",
+   "location_in_paper": "Table 4 (direct effect, 'Texting / SHN-cerebellum-cortex', p. 7) and Table 5 (indirect effect, p. 8); text p. 7 ('For texting, SHN-cerebellum-cortex RSFC showed a positive mediation effect on stress problems'). Method p. 4 'Brain's mediating role in the SMA-Mental health relationship'.",
+   "design": "Longitudinal three-time-point mediation: baseline texting time (X) -> resting-state functional connectivity at the 2-year follow-up (M) -> CBCL stress problems at the 3-year follow-up (Y). Mediation run separately for each candidate brain feature; only paths where both path A and path B had pfdr < 0.05 are tabulated.",
+   "sample": "Subset of the N = 4557 cohort with usable 2-year resting-state fMRI after ABCD quality control (excluded for severe motion, intensity inhomogeneity, white-matter underestimation, pial overestimation, or magnetic susceptibility artefacts). Exact N for the mediation analysis is not reported.",
+   "iv": "Baseline weekly-average daily hours of texting on a phone or tablet (youth report), standardized before analysis.",
+   "dv": "CBCL stress problems t-score at the 3-year follow-up (parent report), standardized before analysis. Mediator: RSFC between the sensorimotor hand network (Gordon atlas) and the cerebellum cortex at the 2-year follow-up, averaged across hemispheres.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Regressed out of variables before mediation"
+    },
+    {
+     "name": "Gender",
+     "detail": "Regressed out"
+    },
+    {
+     "name": "Race",
+     "detail": "Regressed out"
+    },
+    {
+     "name": "Household income",
+     "detail": "Regressed out"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Regressed out"
+    },
+    {
+     "name": "Pubertal level",
+     "detail": "Regressed out"
+    },
+    {
+     "name": "Mean framewise displacement / scanner",
+     "detail": "Included in the SMA-RSFC linear mixed models; the methods say the fixed effects of the SMA-mental health and SMA-brain models were regressed out, but do not explicitly list motion or scanner for the mediation step"
+    }
+   ],
+   "equation": "M = a*X + e_M; Y = c'*X + b*M + e_Y; indirect = a*b; X = baseline texting, M = 2-year SHN-cerebellum cortex RSFC, Y = 3-year CBCL stress, all z-scored after regressing out covariates.",
+   "estimation": "Mediation Toolbox (Wager et al.) in MATLAB R2022b, 10,000 bootstrap samples. All variables standardized, so betas are standardized effect sizes (Table 4/5 footnotes). Benjamini-Hochberg FDR applied separately to the p-values of each path (A, B, C', C, A*B) across all tested brain features, q = 0.05. 95% bootstrap CIs reported. Path A and path B estimates for texting are not printed.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "texting_bl",
+     "label": "Texting (baseline)",
+     "meta": "standardized; mediator SHN-cerebellum cortex RSFC (2YFU)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "stress_direct",
+     "label": "CBCL stress (3YFU), direct effect c'",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "stress_indirect",
+     "label": "CBCL stress (3YFU), indirect effect a*b via SHN-cerebellum cortex RSFC",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting_bl",
+     "dv": "stress_direct",
+     "beta": 0.035,
+     "beta_lo": 0.0229,
+     "beta_hi": 0.0456,
+     "p": 0.0466,
+     "p_label": "0.0466",
+     "sig": true,
+     "location": "Table 4, Stress problem, Texting / SHN-cerebellum-cortex row",
+     "note": "Direct effect (Path C') controlling for the mediator; pfdr.",
+     "derived_d": 0.07,
+     "derived_d_lo": 0.0458,
+     "derived_d_hi": 0.0913,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "texting_bl",
+     "dv": "stress_indirect",
+     "beta": 0.005,
+     "beta_lo": 0.0038,
+     "beta_hi": 0.0061,
+     "p": 0.0338,
+     "p_label": "0.0338",
+     "sig": true,
+     "location": "Table 5, Stress problem, Texting / SHN-cerebellum-cortex row; text p. 7 gives pfdr = 0.034",
+     "note": "Standardized indirect (a*b) effect; not a total association and not intended for d conversion.",
+     "derived_d": 0.01,
+     "derived_d_lo": 0.0076,
+     "derived_d_hi": 0.0122,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Linear mixed model of 3-year CBCL internalizing, externalizing and stress on baseline general (total) SMA",
+   "location": "p. 5 Results 'SMA at baseline predicted future mental health problems'",
+   "why": "Total SMA sums TV, videos, video games, texting, video chat and social media; includes non-phone ingredients. The phone/SM breakout is extracted in M1. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Linear mixed models of 2-year brain morphology and RSFC on baseline total SMA (and Pearson r of SMA with RSFC)",
+   "location": "Fig. 2, p. 5-6 text; Supplement Table S1",
+   "why": "Total SMA composite with non-phone media."
+  },
+  {
+   "model": "Two-wave CLPM of total SMA and CBCL (baseline and 3-year follow-up)",
+   "location": "p. 6 'The longitudinal influence of SMA on mental health problems'; abstract",
+   "why": "Total SMA composite (at 3-year follow-up built from video games, texting, video chat, social media) includes video games; no phone-only composite."
+  },
+  {
+   "model": "Mediation of total SMA -> RSFC -> externalizing/stress",
+   "location": "Tables 2 and 3; p. 6 text",
+   "why": "Total SMA composite with non-phone media."
+  },
+  {
+   "model": "Media-specific LMM estimates for TV watching, video watching and video games -> 3-year CBCL",
+   "location": "p. 6",
+   "why": "Non-phone/SM modalities (TV, online video, generic video games)."
+  },
+  {
+   "model": "Media-specific LMMs of 2-year brain structure and RSFC on baseline texting, video chat, social media",
+   "location": "p. 6 text; Supplement Table S2",
+   "why": "Neural outcomes qualify, but the per-media estimates are only in Supplement Table S2, which is not bundled in this PDF; the main text gives counts and rankings (video watching strongest, then texting, video chatting) without numbers. Should be extracted if the supplement is obtained."
+  },
+  {
+   "model": "Media-specific CLPM paths for TV, video watching and video games (both directions), and stress/internalizing -> video watching/game playing",
+   "location": "pp. 6-7",
+   "why": "Non-phone/SM modalities."
+  },
+  {
+   "model": "Unreported media-specific CLPM paths involving texting, social media or video chat (e.g., texting/SM -> later CBCL; internalizing/stress -> later texting, SM, video chat; externalizing -> video chat)",
+   "location": "pp. 6-7 (not printed)",
+   "why": "Not printed; no extractable numbers."
+  },
+  {
+   "model": "Media-specific mediation via CON-RTN, CON-putamen, and brainstem/caudate/pallidum/cerebellum/putamen/VN RSFC for video games and online video",
+   "location": "Tables 4 and 5; p. 7",
+   "why": "Non-phone/SM modalities. No social media or video chat mediation path met the both-paths-significant criterion, so none is tabulated."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (reported as beta; M3 explicitly standardized, M1/M2 standardization not stated)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta / sqrt(1 - beta^2). If M1 betas were in fact unstandardized B (t-score points per hour), beta_std = B * SD_IV / SD_DV would be required, and SD_IV for the individual media types is not reported.",
+  "contrast_type": "per 1 SD of the media-specific IV (if standardized); the authors' own wording for the general-SMA LMM is per additional hour of screen time",
+  "transformable": "partial",
+  "notes": "M3 is unambiguously standardized (all variables z-scored, Table 4/5 footnotes), so the direct effect c' (0.035, CI 0.0229-0.0456) converts; the indirect a*b effect should not be converted as a total association. M1 and M2 report beta without saying whether it is standardized; for the general-SMA CLPM the authors describe beta = 0.03 as the increase in internalizing per additional screen hour (p. 6), which suggests unstandardized slopes, but a per-hour change of 0.03 t-points is implausibly small relative to t-score scaling, so standardized coefficients are likely. SD_DV values recorded in M1 are baseline sample SDs from Table 1 (p. 5): externalizing 9.543, internalizing 10.516, stress 5.694; year-3 SDs are not reported. SD_IV for texting, social media and video chat is not reported (Table 1 gives only total SMA 3.530 +/- 2.896 h). M1 and M2 report no CIs (M2 gives SE only, recorded in notes), so d CIs cannot be derived for them. Five of nine M1 cells are not reported and are recorded as null."
+ },
+ "extraction_flags": "1) M1 and M2 never say whether the beta is standardized. For the general-SMA CLPM, the authors read beta = 0.03 as \"per additional hour\" (p. 6), which would mean an unstandardized slope. I coded beta_std because the mediation analysis is explicitly standardized and a per-hour effect of 0.03 t-points is implausibly small. A human should decide this. If the betas are unstandardized, d cannot be computed: the paper gives no SD for texting, social media or video chat (Table 1 has only the total SMA SD, 2.896). 2) All media-specific LMM (M1) and CLPM (M2) estimates appear only in the text. There are no CIs (M2 gives SEs, which I put in notes), and only significant or near-significant cells are printed. Five of the nine M1 cells (texting with internalizing and externalizing, all three video chat cells) are null and marked as implied non-significant. 3) Supplement Table S2 holds the media-specific SMA-to-brain estimates for texting, video chat and social media. It is not bundled in the PDF, so I did not extract them. Obtain the supplement and extract them. 4) The sd_dv values in M1 are baseline SDs from Table 1, not year-3 SDs. 5) M2 includes reverse paths where phone/SM is the DV (baseline externalizing to 2-year texting and social media). Those are cross-lagged, so they qualify, but a human should confirm. 6) The tables look internally inconsistent. Table 2 reports a direct effect of 0.676 for total SMA via CON-RTN on externalizing, which is implausible against the LMM beta of 0.058. Table 4 also lists one row with pfdr 0.5715, even though the table claims all rows are significant. This casts some doubt on how the mediation tables were reported. In M3, both the texting c' (0.035, Table 4) and the indirect a*b (0.005, Table 5) are extracted; the indirect effect should not be converted to d. 7) The N for each media-specific model and for the imaging mediation subsample is not reported (cohort N = 4557).json"
+}

@@ -1,0 +1,258 @@
+{
+ "paper_id": "107",
+ "title": "Cannabis expectancies mediate the association between social media use and cannabis experimentation in early adolescents: A prospective cohort study",
+ "doi": "10.1016/j.drugalcdep.2025.112947",
+ "year": "2025",
+ "authors": "Nagata JM, Caffrey A, Nguyen ND, Nayak S, Frimpong I, Helmer CK, Ricklefs C, Al-Shoaibi AA, Testa A, Brindis CD, Santos GM, Baker FC",
+ "journal": "Drug and Alcohol Dependence",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Generalized SEM (binomial logit equation) of Year 4 cannabis experimentation on Year 2 social media time, adjusted for Year 2 cannabis experimentation, friends' cannabis use and cannabis expectancies (direct effect)",
+   "location_in_paper": "Results p. 3 (text: B=0.18, 95% CI 0.13-0.24, p<0.001); Fig. 1a and Fig. 1b direct-effect path (p. 4); abstract; interpreted in Discussion pp. 3-4",
+   "design": "Prospective longitudinal cohort, three ABCD waves. Social media time measured at Year 2 follow-up (2018-2020), cannabis expectancies (mediator) at Year 3 (2019-2021), cannabis experimentation at Year 4 (2020-2022). Single follow-up outcome per child, not repeated measures. Year 2 cannabis experimentation enters as a covariate, so the coefficient is the association with new or continued experimentation by Year 4 net of Year 2 status. Mediation was run as two separate models, one with positive expectancies (Fig. 1a) and one with negative expectancies (Fig. 1b) as the mediator; the direct effect of social media time is printed as B = 0.18 in both panels. No time x IV interaction.",
+   "sample": "ABCD Study participants with complete data on Year 2 social media use, cannabis variables and covariates; N = 7691 (ABCD release not stated; excluded participants with missing data, flowchart in online Appendix A, not bundled in the PDF). Weighted descriptives (Table 1): mean age at Year 2 12.0 years (SD 0.7); 47.9% female, 52.1% male; race/ethnicity 57.4% White, 18.9% Latino/Hispanic, 14.0% Black, 5.2% Asian, 3.3% Native American, 1.3% Other (42.6% racial/ethnic minorities); household income 13.1% <=$24,999 to 10.6% >=$200,000; 89.5% parent college education or more. Friends' cannabis use at Year 2: 2.7% yes.",
+   "iv": "Social media time at Year 2, continuous hours per day. ABCD Youth Screen Time Survey: typical hours per day on social media (e.g., Facebook, Instagram, Twitter/X) reported separately for weekdays and weekend days, combined as ([weekday x 5] + [weekend x 2]) / 7. Weighted M = 0.7, SD = 1.5 h/day (Table 1).",
+   "dv": "Cannabis experimentation at Year 4, binary (yes/no), from the Timeline Follow-Back item asking whether the participant had tried marijuana/cannabis ('a puff or eaten any marijuana') since the last study visit. 5.1% yes at Year 4 (0.2% yes at Year 2), weighted (Table 1).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Year 2, years"
+    },
+    {
+     "name": "Sex",
+     "detail": "Male or female (baseline)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Asian, Black, Latino/Hispanic, Native American, White, other (baseline)"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories (Year 2)"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs college education or more (Year 2)"
+    },
+    {
+     "name": "Depressive symptoms",
+     "detail": "CBCL depressive symptoms t-score (Year 2; M 54.5, SD 6.3); missing values imputed by last observation carried forward"
+    },
+    {
+     "name": "Year 2 cannabis experimentation",
+     "detail": "Yes/no"
+    },
+    {
+     "name": "Friends' cannabis use",
+     "detail": "Yes/no (Year 2)"
+    },
+    {
+     "name": "Study site",
+     "detail": "Listed as an adjustment covariate; entry form (fixed effect vs random effect) not stated"
+    },
+    {
+     "name": "Cannabis expectancies (mediator)",
+     "detail": "Year 3 positive expectancies (Fig. 1a model) or negative expectancies (Fig. 1b model); the direct effect is net of the mediator in each model"
+    }
+   ],
+   "equation": "logit P(cannabis_Y4[i] = 1) = b0 + c'*SM_Y2[i] + b*Expectancy_Y3[i] + b2*age + b3*sex + b4..b8*race/ethnicity + b9..b13*income + b14*parent_ed + b15*CBCL_depression + b16*cannabis_Y2 + b17*friends_cannabis + site terms; jointly estimated with Expectancy_Y3[i] = a0 + a*SM_Y2[i] + covariates + e[i]. Focal estimate c' (direct effect).",
+   "estimation": "Stata 18, generalized structural equation modeling (gsem) with binomial logit regression for the binary outcome. Sequential modeling: covariates and Year 2 cannabis experimentation first, then the direct association, then expectancy paths and mediation. ACS-based sampling weights applied. Assumption checks reported: VIFs < 2, Box-Tidwell p > 0.05, all Pregibon's dbeta < 1. Alpha = 0.05, two-tailed. No multiple-comparison correction. No sex or race interaction tests or stratified estimates reported. Clustering/random effects not described beyond study site as a covariate.",
+   "native_metric": "other:logit_B",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "hours/day, weighted weekday/weekend average",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cannabis_y4",
+     "label": "Cannabis experimentation (Year 4)",
+     "sd_dv": null,
+     "p0": 0.051
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "cannabis_y4",
+     "value": 0.18,
+     "value_lo": 0.13,
+     "value_hi": 0.24,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results p. 3; Fig. 1a and 1b direct effect",
+     "note": "Unstandardized coefficient from the binomial logit equation (log-odds per 1 h/day of social media). The text does not say which of the two mediation models (positive or negative expectancies) the CI comes from; both panels print B = 0.18***. p0 = 0.051 is the weighted sample prevalence at Year 4, not the rate among non-users."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Generalized SEM (linear equation) of Year 3 positive and negative cannabis expectancies on Year 2 social media time, fully adjusted (a-paths)",
+   "location_in_paper": "Fig. 1a and Fig. 1b, social media time -> expectancy path (p. 4); described in Results p. 3 and Discussion p. 3",
+   "design": "Prospective, two waves: social media time at Year 2 predicts cannabis expectancies one year later at Year 3. Estimated as the mediator equation within each of the two GSEM mediation models (positive expectancies in Fig. 1a, negative in Fig. 1b). Single follow-up per child.",
+   "sample": "Same analytic sample as M1: N = 7691 ABCD participants, mean age 12.0 (SD 0.7) at Year 2, 47.9% female, 42.6% racial/ethnic minorities (Table 1).",
+   "iv": "Social media time at Year 2, continuous hours per day (weighted weekday/weekend average), M = 0.7, SD = 1.5 (Table 1).",
+   "dv": "Cannabis expectancies at Year 3 from the Marijuana Effect Expectancy Questionnaire-Brief (MEEQ-B, 6 items, 5-point Likert). Positive and negative composite scores, possible and observed range 3-15; Cronbach's alpha 0.60-0.77. Weighted M (SD): positive 7.8 (3.0), negative 11.9 (2.6) (Table 1).",
+   "covariates": [
+    {
+     "name": "Age, sex, race/ethnicity, household income, parent education, CBCL depressive symptoms, Year 2 cannabis experimentation, friends' cannabis use, study site",
+     "detail": "Fig. 1 caption states the models are adjusted for these; the paper does not separately list the covariates in the mediator equation, so assumed the same set"
+    }
+   ],
+   "equation": "Expectancy_Y3[i] = a0 + a*SM_Y2[i] + a2*age + a3*sex + race/ethnicity + income + parent_ed + CBCL_depression + cannabis_Y2 + friends_cannabis + site terms + e[i]; estimated separately for positive and negative expectancies.",
+   "estimation": "Stata 18 gsem (same model as M1; mediator equation, presumably Gaussian identity link since the expectancy scores are continuous). ACS-based sampling weights. Alpha = 0.05, two-tailed. No multiple-comparison correction. No CI or exact p printed for these paths; only *** (p < 0.001).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "hours/day",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "pos_expect_y3",
+     "label": "Positive cannabis expectancies (Year 3)",
+     "sd_dv": 3.0,
+     "p0": null
+    },
+    {
+     "id": "neg_expect_y3",
+     "label": "Negative cannabis expectancies (Year 3)",
+     "sd_dv": 2.6,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "pos_expect_y3",
+     "B": 0.16,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.001 (***)",
+     "sig": true,
+     "location": "Fig. 1a, path social media time -> positive expectancies",
+     "note": "Value read from figure label 'B = 0.16***'; no CI or SE reported. Whether the coefficient is unstandardized is not stated explicitly; the indirect effect (0.05) is consistent with 0.16 x 0.29 on the raw scale."
+    },
+    {
+     "iv": "sm_time_y2",
+     "dv": "neg_expect_y3",
+     "B": -0.16,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<0.001 (***)",
+     "sig": true,
+     "location": "Fig. 1b, path social media time -> negative expectancies",
+     "note": "Value read from figure label 'B = -0.16***'; no CI or SE reported. Indirect effect (0.03) is consistent with -0.16 x -0.18."
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "GSEM mediation: indirect effects of Year 2 social media time on Year 4 cannabis experimentation via Year 3 positive or negative cannabis expectancies",
+   "location_in_paper": "Results p. 3 (indirect effects with 95% CIs and proportion mediated); Fig. 1a and 1b (p. 4); Discussion p. 3",
+   "design": "Prospective three-wave mediation: Year 2 social media time -> Year 3 expectancies -> Year 4 cannabis experimentation. Two single-mediator models (positive, negative), each estimated jointly in gsem.",
+   "sample": "Same analytic sample as M1: N = 7691.",
+   "iv": "Social media time at Year 2, hours per day (M 0.7, SD 1.5).",
+   "dv": "Cannabis experimentation at Year 4, binary (5.1% yes), with the indirect pathway running through Year 3 MEEQ-B positive or negative expectancy scores.",
+   "covariates": [
+    {
+     "name": "Age, sex, race/ethnicity, household income, parent education, CBCL depressive symptoms, Year 2 cannabis experimentation, friends' cannabis use, study site",
+     "detail": "Per Fig. 1 caption"
+    }
+   ],
+   "equation": "Indirect effect = a x b, where a = SM_Y2 -> Expectancy_Y3 coefficient (linear) and b = Expectancy_Y3 -> logit P(cannabis_Y4) coefficient; proportion mediated = indirect / (indirect + direct). Path b printed in Fig. 1: positive expectancies B = 0.29***, negative expectancies B = -0.18***.",
+   "estimation": "Stata 18 gsem with binomial logit for the binary outcome; ACS sampling weights; alpha = 0.05. Method for indirect-effect CIs (delta method vs bootstrap) not stated.",
+   "native_metric": "other:indirect_effect_logit",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "hours/day",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cannabis_y4_via_pos",
+     "label": "Cannabis experimentation (Year 4) via positive expectancies",
+     "sd_dv": null,
+     "p0": 0.051
+    },
+    {
+     "id": "cannabis_y4_via_neg",
+     "label": "Cannabis experimentation (Year 4) via negative expectancies",
+     "sd_dv": null,
+     "p0": 0.051
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "cannabis_y4_via_pos",
+     "value": 0.05,
+     "value_lo": 0.03,
+     "value_hi": 0.06,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results p. 3; Fig. 1a",
+     "note": "Proportion mediated 19.8% (95% CI 12.6%-27.0%)."
+    },
+    {
+     "iv": "sm_time_y2",
+     "dv": "cannabis_y4_via_neg",
+     "value": 0.03,
+     "value_lo": 0.02,
+     "value_hi": 0.04,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Results p. 3; Fig. 1b",
+     "note": "Proportion mediated 13.6% (95% CI 8.4%-18.8%)."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Expectancies -> cannabis experimentation paths (b-paths: positive B = 0.29***, negative B = -0.18***)",
+   "location": "Fig. 1a and 1b; Results p. 3",
+   "why": "Neither variable is a phone/SM variable; social media time is not on either side of this path. Values recorded in M3 equation for context only."
+  },
+  {
+   "model": "Sequential covariate-only and unadjusted steps of the sequential modeling approach",
+   "location": "Methods 2.5 (p. 2-3)",
+   "why": "Described as model-building steps; no estimates printed. Authors anchor claims to the fully adjusted direct effect B = 0.18."
+  },
+  {
+   "model": "Total effect of social media time on cannabis experimentation",
+   "location": "Not reported",
+   "why": "Paper prints direct and indirect effects and proportion mediated but no separate total-effect coefficient."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: unstandardized logit coefficient (log-odds); M2: unstandardized linear B; M3: indirect effect on the logit scale",
+  "conversion_formula": "M1: ln(OR) = B, so d = B * sqrt(3)/pi (Chinn 2000), applied to B and to each CI bound. M2: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M3: not converted (mediation indirect effect).",
+  "contrast_type": "M1 and M3: per 1 hour/day of Year 2 social media time. M2: per 1 hour/day, converted to per 1 SD of social media time via SD_IV.",
+  "transformable": "partial",
+  "notes": "SD_IV = 1.5 h/day and SD_DV = 3.0 (positive expectancies) and 2.6 (negative expectancies) are the weighted Table 1 descriptives for the N = 7691 analytic sample (p. 3). M1 B is on the log-odds scale because the gsem outcome equation is a binomial logit (Methods 2.5); it is not an OR and should not be run through the linear B formula. M2 has no CI, so only a point d can be derived. M3 indirect effects are products of coefficients across a linear and a logit equation; they are kept in native units and marked non-convertible per the guidelines for mediation indirect effects. Baseline event rate for the binary DV is the marginal weighted 5.1% at Year 4."
+ },
+ "extraction_flags": "1) The headline B=0.18 (95% CI 0.13-0.24) is the gsem direct effect from a binomial logit equation, so it is on the log-odds scale; I coded it as other:logit_B (d = B*sqrt(3)/pi). Please make sure the pipeline does not run it through the linear B formula. Fig. 1a and 1b both print direct B = 0.18, and the text does not say which mediation model the CI comes from. 2) The M2 a-paths (SM to positive expectancies B=0.16, to negative B=-0.16) come only from the Fig. 1 labels: there is no CI, no exact p, and the paper does not say whether they are unstandardized. The indirect effects (0.16x0.29=0.046 and 0.16x0.18=0.029) are consistent with raw-scale coefficients. Expectancies (beliefs about cannabis) were counted as an individual-level psychosocial DV, so check that they are eligible. 3) M3 indirect effects are kept in native units and marked non-convertible. 4) SDs come from Table 1 and are weighted (SM 1.5 h/day; expectancies 3.0 and 2.6). p0 = 0.051 is the weighted marginal prevalence of Year 4 experimentation, not the rate among non-users. 5) The ABCD release is not stated. The Appendix A flowchart and Appendix B (expectancy scoring) are online supplements that are not in the PDF. The paper does not say whether study site enters as a fixed or random term."
+}

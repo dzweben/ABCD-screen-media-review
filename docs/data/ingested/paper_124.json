@@ -1,0 +1,827 @@
+{
+ "paper_id": "124",
+ "title": "Associations between screen time and internalizing disorder diagnoses among 9- to 10-year-olds",
+ "doi": "10.1016/j.jad.2022.05.071",
+ "year": "2022",
+ "authors": "Roberston L, Twenge JM, Joiner TE, Cummins K",
+ "journal": "Journal of Affective Disorders",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Gender-stratified adjusted relative-risk model of lifetime K-SADS-5 internalizing diagnoses on 2+ vs. <2 h/day of video chat, social media, or texting, adjusted for demographics",
+   "location_in_paper": "Table 2 (video chat column, Adjusted rows, pp. 532-533) and Table 3 (social media and texting columns, Adjusted rows, pp. 533-534); described in Results p. 532-533 and Discussion p. 534.",
+   "design": "Cross-sectional analysis of the ABCD baseline visit. Screen time and K-SADS-5 diagnoses measured at the same visit; diagnoses are lifetime (past or current), so temporal order is not established. One observation per child. Each screen activity and each diagnosis is analyzed in a separate model, separately for girls and boys.",
+   "sample": "ABCD Release 2.0, baseline (first wave) data collected 2017-2018. N = 11,780 youth with valid data on the measures (girls n = 5633, boys n = 6147). Mean age 9.91 (SD 0.62); 48% female; 59% white, 9% Black, 19% Hispanic, 2% Asian, 10% other race or ethnicity. Adjusted-model ns are smaller than the full sample because of missing covariate data and vary by cell (e.g., girls social media 5004 vs. 79; boys social media 5445 vs. 60; girls texting 4951 vs. 132; boys texting 5403 vs. 102; girls video chat 4492 vs. 588; boys video chat 4729 vs. 769). Exclusion rules beyond complete data are not described. The proportion of youth at 2+ h/day was 1.7% of girls and 1.2% of boys for social media, 2.8% and 2.0% for texting, and 11.9% and 14.3% for video chat (Table 1).",
+   "iv": "Binary indicator of spending 2 or more hours per day (coded 1) vs. less than 2 hours per day (coded 0) on one activity, analyzed one at a time: video chat (\"video chat (Skype, Facetime, etc.)\"), social media (\"visit social networking sites like Facebook, Twitter, Instagram, etc.\"), and texting (\"Text on a cell phone, tablet, or computer (e.g., GChat, WhatsApp, etc.)\"). Youth-reported ABCD screen time questionnaire, weekday and weekend items; responses coded none = 0, <30 min = 0.25, 30 min = 0.50, 1 h = 1, 2 h = 2, 3 h = 3, 4+ h = 4; daily average = (weekday x 5 + weekend x 2) / 7. 2 h/day cutoff follows AHA/AAP recommendations. Continuous hours/day M (SD), girls / boys (Table 1): video chat 0.79 (1.02) / 0.89 (1.07); social media 0.14 (0.45) / 0.09 (0.39); texting 0.26 (0.57) / 0.19 (0.50).",
+   "dv": "Four binary lifetime DSM-5 diagnoses from the youth self-report computerized abbreviated K-SADS-5: depressive disorders, anxiety disorders (generalized and social anxiety sections), suicidal ideation or attempt, and non-suicidal self-injury (self-harm). Coded 1 if the youth met criteria in the past, currently, or currently in partial remission; 0 if never. Lifetime prevalence in Table 1 (girls / boys): depressive 4.8% / 5.3%; anxiety 1.4% / 1.3%; suicidal ideation or attempt 7.6% / 9.7%; self-harm 4.6% / 7.4%. Each diagnosis analyzed separately within each gender.",
+   "covariates": [
+    {
+     "name": "Child age",
+     "detail": "Age at ABCD baseline; coding not specified (presumably continuous)"
+    },
+    {
+     "name": "Child race",
+     "detail": "Binary white vs. non-white"
+    },
+    {
+     "name": "Child ethnicity",
+     "detail": "Binary Hispanic/Latino vs. non-Hispanic/Latino"
+    },
+    {
+     "name": "Combined family income",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Primary caregiver education",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Primary caregiver employment",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Gender (stratification, not a covariate)",
+     "detail": "All models run separately for girls and boys using the ABCD current gender identity variable; males and transgender males coded male, females and transgender females coded female"
+    }
+   ],
+   "equation": "RR = P(diagnosis = 1 | IV = 2+ h/day, covariates) / P(diagnosis = 1 | IV = <2 h/day, covariates), estimated within each gender from: g(P(diagnosis[i] = 1)) = b0 + b1*phoneSM_2plus[i] + b2*age + b3*race_nonwhite + b4*hispanic + b5*family_income + b6*caregiver_education + b7*caregiver_employment; ARR = exp(b1) under a log link. The paper does not state the link function; it describes the model as a univariate general linear model with covariates.",
+   "estimation": "Relative risk (adjusted relative risk, ARR) estimated with what the authors describe as a univariate general linear model with covariates; link function, error distribution, and software are not reported. No survey weights, no random effects or clustering for site or family reported. Alpha implied as .05 (95% CIs excluding 1 shown in bold); no p-values printed and no multiple-comparison correction. Analyses stratified by gender rather than testing gender interactions. No sensitivity analyses reported.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "vc",
+     "label": "Video chat 2+ vs. <2 h/day",
+     "meta": "2+ h/day: girls 11.9%, boys 14.3% (Table 2)",
+     "sd_iv": null
+    },
+    {
+     "id": "sm",
+     "label": "Social media 2+ vs. <2 h/day",
+     "meta": "2+ h/day: girls 1.7%, boys 1.2% (Table 3)",
+     "sd_iv": null
+    },
+    {
+     "id": "tx",
+     "label": "Texting 2+ vs. <2 h/day",
+     "meta": "2+ h/day: girls 2.8%, boys 2.0% (Table 3)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "dep_g",
+     "label": "Depressive disorders (Girls)",
+     "sd_dv": null,
+     "p0": 0.048
+    },
+    {
+     "id": "anx_g",
+     "label": "Anxiety disorders (Girls)",
+     "sd_dv": null,
+     "p0": 0.014
+    },
+    {
+     "id": "si_g",
+     "label": "Suicidal ideation or attempt (Girls)",
+     "sd_dv": null,
+     "p0": 0.076
+    },
+    {
+     "id": "sh_g",
+     "label": "Self-harm (Girls)",
+     "sd_dv": null,
+     "p0": 0.046
+    },
+    {
+     "id": "dep_b",
+     "label": "Depressive disorders (Boys)",
+     "sd_dv": null,
+     "p0": 0.053
+    },
+    {
+     "id": "anx_b",
+     "label": "Anxiety disorders (Boys)",
+     "sd_dv": null,
+     "p0": 0.013
+    },
+    {
+     "id": "si_b",
+     "label": "Suicidal ideation or attempt (Boys)",
+     "sd_dv": null,
+     "p0": 0.097
+    },
+    {
+     "id": "sh_b",
+     "label": "Self-harm (Boys)",
+     "sd_dv": null,
+     "p0": 0.074
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "vc",
+     "dv": "dep_g",
+     "RR": 1.9,
+     "RR_lo": 1.4,
+     "RR_hi": 2.56,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.043,
+     "location": "Table 2, Video chat column, Girls / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.3% (n=4492) of <2 h/day group vs. 8.1% (n=588) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.043.",
+     "derived_d": 0.3795,
+     "derived_d_lo": 0.1967,
+     "derived_d_hi": 0.5634,
+     "derived_d_method": "RR -> OR -> d (p0=0.048)"
+    },
+    {
+     "iv": "vc",
+     "dv": "anx_g",
+     "RR": 1.32,
+     "RR_lo": 0.68,
+     "RR_hi": 2.56,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.013,
+     "location": "Table 2, Video chat column, Girls / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.3% (n=4492) of <2 h/day group vs. 1.7% (n=588) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.013.",
+     "derived_d": 0.1556,
+     "derived_d_lo": -0.2151,
+     "derived_d_hi": 0.5306,
+     "derived_d_method": "RR -> OR -> d (p0=0.014)"
+    },
+    {
+     "iv": "vc",
+     "dv": "si_g",
+     "RR": 1.77,
+     "RR_lo": 1.4,
+     "RR_hi": 2.25,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.072,
+     "location": "Table 2, Video chat column, Girls / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 7.2% (n=4491) of <2 h/day group vs. 12.7% (n=588) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.072.",
+     "derived_d": 0.3509,
+     "derived_d_lo": 0.204,
+     "derived_d_hi": 0.5069,
+     "derived_d_method": "RR -> OR -> d (p0=0.076)"
+    },
+    {
+     "iv": "vc",
+     "dv": "sh_g",
+     "RR": 1.43,
+     "RR_lo": 1.01,
+     "RR_hi": 2.03,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.043,
+     "location": "Table 2, Video chat column, Girls / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.3% (n=4492) of <2 h/day group vs. 6.0% (n=588) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.043.",
+     "derived_d": 0.2087,
+     "derived_d_lo": 0.0058,
+     "derived_d_hi": 0.4184,
+     "derived_d_method": "RR -> OR -> d (p0=0.046)"
+    },
+    {
+     "iv": "vc",
+     "dv": "dep_b",
+     "RR": 1.53,
+     "RR_lo": 1.16,
+     "RR_hi": 2.03,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.049,
+     "location": "Table 2, Video chat column, Boys / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.9% (n=4729) of <2 h/day group vs. 7.5% (n=769) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.049.",
+     "derived_d": 0.2511,
+     "derived_d_lo": 0.0868,
+     "derived_d_hi": 0.4231,
+     "derived_d_method": "RR -> OR -> d (p0=0.053)"
+    },
+    {
+     "iv": "vc",
+     "dv": "anx_b",
+     "RR": 1.62,
+     "RR_lo": 0.92,
+     "RR_hi": 2.84,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.012,
+     "location": "Table 2 (continued), Video chat column, Boys / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.2% (n=4729) of <2 h/day group vs. 2.0% (n=769) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.012.",
+     "derived_d": 0.2705,
+     "derived_d_lo": -0.0466,
+     "derived_d_hi": 0.589,
+     "derived_d_method": "RR -> OR -> d (p0=0.013)"
+    },
+    {
+     "iv": "vc",
+     "dv": "si_b",
+     "RR": 1.64,
+     "RR_lo": 1.35,
+     "RR_hi": 2.0,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.088,
+     "location": "Table 2 (continued), Video chat column, Boys / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 8.8% (n=4727) of <2 h/day group vs. 14.4% (n=768) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.088.",
+     "derived_d": 0.312,
+     "derived_d_lo": 0.1866,
+     "derived_d_hi": 0.4448,
+     "derived_d_method": "RR -> OR -> d (p0=0.097)"
+    },
+    {
+     "iv": "vc",
+     "dv": "sh_b",
+     "RR": 1.57,
+     "RR_lo": 1.24,
+     "RR_hi": 1.97,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.068,
+     "location": "Table 2 (continued), Video chat column, Boys / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 6.8% (n=4729) of <2 h/day group vs. 10.7% (n=769) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.068.",
+     "derived_d": 0.2744,
+     "derived_d_lo": 0.1293,
+     "derived_d_hi": 0.4183,
+     "derived_d_method": "RR -> OR -> d (p0=0.074)"
+    },
+    {
+     "iv": "sm",
+     "dv": "dep_g",
+     "RR": 2.2,
+     "RR_lo": 1.13,
+     "RR_hi": 4.3,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.046,
+     "location": "Table 3, Social media column, Girls / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.6% (n=5004) of <2 h/day group vs. 10.7% (n=79) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.046.",
+     "derived_d": 0.4691,
+     "derived_d_lo": 0.071,
+     "derived_d_hi": 0.9045,
+     "derived_d_method": "RR -> OR -> d (p0=0.048)"
+    },
+    {
+     "iv": "sm",
+     "dv": "anx_g",
+     "RR": 1.95,
+     "RR_lo": 0.49,
+     "RR_hi": 7.82,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.013,
+     "location": "Table 3, Social media column, Girls / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.3% (n=5004) of <2 h/day group vs. 2.2% (n=79) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.013.",
+     "derived_d": 0.3757,
+     "derived_d_lo": -0.3973,
+     "derived_d_hi": 1.1901,
+     "derived_d_method": "RR -> OR -> d (p0=0.014)"
+    },
+    {
+     "iv": "sm",
+     "dv": "si_g",
+     "RR": 1.3,
+     "RR_lo": 0.67,
+     "RR_hi": 2.52,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.078,
+     "location": "Table 3, Social media column, Girls / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 7.8% (n=5003) of <2 h/day group vs. 10.6% (n=79) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.078.",
+     "derived_d": 0.1584,
+     "derived_d_lo": -0.2356,
+     "derived_d_hi": 0.5832,
+     "derived_d_method": "RR -> OR -> d (p0=0.076)"
+    },
+    {
+     "iv": "sm",
+     "dv": "sh_g",
+     "RR": 1.69,
+     "RR_lo": 0.77,
+     "RR_hi": 3.68,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.045,
+     "location": "Table 3, Social media column, Girls / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.5% (n=5004) of <2 h/day group vs. 7.1% (n=79) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.045.",
+     "derived_d": 0.308,
+     "derived_d_lo": -0.1502,
+     "derived_d_hi": 0.7946,
+     "derived_d_method": "RR -> OR -> d (p0=0.046)"
+    },
+    {
+     "iv": "sm",
+     "dv": "dep_b",
+     "RR": 2.94,
+     "RR_lo": 1.59,
+     "RR_hi": 5.42,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.051,
+     "location": "Table 3, Social media column, Boys / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 5.1% (n=5445) of <2 h/day group vs. 14.9% (n=60) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.051.",
+     "derived_d": 0.6579,
+     "derived_d_lo": 0.2742,
+     "derived_d_hi": 1.0885,
+     "derived_d_method": "RR -> OR -> d (p0=0.053)"
+    },
+    {
+     "iv": "sm",
+     "dv": "anx_b",
+     "RR": 1.28,
+     "RR_lo": 0.18,
+     "RR_hi": 9.05,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.013,
+     "location": "Table 3 (continued), Social media column, Boys / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.3% (n=5445) of <2 h/day group vs. 1.8% (n=60) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.013.",
+     "derived_d": 0.1381,
+     "derived_d_lo": -0.9513,
+     "derived_d_hi": 1.2762,
+     "derived_d_method": "RR -> OR -> d (p0=0.013)"
+    },
+    {
+     "iv": "sm",
+     "dv": "si_b",
+     "RR": 1.22,
+     "RR_lo": 0.6,
+     "RR_hi": 2.45,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.096,
+     "location": "Table 3 (continued), Social media column, Boys / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 9.6% (n=5442) of <2 h/day group vs. 12.3% (n=60) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.096.",
+     "derived_d": 0.1228,
+     "derived_d_lo": -0.3048,
+     "derived_d_hi": 0.5874,
+     "derived_d_method": "RR -> OR -> d (p0=0.097)"
+    },
+    {
+     "iv": "sm",
+     "dv": "sh_b",
+     "RR": 1.83,
+     "RR_lo": 0.95,
+     "RR_hi": 3.51,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.073,
+     "location": "Table 3 (continued), Social media column, Boys / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 7.3% (n=5445) of <2 h/day group vs. 13.4% (n=60) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.073.",
+     "derived_d": 0.371,
+     "derived_d_lo": -0.0305,
+     "derived_d_hi": 0.8157,
+     "derived_d_method": "RR -> OR -> d (p0=0.074)"
+    },
+    {
+     "iv": "tx",
+     "dv": "dep_g",
+     "RR": 0.8,
+     "RR_lo": 0.34,
+     "RR_hi": 1.92,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.047,
+     "location": "Table 3, Texting column, Girls / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.7% (n=4951) of <2 h/day group vs. 3.7% (n=132) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.047.",
+     "derived_d": -0.1286,
+     "derived_d_lo": -0.6128,
+     "derived_d_hi": 0.3858,
+     "derived_d_method": "RR -> OR -> d (p0=0.048)"
+    },
+    {
+     "iv": "tx",
+     "dv": "anx_g",
+     "RR": 0.54,
+     "RR_lo": 0.08,
+     "RR_hi": 3.88,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.014,
+     "location": "Table 3, Texting column, Girls / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.4% (n=4951) of <2 h/day group vs. 0.4% (n=132) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.014.",
+     "derived_d": -0.3433,
+     "derived_d_lo": -1.3997,
+     "derived_d_hi": 0.7705,
+     "derived_d_method": "RR -> OR -> d (p0=0.014)"
+    },
+    {
+     "iv": "tx",
+     "dv": "si_g",
+     "RR": 0.86,
+     "RR_lo": 0.46,
+     "RR_hi": 1.63,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.079,
+     "location": "Table 3, Texting column, Girls / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 7.9% (n=4950) of <2 h/day group vs. 6.8% (n=132) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.079.",
+     "derived_d": -0.0895,
+     "derived_d_lo": -0.4521,
+     "derived_d_hi": 0.2987,
+     "derived_d_method": "RR -> OR -> d (p0=0.076)"
+    },
+    {
+     "iv": "tx",
+     "dv": "sh_g",
+     "RR": 1.51,
+     "RR_lo": 0.8,
+     "RR_hi": 2.88,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.045,
+     "location": "Table 3, Texting column, Girls / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 4.5% (n=4951) of <2 h/day group vs. 6.5% (n=132) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.045.",
+     "derived_d": 0.2409,
+     "derived_d_lo": -0.1283,
+     "derived_d_hi": 0.6356,
+     "derived_d_method": "RR -> OR -> d (p0=0.046)"
+    },
+    {
+     "iv": "tx",
+     "dv": "dep_b",
+     "RR": 2.3,
+     "RR_lo": 1.34,
+     "RR_hi": 3.97,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.051,
+     "location": "Table 3, Texting column, Boys / Depressive disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 5.1% (n=5403) of <2 h/day group vs. 11.7% (n=102) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.051.",
+     "derived_d": 0.5009,
+     "derived_d_lo": 0.1719,
+     "derived_d_hi": 0.8604,
+     "derived_d_method": "RR -> OR -> d (p0=0.053)"
+    },
+    {
+     "iv": "tx",
+     "dv": "anx_b",
+     "RR": 3.03,
+     "RR_lo": 1.13,
+     "RR_hi": 8.13,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.013,
+     "location": "Table 3 (continued), Texting column, Boys / Anxiety disorders / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 1.3% (n=5403) of <2 h/day group vs. 4.1% (n=102) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.013.",
+     "derived_d": 0.6261,
+     "derived_d_lo": 0.0683,
+     "derived_d_hi": 1.2097,
+     "derived_d_method": "RR -> OR -> d (p0=0.013)"
+    },
+    {
+     "iv": "tx",
+     "dv": "si_b",
+     "RR": 1.44,
+     "RR_lo": 0.88,
+     "RR_hi": 2.37,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.095,
+     "location": "Table 3 (continued), Texting column, Boys / Suicidal ideation or attempt / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 9.5% (n=5400) of <2 h/day group vs. 13.4% (n=102) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.095.",
+     "derived_d": 0.2277,
+     "derived_d_lo": -0.0775,
+     "derived_d_hi": 0.5635,
+     "derived_d_method": "RR -> OR -> d (p0=0.097)"
+    },
+    {
+     "iv": "tx",
+     "dv": "sh_b",
+     "RR": 1.21,
+     "RR_lo": 0.64,
+     "RR_hi": 2.27,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.073,
+     "location": "Table 3 (continued), Texting column, Boys / Self-harm / Adjusted row (pp. 532-534)",
+     "note": "Adjusted row: 7.3% (n=5403) of <2 h/day group vs. 8.8% (n=102) of 2+ h/day group met criteria. No p-value printed; sig = 95% CI excludes 1 (bold in table). Unexposed-group adjusted-row rate p0_cell = 0.073.",
+     "derived_d": 0.1144,
+     "derived_d_lo": -0.2617,
+     "derived_d_hi": 0.511,
+     "derived_d_method": "RR -> OR -> d (p0=0.074)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Gender-stratified adjusted relative-risk model of lifetime K-SADS-5 internalizing diagnoses on any vs. no social media use, adjusted for demographics",
+   "location_in_paper": "Results text, p. 533 (last two paragraphs of Section 2); no table.",
+   "design": "Same cross-sectional ABCD baseline analysis as M1, with the social media IV recoded as any use vs. no use because few children reached 2+ h/day. Separate models by diagnosis and by gender.",
+   "sample": "Same ABCD Release 2.0 baseline sample as M1. Adjusted analytic ns printed in text: girls 1081 users vs. 4002 non-users (4001 for suicidal ideation or attempt); boys 824 users vs. 4681 non-users (822 vs. 4680 for suicidal ideation or attempt).",
+   "iv": "Binary social media use: any time on social networking sites (users, coded 1) vs. no time (non-users, coded 0), from the same youth-reported weekday/weekend social media item as M1 averaged to hours/day.",
+   "dv": "Four binary lifetime DSM-5 diagnoses from the youth self-report computerized abbreviated K-SADS-5: depressive disorders, anxiety disorders (generalized and social anxiety sections), suicidal ideation or attempt, and non-suicidal self-injury (self-harm). Coded 1 if the youth met criteria in the past, currently, or currently in partial remission; 0 if never. Lifetime prevalence in Table 1 (girls / boys): depressive 4.8% / 5.3%; anxiety 1.4% / 1.3%; suicidal ideation or attempt 7.6% / 9.7%; self-harm 4.6% / 7.4%. Each diagnosis analyzed separately within each gender.",
+   "covariates": [
+    {
+     "name": "Child age",
+     "detail": "Age at ABCD baseline; coding not specified (presumably continuous)"
+    },
+    {
+     "name": "Child race",
+     "detail": "Binary white vs. non-white"
+    },
+    {
+     "name": "Child ethnicity",
+     "detail": "Binary Hispanic/Latino vs. non-Hispanic/Latino"
+    },
+    {
+     "name": "Combined family income",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Primary caregiver education",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Primary caregiver employment",
+     "detail": "Coding not specified"
+    },
+    {
+     "name": "Gender (stratification, not a covariate)",
+     "detail": "All models run separately for girls and boys using the ABCD current gender identity variable; males and transgender males coded male, females and transgender females coded female"
+    }
+   ],
+   "equation": "g(P(diagnosis[i] = 1)) = b0 + b1*SM_any[i] + b2*age + b3*race_nonwhite + b4*hispanic + b5*family_income + b6*caregiver_education + b7*caregiver_employment, within each gender; ARR = exp(b1) under a log link (link not stated in the paper).",
+   "estimation": "Same as M1: adjusted relative risk from a univariate general linear model with covariates; software, link, and error distribution not reported; no weights, no clustering, no multiple-comparison correction; significance judged by 95% CI excluding 1.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "sm_any",
+     "label": "Social media user vs. non-user",
+     "meta": "Users: girls n = 1081, boys n = 824",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "dep_g",
+     "label": "Depressive disorders (Girls)",
+     "sd_dv": null,
+     "p0": 0.048
+    },
+    {
+     "id": "anx_g",
+     "label": "Anxiety disorders (Girls)",
+     "sd_dv": null,
+     "p0": 0.014
+    },
+    {
+     "id": "si_g",
+     "label": "Suicidal ideation or attempt (Girls)",
+     "sd_dv": null,
+     "p0": 0.076
+    },
+    {
+     "id": "sh_g",
+     "label": "Self-harm (Girls)",
+     "sd_dv": null,
+     "p0": 0.046
+    },
+    {
+     "id": "dep_b",
+     "label": "Depressive disorders (Boys)",
+     "sd_dv": null,
+     "p0": 0.053
+    },
+    {
+     "id": "anx_b",
+     "label": "Anxiety disorders (Boys)",
+     "sd_dv": null,
+     "p0": 0.013
+    },
+    {
+     "id": "si_b",
+     "label": "Suicidal ideation or attempt (Boys)",
+     "sd_dv": null,
+     "p0": 0.097
+    },
+    {
+     "id": "sh_b",
+     "label": "Self-harm (Boys)",
+     "sd_dv": null,
+     "p0": 0.074
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_any",
+     "dv": "dep_g",
+     "RR": 1.74,
+     "RR_lo": 1.34,
+     "RR_hi": 2.26,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.041,
+     "location": "Results text p. 533 (Girls, Depressive disorders)",
+     "note": "Users 7.1% (n=1081) vs. non-users 4.1% (n=4002) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.041.",
+     "derived_d": 0.3263,
+     "derived_d_lo": 0.1709,
+     "derived_d_hi": 0.4857,
+     "derived_d_method": "RR -> OR -> d (p0=0.048)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "si_g",
+     "RR": 1.29,
+     "RR_lo": 1.04,
+     "RR_hi": 1.6,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.074,
+     "location": "Results text p. 533 (Girls, Suicidal ideation or attempt)",
+     "note": "Users 9.5% (n=1081) vs. non-users 7.4% (n=4001) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.074.",
+     "derived_d": 0.1537,
+     "derived_d_lo": 0.0234,
+     "derived_d_hi": 0.287,
+     "derived_d_method": "RR -> OR -> d (p0=0.076)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "anx_g",
+     "RR": 1.07,
+     "RR_lo": 0.6,
+     "RR_hi": 1.89,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.013,
+     "location": "Results text p. 533 (Girls, Anxiety disorders)",
+     "note": "Users 1.4% (n=1081) vs. non-users 1.3% (n=4002) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.013.",
+     "derived_d": 0.0379,
+     "derived_d_lo": -0.2848,
+     "derived_d_hi": 0.358,
+     "derived_d_method": "RR -> OR -> d (p0=0.014)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "sh_g",
+     "RR": 1.27,
+     "RR_lo": 0.95,
+     "RR_hi": 1.69,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.043,
+     "location": "Results text p. 533 (Girls, Self-harm)",
+     "note": "Users 5.5% (n=1081) vs. non-users 4.3% (n=4002) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.043.",
+     "derived_d": 0.139,
+     "derived_d_lo": -0.0296,
+     "derived_d_hi": 0.308,
+     "derived_d_method": "RR -> OR -> d (p0=0.046)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "dep_b",
+     "RR": 1.38,
+     "RR_lo": 1.05,
+     "RR_hi": 1.83,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "p0_cell": 0.05,
+     "location": "Results text p. 533 (Boys, Depressive disorders)",
+     "note": "Users 6.9% (n=824) vs. non-users 5.0% (n=4681) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.050.",
+     "derived_d": 0.1894,
+     "derived_d_lo": 0.0284,
+     "derived_d_hi": 0.3594,
+     "derived_d_method": "RR -> OR -> d (p0=0.053)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "si_b",
+     "RR": 1.15,
+     "RR_lo": 0.93,
+     "RR_hi": 1.43,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.094,
+     "location": "Results text p. 533 (Boys, Suicidal ideation or attempt)",
+     "note": "Users 10.8% (n=822) vs. non-users 9.4% (n=4680) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.094.",
+     "derived_d": 0.086,
+     "derived_d_lo": -0.0441,
+     "derived_d_hi": 0.2233,
+     "derived_d_method": "RR -> OR -> d (p0=0.097)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "anx_b",
+     "RR": 1.21,
+     "RR_lo": 0.67,
+     "RR_hi": 2.19,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.013,
+     "location": "Results text p. 533 (Boys, Anxiety disorders)",
+     "note": "Users 1.6% (n=824) vs. non-users 1.3% (n=4681) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.013.",
+     "derived_d": 0.1066,
+     "derived_d_lo": -0.2232,
+     "derived_d_hi": 0.4409,
+     "derived_d_method": "RR -> OR -> d (p0=0.013)"
+    },
+    {
+     "iv": "sm_any",
+     "dv": "sh_b",
+     "RR": 1.05,
+     "RR_lo": 0.81,
+     "RR_hi": 1.35,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "p0_cell": 0.073,
+     "location": "Results text p. 533 (Boys, Self-harm)",
+     "note": "Users 7.7% (n=824) vs. non-users 7.3% (n=4681) met criteria. No p-value printed; sig = 95% CI excludes 1. Unexposed-group (non-user) rate p0_cell = 0.073.",
+     "derived_d": 0.0291,
+     "derived_d_lo": -0.1245,
+     "derived_d_hi": 0.1811,
+     "derived_d_method": "RR -> OR -> d (p0=0.074)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted RR rows for video chat, social media, and texting",
+   "location": "Tables 2 and 3, Unadjusted rows (pp. 532-534)",
+   "why": "Unadjusted transparency rows; the adjusted rows (with demographic controls) are extracted in M1."
+  },
+  {
+   "model": "Total screen time composite (2+ vs. <2 h/day)",
+   "location": "Table 2, Total screen time column (pp. 532-533)",
+   "why": "Composite of all six activities including TV/movies, gaming, and online videos; fails FT-IC2 Step 2. Per-modality phone/SM estimates are extracted instead."
+  },
+  {
+   "model": "Total digital media composite (2+ vs. <2 h/day)",
+   "location": "Table 2, Total digital media column (pp. 532-533)",
+   "why": "Composite of social media, gaming, texting, and online videos; includes non-phone ingredients (gaming, videos); fails FT-IC2 Step 2."
+  },
+  {
+   "model": "TV/movies (2+ vs. <2 h/day)",
+   "location": "Table 2, TV/movies column",
+   "why": "Non-phone/non-SM modality."
+  },
+  {
+   "model": "Gaming (2+ vs. <2 h/day)",
+   "location": "Table 3, Gaming column",
+   "why": "Generic gaming on computer, console, phone, or other device; platform not isolated to phone (FT-IC2 clarification 2)."
+  },
+  {
+   "model": "Online videos (2+ vs. <2 h/day)",
+   "location": "Table 3, Online videos column",
+   "why": "Watching videos such as YouTube on any device; not a phone/SM-specific modality."
+  },
+  {
+   "model": "Exposure-response curves for total screen time and total digital media",
+   "location": "Supplementary Figs. 1-4 (online supplement, not bundled in the PDF); summarized in Results p. 532",
+   "why": "Composite IVs only (total screen time, total digital media), and figures not available in the PDF; no phone/SM-specific estimates."
+  },
+  {
+   "model": "Gender differences in screen time and diagnoses (F tests)",
+   "location": "Table 1 (p. 532)",
+   "why": "Demographic comparison of use and prevalence by gender; no phone/SM-to-trait association."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "RR (adjusted relative risk)",
+  "conversion_formula": "OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Apply to RR, RR_lo, RR_hi.",
+  "contrast_type": "M1: 2+ h/day vs. <2 h/day of the activity (binary group contrast). M2: any social media use vs. none.",
+  "transformable": true,
+  "notes": "p0 in dv_axis is the gender-specific lifetime prevalence of each diagnosis from Table 1 (p. 532): depressive 0.048 girls / 0.053 boys; anxiety 0.014 / 0.013; suicidal ideation or attempt 0.076 / 0.097; self-harm 0.046 / 0.074. Exposure prevalence is low for social media and texting (1.2-2.8%) so the marginal rate approximates the unexposed rate, but for video chat (11.9-14.3% exposed) and M2 social media users (about 16-21% of the analytic n) the marginal rate is less exact. Each estimate also carries p0_cell, the unexposed-group rate printed in the adjusted row of Tables 2-3 (or in text for M2); this is the preferred p0 for the conversion. SD_IV and SD_DV are not needed because both IV and DV are binary. These d values reflect a high-vs-low group contrast, not a per-SD or per-hour slope, and are not directly comparable to continuous-IV d's from other papers. The authors do not state the link function; ARR is treated as a ratio of risks."
+ },
+ "extraction_flags": "533) says social media was significantly associated with self-harm and suicidal ideation among boys, but the adjusted Table 3 CIs include 1 (SI 1.22 [0.60, 2.45]; SH 1.83 [0.95, 3.51]); only the unadjusted rows are significant. I coded sig from the adjusted CIs. (2) The model is described only as a \"univariate general linear model with covariates\"; the link function, software, and clustering are not stated, so it is unclear whether these are true risk ratios. (3) No p-values are printed. sig = 95% CI excludes 1 (bold in the table). (4) Video chat is included as a qualifying phone/SM IV per FT-IC2, even though the authors leave it out of their \"digital media\" composite. It comes from Table 2, not Table 3. (5) M2 (any vs. no social media use) exists only in the text, with no table. I made it a separate card because the contrast is different. (6) dv_axis p0 is the gender-specific marginal prevalence from Table 1. Each estimate also has a non-standard field, p0_cell, holding the printed rate in the unexposed group. That is the better p0 for converting RR to OR, especially for video chat and M2, where exposure prevalence is 12-21%. The converter may need to be pointed at p0_cell. (7) Sex is coded on the DV axis (8 DV columns = 4 diagnoses x girls/boys). (8) Supplementary Figs. 1-4 (exposure-response curves) are not in the PDF but cover composites only. (9) The first author's name is printed \"Roberston\" in the paper."
+}

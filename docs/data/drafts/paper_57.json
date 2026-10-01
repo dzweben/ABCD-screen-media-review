@@ -1,0 +1,375 @@
+{
+ "paper_id": "57",
+ "title": "Unpacking Associations between Mood Symptoms and Screen Time in Preadolescents: a Network Analysis",
+ "doi": "10.1007/s10802-020-00703-x",
+ "year": "2020",
+ "authors": "Lin SY, Eaton NR, Schleider JL",
+ "journal": "Journal of Abnormal Child Psychology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Mixed graphical model (LASSO-regularized, bootstrapped) of binary K-SADS-5 mood symptom nodes with screen time type nodes, partialling out other screen types, BIS/BAS and parental monitoring",
+   "location_in_paper": "Network Analysis methods p. 1638; Fig. 1 (full sample top panel; female and male subsample panels below), p. 1640; results text pp. 1640-1641; Discussion p. 1642. Per-edge numbers in ESM Table S1 (not in the bundled PDF).",
+   "design": "Cross-sectional analysis of the ABCD baseline wave only (2016-2018). All nodes measured at the same visit. Undirected network, so no IV/DV direction is estimated; for this review the texting, social media and video chat nodes are treated as the phone/SM side and the six mood symptom nodes as the trait side. Networks estimated in the full sample and separately in female and male subsamples.",
+   "sample": "ABCD Curated Annual Release 2.0, baseline (N = 11,875 enrolled; M age = 9.91, SD = 0.62, from 9987 families). Because siblings were present, one child per family was randomly sampled in each bootstrap, so each network uses one child per family (Discussion cites 9987 families). Baseline ABCD composition reported as 48% female; 49% non-Hispanic White, 17% non-Hispanic Black, 23% Hispanic, 5% Asian, 5% other. Exact analytic N after missing data is not reported. Increased sexuality was dropped because no child endorsed it.",
+   "iv": "Three phone/SM screen time nodes from the ABCD youth screen time questionnaire: texting, visiting social media sites, video chatting. Typical weekday and weekend day each rated 0 = none, 0.25 = <30 min, 0.5 = 30 min, 1 = 1 h, 2 = 2 h, 3 = 3 h, 4 = 4+ h; average daily value = weekday x 5/7 + weekend x 2/7, rounded to the nearest integer (so effectively an ordinal 0-4 count). Specified as Poisson nodes in the MGM. Full-sample descriptives (Table 1): texting M = 0.14 (SD 0.55), social media M = 0.08 (SD 0.43), video chatting M = 0.12 (SD 0.50), all ranging 0-4. Females reported more texting (0.16 vs 0.12) and social media (0.1 vs 0.07) than males. The network also includes five non-phone screen nodes (TV/movie, video, video game, mature video game, R-rated movie).",
+   "dv": "Six binary youth-report K-SADS-5 (computerized) screening items, 0 = absent, 1 = present: irritability, depressive mood, anhedonia (depression); elevated mood, anger, decreased need for sleep (mania). Specified as binary nodes. Full-sample prevalence (Table 1): irritability 0.03, depressive mood 0.02, anhedonia 0.05, elevated mood 0.02, anger 0.02, decreased need for sleep 0.02.",
+   "covariates": [
+    {
+     "name": "Other screen time nodes",
+     "detail": "TV/movie, video, video game, texting/social media/video chat (whichever are not the focal pair), mature video game, R-rated movie; all edges are conditional on every other node"
+    },
+    {
+     "name": "BIS",
+     "detail": "BIS/BAS youth report, 7 items, alpha = 0.74; Gaussian node"
+    },
+    {
+     "name": "BAS-Drive",
+     "detail": "4 items, alpha = 0.76; Gaussian node"
+    },
+    {
+     "name": "BAS-Fun seeking",
+     "detail": "4 items, alpha = 0.66; Gaussian node"
+    },
+    {
+     "name": "BAS-Reward responsiveness",
+     "detail": "5 items, alpha = 0.73; Gaussian node"
+    },
+    {
+     "name": "Parental monitoring",
+     "detail": "ABCD Parental Monitoring Survey, 5 items on 1-5 scale averaged; cubic-transformed for negative skew; Gaussian node"
+    },
+    {
+     "name": "Other mood symptom nodes",
+     "detail": "Each symptom-screen edge is conditional on the other five symptoms"
+    }
+   ],
+   "equation": "Pairwise mixed graphical model (exponential family): log P(x) proportional to sum_j theta_j*x_j + sum_{j<k} theta_jk*x_j*x_k, with nodes = 6 binary mood symptoms, 8 Poisson screen time nodes, 4 Gaussian BIS/BAS nodes, 1 Gaussian parental monitoring node. Focal parameters are the edge weights theta_jk between {texting, social media, video chat} and each mood symptom. Estimated with l1 (LASSO) penalty tuned by cross-validation; final edge = mean of 1000 bootstrap estimates.",
+   "estimation": "R package mgm (Haslbeck & Waldorp 2015), also qgraph and bootnet. Node distributions chosen from Q-Q plots. l1-regularization with cross-validation. One child per family randomly sampled per bootstrap; 1000 bootstraps with replacement (N_family - 1); final edge weights averaged over bootstraps. Edge significance tested against simulated random networks (Su et al. 2017); an edge was called stable if its bootstrap CI did not contain opposite signs. Edge stability (correlation of absolute/rank-order edge weights): 0.88/0.8 full, 0.79/0.71 female, 0.83/0.75 male. Sensitivity analysis on node selection reported in ESM S2 (little impact). Sex differences in screen-symptom edges tested with permutation tests (NetworkComparisonTest); no sex difference reported for common screen time types. No multiple-comparison correction stated beyond the simulation significance test.",
+   "native_metric": "other:network edge weight (MGM, LASSO-regularized, bootstrap mean)",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "M = 0.14, SD = 0.55 (0-4 ordinal hours scale)",
+     "sd_iv": 0.55
+    },
+    {
+     "id": "social_media",
+     "label": "Social media (visiting social network sites)",
+     "meta": "M = 0.08, SD = 0.43 (0-4 ordinal hours scale)",
+     "sd_iv": 0.43
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chatting",
+     "meta": "M = 0.12, SD = 0.50 (0-4 ordinal hours scale)",
+     "sd_iv": 0.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "irritability",
+     "label": "Irritability",
+     "sd_dv": 0.18,
+     "p0": 0.03
+    },
+    {
+     "id": "depressive",
+     "label": "Depressive mood",
+     "sd_dv": 0.15,
+     "p0": 0.02
+    },
+    {
+     "id": "anhedonia",
+     "label": "Anhedonia",
+     "sd_dv": 0.21,
+     "p0": 0.05
+    },
+    {
+     "id": "elevated",
+     "label": "Elevated mood",
+     "sd_dv": 0.15,
+     "p0": 0.02
+    },
+    {
+     "id": "anger",
+     "label": "Anger",
+     "sd_dv": 0.14,
+     "p0": 0.02
+    },
+    {
+     "id": "dec_sleep",
+     "label": "Decreased need for sleep",
+     "sd_dv": 0.15,
+     "p0": 0.02
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "irritability",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "texting",
+     "dv": "depressive",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "texting",
+     "dv": "anhedonia",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "texting",
+     "dv": "elevated",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "texting",
+     "dv": "anger",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "texting",
+     "dv": "dec_sleep",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "irritability",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "depressive",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "anhedonia",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "elevated",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "anger",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "social_media",
+     "dv": "dec_sleep",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "irritability",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "depressive",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "anhedonia",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "elevated",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "anger",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "dec_sleep",
+     "value": null,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": null,
+     "location": "Fig. 1 (top panel, full sample), p. 1640; numeric edge weight reported only in ESM Table S1 (not bundled in PDF)",
+     "note": "Edge weight is drawn only as line width/colour in Fig. 1; no number is printed in the article. Results text (pp. 1640-1641) says edges between mood symptoms and common screen time types (including social media, texting, video chatting) 'lacked a consistent pattern' and none of these screen types showed significantly and stably positive associations with more than two mood symptoms. Per-edge value, bootstrap CI and significance must be taken from ESM Table S1."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Edges between mood symptoms and TV/movie, video, video game, mature video game, R-rated movie nodes",
+   "location": "Fig. 1, p. 1640; results text pp. 1640-1641; ESM Table S1",
+   "why": "Non-phone/non-SM modalities (TV, streamed video, gaming, age-inappropriate content). Fail FT-IC2. These are the paper's headline findings."
+  },
+  {
+   "model": "Female and male subsample networks",
+   "location": "Fig. 1 lower panels, p. 1640",
+   "why": "Same MGM specification applied within sex. No numeric phone/SM edge weights printed in the article; permutation tests reported no sex difference for common screen types (only R-rated movie-anhedonia differed). Could be added as additional columns if ESM Table S1 gives sex-specific values."
+  },
+  {
+   "model": "Multiple regressions of overall symptom connectivity on screen time level",
+   "location": "Results p. 1641 (b = 0.02, t = 9.25 mature video games; b = 0.05, t = 17.34 R-rated movies)",
+   "why": "Run only for mature video games and R-rated movies. Non-phone/SM modalities."
+  },
+  {
+   "model": "Regressions of node strength (centrality) on screen time level",
+   "location": "Fig. 2, p. 1641",
+   "why": "Run only for mature video games and R-rated movies. Non-phone/SM modalities."
+  },
+  {
+   "model": "Sex-difference t-tests in descriptives",
+   "location": "Table 1, p. 1639",
+   "why": "Demographic comparison (female vs male) of texting/social media/video chat means; sex is demographic-only, fails FT-IC2 other-side requirement."
+  },
+  {
+   "model": "Node-selection sensitivity analysis",
+   "location": "ESM S2 (not bundled)",
+   "why": "Described narratively as having little impact; no numbers in the article."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:network edge weight",
+  "conversion_formula": "None. Guidelines \u00a74a list network edge weights as non-convertible; native metric displayed alone with 'no common-scale d available'.",
+  "contrast_type": "Regularized conditional association (pairwise MGM interaction parameter) between a Poisson-coded screen time node (0-4) and a binary symptom node, conditional on all other 18 nodes; not a per-unit regression slope on a common scale.",
+  "transformable": false,
+  "notes": "Edge weights are LASSO-shrunk, averaged across 1000 bootstraps, and come from a mixed Poisson/binary/Gaussian graphical model, so they have no Cohen's d mapping. In addition, the article prints no numeric value for any texting, social media, or video chat edge: they appear only as line width/colour in Fig. 1 (p. 1640), with per-edge values deferred to ESM Table S1, which is not in the bundled PDF. SD_IV values in iv_axis are from Table 1 (p. 1639, full sample: texting 0.55, social media 0.43, video chat 0.50); symptom prevalences (p0) and SDs from the same table. Paper goes to later review level for non-d metrics."
+ },
+ "extraction_flags": "The article prints no number for any phone/SM edge. Texting, social media and video chat appear as nodes in a cross-sectional mixed graphical model with the six K-SADS-5 mood symptoms, but their edges are shown only as line width and colour in Fig. 1 (p. 1640). The per-edge values are in ESM Table S1, which is not in the bundled PDF and is not anywhere in the repo. So all 18 estimate cells (3 phone/SM nodes x 6 symptoms) are null, including value, p and sig, and each has a note saying so. A human should get ESM Table S1 (and S2) from the publisher to fill in the edge weights, bootstrap CIs and significance flags, including the female and male subsample values if they are given. The only qualitative statement is in the Results text: common screen types, which include social media, texting and video chat, \"lacked a consistent pattern\" with mood symptoms. Network edge weights cannot be converted to Cohen's d under guidelines \u00a74a, so transformable is false. The exact analytic N after missing data is not reported, since one child per family was sampled per bootstrap from 9987 families. The edges are undirected, so calling phone/SM the IV is only a convention for this review. If ESM Table S1 turns out to print no phone/SM edge values either, Stage-2 FT-IC3/IC4 eligibility (a numeric result is required) should be rechecked. The 6 sd_iv/sd_dv/p0 values I spot-checked against Table 1 (p. 1639) matched, as did the two connectivity regression numbers in excluded_models.json"
+}

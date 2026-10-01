@@ -1,0 +1,378 @@
+{
+ "paper_id": "175",
+ "title": "Youth electronic media use and family conflict: Bidirectional associations across early adolescence",
+ "doi": "10.1037/fam0001390",
+ "year": "2025",
+ "authors": "Carvalho C, Ravindran N, Koss KJ",
+ "journal": "Journal of Family Psychology",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multigroup (boys vs girls) random-intercept cross-lagged panel model of within-person social EMU (social media + texting) and family conflict across four annual waves, adjusted for family income",
+   "location_in_paper": "Results, Social EMU section (pp. 1030-1032); Figure 3 (boys, p. 1034) and Figure 4 (girls, p. 1035); model selection in Supplemental Table 4 (not bundled in PDF); interpreted in Discussion pp. 1034-1036 and Conclusion p. 1037",
+   "design": "Longitudinal four-wave panel: ABCD baseline (T1, age ~9.9), 1-year (T2), 2-year (T3), and 3-year (T4) follow-ups. Random-intercept cross-lagged panel model (Hamaker et al., 2015) separating stable between-person components (random intercepts for social EMU and family conflict, allowed to correlate) from within-person deviations at each wave. Within-person part has autoregressive paths, same-wave residual covariances, and lag-1 cross-lagged paths in both directions (social EMU at t -> family conflict at t+1, and family conflict at t -> social EMU at t+1) for T1-T2, T2-T3, and T3-T4. The selected model (M8) frees all autoregressive and cross-lagged parameters across time and across gender (boys and girls estimated as separate groups), so each lag and each sex has its own estimate. Social media/texting is the IV for the EMU -> conflict paths and the DV for the conflict -> EMU paths.",
+   "sample": "ABCD Study youth (release not stated). Wave Ns: T1 N = 11,876 (M age 9.9), T2 N = 11,219 (M age 10.9), T3 N = 10,972 (printed as '100,972'; M age 12.0), T4 N = 10,335 (M age 12.9); abstract gives T1 N = 11,787. Table 1 Ns for social EMU: T1 11,847, T2 11,204, T3 10,367, T4 10,298. Full information maximum likelihood used so the analytic sample is all available cases; group-specific (boys/girls) Ns not reported. Sample described as White 52.0%, Hispanic 20.3%, Black 15.0%, Asian 2.1%, Other 10.5%; female 47.8%; 31.2% income < $50,000, 40.8% >= $100,000; 73.5% married two-parent households. Missingness increased over time (T2 5.6-5.7%, T3 7.8-7.9%, T4 13.2%); attrition higher for boys, lower-income families, and families with greater baseline conflict.",
+   "iv": "Social electronic media use (social EMU), youth self-report on the ABCD Youth Screen Time Questionnaire at T1-T4. Composite of two items: 'Text on a phone, tablet, or computer (e.g., GChat, Whatsapp, etc.)' and 'Visit social networking sites like Facebook, Twitter, Instagram, etc.', each asked separately for a typical weekday and weekend day in hours and minutes; weekday and weekend totals were combined as a weighted mean per type and the social composite summed social media + texting (hours per day). Winsorized at +/- 3 SD. Table 1 (p. 1031), full sample: T1 M = 0.34, SD = 0.82; T2 M = 0.61, SD = 1.16; T3 M = 1.16, SD = 1.66; T4 M = 1.89, SD = 2.07. In the RI-CLPM the focal predictor is the within-person deviation of social EMU at wave t. For the reverse-direction paths the IV is within-person family conflict at wave t.",
+   "dv": "Family conflict: youth report on the 9-item Conflict subscale of the Family Environment Scale (True/False, summed, range 0-9) at T1-T4; alpha = .68, .67, .64, .68. Table 1 full-sample: T1 M = 2.04, SD = 1.95; T2 M = 1.91, SD = 1.88; T3 M = 1.92, SD = 1.83; T4 M = 2.10, SD = 1.94. Outcome is within-person family conflict at wave t+1. For the reverse-direction paths the DV is within-person social EMU at wave t+1 (descriptives as above).",
+   "covariates": [
+    {
+     "name": "Family income",
+     "detail": "Household income (Table 1 M = 7.22, SD = 2.42, ordinal ABCD income bins); entered as a control on family conflict and EMU. Because the selected social EMU model was a gender multigroup model, income was the only covariate (youth sex is the grouping variable rather than a covariate)."
+    },
+    {
+     "name": "Study site",
+     "detail": "Analyses described as 'stratified by site ID' to account for location bias from the multisite design (implementation in Mplus not further specified)."
+    }
+   ],
+   "equation": "Within-person part, per group g (boys, girls): FC_w[t+1] = a_F[t,g]*FC_w[t] + c_EF[t,g]*SEMU_w[t] + e_F[t+1]; SEMU_w[t+1] = a_E[t,g]*SEMU_w[t] + c_FE[t,g]*FC_w[t] + e_E[t+1], for t = T1,T2,T3, with cov(e_F[t], e_E[t]) free. Observed: FC[i,t] = mu_F[t] + RI_FC[i] + FC_w[i,t]; SEMU[i,t] = mu_E[t] + RI_SEMU[i] + SEMU_w[i,t]; cov(RI_FC, RI_SEMU) free; RI_FC and RI_SEMU regressed on income. Focal effects: c_EF (social EMU -> later family conflict) and c_FE (family conflict -> later social EMU); cov(RI_FC, RI_SEMU) is the between-person association.",
+   "estimation": "Mplus 8.3, full information maximum likelihood with robust standard errors (MLR). Model selection by Satorra-Bentler scaled chi-square difference tests across M1 (all constrained over time) to M4 (all free), then gender multigroup models M5-M8; for social EMU, M8 (all parameters free over time and across gender) was selected (Supplemental Table 4). Fit: CFI = .99, TLI = .97, RMSEA = .04, SRMR = .02, chi2(20) = 195.91, p < .001 (Figure 3/4 notes print CFI = .991, TLI = .966, RMSEA = .038, SRMR = .015). Benjamini-Hochberg FDR correction applied (p-adj reported). Gender differences tested via multigroup comparison and reported as separate boys/girls estimates. Sensitivity analysis adding youth internalizing/externalizing problems and parents' screen-use behavior as covariates on the random intercepts is described narratively as similar (p. 1033); its path estimates are not printed. Paper reports both unstandardized b (with SE and 95% CI) and standardized beta (no CI).",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sem_boys",
+     "label": "Social EMU (t) -> family conflict (t+1), boys",
+     "meta": "within-person cross-lag; social media + texting h/day",
+     "sd_iv": null
+    },
+    {
+     "id": "sem_girls",
+     "label": "Social EMU (t) -> family conflict (t+1), girls",
+     "meta": "within-person cross-lag; social media + texting h/day",
+     "sd_iv": null
+    },
+    {
+     "id": "fc_boys",
+     "label": "Family conflict (t) -> social EMU (t+1), boys",
+     "meta": "within-person cross-lag; FES conflict 0-9",
+     "sd_iv": null
+    },
+    {
+     "id": "fc_girls",
+     "label": "Family conflict (t) -> social EMU (t+1), girls",
+     "meta": "within-person cross-lag; FES conflict 0-9",
+     "sd_iv": null
+    },
+    {
+     "id": "ri_sem_boys",
+     "label": "Social EMU random intercept, boys",
+     "meta": "between-person association",
+     "sd_iv": null
+    },
+    {
+     "id": "ri_sem_girls",
+     "label": "Social EMU random intercept, girls",
+     "meta": "between-person association",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "fc_t2",
+     "label": "Family conflict T2 (from T1)",
+     "sd_dv": 1.88,
+     "p0": null
+    },
+    {
+     "id": "fc_t3",
+     "label": "Family conflict T3 (from T2)",
+     "sd_dv": 1.83,
+     "p0": null
+    },
+    {
+     "id": "fc_t4",
+     "label": "Family conflict T4 (from T3)",
+     "sd_dv": 1.94,
+     "p0": null
+    },
+    {
+     "id": "sem_t2",
+     "label": "Social EMU T2 (from T1)",
+     "sd_dv": 1.16,
+     "p0": null
+    },
+    {
+     "id": "sem_t3",
+     "label": "Social EMU T3 (from T2)",
+     "sd_dv": 1.66,
+     "p0": null
+    },
+    {
+     "id": "sem_t4",
+     "label": "Social EMU T4 (from T3)",
+     "sd_dv": 2.07,
+     "p0": null
+    },
+    {
+     "id": "ri_fc",
+     "label": "Family conflict random intercept",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sem_boys",
+     "dv": "fc_t2",
+     "beta": 0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.06,
+     "B_lo": -0.08,
+     "B_hi": 0.19,
+     "p": 0.435,
+     "p_label": "= .435",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .07; no BH-adjusted p printed for this path. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_EB -> L_F1 = .02."
+    },
+    {
+     "iv": "sem_boys",
+     "dv": "fc_t3",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.05,
+     "B_lo": -0.01,
+     "B_hi": 0.11,
+     "p": 0.125,
+     "p_label": "= .125",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .03; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E1 -> L_F2 = .03."
+    },
+    {
+     "iv": "sem_boys",
+     "dv": "fc_t4",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.01,
+     "B_lo": -0.05,
+     "B_hi": 0.03,
+     "p": 0.714,
+     "p_label": "= .714",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .02; BH-adjusted p = .884. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_E2 -> L_F3 = -.01."
+    },
+    {
+     "iv": "fc_boys",
+     "dv": "sem_t2",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.01,
+     "B_lo": -0.03,
+     "B_hi": 0.01,
+     "p": 0.49,
+     "p_label": "= .490",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .01; BH-adjusted p = .637. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_FB -> L_E1 = -.01."
+    },
+    {
+     "iv": "fc_boys",
+     "dv": "sem_t3",
+     "beta": -0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.02,
+     "B_lo": -0.05,
+     "B_hi": 0.01,
+     "p": 0.182,
+     "p_label": "= .182",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .02; BH-adjusted p = .314. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 3 path L_F1 -> L_E2 = -.02."
+    },
+    {
+     "iv": "fc_boys",
+     "dv": "sem_t4",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.04,
+     "B_lo": -0.0,
+     "B_hi": 0.07,
+     "p": 0.056,
+     "p_label": "= .056",
+     "sig": false,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Sign inconsistency as printed: b = -0.04 but beta = .03 and 95% CI [-0.00, 0.07]; Figure 3 path L_F2 -> L_E3 = .03, so the negative sign on b is probably a typo. Values copied exactly as printed."
+    },
+    {
+     "iv": "sem_girls",
+     "dv": "fc_t2",
+     "beta": -0.18,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.59,
+     "B_lo": -0.94,
+     "B_hi": -0.25,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Printed SE = .02 is inconsistent with the printed 95% CI [-0.94, -0.25] (CI width implies SE near .18); values copied as printed. Figure 4 path L_EB -> L_F1 = -.18***."
+    },
+    {
+     "iv": "sem_girls",
+     "dv": "fc_t3",
+     "beta": 0.08,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.13,
+     "B_lo": 0.06,
+     "B_hi": 0.16,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .03; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. CI is asymmetric around b as printed. Figure 4 path L_E1 -> L_F2 = .08***."
+    },
+    {
+     "iv": "sem_girls",
+     "dv": "fc_t4",
+     "beta": 0.07,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.07,
+     "B_lo": 0.03,
+     "B_hi": 0.1,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_E2 -> L_F3 = .07***."
+    },
+    {
+     "iv": "fc_girls",
+     "dv": "sem_t2",
+     "beta": -0.07,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": -0.05,
+     "B_lo": -0.09,
+     "B_hi": 0.01,
+     "p": 0.054,
+     "p_label": "= .054",
+     "sig": false,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 shows this path (L_FB -> L_E1) as -.06, while the text prints beta = -.07; text value used."
+    },
+    {
+     "iv": "fc_girls",
+     "dv": "sem_t3",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.03,
+     "B_lo": -0.01,
+     "B_hi": 0.07,
+     "p": 0.138,
+     "p_label": "= .138",
+     "sig": false,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = .256. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F1 -> L_E2 = .03."
+    },
+    {
+     "iv": "fc_girls",
+     "dv": "sem_t4",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.04,
+     "B_lo": 0.0,
+     "B_hi": 0.09,
+     "p": 0.051,
+     "p_label": "= .051",
+     "sig": false,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = .146. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Figure 4 path L_F2 -> L_E3 = .03."
+    },
+    {
+     "iv": "ri_sem_boys",
+     "dv": "ri_fc",
+     "beta": 0.15,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.1,
+     "B_lo": 0.07,
+     "B_hi": 0.13,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 1030-1032 (Social EMU, boys) and Figure 3 (p. 1034)",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person (random-intercept) covariance/correlation of social EMU with family conflict, not a directional path. Figure 3 RI arc = .15***."
+    },
+    {
+     "iv": "ri_sem_girls",
+     "dv": "ri_fc",
+     "beta": 0.24,
+     "beta_lo": null,
+     "beta_hi": null,
+     "B": 0.2,
+     "B_lo": 0.16,
+     "B_hi": 0.24,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 1032 (Social EMU, girls) and Figure 4 (p. 1035)",
+     "note": "SE = .02; BH-adjusted p = <.001. Native standardized beta has no printed CI; the 95% CI shown in B_lo/B_hi is for the unstandardized b. Between-person random-intercept association, not directional. The text sentence for girls says 'family conflict and total EMU', which appears to be a slip for social EMU since it sits in the Social EMU girls paragraph; Figure 4 RI arc shows .22***, while the text prints beta = .24. Text values used."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "RI-CLPM of total EMU and family conflict (whole sample, M3, adjusted for income and sex)",
+   "location": "Results p. 1030; Figure 1 (p. 1032); Supplemental Table 2",
+   "why": "Total EMU is a composite of all EMU types including TV/streaming, video viewing, and video games; no phone/SM isolation within this model. Fails FT-IC2 Step 2. The phone/SM-isolated breakout is the social EMU model (M1)."
+  },
+  {
+   "model": "RI-CLPM of video-viewing EMU (TV + online streaming) and family conflict (M1 constraints, whole sample)",
+   "location": "Results p. 1030; Figure 2 (p. 1033); Supplemental Table 3",
+   "why": "Non-phone/non-SM modality (television and video streaming). Fails FT-IC2."
+  },
+  {
+   "model": "RI-CLPM of video game EMU and family conflict (M4, whole sample)",
+   "location": "Results pp. 1032-1033; Figure 5 (p. 1036); Supplemental Table 5",
+   "why": "Video games on 'computer, console, phone, or other device', platform unspecified; generic gaming does not qualify under FT-IC2 clarification 2."
+  },
+  {
+   "model": "Bivariate correlations of social EMU with family conflict",
+   "location": "Table 1 (p. 1031)",
+   "why": "Unadjusted zero-order correlations (e.g., social EMU T1 with family conflict T1 r = .08); descriptive, not the spec the authors interpret."
+  },
+  {
+   "model": "Earlier and alternative social EMU RI-CLPM specifications (M1-M7, equality-constrained and partially constrained models)",
+   "location": "Supplemental Table 4 (not bundled in PDF)",
+   "why": "Model-selection scaffolding; only fit statistics are used and the authors interpret the selected M8."
+  },
+  {
+   "model": "Sensitivity RI-CLPMs adding youth internalizing/externalizing problems and parents' screen-use behavior on the random intercepts",
+   "location": "Sensitivity Analysis, p. 1033",
+   "why": "Cross-lagged estimates not printed ('overall pattern of findings remained similar'). The section does print covariate effects of parents' screen behavior on youth screen-time random intercepts (girls social media beta = -.05, p = .049; boys social media beta = -.12, p < .001), but these are sensitivity-model covariate coefficients on between-person intercepts that the authors do not interpret further; not extracted."
+  },
+  {
+   "model": "Repeated-measures ANOVA of change in EMU and family conflict over time",
+   "location": "Results p. 1030; Supplemental Table 1",
+   "why": "Describes change in each variable over time; no phone/SM by trait association."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized RI-CLPM path coefficient); unstandardized b with 95% CI also recorded in B/B_lo/B_hi",
+  "conversion_formula": "d = 2 * beta_std / sqrt(1 - beta_std^2) (beta_std treated as approximate r; guidelines section 4a, standardized SEM path). Alternative from b: beta_std = B * SD_IV / SD_DV, then same r -> d.",
+  "contrast_type": "per 1 SD of within-person social EMU (or within-person family conflict) at wave t, on the within-person outcome at wave t+1; for the random-intercept rows, the between-person standardized association",
+  "transformable": true,
+  "notes": "Standardized betas are printed in the Results text (pp. 1030-1032) and match Figures 3-4 except girls FC->social EMU T1-T2 (text -.07, figure -.06) and the girls random-intercept association (text .24, figure .22). No CI is printed for beta, so no d CI from the native metric; a d CI could only be approximated from the b CIs with SDs. sd_dv values on the dv_axis are full-sample observed SDs from Table 1 (p. 1031; family conflict T2 1.88, T3 1.83, T4 1.94; social EMU T2 1.16, T3 1.66, T4 2.07), not the SDs of the within-person latent components and not sex-specific, so B-based conversion would be approximate; sd_iv left null because it depends on the lag (Table 1: social EMU T1 0.82, T2 1.16, T3 1.66; family conflict T1 1.95, T2 1.88, T3 1.83). Several printed b values are internally inconsistent (girls T1->T2 social EMU -> FC b = -0.59 with SE .02 and CI [-0.94, -0.25]; boys FC T3 -> social EMU T4 b = -0.04 with positive beta and CI), so beta is the safer basis for d. Random-intercept rows are nondirectional between-person associations, not effects of one variable on the other."
+ },
+ "extraction_flags": "There is one model card (M1): the gender-multigroup RI-CLPM M8 for social EMU (social media + texting) and family conflict, adjusted for income. It has 12 cross-lagged estimates (both directions x 3 lags x boys/girls) and 2 between-person random-intercept associations. All values come from the Results text (pp. 1030-1032). I checked each one against Figures 3 and 4. I recorded native beta_std and also kept b with its 95% CI in B/B_lo/B_hi, because the paper prints no CI for beta.\n\nPrinted values a human should check:\n(1) Girls social EMU T1->FC T2: b = -0.59 with SE = .02 and CI [-0.94, -0.25]. The SE does not fit the CI.\n(2) Boys FC T3->social EMU T4: b = -0.04, but beta = .03 and the CI [-0.00, 0.07] is positive. The figure shows .03, so the sign on b is probably a typo.\n(3) Girls FC T1->social EMU T2: the text says beta = -.07, the figure says -.06.\n(4) The girls random-intercept sentence says 'total EMU' even though it is in the social EMU paragraph. Its beta is .24 in the text and .22 in Figure 4.\n(5) The girls T2->T3 b CI is asymmetric.\n\nOther issues:\n- sd_dv values are full-sample observed SDs from Table 1. They are not within-person or sex-specific SDs.\n- Group-specific Ns are not reported. T3 N is printed as '100,972'.\n- The ABCD release is not stated.\n- Supplemental Tables 1-5 are not in the PDF.\n- Texting is defined as 'on a phone, tablet, or computer'. I counted it as qualifying under the activity-defined clarification 5.\n- I excluded the sensitivity-model coefficients for parents' screen behavior -> youth social media intercept (girls beta = -.05, p = .049; boys beta = -.12, p < .001), because they are covariate effects the authors do not interpret further. A coder may disagree.\n\njson"
+}

@@ -1,0 +1,237 @@
+{
+ "paper_id": "144",
+ "title": "Associations of adolescent social media use trajectories with spatial and verbal memory: a prospective cohort study",
+ "doi": "10.1016/j.lana.2026.101454",
+ "year": "2026",
+ "authors": "Nagata JM, Wong JH, Kim KE, Nayak S, Li EJ, Richardson RA, Rauschecker AM, Sugrue L, Ganson KT, Piatkowski T, He J, Testa A",
+ "journal": "The Lancet Regional Health - Americas",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted multiple linear regression of Year 2 cognitive performance (LMT, RAVLT) on baseline-Year 2 social media time trajectory group, adjusted for baseline cognition and sociodemographic, mental health and non-social media screen time covariates",
+   "location_in_paper": "Table 2 (p. 6); results text p. 5; interpreted in Discussion pp. 5-7 and Abstract",
+   "design": "Prospective longitudinal cohort, two-stage analysis. Stage 1: group-based trajectory modeling (GBTM) of average daily social media hours across three waves (baseline 2016-2018, Year 1 2017-2019, Year 2 2018-2020) classified each participant into one of three trajectory groups. Stage 2: the trajectory group (spanning baseline to Year 2) is the IV and cognitive performance at Year 2 is the DV, with the respective baseline cognitive score entered as a covariate. One Year 2 outcome per participant; no repeated-measures DV and no time interaction. Note that the IV window overlaps the DV wave (Year 2 social media time is part of the trajectory).",
+   "sample": "ABCD Release 5.1. Of 11,962 baseline participants, excluded those missing Youth Screen Time Survey from baseline to Year 2 (n = 2333), cognition assessments at baseline and Year 2 (n = 1372), baseline mental health (n = 1) and baseline sociodemographics (n = 728), giving analytic N = 7528 (Figure S1; included vs excluded compared in Table S1, excluded more often racial/ethnic minority, lower income, lower parent education). Mean baseline age 10.0 years (SD 0.6); 48.9% (3617) female, 51.1% (3911) male. Race/ethnicity: 58.2% White (4350), 14.2% Black (1240), 18.1% Latino/Hispanic (1159), 5.3% Asian (455), 3.1% Native American (267), 1.1% other (57). Parent education college or more 85.3%. Counts unweighted; analyses weighted to the American Community Survey. The 'Research in context' panel states N = 7582, which conflicts with the 7528 used everywhere else.",
+   "iv": "Social media time trajectory group (3 categories) from GBTM. Underlying measure: ABCD Youth Screen Time Survey item for hours per day on social media (e.g., Instagram, Facebook, Twitter), reported separately for weekdays and weekends and combined as ([weekday x 5] + [weekend x 2])/7 hours/day, at baseline, Year 1 and Year 2. GBTM fit in Stata 18.0 'traj'; best model by BIC was a sex-adjusted three-group solution (one linear and two cubic trajectories; Table S2). Groups: no/very low use (reference; n = 4289, 54.7%; about 0.1 h/day by age 13; legend '+0.1 hours/day' change baseline to Year 2), low increasing use (n = 2822, 38.8%; about 0.8 h/day by age 13; '+0.8 hours/day'), high increasing use (n = 417, 6.4%; about 3.1 h/day by age 13; '+3.1 hours/day'). Dummy coded against the no/very low use group.",
+   "dv": "Four Year 2 cognitive scores from the ABCD neurocognitive battery: (1) Little Man Task (LMT) accuracy, proportion correct over 32 trials (0-1), visuospatial attention/mental rotation; Year 2 mean 0.7 (SD 0.2). (2) RAVLT Initial Learning Trials, total words recalled over five learning trials of a 15-word list (0-75); Year 2 mean 44.2 (SD 9.1). (3) RAVLT Retroactive Interference (short delay recall after distractor list), 0-15; Year 2 mean 9.7 (SD 2.7). (4) RAVLT Long Delay (30-min) recall, 0-15; Year 2 mean 9.1 (SD 2.9).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline, years"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female, male"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Parent/guardian report: Asian, Black, Hispanic or Latino, Native American, White, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Baseline, 6 categories: <$25,000; $25,000-$49,999; $50,000-$74,999; $75,000-$99,999; $100,000-$199,999; >=$200,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education at baseline: high school or less vs college or more"
+    },
+    {
+     "name": "ADHD symptoms",
+     "detail": "Parent-reported CBCL attention-deficit/hyperactivity problems T-score (baseline mean 53.2, SD 5.6)"
+    },
+    {
+     "name": "Depressive symptoms",
+     "detail": "Parent-reported CBCL depressive problems T-score (baseline mean 53.7, SD 5.8)"
+    },
+    {
+     "name": "Non-social media screen time",
+     "detail": "Baseline hours/day summing weighted weekday/weekend TV or movies, online videos (e.g., YouTube), video games, texting and video chat; winsorized at 16 h/day; mean 3.8 (SD 3.1)"
+    },
+    {
+     "name": "Baseline cognitive score",
+     "detail": "The baseline score on the same test as the outcome"
+    },
+    {
+     "name": "Study site",
+     "detail": "ABCD recruitment site (21 sites), entered as a covariate"
+    }
+   ],
+   "equation": "Cog_Y2[i] = b0 + b1*LowIncreasing[i] + b2*HighIncreasing[i] + b3*age + b4*sex + b5..*race_ethnicity + b..*income + b..*parent_ed + b..*CBCL_ADHD + b..*CBCL_depression + b..*nonSM_screen_time + b..*Cog_baseline[i] + b..*site + e[i], with no/very low use as the reference trajectory; weighted by ACS-based sampling weights. b1 and b2 are adjusted mean differences in the Year 2 score relative to the no/very low use group.",
+   "estimation": "Multiple linear regression in Stata (GBTM in Stata 18.0 'traj'; the regression software is not stated separately). ABCD sampling weights approximating the American Community Survey applied to all analyses. Site entered as a covariate; no random effects or family clustering described. Two-sided tests, alpha = 0.05; Benjamini-Hochberg false discovery rate correction, with bold in Table 2 marking significance after correction. Sex-stratified descriptive cognitive scores are mentioned (Table S4, supplement not in the PDF) but no sex- or race-stratified regressions were run; limitations note small subgroup sizes prevented this. No interaction tests reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "low_inc",
+     "label": "Low increasing SM use (vs no/very low)",
+     "meta": "n = 2822, 38.8%; ~0.8 h/day by age 13",
+     "sd_iv": null
+    },
+    {
+     "id": "high_inc",
+     "label": "High increasing SM use (vs no/very low)",
+     "meta": "n = 417, 6.4%; ~3.1 h/day by age 13",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "lmt",
+     "label": "LMT accuracy (Y2)",
+     "sd_dv": 0.2,
+     "p0": null
+    },
+    {
+     "id": "ravlt_init",
+     "label": "RAVLT Initial Learning Trials (Y2)",
+     "sd_dv": 9.1,
+     "p0": null
+    },
+    {
+     "id": "ravlt_retro",
+     "label": "RAVLT Retroactive Interference (Y2)",
+     "sd_dv": 2.7,
+     "p0": null
+    },
+    {
+     "id": "ravlt_long",
+     "label": "RAVLT Long Delay 30-min (Y2)",
+     "sd_dv": 2.9,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "low_inc",
+     "dv": "lmt",
+     "B": -0.01,
+     "B_lo": -0.01,
+     "B_hi": 0.003,
+     "p": 0.19,
+     "p_label": "0.19",
+     "sig": false,
+     "location": "Table 2, Low increasing row, Little Man Task column",
+     "note": "Not bold (not significant after Benjamini-Hochberg). B and lower CI bound both printed as -0.01 owing to rounding."
+    },
+    {
+     "iv": "low_inc",
+     "dv": "ravlt_init",
+     "B": -1.38,
+     "B_lo": -1.82,
+     "B_hi": -0.94,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Low increasing row, RAVLT Initial Learning Trials column"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "ravlt_retro",
+     "B": -0.38,
+     "B_lo": -0.52,
+     "B_hi": -0.25,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Low increasing row, RAVLT Retroactive Interference column"
+    },
+    {
+     "iv": "low_inc",
+     "dv": "ravlt_long",
+     "B": -0.41,
+     "B_lo": -0.55,
+     "B_hi": -0.26,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Low increasing row, RAVLT Long Delay column"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "lmt",
+     "B": -0.03,
+     "B_lo": -0.05,
+     "B_hi": -0.01,
+     "p": 0.004,
+     "p_label": "0.004",
+     "sig": true,
+     "location": "Table 2, High increasing row, Little Man Task column"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "ravlt_init",
+     "B": -1.9,
+     "B_lo": -2.76,
+     "B_hi": -1.04,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, High increasing row, RAVLT Initial Learning Trials column"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "ravlt_retro",
+     "B": -0.61,
+     "B_lo": -0.89,
+     "B_hi": -0.32,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, High increasing row, RAVLT Retroactive Interference column"
+    },
+    {
+     "iv": "high_inc",
+     "dv": "ravlt_long",
+     "B": -0.55,
+     "B_lo": -0.84,
+     "B_hi": -0.27,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, High increasing row, RAVLT Long Delay column"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Group-based trajectory model (GBTM) of daily social media time across baseline, Year 1 and Year 2 (2-4 groups, with and without sex adjustment)",
+   "location": "Methods, Statistical analysis (p. 4); Figure 1 (p. 6); Table S2 (supplement, not in PDF)",
+   "why": "Measurement/classification step that builds the IV; it describes social media use as a function of age and sex and pairs it with no individual-trait-level outcome. Fit statistics only."
+  },
+  {
+   "model": "Comparison of sociodemographic characteristics across social media trajectory groups",
+   "location": "Results p. 5; Table S3 (supplement, not in PDF)",
+   "why": "Trajectory groups paired only with demographic variables (sex, race/ethnicity, income, parent education); fails FT-IC2 on the other side. No estimates printed in the main PDF."
+  },
+  {
+   "model": "Sex-stratified cognitive performance outcomes",
+   "location": "Methods p. 4 and Results p. 5; Table S4 (supplement, not in PDF)",
+   "why": "Described as sex differences in mean cognitive scores (females marginally higher), not a social media model; authors state subgroup sizes were too small for sex-specific regressions."
+  },
+  {
+   "model": "Non-social media screen time (TV/movies, online videos, video games, texting, video chat)",
+   "location": "Methods, Covariates (p. 4); Table 2 footnote",
+   "why": "Entered only as a covariate; bundles non-phone modalities with texting and video chat, and no estimate is printed for it."
+  },
+  {
+   "model": "Included vs excluded participant comparison",
+   "location": "Methods p. 3; Table S1 (supplement)",
+   "why": "Attrition/sample comparison on demographics; no phone/SM association."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B",
+  "conversion_formula": "Categorical (dummy-coded group) IV on continuous DV: d = B / SD_DV, i.e., adjusted mean difference between the trajectory group and the no/very low use reference divided by the DV SD; applied to B_lo and B_hi for the CI.",
+  "contrast_type": "Trajectory group membership vs the no/very low social media use group (low increasing vs reference; high increasing vs reference); not a per-hour slope.",
+  "transformable": true,
+  "notes": "SD_DV taken from Table 1 (p. 5) Year 2 cognitive performance measures for the full analytic sample (N = 7528): LMT accuracy 0.2, RAVLT Initial Learning Trials 9.1, RAVLT Retroactive Interference 2.7, RAVLT Long Delay 2.9. These are total-sample SDs, not pooled within-group SDs, and Table 1 notes weighted estimates, so d is approximate. The LMT SD is printed to one decimal (0.2) and B to two decimals, so derived d for LMT is coarse (e.g., -0.03/0.2 = -0.15). Because the model adjusts for the baseline score of the same test, B is a residualized (change-like) adjusted difference; dividing by the raw Year 2 SD gives a d on the outcome scale. SD_IV is not applicable (categorical IV)."
+ },
+ "extraction_flags": "The IV is a 3-group trajectory from a group-based trajectory model (GBTM), not hours per day, so d = B / SD_DV is a group contrast. SD_DV values are the Year 2 total-sample SDs from Table 1 (LMT 0.2, RAVLT 9.1 / 2.7 / 2.9), not pooled within-group SDs. The LMT SD is printed to only one decimal, so its d is coarse. The model adjusts for the baseline score on the same test, so B is a residualized difference. The trajectory window (baseline to Year 2) overlaps the Year 2 outcome wave. The Research-in-context panel says N = 7582, which conflicts with the N = 7528 used everywhere else. The supplement (Tables S1-S4) is not bundled in the PDF, so it is unverified whether Table S4 contains any sex-stratified social media estimates; the text and limitations suggest it does not. Software for the regression stage is not stated separately (GBTM is Stata 18.0). All 8 Table 2 values were checked against the pdftotext extraction.json"
+}

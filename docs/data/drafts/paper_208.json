@@ -1,0 +1,334 @@
+{
+ "paper_id": "208",
+ "title": "Social Media Use and Alcohol Sipping in Early Adolescents: A Prospective Cohort Study",
+ "doi": "10.1080/10826084.2024.2310501",
+ "year": "2024",
+ "authors": "Nagata JM, Sajjad OM, Smith N, Zamora G, Dhama S, Al-shoaibi AAA, Ganson KT, Testa A, Moreno MA, Kiss O, Baker FC, Jackson DB",
+ "journal": "Substance Use & Misuse",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Modified Poisson regression (risk ratios) of Year 3 alcohol sipping on a single social media variable (Year 1 social media time, or Year 2 problematic social media use), adjusted for Year 1 sipping and sociodemographic and mental health confounders",
+   "location_in_paper": "Table 2, Model 1 (social media time) and Model 2 (problematic social media use) (p. 973); methods p. 972-973; Results p. 973; headline estimate in Abstract; interpreted in Discussion p. 973-974",
+   "design": "Prospective longitudinal cohort using ABCD Years 1-3. Social media time is measured at Year 1, problematic social media use at Year 2, and alcohol sipping at Year 3 (single follow-up, not repeated measures). Year 1 alcohol sipping is entered as a covariate, so the estimate is the association with Year 3 sipping net of prior sipping (the authors describe this as new-onset sipping, but participants who sipped at Year 1 were not excluded; they were adjusted for). Model 1 and Model 2 are separate regressions with the same covariate set, each with one social media variable. No time interactions.",
+   "sample": "ABCD 5.0 release, Years 1-3; 21 U.S. sites. Analytic N = 7,514 after excluding participants with missing social media use or alcohol sipping data (n = 4,361 excluded; included vs excluded compared in Appendix A, differing on race/ethnicity, household income and parent education, p<0.001). Year 1 age M = 10.93 (SD 0.64); 49.8% female, 50.2% male; 57.2% White, 18.8% Latino/Hispanic, 14.3% Black, 5.3% Asian, 3.1% Native American, 1.3% Other (Table 1, propensity-weighted).",
+   "iv": "Two qualifying social media variables, each in its own model. (1) Social media time, hours per day (Year 1): youth self-reported typical hours and minutes on social media on weekdays and weekend days, combined as ([weekday x 5] + [weekend x 2]) / 7; M = 0.22, SD = 0.59 h/day (Table 1). Risk ratio is per 1 hour/day. (2) Problematic social media use score (Year 2): Social Media Addiction Questionnaire (SMAQ), six items modeled after the Bergen Facebook Addiction Scale (mood modification, salience, relapse, conflict, tolerance), administered to youth reporting at least one social media account; M = 5.9, SD = 6.6 (Table 1). Risk ratio is per 1 score point. The paper says item averages were calculated but Table 1 values look like a summed score; how youth without an account were scored is not stated.",
+   "dv": "Alcohol sipping at Year 3 (binary yes/no): from an adapted Timeline Follow-Back item asking whether the child had tried a sip of alcohol (beer, wine, liquor) since the last visit. Prevalence 8.7% at Year 3 and 9.3% at Year 1 (Table 1).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years at Year 1, continuous"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female (reference) vs male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White (reference), Latino/Hispanic, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Less than $75,000 (reference) vs $75,000 and greater"
+    },
+    {
+     "name": "Parents' highest education",
+     "detail": "High school or less (reference) vs college or more"
+    },
+    {
+     "name": "Child religiosity",
+     "detail": "Religious (reference) vs not religious"
+    },
+    {
+     "name": "Depression symptoms (Year 1)",
+     "detail": "CBCL t-score, continuous; M = 54.1 (SD 6.2)"
+    },
+    {
+     "name": "Anxiety symptoms (Year 1)",
+     "detail": "CBCL t-score, continuous; M = 53.7 (SD 6.3)"
+    },
+    {
+     "name": "Alcohol sipping (Year 1)",
+     "detail": "Binary prior sipping; RR in Model 1 = 3.53"
+    },
+    {
+     "name": "Study site",
+     "detail": "Listed as an adjustment variable; whether entered as fixed effects or a cluster/random term is not stated and no site rows are printed in Table 2"
+    }
+   ],
+   "equation": "log P(sip_Y3 = 1) = b0 + b1*SM_IV + b2*age + b3*male + b4..b8*race/ethnicity + b9*income_75k+ + b10*parent_college+ + b11*not_religious + b12*CBCL_depression_Y1 + b13*CBCL_anxiety_Y1 + b14*sip_Y1 + site terms; RR = exp(b1); SM_IV = social media hours/day at Year 1 (Model 1) or SMAQ score at Year 2 (Model 2)",
+   "estimation": "Stata 18 (analyses run 2022-23). Modified Poisson regression with robust error variance (Zou 2004) yielding risk ratios with 95% CIs. ABCD propensity weights based on the American Community Survey applied. Two-sided alpha = 0.05. No multiple-comparison correction reported. No sex or other interaction or stratified analyses reported. No sensitivity analyses reported.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "sm_time_y1",
+     "label": "Social media time, hours/day (Year 1)",
+     "meta": "Table 2 Model 1; M = 0.22, SD = 0.59 h/day",
+     "sd_iv": 0.59
+    },
+    {
+     "id": "psmu_y2",
+     "label": "Problematic social media use score, SMAQ (Year 2)",
+     "meta": "Table 2 Model 2; M = 5.9, SD = 6.6",
+     "sd_iv": 6.6
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sip_y3",
+     "label": "Alcohol sipping (Year 3)",
+     "sd_dv": null,
+     "p0": 0.087
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y1",
+     "dv": "sip_y3",
+     "RR": 1.31,
+     "RR_lo": 1.2,
+     "RR_hi": 1.43,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 1, row 'Social media time, hours (Year 1)'",
+     "note": "Per 1 hour/day of social media. Headline estimate in the Abstract."
+    },
+    {
+     "iv": "psmu_y2",
+     "dv": "sip_y3",
+     "RR": 1.03,
+     "RR_lo": 1.03,
+     "RR_hi": 1.05,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 2, row 'Problematic social media use score (Year 2)'",
+     "note": "Per 1 SMAQ point. Printed as 1.03 (1.03, 1.05): the point estimate equals the lower CI bound as printed (rounding)."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Modified Poisson regression (risk ratios) of Year 3 alcohol sipping on Year 1 social media time and Year 2 problematic social media use entered together, adjusted for Year 1 sipping and confounders",
+   "location_in_paper": "Table 2, Model 3 (p. 973); Results p. 973 ('remained significant')",
+   "design": "Prospective longitudinal cohort, ABCD Years 1-3. Year 1 social media time and Year 2 problematic social media use are entered simultaneously to predict Year 3 alcohol sipping (single follow-up), adjusting for Year 1 sipping. This is the mutually adjusted model the authors use to show that the social media time association attenuates but remains significant once problematic use is added.",
+   "sample": "Same as M1: ABCD 5.0, N = 7,514 with complete social media and alcohol sipping data; Year 1 age M = 10.93 (SD 0.64); 49.8% female; 57.2% White, 18.8% Latino/Hispanic, 14.3% Black, 5.3% Asian, 3.1% Native American, 1.3% Other.",
+   "iv": "Social media time, hours/day at Year 1 (weighted weekday/weekend average; M = 0.22, SD = 0.59) and SMAQ problematic social media use score at Year 2 (M = 5.9, SD = 6.6), both in the same model; each RR is adjusted for the other.",
+   "dv": "Alcohol sipping at Year 3 (binary; TLFB sip since last visit); 8.7% prevalence.",
+   "covariates": [
+    {
+     "name": "Other social media variable",
+     "detail": "SMAQ score (Year 2) when reading the social media time RR, and social media time (Year 1) when reading the SMAQ RR"
+    },
+    {
+     "name": "Age",
+     "detail": "Years at Year 1, continuous"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female (reference) vs male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White (reference), Latino/Hispanic, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Less than $75,000 (reference) vs $75,000 and greater"
+    },
+    {
+     "name": "Parents' highest education",
+     "detail": "High school or less (reference) vs college or more"
+    },
+    {
+     "name": "Child religiosity",
+     "detail": "Religious (reference) vs not religious"
+    },
+    {
+     "name": "Depression symptoms (Year 1)",
+     "detail": "CBCL t-score, continuous"
+    },
+    {
+     "name": "Anxiety symptoms (Year 1)",
+     "detail": "CBCL t-score, continuous"
+    },
+    {
+     "name": "Alcohol sipping (Year 1)",
+     "detail": "Binary prior sipping"
+    },
+    {
+     "name": "Study site",
+     "detail": "Listed as adjustment variable; form not stated"
+    }
+   ],
+   "equation": "log P(sip_Y3 = 1) = b0 + b1*SMtime_Y1 + b2*SMAQ_Y2 + b3*age + b4*male + b5..b9*race/ethnicity + b10*income_75k+ + b11*parent_college+ + b12*not_religious + b13*CBCL_depression_Y1 + b14*CBCL_anxiety_Y1 + b15*sip_Y1 + site terms; RR = exp(b)",
+   "estimation": "Stata 18. Modified Poisson regression with robust variance (Zou 2004), risk ratios with 95% CIs. ACS-based ABCD propensity weights. Two-sided alpha = 0.05. No multiple-comparison correction. No interaction or stratified analyses.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "sm_time_y1",
+     "label": "Social media time, hours/day (Year 1)",
+     "meta": "Adjusted for SMAQ; M = 0.22, SD = 0.59 h/day",
+     "sd_iv": 0.59
+    },
+    {
+     "id": "psmu_y2",
+     "label": "Problematic social media use score, SMAQ (Year 2)",
+     "meta": "Adjusted for social media time; M = 5.9, SD = 6.6",
+     "sd_iv": 6.6
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sip_y3",
+     "label": "Alcohol sipping (Year 3)",
+     "sd_dv": null,
+     "p0": 0.087
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y1",
+     "dv": "sip_y3",
+     "RR": 1.21,
+     "RR_lo": 1.1,
+     "RR_hi": 1.33,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 3, row 'Social media time, hours (Year 1)'",
+     "note": "Per 1 hour/day, adjusted for Year 2 SMAQ score."
+    },
+    {
+     "iv": "psmu_y2",
+     "dv": "sip_y3",
+     "RR": 1.03,
+     "RR_lo": 1.02,
+     "RR_hi": 1.04,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 3, row 'Problematic social media use score (Year 2)'",
+     "note": "Per 1 SMAQ point, adjusted for Year 1 social media time."
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Generalized structural equation mediation model of Year 3 alcohol sipping on Year 1 social media time through Year 2 problematic social media use",
+   "location_in_paper": "Table 3 (p. 973); methods p. 973; Abstract; Results p. 973; Discussion p. 974",
+   "design": "Prospective longitudinal mediation: Year 1 social media time (X) -> Year 2 SMAQ problematic social media use (M) -> Year 3 alcohol sipping (Y). Single follow-up outcome. Reports direct effect, indirect effect through problematic social media use, and proportion mediated.",
+   "sample": "Same analytic sample as M1: ABCD 5.0, N = 7,514.",
+   "iv": "Social media time, hours/day at Year 1 (M = 0.22, SD = 0.59). Mediator: SMAQ problematic social media use score at Year 2 (M = 5.9, SD = 6.6).",
+   "dv": "Alcohol sipping at Year 3 (binary; 8.7%).",
+   "covariates": [
+    {
+     "name": "Covariates",
+     "detail": "The methods state the same covariates as the Poisson models were controlled (age, sex, race/ethnicity, household income, parent education, religiosity, CBCL depression and anxiety, study site, Year 1 sipping), but Table 3 does not list them and does not confirm which entered the GSEM"
+    }
+   ],
+   "equation": "M: SMAQ_Y2 = a0 + a*SMtime_Y1 + covariates + e_M; Y: g(sip_Y3) = c0 + c'*SMtime_Y1 + b*SMAQ_Y2 + covariates; indirect effect = a*b; proportion mediated = indirect / (direct + indirect). Link function for the sipping equation not stated.",
+   "estimation": "Stata 18 generalized structural equation modeling (gsem). Bias-corrected 95% CIs for the indirect effect from 5,000 bootstrap samples; indirect effect considered significant if the CI excluded zero (Preacher & Hayes 2008). ACS-based propensity weights applied. Two-sided alpha = 0.05. The scale of the B coefficients (link function, whether risk-difference or log scale) is not reported; the a and b paths are not printed separately.",
+   "native_metric": "other:GSEM unstandardized B (direct and indirect effects)",
+   "iv_axis": [
+    {
+     "id": "sm_time_y1_direct",
+     "label": "Social media time (Year 1), direct effect",
+     "meta": "c' path, B (SE)",
+     "sd_iv": 0.59
+    },
+    {
+     "id": "sm_time_y1_indirect",
+     "label": "Social media time (Year 1), indirect effect via SMAQ (Year 2)",
+     "meta": "a*b, B (SE), BC bootstrap CI",
+     "sd_iv": 0.59
+    },
+    {
+     "id": "sm_time_y1_propmed",
+     "label": "Proportion mediated (%)",
+     "meta": "Indirect / total",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sip_y3",
+     "label": "Alcohol sipping (Year 3)",
+     "sd_dv": null,
+     "p0": 0.087
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y1_direct",
+     "dv": "sip_y3",
+     "value": 0.03,
+     "value_lo": 0.01,
+     "value_hi": 0.05,
+     "p": 0.001,
+     "p_label": "0.001",
+     "sig": true,
+     "location": "Table 3, Direct effect",
+     "note": "B = 0.03, SE = 0.009."
+    },
+    {
+     "iv": "sm_time_y1_indirect",
+     "dv": "sip_y3",
+     "value": 0.011,
+     "value_lo": 0.007,
+     "value_hi": 0.016,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3, Indirect effect through problematic social media use score",
+     "note": "B = 0.011, SE = 0.0021; bias-corrected 95% CI from 5,000 bootstraps."
+    },
+    {
+     "iv": "sm_time_y1_propmed",
+     "dv": "sip_y3",
+     "value": 25.0,
+     "value_lo": 11.0,
+     "value_hi": 39.3,
+     "p": 0.001,
+     "p_label": "0.001",
+     "sig": true,
+     "location": "Table 3, Proportion mediated",
+     "note": "Percent of the association mediated. Abstract reports this as p = 0.002 while Table 3 prints 0.001."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Confounder rows of Table 2 (age, sex, race/ethnicity, income, parent education, religiosity, CBCL depression/anxiety, Year 1 sipping)",
+   "location": "Table 2, Models 1-3",
+   "why": "Covariate estimates, not phone/SM associations."
+  },
+  {
+   "model": "Included vs excluded participant comparison",
+   "location": "Appendix A (p. 976)",
+   "why": "Sociodemographic attrition comparison; no phone/SM estimate."
+  },
+  {
+   "model": "Unadjusted associations",
+   "location": "Not reported",
+   "why": "The paper reports only adjusted models; nothing to exclude, noted for completeness."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "RR (M1, M2); other:GSEM B (M3)",
+  "conversion_formula": "OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Applied to point estimate and each CI bound.",
+  "contrast_type": "Per 1 hour/day of social media time (Year 1); per 1 point on the SMAQ problematic social media use score (Year 2). Not per SD; per-SD rescaling would require RR^SD_IV (SD 0.59 h/day and 6.6 points from Table 1).",
+  "transformable": "partial",
+  "notes": "p0 = 0.087 is the marginal Year 3 sipping prevalence for the full analytic sample (Table 1, p. 972), not the rate in an unexposed group; the IVs are continuous so no unexposed group rate exists, and with an 8.7% outcome the approximation is reasonable. SD_IV values from Table 1 (propensity-weighted, N = 7,514): social media time 0.59 h/day, SMAQ 6.6. M1 and M2 RRs are convertible. M3 (GSEM mediation, Table 3) is not convertible: the B coefficients are on an unreported scale (link function not stated) and indirect effects/proportion mediated have no Cohen's d analogue; flagged for later review level."
+ },
+ "extraction_flags": "1) How I grouped the models. M1 puts two separate regressions on one card, Table 2 Model 1 (social media time) and Model 2 (problematic social media use), because they use the same covariates. M2 is Table 2 Model 3, with both variables entered together. M3 is the GSEM mediation in Table 3. A coder may prefer to split Model 1 and Model 2 into separate cards, or to drop M2 and M3 as mediation scaffolding. The abstract's headline estimate is Model 1, RR 1.31.\n\n2) The paper labels problematic social media use (SMAQ) as the \"mediator variable\". In Table 2 Model 2 it is the main predictor of sipping, so I kept it. Confirm this is acceptable under FT-IC2, which says a variable does not qualify if it appears only as a mediator.\n\n3) The SMAQ score comes only from youth with at least one social media account. The paper does not say how youth without an account were scored. Table 1 gives M 5.9, SD 6.6, which looks like a summed score, though the text says item averages were used.\n\n4) Converting RR to d uses p0 = 0.087, the overall Year 3 sipping rate for the whole sample (Table 1). It is not an unexposed-group rate, because both social media variables are continuous. The contrast is per 1 hour/day or per 1 SMAQ point, not per SD.\n\n5) The Model 2 row is printed as 1.03 (1.03, 1.05), so the point estimate equals the lower bound, likely from rounding.\n\n6) In the GSEM mediation (M3), the scale of B is not reported: no link function is given, and B = 0.03 does not match ln(1.21). So it is not convertible to d. The abstract gives the proportion-mediated p as 0.002, but Table 3 prints 0.001.\n\n7) The authors call the outcome \"new-onset\" sipping, but participants who sipped at Year 1 were adjusted for, not excluded. The Results text also says \"sipping alcohol (Year 2, Model 1)\", which looks like a typo for Year 3.\n\n8) Study site is listed as an adjustment variable, but the paper does not say whether it was entered as a fixed effect or a clustering term."
+}

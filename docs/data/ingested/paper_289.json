@@ -1,0 +1,280 @@
+{
+ "paper_id": "289",
+ "title": "Parental psychological problems were associated with higher screen time and the use of mature-rated media in children",
+ "doi": "10.1111/apa.16253",
+ "year": "2022",
+ "authors": "Pulkki-R\u00e5back L, Barnes JD, Elovainio M, Hakulinen C, Sourander A, Tremblay MS, Guerrero MD",
+ "journal": "Acta Paediatrica",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multilevel general linear model of child social media minutes/day on presence of parental psychological problem, basic adjustments (Model 1)",
+   "location_in_paper": "Table 3, 'Social media' columns, 'Model 1: basic adjustments' rows (p. 830); described in Results p. 829 ('There were no significant associations between parental psychological problems and children's use of social media') and Discussion p. 831.",
+   "design": "Cross-sectional analysis of the ABCD baseline visit (2016-2018). Parent-reported psychopathology (IV) and child-reported screen time (DV) measured at the same visit. One observation per child. Phone/SM is the DV here: the predictor is a binary indicator of clinically significant parental psychological problems and the outcome is the child's daily minutes of social media. Each parental problem scale (externalising, internalising, total) is entered as the predictor in a separate model, with the reference group being children whose parent does not have that problem.",
+   "sample": "ABCD baseline data released in 2019 (NDA DOI 10.15154/1524631), N = 11,875 enrolled; 10,650 participants with complete data on study variables. 5112 girls and 5538 boys, mean age 9.9 (SD 0.6). Child-identified ethnicity: Black n = 1480, Asian n = 215, White n = 5843, Hispanic n = 1746, Multiracial n = 1366. Main caregiver was the mother for 85% and father/other for 15%. 16.7% of children had a psychological problem (CBCL). Parental problem prevalence (Table 1): externalising 935 (8.8%), internalising 1425 (13.4%), total problems 446 (4.2%).",
+   "iv": "Presence of a clinically significant parental psychological problem from the Adult Self-Report (ASR, 123 items, 0/1/2 response), completed by the main caregiver. Three broadband scales are used: externalising, internalising and total problems. Raw scores were converted to gender-normed T-scores and dichotomised at T >= 65 (clinically significant problem = 1) vs T < 65 (= 0). Prevalence: externalising 8.8%, internalising 13.4%, total 4.2% (Table 1, p. 828).",
+   "dv": "Child-reported daily minutes of social media use from the ABCD Youth Screen Time Survey. The social media item covers visiting social networking sites such as Twitter or Instagram; the paper's methods list texting and video chat as separate questionnaire activities, and the paper does not state explicitly whether they were folded into the 'social media' category. Responses on a 7-point scale (none, <30 min, 30 min, 1 h, 2 h, 3 h, >=4 h) for a typical weekday and weekend day; daily minutes computed as (weekday minutes x 5 + weekend minutes x 2)/7. Mean 30.8 (SD 66.14) min/day in the full sample; girls 35.7 (69.9), boys 26.2 (62.1) (Table 1, p. 828). 43% of children reported no social media use.",
+   "covariates": [
+    {
+     "name": "Child age",
+     "detail": "Years at baseline"
+    },
+    {
+     "name": "Child sex",
+     "detail": "Girl / boy"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "Black, Asian, White, Hispanic, Multiracial"
+    },
+    {
+     "name": "Family annual income",
+     "detail": "10 categories from <USD5000 to >=200 000"
+    },
+    {
+     "name": "Main caregiver",
+     "detail": "0 = mother, 1 = father or other"
+    },
+    {
+     "name": "Presence of child psychological problem",
+     "detail": "Child Behaviour Checklist, >95th percentile (borderline clinical) on each scale; 1778 (16.7%) children"
+    }
+   ],
+   "equation": "SM_minutes[i,site] = b0 + b1*ParentProblem[i] + b2*age + b3*sex + b4*ethnicity + b5*family_income + b6*main_caregiver + b7*child_psych_problem + u_site + e[i], fitted separately with ParentProblem = externalising, internalising, or total problems (each coded 1 = T >= 65 vs 0 = T < 65). b1 is the adjusted difference in daily social media minutes between children of parents with vs without the problem.",
+   "estimation": "Multilevel general linear model with a random intercept for study site; coefficients are raw (unstandardised) minutes/day. Analyses conducted in RStudio 1.1.463. No survey weights reported. No multiple-comparison correction; significance flagged at p < 0.05 and p < 0.01. Table 3 column headers for the non-TV activities are printed as 'OR', but the table title and footnotes identify these as multilevel general linear model coefficients in minutes per day (the same as the TV 'Coeff.' column). Gender interaction terms (parental problem x child gender) were tested; results reported in Table S2 (not bundled in the PDF). A second step (Model 2) additionally adjusted for family conflict (extracted as M2). An additional logistic regression on any vs no social media use found no association (p-values 0.201 to 0.786; ORs not printed).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "par_ext",
+     "label": "Parental externalising problem (ASR T >= 65)",
+     "meta": "binary; 8.8% exposed",
+     "sd_iv": null
+    },
+    {
+     "id": "par_int",
+     "label": "Parental internalising problem (ASR T >= 65)",
+     "meta": "binary; 13.4% exposed",
+     "sd_iv": null
+    },
+    {
+     "id": "par_tot",
+     "label": "Parental total problems (ASR T >= 65)",
+     "meta": "binary; 4.2% exposed",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sm_min",
+     "label": "Child social media (minutes/day)",
+     "sd_dv": 66.14,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "par_ext",
+     "dv": "sm_min",
+     "B": 2.17,
+     "B_lo": -2.25,
+     "B_hi": 6.59,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Externalising Model 1 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "par_int",
+     "dv": "sm_min",
+     "B": 0.01,
+     "B_lo": -3.8,
+     "B_hi": 3.77,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Internalising Model 1 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "par_tot",
+     "dv": "sm_min",
+     "B": -1.54,
+     "B_lo": -7.83,
+     "B_hi": 4.76,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Total problem Model 1 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Multilevel general linear model of child social media minutes/day on presence of parental psychological problem, basic adjustments + family conflict (Model 2)",
+   "location_in_paper": "Table 3, 'Social media' columns, 'Model 2: +family conflict' rows (p. 830); Results p. 829 ('There was no change in the associations after adjusting for family conflicts').",
+   "design": "Same cross-sectional ABCD baseline design as M1, same IV and DV coding; second step of the authors' two-step adjustment.",
+   "sample": "Same as M1: N = 10,650, mean age 9.9 (SD 0.6), 5112 girls and 5538 boys.",
+   "iv": "Same as M1: binary presence (ASR T >= 65) of parental externalising, internalising, or total problems, each in a separate model.",
+   "dv": "Same as M1: child-reported social media minutes/day, mean 30.8 (SD 66.14).",
+   "covariates": [
+    {
+     "name": "Child age",
+     "detail": "Years at baseline"
+    },
+    {
+     "name": "Child sex",
+     "detail": "Girl / boy"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "Black, Asian, White, Hispanic, Multiracial"
+    },
+    {
+     "name": "Family annual income",
+     "detail": "10 categories from <USD5000 to >=200 000"
+    },
+    {
+     "name": "Main caregiver",
+     "detail": "0 = mother, 1 = father or other"
+    },
+    {
+     "name": "Presence of child psychological problem",
+     "detail": "CBCL >95th percentile on each scale"
+    },
+    {
+     "name": "Family conflict",
+     "detail": "Family Conflict Subscale Modified from PhenX (9 items); higher = more severe conflict"
+    }
+   ],
+   "equation": "SM_minutes[i,site] = b0 + b1*ParentProblem[i] + b2*age + b3*sex + b4*ethnicity + b5*family_income + b6*main_caregiver + b7*child_psych_problem + b8*family_conflict + u_site + e[i], fitted separately for externalising, internalising and total problems.",
+   "estimation": "Multilevel general linear model with random intercept for study site, RStudio 1.1.463. No weights, no multiple-comparison correction; significance at p < 0.05 / p < 0.01. Gender interactions tested (Table S2, not bundled).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "par_ext",
+     "label": "Parental externalising problem (ASR T >= 65)",
+     "meta": "binary; 8.8% exposed",
+     "sd_iv": null
+    },
+    {
+     "id": "par_int",
+     "label": "Parental internalising problem (ASR T >= 65)",
+     "meta": "binary; 13.4% exposed",
+     "sd_iv": null
+    },
+    {
+     "id": "par_tot",
+     "label": "Parental total problems (ASR T >= 65)",
+     "meta": "binary; 4.2% exposed",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sm_min",
+     "label": "Child social media (minutes/day)",
+     "sd_dv": 66.14,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "par_ext",
+     "dv": "sm_min",
+     "B": 1.65,
+     "B_lo": -2.78,
+     "B_hi": 6.09,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Externalising Model 2 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "par_int",
+     "dv": "sm_min",
+     "B": -0.22,
+     "B_lo": -4.0,
+     "B_hi": 3.57,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Internalising Model 2 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "par_tot",
+     "dv": "sm_min",
+     "B": -1.83,
+     "B_lo": -8.13,
+     "B_hi": 4.46,
+     "p": null,
+     "p_label": "not printed (no asterisk; p >= 0.05)",
+     "sig": false,
+     "location": "Table 3, Social media, Total problem Model 2 row (p. 830)",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Total daily screen time (minutes/day) and meeting the <=2 h/day recommendation on parental problems, Models 1 and 2",
+   "location": "Table 2 (p. 829)",
+   "why": "DV is a total screen time composite bundling TV, videos, games, texting, social media and video chat. Non-phone ingredients; the phone/SM-specific breakout is extracted from Table 3."
+  },
+  {
+   "model": "TV watching, video/YouTube and video game minutes/day on parental problems",
+   "location": "Table 3, TV watching, Video/youtube and Video games columns (p. 830)",
+   "why": "Non-phone/non-SM modalities. Fail FT-IC2."
+  },
+  {
+   "model": "Mature-rated movies and mature-rated games (logistic regression, OR)",
+   "location": "Table 4 (p. 830)",
+   "why": "Content rating is not a phone/SM modality (FT-IC2 clarification 4); games and movies are not phone-specific."
+  },
+  {
+   "model": "Logistic regression of any vs no social media use on parental problems",
+   "location": "In-text, Results p. 829",
+   "why": "Phone/SM-relevant, but only a p-value range (0.201 to 0.786) is printed; no OR or CI per parental problem scale, so no extractable estimate."
+  },
+  {
+   "model": "Gender interaction models and gender-stratified estimates",
+   "location": "Table S2 (online supplement, not bundled in PDF); in-text p. 829",
+   "why": "Interaction p-values only for social media; the only stratified coefficients printed in text are for total screen time and video games, not social media."
+  },
+  {
+   "model": "t-test comparison of screen minutes by parental problem status",
+   "location": "Table S3 (online supplement, not bundled)",
+   "why": "Reported in text for total screen time only (44 and 50 min differences); supplement not available in the PDF."
+  },
+  {
+   "model": "Post hoc high users (top 20%) vs low/average users comparison",
+   "location": "Figure 1 (p. 831) and Table S4 (online supplement, not bundled)",
+   "why": "Figure 1 is total screen time only; the social media breakout is described narratively ('no association') with numbers only in Table S4, which is not in the PDF."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized, minutes/day)",
+  "conversion_formula": "Dichotomous IV -> continuous DV: d = (adjusted M1 - M0) / SD_pooled = B / SD_DV, using the full-sample SD of social media minutes/day (66.14) as an approximation of the pooled within-group SD. CI endpoints converted the same way (B_lo / SD_DV, B_hi / SD_DV).",
+  "contrast_type": "Parent with clinically significant problem (ASR T >= 65) vs parent without the problem",
+  "transformable": true,
+  "notes": "SD_DV = 66.14 min/day from Table 1 (p. 828, 'All (n = 10650)' column; printed with two decimals while other rows use one). The pooled within-group SD is not reported, so the total-sample SD is used; with exposure prevalence of 4-13% the difference should be small. SD_IV is not needed for this contrast. The authors themselves report Cohen's d of 0.09-0.10 for Table 2 total screen time results, not for social media. The DV is right-skewed (43% report zero social media), so d based on SD of a skewed outcome should be read with caution. This d (group difference / SD) is not directly comparable to per-1-SD-of-IV d values from continuous-IV papers."
+ },
+ "extraction_flags": "1) Which specification to anchor on is unclear. The abstract quotes Model 1 numbers (basic adjustments), and the text says nothing changed after adding family conflict (Model 2). I extracted both as M1 and M2. A coder should strike whichever one the review does not want. 2) Phone/SM is the DV here: parental ASR problem (binary, T >= 65) predicts the child's social media minutes per day. 3) In Table 3, the Video/youtube, Video games and Social media columns are headed 'OR', but the title and the scale of the values show they are linear-model coefficients in minutes per day. I coded them as B. 4) No p-values are printed for the social media cells. They have no asterisk, so I set them to p null and sig false. 5) Paper-wide social media prevalence is 43% non-users and Table 1's SD is printed as '66.14', with two decimals where every other row has one. Please check the SD_DV, which comes from Table 1. Since the pooled within-group SD is not reported, d = B/66.14 is an approximation, and the outcome is highly skewed. 6) The paper does not say clearly whether the 'social media' category includes texting and video chat or only social networking sites. 7) The logistic model for any vs no social media use gives only a p-value range, with no ORs. The supplementary Tables S2-S4 are not in the PDF, so these are listed under excluded models.json"
+}

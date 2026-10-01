@@ -1,0 +1,227 @@
+{
+ "paper_id": "395",
+ "title": "Adolescent screen time, anxiety/depression, and alcohol/e-cigarette use: evidence from the ABCD study",
+ "doi": "10.1186/s12889-025-25956-3",
+ "year": "2025",
+ "authors": "Parker MA, Harton MR, Mattey-Mora PP, Streck JM",
+ "journal": "BMC Public Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Survey-weighted multiple linear regression of year-3 CBCL anxiety and depression t-scores on social media trajectory group (GBTM), adjusted for demographics with a trajectory group x alcohol/e-cigarette use interaction",
+   "location_in_paper": "Table 4 (p. 8), Trajectory Group rows 2-5; trajectories described in Results p. 4 and Fig. 1b; interpreted in Abstract, Discussion pp. 5-6 and Conclusions p. 9. Described by the authors as an exploratory (secondary exposure) analysis.",
+   "design": "Longitudinal two-stage design. Stage 1: group-based trajectory modeling (GBTM) of self-reported social media hours/week across four ABCD waves (baseline, Y1, Y2, Y3; ages 9-10 to 12-13) assigns each participant to one of five latent trajectory groups. Stage 2: the trajectory group enters as a categorical IV in a linear regression predicting CBCL anxiety and depression t-scores measured once, at the year-3 follow-up. The DV is a single follow-up outcome, not repeated measures. Because the trajectory spans baseline through Y3, the IV window overlaps the wave at which the DV is measured. No baseline CBCL score is adjusted for. Two separate regressions are run, one per DV (anxiety, depression), with the same specification.",
+   "sample": "ABCD Data Release 5.1, data through the year-3 follow-up (2016-2022), 21 U.S. sites. Analytic N = 9,474 participants with screen time data at one or more of the four time points, alcohol/e-cigarette data, and year-3 anxiety/depression data (Table 4 header n = 9,474). Social media trajectory group sizes (Table 2): Group 1 Persistent Low Use n = 4,255; Group 2 Gradual Increase to Moderate Use n = 3,970; Group 3 Sharp Increase to High Use n = 678; Group 4 Moderate Increase to High Use n = 226; Group 5 Fluctuating High Use n = 345. 52% male; median baseline age 9.92 (9.33, 10.42); 55% non-Hispanic White, 12% non-Hispanic Black, 20% Hispanic, 2.1% non-Hispanic Asian, 10% non-Hispanic Other. Household income <$50K 24%, $50K-<$99K 27%, $100K+ 42%, unknown 7.3%. Alcohol/e-cigarette use: yes 1.5%, unknown 0.4%.",
+   "iv": "Social media trajectory group membership from GBTM (5 groups; Group 1 Persistent Low Use is the reference). Social media use was self-reported by the youth in hours per weekday and weekend day, standardized across follow-ups to make it comparable with the screen time variable, and aggregated to hours/week. GBTM fit 2-6 group solutions and chose the 5-group solution by BIC, polynomial order, entropy (> 0.8), posterior probability (> 0.7), and group size (> 2.5%). Group descriptions (Results p. 4, Fig. 1b): Group 1 Persistent Low Use (42.6%), less than 1 h/week, order 2; Group 2 Gradual Increase to Moderate Use (43.9%), reaching about 7 h/week, order 3; Group 3 Sharp Increase to High Use (7.2%), peaking at 25 h/week, order 3; Group 4 Moderate Increase to High Use (2.4%), peaking at 19 h/week, order 2; Group 5 Fluctuating High Use (3.9%), reaching 20 h/week, order 3. The authors note the social media item coding changed between the Y1 and Y2 follow-ups. Each coefficient is the adjusted difference in t-score between a group and Group 1.",
+   "dv": "Two continuous parent-reported outcomes at the year-3 follow-up: CBCL DSM-5-oriented anxiety t-score and CBCL DSM-5-oriented depression t-score (ABCD-provided t-scores, range 50-97, higher = more symptoms). Sample means and SDs of the t-scores are not reported. The authors note the t-scores were right-skewed.",
+   "covariates": [
+    {
+     "name": "Alcohol/e-cigarette use (moderator, main effect)",
+     "detail": "Binary combined indicator of any full drink of alcohol or two or more e-cigarette puffs in the past six months, coded No (reference), Yes, Unknown; entered as main effect and in interaction with trajectory group"
+    },
+    {
+     "name": "Trajectory group x alcohol/e-cigarette use",
+     "detail": "8 interaction terms (Groups 2-5 x Yes, Groups 2-5 x Unknown); because of these terms, the group main effects are the group differences among participants with no alcohol/e-cigarette use"
+    },
+    {
+     "name": "Sex",
+     "detail": "Male (reference), female"
+    },
+    {
+     "name": "Age",
+     "detail": "Age at baseline in years (continuous; reported as 'Median Age at Baseline' row)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Non-Hispanic White (reference), non-Hispanic Black, Hispanic, non-Hispanic Asian, non-Hispanic Other"
+    },
+    {
+     "name": "Annual household income",
+     "detail": "<$50K (reference), $50K-<$99K, $100K+, unknown"
+    },
+    {
+     "name": "Highest parental education",
+     "detail": "Less than high school (reference), high school, some college, college, more than a Bachelor's degree, unknown"
+    }
+   ],
+   "equation": "CBCL_DV_Y3[i] = b0 + b1*SMgroup2[i] + b2*SMgroup3[i] + b3*SMgroup4[i] + b4*SMgroup5[i] + b5*SU_yes + b6*SU_unknown + b7*female + b8*age + b9..b12*race_ethnicity + b13..b15*income + b16..b20*parent_ed + b21..b24*(SMgroup2..5 x SU_yes) + b25..b28*(SMgroup2..5 x SU_unknown) + e[i]; fit separately for DV = anxiety and DV = depression. Focal effects are b1-b4 (each group vs Group 1 Persistent Low Use).",
+   "estimation": "Two-stage. GBTM in Stata 17; regression in R 4.3.3. Ordinary multiple linear regression with complex survey weights applied to adjust for sampling design and attrition. No random effects for site or family are reported. alpha = 0.05 implied by bolded p-values. No multiple-comparison correction reported. Effect modification by alcohol/e-cigarette use tested through the interaction terms (for anxiety only 3*Unknown reached p < .05, p = 0.049, printed unbolded; for depression only 3*Unknown, p = 0.013; the authors conclude no moderation). Sex interactions were not tested (listed as future work). No sensitivity analyses reported. GBTM fit indices for 2-6 class solutions are in Supplementary Table 1, which is not bundled in the PDF. Trajectory group is treated as known in stage 2 (classification uncertainty not propagated).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_g2",
+     "label": "SM Group 2: Gradual Increase to Moderate Use",
+     "meta": "vs Group 1 Persistent Low Use; n = 3,970; ~7 h/week by Y3",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_g3",
+     "label": "SM Group 3: Sharp Increase to High Use",
+     "meta": "vs Group 1; n = 678; peaked at 25 h/week",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_g4",
+     "label": "SM Group 4: Moderate Increase to High Use",
+     "meta": "vs Group 1; n = 226; peaked at 19 h/week",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_g5",
+     "label": "SM Group 5: Fluctuating High Use",
+     "meta": "vs Group 1; n = 345; reached 20 h/week",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "anxiety",
+     "label": "CBCL anxiety t-score (Y3)",
+     "sd_dv": 10.0,
+     "p0": null
+    },
+    {
+     "id": "depression",
+     "label": "CBCL depression t-score (Y3)",
+     "sd_dv": 10.0,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_g2",
+     "dv": "anxiety",
+     "B": -0.3,
+     "B_lo": -0.58,
+     "B_hi": -0.03,
+     "p": 0.031,
+     "p_label": "0.031",
+     "sig": true,
+     "location": "Table 4, Trajectory Group row 2, Anxiety",
+     "note": "Lower anxiety than persistent low users; highlighted in Abstract and Discussion."
+    },
+    {
+     "iv": "sm_g2",
+     "dv": "depression",
+     "B": 0.06,
+     "B_lo": -0.22,
+     "B_hi": 0.33,
+     "p": 0.678,
+     "p_label": "0.678",
+     "sig": false,
+     "location": "Table 4, Trajectory Group row 2, Depression"
+    },
+    {
+     "iv": "sm_g3",
+     "dv": "anxiety",
+     "B": 0.21,
+     "B_lo": -0.31,
+     "B_hi": 0.72,
+     "p": 0.433,
+     "p_label": "0.433",
+     "sig": false,
+     "location": "Table 4, Trajectory Group row 3, Anxiety"
+    },
+    {
+     "iv": "sm_g3",
+     "dv": "depression",
+     "B": 1.03,
+     "B_lo": 0.52,
+     "B_hi": 1.55,
+     "p": 0.001,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 4, Trajectory Group row 3, Depression",
+     "note": "p printed as '< 0.001'; numeric p is the bound."
+    },
+    {
+     "iv": "sm_g4",
+     "dv": "anxiety",
+     "B": 0.52,
+     "B_lo": -0.34,
+     "B_hi": 1.38,
+     "p": 0.24,
+     "p_label": "0.240",
+     "sig": false,
+     "location": "Table 4, Trajectory Group row 4, Anxiety"
+    },
+    {
+     "iv": "sm_g4",
+     "dv": "depression",
+     "B": 1.08,
+     "B_lo": 0.22,
+     "B_hi": 1.95,
+     "p": 0.014,
+     "p_label": "0.014",
+     "sig": true,
+     "location": "Table 4, Trajectory Group row 4, Depression"
+    },
+    {
+     "iv": "sm_g5",
+     "dv": "anxiety",
+     "B": 0.38,
+     "B_lo": -0.32,
+     "B_hi": 1.09,
+     "p": 0.29,
+     "p_label": "0.290",
+     "sig": false,
+     "location": "Table 4, Trajectory Group row 5, Anxiety"
+    },
+    {
+     "iv": "sm_g5",
+     "dv": "depression",
+     "B": 1.49,
+     "B_lo": 0.78,
+     "B_hi": 2.19,
+     "p": 0.001,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 4, Trajectory Group row 5, Depression",
+     "note": "p printed as '< 0.001'; numeric p is the bound."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Screen time trajectory groups (4-group GBTM) -> year-3 CBCL anxiety and depression",
+   "location": "Table 3 (p. 7); Results p. 4; Fig. 1a",
+   "why": "Primary exposure is total screen time across all electronic devices and activities (TV, texting, gaming, social media) aggregated to hours/week. The composite includes non-phone/non-SM activities (TV, gaming) and has no per-modality breakout other than the separate social media analysis already extracted. Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Social media trajectory group x alcohol/e-cigarette use interaction terms",
+   "location": "Table 4 rows 'Trajectory Group *Substance Use' (2*Yes through 5*Unknown) (p. 8)",
+   "why": "Moderation terms describing whether the SM-group difference changes by substance use status; they are not SM main associations. Analogous to interaction tests excluded in reference paper 394. Notable values for reviewers: 3*Unknown anxiety 7.77 (0.03, 15.51) p = 0.049; 3*Unknown depression 9.84 (2.08, 17.61) p = 0.013; small cells (unknown substance use n = 34 overall)."
+  },
+  {
+   "model": "Screen time trajectory group x alcohol/e-cigarette use interaction terms",
+   "location": "Table 3 rows 'Trajectory Group *Substance Use' (p. 7)",
+   "why": "Total screen time composite (fails FT-IC2) and moderation terms."
+  },
+  {
+   "model": "Covariate coefficients (substance use main effect, sex, age, race/ethnicity, income, parental education)",
+   "location": "Tables 3 and 4",
+   "why": "Not phone/SM variables."
+  },
+  {
+   "model": "GBTM model selection (2-6 group solutions)",
+   "location": "Supplementary Table 1 (not bundled in the PDF)",
+   "why": "Trajectory-fitting fit indices with no association with an individual-trait outcome."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized adjusted mean difference in t-score points, group k vs Group 1)",
+  "conversion_formula": "Dichotomous contrast (group k vs reference group) on a continuous DV: d = (adjusted M_k - M_1) / SD_pooled = B / SD_DV, with SD_DV = 10 (CBCL t-score norm). CI endpoints converted the same way.",
+  "contrast_type": "Membership in social media trajectory group k (2, 3, 4, or 5) versus the Persistent Low Use group (Group 1), among participants with no alcohol/e-cigarette use (reference level of the moderator)",
+  "transformable": true,
+  "notes": "SD_DV = 10 is the CBCL t-score norming SD; the paper does not report the sample SD of the year-3 anxiety or depression t-scores (Tables 1-2 give no outcome descriptives). Because ABCD CBCL DSM-5 t-scores are floored at 50 and right-skewed, the actual sample SD is likely below 10, so d computed with SD = 10 may understate the standardized difference. SD_IV is not applicable (categorical group contrast), so sd_iv is null; d is a group-difference d, not a per-1-SD or per-hour slope, and is not directly comparable with per-SD d's from continuous-IV papers. Group main effects are conditional on the no-substance-use stratum because the model includes group x substance use interactions; since 98% of the sample is in that stratum the difference from a marginal effect is expected to be small. Table 4 footnote labels the coefficients as 'standardized regression coefficient', but the Results text describes the interaction estimates as t-score points (e.g., '9.84-point higher depression t-score') and the magnitudes match t-score units, so they were coded as unstandardized B."
+ },
+ "extraction_flags": "1) The Table 4 footnote calls the coefficients a \"standardized regression coefficient\". But the Results text describes them as t-score points, and their size fits t-score units, so I coded them as unstandardized B. A human should confirm this. 2) The IV is social media trajectory group membership from GBTM, compared against the Persistent Low Use group. That makes d a group-difference d (B/10) using the CBCL norm SD of 10. The paper reports no sample SD for the year-3 t-scores. Those scores are floored at 50 and right-skewed, so the real SD is probably below 10 and d may be understated. 3) The model includes group x substance-use interactions, so the group main effects apply only to the no-substance-use stratum, which is 98% of the sample. 4) The trajectory window runs from baseline to Y3 and overlaps the Y3 outcome, and baseline CBCL is not adjusted for. 5) The authors call the social media analysis exploratory, and the coding of the social media item changed between Y1 and Y2. 6) Group 4 n is 266 in the Results text but 226 in Table 2. 226 sums to N = 9,474, so I used 226. 7) Two p-values print as '< 0.001', and I stored 0.001 as the bound. 8) Supplementary Table 1 (GBTM fit indices) is not included in the PDF. The total screen time trajectory model (Table 3) is excluded because it bundles TV and gaming.json"
+}

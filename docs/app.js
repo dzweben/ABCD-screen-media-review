@@ -254,6 +254,14 @@ function renderPaper(paper) {
     b.querySelector("a").onclick = (ev) => { ev.preventDefault(); loadPaper(paper.duplicate_of); };
     view.querySelector(".paper-head").prepend(b);
   }
+  if (paper.extraction_flags) {
+    const fl = document.createElement("details");
+    fl.className = "flags-box";
+    fl.open = true;
+    fl.innerHTML = `<summary>Things to verify in this draft</summary><div class="flags-text"></div>`;
+    fl.querySelector(".flags-text").textContent = paper.extraction_flags;
+    view.querySelector(".paper-head").appendChild(fl);
+  }
   wireStatusBadge(view, paper);
   wireDottedFields(view, paper);
   wireReviewBar(view, paper);

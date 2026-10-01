@@ -1,0 +1,450 @@
+{
+ "paper_id": "50",
+ "title": "Online social activity time predicts ADHD problems in youth from late childhood to early adolescence in the ABCD study",
+ "doi": "10.1007/s00787-024-02620-6",
+ "year": "2025",
+ "authors": "Deng H, Song K, Geng X, Xu L, Zhang J, Li X, He J, Potenza MN, Zhang J",
+ "journal": "European Child & Adolescent Psychiatry",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Random-intercept cross-lagged panel model (RI-CLPM) of OSA time (texting + social networking + video chat) and CBCL ADHD problems across four annual waves, full sample, adjusted for demographics and video-centric screen time",
+   "location_in_paper": "Fig. 1 (p. 2199), standardized within-person cross-lagged paths and between-person random-intercept correlation; model fit in Results p. 2198; interpreted in Results p. 2199 and Discussion p. 2200. Full parameter tables are in supplementary Tables S2 and S3, which are not bundled in the PDF.",
+   "design": "Longitudinal, four annual ABCD waves: baseline T1 (2016-2018, ages 9-10), 1-year follow-up T2 (2017-2019), 2-year follow-up T3 (2018-2020), 3-year follow-up T4 (2019-2021). OSA time and ADHD problems are measured at every wave. The RI-CLPM separates stable between-person differences (random intercepts for OSA and ADHD, allowed to correlate) from within-person wave-to-wave deviations. The within-person part has autoregressive paths, lag-specific cross-lagged paths in both directions (OSA t -> ADHD t+1 and ADHD t -> OSA t+1, freely estimated per lag, not constrained equal), and within-wave residual correlations. OSA time is the IV in the OSA -> ADHD paths and the DV in the ADHD -> OSA paths. Pre-registered at OSF (10.17605/OSF.IO/KXYZP).",
+   "sample": "ABCD Release 5.0. 11,868 enrolled at baseline; 43 excluded for missing baseline OSA time and 8 for missing baseline ADHD problems, leaving N = 11,819 analyzed with FIML. Wave-specific available N (Table 2): OSA time 11,819 / 11,157 / 10,884 / 10,259 and ADHD 11,819 / 11,165 / 8,053 / 7,428 at T1-T4. Baseline mean age 9.92 (SD 0.62). 6,163 male (52.1%), 5,656 female (47.9%). Race: White 7,587 (64.2%), Black 1,865 (15.8%), Asian 273 (2.3%), Mixed/Other 2,094 (17.7%). Hispanic 2,392 (20.2%). Parents married or living with partner 73.5%; parental college education 72.7%. Family income <$25,000 18.0% through $200,000+ 10.6% (Table 1).",
+   "iv": "Online social activity (OSA) time from the ABCD Youth Screen Time Survey: youth-reported time on 'texting', 'visiting social networking sites' and 'video chatting', summed, for weekdays and weekends, then combined as ((weekday*5) + (weekend*2))/7 to give typical daily time. The composite is built only from phone/SM items, so it qualifies under FT-IC2 Step 2. Units are not stated explicitly but follow the survey's hours-per-day metric. Table 1 means (SD): T1 0.54 (1.15), T2 0.89 (1.57), T3 1.58 (2.15), T4 2.44 (2.63). In the ADHD -> OSA paths this same variable is the DV.",
+   "dv": "ADHD problems: parent-reported CBCL attention problems syndrome subscale (items rated 0-2), analyzed as CBCL T-scores. Table 1 means (SD): T1 53.90 (6.17), T2 53.71 (5.98), T3 53.47 (5.58), T4 53.61 (5.62). In the ADHD -> OSA paths ADHD problems is the predictor.",
+   "covariates": [
+    {
+     "name": "Baseline age",
+     "detail": "Time-invariant; parent report"
+    },
+    {
+     "name": "Sex",
+     "detail": "Time-invariant; parent report"
+    },
+    {
+     "name": "Race",
+     "detail": "Time-invariant; White, Black, Asian, Mixed/Other"
+    },
+    {
+     "name": "Ethnicity",
+     "detail": "Time-invariant; Hispanic vs non-Hispanic"
+    },
+    {
+     "name": "Parental marital status",
+     "detail": "Time-invariant; single vs married/living with partner"
+    },
+    {
+     "name": "Highest level of parental education",
+     "detail": "Time-invariant; high school or less vs college"
+    },
+    {
+     "name": "Family income",
+     "detail": "Time-invariant; six brackets <$25,000 to $200,000+"
+    },
+    {
+     "name": "Video-centric activity (VCA) time",
+     "detail": "Time-varying covariate at each wave: summed time watching TV shows or movies, watching videos and playing videogames; at T3 only TV/movies + videogames because 'watching videos' was not measured. Table 1 means (SD): T1 3.26 (2.48), T2 3.60 (2.62), T3 4.03 (2.71), T4 3.77 (2.17)"
+    }
+   ],
+   "equation": "Between level: OSA[i,t] = mu_OSA[t] + RI_OSA[i] + w_OSA[i,t]; ADHD[i,t] = mu_ADHD[t] + RI_ADHD[i] + w_ADHD[i,t]; cov(RI_OSA, RI_ADHD) estimated. Within level for t = 1..3: w_OSA[i,t+1] = a_t*w_OSA[i,t] + c_t*w_ADHD[i,t] + u_OSA[i,t+1]; w_ADHD[i,t+1] = b_t*w_ADHD[i,t] + d_t*w_OSA[i,t] + u_ADHD[i,t+1]; cov(w_OSA[i,1], w_ADHD[i,1]) and cov(u_OSA[i,t], u_ADHD[i,t]) estimated. Time-invariant covariates (age, sex, race, ethnicity, marital status, parental education, income) and time-varying VCA time enter as predictors; exact placement of covariates in the model is not described. Focal effects: d_t (OSA -> ADHD) and c_t (ADHD -> OSA), reported as standardized coefficients.",
+   "estimation": "SEM software not named (covariate imputation in R v4.3.1, mice v3.16.0). Maximum likelihood robust (MLR) estimator; missing outcome data handled with FIML. Missing covariates (age 0.01%, race 1.43%, ethnicity 1.29%, marital status 0.81%, parental education 0.12%, income 8.57%) imputed by chained equations, 100 imputations combined into one dataset using modes (categorical) and medians (continuous); supplementary materials repeat analyses on the non-imputed data. No survey weights and no site or family clustering reported. Fit: CFI = 0.953, TLI = 0.920, RMSEA = 0.040, SRMR = 0.044, chi-square(102) = 2028.860, p < 0.001. Significance flagged as *p <= 0.05, **p <= 0.01, ***p <= 0.001; no multiple-comparison correction. Moderation by sex and by OSA content type (video- vs image-based most-used platform) tested with multigroup models compared against cross-lag-constrained models via Satorra-Bentler chi-square tests (sex: see M2; content type: no moderation, Table S5-S7).",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "osa_to_adhd",
+     "label": "OSA time (t) -> ADHD problems (t+1)",
+     "meta": "OSA as IV; within-person cross-lag",
+     "sd_iv": null
+    },
+    {
+     "id": "adhd_to_osa",
+     "label": "ADHD problems (t) -> OSA time (t+1)",
+     "meta": "OSA as DV; within-person cross-lag",
+     "sd_iv": null
+    },
+    {
+     "id": "ri_between",
+     "label": "Between-person: RI OSA with RI ADHD",
+     "meta": "Correlation of random intercepts",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "t1_t2",
+     "label": "T1 -> T2 (ages 9-10 to 10-11)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "t2_t3",
+     "label": "T2 -> T3 (ages 10-11 to 11-12)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "t3_t4",
+     "label": "T3 -> T4 (ages 11-12 to 12-13)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "stable",
+     "label": "Stable (all waves)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "osa_to_adhd",
+     "dv": "t1_t2",
+     "beta": -0.009,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "n.s. (dashed path, no asterisk)",
+     "sig": false,
+     "location": "Fig. 1, OSA time T1 -> ADHD T2",
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+    },
+    {
+     "iv": "osa_to_adhd",
+     "dv": "t2_t3",
+     "beta": 0.058,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "* (p <= 0.05)",
+     "sig": true,
+     "location": "Fig. 1, OSA time T2 -> ADHD T3",
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+    },
+    {
+     "iv": "osa_to_adhd",
+     "dv": "t3_t4",
+     "beta": 0.074,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "** (p <= 0.01)",
+     "sig": true,
+     "location": "Fig. 1, OSA time T3 -> ADHD T4",
+     "note": "SE/CI only in supplementary Table S2/S3, not in PDF."
+    },
+    {
+     "iv": "adhd_to_osa",
+     "dv": "t1_t2",
+     "beta": -0.006,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "n.s. (dashed path, no asterisk)",
+     "sig": false,
+     "location": "Fig. 1, ADHD T1 -> OSA time T2",
+     "note": "OSA time is the DV here."
+    },
+    {
+     "iv": "adhd_to_osa",
+     "dv": "t2_t3",
+     "beta": -0.007,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "n.s. (dashed path, no asterisk)",
+     "sig": false,
+     "location": "Fig. 1, ADHD T2 -> OSA time T3",
+     "note": "OSA time is the DV here."
+    },
+    {
+     "iv": "adhd_to_osa",
+     "dv": "t3_t4",
+     "beta": 0.028,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "n.s. (dashed path, no asterisk)",
+     "sig": false,
+     "location": "Fig. 1, ADHD T3 -> OSA time T4",
+     "note": "OSA time is the DV here."
+    },
+    {
+     "iv": "ri_between",
+     "dv": "stable",
+     "beta": 0.068,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "** (p <= 0.01)",
+     "sig": true,
+     "location": "Fig. 1 (between level); Results p. 2198",
+     "note": "Correlation between random intercepts (r = 0.068**), not a directional path. Text prints '95% CI, 0.07-0.35', which does not contain the point estimate and may refer to the unstandardized covariance; CI left null for that reason. Random-intercept variances: OSA 0.82 (95% CI 0.68-0.95), ADHD 15.18 (95% CI 13.75-16.61)."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Sex multigroup RI-CLPM of OSA time and CBCL ADHD problems (females vs males), same covariates as M1",
+   "location_in_paper": "Table 3 (p. 2200); constraint tests in supplementary Tables S8 and S9 (not in PDF); interpreted in Results p. 2199 and Discussion p. 2201.",
+   "design": "Same four-wave RI-CLPM structure as M1 (T1-T4, annual), estimated as a multigroup model with females and males as groups and cross-lagged paths free across groups. Compared with a model constraining cross-lagged paths equal across sex; the Satorra-Bentler test indicated group differences, so group-specific cross-lags are reported. OSA time is the IV in the OSA -> ADHD paths and the DV in the ADHD -> OSA paths.",
+   "sample": "Same N = 11,819 as M1, split into females N = 5,656 and males N = 6,163 (Table 3).",
+   "iv": "Same OSA time composite as M1 (texting + social networking sites + video chat, weighted daily average). Sex-specific descriptive statistics are not reported in the main text.",
+   "dv": "Same CBCL attention problems T-score as M1. Sex-specific descriptive statistics are not reported in the main text.",
+   "covariates": [
+    {
+     "name": "Same covariates as M1",
+     "detail": "Baseline age, race, ethnicity, parental marital status, parental education, family income (time-invariant) and video-centric activity time (time-varying). The paper does not say whether sex was dropped as a covariate in the sex multigroup model."
+    }
+   ],
+   "equation": "Same within- and between-person structure as M1, estimated separately per group g in {female, male} with free cross-lags: w_ADHD[i,t+1] = b_t,g*w_ADHD[i,t] + d_t,g*w_OSA[i,t] + u; w_OSA[i,t+1] = a_t,g*w_OSA[i,t] + c_t,g*w_ADHD[i,t] + u. Focal effects d_t,g and c_t,g, reported as standardized coefficients.",
+   "estimation": "As M1: MLR estimator, FIML, imputed covariates, software for the SEM not named. Moderation tested with a Satorra-Bentler chi-square difference test between an unconstrained multigroup model and one with cross-lagged paths constrained equal across sex. Table 3 reports beta, SE, 95% CI and exact p; bold marks CIs not overlapping zero (p < 0.05). No multiple-comparison correction.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "f_osa_to_adhd",
+     "label": "Females: OSA time (t) -> ADHD (t+1)",
+     "meta": "N = 5,656; OSA as IV",
+     "sd_iv": null
+    },
+    {
+     "id": "m_osa_to_adhd",
+     "label": "Males: OSA time (t) -> ADHD (t+1)",
+     "meta": "N = 6,163; OSA as IV",
+     "sd_iv": null
+    },
+    {
+     "id": "f_adhd_to_osa",
+     "label": "Females: ADHD (t) -> OSA time (t+1)",
+     "meta": "N = 5,656; OSA as DV",
+     "sd_iv": null
+    },
+    {
+     "id": "m_adhd_to_osa",
+     "label": "Males: ADHD (t) -> OSA time (t+1)",
+     "meta": "N = 6,163; OSA as DV",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "t1_t2",
+     "label": "T1 -> T2",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "t2_t3",
+     "label": "T2 -> T3",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "t3_t4",
+     "label": "T3 -> T4",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "f_osa_to_adhd",
+     "dv": "t1_t2",
+     "beta": -0.006,
+     "beta_lo": -0.071,
+     "beta_hi": 0.059,
+     "p": 0.857,
+     "p_label": "0.857",
+     "sig": false,
+     "location": "Table 3, Females, OSA -> ADHD, T1 -> T2",
+     "note": "SE = 0.033"
+    },
+    {
+     "iv": "f_osa_to_adhd",
+     "dv": "t2_t3",
+     "beta": 0.094,
+     "beta_lo": 0.013,
+     "beta_hi": 0.175,
+     "p": 0.023,
+     "p_label": "0.023",
+     "sig": true,
+     "location": "Table 3, Females, OSA -> ADHD, T2 -> T3",
+     "note": "SE = 0.041"
+    },
+    {
+     "iv": "f_osa_to_adhd",
+     "dv": "t3_t4",
+     "beta": 0.08,
+     "beta_lo": 0.024,
+     "beta_hi": 0.135,
+     "p": 0.005,
+     "p_label": "0.005",
+     "sig": true,
+     "location": "Table 3, Females, OSA -> ADHD, T3 -> T4",
+     "note": "SE = 0.028"
+    },
+    {
+     "iv": "m_osa_to_adhd",
+     "dv": "t1_t2",
+     "beta": -0.013,
+     "beta_lo": -0.253,
+     "beta_hi": 0.141,
+     "p": 0.576,
+     "p_label": "0.576",
+     "sig": false,
+     "location": "Table 3, Males, OSA -> ADHD, T1 -> T2",
+     "note": "SE = 0.023. Printed CI is much wider than 1.96*SE implies; copied as printed."
+    },
+    {
+     "iv": "m_osa_to_adhd",
+     "dv": "t2_t3",
+     "beta": -0.001,
+     "beta_lo": -0.139,
+     "beta_hi": 0.133,
+     "p": 0.967,
+     "p_label": "0.967",
+     "sig": false,
+     "location": "Table 3, Males, OSA -> ADHD, T2 -> T3",
+     "note": "SE = 0.030. Printed CI is wider than 1.96*SE implies; copied as printed."
+    },
+    {
+     "iv": "m_osa_to_adhd",
+     "dv": "t3_t4",
+     "beta": 0.007,
+     "beta_lo": -0.113,
+     "beta_hi": 0.138,
+     "p": 0.844,
+     "p_label": "0.844",
+     "sig": false,
+     "location": "Table 3, Males, OSA -> ADHD, T3 -> T4",
+     "note": "SE = 0.036. Printed CI is wider than 1.96*SE implies; copied as printed."
+    },
+    {
+     "iv": "f_adhd_to_osa",
+     "dv": "t1_t2",
+     "beta": 0.046,
+     "beta_lo": -0.012,
+     "beta_hi": 0.104,
+     "p": 0.117,
+     "p_label": "0.117",
+     "sig": false,
+     "location": "Table 3, Females, ADHD -> OSA, T1 -> T2",
+     "note": "SE = 0.029"
+    },
+    {
+     "iv": "f_adhd_to_osa",
+     "dv": "t2_t3",
+     "beta": 0.024,
+     "beta_lo": -0.019,
+     "beta_hi": 0.066,
+     "p": 0.281,
+     "p_label": "0.281",
+     "sig": false,
+     "location": "Table 3, Females, ADHD -> OSA, T2 -> T3",
+     "note": "SE = 0.022"
+    },
+    {
+     "iv": "f_adhd_to_osa",
+     "dv": "t3_t4",
+     "beta": 0.023,
+     "beta_lo": -0.03,
+     "beta_hi": 0.076,
+     "p": 0.403,
+     "p_label": "0.403",
+     "sig": false,
+     "location": "Table 3, Females, ADHD -> OSA, T3 -> T4",
+     "note": "SE = 0.027"
+    },
+    {
+     "iv": "m_adhd_to_osa",
+     "dv": "t1_t2",
+     "beta": -0.057,
+     "beta_lo": -0.029,
+     "beta_hi": -0.002,
+     "p": 0.02,
+     "p_label": "0.020",
+     "sig": true,
+     "location": "Table 3, Males, ADHD -> OSA, T1 -> T2",
+     "note": "SE = 0.024. The printed CI [-0.029, -0.002] does not contain the point estimate -0.057; likely a CI on a different (unstandardized) scale. Copied as printed; verify before converting the CI."
+    },
+    {
+     "iv": "m_adhd_to_osa",
+     "dv": "t2_t3",
+     "beta": -0.051,
+     "beta_lo": -0.04,
+     "beta_hi": -0.004,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": true,
+     "location": "Table 3, Males, ADHD -> OSA, T2 -> T3",
+     "note": "SE = 0.021. The printed CI [-0.040, -0.004] does not contain the point estimate -0.051; copied as printed; verify before converting the CI."
+    },
+    {
+     "iv": "m_adhd_to_osa",
+     "dv": "t3_t4",
+     "beta": 0.025,
+     "beta_lo": -0.025,
+     "beta_hi": 0.064,
+     "p": 0.38,
+     "p_label": "0.380",
+     "sig": false,
+     "location": "Table 3, Males, ADHD -> OSA, T3 -> T4",
+     "note": "SE = 0.029"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Bivariate correlations between OSA time and ADHD problems at T1-T4",
+   "location": "Table 2 (p. 2199)",
+   "why": "Unadjusted zero-order correlations reported as descriptives; the authors anchor their claims on the adjusted RI-CLPM (M1)."
+  },
+  {
+   "model": "Within-wave within-person residual correlations between OSA time and ADHD problems",
+   "location": "Fig. 1 (T1 0.011, T2 -0.013, T3 0.052*, T4 0.064***)",
+   "why": "Contemporaneous residual covariances in the RI-CLPM, not discussed or interpreted by the authors; the focal claims rest on the cross-lagged paths and the random-intercept correlation."
+  },
+  {
+   "model": "Autoregressive paths for OSA time and ADHD problems",
+   "location": "Fig. 1",
+   "why": "Stability paths within the same variable; no phone/SM-to-trait association."
+  },
+  {
+   "model": "Multigroup RI-CLPM by OSA content type (video-based vs image-based most-used platform), including alternate platform classifications",
+   "location": "Supplementary Tables S5, S6, S7 (not bundled in the PDF); Results p. 2199",
+   "why": "Only reported in the main text as a nonsignificant constraint test; group-specific cross-lagged estimates are in the supplement, which is not in the PDF, so no numbers can be extracted."
+  },
+  {
+   "model": "RI-CLPM on non-imputed dataset",
+   "location": "Supplementary materials (not bundled in the PDF)",
+   "why": "Sensitivity analysis mentioned in Methods but no numbers printed in the article."
+  },
+  {
+   "model": "Full parameter tables for the overall RI-CLPM (SEs, CIs, exact p)",
+   "location": "Supplementary Tables S2 and S3 (not bundled in the PDF)",
+   "why": "Not available in the PDF; M1 point estimates were taken from Fig. 1 instead. A coder with supplement access should add CIs and exact p-values to M1."
+  },
+  {
+   "model": "Video-centric activity (VCA) time",
+   "location": "Methods p. 2197; Table 1",
+   "why": "TV/movies, videos and videogames; non-phone/SM modalities used only as a time-varying covariate."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized RI-CLPM path coefficients)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). Applied to CI endpoints where CIs are printed (M2 only).",
+  "contrast_type": "Per 1 within-person SD of the predictor (deviation from the child's own mean) at wave t, predicting the within-person SD of the outcome at wave t+1, net of the autoregressive path and covariates. The between-person cell is a correlation of stable person-level means.",
+  "transformable": true,
+  "notes": "No SD_IV or SD_DV is needed because the paper reports standardized coefficients. For reference, Table 1 (p. 2198) gives OSA time SDs 1.15/1.57/2.15/2.63 and CBCL ADHD T-score SDs 6.17/5.98/5.58/5.62 at T1-T4, but these are total (between + within) SDs, and the coefficients are standardized on the within-person components. The resulting d's describe within-person lagged effects and are not directly comparable to between-person regression d's from other papers. M1 has no CIs in the PDF (they are in supplementary Tables S2/S3), so M1 d's have no CI. In M2, two male ADHD -> OSA CIs do not contain their point estimates and several male CIs are wider than SE implies; converting those CIs would give misleading d intervals."
+ },
+ "extraction_flags": "1) The M1 (full-sample RI-CLPM) point estimates come from the path labels in Fig. 1. Their SEs, CIs and exact p-values are in supplementary Tables S2/S3, which are not in the PDF, so M1 has no CIs and its significance is read from the asterisks. Fig. 1 was checked at high resolution, but each label's assignment to its path (for example, -0.009 is OSA T1->ADHD T2 and -0.006 is ADHD T1->OSA T2) should be confirmed against S2/S3. 2) Table 3 has printing problems in the male column. Two male ADHD->OSA CIs do not contain their own point estimates: -0.057 printed with [-0.029, -0.002], and -0.051 printed with [-0.040, -0.004]. Several other male CIs, such as -0.013 (SE 0.023) printed with [-0.253, 0.141], are much wider than 1.96*SE implies. They were copied as printed; do not convert those CIs without checking. 3) The between-person random-intercept correlation r = 0.068 is printed with '95% CI, 0.07-0.35', which does not contain 0.068, so the CI was left null. It is included in M1 as a beta_std cell. 4) The standardized coefficients are within-person (RI-CLPM), so the d's are not directly comparable to between-person d's. The Table 1 SDs are total SDs and were not used. 5) M2 (sex multigroup, Table 3) was extracted as a separate card because the authors interpret it. The paper does not say whether sex was dropped as a covariate in that model. 6) The content-type moderation (Tables S5-S7) and the non-imputed sensitivity analysis are supplement-only and were excluded for lack of numbers. 7) The SEM software is not named, and the OSA time units are implied hours/day but not stated explicitly. 8) OSA qualifies under FT-IC2 Step 2 (texting + social networking sites + video chat only). In the ADHD->OSA paths, OSA is the DV."
+}

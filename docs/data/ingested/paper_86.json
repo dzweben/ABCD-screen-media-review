@@ -1,0 +1,656 @@
+{
+ "paper_id": "86",
+ "title": "Prospective Associations Between Early Adolescent Problematic Screen Use, Mental Health, Sleep, and Substance Use",
+ "doi": "10.1016/j.amepre.2025.108248",
+ "year": "2026",
+ "authors": "Nagata JM, Shim JE, Balasubramanian P, Cheng CM, Al-Shoaibi AAA, Shao IY, Ganson KT, Testa A, Kiss O, He J, Baker FC",
+ "journal": "American Journal of Preventive Medicine",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted multiple linear regression of Year 3 CBCL T-scores and sleep duration on Year 2 problematic phone use (MPIQ) or problematic social media use (SMAQ), adjusted for sociodemographics, site, and Year 2 outcome",
+   "location_in_paper": "Figure 1 (p. 5), point estimates printed beside each forest-plot row; full table in Appendix Table 3 (online supplement, not bundled in this PDF); described in Results p. 4 and Discussion pp. 4-7",
+   "design": "Prospective longitudinal, two waves. Problematic use exposures measured at ABCD Year 2 follow-up (ages 11-12, 2018-2020); continuous outcomes measured at Year 3 follow-up, one year later. Each outcome model adjusts for the same outcome measured at Year 2, so the coefficient is the association with Year 3 level net of Year 2 level. Single follow-up per child, not repeated measures. No time interaction. Problematic phone, social media, and video game use are each presented as a separate exposure block; the paper does not state explicitly whether the three were entered in separate models or jointly, but the different eligible subsets (phone users vs. SM account holders) imply separate models.",
+   "sample": "ABCD 5.0 release, Year 2 and Year 3 follow-up. Analytic sample N=8,119 participants with complete sociodemographic data, any reported mobile phone, social media, or video game use, and at least one outcome. The MPIQ was asked only of phone users (n=6,158) and the SMAQ only of youth with at least one social media account (n=4,633) (Table 1 footnotes), so the per-exposure analytic N is smaller than 8,119; exact per-model Ns are not printed in the main text. Mean age at Year 2 12.04 (SD 0.66). 47.5% female, 52.5% male. Race/ethnicity: 5.1% Asian, 14.7% Black, 19.5% Latino or Hispanic, 3.3% Native American, 1.2% Other, 56.2% White (43.8% non-White). Household income: 13.5% <=$24,999; 16.4% $25,000-49,999; 16.9% $50,000-74,999; 15.1% $75,000-99,999; 28.1% $100,000-199,999; 10.1% >=$200,000. Parent education 89.5% college or more, 10.5% high school or less. Excluded participants were more likely to be younger, female, higher income, higher parental education, and less likely to be White (Appendix Table 1). Table 1 values are ACS-weighted.",
+   "iv": "Two qualifying exposures, each measured at Year 2 and analyzed as a continuous mean score. (1) Problematic mobile phone use: 8-item Mobile Phone Involvement Questionnaire, item sum divided by number of items, range 1-7, Cronbach alpha 0.84; weighted mean 3.08 (SD 1.10) among the n=6,158 phone users. (2) Problematic social media use: 6-item Social Media Addiction Questionnaire modeled on the Bergen Facebook Addiction Scale, mean score range 1-6, alpha 0.80; weighted mean 1.84 (SD 0.89) among the n=4,633 youth with a social media account. The coefficient is per 1-point increase in the mean score. Higher scores indicate more addiction-like use.",
+   "dv": "Seven continuous Year 3 outcomes. Six parent-reported CBCL DSM-oriented scale T-scores (Table 1 weighted means/SDs): depressive problems 54.18 (6.26), anxiety problems 53.69 (6.26), somatic problems 54.72 (6.18), attention/deficit 53.36 (5.38), oppositional defiant problems 53.10 (4.99), conduct problems 52.34 (4.71). Sleep duration from the Munich Chronotype Questionnaire, a weighted average of school-day and free-day sleep durations; Table 1 reports average sleep duration 8.91 (SD 1.58) hours per night, while Figure 1 labels the outcome 'Weekly sleep duration'.",
+   "covariates": [
+    {
+     "name": "Year 2 value of the outcome",
+     "detail": "The respective mental health or sleep measure at Year 2"
+    },
+    {
+     "name": "Age",
+     "detail": "Age at Year 2"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "Female vs. male"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Asian, Black, Latino or Hispanic, Native American, other, White"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories from <=$24,999 to >=$200,000"
+    },
+    {
+     "name": "Parental education",
+     "detail": "College or more vs. high school or less"
+    },
+    {
+     "name": "Study site",
+     "detail": "Included 'to account for regional variation'; entered as a covariate (fixed effect), not described as a random effect"
+    }
+   ],
+   "equation": "Y_Year3[i] = b0 + b1*PSU_Year2[i] + b2*Y_Year2[i] + b3*age + b4*sex + b5..b9*race_ethnicity + b10..b14*household_income + b15*parent_education + site terms + e[i], where PSU is either the MPIQ mean score or the SMAQ mean score and Y is one of the six CBCL T-scores or sleep duration. Focal coefficient b1.",
+   "estimation": "Stata 18. Multiple linear regression. Sampling weights based on the American Community Survey applied. Study site entered as a covariate; no random effects or clustering described. Benjamini-Hochberg FDR correction applied for multiple testing; adjusted p/q values not printed in the main text. Assumptions of linear regression checked. No sex, race, or other interaction tests or stratified results reported. No sensitivity analyses reported. Significance below is judged from the text and from whether the Figure 1 CI excludes zero.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "mpiq",
+     "label": "Problematic phone use (MPIQ)",
+     "meta": "Mean score 1-7; M = 3.08, SD = 1.10 (n=6,158)",
+     "sd_iv": 1.1
+    },
+    {
+     "id": "smaq",
+     "label": "Problematic social media use (SMAQ)",
+     "meta": "Mean score 1-6; M = 1.84, SD = 0.89 (n=4,633)",
+     "sd_iv": 0.89
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "dep",
+     "label": "Depressive problems (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "anx",
+     "label": "Anxiety problems (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "som",
+     "label": "Somatic problems (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "att",
+     "label": "Attention/deficit (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "odd",
+     "label": "Oppositional defiant problems (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "cond",
+     "label": "Conduct problems (CBCL T)",
+     "sd_dv": 10,
+     "p0": null
+    },
+    {
+     "id": "sleepdur",
+     "label": "Sleep duration (MCTQ)",
+     "sd_dv": 1.58,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "mpiq",
+     "dv": "dep",
+     "B": 0.31,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Depressive Problems",
+     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF).",
+     "derived_d": 0.0682,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "anx",
+     "B": 0.03,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 1, Phone Use, Anxiety Problems",
+     "note": "CI visibly crosses zero; text states PSU was not associated with anxiety.",
+     "derived_d": 0.0066,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "som",
+     "B": 0.21,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Somatic Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0462,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "att",
+     "B": 0.23,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Attention/Deficit",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0506,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "odd",
+     "B": 0.16,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Oppositional Defiant Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0352,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "cond",
+     "B": 0.2,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Conduct Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.044,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=10)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "sleepdur",
+     "B": -0.12,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Phone Use, Weekly sleep duration",
+     "note": "Units of sleep duration ambiguous (Figure label 'weekly'; Table 1 'hours per night'). Text reports significant association with shorter sleep duration.",
+     "derived_d": -0.1677,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=1.1, SD_DV=1.58)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "dep",
+     "B": 0.42,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Depressive Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0748,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "anx",
+     "B": 0.2,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 1, Social Media Use, Anxiety Problems",
+     "note": "CI appears to touch or cross zero; text states PSU was not associated with anxiety.",
+     "derived_d": 0.0356,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "som",
+     "B": 0.28,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Somatic Problems",
+     "note": "Lower CI bound appears close to zero in the figure; text reports a significant association.",
+     "derived_d": 0.0499,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "att",
+     "B": 0.23,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Attention/Deficit",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0409,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "odd",
+     "B": 0.27,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Oppositional Defiant Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0481,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "cond",
+     "B": 0.29,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Conduct Problems",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0516,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=10)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "sleepdur",
+     "B": -0.14,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 1, Social Media Use, Weekly sleep duration",
+     "note": "Units of sleep duration ambiguous (see mpiq row).",
+     "derived_d": -0.1582,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "linear (SD_IV=0.89, SD_DV=1.58)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Weighted multiple logistic regression of Year 3 suicidal behaviors, sleep disturbance, and substance use initiation on Year 2 problematic phone use (MPIQ) or problematic social media use (SMAQ), adjusted for sociodemographics, site, and Year 2 outcome",
+   "location_in_paper": "Figure 2 (p. 6), adjusted odds ratios printed beside each forest-plot row; full table in Appendix Table 3 (online supplement, not bundled in this PDF); described in Results p. 4 and Discussion pp. 4-7",
+   "design": "Same prospective two-wave design as M1: problematic use at Year 2 (ages 11-12), binary outcomes at Year 3, adjusting for the respective outcome measured at Year 2. Differs from M1 in using binary outcomes and logistic regression.",
+   "sample": "Same as M1: ABCD 5.0, analytic N=8,119 overall, with the MPIQ restricted to phone users (n=6,158) and the SMAQ to youth with a social media account (n=4,633). Same demographic profile. Per-model Ns not printed in the main text.",
+   "iv": "Same two continuous exposures as M1: MPIQ mean score (range 1-7; M 3.08, SD 1.10) and SMAQ mean score (range 1-6; M 1.84, SD 0.89), both at Year 2. ORs are per 1-point increase in the mean score.",
+   "dv": "Six binary Year 3 outcomes (Table 1 weighted prevalence): suicidal behaviors from the youth KSADS (passive ideation, nonspecific active ideation, active ideation with plan/method/preparation/intent, or attempt), 2.9%; total sleep disturbance, Sleep Disturbance Scale for Children total score at or above 39, 25.7% (continuous total score M 36.30, SD 8.10); alcohol initiation (tried a sip), 11.6%; tobacco initiation (a puff of a tobacco product), 2.5%; marijuana initiation (a puff), 1.0%; any substance initiation, 12.8%.",
+   "covariates": [
+    {
+     "name": "Year 2 value of the outcome",
+     "detail": "The respective suicide, sleep, or substance use measure at Year 2"
+    },
+    {
+     "name": "Age",
+     "detail": "Age at Year 2"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "Female vs. male"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Asian, Black, Latino or Hispanic, Native American, other, White"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories from <=$24,999 to >=$200,000"
+    },
+    {
+     "name": "Parental education",
+     "detail": "College or more vs. high school or less"
+    },
+    {
+     "name": "Study site",
+     "detail": "Included as a covariate for regional variation"
+    }
+   ],
+   "equation": "logit(P(Y_Year3[i]=1)) = b0 + b1*PSU_Year2[i] + b2*Y_Year2[i] + b3*age + b4*sex + b5..b9*race_ethnicity + b10..b14*household_income + b15*parent_education + site terms, where PSU is the MPIQ or SMAQ mean score. Reported AOR = exp(b1).",
+   "estimation": "Stata 18. Multiple logistic regression. ACS-based sampling weights. Study site as covariate; no random effects described. Benjamini-Hochberg FDR correction; adjusted p values not printed in main text. Assumptions of logistic regression checked. No interaction tests, stratified estimates, or sensitivity analyses reported. Significance judged from text and from whether the Figure 2 CI excludes 1.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "mpiq",
+     "label": "Problematic phone use (MPIQ)",
+     "meta": "Mean score 1-7; M = 3.08, SD = 1.10 (n=6,158)",
+     "sd_iv": 1.1
+    },
+    {
+     "id": "smaq",
+     "label": "Problematic social media use (SMAQ)",
+     "meta": "Mean score 1-6; M = 1.84, SD = 0.89 (n=4,633)",
+     "sd_iv": 0.89
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "suicide",
+     "label": "Suicidal behaviors (KSADS)",
+     "sd_dv": null,
+     "p0": 0.029
+    },
+    {
+     "id": "sleepdist",
+     "label": "Total sleep disturbance (SDSC >= 39)",
+     "sd_dv": null,
+     "p0": 0.257
+    },
+    {
+     "id": "alcohol",
+     "label": "Alcohol use initiation",
+     "sd_dv": null,
+     "p0": 0.116
+    },
+    {
+     "id": "tobacco",
+     "label": "Tobacco use initiation",
+     "sd_dv": null,
+     "p0": 0.025
+    },
+    {
+     "id": "marijuana",
+     "label": "Marijuana use initiation",
+     "sd_dv": null,
+     "p0": 0.01
+    },
+    {
+     "id": "anysub",
+     "label": "Any substance use initiation",
+     "sd_dv": null,
+     "p0": 0.128
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "mpiq",
+     "dv": "suicide",
+     "OR": 1.57,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Suicide behaviors",
+     "note": "CI shown graphically only; numeric CI in Appendix Table 3 (not in PDF).",
+     "derived_d": 0.2487,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "sleepdist",
+     "OR": 1.11,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Total sleep disturbance",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0575,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "alcohol",
+     "OR": 1.21,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Alcohol use initiation",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.1051,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "tobacco",
+     "OR": 1.55,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Tobacco use initiation",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.2416,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "marijuana",
+     "OR": 1.41,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Marijuana use initiation",
+     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association.",
+     "derived_d": 0.1894,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "mpiq",
+     "dv": "anysub",
+     "OR": 1.23,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Phone Use, Any substance use initiation",
+     "note": "CI shown graphically only; abstract reports association with substance initiation.",
+     "derived_d": 0.1141,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "suicide",
+     "OR": 1.86,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Suicide behaviors",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.3421,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "sleepdist",
+     "OR": 1.11,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Total sleep disturbance",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.0575,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "alcohol",
+     "OR": 1.22,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Alcohol use initiation",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.1096,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "tobacco",
+     "OR": 1.3,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Tobacco use initiation",
+     "note": "Lower CI bound appears near 1 in the figure; text reports a significant association.",
+     "derived_d": 0.1446,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "marijuana",
+     "OR": 1.66,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Marijuana use initiation",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.2794,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "smaq",
+     "dv": "anysub",
+     "OR": 1.24,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2, Social Media Use, Any substance use initiation",
+     "note": "CI shown graphically only.",
+     "derived_d": 0.1186,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Problematic video game use (VGAQ) exposure, linear and logistic models",
+   "location": "Figure 1 and Figure 2, 'Video Game Use' blocks; Appendix Table 3",
+   "why": "Generic gaming addiction scale (Bergen-style VGAQ) with no phone/mobile modality. Fails FT-IC2 clarification 2."
+  },
+  {
+   "model": "Full numeric results table (coefficients, 95% CIs, p values)",
+   "location": "Appendix Table 3 (online supplement)",
+   "why": "Not bundled in this PDF. Point estimates for the phone/SM cells were taken from the values printed in Figures 1-2; CIs and p values should be filled from Appendix Table 3 if the supplement is obtained."
+  },
+  {
+   "model": "Comparison of included vs. excluded participants",
+   "location": "Appendix Table 1 (online supplement); summarized p. 2",
+   "why": "Descriptive attrition comparison on demographics; no phone/SM-to-trait estimate."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (M1, unstandardized linear coefficient labeled beta in Figure 1) + OR (M2, adjusted odds ratio)",
+  "conversion_formula": "M1: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M2: d = ln(OR) * sqrt(3) / pi (Chinn 2000).",
+  "contrast_type": "Per 1-point increase in the MPIQ (1-7) or SMAQ (1-6) mean score; after the M1 conversion, per 1 SD of the exposure.",
+  "transformable": true,
+  "notes": "SD_IV from Table 1 (p. 4): MPIQ 1.10 (n=6,158 phone users), SMAQ 0.89 (n=4,633 social media account holders); these are ACS-weighted descriptives. SD_DV for CBCL DSM-oriented T-scores set to 10 by construction per guidelines; the observed weighted Year 3 SDs in Table 1 are smaller (depressive 6.26, anxiety 6.26, somatic 6.18, attention 5.38, ODD 4.99, conduct 4.71), so using 10 will give smaller d values than using the sample SDs. SD_DV for sleep duration 1.58 (Table 1, 'hours per night'), but Figure 1 labels the outcome 'Weekly sleep duration', so the unit of B for sleep is uncertain. Figure 1 is labeled beta; the IV is an unstandardized mean score and the DV is in T-score units, and the paper never says the coefficients are standardized, so they are treated as unstandardized B. Because all M1 models adjust for the Year 2 outcome, the derived d reflects association with Year 3 level conditional on Year 2 level. p0 for M2 are the weighted marginal Year 3 prevalences from Table 1 (not unexposed-group rates) and are not needed for the OR-to-d conversion. No numeric CIs are printed in the main PDF (only graphical CIs in Figures 1-2), so d CIs cannot be computed until Appendix Table 3 is obtained."
+ },
+ "extraction_flags": "1) The PDF has only 10 pages, and Appendix Table 3 (the full results with numeric CIs and p values) is in the online supplement, which is not included. All 26 point estimates come from the values printed next to the forest-plot rows in Figures 1 and 2. CIs and p values are null and need filling from Appendix Table 3. 2) Significance is judged from the text and by looking at the figure CIs. The ones to check against the supplement: SMAQ->somatic and SMAQ->anxiety (lower bounds near 0), and MPIQ->marijuana and SMAQ->tobacco (lower bounds near 1). Benjamini-Hochberg FDR was applied, but the adjusted values are not shown. 3) Figure 1 labels the coefficient 'beta', but nothing says it is standardized, so I treated it as unstandardized B (per 1 point of the MPIQ/SMAQ mean score). 4) The sleep duration unit is unclear: Figure 1 says 'Weekly sleep duration', but Table 1 gives 8.91 (SD 1.58) hours per night. 5) SD_DV for the CBCL T-scores is set to 10 by rule. The weighted sample SDs in Table 1 are 4.71-6.26, so the derived d will be smaller than with sample SDs. 6) The paper says N=8,119, but the MPIQ was asked only of phone users (n=6,158) and the SMAQ only of SM account holders (n=4,633). The per-model Ns are not printed, and the paper never says whether the phone, SM and gaming exposures were modeled separately or together. 7) The p0 values are weighted marginal Year 3 prevalences, not rates in an unexposed group. Problematic video game use is excluded (generic gaming).json"
+}

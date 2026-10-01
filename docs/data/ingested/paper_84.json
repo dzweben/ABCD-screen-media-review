@@ -1,0 +1,318 @@
+{
+ "paper_id": "84",
+ "title": "The association between screen time and cognitive function in children: The partially mediating role of putamen volume",
+ "doi": "10.1016/j.actpsy.2026.106742",
+ "year": "2026",
+ "authors": "Shou Q, Yamashita M, Mizuno Y",
+ "journal": "Acta Psychologica",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed-effects regression of NIH Toolbox cognitive domain scores on per-device daily screen time (texting, video chat), adjusted for demographics, puberty, physical activity and sleep",
+   "location_in_paper": "Supplementary Table S1 (supporting information file, mmc1.docx; plotted in Fig. S1); referenced in Results 3.1, p. 3 ('almost all of the screen time on each digital device is negatively associated with cognitive function, even after FDR correction'). Specification described in Section 2.6, pp. 2-3.",
+   "design": "Cross-sectional. Screen time and NIH Toolbox cognition taken from the same ABCD assessment (the paper calls the design cross-sectional in the Limitations, p. 5; mean age 119.00 months matches the baseline visit, although the wave is not named explicitly). One observation per child, no repeated measures, no time interactions. Each cognitive domain is a separate DV. The per-device analysis in Table S1 is a supplementary breakout of the headline total-screen-time model; the paper does not say whether each device was entered in its own model or all devices jointly, but the slightly different r2 values per device within a domain suggest separate models per device.",
+   "sample": "ABCD Study release 5.0, 21 U.S. sites. Children with available demographic, screen time and cognitive data were included. Per-cell N is not printed in Table S1; the Satterthwaite d.f. for texting and video chat cells range 9742.772 to 9955.263, consistent with roughly 10,000 children (main-text total screen time models had n = 9954-9979). Full-sample descriptives (Table 2, p. 3; n varies by variable): age 119.00 +/- 7.50 months (n = 11,867); 6,188 male and 5,677 female; White 6,173, Black 1,784, Hispanic 2,410, Asian 252, Other 1,247; parental education 15.20 +/- 2.61 years; parental income <49,999 USD 3,222, 50,000-74,999 1,498, 75,000-99,999 1,570, 100,000-199,999 3,311, >=200,000 1,250. Continuous variables, including screen time and cognition, were trimmed to within 3 SD of the mean before analysis.",
+   "iv": "Two phone/SM-specific IVs, each analyzed as daily hours: texting and video chat, from the ABCD youth screen time questionnaire (self-report of time spent on each activity, weekday and weekend reported separately). Daily average computed as (5/7 x weekday time) + (2/7 x weekend time), applied per device (Section 2.2, p. 2). Descriptive statistics for texting and video chat are not reported; only total screen time is described (3.79 +/- 3.07 hours/day, n = 11,843, Table 2). Table S1 also includes video games, television and videos, which are not phone/SM modalities and are listed under excluded_models.",
+   "dv": "Five NIH Toolbox cognitive domains, age-corrected scores (Table 1, p. 2): executive function (average of Dimensional Change Card Sort and Flanker; 96.07 +/- 12.22, n = 11,710), processing speed (Pattern Comparison; 93.78 +/- 22.07, n = 11,697), working memory (List Sorting; 100.55 +/- 14.79, n = 11,672), episodic memory (Picture Sequence Memory; 100.96 +/- 16.10, n = 11,709), language (average of Oral Reading Recognition and Picture Vocabulary; 104.65 +/- 15.62, n = 11,702). Descriptives from Table 2, p. 3.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Continuous (months)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Dummy-coded"
+    },
+    {
+     "name": "Pubertal status",
+     "detail": "Pubertal Development Scale score, continuous"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Dummy-coded: White, Black, Hispanic, Asian, Other"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Years of schooling, continuous"
+    },
+    {
+     "name": "Household income",
+     "detail": "Five income groups (<49,999; 50,000-74,999; 75,000-99,999; 100,000-199,999; >=200,000 USD)"
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Times per week, continuous"
+    },
+    {
+     "name": "Sleep duration",
+     "detail": "Hours, continuous"
+    },
+    {
+     "name": "Family ID (random effect)",
+     "detail": "Random effect for sibling status"
+    },
+    {
+     "name": "Data collection site (random effect)",
+     "detail": "Described as 'multiple data collections', modeled as a random effect"
+    },
+    {
+     "name": "Twin/triplet status (random effect)",
+     "detail": "Random effect"
+    }
+   ],
+   "equation": "Cog_domain[i] = b0 + b1*DeviceTime[i] + b2*age + b3*sex + b4*pubertal_status + b5..b8*race_dummies + b9*parent_education + b10..b13*income_dummies + b14*physical_activity + b15*sleep_duration + u_family + u_site(data collection) + u_twin_status + e[i], where DeviceTime is daily hours of texting or video chat and Cog_domain is one of the five NIH Toolbox age-corrected domain scores; b1 is reported as a (apparently standardized) beta.",
+   "estimation": "R 4.3.1, lmerTest package (linear mixed-effects models; t tests with Satterthwaite-type fractional d.f.). Random effects for family ID, multiple data collections and twin/triplet status. No sampling weights reported. Outliers in screen time, cognition and all continuous variables trimmed to within 3 SD. Alpha = 0.05. Table S1 applies FDR correction across all 25 p-values in the table (5 devices x 5 domains); the main text applies FDR within each domain (Benjamini-Hochberg). No interaction or stratified analyses by sex or other variables are reported. A separate mediation analysis (R package printed as 'lanvnn', presumably lavaan; 10,000 bias-corrected bootstraps) of putamen volume uses total screen time only.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "text",
+     "label": "Texting",
+     "meta": "daily hours, weighted weekday/weekend average",
+     "sd_iv": null
+    },
+    {
+     "id": "vchat",
+     "label": "Video chat",
+     "meta": "daily hours, weighted weekday/weekend average",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "ef",
+     "label": "Executive function",
+     "sd_dv": 12.22,
+     "p0": null
+    },
+    {
+     "id": "ps",
+     "label": "Processing speed",
+     "sd_dv": 22.07,
+     "p0": null
+    },
+    {
+     "id": "wm",
+     "label": "Working memory",
+     "sd_dv": 14.79,
+     "p0": null
+    },
+    {
+     "id": "em",
+     "label": "Episodic memory",
+     "sd_dv": 16.1,
+     "p0": null
+    },
+    {
+     "id": "lang",
+     "label": "Language",
+     "sd_dv": 15.62,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "text",
+     "dv": "ef",
+     "beta": -0.025,
+     "beta_lo": -0.045,
+     "beta_hi": -0.004,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": false,
+     "location": "Supplementary Table S1, row 'texting / executive function'",
+     "note": "t = -2.385, d.f. = 9955.263, r2 = 0.057, FDR p = 0.071 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction.",
+     "derived_d": -0.05,
+     "derived_d_lo": -0.0901,
+     "derived_d_hi": -0.008,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "text",
+     "dv": "em",
+     "beta": -0.057,
+     "beta_lo": -0.077,
+     "beta_hi": -0.037,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'texting / episodic memory'",
+     "note": "t = -5.466, d.f. = 9954.056, r2 = 0.068, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.1142,
+     "derived_d_lo": -0.1545,
+     "derived_d_hi": -0.0741,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "text",
+     "dv": "lang",
+     "beta": -0.056,
+     "beta_lo": -0.075,
+     "beta_hi": -0.038,
+     "p": null,
+     "p_label": "0.000",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'texting / language'",
+     "note": "t = -6.068, d.f. = 9823.132, r2 = 0.223, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p printed as '0.000' (i.e., <.0005); left as null.",
+     "derived_d": -0.1122,
+     "derived_d_lo": -0.1504,
+     "derived_d_hi": -0.0761,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "text",
+     "dv": "ps",
+     "beta": -0.024,
+     "beta_lo": -0.045,
+     "beta_hi": -0.003,
+     "p": 0.023,
+     "p_label": "0.023",
+     "sig": false,
+     "location": "Supplementary Table S1, row 'texting / processing speed'",
+     "note": "t = -2.274, d.f. = 9949.972, r2 = 0.036, FDR p = 0.064 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use. Raw p < .05 but FDR p > .05, so not significant after correction.",
+     "derived_d": -0.048,
+     "derived_d_lo": -0.0901,
+     "derived_d_hi": -0.006,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "text",
+     "dv": "wm",
+     "beta": -0.044,
+     "beta_lo": -0.064,
+     "beta_hi": -0.024,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'texting / working memory'",
+     "note": "t = -4.308, d.f. = 9938.337, r2 = 0.117, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.0881,
+     "derived_d_lo": -0.1283,
+     "derived_d_hi": -0.048,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "vchat",
+     "dv": "ef",
+     "beta": -0.052,
+     "beta_lo": -0.073,
+     "beta_hi": -0.032,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'video chat / executive function'",
+     "note": "t = -5.053, d.f. = 9893.460, r2 = 0.059, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.1041,
+     "derived_d_lo": -0.1464,
+     "derived_d_hi": -0.064,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "vchat",
+     "dv": "em",
+     "beta": -0.069,
+     "beta_lo": -0.089,
+     "beta_hi": -0.048,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'video chat / episodic memory'",
+     "note": "t = -6.628, d.f. = 9789.545, r2 = 0.069, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.1383,
+     "derived_d_lo": -0.1787,
+     "derived_d_hi": -0.0961,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "vchat",
+     "dv": "lang",
+     "beta": -0.071,
+     "beta_lo": -0.089,
+     "beta_hi": -0.053,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'video chat / language'",
+     "note": "t = -7.681, d.f. = 9742.772, r2 = 0.225, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.1424,
+     "derived_d_lo": -0.1787,
+     "derived_d_hi": -0.1061,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "vchat",
+     "dv": "ps",
+     "beta": -0.041,
+     "beta_lo": -0.062,
+     "beta_hi": -0.021,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'video chat / processing speed'",
+     "note": "t = -3.939, d.f. = 9944.146, r2 = 0.037, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.0821,
+     "derived_d_lo": -0.1242,
+     "derived_d_hi": -0.042,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "vchat",
+     "dv": "wm",
+     "beta": -0.069,
+     "beta_lo": -0.089,
+     "beta_hi": -0.049,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Supplementary Table S1, row 'video chat / working memory'",
+     "note": "t = -6.864, d.f. = 9799.444, r2 = 0.120, FDR p = <0.001 (FDR across all 25 p-values in Table S1). sig is judged on the FDR p, which is what the authors use.",
+     "derived_d": -0.1383,
+     "derived_d_lo": -0.1787,
+     "derived_d_hi": -0.0981,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Linear mixed-effects regressions of each cognitive domain on total daily screen time (headline analysis; b, 95% CI, beta reported in text)",
+   "location": "Results 3.1, p. 3; Fig. 1, p. 4",
+   "why": "Total screen time is a composite of television, videos, video games, texting and video chat (Section 2.2), so it bundles non-phone/SM modalities. The phone/SM-isolated breakout in Table S1 is extracted instead."
+  },
+  {
+   "model": "Mediation models: total screen time -> putamen volume -> each cognitive domain (indirect and total effects, bootstrap CIs)",
+   "location": "Results 3.2, p. 3; Fig. 2, p. 4",
+   "why": "IV is the non-phone/SM total screen time composite; no per-device mediation is reported."
+  },
+  {
+   "model": "Per-device rows for video games, television and videos in the same supplementary model",
+   "location": "Supplementary Table S1; Fig. S1",
+   "why": "Not phone/SM modalities (video games are platform-unspecified; television and videos are not phone/SM-specific)."
+  },
+  {
+   "model": "Scatterplots of per-device screen time vs. cognitive domains",
+   "location": "Supplementary Fig. S1",
+   "why": "Graphical display of the same Table S1 estimates; no additional numbers."
+  },
+  {
+   "model": "Correlations among the five cognitive domains",
+   "location": "Supplementary Table S2",
+   "why": "No phone/SM variable involved."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta / sqrt(1 - beta^2) (guidelines section 4a); applied to each CI endpoint for the d CI.",
+  "contrast_type": "Per 1 SD increase in daily texting or video chat hours, assuming the Table S1 'beta' is standardized",
+  "transformable": true,
+  "notes": "Table S1 column is labeled 'beta' without stating whether it is standardized. The main text distinguishes unstandardized b from standardized beta for total screen time (e.g., executive function b = -0.212, beta = -0.051), and the Table S1 magnitudes (-0.024 to -0.071) match the scale of those standardized betas, so beta_std is assumed. If the betas were instead unstandardized per hour, B -> d would need SD_IV for texting and video chat, which the paper does not report (only total screen time SD = 3.07 h, Table 2). SD_DV values in dv_axis come from Table 2, p. 3 (full sample, not the per-cell analytic sample) and are given for reference only. Table S1 comes from the online supporting information (mmc1.docx from the publisher's site), not the article PDF."
+ },
+ "extraction_flags": "1) The article PDF is only 6 pages and does not contain the qualifying estimates. They are only in Supplementary Table S1. I got that table from the publisher's open-access supplement (ars.els-cdn.com, 1-s2.0-S0001691826005433-mmc1.docx), saved a copy to the scratchpad as p84_mmc1.docx, and parsed the values directly from the docx table, so they match it exactly. A human should confirm this is the official supplement and consider saving it next to the PDF. 2) The Table S1 column is just labeled 'beta' and the supplement never says whether it is standardized. I coded it as beta_std because its magnitudes (-0.02 to -0.07) match the standardized betas in the main text, and the main text reports unstandardized b of about -0.2 to -0.4. If the betas are actually unstandardized, d cannot be computed: the paper reports no SD for texting or video chat, only for total screen time (3.07 h/day). 3) Table S1 does not print per-cell N. The paper also never says whether each device was modeled on its own or all devices were entered together; the r2 values differ by device, which suggests separate models. 4) I set significance using the FDR p, which the authors corrected across all 25 tests in Table S1. On that basis texting is not significant for executive function (raw p .017, FDR .071) or processing speed (raw p .023, FDR .064). 5) The covariate list follows Section 2.6. Section 2.5 points to the Table 2 variables as covariates, and those also include total brain size and handedness, so the exact covariate set is somewhat ambiguous. Section 2.5 actually cites 'Table 1', which looks like a typo for Table 2. 6) The paper does not name the ABCD wave. Mean age 119 months points to baseline, and the authors describe the design as cross-sectional. 7) The SD_DV values come from the full sample in Table 2, not the analytic sample. They are listed for reference only, since a standardized-beta conversion does not need them.json"
+}

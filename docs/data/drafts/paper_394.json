@@ -1,0 +1,308 @@
+{
+ "paper_id": "394",
+ "title": "Screen time and mental health: a prospective analysis of the Adolescent Brain Cognitive Development (ABCD) Study",
+ "doi": "10.1186/s12889-024-20102-x",
+ "year": "2024",
+ "authors": "Nagata JM, Al-Shoaibi AAA, Leong AW, Zamora G, Testa A, Ganson KT, Baker FC",
+ "journal": "BMC Public Health",
+ "extraction_status": "human_reviewed",
+ "d_transformable": true,
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_updated": "2026-05-08T00:00:00Z",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Mixed-effects linear regression of CBCL DSM-oriented symptom t-scores on baseline phone/SM modalities",
+   "location_in_paper": "Table 2, fully adjusted Model 2 (pp 5-7); discussion pp 8-9. Sensitivity analyses in Appendix B.",
+   "design": "Prospective longitudinal cohort with repeated outcome measurement. Baseline phone/SM exposure (and baseline CBCL t-score for the DV scale) predicts follow-up CBCL at Y1 and Y2 (2018-2020, overlapping COVID). Both follow-up scores enter long-format as separate rows; the model treats them as repeated measures. No wave-by-IV interaction, so beta_1 pools across the two-year follow-up window.",
+   "sample": "ABCD Release 4.0. Baseline 2016-2018, 21 U.S. sites. N=9,538 with complete data on baseline screen time, baseline covariates, and Y1+Y2 CBCL. Excluded N=2,337 (19.7%) for missing data. Same N for all 18 IV x DV estimates. Mean age 9.9 (SD 0.6); 48.8% female; 52.4% NH White, 20.1% Latino, 17.3% NH Black, 5.5% NH Asian, 3.2% Native American, 1.5% Other.",
+   "iv": "Baseline phone/SM hours per day, one modality per estimate (texting, video chat, social media). ABCD Youth Screen Time Survey, weighted daily hours = (weekday x 5 + weekend x 2) / 7. Baseline distribution (M +/- SD): texting 0.2 +/- 0.6; video chat 0.3 +/- 0.7; social media 0.1 +/- 0.1 h/day. Floor effects: most 9-10 year olds are below the 13+ min age for major SM platforms.",
+   "dv": "CBCL DSM-oriented t-score, parent-report, repeated measures Y1 and Y2. Six scales run separately: depressive, anxiety, somatic, ADHD, ODD, conduct. Raw scores -> t-scores (mean 50, SD 10 by construction). Baseline (Y0) t-score on the same scale enters as covariate.",
+   "covariates": [
+    {
+     "name": "Baseline value of outcome scale",
+     "detail": "Autoregressive; beta_1 becomes association with change-style follow-up net of baseline symptoms"
+    },
+    {
+     "name": "Age",
+     "detail": "Years at baseline (continuous)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Binary female/male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "5 categories; NH White reference; 4 dummies"
+    },
+    {
+     "name": "Household income",
+     "detail": "6 brackets <$25K to >=$200K; 5 dummies"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Binary HS-or-less vs. college+"
+    },
+    {
+     "name": "COVID period",
+     "detail": "Binary pre/during (March 13, 2020 cutoff)"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept (21 sites)"
+    }
+   ],
+   "equation": "CBCL_DV[i,wave] = b0 + b1*phoneSM_IV[i] + b2*CBCL_baseline[i] + b3*age + b4*sex + b5..b8*race + b9..b13*income + b14*parent_ed + b15*covid_period + u_site(i) + e[i,wave]",
+   "estimation": "Software: Stata 18.0 mixed procedure. Estimation: maximum likelihood. Weights: ACS propensity weights (nationwide-representative). Random intercept for study site. alpha = 0.05. Multiple-comparison correction: NONE reported (with 18 tests, ~1 false positive expected). Sex interactions all p > 0.05. Race/ethnicity interactions significant for some outcomes but stratified estimates in Table 3 are total-screen-time only. Sensitivity in Appendix B refits adding sleep and physical activity; per-modality numbers not printed.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "sd_iv": 0.6,
+     "meta": "M = 0.2 h/day, SD = 0.6"
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "sd_iv": 0.7,
+     "meta": "M = 0.3 h/day, SD = 0.7"
+    },
+    {
+     "id": "social_media",
+     "label": "Social media",
+     "sd_iv": 0.1,
+     "meta": "M = 0.1 h/day, SD = 0.1"
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "depressive",
+     "label": "Depressive",
+     "sd_dv": 10.0
+    },
+    {
+     "id": "anxiety",
+     "label": "Anxiety",
+     "sd_dv": 10.0
+    },
+    {
+     "id": "somatic",
+     "label": "Somatic",
+     "sd_dv": 10.0
+    },
+    {
+     "id": "adhd",
+     "label": "ADHD",
+     "sd_dv": 10.0
+    },
+    {
+     "id": "odd",
+     "label": "ODD",
+     "sd_dv": 10.0
+    },
+    {
+     "id": "conduct",
+     "label": "Conduct",
+     "sd_dv": 10.0
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "depressive",
+     "B": 0.26,
+     "B_lo": 0.09,
+     "B_hi": 0.44,
+     "p": 0.005,
+     "sig": true
+    },
+    {
+     "iv": "texting",
+     "dv": "anxiety",
+     "B": 0.1,
+     "B_lo": -0.07,
+     "B_hi": 0.27,
+     "p": 0.231,
+     "sig": false
+    },
+    {
+     "iv": "texting",
+     "dv": "somatic",
+     "B": 0.19,
+     "B_lo": -0.04,
+     "B_hi": 0.42,
+     "p": 0.101,
+     "sig": false
+    },
+    {
+     "iv": "texting",
+     "dv": "adhd",
+     "B": 0.18,
+     "B_lo": -0.02,
+     "B_hi": 0.39,
+     "p": 0.08,
+     "sig": false
+    },
+    {
+     "iv": "texting",
+     "dv": "odd",
+     "B": 0.12,
+     "B_lo": -0.04,
+     "B_hi": 0.28,
+     "p": 0.151,
+     "sig": false
+    },
+    {
+     "iv": "texting",
+     "dv": "conduct",
+     "B": 0.1,
+     "B_lo": 0.05,
+     "B_hi": 0.16,
+     "p": 0.001,
+     "sig": true
+    },
+    {
+     "iv": "video_chat",
+     "dv": "depressive",
+     "B": 0.35,
+     "B_lo": 0.19,
+     "B_hi": 0.51,
+     "p": 0.0005,
+     "sig": true
+    },
+    {
+     "iv": "video_chat",
+     "dv": "anxiety",
+     "B": 0.12,
+     "B_lo": -0.06,
+     "B_hi": 0.3,
+     "p": 0.189,
+     "sig": false
+    },
+    {
+     "iv": "video_chat",
+     "dv": "somatic",
+     "B": 0.05,
+     "B_lo": -0.21,
+     "B_hi": 0.31,
+     "p": 0.683,
+     "sig": false
+    },
+    {
+     "iv": "video_chat",
+     "dv": "adhd",
+     "B": 0.22,
+     "B_lo": 0.03,
+     "B_hi": 0.41,
+     "p": 0.022,
+     "sig": true
+    },
+    {
+     "iv": "video_chat",
+     "dv": "odd",
+     "B": 0.11,
+     "B_lo": -0.09,
+     "B_hi": 0.33,
+     "p": 0.246,
+     "sig": false
+    },
+    {
+     "iv": "video_chat",
+     "dv": "conduct",
+     "B": 0.33,
+     "B_lo": 0.11,
+     "B_hi": 0.56,
+     "p": 0.006,
+     "sig": true
+    },
+    {
+     "iv": "social_media",
+     "dv": "depressive",
+     "B": 0.14,
+     "B_lo": -0.09,
+     "B_hi": 0.33,
+     "p": 0.23,
+     "sig": false
+    },
+    {
+     "iv": "social_media",
+     "dv": "anxiety",
+     "B": 0.004,
+     "B_lo": -0.24,
+     "B_hi": 0.25,
+     "p": 0.971,
+     "sig": false
+    },
+    {
+     "iv": "social_media",
+     "dv": "somatic",
+     "B": 0.11,
+     "B_lo": -0.16,
+     "B_hi": 0.38,
+     "p": 0.421,
+     "sig": false
+    },
+    {
+     "iv": "social_media",
+     "dv": "adhd",
+     "B": 0.04,
+     "B_lo": -0.31,
+     "B_hi": 0.39,
+     "p": 0.805,
+     "sig": false
+    },
+    {
+     "iv": "social_media",
+     "dv": "odd",
+     "B": 0.07,
+     "B_lo": -0.19,
+     "B_hi": 0.33,
+     "p": 0.617,
+     "sig": false
+    },
+    {
+     "iv": "social_media",
+     "dv": "conduct",
+     "B": 0.22,
+     "B_lo": -0.02,
+     "B_hi": 0.47,
+     "p": 0.071,
+     "sig": false
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Model 1 (unadjusted)",
+   "location": "Table 2 left columns",
+   "why": "Reported for transparency to demonstrate covariate-driven attenuation; the paper anchors no claim to it. Adds no new information about the phone/SM-trait relationship."
+  },
+  {
+   "model": "Race-stratified Model 2",
+   "location": "Table 3",
+   "why": "Reports stratified estimates for total screen time only, not per modality. No phone/SM-specific stratified estimates exist."
+  },
+  {
+   "model": "Sensitivity adding sleep + physical activity",
+   "location": "Appendix B",
+   "why": "Per-modality estimates were not printed."
+  },
+  {
+   "model": "Interaction tests",
+   "location": "In-text",
+   "why": "Tests of whether the slope differs across subgroups; produce interaction p-values, not new phone/SM estimates."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
+  "contrast_type": "per 1-SD change in the IV",
+  "transformable": true,
+  "notes": "SD_DV = 10 by construction (CBCL t-score is normed mean=50 SD=10). SD_IV per modality is reported in Table 1 (texting 0.6; video chat 0.7; social media 0.1). Not directly comparable to per-1-SD d's from papers using a different contrast (e.g., paper 156's high vs. low group difference)."
+ }
+}

@@ -1,0 +1,1704 @@
+{
+ "paper_id": "95",
+ "title": "Elevated loss sensitivity in the reward circuit in adolescents with video game but not social media addiction",
+ "doi": "10.1016/j.chb.2025.108554",
+ "year": "2025",
+ "authors": "He X, Chen Y, Zhang W, Li CR",
+ "journal": "Computers in Human Behavior",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed model of MID-task ROI beta-weights on SMA x Time, adjusted for VGA x Time, demographics and head motion",
+   "location_in_paper": "Model 1 specification p. 3; Table 3 SMA x Time columns (p. 6); Results 3.2 p. 4; interpreted in Discussion pp. 4-6 and Conclusion p. 7 (SMA showed no long-term association with reward or loss sensitivity).",
+   "design": "Longitudinal, two waves: ABCD Year 2 follow-up (Time 1, ages 11-13) and Year 4 follow-up (Time 2, ages 13-15). SMA, VGA and ROI beta-weights are measured at both waves and entered in long format as repeated measures (two rows per participant). The focal SMA estimate printed in the paper is the SMA x Time interaction, i.e. whether the SMA-brain association differs between Time 1 and Time 2. The SMA main effect is in the model but its coefficients are not printed (text only says it did not reach significance, p_FDR > 0.05). Each of 32 ROI-by-contrast DVs fitted in a separate model.",
+   "sample": "ABCD data from the Year 2 (Time 1, ages 11-13) and Year 4 (Time 2, ages 13-15) follow-ups; release version not stated (NDA study 2313 cited). From the original 10,964 participants, exclusions were missing basic demographics (sex, age, race/ethnicity, family income), missing VGA or SMA data, missing MID fMRI data, or imaging flagged for exclusion by the ABCD analytic core (Hagler et al., 2019). 2,400 met criteria at Year 2 and 1,578 at Year 4; the final sample is N = 543 who met criteria at both time points. SMAQ/VGAQ were administered only to youth reporting at least one social media account or video game use. Final sample (Table 1): age 11 = 244 (44.9%), 12 = 298 (54.9%), 13 = 1 (0.2%); 331 male (61.0%), 212 female (39.0%); White 261 (48.1%), Black 80 (14.7%), Hispanic 132 (24.3%), Asian 10 (1.8%), Other 60 (11.0%). Authors report no significant demographic differences between final and original samples.",
+   "iv": "Social Media Addiction Questionnaire (SMAQ), 6 items adapted from the Bergen Facebook Addiction Scale, each rated 1 (Never) to 6 (Very often), summed score (range 6-36 per Fig. 2). McDonald's omega = 0.86. Administered only to youth reporting at least one social media account. Means and SDs are not tabulated; Fig. 2 shows violin distributions only. SMA was significantly lower at Time 1 than Time 2 (paired t = -5.34, p < .001, Cohen's d = -0.23). Time is coded as the two waves (coding not stated). The estimate is the SMA x Time interaction coefficient, reported as a standardized beta.",
+   "dv": "MID task fMRI ROI beta-weights from the ABCD curated tabulated data (Hagler et al., 2019): Reward Anticipation vs. Neutral (reward contrast) and Loss Anticipation vs. Neutral (loss contrast), averaged across the two runs, in 8 bilateral ROIs (nucleus accumbens, amygdala, caudate, putamen, insula, caudal ACC, medial OFC, rostral ACC labeled vmPFC), left and right separately, giving 32 DVs each modelled separately. Units are GLM beta coefficients; no descriptive statistics reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Continuous, years"
+    },
+    {
+     "name": "Sex",
+     "detail": "Dichotomous, 1 = male, 2 = female"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Five levels: White, Black, Hispanic, Asian, Other"
+    },
+    {
+     "name": "Family income",
+     "detail": "10-point ordinal scale, 1 (< $5,000) to 10 ($200,000 and greater), treated as covariate"
+    },
+    {
+     "name": "Mean framewise displacement",
+     "detail": "Head motion during fMRI scanning"
+    },
+    {
+     "name": "VGA score and VGA x Time",
+     "detail": "Video Game Addiction Questionnaire score and its interaction with Time entered simultaneously with SMA terms"
+    },
+    {
+     "name": "SMA main effect and Time main effect",
+     "detail": "Lower-order terms of the focal interaction"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "BetaWeight_ROI[i,t] = b0 + b1*VGA[i,t] + b2*SMA[i,t] + b3*Time[t] + b4*VGA[i,t]*Time[t] + b5*SMA[i,t]*Time[t] + b6*Age + b7*Sex + b8..b11*Race/ethnicity + b12*FamilyIncome + b13*MeanFD + u_site + e[i,t]; focal estimate b5 (SMA x Time).",
+   "estimation": "Linear mixed models in R lme4; random intercept for research site only (no participant random effect is stated despite repeated measures). Coefficients reported as standardized betas with 95% CI. Benjamini-Hochberg FDR correction across models; significance judged at p_FDR < 0.05. No weights. For significant VGA x Time interactions, simple slopes were probed at -1 SD, mean and +1 SD of VGA; no SMA simple slopes because no SMA x Time effect survived FDR. No sensitivity analyses reported.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sma_x_time",
+     "label": "SMA x Time",
+     "meta": "SMAQ score by wave interaction, standardized",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "rew_nac_L",
+     "label": "Reward: Nucleus accumbens L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_nac_R",
+     "label": "Reward: Nucleus accumbens R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_amyg_L",
+     "label": "Reward: Amygdala L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_amyg_R",
+     "label": "Reward: Amygdala R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_caud_L",
+     "label": "Reward: Caudate L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_caud_R",
+     "label": "Reward: Caudate R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_put_L",
+     "label": "Reward: Putamen L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_put_R",
+     "label": "Reward: Putamen R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ins_L",
+     "label": "Reward: Insula L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ins_R",
+     "label": "Reward: Insula R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_acc_L",
+     "label": "Reward: ACC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_acc_R",
+     "label": "Reward: ACC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ofc_L",
+     "label": "Reward: OFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ofc_R",
+     "label": "Reward: OFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_vmpfc_L",
+     "label": "Reward: vmPFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_vmpfc_R",
+     "label": "Reward: vmPFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_nac_L",
+     "label": "Loss: Nucleus accumbens L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_nac_R",
+     "label": "Loss: Nucleus accumbens R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_amyg_L",
+     "label": "Loss: Amygdala L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_amyg_R",
+     "label": "Loss: Amygdala R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_caud_L",
+     "label": "Loss: Caudate L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_caud_R",
+     "label": "Loss: Caudate R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_put_L",
+     "label": "Loss: Putamen L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_put_R",
+     "label": "Loss: Putamen R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ins_L",
+     "label": "Loss: Insula L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ins_R",
+     "label": "Loss: Insula R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_acc_L",
+     "label": "Loss: ACC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_acc_R",
+     "label": "Loss: ACC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ofc_L",
+     "label": "Loss: OFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ofc_R",
+     "label": "Loss: OFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_vmpfc_L",
+     "label": "Loss: vmPFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_vmpfc_R",
+     "label": "Loss: vmPFC R",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_nac_L",
+     "beta": -0.039,
+     "beta_lo": -0.11,
+     "beta_hi": 0.03,
+     "p": 0.248,
+     "p_label": "0.248",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Nucleus accumbens L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.333 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_nac_R",
+     "beta": -0.028,
+     "beta_lo": -0.1,
+     "beta_hi": 0.04,
+     "p": 0.404,
+     "p_label": "0.404",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Nucleus accumbens R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.491 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_amyg_L",
+     "beta": 0.014,
+     "beta_lo": -0.05,
+     "beta_hi": 0.08,
+     "p": 0.674,
+     "p_label": "0.674",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Amygdala L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.719 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_amyg_R",
+     "beta": 0.006,
+     "beta_lo": -0.06,
+     "beta_hi": 0.07,
+     "p": 0.857,
+     "p_label": "0.857",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Amygdala R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.871 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_caud_L",
+     "beta": -0.058,
+     "beta_lo": -0.12,
+     "beta_hi": 0.01,
+     "p": 0.091,
+     "p_label": "0.091",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Caudate L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_caud_R",
+     "beta": -0.051,
+     "beta_lo": -0.12,
+     "beta_hi": 0.02,
+     "p": 0.131,
+     "p_label": "0.131",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Caudate R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.238 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_put_L",
+     "beta": -0.051,
+     "beta_lo": -0.12,
+     "beta_hi": 0.02,
+     "p": 0.134,
+     "p_label": "0.134",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Putamen L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.238 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_put_R",
+     "beta": -0.037,
+     "beta_lo": -0.1,
+     "beta_hi": 0.03,
+     "p": 0.281,
+     "p_label": "0.281",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Putamen R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.367 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_ins_L",
+     "beta": -0.047,
+     "beta_lo": -0.11,
+     "beta_hi": 0.02,
+     "p": 0.164,
+     "p_label": "0.164",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Insula L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.259 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_ins_R",
+     "beta": -0.028,
+     "beta_lo": -0.1,
+     "beta_hi": 0.04,
+     "p": 0.407,
+     "p_label": "0.407",
+     "sig": false,
+     "location": "Table 3, reward contrast section, Insula R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.491 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_acc_L",
+     "beta": -0.042,
+     "beta_lo": -0.11,
+     "beta_hi": 0.02,
+     "p": 0.213,
+     "p_label": "0.213",
+     "sig": false,
+     "location": "Table 3, reward contrast section, ACC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.302 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_acc_R",
+     "beta": -0.061,
+     "beta_lo": -0.13,
+     "beta_hi": 0.01,
+     "p": 0.073,
+     "p_label": "0.073",
+     "sig": false,
+     "location": "Table 3, reward contrast section, ACC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_ofc_L",
+     "beta": 0.015,
+     "beta_lo": -0.05,
+     "beta_hi": 0.08,
+     "p": 0.662,
+     "p_label": "0.662",
+     "sig": false,
+     "location": "Table 3, reward contrast section, OFC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.718 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_ofc_R",
+     "beta": -0.012,
+     "beta_lo": -0.08,
+     "beta_hi": 0.06,
+     "p": 0.729,
+     "p_label": "0.729",
+     "sig": false,
+     "location": "Table 3, reward contrast section, OFC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.753 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_vmpfc_L",
+     "beta": -0.047,
+     "beta_lo": -0.11,
+     "beta_hi": 0.02,
+     "p": 0.166,
+     "p_label": "0.166",
+     "sig": false,
+     "location": "Table 3, reward contrast section, vmPFC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.259 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "rew_vmpfc_R",
+     "beta": -0.022,
+     "beta_lo": -0.09,
+     "beta_hi": 0.05,
+     "p": 0.519,
+     "p_label": "0.519",
+     "sig": false,
+     "location": "Table 3, reward contrast section, vmPFC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.604 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_nac_L",
+     "beta": -0.061,
+     "beta_lo": -0.13,
+     "beta_hi": 0.01,
+     "p": 0.073,
+     "p_label": "0.073",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Nucleus accumbens L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_nac_R",
+     "beta": -0.059,
+     "beta_lo": -0.13,
+     "beta_hi": 0.01,
+     "p": 0.085,
+     "p_label": "0.085",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Nucleus accumbens R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_amyg_L",
+     "beta": 0.042,
+     "beta_lo": -0.03,
+     "beta_hi": 0.11,
+     "p": 0.217,
+     "p_label": "0.217",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Amygdala L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.302 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_amyg_R",
+     "beta": -0.013,
+     "beta_lo": -0.08,
+     "beta_hi": 0.05,
+     "p": 0.695,
+     "p_label": "0.695",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Amygdala R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.729 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_caud_L",
+     "beta": -0.053,
+     "beta_lo": -0.12,
+     "beta_hi": 0.01,
+     "p": 0.12,
+     "p_label": "0.120",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Caudate L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.226 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_caud_R",
+     "beta": -0.054,
+     "beta_lo": -0.12,
+     "beta_hi": 0.01,
+     "p": 0.114,
+     "p_label": "0.114",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Caudate R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.221 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_put_L",
+     "beta": -0.058,
+     "beta_lo": -0.13,
+     "beta_hi": 0.01,
+     "p": 0.087,
+     "p_label": "0.087",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Putamen L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_put_R",
+     "beta": -0.066,
+     "beta_lo": -0.13,
+     "beta_hi": 0.0,
+     "p": 0.052,
+     "p_label": "0.052",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Putamen R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.158 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_ins_L",
+     "beta": -0.057,
+     "beta_lo": -0.12,
+     "beta_hi": 0.01,
+     "p": 0.09,
+     "p_label": "0.090",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Insula L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_ins_R",
+     "beta": -0.081,
+     "beta_lo": -0.15,
+     "beta_hi": -0.02,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": false,
+     "location": "Table 3, loss contrast section, Insula R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.089 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do. Nominally significant uncorrected (p = 0.017) but not after FDR; CI printed as [-0.15, -0.02]."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_acc_L",
+     "beta": -0.045,
+     "beta_lo": -0.11,
+     "beta_hi": 0.02,
+     "p": 0.187,
+     "p_label": "0.187",
+     "sig": false,
+     "location": "Table 3, loss contrast section, ACC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.278 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_acc_R",
+     "beta": -0.061,
+     "beta_lo": -0.13,
+     "beta_hi": 0.01,
+     "p": 0.07,
+     "p_label": "0.070",
+     "sig": false,
+     "location": "Table 3, loss contrast section, ACC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.182 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_ofc_L",
+     "beta": 0.002,
+     "beta_lo": -0.07,
+     "beta_hi": 0.07,
+     "p": 0.949,
+     "p_label": "0.949",
+     "sig": false,
+     "location": "Table 3, loss contrast section, OFC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.949 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_ofc_R",
+     "beta": -0.03,
+     "beta_lo": -0.1,
+     "beta_hi": 0.04,
+     "p": 0.369,
+     "p_label": "0.369",
+     "sig": false,
+     "location": "Table 3, loss contrast section, OFC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.463 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_vmpfc_L",
+     "beta": -0.046,
+     "beta_lo": -0.11,
+     "beta_hi": 0.02,
+     "p": 0.181,
+     "p_label": "0.181",
+     "sig": false,
+     "location": "Table 3, loss contrast section, vmPFC L row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.276 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    },
+    {
+     "iv": "sma_x_time",
+     "dv": "loss_vmpfc_R",
+     "beta": -0.021,
+     "beta_lo": -0.09,
+     "beta_hi": 0.05,
+     "p": 0.532,
+     "p_label": "0.532",
+     "sig": false,
+     "location": "Table 3, loss contrast section, vmPFC R row, SMA x Time columns (p. 6)",
+     "note": "p_FDR = 0.608 (Benjamini-Hochberg); significance coded on p_FDR < 0.05 as the authors do."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Cross-sectional partial correlations of SMA with MID-task ROI beta-weights at each wave, conditioned on demographics",
+   "location_in_paper": "Table 2, SMA columns under Time 1 and Time 2 (p. 5); Results 3.1 p. 4; interpreted in Discussion p. 5 (positive correlation between SMA and loss sensitivity at both times and reward sensitivity at Time 2).",
+   "design": "Cross-sectional within each wave: SMA at Time 1 (Year 2) correlated with ROI beta-weights at Time 1, and SMA at Time 2 (Year 4) correlated with ROI beta-weights at Time 2 (concurrent pairing inferred from Table 2 layout and Results text; not stated explicitly). One correlation per ROI x contrast x wave.",
+   "sample": "ABCD data from the Year 2 (Time 1, ages 11-13) and Year 4 (Time 2, ages 13-15) follow-ups; release version not stated (NDA study 2313 cited). From the original 10,964 participants, exclusions were missing basic demographics (sex, age, race/ethnicity, family income), missing VGA or SMA data, missing MID fMRI data, or imaging flagged for exclusion by the ABCD analytic core (Hagler et al., 2019). 2,400 met criteria at Year 2 and 1,578 at Year 4; the final sample is N = 543 who met criteria at both time points. SMAQ/VGAQ were administered only to youth reporting at least one social media account or video game use. Final sample (Table 1): age 11 = 244 (44.9%), 12 = 298 (54.9%), 13 = 1 (0.2%); 331 male (61.0%), 212 female (39.0%); White 261 (48.1%), Black 80 (14.7%), Hispanic 132 (24.3%), Asian 10 (1.8%), Other 60 (11.0%). Authors report no significant demographic differences between final and original samples. N per correlation is not stated; assumed to be the 543 final sample.",
+   "iv": "Social Media Addiction Questionnaire (SMAQ), 6 items adapted from the Bergen Facebook Addiction Scale, each rated 1 (Never) to 6 (Very often), summed score (range 6-36 per Fig. 2). McDonald's omega = 0.86. Administered only to youth reporting at least one social media account. Means and SDs are not tabulated; Fig. 2 shows violin distributions only. SMA was significantly lower at Time 1 than Time 2 (paired t = -5.34, p < .001, Cohen's d = -0.23). Direction is symmetric (correlation); SMA treated here as the IV column.",
+   "dv": "MID task fMRI ROI beta-weights from the ABCD curated tabulated data (Hagler et al., 2019): Reward Anticipation vs. Neutral (reward contrast) and Loss Anticipation vs. Neutral (loss contrast), averaged across the two runs, in 8 bilateral ROIs (nucleus accumbens, amygdala, caudate, putamen, insula, caudal ACC, medial OFC, rostral ACC labeled vmPFC), left and right separately, giving 32 DVs each modelled separately. Units are GLM beta coefficients; no descriptive statistics reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Partialled out"
+    },
+    {
+     "name": "Sex",
+     "detail": "Partialled out"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Partialled out"
+    },
+    {
+     "name": "Family income",
+     "detail": "Partialled out"
+    }
+   ],
+   "equation": "r_partial(SMA[t], BetaWeight_ROI[t] | Age, Sex, Race/ethnicity, FamilyIncome), computed separately for t = Time 1 and Time 2.",
+   "estimation": "Partial correlations; software not separately stated (analyses in R). Table note says correlations are conditioned on age, sex, race/ethnicity and family income; mean framewise displacement and site are not listed. p-values appear uncorrected (bolded at p < .05) even though the text says all models were BH-corrected; no FDR values are printed for Table 2. No CIs.",
+   "native_metric": "r",
+   "iv_axis": [
+    {
+     "id": "sma_t1",
+     "label": "SMA, Time 1 (Year 2)",
+     "meta": "SMAQ sum score, ages 11-13",
+     "sd_iv": null
+    },
+    {
+     "id": "sma_t2",
+     "label": "SMA, Time 2 (Year 4)",
+     "meta": "SMAQ sum score, ages 13-15",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "rew_nac_L",
+     "label": "Reward: Nucleus accumbens L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_nac_R",
+     "label": "Reward: Nucleus accumbens R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_amyg_L",
+     "label": "Reward: Amygdala L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_amyg_R",
+     "label": "Reward: Amygdala R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_caud_L",
+     "label": "Reward: Caudate L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_caud_R",
+     "label": "Reward: Caudate R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_put_L",
+     "label": "Reward: Putamen L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_put_R",
+     "label": "Reward: Putamen R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ins_L",
+     "label": "Reward: Insula L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ins_R",
+     "label": "Reward: Insula R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_acc_L",
+     "label": "Reward: ACC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_acc_R",
+     "label": "Reward: ACC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ofc_L",
+     "label": "Reward: OFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_ofc_R",
+     "label": "Reward: OFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_vmpfc_L",
+     "label": "Reward: vmPFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "rew_vmpfc_R",
+     "label": "Reward: vmPFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_nac_L",
+     "label": "Loss: Nucleus accumbens L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_nac_R",
+     "label": "Loss: Nucleus accumbens R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_amyg_L",
+     "label": "Loss: Amygdala L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_amyg_R",
+     "label": "Loss: Amygdala R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_caud_L",
+     "label": "Loss: Caudate L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_caud_R",
+     "label": "Loss: Caudate R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_put_L",
+     "label": "Loss: Putamen L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_put_R",
+     "label": "Loss: Putamen R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ins_L",
+     "label": "Loss: Insula L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ins_R",
+     "label": "Loss: Insula R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_acc_L",
+     "label": "Loss: ACC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_acc_R",
+     "label": "Loss: ACC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ofc_L",
+     "label": "Loss: OFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_ofc_R",
+     "label": "Loss: OFC R",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_vmpfc_L",
+     "label": "Loss: vmPFC L",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "loss_vmpfc_R",
+     "label": "Loss: vmPFC R",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sma_t1",
+     "dv": "rew_nac_L",
+     "r": 0.013,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.768,
+     "p_label": "0.768",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Nucleus accumbens L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_nac_L",
+     "r": -0.023,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.589,
+     "p_label": "0.589",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Nucleus accumbens L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_nac_R",
+     "r": 0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.359,
+     "p_label": "0.359",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Nucleus accumbens R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_nac_R",
+     "r": -0.015,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.728,
+     "p_label": "0.728",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Nucleus accumbens R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_amyg_L",
+     "r": -0.014,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.754,
+     "p_label": "0.754",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Amygdala L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_amyg_L",
+     "r": 0.089,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.038,
+     "p_label": "0.038",
+     "sig": true,
+     "location": "Table 2, reward contrast section, Amygdala L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_amyg_R",
+     "r": -0.011,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.795,
+     "p_label": "0.795",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Amygdala R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_amyg_R",
+     "r": 0.076,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.079,
+     "p_label": "0.079",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Amygdala R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_caud_L",
+     "r": 0.027,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.529,
+     "p_label": "0.529",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Caudate L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_caud_L",
+     "r": -0.022,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.61,
+     "p_label": "0.610",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Caudate L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_caud_R",
+     "r": 0.015,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.735,
+     "p_label": "0.735",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Caudate R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_caud_R",
+     "r": -0.019,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.653,
+     "p_label": "0.653",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Caudate R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_put_L",
+     "r": 0.008,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.852,
+     "p_label": "0.852",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Putamen L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_put_L",
+     "r": -0.035,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.413,
+     "p_label": "0.413",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Putamen L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_put_R",
+     "r": -0.002,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.968,
+     "p_label": "0.968",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Putamen R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_put_R",
+     "r": -0.021,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.628,
+     "p_label": "0.628",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Putamen R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_ins_L",
+     "r": 0.042,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.329,
+     "p_label": "0.329",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Insula L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_ins_L",
+     "r": 0.02,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.651,
+     "p_label": "0.651",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Insula L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_ins_R",
+     "r": 0.008,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.844,
+     "p_label": "0.844",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Insula R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_ins_R",
+     "r": 0.023,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.592,
+     "p_label": "0.592",
+     "sig": false,
+     "location": "Table 2, reward contrast section, Insula R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_acc_L",
+     "r": -0.012,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.776,
+     "p_label": "0.776",
+     "sig": false,
+     "location": "Table 2, reward contrast section, ACC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_acc_L",
+     "r": -0.03,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.485,
+     "p_label": "0.485",
+     "sig": false,
+     "location": "Table 2, reward contrast section, ACC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_acc_R",
+     "r": 0.019,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.654,
+     "p_label": "0.654",
+     "sig": false,
+     "location": "Table 2, reward contrast section, ACC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_acc_R",
+     "r": -0.019,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.652,
+     "p_label": "0.652",
+     "sig": false,
+     "location": "Table 2, reward contrast section, ACC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_ofc_L",
+     "r": -0.043,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.324,
+     "p_label": "0.324",
+     "sig": false,
+     "location": "Table 2, reward contrast section, OFC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_ofc_L",
+     "r": 0.028,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.51,
+     "p_label": "0.510",
+     "sig": false,
+     "location": "Table 2, reward contrast section, OFC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_ofc_R",
+     "r": -0.033,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.446,
+     "p_label": "0.446",
+     "sig": false,
+     "location": "Table 2, reward contrast section, OFC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_ofc_R",
+     "r": -0.01,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.812,
+     "p_label": "0.812",
+     "sig": false,
+     "location": "Table 2, reward contrast section, OFC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_vmpfc_L",
+     "r": 0.033,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.444,
+     "p_label": "0.444",
+     "sig": false,
+     "location": "Table 2, reward contrast section, vmPFC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_vmpfc_L",
+     "r": -0.013,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.755,
+     "p_label": "0.755",
+     "sig": false,
+     "location": "Table 2, reward contrast section, vmPFC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "rew_vmpfc_R",
+     "r": 0.01,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.821,
+     "p_label": "0.821",
+     "sig": false,
+     "location": "Table 2, reward contrast section, vmPFC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "rew_vmpfc_R",
+     "r": 0.015,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.728,
+     "p_label": "0.728",
+     "sig": false,
+     "location": "Table 2, reward contrast section, vmPFC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_nac_L",
+     "r": 0.026,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.541,
+     "p_label": "0.541",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Nucleus accumbens L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_nac_L",
+     "r": -0.003,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.943,
+     "p_label": "0.943",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Nucleus accumbens L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_nac_R",
+     "r": 0.059,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.168,
+     "p_label": "0.168",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Nucleus accumbens R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_nac_R",
+     "r": 0.001,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.982,
+     "p_label": "0.982",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Nucleus accumbens R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_amyg_L",
+     "r": -0.01,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.814,
+     "p_label": "0.814",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Amygdala L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_amyg_L",
+     "r": 0.119,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.006,
+     "p_label": "0.006",
+     "sig": true,
+     "location": "Table 2, loss contrast section, Amygdala L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_amyg_R",
+     "r": 0.026,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.551,
+     "p_label": "0.551",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Amygdala R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_amyg_R",
+     "r": 0.085,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.047,
+     "p_label": "0.047",
+     "sig": true,
+     "location": "Table 2, loss contrast section, Amygdala R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_caud_L",
+     "r": 0.059,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.173,
+     "p_label": "0.173",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Caudate L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_caud_L",
+     "r": 0.014,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.752,
+     "p_label": "0.752",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Caudate L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_caud_R",
+     "r": 0.061,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.158,
+     "p_label": "0.158",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Caudate R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_caud_R",
+     "r": 0.024,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.583,
+     "p_label": "0.583",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Caudate R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_put_L",
+     "r": 0.055,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.204,
+     "p_label": "0.204",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Putamen L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_put_L",
+     "r": 0.036,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.402,
+     "p_label": "0.402",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Putamen L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_put_R",
+     "r": 0.06,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.167,
+     "p_label": "0.167",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Putamen R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_put_R",
+     "r": 0.019,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.653,
+     "p_label": "0.653",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Putamen R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_ins_L",
+     "r": 0.066,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.129,
+     "p_label": "0.129",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Insula L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_ins_L",
+     "r": 0.059,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.172,
+     "p_label": "0.172",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Insula L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_ins_R",
+     "r": 0.1,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.02,
+     "p_label": ".020",
+     "sig": true,
+     "location": "Table 2, loss contrast section, Insula R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_ins_R",
+     "r": 0.034,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.438,
+     "p_label": "0.438",
+     "sig": false,
+     "location": "Table 2, loss contrast section, Insula R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_acc_L",
+     "r": 0.019,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.664,
+     "p_label": "0.664",
+     "sig": false,
+     "location": "Table 2, loss contrast section, ACC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_acc_L",
+     "r": 0.01,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.808,
+     "p_label": "0.808",
+     "sig": false,
+     "location": "Table 2, loss contrast section, ACC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_acc_R",
+     "r": 0.051,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.237,
+     "p_label": "0.237",
+     "sig": false,
+     "location": "Table 2, loss contrast section, ACC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_acc_R",
+     "r": 0.04,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.356,
+     "p_label": "0.356",
+     "sig": false,
+     "location": "Table 2, loss contrast section, ACC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_ofc_L",
+     "r": -0.008,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.853,
+     "p_label": "0.853",
+     "sig": false,
+     "location": "Table 2, loss contrast section, OFC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_ofc_L",
+     "r": 0.029,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.499,
+     "p_label": "0.499",
+     "sig": false,
+     "location": "Table 2, loss contrast section, OFC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_ofc_R",
+     "r": 0.006,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.898,
+     "p_label": "0.898",
+     "sig": false,
+     "location": "Table 2, loss contrast section, OFC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_ofc_R",
+     "r": -0.002,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.963,
+     "p_label": "0.963",
+     "sig": false,
+     "location": "Table 2, loss contrast section, OFC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_vmpfc_L",
+     "r": 0.045,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.296,
+     "p_label": "0.296",
+     "sig": false,
+     "location": "Table 2, loss contrast section, vmPFC L row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_vmpfc_L",
+     "r": 0.033,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.443,
+     "p_label": "0.443",
+     "sig": false,
+     "location": "Table 2, loss contrast section, vmPFC L row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t1",
+     "dv": "loss_vmpfc_R",
+     "r": 0.037,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.392,
+     "p_label": "0.392",
+     "sig": false,
+     "location": "Table 2, loss contrast section, vmPFC R row, Time 1 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    },
+    {
+     "iv": "sma_t2",
+     "dv": "loss_vmpfc_R",
+     "r": 0.055,
+     "r_lo": null,
+     "r_hi": null,
+     "p": 0.205,
+     "p_label": "0.205",
+     "sig": false,
+     "location": "Table 2, loss contrast section, vmPFC R row, Time 2 SMA columns (p. 5)",
+     "note": "No CI reported; p appears uncorrected (bold in table = p < .05)."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "VGA x Time and VGA main-effect estimates in Model 1",
+   "location": "Table 3 VGA x Time columns (p. 6); Fig. 3",
+   "why": "Video game addiction (VGAQ) is a generic gaming variable with no phone/mobile modality; fails FT-IC2 clarification 2. Only the SMA terms of the same model are extracted (M1)."
+  },
+  {
+   "model": "SMA main effect in Model 1",
+   "location": "Results 3.2, p. 4 (text only)",
+   "why": "Reported only as 'did not reach the significant level (p_FDR's > 0.05)'; no coefficients printed."
+  },
+  {
+   "model": "Model 2 (hypothesis 2): SMA as DV on ROI beta-weights x Time",
+   "location": "Methods p. 4 equation; Results 3.3 p. 4; Table 4 reports VGA only",
+   "why": "Qualifying SM-as-DV analysis, but SMA results are only described narratively ('No significant interaction on SMA were observed (p_FDR's > 0.05)'); no numeric SMA estimates printed."
+  },
+  {
+   "model": "VGA columns of Table 2 partial correlations",
+   "location": "Table 2 (p. 5)",
+   "why": "Gaming variable, not phone/SM."
+  },
+  {
+   "model": "SMA-VGA correlations",
+   "location": "Table 2 top rows (p. 5); Results 3.1",
+   "why": "Pairs SMA with another media-use variable (gaming addiction), not an individual-trait outcome under FT-IC2."
+  },
+  {
+   "model": "Paired t-tests of VGA/SMA and of reward beta-weights between Time 1 and Time 2",
+   "location": "Results 3.1, p. 4",
+   "why": "Within-variable change over time (SMA d = -0.23; reward NAc), not an SM-trait association."
+  },
+  {
+   "model": "VGA simple slopes at -1 SD / mean / +1 SD",
+   "location": "Results 3.2-3.3; Fig. 3B",
+   "why": "VGA only; figure-only values."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: standardized beta (interaction coefficient); M2: partial r",
+  "conversion_formula": "M2: d = 2r / sqrt(1 - r^2). M1: treat standardized beta as approximate r, d = 2*beta_std / sqrt(1 - beta_std^2), applied to CI endpoints as well.",
+  "contrast_type": "M1: change in the standardized SMA-brain slope from Time 1 to Time 2 (difference in association between waves), not a simple per-SD association. M2: per 1 SD of SMA (correlation) at a single wave.",
+  "transformable": "partial",
+  "notes": "M2 partial correlations convert directly via r to d, though no CIs are printed so d CIs cannot be formed. M1 coefficients are standardized interaction terms (Table 3 note: 'standardized beta coefficients'); converting them to d is mechanically possible but the result describes a between-wave difference in slope, not a main association, and the SMA main effect itself is unreported, so M1 d values are not comparable to per-SD association d's from other papers. Time coding and standardization procedure (which variables standardized) are not stated. No means or SDs for SMA or beta-weights are reported anywhere (Fig. 2 shows distributions only), so sd_iv and sd_dv are null; none are needed because both metrics are already standardized."
+ },
+ "extraction_flags": "Things to check by hand:\n\n(1) For M1, the SMA estimate the paper prints is only the SMA x Time interaction (Table 3). The paper says the SMA main effect is \"not significant\" but prints no coefficient for it. So M1's d values describe how the association changed between waves, not the association itself. Coders should decide whether M1 belongs in the d comparison at all.\n\n(2) M2 uses the Table 2 partial correlations (SMA with ROI beta-weights at Time 1 and Time 2). These are conditioned on demographics only, with no head motion and no site term. The p-values appear uncorrected even though the text says all models were BH-corrected. I coded sig at p < .05 to match the paper's bolding. Two things are inferred from the table layout and Results text, not stated: that SMA and brain were measured at the same wave, and that N = 543 per correlation.\n\n(3) The SMA-as-DV model (hypothesis 2) went to excluded_models. The paper reports SMA results only as \"no significant interaction\" and gives no numbers.\n\n(4) M1 significance is coded on p_FDR < .05. Right insula loss is p = .017 uncorrected but p_FDR = .089, so it is coded sig = false.\n\n(5) The paper does not say how Time was coded or which variables were standardized. The LMM has only a site random intercept; no participant random effect is stated even though the data are repeated measures.\n\n(6) No SDs or means for SMA or beta-weights are reported anywhere, so all sd fields are null.\n\n(7) The pdftotext extraction labels the second row of each ROI pair as only \"R\" for the vmPFC rows. I mapped them by order to vmPFC R, and spot-checks against the page images matched."
+}

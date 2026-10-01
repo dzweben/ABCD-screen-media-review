@@ -1,0 +1,330 @@
+{
+ "paper_id": "310",
+ "title": "Associations between social media and crystallized and fluid performance trajectories in early adolescence",
+ "doi": "10.1111/jora.70125",
+ "year": "2025",
+ "authors": "Carvalho C, Ravindran N",
+ "journal": "Journal of Research on Adolescence",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Parallel-process latent growth curve model of social media hours and NIH Toolbox cognitive performance (crystallized, Flanker, Pattern Comparison), adjusted for sex, race, parent education and baseline TV, streaming and video game hours",
+   "location_in_paper": "Table 3, Models 5 (crystallized), 6 (Flanker) and 7 (Pattern Comparison) (p. 8); results text pp. 7-8; interpreted in Discussion p. 9. Univariate growth models in Table 2 (p. 7); descriptives in Table 1 (p. 6).",
+   "design": "Longitudinal, three ABCD waves: baseline (Y0, mean age 9.9), 2-year follow-up (Y2, mean age 12.0) and 4-year follow-up (Y4, mean age 14.1). Social media hours and cognitive performance are both measured at all three waves. For each cognitive domain a separate bivariate parallel-process latent growth curve model estimates an intercept and a linear slope for social media hours and for the cognitive score (slope loadings rescaled to assessment timing, 0/2/4 years). Intercept-intercept and slope-slope covariances are freely estimated, and each slope is regressed on the other construct's intercept (i_sm -> s_cog and i_cog -> s_sm), so social media appears both as predictor and as outcome within the same model. Three separate models were run (crystallized, Flanker, Pattern Comparison) with identical specification.",
+   "sample": "ABCD Study Release 5.1, 21 U.S. sites. Baseline N = 11,876 (mean age 9.9); Y2 printed as N = 100,972 (apparently a typo for about 10,972; mean age 12.0); Y4 N = 4754 (mean age 14.1), reduced because of the ABCD staggered data release. Missing data handled by FIML, so the analytic sample is the full baseline cohort; exact analytic N per model is not printed. Listwise-deletion sensitivity N = 4289. Baseline composition reported as White 52.0%, Hispanic 20.3%, Black 15.0%, Asian 2.1%, Other 10.5%; female 47.8%; about 41% from families with income of $100,000 or higher and 73% from married two-parent households. Missingness at Y2 and Y4 was higher for Black and Hispanic youth (OR range 1.30-1.69) and lower at Y2 for higher parent education (OR 0.87-0.89).",
+   "iv": "Social media hours (Y0, Y2, Y4), youth self-report of weekday and weekend hours on the item asking how many hours they visit social networking sites like Facebook, Twitter, Instagram; responses in hours (Y0 1-4, Y2/Y4 1-23) plus minutes (0, 15, 30, 45). Mean daily hours = weighted average of weekday (5/7) and weekend (2/7). Positively skewed, so log-transformed before modeling. Table 1 reports SMU Y0 M = .12, SD = .42; Y2 M = .68, SD = 1.32; Y4 M = 1.71, SD = 2.05 (the table does not state whether these are raw or log-transformed values). In the growth model the focal social media terms are the latent intercept (i_sm, baseline level) and latent linear slope (s_sm, rate of change per year). Social media is the predictor in the i_sm -> s_cog path, the outcome in the i_cog -> s_sm path, and a correlate in the covariance paths.",
+   "dv": "NIH Toolbox cognition, uncorrected standard scores, Y0/Y2/Y4. (1) Crystallized abilities: z-score average of Oral Reading Recognition and Picture Vocabulary, anchored to Y0 (two-indicator alpha .69-.73); Table 1 Y0/Y2/Y4 M = 87.66/91.97/96.93, SD = 6.59/6.81/9.15. (2) Inhibitory control/attention: Flanker task; M = 93.99/100.14/104.34, SD = 9.14/7.71/7.31. (3) Processing speed: Pattern Comparison Processing Speed test; M = 88.06/103.53/115.66, SD = 14.59/15.09/16.73. Latent intercepts (i_cog) and slopes (s_cog) were modeled for each. Cognitive measures are the outcome in the i_sm -> s_cog path and predictors of s_sm in the i_cog -> s_sm path.",
+   "covariates": [
+    {
+     "name": "Youth sex",
+     "detail": "Time-invariant, F = 0, M = 1; intercepts and slopes regressed on it"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Baseline, time-invariant; Table 1 M = 3.74, SD = 1.17 (coding scale not described)"
+    },
+    {
+     "name": "Race",
+     "detail": "Listed as a covariate in the Table 3 note and the missing-data paragraph (p. 5) but not in the Covariates section; coding not described"
+    },
+    {
+     "name": "Y0 TV viewing hours",
+     "detail": "Baseline electronic media use, predictor of intercepts and slopes"
+    },
+    {
+     "name": "Y0 online streaming hours",
+     "detail": "Baseline electronic media use, predictor of intercepts and slopes"
+    },
+    {
+     "name": "Y0 video game hours",
+     "detail": "Baseline electronic media use, predictor of intercepts and slopes"
+    }
+   ],
+   "equation": "For each domain cog in {cryst, flanker, pattern}: SM[i,t] = i_sm[i] + s_sm[i]*time_t + e_sm[i,t]; COG[i,t] = i_cog[i] + s_cog[i]*time_t + e_cog[i,t], time_t = 0, 2, 4 years. i_sm = a1 + g1*X + u1; i_cog = a2 + g2*X + u2; s_sm = a3 + b1*i_cog + g3*X + u3; s_cog = a4 + b2*i_sm + g4*X + u4; Cov(u1,u2) = intercept-intercept covariance; Cov(u3,u4) = slope-slope covariance. X = sex, race, parent education, Y0 TV hours, Y0 streaming hours, Y0 video game hours. Focal terms: Cov(u3,u4) (s_cog <-> s_sm), b2 (i_sm -> s_cog), b1 (i_cog -> s_sm), Cov(u1,u2) (i_cog <-> i_sm).",
+   "estimation": "Mplus 8.3. Full-information maximum likelihood with robust standard errors (MLR) for non-normality of social media hours; data assumed MAR with race and parent education included as auxiliary covariates. Fit benchmarks RMSEA < .06, SRMR < .08, CFI > .95, TLI > .95; reported fit CFI = 0.99, TLI = 0.97-0.98, SRMR = 0.01-0.02, RMSEA = 0.03-0.04. No random effect or clustering for site or family reported, and no survey weights. Benjamini-Hochberg FDR applied to cross-construct associations (p-adjusted column in Table 3). Alpha .05. No sex or other interaction tests. Sensitivity analysis re-estimated each model with listwise deletion (N = 4289); described narratively (slope-slope findings similar; crystallized i-i association and pattern intercept-slope associations no longer significant) with no numbers printed. Mplus syntax at https://osf.io/5d9s8/.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "s_cog_s_sm",
+     "label": "Slope-slope covariance (s_cog <-> s_sm)",
+     "meta": "SM growth with cognitive growth; standardized = correlation",
+     "sd_iv": null
+    },
+    {
+     "id": "i_sm_to_s_cog",
+     "label": "SM intercept -> cognitive slope (i_sm -> s_cog)",
+     "meta": "SM as predictor",
+     "sd_iv": null
+    },
+    {
+     "id": "i_cog_to_s_sm",
+     "label": "Cognitive intercept -> SM slope (i_cog -> s_sm)",
+     "meta": "SM as outcome",
+     "sd_iv": null
+    },
+    {
+     "id": "i_cog_i_sm",
+     "label": "Intercept-intercept covariance (i_cog <-> i_sm)",
+     "meta": "Baseline SM with baseline cognition; standardized = correlation",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cryst",
+     "label": "Crystallized (reading + vocabulary), Model 5",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "flanker",
+     "label": "Flanker inhibitory control/attention, Model 6",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "pattern",
+     "label": "Pattern Comparison processing speed, Model 7",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "s_cog_s_sm",
+     "dv": "cryst",
+     "beta": -0.36,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, Model 5, row s_cryst <-> s_sm",
+     "note": "Unstandardized Est. = -0.09, SE = 0.01, 95% CI [-0.11, -0.07] (CI is on the unstandardized scale). p-adjusted <.001.",
+     "derived_d": -0.7717,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_sm_to_s_cog",
+     "dv": "cryst",
+     "beta": -0.22,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 3, Model 5, row i_sm -> s_cryst",
+     "note": "Unstandardized Est. = -0.11, SE = 0.12, 95% CI [-0.15, -0.07]. The printed SE (0.12) is inconsistent with the CI and p < .001; possible typo in Table 3. p-adjusted <.001.",
+     "derived_d": -0.4511,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_to_s_sm",
+     "dv": "cryst",
+     "beta": 0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.665,
+     "p_label": ".665",
+     "sig": false,
+     "location": "Table 3, Model 5, row i_cryst -> s_sm",
+     "note": "Unstandardized Est. = 0.00, SE = 0.00, 95% CI [-0.01, 0.01]. p-adjusted .665.",
+     "derived_d": 0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_i_sm",
+     "dv": "cryst",
+     "beta": -0.04,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.024,
+     "p_label": ".024",
+     "sig": true,
+     "location": "Table 3, Model 5, row i_cryst <-> i_sm",
+     "note": "Unstandardized Est. = -0.19, SE = 0.02, 95% CI [-0.33, 0.01]; the printed CI includes 0 despite p = .024. p-adjusted .041. Not significant in listwise sensitivity analysis (text p. 8).",
+     "derived_d": -0.0801,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "s_cog_s_sm",
+     "dv": "flanker",
+     "beta": -0.09,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.031,
+     "p_label": ".031",
+     "sig": true,
+     "location": "Table 3, Model 6, row s_flanker <-> s_sm",
+     "note": "Unstandardized Est. = -0.04, SE = 0.02, 95% CI [-0.07, -0.01]. p-adjusted .046.",
+     "derived_d": -0.1807,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_sm_to_s_cog",
+     "dv": "flanker",
+     "beta": -0.06,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.115,
+     "p_label": ".115",
+     "sig": false,
+     "location": "Table 3, Model 6, row i_sm -> s_flanker",
+     "note": "Unstandardized Est. = -0.06, SE = 0.04, 95% CI [-0.13, 0.04]. p-adjusted .138.",
+     "derived_d": -0.1202,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_to_s_sm",
+     "dv": "flanker",
+     "beta": 0.04,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.093,
+     "p_label": ".093",
+     "sig": false,
+     "location": "Table 3, Model 6, row i_flanker -> s_sm",
+     "note": "Unstandardized Est. = 0.01, SE = 0.00, 95% CI [-0.01, 0.02]. p-adjusted .124.",
+     "derived_d": 0.0801,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_i_sm",
+     "dv": "flanker",
+     "beta": 0.06,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3, Model 6, row i_flanker <-> i_sm",
+     "note": "Unstandardized Est. = 0.39, SE = 0.12, 95% CI [0.16, 0.70]. p-adjusted .002. Positive sign contrasts with the negative zero-order Y0 correlation (Table 1, r = -.03) and with the Discussion's description of both constructs as negatively linked at baseline.",
+     "derived_d": 0.1202,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "s_cog_s_sm",
+     "dv": "pattern",
+     "beta": 0.11,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3, Model 7, row s_pattern <-> s_sm",
+     "note": "Unstandardized Est. = 0.12, SE = 0.04, 95% CI [0.05, 0.21]. p-adjusted .002.",
+     "derived_d": 0.2213,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_sm_to_s_cog",
+     "dv": "pattern",
+     "beta": 0.1,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.003,
+     "p_label": ".003",
+     "sig": true,
+     "location": "Table 3, Model 7, row i_sm -> s_pattern",
+     "note": "Unstandardized Est. = 0.22, SE = 0.08, 95% CI [0.08, 0.41]. p-adjusted .006. Not significant in listwise sensitivity analysis (text p. 8).",
+     "derived_d": 0.201,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_to_s_sm",
+     "dv": "pattern",
+     "beta": 0.06,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3, Model 7, row i_pattern -> s_sm",
+     "note": "Unstandardized Est. = 0.02, SE = 0.00, 95% CI [0.01, 0.03]. p-adjusted .002. Not significant in listwise sensitivity analysis (text p. 8).",
+     "derived_d": 0.1202,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "i_cog_i_sm",
+     "dv": "pattern",
+     "beta": 0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.455,
+     "p_label": ".455",
+     "sig": false,
+     "location": "Table 3, Model 7, row i_pattern <-> i_sm",
+     "note": "Unstandardized Est. = 0.14, SE = 0.19, 95% CI [-0.23, 0.62]. p-adjusted .496.",
+     "derived_d": 0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Univariate latent growth curve model of social media hours (Model 1)",
+   "location": "Table 2, Model 1 (p. 7); covariate effects in text pp. 5-7",
+   "why": "Single-construct growth model; its only non-demographic predictors of the social media slope are baseline video game, TV and streaming hours (non-phone/SM modalities) and demographics (sex, parent education, race). No cognitive or other individual-trait variable is paired with social media."
+  },
+  {
+   "model": "Univariate latent growth curve models of crystallized, Flanker and Pattern Comparison performance (Models 2-4)",
+   "location": "Table 2, Models 2-4 (p. 7); covariate effects in text p. 7",
+   "why": "No social media term; covariates are demographics and non-phone media (video game, TV hours)."
+  },
+  {
+   "model": "Bivariate zero-order correlations of SMU Y0/Y2/Y4 with cognitive scores",
+   "location": "Table 1 (p. 6)",
+   "why": "Unadjusted descriptive correlations reported as background; the authors anchor their claims to the adjusted parallel-process models in Table 3."
+  },
+  {
+   "model": "Listwise-deletion sensitivity re-estimation of Models 5-7 (N = 4289)",
+   "location": "Results, Sensitivity analyses (p. 8)",
+   "why": "Described narratively only; no estimates printed."
+  },
+  {
+   "model": "Covariate effects (sex, race, parent education, Y0 TV, streaming and video game hours) in Models 5-7",
+   "location": "Table 3 note; not shown",
+   "why": "Not phone/SM estimates and not printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized path coefficients / standardized covariances from parallel-process LGCM)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2) (guidelines section 4a, SEM path coefficients, standardized).",
+  "contrast_type": "Per 1 SD of the latent predictor (for i_sm -> s_cog and i_cog -> s_sm); for the covariance rows the standardized value is a latent correlation between growth factors (slope-slope or intercept-intercept).",
+  "transformable": true,
+  "notes": "Standardized coefficients taken from the beta column of Table 3 (p. 8); the conversion needs no SD_IV or SD_DV, so sd_iv and sd_dv are left null. No CI is printed on the standardized scale (the 95% CI column is on the unstandardized Est. scale), so d CIs cannot be derived; unstandardized Est., SE and CI are kept in each estimate's note. The d values describe associations between latent growth factors (levels and rates of change), not per-hour associations between observed social media time and cognitive score, so they are not directly comparable to per-SD observed-variable d's from regression papers. Social media hours were log-transformed. Table 3 contains internal inconsistencies (i_sm -> s_cryst SE 0.12 with CI [-0.15, -0.07] and p < .001; i_cryst <-> i_sm CI [-0.33, 0.01] with p = .024)."
+ },
+ "extraction_flags": "Each gives 4 social media paths: the slope-slope covariance, i_sm -> s_cog, i_cog -> s_sm and the intercept-intercept covariance. That makes 12 estimates.\n\nThings to check:\n(1) The native metric is the standardized beta column. The 95% CI in Table 3 is on the unstandardized Est. scale, so beta CIs are null. I kept Est., SE and CI in each estimate's note. This means the d values will have no CIs.\n(2) The covariance rows are latent correlations between growth factors, not directional effects. Please decide whether to convert them to d with the r -> d formula, or to keep only the directional paths.\n(3) Table 3 is inconsistent with itself in two places. For i_sm -> s_cryst, SE = 0.12 is printed next to CI [-0.15, -0.07] and p < .001. For i_cryst <-> i_sm, the CI [-0.33, 0.01] includes 0 but p = .024.\n(4) For i_flanker <-> i_sm, beta = +.06, but the zero-order correlation is negative and the Discussion says the two were negatively linked at baseline.\n(5) The analytic N per model is not printed (FIML). Y2 N is printed as '100,972', which is probably a typo for about 10,972. The listwise sensitivity N is 4289 and is reported only as narrative.\n(6) Race appears as a covariate in the Table 3 note but not in the Covariates section.\n(7) Social media hours were log-transformed. It is unclear whether the SMU M/SD in Table 1 are raw or log values; this does not matter for converting the standardized betas.\n(8) For p < .001 I set p to null and kept p_label as '<.001'."
+}

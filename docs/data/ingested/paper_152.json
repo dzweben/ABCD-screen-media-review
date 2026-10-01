@@ -1,0 +1,140 @@
+{
+ "paper_id": "152",
+ "title": "COVID information and masking behaviors in U.S. adolescents: Findings from the Adolescent Brain Cognitive Development (ABCD) Study",
+ "doi": "10.1016/j.pmedr.2022.101900",
+ "year": "2022",
+ "authors": "Nagata JM, Ganson KT, Liu J, Patel KP, Tai JC, Murray SB, Bibbins-Domingo K",
+ "journal": "Preventive Medicine Reports",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Weighted modified Poisson regression (adjusted risk ratio) of always masking on frequent checking of COVID-related social media activity, mutually adjusted for other information sources, parent counseling, sociodemographics, school type, child COVID infection and site",
+   "location_in_paper": "Table 2, Adjusted ARR (95% CI) column, row 1 (p. 3); reported in Results p. 3 and interpreted in Discussion p. 3",
+   "design": "Cross-sectional. Single wave: the December 2020 ABCD COVID-19 Rapid Response Research survey. IV (adolescent self-reported frequency of checking COVID-related information on social media in the past week) and DV (adolescent self-reported masking in the last week) were collected in the same survey. One observation per adolescent; no repeated measures. Sociodemographic confounders were taken from the baseline parent survey. All four information-source variables (social media, internet, television, parent counseling) enter the same adjusted model, so the social media ARR is adjusted for the other three.",
+   "sample": "ABCD COVID-19 Rapid Response Research Release, December 2020 survey. Analytic N = 4,106 adolescents aged 12-14 years (35% response rate among ABCD participants invited). 50.6% female, 49.4% male; 60.5% White, 16.7% Latino/Hispanic, 11.3% Black, 8.2% Asian, 2.1% Native American, 1.2% Other (39.5% racial/ethnic minorities). Household income <$75,000 47.7%, >=$75,000 52.3%. Parent highest education high school or less 12.8%, college or more 87.2%. Schooling in past week: online/school-at-home 65.2%, in person 15.9%, hybrid 13.3%, other 5.7%. Parent-reported child COVID-19 diagnosis 4.4%. Percentages in Table 1 are ABCD propensity-weighted. Included vs excluded participant characteristics are in the Supplemental Appendix (not bundled in this PDF); the authors note responders were more likely to be White, female and higher SES.",
+   "iv": "Adolescent self-reported frequency, in the past week, of checking COVID-related social media activity (e.g. Facebook, Twitter, Instagram, TikTok, SnapChat), dichotomized as 'almost every hour or more' vs less often. 9.1% of the weighted sample were in the 'almost every hour or more' category (Table 1). Exact question wording and full response options are in the Supplemental Appendix, which is not included in this PDF. The IV is COVID-information-specific social media checking, not total social media time.",
+   "dv": "Always masking: binary indicator derived from the adolescent item 'I wear a mask over my face or protective gear (e.g. gloves, things to cover my clothes)' in the last week. Response distribution (Table 1, weighted): have not done this 4.3%, some of the time 12.0%, most of the time 21.5%, all the time 62.3%. The outcome 'always masking' corresponds to 'all the time last week' (62.3%); the comparison category is the other three responses. The paper does not explicitly state the cut, but Table 2 is labelled 'Always masking' and the text equates it with wearing masks all the time.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "From baseline parent survey; female vs male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "From baseline parent survey; White, Latino/Hispanic, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Household income",
+     "detail": "From baseline parent survey; <$75,000 vs >=$75,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education from baseline parent survey; high school or less vs college or more"
+    },
+    {
+     "name": "School type",
+     "detail": "Type of schooling in past week: online/school-at-home, in person, hybrid, other"
+    },
+    {
+     "name": "Child COVID infection",
+     "detail": "Parent report that a health care provider ever said child has or might have COVID-19 (yes/no)"
+    },
+    {
+     "name": "Study site",
+     "detail": "21 ABCD sites; adjusted for as a covariate (functional form not stated)"
+    },
+    {
+     "name": "Checking COVID news/updates on the internet (e.g. YouTube)",
+     "detail": "Almost every hour or more vs less; other information-source IV in the same model"
+    },
+    {
+     "name": "Viewing COVID television media coverage",
+     "detail": "An hour per day or more vs less; other information-source IV in the same model"
+    },
+    {
+     "name": "Parent counseling on the importance of wearing a mask",
+     "detail": "Parent report, frequently or very frequently vs less; other information-source IV in the same model"
+    }
+   ],
+   "equation": "log Pr(always_mask[i] = 1) = b0 + b1*SM_check_hourly[i] + b2*internet_check_hourly[i] + b3*TV_hour_per_day[i] + b4*parent_counsel_frequent[i] + b5*sex + b6*race_ethnicity + b7*income + b8*parent_ed + b9*school_type + b10*child_COVID + b11*site; ARR for social media = exp(b1). Fitted with Poisson regression and robust variance (modified Poisson, Zou 2004), ABCD ACS propensity weights applied.",
+   "estimation": "Modified Poisson regression (Zou 2004) with coefficients transformed to risk ratios, in Stata 15.1 (analyses run in 2021). ABCD propensity weights applied to approximate the American Community Survey. Site entered as an adjustment variable; no random effects or family clustering described. Significance judged at p < 0.05 (implied by interpretation of p = 0.049 as significant); no multiple-comparison correction. No interaction or stratified analyses reported. Unadjusted RRs reported alongside in Table 2; authors say unadjusted models had similar findings.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "sm_covid_check",
+     "label": "Checking COVID-related social media activity almost every hour or more",
+     "meta": "Binary, 9.1% exposed (Table 1); platforms named Facebook, Twitter, Instagram, TikTok, SnapChat",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "always_mask",
+     "label": "Always masking (wore mask/protective gear all the time last week)",
+     "sd_dv": null,
+     "p0": 0.623
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_covid_check",
+     "dv": "always_mask",
+     "RR": 1.09,
+     "RR_lo": 1.0,
+     "RR_hi": 1.19,
+     "p": 0.049,
+     "p_label": "0.049",
+     "sig": true,
+     "location": "Table 2, row 1, Adjusted ARR (95% CI) column (p. 3)",
+     "note": "Adjusted risk ratio. Unadjusted RR 1.15 (1.07-1.25), p <0.001 (Table 2, excluded as transparency artifact). Direction: frequent COVID social media checking associated with higher likelihood of always masking. p0 = 0.623 is the weighted marginal rate of 'all the time last week' in the whole sample (Table 1), not the rate in the unexposed group.",
+     "derived_d": 0.1363,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.3037,
+     "derived_d_method": "RR -> OR -> d (p0=0.623)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted modified Poisson regression (RR)",
+   "location": "Table 2, Unadjusted RR (95% CI) column (p. 3)",
+   "why": "Unadjusted transparency estimate (social media RR 1.15, 1.07-1.25, p <0.001); the authors anchor their claims to the adjusted ARRs and state unadjusted models had similar findings."
+  },
+  {
+   "model": "Checking COVID news and updates on the internet (e.g. YouTube) -> always masking",
+   "location": "Table 2, row 2 (p. 3)",
+   "why": "Generic internet/YouTube information-seeking is not a phone- or social-media-specific modality under FT-IC2 (generic internet browsing is a disqualifying ingredient). Enters M1 as a covariate."
+  },
+  {
+   "model": "Viewing COVID television media coverage -> always masking",
+   "location": "Table 2, row 3 (p. 3)",
+   "why": "Television is a non-phone, non-SM modality. Enters M1 as a covariate."
+  },
+  {
+   "model": "Parent counseling on mask wearing -> always masking",
+   "location": "Table 2, row 4 (p. 3)",
+   "why": "Not a phone/SM variable. Enters M1 as a covariate."
+  },
+  {
+   "model": "Included vs excluded participant comparison",
+   "location": "Supplemental Appendix (not in this PDF)",
+   "why": "Descriptive attrition comparison, no phone/SM estimate."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "RR (adjusted risk ratio from modified Poisson regression)",
+  "conversion_formula": "OR = RR * (1 - p0) / (1 - RR * p0); d = ln(OR) * sqrt(3) / pi (Chinn 2000). Apply to RR, RR_lo and RR_hi with p0 = 0.623.",
+  "contrast_type": "Binary exposure: checking COVID-related social media almost every hour or more vs less often (yes vs no).",
+  "transformable": true,
+  "notes": "p0 = 0.623 is the propensity-weighted proportion of the whole analytic sample reporting wearing a mask/protective gear 'all the time last week' (Table 1, p. 2). The outcome rate in the unexposed (less-than-hourly) group is not reported; because exposure prevalence is 9.1% (Table 1), the marginal rate is used as an approximation per guidelines \u00a74a, but 9.1% is near the ~10% threshold and the base rate is high (62%), so the RR-to-OR conversion is sensitive to p0. The RR is also covariate-adjusted and weighted, while p0 is a crude weighted marginal rate. The resulting d is a binary-contrast effect and is not directly comparable to per-1-SD d's from continuous-IV papers. The IV is COVID-information checking on social media, not general social media time."
+ },
+ "extraction_flags": "The single qualifying estimate is the adjusted RR 1.09 (1.00-1.19), p = 0.049, in Table 2. The IV is checking COVID-related information on social media \"almost every hour or more\" versus less often. It is not general social media time, so a coder should confirm it counts as a phone/SM modality under FT-IC2. The DV \"always masking\" was taken to mean the \"all the time last week\" response (62.3%), but the paper never states the cut explicitly. p0 = 0.623 is the weighted marginal rate for the whole sample; the rate in the unexposed group is not reported. Exposure prevalence is 9.1%, close to the 10% threshold, and the high base rate makes the RR-to-OR conversion sensitive to p0. The question wording, the response options and the included/excluded comparison are in an online Supplemental Appendix that is not bundled in the PDF. Site was adjusted for, but the paper does not say how it was modelled. The other information-source variables (internet/YouTube, TV, parent counseling) were excluded as non-phone/SM; they enter the model as mutual covariates."
+}

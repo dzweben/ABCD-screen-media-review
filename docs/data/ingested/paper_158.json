@@ -1,0 +1,464 @@
+{
+ "paper_id": "158",
+ "title": "Social epidemiology of bedtime screen use behaviors and sleep outcomes in early adolescence",
+ "doi": "10.1016/j.sleh.2025.05.005",
+ "year": "2025",
+ "authors": "Nagata JM, Shim J, Ramappa S, Deshpande I, Low P, Kiss O, Ganson KT, Testa A, He J, Baker FC",
+ "journal": "Sleep Health: Journal of the National Sleep Foundation",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multivariable logistic regression of binary sleep disturbance (SDSC >= 39) on bedtime phone/SM behaviors, adjusted for sociodemographics and site, ACS-weighted",
+   "location_in_paper": "Table 4, Sleep disturbance scale columns (p. 568); methods p. 564; results p. 565; sex-stratified version in Table 5 (see M4)",
+   "design": "Cross-sectional analysis of the ABCD Year 3 follow-up (2019-2021). Bedtime screen behaviors and sleep disturbance both measured at Year 3. One observation per participant; no repeated measures.",
+   "sample": "ABCD Year 3 follow-up; data release not stated. Of 11,875 enrolled, participants missing bedtime screen use responses were excluded, leaving N = 10,305 (complete case analysis; comparison of included vs excluded in online Appendix A). Mean age 12.93 (SD 0.65) years; 48.4% female, 51.6% male; 54.9% White, 19.6% Latino/Hispanic, 15.4% Black, 5.5% Asian, 3.1% Native American, 1.4% Other (weighted, Table 1). 84.3% assessed during the COVID-19 pandemic.",
+   "iv": "Single items from an 11-item bedtime screen use questionnaire completed by the adolescent, asking on how many nights in the past week they engaged in each activity while already in bed before going to sleep, rated on a five-point Likert scale from 1 (never) to 5 (every night); each item entered on that 1-5 scale. Qualifying items: 'Talk on the phone or text' (Table 2 distribution: 0 nights 54.4%, 1-2 nights 23.4%, 3-4 nights 12.5%, 5-7 nights 9.7%); 'Spend time online on social media (e.g., Facebook)' (56.1%, 20.2%, 12.6%, 11.2%); and 'In the past week, how often have you had phone calls, text messages, or emails that wake you after trying to go to sleep?' (same five-point scale; 75.5%, 16.2%, 5.5%, 2.8%). No item means or SDs reported.",
+   "dv": "Sleep disturbance, caregiver-reported 26-item Sleep Disturbance Scale for Children (SDSC), items rated 1 (never) to 5 (daily) and summed; dichotomized as absent (SDSC < 39) vs present (SDSC >= 39) per the scale developers' cutoff. Prevalence of sleep disturbance not reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years at Year 3"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female/male, caregiver-reported"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "White, Latino, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Sexual orientation",
+     "detail": "Adolescent report at Year 3: No, Yes, Maybe, Don't understand the question, Decline to answer"
+    },
+    {
+     "name": "Household income",
+     "detail": "6 categories from <= $24,999 to >= $200,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "College education or higher vs high school education or lower"
+    },
+    {
+     "name": "Number of siblings",
+     "detail": "Biological, adopted, step, and foster children in household; 0, 1, 2, 3, 4+"
+    },
+    {
+     "name": "COVID-19 pandemic period",
+     "detail": "Interview before vs after March 13, 2020"
+    },
+    {
+     "name": "Study site",
+     "detail": "Adjusted for; whether as fixed effect or otherwise not specified"
+    }
+   ],
+   "equation": "logit(P(SleepDisturbance[i] = 1)) = b0 + b1*BedtimeItem[i] + b2*age + b3*sex + b4..b8*race_ethnicity + b9..b12*sexual_orientation + b13..b17*income + b18*parent_ed + b19..b22*siblings + b23*covid_period + site terms",
+   "estimation": "Stata 18. Multivariable logistic regression per the methods (p. 564); note the table footnote describes the output as coming from 'modified Poisson and linear regression models' while the column is labeled OR. ABCD sample weights based on the American Community Survey applied. Two-sided alpha = .05; no multiple-comparison correction reported. Effect modification by sex, race/ethnicity, sexual orientation, household income, and parent education tested for the bedtime screen use mean score and total screen time; sex interactions additionally tested for each bedtime screen use item (Table 5). Race/ethnicity and sexual orientation interactions reported as non-significant (not shown). It is not explicitly stated whether each bedtime item was entered in a separate model.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "phone_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "1-5 nights/week Likert",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "1-5 nights/week Likert",
+     "sd_iv": null
+    },
+    {
+     "id": "woken_calls_texts",
+     "label": "Woken by phone calls, texts, or emails",
+     "meta": "1-5 frequency Likert",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sleep_disturbance",
+     "label": "Sleep disturbance (SDSC >= 39)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "phone_text",
+     "dv": "sleep_disturbance",
+     "OR": 1.11,
+     "OR_lo": 1.05,
+     "OR_hi": 1.18,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 4, row 'Talk on the phone or text'",
+     "derived_d": 0.0575,
+     "derived_d_lo": 0.0269,
+     "derived_d_hi": 0.0913,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "social_media",
+     "dv": "sleep_disturbance",
+     "OR": 1.08,
+     "OR_lo": 1.02,
+     "OR_hi": 1.15,
+     "p": 0.007,
+     "p_label": ".007",
+     "sig": true,
+     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)'",
+     "derived_d": 0.0424,
+     "derived_d_lo": 0.0109,
+     "derived_d_hi": 0.0771,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "woken_calls_texts",
+     "dv": "sleep_disturbance",
+     "OR": 1.1,
+     "OR_lo": 1.0,
+     "OR_hi": 1.21,
+     "p": 0.053,
+     "p_label": ".053",
+     "sig": false,
+     "location": "Table 4, row 'phone calls, text messages, or emails that wake you'",
+     "note": "Item includes emails in addition to phone calls and texts.",
+     "derived_d": 0.0525,
+     "derived_d_lo": 0.0,
+     "derived_d_hi": 0.1051,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Multivariable linear regression of sleep duration (hours) on bedtime phone/SM behaviors, adjusted for sociodemographics and site, ACS-weighted",
+   "location_in_paper": "Table 4, Sleep duration columns (p. 568); methods p. 564; results p. 565; sex-stratified version in Table 5 (see M3)",
+   "design": "Cross-sectional, ABCD Year 3 follow-up; IV and DV measured at the same visit. One observation per participant.",
+   "sample": "Same as M1: N = 10,305, Year 3, mean age 12.93 (SD 0.65), 48.4% female.",
+   "iv": "Same three qualifying bedtime items as M1, each on the five-point Likert scale (1 = never to 5 = every night). No means or SDs reported.",
+   "dv": "Sleep duration in hours from the adolescent-reported Munich Chronotype Questionnaire (MCTQ), using reported bed and wake times on weekdays and weekends; average weekly sleep duration computed as a weighted average of weekday and weekend duration (the paper describes the weights as 'weekdays (7) and weekends (2)'). Higher value = longer sleep. Mean and SD not reported.",
+   "covariates": [
+    {
+     "name": "(same as M1)",
+     "detail": "Age, sex, race and ethnicity, sexual orientation, household income, parent education, number of siblings, COVID-19 pandemic period, study site"
+    }
+   ],
+   "equation": "SleepDuration[i] = b0 + b1*BedtimeItem[i] + b2*age + b3*sex + b4..b8*race_ethnicity + b9..b12*sexual_orientation + b13..b17*income + b18*parent_ed + b19..b22*siblings + b23*covid_period + site terms + e[i]",
+   "estimation": "Stata 18. Multivariable linear regression with ACS-based ABCD sample weights. Two-sided alpha = .05; no multiple-comparison correction. Same interaction testing as M1; sex interactions per item shown in Table 5.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "phone_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "1-5 nights/week Likert",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "1-5 nights/week Likert",
+     "sd_iv": null
+    },
+    {
+     "id": "woken_calls_texts",
+     "label": "Woken by phone calls, texts, or emails",
+     "meta": "1-5 frequency Likert",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sleep_duration",
+     "label": "Sleep duration (h)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "phone_text",
+     "dv": "sleep_duration",
+     "B": -0.2,
+     "B_lo": -0.24,
+     "B_hi": -0.15,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, row 'Talk on the phone or text'",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "social_media",
+     "dv": "sleep_duration",
+     "B": -0.25,
+     "B_lo": -0.29,
+     "B_hi": -0.2,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, row 'Spend time online on social media (e.g., Facebook)'",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "woken_calls_texts",
+     "dv": "sleep_duration",
+     "B": -0.21,
+     "B_lo": -0.29,
+     "B_hi": -0.13,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 4, row 'phone calls, text messages, or emails that wake you'",
+     "note": "Item includes emails in addition to phone calls and texts.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Sex-stratified multivariable linear regression of sleep duration on bedtime phone/text and social media use",
+   "location_in_paper": "Table 5, Sleep duration columns (p. 568); interpreted in Results p. 565 and Discussion (Sex) p. 565",
+   "design": "Cross-sectional, ABCD Year 3. Same model as M2 estimated separately among female and male adolescents, reported where the sex interaction was significant.",
+   "sample": "N = 10,305 overall (48.4% female, 51.6% male); stratum-specific Ns not reported.",
+   "iv": "Bedtime 'Talk on the phone or text' and 'Spend time online on social media' items, five-point Likert scale. The 'woken by calls/texts/emails' item was not included in Table 5.",
+   "dv": "MCTQ sleep duration (hours), as in M2.",
+   "covariates": [
+    {
+     "name": "(same as M1 except sex within strata)",
+     "detail": "Age, race and ethnicity, sexual orientation, household income, parent education, number of siblings, COVID-19 pandemic period, study site; table footnote lists sex among adjustment variables"
+    }
+   ],
+   "equation": "Within sex stratum s: SleepDuration[i] = b0s + b1s*BedtimeItem[i] + covariates + site terms + e[i]; sex x item interaction tested in the pooled model",
+   "estimation": "Stata 18, ACS-based sample weights, alpha = .05. Sex x item interaction p-values: phone/text .023; social media .040. Stratified estimates were presented only where interactions were significant.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "phone_text",
+     "label": "Talk on the phone or text in bed",
+     "meta": "1-5 Likert",
+     "sd_iv": null
+    },
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "1-5 Likert",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "duration_female",
+     "label": "Sleep duration, female",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "duration_male",
+     "label": "Sleep duration, male",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "phone_text",
+     "dv": "duration_female",
+     "B": -0.25,
+     "B_lo": -0.31,
+     "B_hi": -0.19,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 5, Talk on the phone or text, Female",
+     "note": "Sex interaction p = .023",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "phone_text",
+     "dv": "duration_male",
+     "B": -0.13,
+     "B_lo": -0.2,
+     "B_hi": -0.05,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 5, Talk on the phone or text, Male",
+     "note": "Sex interaction p = .023",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "social_media",
+     "dv": "duration_female",
+     "B": -0.29,
+     "B_lo": -0.35,
+     "B_hi": -0.24,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 5, Spend time online on social media, Female",
+     "note": "Sex interaction p = .040",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "social_media",
+     "dv": "duration_male",
+     "B": -0.19,
+     "B_lo": -0.27,
+     "B_hi": -0.12,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 5, Spend time online on social media, Male",
+     "note": "Sex interaction p = .040",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  },
+  {
+   "model_id": "M4",
+   "name": "Sex-stratified multivariable logistic regression of sleep disturbance on bedtime social media use",
+   "location_in_paper": "Table 5, Sleep disturbance columns (p. 568); Results p. 565",
+   "design": "Cross-sectional, ABCD Year 3. Same model as M1 estimated separately by sex where the sex interaction was significant.",
+   "sample": "N = 10,305 overall (48.4% female, 51.6% male); stratum-specific Ns not reported.",
+   "iv": "Bedtime 'Spend time online on social media (e.g., Facebook)' item, five-point Likert scale. Phone/text was not stratified for sleep disturbance (sex interaction p = .077; cells shown as dashes).",
+   "dv": "Binary SDSC sleep disturbance (total >= 39), as in M1.",
+   "covariates": [
+    {
+     "name": "(same as M1 except sex within strata)",
+     "detail": "Age, race and ethnicity, sexual orientation, household income, parent education, number of siblings, COVID-19 pandemic period, study site"
+    }
+   ],
+   "equation": "Within sex stratum s: logit(P(SleepDisturbance[i] = 1)) = b0s + b1s*SocialMediaBedtime[i] + covariates + site terms",
+   "estimation": "Stata 18, ACS-based sample weights, alpha = .05. Sex x social media interaction p = .016.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "social_media",
+     "label": "Social media in bed",
+     "meta": "1-5 Likert",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "disturbance_female",
+     "label": "Sleep disturbance, female",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "disturbance_male",
+     "label": "Sleep disturbance, male",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "social_media",
+     "dv": "disturbance_female",
+     "OR": 1.03,
+     "OR_lo": 0.95,
+     "OR_hi": 1.12,
+     "p": 0.472,
+     "p_label": ".472",
+     "sig": false,
+     "location": "Table 5, Spend time online on social media, Female",
+     "note": "Sex interaction p = .016",
+     "derived_d": 0.0163,
+     "derived_d_lo": -0.0283,
+     "derived_d_hi": 0.0625,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "social_media",
+     "dv": "disturbance_male",
+     "OR": 1.16,
+     "OR_lo": 1.06,
+     "OR_hi": 1.27,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 5, Spend time online on social media, Male",
+     "note": "Sex interaction p = .016",
+     "derived_d": 0.0818,
+     "derived_d_lo": 0.0321,
+     "derived_d_hi": 0.1318,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Sociodemographic predictors of bedtime screen use (device in bedroom, mean score, waking-by-messages item, night-waking device use, total screen time)",
+   "location": "Table 3 (p. 567); per-modality version in online Appendix B (not in PDF)",
+   "why": "Other side is demographic only (age, sex, race/ethnicity, sexual orientation, income, parent education, siblings); fails the FT-IC2 individual-trait requirement. Appendix B is not bundled in the PDF."
+  },
+  {
+   "model": "Bedtime screen use mean score -> sleep disturbance / sleep duration",
+   "location": "Tables 4-7",
+   "why": "Composite averages movies/TV, video games, music, phone/text, social media, Internet, and computer studying; includes non-phone/SM items. Phone/SM items are broken out separately and extracted instead."
+  },
+  {
+   "model": "Electronic device (TV or Internet-connected device) in bedroom -> sleep outcomes",
+   "location": "Table 4; Table 6 (income-stratified)",
+   "why": "Bundles TV, computer, iPad, and phone; not phone-specific."
+  },
+  {
+   "model": "Watch/stream movies, play video games, play music, browse the Internet, use computer for studying -> sleep outcomes",
+   "location": "Table 4; Table 5 (sex-stratified)",
+   "why": "Non-phone/non-SM modalities."
+  },
+  {
+   "model": "Night-waking use of 'phone or other device to send messages/play games/search or browse the Internet/use social media/read or write emails' -> sleep outcomes",
+   "location": "Table 4 (OR 1.25, B -0.25)",
+   "why": "Single item mixing phone with other devices and bundling gaming and generic browsing with messaging and social media; fails FT-IC2 Step 2. Coders may wish to revisit."
+  },
+  {
+   "model": "Total recreational screen time -> sleep outcomes",
+   "location": "Tables 4-7",
+   "why": "Sum of multiplayer/single-player gaming, texting, social media, video chat, browsing, and TV/streaming; non-phone ingredients."
+  },
+  {
+   "model": "Income- and parent education-stratified models",
+   "location": "Tables 6 and 7",
+   "why": "Report only device-in-bedroom, bedtime mean score, and total screen time; no phone/SM-specific stratified estimates."
+  },
+  {
+   "model": "Race/ethnicity and sexual orientation interaction tests with sleep outcomes",
+   "location": "Results p. 565 (in text)",
+   "why": "Reported as non-significant without numbers; for mean score/total screen time only."
+  },
+  {
+   "model": "Phone-at-bedtime handling item ('What do you usually do with your phone when you are ready to go to sleep?')",
+   "location": "Table 2 (descriptive only)",
+   "why": "Descriptive frequencies only; not analyzed against sleep outcomes."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (M1, M4) + B (M2, M3)",
+  "conversion_formula": "OR models: d = ln(OR) * sqrt(3)/pi (Chinn 2000). B models: beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1) - not computable here because SD_IV and SD_DV are not reported.",
+  "contrast_type": "Per 1-point increase on the five-point bedtime frequency Likert scale (1 = never to 5 = every night) for each item.",
+  "transformable": "partial",
+  "notes": "ORs (M1, M4) convert via Chinn without additional inputs. For B models (M2, M3), the paper reports no mean or SD for the bedtime Likert items (Table 2 gives only categorical frequencies: 0, 1-2, 3-4, 5-7 nights) and no mean or SD for MCTQ sleep duration, so standardized d cannot be derived from the PDF; online supplement may contain them. Baseline prevalence of SDSC >= 39 is not reported (not needed for Chinn). Methods describe logistic regression for sleep disturbance, but table footnotes mention modified Poisson; columns are labeled OR."
+ },
+ "extraction_flags": "1) The methods describe logistic regression for SDSC sleep disturbance, but the table footnotes say the output comes from \"modified Poisson and linear regression\" models. The columns are labeled OR, so I recorded the values as OR. 2) The paper does not say whether each bedtime item was fit in its own model or whether all items were entered together; \"in addition to all variables listed\" in the footnote is ambiguous. 3) No SDs are reported for the 1-5 Likert bedtime items or for MCTQ sleep duration, so the B models (M2, M3) cannot be converted to d. The ORs can be converted with the Chinn formula. 4) I included the item about being woken by \"phone calls, text messages, or emails\" as phone-qualifying even though emails could come from a non-phone device; please check that call. I excluded the night-waking \"phone or other device ... play games/browse ...\" item as a mixed composite (OR 1.25, B -0.25); coders may want to revisit it. 5) I extracted the sex-stratified Table 5 estimates as separate cards (M3 linear, M4 logistic) because the authors interpret the sex differences. If you prefer, strike them or treat them as interaction results. 6) The ABCD release is not stated, and the online Appendices A and B are not in the PDF. 7) The paper's description of the sleep-duration weights (\"weekdays (7) and weekends (2)\") is copied as written but looks like an error for 5/2. All 12 values were checked against the Table 4 and Table 5 text."
+}

@@ -1,0 +1,361 @@
+{
+ "paper_id": "8",
+ "title": "Social Media Use and Depressive Symptoms During Early Adolescence",
+ "doi": "10.1001/jamanetworkopen.2025.11704",
+ "year": "2025",
+ "authors": "Nagata JM, Otmar CD, Shim J, Balasubramanian P, Cheng CM, Li EJ, Al-Shoaibi AAA, Shao IY, Ganson KT, Testa A, Kiss O, He J, Baker FC",
+ "journal": "JAMA Network Open",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Unconstrained random-intercept cross-lagged panel model (RI-CLPM) of social media time and CBCL depressive raw score across 4 annual waves, with fixed sociodemographic and family covariates",
+   "location_in_paper": "Results, Within-Person Associations and Between-Person Association (pp. 5-6); Figure 2 (p. 6); full parameter table is eTable 3 in Supplement 1 (not bundled in this PDF); model fit comparison in Results p. 4-5 and eTable 1; interpreted in Abstract, Key Points, Discussion pp. 6-7 and Conclusions p. 7.",
+   "design": "Prospective longitudinal panel with 4 annual waves (baseline, year 1, year 2, year 3; ABCD 5.1, follow-up through 2022). Social media time and depressive symptoms are both measured at every wave and modeled reciprocally. Latent random intercepts separate stable between-person differences from within-person (state-like) deviations; autoregressive and cross-lagged paths are estimated among the within-person components, plus within-wave residual covariances. The final model is the unconstrained RI-CLPM, which lets cross-lagged paths differ across intervals, so each interval (baseline to year 1, year 1 to year 2, year 2 to year 3) gets its own estimate in both directions. The authors compared this against a traditional CLPM (poor fit) and a constrained RI-CLPM before retaining the unconstrained version as final.",
+   "sample": "ABCD Study release 5.1, 21 US sites, baseline recruited October 2016 to October 2018. Analytic sample N = 11,876 after excluding participants missing baseline age or sex assigned at birth; all available data retained at each wave via full information maximum likelihood, so wave-specific Ns vary (social media use: 11,832 baseline, 11,175 year 1, 10,370 year 2, 10,301 year 3; depressive symptoms: 11,859, 11,199, 10,895, 10,093; Table 2). Mean (SD) age at baseline 9.9 (0.6) years; 5680 (47.8%) female, 6196 (52.2%) male. Race and ethnicity (parent report): 709 (6.0%) Asian, 2392 (20.1%) Black, 2027 (17.0%) Hispanic or Latino, 410 (3.4%) Native American, 6166 (51.9%) White, 171 (1.4%) other. Household income from <=$24,999 (13.8%) to >=$200,000 (10.5%); parent highest education college or more 2039 (17.2%), high school or less 9799 (82.8%) as printed in Table 1.",
+   "iv": "In the SM-to-depression direction, the IV is youth-reported time spent on social media, ABCD Youth Screen Time Survey, administered each year. Hours and minutes per weekday and weekend day were combined as [(weekday mean x 5) + (weekend mean x 2)]/7 = mean daily hours. Descriptives (Table 2, untransformed hours/day, M (SD)): baseline 0.12 (0.42), year 1 0.22 (0.60), year 2 0.68 (1.54), year 3 1.21 (2.05). Table 2 footnote states the social media variables were transformed in the final analytic model because years 0-1 were reported in ordinal categories and years 2-3 in continuous hours (0-24); the exact transformation is described only in Supplement 1. In the reverse direction, social media time at the next wave is the DV. The focal predictor in each cross-lagged path is the within-person deviation from the person's own mean, not raw hours.",
+   "dv": "Caregiver-reported CBCL DSM-oriented depressive problems scale, raw score (sum of items, not t-score), each year. Descriptives (Table 2, M (SD)): baseline 1.27 (2.01), year 1 1.39 (2.19), year 2 1.50 (2.30), year 3 1.69 (2.52). In the reverse direction the depressive score is the predictor of the next wave's social media time. Within-person deviations are modeled.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Female vs male (sex assigned at birth)"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Parent/caregiver report; Asian, Black, Hispanic or Latino, Native American, White, other"
+    },
+    {
+     "name": "Household income",
+     "detail": "6 categories: <$25,000, $25,000-$49,999, $50,000-$74,999, $75,000-$99,999, $100,000-$199,999, >=$200,000"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Highest parental education, high school or less vs college or more"
+    },
+    {
+     "name": "Adverse childhood experiences",
+     "detail": "Number of ACEs; M (SD) 1.71 (1.59) per Table 2"
+    },
+    {
+     "name": "Parental monitoring",
+     "detail": "Parental monitoring scale; M (SD) 4.38 (0.52) per Table 2"
+    },
+    {
+     "name": "Family conflict",
+     "detail": "Conflict subscale of the Family Environment Scale; M (SD) 2.05 (1.95) per Table 2"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as a covariate (not described as a random effect in the main text)"
+    }
+   ],
+   "equation": "Observed: SM[i,t] = mu_SM[t] + RI_SM[i] + w_SM[i,t] (+ fixed covariates); DEP[i,t] = mu_DEP[t] + RI_DEP[i] + w_DEP[i,t] (+ fixed covariates), t = 0,1,2,3. Within-person: w_SM[i,t] = a_t*w_SM[i,t-1] + c_t*w_DEP[i,t-1] + u_SM[i,t]; w_DEP[i,t] = b_t*w_DEP[i,t-1] + d_t*w_SM[i,t-1] + u_DEP[i,t], t = 1,2,3; cov(u_SM[i,t], u_DEP[i,t]) estimated each wave; cov(RI_SM, RI_DEP) estimated. Focal: d_t (SM -> later depression) and c_t (depression -> later SM), freely estimated per interval. Covariates: sex, race/ethnicity, income, parental education, ACEs, parental monitoring, family conflict, study site.",
+   "estimation": "Structural equation model in lavaan, R version 4.4.2; maximum likelihood with robust SEs (MLR) and scaled test statistic; full information maximum likelihood for missing outcome data. No survey weights reported. Final unconstrained RI-CLPM fit: CFI 0.977, TLI 0.968, RMSEA 0.031 (90% CI 0.029-0.033), SRMR 0.022. Traditional CLPM: CFI 0.917, TLI 0.807, RMSEA 0.132; constrained RI-CLPM: CFI 0.966, TLI 0.957, RMSEA 0.036, SRMR 0.027. Two-sided P < .05; no multiple-comparison correction reported. Standardized cross-lagged effects interpreted against Orth et al benchmarks (small 0.03, medium 0.07, large 0.12). No sex or other interaction/stratified analyses reported in the main text.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_y0",
+     "label": "Social media use, baseline (within-person)",
+     "meta": "M 0.12 h/day, SD 0.42 (untransformed)",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_y1",
+     "label": "Social media use, year 1 (within-person)",
+     "meta": "M 0.22 h/day, SD 0.60 (untransformed)",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_y2",
+     "label": "Social media use, year 2 (within-person)",
+     "meta": "M 0.68 h/day, SD 1.54 (untransformed)",
+     "sd_iv": null
+    },
+    {
+     "id": "dep_y0",
+     "label": "Depressive symptoms, baseline (within-person)",
+     "meta": "CBCL raw M 1.27, SD 2.01",
+     "sd_iv": null
+    },
+    {
+     "id": "dep_y1",
+     "label": "Depressive symptoms, year 1 (within-person)",
+     "meta": "CBCL raw M 1.39, SD 2.19",
+     "sd_iv": null
+    },
+    {
+     "id": "dep_y2",
+     "label": "Depressive symptoms, year 2 (within-person)",
+     "meta": "CBCL raw M 1.50, SD 2.30",
+     "sd_iv": null
+    },
+    {
+     "id": "ri_sm",
+     "label": "Random intercept, social media (between-person)",
+     "meta": "covariance with depression RI",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_y2_res",
+     "label": "Social media use, year 2 residual (within-wave)",
+     "meta": "contemporaneous covariance",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_y3_res",
+     "label": "Social media use, year 3 residual (within-wave)",
+     "meta": "contemporaneous covariance",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "dep_y1",
+     "label": "Depressive symptoms, year 1",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "dep_y2",
+     "label": "Depressive symptoms, year 2",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "dep_y3",
+     "label": "Depressive symptoms, year 3",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sm_y1",
+     "label": "Social media use, year 1",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sm_y2",
+     "label": "Social media use, year 2",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sm_y3",
+     "label": "Social media use, year 3",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "ri_dep",
+     "label": "Random intercept, depressive symptoms (between-person)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "dep_y2_res",
+     "label": "Depressive symptoms, year 2 residual",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "dep_y3_res",
+     "label": "Depressive symptoms, year 3 residual",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_y0",
+     "dv": "dep_y1",
+     "beta": 0.03,
+     "beta_lo": -0.02,
+     "beta_hi": 0.09,
+     "p": 0.19,
+     "p_label": ".19",
+     "sig": false,
+     "location": "Results p. 6, Within-Person Associations; Figure 2 (gray path)",
+     "note": "SM -> depression cross-lagged path, baseline to year 1.",
+     "derived_d": 0.06,
+     "derived_d_lo": -0.04,
+     "derived_d_hi": 0.1807,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_y1",
+     "dv": "dep_y2",
+     "beta": 0.07,
+     "beta_lo": 0.01,
+     "beta_hi": 0.12,
+     "p": 0.01,
+     "p_label": ".01",
+     "sig": true,
+     "location": "Results p. 6; Abstract; Figure 2",
+     "note": "SM -> depression cross-lagged path, year 1 to year 2; authors call it a medium effect size.",
+     "derived_d": 0.1403,
+     "derived_d_lo": 0.02,
+     "derived_d_hi": 0.2417,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_y2",
+     "dv": "dep_y3",
+     "beta": 0.09,
+     "beta_lo": 0.04,
+     "beta_hi": 0.14,
+     "p": 0.001,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 6; Abstract; Figure 2",
+     "note": "SM -> depression cross-lagged path, year 2 to year 3; authors call it a medium effect size. p stored as upper bound .001.",
+     "derived_d": 0.1807,
+     "derived_d_lo": 0.0801,
+     "derived_d_hi": 0.2828,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "dep_y0",
+     "dv": "sm_y1",
+     "beta": 0.0,
+     "beta_lo": -0.01,
+     "beta_hi": 0.02,
+     "p": 0.46,
+     "p_label": ".46",
+     "sig": false,
+     "location": "Results p. 6, Within-Person Associations",
+     "note": "Reverse path (depression -> SM), baseline to year 1.",
+     "derived_d": 0.0,
+     "derived_d_lo": -0.02,
+     "derived_d_hi": 0.04,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "dep_y1",
+     "dv": "sm_y2",
+     "beta": 0.0,
+     "beta_lo": -0.007,
+     "beta_hi": 0.01,
+     "p": 0.65,
+     "p_label": ".65",
+     "sig": false,
+     "location": "Results p. 6, Within-Person Associations",
+     "note": "Reverse path (depression -> SM), year 1 to year 2.",
+     "derived_d": 0.0,
+     "derived_d_lo": -0.014,
+     "derived_d_hi": 0.02,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "dep_y2",
+     "dv": "sm_y3",
+     "beta": 0.0,
+     "beta_lo": -0.003,
+     "beta_hi": 0.02,
+     "p": 0.18,
+     "p_label": ".18",
+     "sig": false,
+     "location": "Results p. 6, Within-Person Associations",
+     "note": "Reverse path (depression -> SM), year 2 to year 3.",
+     "derived_d": 0.0,
+     "derived_d_lo": -0.006,
+     "derived_d_hi": 0.04,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "ri_sm",
+     "dv": "ri_dep",
+     "beta": -0.01,
+     "beta_lo": -0.04,
+     "beta_hi": 0.02,
+     "p": 0.46,
+     "p_label": ".46",
+     "sig": false,
+     "location": "Results p. 5, Between-Person Association; Abstract; Figure 2 shows r = 0.01",
+     "note": "Standardized covariance (correlation) between latent random intercepts; non-directional. Text and Abstract print -0.01 while Figure 2 labels the RI covariance r = 0.01; text value used.",
+     "derived_d": -0.02,
+     "derived_d_lo": -0.0801,
+     "derived_d_hi": 0.04,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_y2_res",
+     "dv": "dep_y2_res",
+     "beta": 0.08,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": true,
+     "location": "Figure 2 (p. 6) only",
+     "note": "Within-wave standardized residual covariance at year 2, read from Figure 2 label r = 0.08 (drawn as a black/significant line). No CI or p in the main text; presumably in eTable 3.",
+     "derived_d": 0.1605,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_y3_res",
+     "dv": "dep_y3_res",
+     "beta": 0.07,
+     "beta_lo": 0.03,
+     "beta_hi": 0.1,
+     "p": 0.001,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results p. 5-6, Within-Person Associations; Figure 2 r = 0.07",
+     "note": "Within-wave standardized residual covariance at year 3; non-directional. p stored as upper bound .001.",
+     "derived_d": 0.1403,
+     "derived_d_lo": 0.06,
+     "derived_d_hi": 0.201,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Traditional cross-lagged panel model (CLPM)",
+   "location": "Results p. 4; eTable 1 (Supplement 1)",
+   "why": "Model-comparison step with poor fit (CFI 0.917, TLI 0.807, RMSEA 0.132); only fit indices printed in the main text and the authors anchor all claims to the unconstrained RI-CLPM."
+  },
+  {
+   "model": "Constrained RI-CLPM (cross-lagged paths equal across time)",
+   "location": "Results pp. 4-5; eTable 1 (Supplement 1)",
+   "why": "Intermediate model-comparison step; only fit indices printed; superseded by the unconstrained RI-CLPM retained as final."
+  },
+  {
+   "model": "Autoregressive paths within each construct",
+   "location": "Results p. 5; Figure 2",
+   "why": "SM -> SM (beta 0.21, 0.24, 0.35) and depression -> depression (beta 0.17, 0.18, 0.27) stability paths do not pair the phone/SM variable with a trait outcome."
+  },
+  {
+   "model": "Fixed covariate effects on social media use and depressive symptoms",
+   "location": "eTable 2, Supplement 1 (not in this PDF)",
+   "why": "Covariate (demographic/family) coefficients, not phone/SM-to-trait associations; supplement not available in the bundled PDF."
+  },
+  {
+   "model": "Within-wave residual covariances at baseline and year 1",
+   "location": "eTable 3, Supplement 1 (not in this PDF)",
+   "why": "Drawn as unlabeled gray (nonsignificant) arrows in Figure 2 with no value; not printed in the main text, so no extractable numbers in the available PDF."
+  },
+  {
+   "model": "Zero-order correlations between social media use and depressive symptoms",
+   "location": "Table 2 (p. 5)",
+   "why": "Unadjusted descriptive bivariate correlations (e.g., r 0.00-0.06); descriptive context rather than the model the authors interpret."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized SEM path coefficients and standardized covariances)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines \u00a74a, SEM standardized path). Applied to CI endpoints for d CI.",
+  "contrast_type": "per 1 SD within-person deviation in social media time (from the person's own mean) at wave t, in SD units of within-person deviation in depressive symptoms at wave t+1 (and the reverse for depression -> SM paths); covariances are correlations",
+  "transformable": true,
+  "notes": "Estimates are already standardized, so SD_IV / SD_DV are not needed; sd_iv/sd_dv left null. Table 2 (p. 5) gives untransformed SDs for reference, but the social media variables were transformed in the final model (method described only in Supplement 1), so those SDs do not correspond to the modeled metric. Standardization is of within-person latent deviations, so the derived d reflects within-person effects and is not directly comparable to between-person per-SD-of-hours d's from other papers. Year-2 residual covariance (0.08) is read off Figure 2 without CI. Random-intercept covariance sign differs between text (-0.01) and Figure 2 (r = 0.01)."
+ },
+ "extraction_flags": "1. The PDF has only the 10-page article. Supplement 1 (eMethods, eTables 1-3) is not included, so the full parameter table (eTable 3), the covariate effects (eTable 2) and the transformation applied to the social media variable all come from the main text and Figure 2 only.\n2. The paper does not say how social media time was transformed in the final model (years 0-1 were reported in ordinal categories, years 2-3 in continuous hours). The Table 2 SDs are untransformed, so sd_iv/sd_dv are left null. That is fine because the betas are already standardized.\n3. The random-intercept covariance sign does not match: the text and Abstract print -0.01 (95% CI -0.04 to 0.02, P = .46), but Figure 2 labels it r = 0.01. I used the text value.\n4. The year-2 within-wave residual covariance (r = 0.08) comes only from the Figure 2 label. It is drawn in black (significant), but no CI or p is printed.\n5. Coders should decide whether the non-directional covariances (the random-intercept covariance and the year-2 and year-3 residual covariances) belong in the matrix or should be struck. The 6 cross-lagged paths are the core estimates.\n6. The derived d from standardized within-person RI-CLPM paths is a within-person effect. It is not comparable to between-person d per SD of hours from other papers.\n7. Table 1 prints parent education as college or more 17.2% and high school or less 82.8%. That looks inverted, but I copied it as printed.\n8. p values printed as <.001 are stored as 0.001, with p_label \"<.001\"."
+}

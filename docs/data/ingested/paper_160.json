@@ -1,0 +1,175 @@
+{
+ "paper_id": "160",
+ "title": "Screen time and suicidal behaviors among U.S. children 9-11 years old: A prospective cohort study",
+ "doi": "10.1016/j.ypmed.2023.107452",
+ "year": "2023",
+ "authors": "Chu J, Ganson KT, Baker FC, Testa A, Jackson DB, Murray SB, Nagata JM",
+ "journal": "Preventive Medicine",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multiple logistic regression of suicidal behaviors at 2-year follow-up on baseline texting, video chat, and social networking hours/day, adjusted for sociodemographics, site, baseline MDD, baseline suicidal behaviors, and family history of psychopathology",
+   "location_in_paper": "Table 2, adjusted columns (manuscript p. 11); results p. 4; abstract p. 2; texting and video chat interpreted in Discussion pp. 5-6, null social media result discussed p. 6.",
+   "design": "Prospective cohort. Screen time measured at ABCD baseline (2016-2018, ages 9-10); suicidal behaviors measured at the two-year follow-up (2018-2020, described as 11-14 years old). Single follow-up outcome, one observation per child, no repeated measures and no time interaction. Baseline suicidal behaviors and baseline major depressive disorder enter as covariates. Each screen modality appears as its own row in Table 2; the paper does not state explicitly whether modalities were entered in separate models or simultaneously, but the row-per-modality layout alongside a separate total screen time row indicates separate models per modality.",
+   "sample": "ABCD Release 4.0, baseline and two-year follow-up, 21 U.S. sites. Analytic N = 11,633 (abstract and Results p. 4; Table 1 title prints 11,363, an apparent typo). Participants with missing screen time at baseline or missing suicidal behaviors at baseline or two-year follow-up were excluded; missing confounder data were handled with Gaussian normal regression imputation. Table 1 (propensity-weighted): mean age 9.9 (SD 0.6); 48.8% female, 51.2% male; 52.2% White, 20.0% Latino/Hispanic, 17.3% Black, 5.5% Asian, 3.2% Native American, 1.9% Other. Household income <$25K 18.7%, $25-49.9K 20.4%, $50-74.9K 17.5%, $75-99.9K 13.4%, $100-199.9K 22.6%, >=$200K 7.4%. Parent with college education or more 79.7%; baseline major depressive disorder 0.2%; family history of psychopathology 59.7%.",
+   "iv": "Baseline youth-reported typical daily hours for each modality from the ABCD Youth Screen Time Survey, computed as a weighted average ((weekday average x 5) + (weekend average x 2))/7 and entered as continuous hours/day. Qualifying modalities: texting, video chat, and social networking. Table 1 baseline means (SD): texting 0.24 (0.56) h/day; video chat 0.21 (0.52) h/day; social networking 0.13 (0.45) h/day. OR is per additional hour/day.",
+   "dv": "Binary suicidal behaviors at the two-year follow-up from the youth-completed KSADS-5 (DSM-5 based computerized interview). Coded 1 if the youth reported passive suicidal ideation, nonspecific active suicidal ideation, active ideation with a plan/method/preparation/intent, preparatory actions, or a recent or aborted suicide attempt (Methods p. 3 and Table 1 footnote). Prevalence at two-year follow-up 1.38% (Table 1; Results p. 4).",
+   "covariates": [
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian, Native American, Other (parent report)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs male (parent report)"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories: <$25,000; $25,000-49,999; $50,000-74,999; $75,000-99,999; $100,000-199,999; >=$200,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs college or more"
+    },
+    {
+     "name": "Study site",
+     "detail": "ABCD site entered as a covariate to adjust for regional variation (fixed effect; no random effect described)"
+    },
+    {
+     "name": "Baseline major depressive disorder",
+     "detail": "From KSADS-5 at baseline"
+    },
+    {
+     "name": "Baseline suicidal behaviors",
+     "detail": "Listed in Table 2 footnote a"
+    },
+    {
+     "name": "Family history of psychopathology",
+     "detail": "Modified Family History Assessment"
+    },
+    {
+     "name": "Age",
+     "detail": "Listed among confounders in Methods 2.4 (years) but NOT listed in the Table 2 footnote; inclusion in the final model is unclear"
+    }
+   ],
+   "equation": "logit(P(SuicidalBehavior_Y2[i] = 1)) = b0 + b1*ScreenModality_hours_baseline[i] + b2..b6*race/ethnicity + b7*sex + b8..b12*income + b13*parent_education + b_site*site[i] + b14*baseline_MDD + b15*baseline_suicidal_behaviors + b16*family_history_psychopathology (+ b17*age, per Methods). exp(b1) is the reported adjusted OR per additional hour/day of the modality.",
+   "estimation": "Multiple logistic regression in Stata 15.1 (run in 2022). Propensity weights applied to yield nationally representative estimates based on the American Community Survey. Site entered as a covariate; no random effects or family clustering described. Missing confounders imputed by Gaussian normal regression imputation. Significance at p < 0.05 (Table 2 note); no multiple-comparison correction reported. No interaction or stratified analyses reported. Sensitivity analysis excluding participants with suicidal behaviors at baseline described as unchanged in text (p. 4) with no estimates printed.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "M = 0.24 h/day, SD = 0.56",
+     "sd_iv": 0.56
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "meta": "M = 0.21 h/day, SD = 0.52",
+     "sd_iv": 0.52
+    },
+    {
+     "id": "social_networking",
+     "label": "Social networking",
+     "meta": "M = 0.13 h/day, SD = 0.45",
+     "sd_iv": 0.45
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "suicidal_y2",
+     "label": "Suicidal behaviors (KSADS-5), 2-year follow-up",
+     "sd_dv": null,
+     "p0": 0.0138
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "suicidal_y2",
+     "OR": 1.36,
+     "OR_lo": 1.06,
+     "OR_hi": 1.74,
+     "p": 0.014,
+     "p_label": "0.014",
+     "sig": true,
+     "location": "Table 2, Texting row, adjusted columns",
+     "note": "Unadjusted OR 1.43 (1.15-1.79), p = 0.001 (not extracted).",
+     "derived_d": 0.1695,
+     "derived_d_lo": 0.0321,
+     "derived_d_hi": 0.3054,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "suicidal_y2",
+     "OR": 1.3,
+     "OR_lo": 1.03,
+     "OR_hi": 1.65,
+     "p": 0.028,
+     "p_label": "0.028",
+     "sig": true,
+     "location": "Table 2, Video chat row, adjusted columns",
+     "note": "Unadjusted OR 1.35 (1.08-1.67), p = 0.008 (not extracted).",
+     "derived_d": 0.1446,
+     "derived_d_lo": 0.0163,
+     "derived_d_hi": 0.2761,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    },
+    {
+     "iv": "social_networking",
+     "dv": "suicidal_y2",
+     "OR": 1.27,
+     "OR_lo": 0.97,
+     "OR_hi": 1.66,
+     "p": 0.076,
+     "p_label": "0.076",
+     "sig": false,
+     "location": "Table 2, Social networking row, adjusted columns",
+     "note": "Unadjusted OR 1.40 (1.10-1.79), p = 0.007 (not extracted). Authors note the adjusted association was not significant (p. 6).",
+     "derived_d": 0.1318,
+     "derived_d_lo": -0.0168,
+     "derived_d_hi": 0.2794,
+     "derived_d_method": "OR -> d (Chinn 2000)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted logistic regressions",
+   "location": "Table 2, unadjusted columns (p. 11)",
+   "why": "Reported alongside the adjusted model; the authors anchor their claims (abstract, results, discussion) on the adjusted ORs."
+  },
+  {
+   "model": "Total screen time (adjusted OR 1.09, 95% CI 1.03-1.14)",
+   "location": "Table 2, Total screen time row; abstract; Results p. 4",
+   "why": "Composite of all six modalities including TV, videos, and video games. Non-phone ingredients; fails FT-IC2 Step 2. Per-modality phone/SM estimates are extracted instead."
+  },
+  {
+   "model": "Television shows/movies, Videos (e.g., YouTube), Video games",
+   "location": "Table 2 rows",
+   "why": "Non-phone/non-SM modalities; fail FT-IC2."
+  },
+  {
+   "model": "Sensitivity analysis excluding participants with baseline suicidal behaviors",
+   "location": "Methods 2.5, p. 4 (text only)",
+   "why": "Described as 'findings were unchanged'; no estimates printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (adjusted, logistic regression)",
+  "conversion_formula": "d = ln(OR) * sqrt(3)/pi (Chinn 2000), applied to the OR and to each CI bound.",
+  "contrast_type": "per 1 additional hour/day of the modality at baseline",
+  "transformable": true,
+  "notes": "OR converts directly via Chinn, so no SD or base rate is needed. The resulting d is per 1 hour/day, not per 1 SD. Baseline SDs from Table 1 (p. 10, propensity-weighted): texting 0.56, video chat 0.52, social networking 0.45 h/day; a 1 hour/day contrast is about 1.8-2.2 SDs of these right-skewed IVs, so a per-SD rescaling (ln(OR)*SD_IV) would give smaller values. Outcome base rate p0 = 0.0138 (1.38% at two-year follow-up, Table 1 and Results p. 4), so the outcome is rare and the OR approximates the RR. The Chinn conversion assumes an underlying logistic latent variable."
+ },
+ "extraction_flags": "1) The analytic N conflicts inside the paper: the abstract and Results say 11,633, but the Table 1 title says 11,363. I used 11,633. 2) Age is listed as a confounder in Methods 2.4 but is missing from the Table 2 footnote, so it is unclear whether the final adjusted model includes age. 3) There is another inconsistency about baseline suicidal behaviors. Methods says participants missing baseline suicidal behaviors were excluded, the Table 2 footnote lists baseline suicidal behaviors as a covariate, and a sensitivity analysis that excluded baseline cases is described only as \"unchanged\", with no numbers printed. 4) The paper never says whether each modality was run as its own model or all were entered together. I assumed separate models, based on the one-row-per-modality layout next to a separate total-screen-time row. 5) The ORs are per 1 hour/day of each modality. The baseline SDs are 0.45-0.56 h/day, so one hour is about 2 SDs, and the derived d will not be on the per-SD scale used by some other papers. 6) Social networking was not significant in the adjusted model (OR 1.27, CI 0.97-1.66, p=0.076). It is extracted as a null estimate. 7) Table 1 has a copy-paste error in its title (\"binge eating characteristics\"). Values were checked against both the page images and pdftotext output: Table 2 adjusted ORs, CIs and p-values, and the Table 1 SDs."
+}

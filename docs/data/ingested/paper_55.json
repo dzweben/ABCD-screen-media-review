@@ -1,0 +1,538 @@
+{
+ "paper_id": "55",
+ "title": "Differential Relationships of Child Anxiety and Depression to Child Report and Parent Report of Electronic Media Use",
+ "doi": "10.1007/s10578-019-00892-7",
+ "year": "2019",
+ "authors": "Fors PQ, Barch DM",
+ "journal": "Child Psychiatry & Human Development",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Generalized linear mixed model of parent-reported CBCL anxiety and depression T-scores on child-reported texting, social networking, and video chatting (weekday and weekend), adjusted for demographics, BMI and physical activity with site and family random effects",
+   "location_in_paper": "Table 4 (anxiety, p. 913) and Table 5 (depression, p. 913); results text p. 913; interpreted in Discussion pp. 914-915.",
+   "design": "Cross-sectional analysis of the ABCD baseline visit. Screen-time predictors and CBCL outcomes measured at the same visit; one observation per child. Separate models for anxiety and depression and for each media category, weekday and weekend reports run separately. No longitudinal component.",
+   "sample": "ABCD baseline data (Annual Release 1.0; NDA data DOI 10.15154/1412097), 21 U.S. sites. Of 4524 children available, N = 4139 analysed after excluding cases with missing values, incomplete questionnaires, or 'do not know' responses; N is not reported separately per model. Ages 8.9-11 years (mean 10, SD 0.61); 1977 girls and 2162 boys; 15.2% Black American and 8.2% other minority backgrounds. Family income: 25% <= $49,999, 30.3% $50,000-$99,999, 44.7% >= $100,000.",
+   "iv": "Child-reported minutes per day of each phone/SM activity from the ABCD Youth Screen Time Questionnaire (STQ): texting, social networking, and video chatting, asked separately for a typical weekday and weekend day. Response options range from '0 h' (0) to '4+ h' (4); the paper describes converting hours to minutes (x60) for total EMU, and Table 1 gives category ranges of 0-240 min. Each modality (weekday or weekend) is entered as the predictor; the paper does not state explicitly whether each category was run in its own model or all categories were entered jointly, but the parallel structure with the general-EMU analyses suggests one category per model. All variables were standardized before analysis. Table 1 (p. 911) descriptives (mean, SD): weekday texting 11.99, 0.51; social networks 5.55, 0.36; video chatting 9.04, 0.41; weekend texting 13.86, 0.60; social networks 6.97, 0.45; video chatting 11.21, 0.52. The printed SDs are implausibly small relative to means in minutes and may be in hours or category units.",
+   "dv": "Parent-reported Child Behavior Checklist (CBCL) T-scores, analysed as continuous outcomes: anxiety subscale (9 items, 0-2 scale; sample M = 53.37, SD = 5.939, range 50-94, Table 1) and depression subscale (13 items, 0-2 scale; sample M = 53.43, SD = 5.57, range 50-89, Table 1). Both standardized before analysis.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Child age at baseline visit (8.9-11 years); coding not further specified; standardized like all variables."
+    },
+    {
+     "name": "Sex",
+     "detail": "Child sex (1977 girls, 2162 boys); coding not specified. Dropped in the sex-stratified models (M2)."
+    },
+    {
+     "name": "BMI",
+     "detail": "Computed from average of two (or three) measured heights and weights."
+    },
+    {
+     "name": "Family income",
+     "detail": "Parent-reported total combined pre-tax family income, past 12 months, 10-point ordinal scale (1 = < $5,000 to 10 = >= $200,000)."
+    },
+    {
+     "name": "Race",
+     "detail": "Child race; categories/coding not specified (sample described as 15.2% Black American, 8.2% other minority)."
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Child report of number of days in past 7 with >= 60 min of physical activity (0-7)."
+    },
+    {
+     "name": "Testing site",
+     "detail": "Random effect (nesting within ABCD site)."
+    },
+    {
+     "name": "Family",
+     "detail": "Random effect (nesting of siblings within family)."
+    }
+   ],
+   "equation": "z(CBCL_DV)[i] = b0 + b1*z(phoneSM_IV)[i] + b2*z(age) + b3*z(sex) + b4*z(BMI) + b5*z(family_income) + b6*z(race) + b7*z(physical_activity) + u_site + u_family + e[i]; b1 is the standardized coefficient reported in Tables 4-5.",
+   "estimation": "IBM SPSS Statistics v25, generalized linear mixed models with nesting within testing site and family (random effects). All variables standardized, so coefficients are interpreted as standardized betas (Discussion p. 915: 'standardized beta weights'). alpha = 0.05; no multiple-comparison correction. Parallel models additionally controlling for depression (anxiety DV) or anxiety (depression DV) are reported in Supplemental Tables 1-2, which are not in the PDF; Tables 4-5 only flag with footnote a which estimates stayed significant. Sex moderation was tested via EMU x sex interaction terms; only child-reported weekend EMU x sex predicting anxiety was significant, which led to the sex-stratified models in M2.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "wd_text",
+     "label": "Weekday texting",
+     "meta": "Child report; M = 11.99 min, SD printed 0.51 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "wd_sm",
+     "label": "Weekday social networks",
+     "meta": "Child report; M = 5.55 min, SD printed 0.36 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "wd_vc",
+     "label": "Weekday video chatting",
+     "meta": "Child report; M = 9.04 min, SD printed 0.41 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "we_text",
+     "label": "Weekend texting",
+     "meta": "Child report; M = 13.86 min, SD printed 0.60 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "we_sm",
+     "label": "Weekend social networks",
+     "meta": "Child report; M = 6.97 min, SD printed 0.45 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "we_vc",
+     "label": "Weekend video chatting",
+     "meta": "Child report; M = 11.21 min, SD printed 0.52 (Table 1)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "anxiety",
+     "label": "CBCL anxiety",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "depression",
+     "label": "CBCL depression",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "wd_text",
+     "dv": "anxiety",
+     "beta": 0.021,
+     "beta_lo": -0.01,
+     "beta_hi": 0.051,
+     "p": 0.187,
+     "p_label": "0.187",
+     "sig": false,
+     "location": "Table 4, Weekday, Texting (p. 913)",
+     "note": "t = 1.32.",
+     "derived_d": 0.042,
+     "derived_d_lo": -0.02,
+     "derived_d_hi": 0.1021,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "wd_sm",
+     "dv": "anxiety",
+     "beta": 0.031,
+     "beta_lo": 0.001,
+     "beta_hi": 0.062,
+     "p": 0.044,
+     "p_label": "0.044",
+     "sig": true,
+     "location": "Table 4, Weekday, Social networks (p. 913)",
+     "note": "t = 2.014. Text (p. 913) says this association was lost when controlling for depression.",
+     "derived_d": 0.062,
+     "derived_d_lo": 0.002,
+     "derived_d_hi": 0.1242,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "wd_vc",
+     "dv": "anxiety",
+     "beta": 0.016,
+     "beta_lo": -0.015,
+     "beta_hi": 0.046,
+     "p": 0.309,
+     "p_label": "0.309",
+     "sig": false,
+     "location": "Table 4, Weekday, Video chatting (p. 913)",
+     "note": "t = 1.016.",
+     "derived_d": 0.032,
+     "derived_d_lo": -0.03,
+     "derived_d_hi": 0.0921,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_text",
+     "dv": "anxiety",
+     "beta": 0.03,
+     "beta_lo": -0.001,
+     "beta_hi": 0.06,
+     "p": 0.056,
+     "p_label": "0.056",
+     "sig": false,
+     "location": "Table 4, Weekend, Texting (p. 913)",
+     "note": "t = 1.908.",
+     "derived_d": 0.06,
+     "derived_d_lo": -0.002,
+     "derived_d_hi": 0.1202,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_sm",
+     "dv": "anxiety",
+     "beta": 0.029,
+     "beta_lo": -0.001,
+     "beta_hi": 0.06,
+     "p": 0.062,
+     "p_label": "0.062",
+     "sig": false,
+     "location": "Table 4, Weekend, Social networks (p. 913)",
+     "note": "t = 1.87.",
+     "derived_d": 0.058,
+     "derived_d_lo": -0.002,
+     "derived_d_hi": 0.1202,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_vc",
+     "dv": "anxiety",
+     "beta": 0.038,
+     "beta_lo": 0.008,
+     "beta_hi": 0.069,
+     "p": 0.013,
+     "p_label": "0.013a",
+     "sig": true,
+     "location": "Table 4, Weekend, Video chatting (p. 913)",
+     "note": "t = 2.487. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "derived_d": 0.0761,
+     "derived_d_lo": 0.016,
+     "derived_d_hi": 0.1383,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "wd_text",
+     "dv": "depression",
+     "beta": 0.011,
+     "beta_lo": -0.02,
+     "beta_hi": 0.041,
+     "p": 0.493,
+     "p_label": "0.493",
+     "sig": false,
+     "location": "Table 5, Weekday, Texting (p. 913)",
+     "note": "t = 0.685.",
+     "derived_d": 0.022,
+     "derived_d_lo": -0.04,
+     "derived_d_hi": 0.0821,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "wd_sm",
+     "dv": "depression",
+     "beta": 0.021,
+     "beta_lo": -0.01,
+     "beta_hi": 0.051,
+     "p": 0.181,
+     "p_label": "0.181",
+     "sig": false,
+     "location": "Table 5, Weekday, Social networks (p. 913)",
+     "note": "t = 1.339.",
+     "derived_d": 0.042,
+     "derived_d_lo": -0.02,
+     "derived_d_hi": 0.1021,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "wd_vc",
+     "dv": "depression",
+     "beta": 0.0,
+     "beta_lo": -0.03,
+     "beta_hi": 0.031,
+     "p": 0.986,
+     "p_label": "0.986",
+     "sig": false,
+     "location": "Table 5, Weekday, Video chatting (p. 913)",
+     "note": "t = 0.018.",
+     "derived_d": 0.0,
+     "derived_d_lo": -0.06,
+     "derived_d_hi": 0.062,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_text",
+     "dv": "depression",
+     "beta": 0.021,
+     "beta_lo": -0.01,
+     "beta_hi": 0.051,
+     "p": 0.184,
+     "p_label": "0.184",
+     "sig": false,
+     "location": "Table 5, Weekend, Texting (p. 913)",
+     "note": "t = 1.33.",
+     "derived_d": 0.042,
+     "derived_d_lo": -0.02,
+     "derived_d_hi": 0.1021,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_sm",
+     "dv": "depression",
+     "beta": 0.017,
+     "beta_lo": -0.013,
+     "beta_hi": 0.047,
+     "p": 0.271,
+     "p_label": "0.271",
+     "sig": false,
+     "location": "Table 5, Weekend, Social networks (p. 913)",
+     "note": "t = 1.101.",
+     "derived_d": 0.034,
+     "derived_d_lo": -0.026,
+     "derived_d_hi": 0.0941,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_vc",
+     "dv": "depression",
+     "beta": 0.016,
+     "beta_lo": -0.014,
+     "beta_hi": 0.046,
+     "p": 0.292,
+     "p_label": "0.292",
+     "sig": false,
+     "location": "Table 5, Weekend, Video chatting (p. 913)",
+     "note": "t = 1.053.",
+     "derived_d": 0.032,
+     "derived_d_lo": -0.028,
+     "derived_d_hi": 0.0921,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Sex-stratified generalized linear mixed model of CBCL anxiety T-score on child-reported weekend texting, social networking, and video chatting, adjusted for demographics, BMI and physical activity with site and family random effects",
+   "location_in_paper": "Table 3 (p. 912); results text p. 912 ('Sex Differences') and p. 913; interpreted in Discussion p. 914.",
+   "design": "Cross-sectional ABCD baseline, same as M1, but fitted separately in boys and girls. Run only for child-reported weekend EMU predicting anxiety, because that was the only significant EMU x sex interaction (for overall weekend EMU, t = -3.51, p < .001).",
+   "sample": "Same ABCD Release 1.0 baseline analytic sample as M1 (N = 4139), split by sex: boys (2162) and girls (1977). Per-stratum Ns for these models are not printed; the counts given are the sample sex breakdown from Participants (p. 909).",
+   "iv": "Child-reported weekend minutes per day of texting, social networking, and video chatting (ABCD Youth STQ), standardized. Weekend descriptives for the full sample (Table 1): texting M = 13.86, SD printed 0.60; social networks M = 6.97, SD 0.45; video chatting M = 11.21, SD 0.52. Sex-specific descriptives not reported.",
+   "dv": "Parent-reported CBCL anxiety subscale T-score (continuous), standardized. Full-sample M = 53.37, SD = 5.939.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Child age at baseline visit (8.9-11 years); coding not further specified; standardized like all variables."
+    },
+    {
+     "name": "BMI",
+     "detail": "Computed from average of two (or three) measured heights and weights."
+    },
+    {
+     "name": "Family income",
+     "detail": "Parent-reported total combined pre-tax family income, past 12 months, 10-point ordinal scale (1 = < $5,000 to 10 = >= $200,000)."
+    },
+    {
+     "name": "Race",
+     "detail": "Child race; categories/coding not specified (sample described as 15.2% Black American, 8.2% other minority)."
+    },
+    {
+     "name": "Physical activity",
+     "detail": "Child report of number of days in past 7 with >= 60 min of physical activity (0-7)."
+    },
+    {
+     "name": "Testing site",
+     "detail": "Random effect (nesting within ABCD site)."
+    },
+    {
+     "name": "Family",
+     "detail": "Random effect (nesting of siblings within family)."
+    }
+   ],
+   "equation": "Within each sex: z(CBCL_anxiety)[i] = b0 + b1*z(weekend_phoneSM_IV)[i] + b2*z(age) + b3*z(BMI) + b4*z(family_income) + b5*z(race) + b6*z(physical_activity) + u_site + u_family + e[i]",
+   "estimation": "IBM SPSS Statistics v25 GLMM, separate models for boys and girls; random effects for site and family; standardized variables; alpha = 0.05; no multiple-comparison correction. Footnote a marks boys' estimates that remained significant when depression was added as a covariate (texting, video chatting); those depression-adjusted coefficients are not printed.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "we_text",
+     "label": "Weekend texting",
+     "meta": "Child report; M = 13.86 min, SD printed 0.60 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "we_sm",
+     "label": "Weekend social networks",
+     "meta": "Child report; M = 6.97 min, SD printed 0.45 (Table 1)",
+     "sd_iv": null
+    },
+    {
+     "id": "we_vc",
+     "label": "Weekend video chatting",
+     "meta": "Child report; M = 11.21 min, SD printed 0.52 (Table 1)",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "anx_boys",
+     "label": "CBCL anxiety (boys)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "anx_girls",
+     "label": "CBCL anxiety (girls)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "we_text",
+     "dv": "anx_boys",
+     "beta": 0.081,
+     "beta_lo": 0.034,
+     "beta_hi": 0.127,
+     "p": 0.001,
+     "p_label": "0.001a",
+     "sig": true,
+     "location": "Table 3, Boys, Texting (p. 912)",
+     "note": "t = 3.418. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "derived_d": 0.1625,
+     "derived_d_lo": 0.068,
+     "derived_d_hi": 0.2561,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_sm",
+     "dv": "anx_boys",
+     "beta": 0.061,
+     "beta_lo": 0.015,
+     "beta_hi": 0.108,
+     "p": 0.01,
+     "p_label": "0.010",
+     "sig": true,
+     "location": "Table 3, Boys, Social networks (p. 912)",
+     "note": "t = 2.574.",
+     "derived_d": 0.1222,
+     "derived_d_lo": 0.03,
+     "derived_d_hi": 0.2173,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_vc",
+     "dv": "anx_boys",
+     "beta": 0.069,
+     "beta_lo": 0.026,
+     "beta_hi": 0.113,
+     "p": 0.002,
+     "p_label": "0.002a",
+     "sig": true,
+     "location": "Table 3, Boys, Video chatting (p. 912)",
+     "note": "t = 3.131. Footnote a: still significant when controlling for depression (Supplemental Table 1, not bundled in PDF).",
+     "derived_d": 0.1383,
+     "derived_d_lo": 0.052,
+     "derived_d_hi": 0.2275,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_text",
+     "dv": "anx_girls",
+     "beta": -0.013,
+     "beta_lo": -0.054,
+     "beta_hi": 0.027,
+     "p": 0.512,
+     "p_label": "0.512",
+     "sig": false,
+     "location": "Table 3, Girls, Texting (p. 912)",
+     "note": "t = -0.656.",
+     "derived_d": -0.026,
+     "derived_d_lo": -0.1082,
+     "derived_d_hi": 0.054,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_sm",
+     "dv": "anx_girls",
+     "beta": 0.003,
+     "beta_lo": -0.037,
+     "beta_hi": 0.044,
+     "p": 0.867,
+     "p_label": "0.867",
+     "sig": false,
+     "location": "Table 3, Girls, Social networks (p. 912)",
+     "note": "t = 0.168.",
+     "derived_d": 0.006,
+     "derived_d_lo": -0.0741,
+     "derived_d_hi": 0.0881,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "we_vc",
+     "dv": "anx_girls",
+     "beta": 0.008,
+     "beta_lo": -0.035,
+     "beta_hi": 0.05,
+     "p": 0.718,
+     "p_label": "0.718",
+     "sig": false,
+     "location": "Table 3, Girls, Video chatting (p. 912)",
+     "note": "t = 0.361.",
+     "derived_d": 0.016,
+     "derived_d_lo": -0.07,
+     "derived_d_hi": 0.1001,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Overall EMU (child-reported weekday/weekend total minutes) predicting anxiety and depression",
+   "location": "Table 2 (p. 911); Table 3 'Overall use' rows (p. 912)",
+   "why": "Composite bundles TV shows/movies, videos, and video games with texting, social networking and video chat. Fails FT-IC2 Step 2; phone/SM breakouts are extracted instead."
+  },
+  {
+   "model": "Parent-reported weekday/weekend EMU predicting anxiety and depression",
+   "location": "Table 2 (p. 911)",
+   "why": "Single item of time on 'computer, cellphone, tablet, or other electronic device'; multi-device aggregate with no cellphone breakout (FT-IC2 clarification 5)."
+  },
+  {
+   "model": "TV shows/movies, videos, and video games categories",
+   "location": "Tables 3, 4, 5 (pp. 912-913)",
+   "why": "Non-phone/non-SM modalities."
+  },
+  {
+   "model": "Anxiety controlling for depression, and depression controlling for anxiety, for overall EMU",
+   "location": "Table 2 lower panels (p. 911)",
+   "why": "Overall EMU composites only (non-phone ingredients)."
+  },
+  {
+   "model": "Media-category models controlling for depression (anxiety DV) or anxiety (depression DV)",
+   "location": "Supplemental Tables 1-2 (online only, not in PDF); referenced p. 913 and Table 3-5 footnote a",
+   "why": "Coefficients not available in the PDF; only significance flags (footnote a) are printed. The text says weekend video chatting remained significant for anxiety after controlling for depression and that weekday social media did not. Could be added if the supplement is obtained."
+  },
+  {
+   "model": "All four general EMU reports entered jointly in one GLMM",
+   "location": "Results text p. 912",
+   "why": "Composite EMU measures (child total and parent multi-device); only t and p printed in text."
+  },
+  {
+   "model": "EMU x sex interaction tests",
+   "location": "Results text p. 912",
+   "why": "Interaction tests on overall EMU; produce interaction t/p only, not phone/SM estimates. The resulting stratified phone/SM models are extracted as M2."
+  },
+  {
+   "model": "Chi-square analyses of percent above CBCL clinical cutoff (T >= 65) by EMU category",
+   "location": "Results p. 912-913; Supplemental Tables 3-5 (not in PDF)",
+   "why": "Grouped overall EMU (composite) only; not phone/SM-specific."
+  },
+  {
+   "model": "Pearson correlations among EMU reports and repeated-measures ANOVA comparing child vs parent EMU",
+   "location": "Results p. 910",
+   "why": "Relationships among screen-time measures only; no individual-trait outcome."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized GLMM coefficient)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2 * beta_std / sqrt(1 - beta_std^2), applied to the coefficient and to each CI bound (guidelines \u00a74a).",
+  "contrast_type": "per 1 SD of the child-reported phone/SM minutes per day (weekday or weekend), in SD units of the CBCL T-score",
+  "transformable": true,
+  "notes": "All variables were standardized before modelling (Data Analysis, p. 910; Discussion p. 915 calls them 'standardized beta weights'), so no SD_IV/SD_DV is needed; sd_iv and sd_dv are left null. Table 1 (p. 911) SDs are recorded in iv_axis meta for reference but look implausible for minute-scale variables (e.g., weekday texting M = 11.99, SD = 0.51, range 0-240) and should not be used for rescaling. Because the outcome variables were also standardized, using the sample CBCL SDs (anxiety 5.939, depression 5.57) rather than the normative T-score SD of 10 is implicit in the coefficients. Effects are adjusted for covariates with partial-out of site/family random effects, so the beta-as-r approximation is approximate."
+ },
+ "extraction_flags": "1. Anchoring model: the authors also read their findings off parallel models that control for depression or anxiety. Those coefficients are in Supplemental Tables 1-2, which are online only and not in the PDF. Only footnote 'a' flags in Tables 3-5 show which estimates stayed significant. I extracted the printed versions without that control (Tables 4/5 for the full sample, Table 3 sex-stratified) and listed the controlled versions under excluded models. If the supplement can be obtained, add those coefficients.\n\n2. Separate or joint models: the paper does not say whether each media category was its own GLMM or all categories went into one model. I assumed one category per model.\n\n3. Coefficients are treated as standardized betas because the paper says all variables were standardized. The SPSS link function / GLMM family is not stated; I assumed linear on continuous T-scores.\n\n4. Table 1 SDs for the media categories look implausible (e.g., weekday texting mean 11.99 min, SD 0.51, range 0-240). They are recorded only as meta. sd_iv and sd_dv are left null because the betas are already standardized.\n\n5. M2 (sex-stratified, weekend only) has no per-stratum N. The 2162 boys and 1977 girls are the full-sample sex counts.\n\n6. ABCD release is inferred as 1.0 from reference 36 and the NDA DOI."
+}

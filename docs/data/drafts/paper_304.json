@@ -1,0 +1,224 @@
+{
+ "paper_id": "304",
+ "title": "Contemporary screen time modalities and disruptive behavior disorders in children: a prospective cohort study",
+ "doi": "10.1111/jcpp.13673",
+ "year": "2023",
+ "authors": "Nagata JM, Chu J, Ganson KT, Murray SB, Iyer P, Gabriel KP, Garber AK, Bibbins-Domingo K, Baker FC",
+ "journal": "Journal of Child Psychology and Psychiatry",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Modified Poisson regression (robust SE) of KSADS-5 conduct disorder and oppositional defiant disorder at 1-year follow-up on baseline texting, video chat, and social media hours/day, adjusted for sociodemographics, baseline symptoms, baseline MDD, and family psychopathology history",
+   "location_in_paper": "Table 2, adjusted columns (conduct disorder; manuscript p. 20) and Table 3, adjusted columns (oppositional defiant disorder; manuscript p. 21); Results p. 6; interpreted in Abstract and Discussion pp. 6-9.",
+   "design": "Prospective longitudinal cohort with a single follow-up outcome. Each screen time modality is measured at baseline (2016-2018, ages 9-10) and the binary disorder outcome is measured once at the one-year follow-up (2017-2019, ages 10-11). One observation per child; no repeated measures and no time interaction. Each modality was entered in its own model (one modality per model; Tables 2 and 3 each summarize fourteen models across unadjusted and adjusted versions), so the phone/SM estimates are not mutually adjusted for the other screen modalities. Baseline symptoms of the respective disorder are entered as a covariate; the outcome itself was not restricted to children free of the disorder at baseline, although the Discussion describes the finding as 'new-onset' disorder.",
+   "sample": "ABCD Study release 3.0, baseline and one-year follow-up, 21 U.S. sites. Analytic N = 11,875 (full baseline cohort). Missing data were imputed with Gaussian normal regression imputation rather than excluded: baseline screen time missing n=63, outcome missing n=793, covariate data missing N=1,016. Table 1 (propensity-weighted): mean age 9.9 (SD 0.6); 48.8% female, 51.2% male; 52.2% White, 20.0% Latino/Hispanic, 17.3% Black, 5.5% Asian, 3.2% Native American, 1.9% Other; 79.7% of parents with college education or more; 66.7% married/partnered. At one-year follow-up 1.9% met criteria for conduct disorder (1.1% of girls, 2.8% of boys) and 6.3% for oppositional defiant disorder (4.7% of girls, 7.9% of boys).",
+   "iv": "Baseline child-reported hours per day of three phone/SM modalities, each in its own model: texting, video chatting (e.g. Skype, Facetime), and social media (e.g. Facebook, Instagram, Twitter; labeled 'Social networking' in Tables 2-3). Instrument: ABCD Youth Screen Time Survey, typical weekday and weekend hours, combined as a weighted average [(weekday x 5) + (weekend x 2)]/7 and entered as a continuous variable. Prevalence ratios are per 1 hour/day. Table 1 baseline means (SD): texting 0.2 (0.6), video chat 0.2 (0.5), social media 0.1 (0.4) hours/day. The Discussion notes that 80% of the sample reported zero social media use at baseline.",
+   "dv": "Two binary outcomes at one-year follow-up, modeled separately: conduct disorder and oppositional defiant disorder, each derived from the parent/caregiver-completed KSADS-5 computerized interview scored to DSM-5 criteria. Prevalence at follow-up (Table 1): conduct disorder 1.9%, oppositional defiant disorder 6.3%.",
+   "covariates": [
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian, Native American, Other (White is the reference in Table S3 per text)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs. male"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories from less than $25,000 to $200,000 and greater"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs. college or more"
+    },
+    {
+     "name": "Parent marital status",
+     "detail": "Married/partnered vs. unmarried/unpartnered"
+    },
+    {
+     "name": "Study site",
+     "detail": "Listed among confounders in the Table 2-3 footnotes; entered as an adjustment variable (no random effect is described)"
+    },
+    {
+     "name": "Baseline disorder symptoms",
+     "detail": "Binary any parent-reported baseline symptom of the disorder being modeled (conduct disorder symptoms for Table 2, oppositional defiant disorder symptoms for Table 3), from the same KSADS-5 questions; 20.6% any conduct symptoms and 34.7% any ODD symptoms at baseline"
+    },
+    {
+     "name": "Baseline major depressive disorder",
+     "detail": "KSADS-5, binary; 0.3% at baseline"
+    },
+    {
+     "name": "Family history of psychopathology",
+     "detail": "Modified Family History Assessment, binary; 59.7% any"
+    },
+    {
+     "name": "Age",
+     "detail": "Listed as a confounder in the Methods (p. 5) but not listed in the Table 2-3 footnotes; inclusion in the final models is unclear"
+    }
+   ],
+   "equation": "log(Pr(Disorder_1yr[i] = 1)) = b0 + b1*PhoneSM_hours_baseline[i] + b2..b6*race_ethnicity + b7*sex + b8..b12*income + b13*parent_education + b14*marital_status + b_site*site[i] + b15*baseline_disorder_symptoms + b16*baseline_MDD + b17*family_history_psychopathology (+ age per Methods); Poisson working likelihood with robust (sandwich) SEs. PR = exp(b1) per 1 hour/day. Disorder is conduct disorder or oppositional defiant disorder; PhoneSM is texting, video chat, or social media, one per model.",
+   "estimation": "Stata 15.1. Modified Poisson regression with robust standard errors (Zou 2004) to estimate prevalence ratios. Propensity weights applied to yield nationally representative estimates based on the American Community Survey. Missing exposure, outcome, and covariate data imputed with Gaussian normal regression imputation. Alpha 0.05 (bold in tables indicates p<0.05); no multiple-comparison correction reported. Effect modification by sex tested; sex did not modify any screen time association with either disorder (all p>0.05), and no sex-stratified estimates are printed. Sensitivity analyses using logistic regression and using complete cases yielded similar findings (logistic slightly stronger), data not shown. Statistical assumption checks are in supplementary Table S1 (not included in this PDF).",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "hours/day; M = 0.2, SD = 0.6",
+     "sd_iv": 0.6
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "meta": "hours/day; M = 0.2, SD = 0.5",
+     "sd_iv": 0.5
+    },
+    {
+     "id": "social_media",
+     "label": "Social media",
+     "meta": "hours/day; labeled 'Social networking' in tables; M = 0.1, SD = 0.4",
+     "sd_iv": 0.4
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "conduct",
+     "label": "Conduct disorder (1-yr)",
+     "sd_dv": null,
+     "p0": 0.019
+    },
+    {
+     "id": "odd",
+     "label": "Oppositional defiant disorder (1-yr)",
+     "sd_dv": null,
+     "p0": 0.063
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "conduct",
+     "RR": 1.18,
+     "RR_lo": 0.99,
+     "RR_hi": 1.42,
+     "p": 0.064,
+     "p_label": "0.064",
+     "sig": false,
+     "location": "Table 2, adjusted, Texting row",
+     "note": "Prevalence ratio per 1 hour/day."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "conduct",
+     "RR": 1.15,
+     "RR_lo": 0.96,
+     "RR_hi": 1.38,
+     "p": 0.119,
+     "p_label": "0.119",
+     "sig": false,
+     "location": "Table 2, adjusted, Video chat row",
+     "note": "Prevalence ratio per 1 hour/day."
+    },
+    {
+     "iv": "social_media",
+     "dv": "conduct",
+     "RR": 1.62,
+     "RR_lo": 1.39,
+     "RR_hi": 1.87,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, adjusted, Social networking row",
+     "note": "Prevalence ratio per 1 hour/day. Headline finding of the paper."
+    },
+    {
+     "iv": "texting",
+     "dv": "odd",
+     "RR": 1.19,
+     "RR_lo": 1.07,
+     "RR_hi": 1.33,
+     "p": 0.002,
+     "p_label": "0.002",
+     "sig": true,
+     "location": "Table 3, adjusted, Texting row",
+     "note": "Prevalence ratio per 1 hour/day."
+    },
+    {
+     "iv": "video_chat",
+     "dv": "odd",
+     "RR": 1.21,
+     "RR_lo": 1.06,
+     "RR_hi": 1.37,
+     "p": 0.003,
+     "p_label": "0.003",
+     "sig": true,
+     "location": "Table 3, adjusted, Video chat row",
+     "note": "Prevalence ratio per 1 hour/day."
+    },
+    {
+     "iv": "social_media",
+     "dv": "odd",
+     "RR": 0.99,
+     "RR_lo": 0.83,
+     "RR_hi": 1.19,
+     "p": 0.938,
+     "p_label": "0.938",
+     "sig": false,
+     "location": "Table 3, adjusted, Social networking row",
+     "note": "Prevalence ratio per 1 hour/day."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted modified Poisson models for texting, video chat, and social media",
+   "location": "Table 2 and Table 3, unadjusted columns (pp. 20-21)",
+   "why": "Unadjusted transparency columns; the authors anchor all claims in the Results and Discussion to the adjusted prevalence ratios."
+  },
+  {
+   "model": "Television shows/movies, videos (YouTube), and video games as IVs",
+   "location": "Table 2 and Table 3, adjusted and unadjusted rows",
+   "why": "Non-phone/non-SM modalities; fail FT-IC2."
+  },
+  {
+   "model": "Total screen time (continuous) as IV",
+   "location": "Table 2 and Table 3, Total screen time row",
+   "why": "Composite bundling TV/movies, videos, and video games with texting, video chat, and social media; fails FT-IC2 Step 2. The phone/SM components are broken out separately and extracted in M1."
+  },
+  {
+   "model": "Total screen time thresholds (>2 vs <=2 h/day; >2 and <=4 and >4 vs <=2 h/day)",
+   "location": "Table 4 (p. 22)",
+   "why": "Threshold analyses are reported for total screen time only, a mixed composite; no phone/SM-specific threshold estimates."
+  },
+  {
+   "model": "Confounder prevalence ratios",
+   "location": "Supplementary Table S3 (not included in this PDF); described on p. 6",
+   "why": "Covariate estimates, not phone/SM associations."
+  },
+  {
+   "model": "Sex x screen time effect modification",
+   "location": "Results p. 6; Discussion p. 9",
+   "why": "Narrative only ('all p>0.05'); no interaction coefficients or sex-stratified phone/SM estimates printed."
+  },
+  {
+   "model": "Sensitivity analyses: logistic regression and complete-case analysis",
+   "location": "Methods p. 5; Results p. 6",
+   "why": "Described as yielding similar findings, 'data not shown'; no numbers to extract."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "RR (adjusted prevalence ratio from modified Poisson regression)",
+  "conversion_formula": "OR = PR * (1 - p0) / (1 - PR * p0); d = ln(OR) * sqrt(3)/pi (Chinn 2000), applied to the point estimate and each CI bound. p0 = 0.019 for conduct disorder and 0.063 for oppositional defiant disorder (marginal one-year follow-up prevalence). To express per 1 SD of the IV rather than per 1 hour/day, ln(PR) could first be multiplied by SD_IV (ln(PR_SD) = SD_IV * ln(PR)) before the PR -> OR step.",
+  "contrast_type": "per 1 hour/day of the baseline modality (continuous IV); optionally rescaled to per 1 SD using Table 1 SDs",
+  "transformable": true,
+  "notes": "p0 values are the marginal sample prevalences at one-year follow-up from Table 1 (manuscript p. 19: conduct disorder 1.9%, ODD 6.3%), not the rate in an unexposed group; with a continuous IV there is no unexposed group, and because both outcomes are rare the PR/OR distinction is small. SD_IV values are from Table 1 (manuscript p. 18; propensity-weighted, full N=11,875): texting 0.6, video chat 0.5, social media 0.4 hours/day. The IVs are heavily right-skewed with floor effects (80% report zero social media), so per-hour and per-SD contrasts may both be unrepresentative. Binary DVs, so sd_dv is null. Not directly comparable to per-1-SD d values from linear models or to group-contrast d values (e.g. paper 156)."
+ },
+ "extraction_flags": "1) The native metric is an adjusted prevalence ratio (PR) from modified Poisson regression. It is coded as \"RR\". 2) The stage2_reason gives p<.001 for video chat and texting predicting ODD. Table 3 actually prints p=0.003 for video chat and p=0.002 for texting, and the file uses the table values. 3) Age is listed as a confounder in the Methods (p. 5) but is missing from the confounder footnotes of Tables 2 and 3, so it is unclear whether age is in the final models. Site appears as an adjustment variable, not a random effect. 4) p0 uses the marginal one-year prevalences from Table 1 (CD 1.9%, ODD 6.3%), not an unexposed-group rate, because the IV is continuous. SD_IV comes from the propensity-weighted Table 1: texting 0.6, video chat 0.5, social media 0.4. These SDs differ from paper 394's ABCD descriptives. 5) Each modality was modeled separately, so the estimates are not mutually adjusted for the other modalities. The analysis uses all N=11,875 after imputation (outcome imputed for n=793). Baseline cases were not excluded even though the Discussion calls the outcome \"new-onset\". 6) Supplementary Tables S1 to S3 are not in the PDF. They hold assumption checks, the share of each modality with zero use, and confounder estimates, and were not reviewed. 7) The two \"<0.001\" p-values are stored as p=null with p_label \"<0.001\". All 6 PRs/CIs/p-values and the 3 SDs were checked against the pdftotext output of Tables 1 to 3."
+}

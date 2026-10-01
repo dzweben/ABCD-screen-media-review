@@ -12,6 +12,7 @@ Run from repo root:  python3 docs/scripts/ingest_drafts.py
 
 import glob
 import json
+import math
 import os
 import sys
 
@@ -34,7 +35,8 @@ def spec_for(est, metric, iv_meta, dv_meta):
     if m == "B":
         if est.get("B") is None:
             return None, "B missing"
-        sd_iv, sd_dv = iv_meta.get("sd_iv"), dv_meta.get("sd_dv")
+        sd_iv = est.get("sd_iv") or iv_meta.get("sd_iv")
+        sd_dv = est.get("sd_dv") or dv_meta.get("sd_dv")
         if not sd_iv or not sd_dv:
             return None, "SD_IV or SD_DV not reported"
         s = {"kind": "linear_continuous", "B": est["B"], "sd_iv": sd_iv, "sd_dv": sd_dv}
@@ -58,7 +60,7 @@ def spec_for(est, metric, iv_meta, dv_meta):
     if m == "RR":
         if not est.get("RR"):
             return None, "RR missing"
-        p0 = dv_meta.get("p0")
+        p0 = est.get("p0") or dv_meta.get("p0")
         if not p0:
             return None, "p0 (baseline rate) not reported"
         s = {"kind": "rr", "RR": est["RR"], "p0": p0}
@@ -83,7 +85,36 @@ def spec_for(est, metric, iv_meta, dv_meta):
         if est.get("r_lo") is not None and est.get("r_hi") is not None:
             s.update(r_lo=est["r_lo"], r_hi=est["r_hi"])
         return s, None
-    return None, f"native metric '{m}' has no Cohen's d conversion"
+    # 'other:' metrics with a legitimate closed-form conversion
+    v, lo, hi = est.get("value"), est.get("value_lo"), est.get("value_hi")
+    has_ci = lo is not None and hi is not None
+    if m == "other:standardized_beta_x100":
+        if v is None:
+            return None, "value missing"
+        s = {"kind": "standardized_beta", "beta": v / 100}
+        if has_ci:
+            s.update(beta_lo=lo / 100, beta_hi=hi / 100)
+        return s, None
+    if m in ("other:logit_B", "other:ordered_logit_coefficient"):
+        # coefficient is a log-odds ratio: OR = exp(b), then Chinn
+        if v is None:
+            return None, "value missing"
+        s = {"kind": "or", "OR": math.exp(v)}
+        if has_ci:
+            s.update(OR_lo=math.exp(lo), OR_hi=math.exp(hi))
+        return s, None
+    if m == "other:PR":
+        # prevalence ratio: same algebra as RR
+        if not v:
+            return None, "value missing"
+        p0 = est.get("p0") or dv_meta.get("p0")
+        if not p0:
+            return None, "p0 (baseline rate) not reported"
+        s = {"kind": "rr", "RR": v, "p0": p0}
+        if has_ci:
+            s.update(RR_lo=lo, RR_hi=hi)
+        return s, None
+    return None, f"no Cohen's d conversion for '{m}' (flagged for later review level)"
 
 
 def process(paper):
@@ -104,7 +135,10 @@ def process(paper):
                 issues.append(f"M{mi+1}: estimate iv '{est.get('iv')}' not in iv_axis")
             if est.get("dv") not in dvs:
                 issues.append(f"M{mi+1}: estimate dv '{est.get('dv')}' not in dv_axis")
-            spec, why = spec_for(est, model.get("native_metric"), ivs.get(est.get("iv"), {}), dvs.get(est.get("dv"), {}))
+            if model.get("d_kind") == "beta_is_y_standardized_group_difference" and est.get("beta") is not None:
+                spec, why = {"kind": "d_passthrough", "d": est["beta"]}, None
+            else:
+                spec, why = spec_for(est, model.get("native_metric"), ivs.get(est.get("iv"), {}), dvs.get(est.get("dv"), {}))
             for k in ("d", "d_lo", "d_hi") if model.get("native_metric") != "d" else ():
                 est.pop("derived_" + k, None)
             if spec is None:

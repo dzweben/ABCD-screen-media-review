@@ -1,0 +1,61 @@
+{
+ "paper_id": "13",
+ "title": "Role of Sleep and White Matter in the Link Between Screen Time and Depression in Childhood and Early Adolescence",
+ "doi": "10.1001/jamapediatrics.2025.1718",
+ "year": "2025",
+ "authors": "Lima Santos JP, Soehner AM, Biernesser CL, Ladouceur CD, Versace A",
+ "journal": "JAMA Pediatrics",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [],
+ "excluded_models": [
+  {
+   "model": "Linear regression of CBCL depressive score at T2 on total daily screen time at T1 (adjusted for T1 depressive symptoms, sex at birth, pubertal timing, household income, parent education, race and ethnicity)",
+   "location": "Results, 'Screen Time and Depressive Symptoms' (p. 1004); Abstract (p. 1000). B = 0.12 (95% CI, 0.04-0.20; P = .008) per 1 hour/day.",
+   "why": "IV is total daily screen time, a composite of 6 activities including watching TV, watching videos and playing videogames (Methods p. 1002; Table 1 footnote c). Composite includes non-phone/non-SM items, so it fails FT-IC2 Step 2 and guidelines section 5/6."
+  },
+  {
+   "model": "Linear regression of sleep duration at T2 on total daily screen time at T1",
+   "location": "Results, 'Screen Time and Sleep Duration' (p. 1004). B = -0.21 hours (95% CI, -0.28 to -0.14; P < .001); Figure 3 path a1 reported as beta = -0.23 (95% CI, -0.28 to -0.16).",
+   "why": "Same total screen time composite with non-phone/non-SM components; no phone/SM breakout printed in the paper body."
+  },
+  {
+   "model": "Serial mediation model (PROCESS, 10,000 bootstraps): total screen time T1 -> sleep duration T2 -> middle cingulum bundle ODI T2 -> CBCL depressive score T2",
+   "location": "Figure 3 (p. 1005); Results 'Serial Mediation Model' (p. 1004); eResults in Supplement 1. Indirect effect via sleep + cingulum ODI mediated 36.4% (95% CI, 18.2%-63.6%).",
+   "why": "IV is the total screen time composite (includes TV, videos, videogames). Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Sleep duration -> diffusion metrics (NDI, ODI, FA of cingulum, forceps minor, uncinate) and cingulum ODI -> depressive symptoms",
+   "location": "Table 2 (p. 1004); Figure 2 (p. 1005); Results 'White Matter and Depressive Symptoms' (p. 1004).",
+   "why": "No screen time or phone/SM variable in these models."
+  },
+  {
+   "model": "Exploratory screen-time-subcategory models (passive entertainment, active entertainment, communication = texting + social media + video chatting)",
+   "location": "Methods 'Screen Time' (p. 1002) and 'Exploratory Analyses' (pp. 1003-1004); eMethods and eResults in Supplement 1 (not bundled in the PDF reviewed). Discussion p. 1005 states only that 'communication time effects did not involve sleep duration.'",
+   "why": "The communication subcategory is built exclusively from texting, social media and video chatting and would qualify under FT-IC2 Step 2. However, the article PDF prints no numeric estimate for it; the only mention is the narrative Discussion statement on p. 1005. Any coefficients for communication time are in Supplement 1, which is not part of the PDF available for extraction. Cannot be extracted until the supplement is obtained."
+  },
+  {
+   "model": "Screen time threshold analyses (1 hour for sleep duration, 2 hours for depressive scores, 3 hours for cingulum ODI)",
+   "location": "Results 'Exploratory Analyses' (p. 1004); eTables 6-7 and eFigures 2-3 in Supplement 1.",
+   "why": "Thresholds are on total daily screen time (composite with non-phone items). Fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Inverse model: parent-reported sleep duration at T1 -> screen time at T2",
+   "location": "Results 'Exploratory Analyses' (p. 1004): F = 19.05; P < .001.",
+   "why": "Screen time DV is the total composite; not phone/SM-specific."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "none extracted",
+  "conversion_formula": "Not applicable; no qualifying phone/SM estimate is printed in the available PDF. If the Supplement 1 communication-time coefficients are obtained and are unstandardized B from linear regression: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2).",
+  "contrast_type": "Would be per 1 hour/day of communication time (texting + social media + video chat), matching the per-hour coding of total screen time in the main analyses.",
+  "transformable": false,
+  "notes": "The 9-page article PDF contains no numeric estimate for the communication subcategory. Table 1 (p. 1002) reports communication time at T1 as mean (SD) 0.4 (0.8) hours/day in the analytic sample (N = 976), which would serve as SD_IV. The CBCL depressive outcome is described as a raw-score total (Methods p. 1003), and no SD for it is reported in the article body, so SD_DV would also need to come from Supplement 1 (eTable 1). Stage 2 inclusion rested on the methods definition of the communication subcategory; the actual estimates live only in the supplement."
+ },
+ "extraction_flags": "This paper has no qualifying phone/SM estimate in the bundled PDF, so primary_models is []. The PDF is the 9-page article only; Supplement 1 is not included. Every printed model uses total daily screen time as the IV. That variable bundles TV, videos and videogames, so it fails FT-IC2 Step 2. The communication subcategory (texting + social media + video chat) qualifies under Step 2, and the Methods define it as an exploratory analysis. But the article body gives no number for it, only the narrative line in the Discussion on p. 1005 that \"communication time effects did not involve sleep duration\". Any communication-time coefficients are in Supplement 1 (eResults, eTables), which I could not read. A human should get Supplement 1 from JAMA Pediatrics and extract the communication-time models from there. If those models turn out to have no printed coefficients either, the Stage 2 INCLUDE decision should be revisited under FT-EC4. SD_IV is available from Table 1 (communication time M 0.4, SD 0.8 h/day, N = 976). SD_DV for the CBCL depressive score (raw score, not a T-score) is not in the article body. Spot-checked against the PDF: 0.12 (0.04-0.20, P = .008); -0.21 (-0.28 to -0.14); Fig 3 path -0.23 (-0.28 to -0.16); 36.4% (18.2%-63.6%); F = 19.05; Table 1 communication 0.4 (0.8).json"
+}

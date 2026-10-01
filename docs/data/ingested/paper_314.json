@@ -1,0 +1,336 @@
+{
+ "paper_id": "314",
+ "title": "Neural Sensitivity to Social Media Use: Implications for Sleep Duration in Adolescents",
+ "doi": "10.1111/jsr.70325",
+ "year": "2026",
+ "authors": "Kiss O, Zhang L, Chaarani B, M\u00fcller-Oehring EM, Baker FC",
+ "journal": "Journal of Sleep Research",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed-effects regression of Year 4 sleep duration on Year 2 social media use, its interaction with Year 2 reward/executive-control ROI activation, and Year 2 sleep duration, adjusted for sociodemographics and COVID timing",
+   "location_in_paper": "Section 3.1 Results text (p. 5); Figure 2 (p. 5) and Figure 3 (p. 6); full results in Supplementary Table S1 (not bundled in the PDF); interpreted in Discussion pp. 7-8 and Conclusions p. 8",
+   "design": "Prospective two-wave design. Predictors (social media use, MID-task ROI activation, and the Year 2 measure of the outcome) measured at the Year 2 follow-up; outcome (sleep duration) measured at the Year 4 follow-up. One Year 4 outcome per participant, not repeated measures. This is the first of three sets of prospective models; within the set, each of 12 ROIs is entered separately, giving 12 models, each testing the direct effects of social media use and ROI activation and their interaction (SM x ROI) on Year 4 sleep duration.",
+   "sample": "ABCD Data Release 5.1, using only the half of Year 4 data that was available. Of 2270 participants with neuroimaging, self-reported sleep and social media data at both Years 2 and 4, 265 were excluded for image quality issues and 20 for missing covariates, leaving N = 1985 (age range 10.75-13.75; mean age at Year 2 = 11.91 years, SD = 0.65). Table 1 (p. 3): female 900 (45.4%), male 1085 (54.6%); Asian 38 (1.9%), Black 185 (9.3%), Latino/Hispanic 408 (20.5%), Other 204 (10.2%), White 1150 (57.9%); parental education high school diploma or less 216 (10.9%), college or above 1769 (89.1%).",
+   "iv": "Self-reported daily social media use at Year 2 from the ABCD Youth Screen Time Questionnaire: typical daily hours on social media separately for school days and weekend days (excluding school-related activities), combined as ([weekday x 5] + [weekend x 2]) / 7 and winsorized at the 99th percentile; non-users kept at zero. Continuous predictors were standardized (mean = 0, SD = 1) before entry, so the IV is in SD units. Descriptives for Year 2 SM are not reported; Year 4 distribution reported (p. 5): 26.3% (n = 523) no SM use, 19.7% (n = 391) 1-59.9 min/day, 20.4% (n = 405) 60-119 min/day, 33.6% (n = 666) more than 120 min/day. Moderators: Year 2 mean bilateral beta-weights for large reward vs neutral anticipation in the MID task (Destrieux parcellation) for 12 ROIs including nucleus accumbens, amygdala, cingulate gyrus, insula, caudate, precuneus, putamen, thalamus proper, hippocampus, and inferior, middle and superior frontal gyri.",
+   "dv": "Year 4 self-reported sleep duration (hours) from the Munich Chronotype Questionnaire, derived from sleep onset and offset times without accounting for wake after sleep onset, weighted as ([weekday x 5] + [weekend x 2]) / 7 and winsorized at the 1st and 99th percentiles. Year 4 distribution (p. 4-5): 4% (n = 79) less than 6 h, 26.8% (n = 611) 6-8 h, 57.7% (n = 1145) 8-9.99 h, 11.5% (n = 229) 10 h or more. Mean and SD not reported.",
+   "covariates": [
+    {
+     "name": "Year 2 sleep duration",
+     "detail": "Year 2 measure of the outcome; chi-squared = 189.82, p < 0.01"
+    },
+    {
+     "name": "Year 2 ROI activation",
+     "detail": "One of 12 ROIs per model, standardized; entered as main effect and in interaction with SM"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female/male"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Black, Hispanic, Asian, Other"
+    },
+    {
+     "name": "Age",
+     "detail": "Year 2, continuous, standardized; chi-squared = 12.03, p = 0.002"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Some college or above vs high school or less"
+    },
+    {
+     "name": "COVID-19 timing",
+     "detail": "Date of Year 2 data collection: 0 = before February 2020, 1 = after February 2020"
+    },
+    {
+     "name": "Family ID",
+     "detail": "Random term"
+    },
+    {
+     "name": "MRI scanner manufacturer",
+     "detail": "Random term (Siemens, GE, Philips)"
+    }
+   ],
+   "equation": "SleepDur_Y4[i] = b0 + b1*SM_Y2[i] + b2*ROI_Y2[i] + b3*SM_Y2[i]*ROI_Y2[i] + b4*SleepDur_Y2[i] + b5*sex + b6*race/ethnicity + b7*age_Y2 + b8*parent_ed + b9*COVID_timing + u_family + u_scanner + e[i]; fitted separately for each of 12 ROIs. Effects reported as chi-squared tests, not coefficients.",
+   "estimation": "lmer (lme4) linear mixed-effects models in R (analyses carried out in R and Python 3.5), with family ID and MRI scanner manufacturer as random terms. Continuous predictors standardized. Propensity weights calibrating ABCD to the American Community Survey were employed (p. 3); how they were applied in the models is not described. Effects are reported as chi-squared statistics with FDR-corrected p-values (correction applied within each set of 12 models; significance at corrected p < 0.05). No coefficients, standard errors, CIs or degrees of freedom are printed in the main text; full results are in Supplementary Table S1, which is not in the PDF. The authors prioritized interpretation of models with highest average R^2. A separate 10-fold cross-validated R^2 comparison across the three model sets was run without random terms (Friedman test, Holm-corrected Wilcoxon post hoc, alpha = 0.01). The SM main-effect chi-squared is reported once (7.76) without saying which of the 12 ROI models it comes from.",
+   "native_metric": "other:chi2",
+   "iv_axis": [
+    {
+     "id": "sm_y2",
+     "label": "Social media use (Y2)",
+     "meta": "weighted daily hours, standardized",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_x_nacc",
+     "label": "SM (Y2) x nucleus accumbens activation (Y2)",
+     "meta": "interaction",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_x_cing",
+     "label": "SM (Y2) x cingulate gyrus activation (Y2)",
+     "meta": "interaction",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_x_ins",
+     "label": "SM (Y2) x insula activation (Y2)",
+     "meta": "interaction",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_x_put",
+     "label": "SM (Y2) x putamen activation (Y2)",
+     "meta": "interaction",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sleep_y4",
+     "label": "Sleep duration (Y4)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_y2",
+     "dv": "sleep_y4",
+     "value": 7.76,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.016,
+     "p_label": "0.016",
+     "sig": true,
+     "location": "Section 3.1 text p. 5; Figure 2 caption p. 5",
+     "note": "Chi-squared, FDR-corrected p. Direction: more Year 2 SM -> shorter Year 4 sleep. Which ROI model this main effect comes from is not stated.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "sm_x_nacc",
+     "dv": "sleep_y4",
+     "value": 7.11,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.021,
+     "p_label": "0.021",
+     "sig": true,
+     "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
+     "note": "Chi-squared for SM x ROI interaction. SM-sleep association stronger among those with lower activation (Figure 3).",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "sm_x_cing",
+     "dv": "sleep_y4",
+     "value": 6.61,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.027,
+     "p_label": "0.027",
+     "sig": true,
+     "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
+     "note": "Chi-squared for SM x ROI interaction.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "sm_x_ins",
+     "dv": "sleep_y4",
+     "value": 9.15,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.011,
+     "p_label": "0.011",
+     "sig": true,
+     "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
+     "note": "Chi-squared for SM x ROI interaction.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "sm_x_put",
+     "dv": "sleep_y4",
+     "value": 7.13,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.021,
+     "p_label": "0.021",
+     "sig": true,
+     "location": "Section 3.1 text p. 5; Figure 3 caption p. 6",
+     "note": "Chi-squared for SM x ROI interaction.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Zero-inflated generalized linear mixed model (glmmTMB) of Year 4 social media use on Year 2 sleep duration and Year 2 ROI activation, adjusted for Year 2 social media use, sociodemographics and COVID timing",
+   "location_in_paper": "Section 3.2 Results text (p. 5); Figure 4 (p. 7); full results in Supplementary Table S2 (not bundled in the PDF); interpreted in Discussion pp. 7-8",
+   "design": "Prospective two-wave design. Sleep duration and ROI activation measured at Year 2 predict social media use at Year 4, controlling for Year 2 social media use. One Year 4 outcome per participant. Third set of prospective models: 12 models, one per ROI, each testing direct effects of sleep duration and ROI activation and their interaction on Year 4 SM. Here phone/SM is the DV.",
+   "sample": "Same analytic sample as M1: ABCD Release 5.1, N = 1985 (mean age Year 2 = 11.91, SD = 0.65; 45.4% female; 57.9% White, 20.5% Latino/Hispanic, 9.3% Black, 1.9% Asian, 10.2% Other).",
+   "iv": "Year 2 sleep duration (hours, Munich Chronotype Questionnaire, weighted weekday/weekend average, winsorized at 1st/99th percentiles, standardized). Year 2 MID-task ROI activation (large reward vs neutral anticipation beta-weights, mean bilateral, standardized), one ROI per model. Means and SDs not reported.",
+   "dv": "Year 4 self-reported daily social media use (ABCD Youth Screen Time Questionnaire; weighted ([weekday x 5] + [weekend x 2]) / 7 daily hours, winsorized at the 99th percentile), natural-log (x + 1) transformed for skewness (original skewness 2.55 at Year 4). Zero-inflated component models non-users separately. Year 4 distribution (p. 5): 26.3% none, 19.7% 1-59.9 min/day, 20.4% 60-119 min/day, 33.6% more than 120 min/day.",
+   "covariates": [
+    {
+     "name": "Year 2 social media use",
+     "detail": "Year 2 measure of the outcome, log(x + 1) transformed (original skewness 5.67); chi-squared = 102.55, p < 0.01"
+    },
+    {
+     "name": "Year 2 ROI activation or sleep duration",
+     "detail": "Each enters as a predictor; interaction sleep x ROI also tested"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female/male; chi-squared = 29.92, p < 0.01 (females more SM)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Black, Hispanic, Asian, Other"
+    },
+    {
+     "name": "Age",
+     "detail": "Year 2, standardized"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Some college or above vs high school or less"
+    },
+    {
+     "name": "COVID-19 timing",
+     "detail": "Year 2 data collected before (0) or after (1) February 2020"
+    },
+    {
+     "name": "Family ID",
+     "detail": "Random term"
+    },
+    {
+     "name": "MRI scanner manufacturer",
+     "detail": "Random term"
+    }
+   ],
+   "equation": "log(SM_Y4[i] + 1) = b0 + b1*SleepDur_Y2[i] + b2*ROI_Y2[i] + b3*SleepDur_Y2[i]*ROI_Y2[i] + b4*log(SM_Y2[i] + 1) + b5*sex + b6*race/ethnicity + b7*age_Y2 + b8*parent_ed + b9*COVID_timing + u_family + u_scanner + e[i], with a zero-inflation component for no SM use; fitted separately for each of 12 ROIs. Effects reported as chi-squared tests.",
+   "estimation": "glmmTMB zero-inflated mixed model in R, with family ID and scanner manufacturer as random terms; continuous predictors standardized. The text attributes the log(x + 1) transform and glmmTMB to 'the first set of models' even though SM is the outcome only in the third set; the description reads as applying to the SM-outcome models. Which component (conditional vs zero-inflation) the chi-squared tests refer to is not stated. FDR-corrected p-values within the set of 12 models. Propensity weights mentioned (p. 3) without details of their use. No coefficients, SEs or CIs printed; full output in Supplementary Table S2 (not in the PDF). Although the abstract says the sleep-to-SM effect was moderated by insula and middle frontal gyrus activation, the results text reports the insula and MFG effects as associations of ROI activation with Year 4 SM and gives no interaction statistics.",
+   "native_metric": "other:chi2",
+   "iv_axis": [
+    {
+     "id": "sleep_y2",
+     "label": "Sleep duration (Y2)",
+     "meta": "hours, standardized",
+     "sd_iv": null
+    },
+    {
+     "id": "insula_y2",
+     "label": "Insular cortex activation (Y2)",
+     "meta": "MID large reward vs neutral, standardized",
+     "sd_iv": null
+    },
+    {
+     "id": "mfg_y2",
+     "label": "Middle frontal gyrus activation (Y2)",
+     "meta": "MID large reward vs neutral, standardized",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sm_y4",
+     "label": "Social media use (Y4)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sleep_y2",
+     "dv": "sm_y4",
+     "value": 6.72,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.021,
+     "p_label": "0.021",
+     "sig": true,
+     "location": "Section 3.2 text p. 5",
+     "note": "Chi-squared, FDR-corrected p. Direction: shorter Year 2 sleep -> more Year 4 SM. Which ROI model this comes from is not stated.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "insula_y2",
+     "dv": "sm_y4",
+     "value": 5.25,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.039,
+     "p_label": "0.039",
+     "sig": true,
+     "location": "Section 3.2 text p. 5; Figure 4 caption p. 7",
+     "note": "Chi-squared. Lower Year 2 insula activation -> more Year 4 SM; authors note a less consistent trend across activation deciles (Figure 4).",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    },
+    {
+     "iv": "mfg_y2",
+     "dv": "sm_y4",
+     "value": 5.09,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.042,
+     "p_label": "0.042",
+     "sig": true,
+     "location": "Section 3.2 text p. 5; Figure 4 caption p. 7",
+     "note": "Chi-squared. Lower Year 2 middle frontal gyrus activation -> more Year 4 SM.",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:chi2' (flagged for later review level)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Second set of prospective models: Year 4 ROI activation on Year 2 social media use and Year 2 sleep duration (lmer)",
+   "location": "Section 3.3 text p. 5; Supplementary Table S3 (not in the PDF)",
+   "why": "The phone/SM estimate is described only narratively ('not a significant predictor', no significant interactions) with no printed statistic in the PDF; the numbers are in Supplementary Table S3, which is not bundled. The sleep -> caudate effect (chi-squared = 8.18, p = 0.033) does not involve phone/SM. Should be added if Table S3 is obtained."
+  },
+  {
+   "model": "Autoregressive effect of Year 2 SM on Year 4 SM within the M2 models",
+   "location": "Section 3.2 text p. 5 (chi-squared = 102.55, p < 0.01)",
+   "why": "Prior measure of the outcome entered as a covariate; no individual-trait variable on the other side."
+  },
+  {
+   "model": "Sex predicting Year 4 SM within the M2 models",
+   "location": "Section 3.2 text p. 5 (chi-squared = 29.92, p < 0.01)",
+   "why": "Demographic predictor of SM; does not meet the individual-trait other-side requirement."
+  },
+  {
+   "model": "Cross-validated R^2 comparison across the three model sets (Friedman test, Wilcoxon post hoc)",
+   "location": "Section 2.4 p. 4; Section 3.4 p. 5; Discussion p. 6",
+   "why": "Model-level comparison of explained variance between analytic approaches (e.g., mean R^2 about 0.14 for sleep models vs about 0.13 for SM models), not an estimate of a phone/SM association with a trait outcome."
+  },
+  {
+   "model": "Confirmatory factor analysis of Year 2 ROI activation",
+   "location": "Section 2.3 p. 4; Section 3 p. 5; Supporting Information Data S1",
+   "why": "Neural measurement model; no phone/SM variable."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:chi2",
+  "conversion_formula": "None applied. Guidelines \u00a74a give no conversion for chi-squared Wald/ANOVA test statistics from mixed models; a chi-squared(1) could in principle be converted via r = sqrt(chi2 / N) and d = 2r / sqrt(1 - r^2), but df are not reported and the statistics come from multi-predictor mixed models (partial effects), so this would not be valid without further information.",
+  "contrast_type": "Per 1 SD of the standardized predictor (SM use, sleep duration or ROI activation) in Year 2; however, only test statistics are reported, not slopes.",
+  "transformable": false,
+  "notes": "The paper reports only chi-squared statistics with FDR-corrected p-values in the main text; no B, beta, SE, CI or df. SDs for Year 2/Year 4 SM use and sleep duration are not reported (Table 1 gives demographics only; Year 4 categories are given as percentages on pp. 4-5). Coefficients may be in Supplementary Tables S1-S2, which are not in the PDF. M2 is additionally a zero-inflated model on log(x + 1) SM, which complicates any d conversion. If the supplement provides standardized coefficients, M1 (continuous standardized IV and continuous DV) could become transformable."
+ },
+ "extraction_flags": "The main text reports only chi-squared statistics with FDR-corrected p-values. It gives no coefficients, SEs, CIs, df, or SDs for social media use or sleep, so none of the estimates can be converted to d. Supplementary Tables S1\u2013S3 should hold the full model output, but they are not in the PDF; someone needs to get them. If they report standardized betas, M1 might become transformable, and the SM -> brain activation model (Set 2, Table S3), which is currently excluded for having no printed numbers, could be added.\n\n1) The main effects of SM on sleep (\u03c7\u00b2=7.76) and of sleep on SM (\u03c7\u00b2=6.72) are each reported once. The paper fits 12 models per set, one per brain region, and does not say which of these models the numbers come from.\n\n2) I included the SM \u00d7 ROI interaction chi-squares as phone/SM estimates in M1. In M2 I included the effects of insula and middle frontal gyrus activation on SM, with SM as the DV. Please check that both choices meet the eligibility criteria.\n\n3) The abstract says the sleep -> SM effect was moderated by insula and middle frontal gyrus activation. The results text instead reports these as main effects of brain activation on SM and gives no interaction statistics.\n\n4) The methods say the log(x+1) transform and the zero-inflated glmmTMB model were used for the \"first set\" of models, but SM is the outcome only in the third set. It is also not stated whether the chi-squares come from the conditional component or the zero-inflation component.\n\n5) The propensity weights are mentioned, but the paper does not say how they were applied in the models."
+}

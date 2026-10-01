@@ -1,0 +1,1627 @@
+{
+ "paper_id": "154",
+ "title": "Adolescent smartphone use, sleep, and physical activity: daily associations between sensor-based measures in the adolescent brain cognitive development (ABCD) study",
+ "doi": "10.1016/j.psychres.2025.116523",
+ "year": "2025",
+ "authors": "Alexander JD, Nguyen-Louie TT, Gupta S, Cummins KM, Wade NE",
+ "journal": "Psychiatry Research",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed-effects regression of daily Fitbit sleep and physical activity outcomes on same-day passively sensed smartphone app or keyboard minutes (combined effect), adjusted for sex, age, day type, summer, Fitbit wear time",
+   "location_in_paper": "Table 3 'Combined Effect' columns (p. 6); Results p. 4; Abstract; Discussion pp. 6 and 8.",
+   "design": "Intensive longitudinal (daily diary-style) design within the ABCD Year-4 follow-up: up to three weeks of daily passive sensor data per participant. IV and DV are measured on the same day (activity outcomes), the same night (sleep onset, total sleep) or the next morning (wake time). Days are repeated measures nested within participants, handled by a participant random intercept. The combined effect uses raw daily minutes of use, so it does not separate within-person from between-person variation. No time trend or IV x time interaction.",
+   "sample": "ABCD Release 5.1, Year-4 follow-up visit (ages 13-14), participants in the ABCD EARS/Fitbit wearables substudy who concurrently provided up to three weeks of passively sensed smartphone, sleep and physical activity data (data collection ended after 21 days of data or 42 elapsed days). N = 791 participants overall (Table 1): mean age 14.12 (SD 0.69); 369 male (46.6%), 422 female (53.4%); Asian 17 (2.1%), Black 75 (9.5%), Hispanic 144 (18.2%), White 471 (59.5%), another race 84 (10.6%); highest parent education: no HS diploma 15 (1.8%), HS/GED 40 (5.1%), some college 241 (30.5%), bachelor's 225 (28.4%), graduate/professional 270 (34.1%); iOS 486 (61.4%), Android 305 (38.6%). Keyboard measures come from all 791 participants (11,797 day-observations for daytime and evening, 10,159 for late night); application-use measures come only from Android users (302 participants, 6340 days; 5993 for late night). Fitbit outcomes: steps 791 participants / 6228 days; sedentary and exercise 791 / 6748 days; total sleep and sleep onset 604 / 5634 nights; wake time 604 / 5375 nights (Table 2). The paper reports 6748 days of concurrent smartphone and physical activity data and 5634 nights of concurrent smartphone and sleep data. Each model uses all pairwise-complete day-observations for that IV-DV pair; the exact day-level and participant-level N per model is not reported. Attrition and inclusion detail is in Supplementary Figure S1 (not in this PDF). The authors note the sample is more female and more non-Hispanic White and less low-income than the US population of 10-14 year olds.",
+   "iv": "Passively sensed smartphone use from the EARS app. Application use (Android only) is the minutes any application, third-party or native, was in the foreground each day, after removing system apps and apps meant to stay foregrounded during sleep (lock screens, alarm clocks). Keyboard use (Android and iOS) is the total minutes the keyboard was open and logging keystrokes (time between first and last keystroke of each session), with the same app exclusions; on Android it was recorded from the native keyboard, on iOS via an EARS keyboard overlay that participants were told to use exclusively. Each is split into three time windows: daytime/evening 6:00AM-7:59PM, 'night time' 8:00PM-9:59PM, and late night 10:00PM-5:59AM the next morning. Six IVs total, each entered in a separate model, in minutes. Table 2 descriptives: Smartphone application use, 6:00AM-7:59PM (min/day): grand M = 190.47 min, SD = 140.26; participant-mean M = 188.68, SD = 96.00; Smartphone application use, 8:00PM-9:59PM (min/day): grand M = 37.66 min, SD = 36.89; participant-mean M = 36.98, SD = 23.10; Smartphone application use, 10:00PM-5:59AM (min/night): grand M = 71.52 min, SD = 97.11; participant-mean M = 70.53, SD = 69.58; Keyboard use, 6:00AM-7:59PM (min/day): grand M = 11.68 min, SD = 21.28; participant-mean M = 9.89, SD = 14.62; Keyboard use, 8:00PM-9:59PM (min/day): grand M = 2.90 min, SD = 7.27; participant-mean M = 2.47, SD = 4.52; Keyboard use, 10:00PM-5:59AM (min/night): grand M = 4.04 min, SD = 12.25; participant-mean M = 3.33, SD = 7.68.",
+   "dv": "Six Fitbit Charge-derived daily outcomes, each modeled separately: total daily steps (grand M = 7553.73, SD = 4578.02); minutes of sedentary activity (METs < 1.5; M = 973.01, SD = 333.41); minutes of moderate-to-vigorous exercise (METs >= 3.0; M = 31.73, SD = 47.52); total minutes of sleep between 5:00PM and 4:59PM the next day (M = 449.98, SD = 95.39); sleep onset, first minute recorded asleep each night, modeled as minutes delayed (grand M = 11:48PM, SD = 2 h 14 m; labeled 'Bedtime' in Table 3); wake time, first minute awake followed by at least 30 consecutive minutes awake, modeled as minutes delayed (grand M = 8:02AM, SD = 2 h 17 m). Physical-activity outcomes are same-day; sleep onset and total sleep are same-night; wake time is next morning. Days with < 599 min of valid waking wear, > 20% of steps excluded in QC, or < 30 s of recorded sleep were excluded. Grand means/SDs from Table 2 (p. 5).",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth (parent report), fixed effect"
+    },
+    {
+     "name": "Age",
+     "detail": "Age in months at the Year-4 visit, mean-centered"
+    },
+    {
+     "name": "Weekend/weekday",
+     "detail": "Weekdays Monday-Friday vs. weekend Saturday-Sunday, day-level fixed effect"
+    },
+    {
+     "name": "School night",
+     "detail": "Sunday-Thursday nights vs. Friday-Saturday nights; listed in the Table 3 and Fig. 1 notes ('covariates varied by model'), not in the Section 2.4 list. Presumably used in the sleep models, but the paper does not state which models include it."
+    },
+    {
+     "name": "Summer vacation",
+     "detail": "Day falls between June 1 and August 31, day-level fixed effect"
+    },
+    {
+     "name": "Fitbit wear time",
+     "detail": "Total minutes of recorded Fitbit wear time, excluding minutes removed in quality control"
+    },
+    {
+     "name": "Smartphone operating system",
+     "detail": "iOS vs. Android; included only in keyboard-use models, since application-use data are Android-only"
+    },
+    {
+     "name": "Individual (participant)",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "Outcome[i,t] = b0 + b1*PhoneUse_minutes[i,t] + b2*sex[i] + b3*age_c[i] + b4*weekend[t] + b5*school_night[t] + b6*summer[t] + b7*fitbit_wear[i,t] (+ b8*OS[i] in keyboard models) + u_i + e[i,t]; one model per PhoneUse measure (6) x Outcome (6). Covariate set 'varied by model' per the Table 3 note.",
+   "estimation": "Linear mixed-effects models fit with the nlme package in R 4.3.0, with individual-level random intercepts. A separate model was fit for every smartphone measure x outcome pair. Table 3 reports both the unstandardized beta (per additional minute of use) and the standardized beta; no CIs or SEs are printed in the table, though Fig. 1 plots 95% CIs for the within- and between-person standardized betas. Significance judged at P < .05 (Fig. 1 marks * P < .05); no multiple-comparison correction is reported across the 36 combined or 72 disaggregated tests. No interaction or stratified analyses by sex or other demographics. Sensitivity analyses reported only in the supplement (not in this PDF) and summarized narratively on p. 5: adding race and socioeconomic status (all significant effects retained), adding time recorded awake to the physical activity models (11/15 retained), redefining late night as 9:00PM-4:59AM or 11:00PM-6:59AM, winsorizing outcomes at +/-3 SD (30/31 retained), and inverse-propensity weighting by proportion of complete days (25/31 retained). Standardized effects in all sensitivity models were within 0.10 SD of the primary effects.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "app_day",
+     "label": "Smartphone application use, 6:00AM-7:59PM (min/day)",
+     "meta": "Android only; 302 participants, 6340 days; grand M = 190.47 min, SD = 140.26; participant-mean M = 188.68, SD = 96.00",
+     "sd_iv": 140.26
+    },
+    {
+     "id": "app_eve",
+     "label": "Smartphone application use, 8:00PM-9:59PM (min/day)",
+     "meta": "Android only; 302 participants, 6340 days; grand M = 37.66 min, SD = 36.89; participant-mean M = 36.98, SD = 23.10",
+     "sd_iv": 36.89
+    },
+    {
+     "id": "app_night",
+     "label": "Smartphone application use, 10:00PM-5:59AM (min/night)",
+     "meta": "Android only; 302 participants, 5993 days; grand M = 71.52 min, SD = 97.11; participant-mean M = 70.53, SD = 69.58",
+     "sd_iv": 97.11
+    },
+    {
+     "id": "kb_day",
+     "label": "Keyboard use, 6:00AM-7:59PM (min/day)",
+     "meta": "iOS + Android; 791 participants, 11,797 days; grand M = 11.68 min, SD = 21.28; participant-mean M = 9.89, SD = 14.62",
+     "sd_iv": 21.28
+    },
+    {
+     "id": "kb_eve",
+     "label": "Keyboard use, 8:00PM-9:59PM (min/day)",
+     "meta": "iOS + Android; 791 participants, 11,797 days; grand M = 2.90 min, SD = 7.27; participant-mean M = 2.47, SD = 4.52",
+     "sd_iv": 7.27
+    },
+    {
+     "id": "kb_night",
+     "label": "Keyboard use, 10:00PM-5:59AM (min/night)",
+     "meta": "iOS + Android; 791 participants, 10,159 days; grand M = 4.04 min, SD = 12.25; participant-mean M = 3.33, SD = 7.68",
+     "sd_iv": 12.25
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bed",
+     "label": "Sleep onset (min delayed)",
+     "sd_dv": 134,
+     "p0": null
+    },
+    {
+     "id": "wake",
+     "label": "Wake time (min delayed)",
+     "sd_dv": 137,
+     "p0": null
+    },
+    {
+     "id": "sleep",
+     "label": "Total sleep (min)",
+     "sd_dv": 95.39,
+     "p0": null
+    },
+    {
+     "id": "exer",
+     "label": "Moderate-to-vigorous exercise (min)",
+     "sd_dv": 47.52,
+     "p0": null
+    },
+    {
+     "id": "sed",
+     "label": "Sedentary behavior (min)",
+     "sd_dv": 333.41,
+     "p0": null
+    },
+    {
+     "id": "steps",
+     "label": "Total daily steps",
+     "sd_dv": 4578.02,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "app_day",
+     "dv": "bed",
+     "beta": 0.019,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.348,
+     "p_label": ".348",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.018 min of sleep-onset delay per additional minute of use (printed as 0.018); standardized beta printed as 0.019. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day",
+     "dv": "wake",
+     "beta": 0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.395,
+     "p_label": ".395",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.020 min of wake-time delay per additional minute of use (printed as 0.020); standardized beta printed as 0.020. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day",
+     "dv": "sleep",
+     "beta": 0.009,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.718,
+     "p_label": ".718",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.006 min of sleep per additional minute of use (printed as 0.006); standardized beta printed as 0.009. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day",
+     "dv": "exer",
+     "beta": -0.128,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.046 min of MVPA per additional minute of use (printed as -0.046); standardized beta printed as -0.128. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day",
+     "dv": "sed",
+     "beta": 0.069,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.169 min sedentary per additional minute of use (printed as 0.169); standardized beta printed as 0.069. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day",
+     "dv": "steps",
+     "beta": -0.209,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = -7.105 steps per additional minute of use (printed as -7.105); standardized beta printed as -0.209. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "bed",
+     "beta": 0.023,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.244,
+     "p_label": ".244",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.082 min of sleep-onset delay per additional minute of use (printed as 0.082); standardized beta printed as 0.023. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "wake",
+     "beta": 0.031,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.167,
+     "p_label": ".167",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.118 min of wake-time delay per additional minute of use (printed as 0.118); standardized beta printed as 0.031. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "sleep",
+     "beta": -0.024,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.295,
+     "p_label": ".295",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.063 min of sleep per additional minute of use (printed as -0.063); standardized beta printed as -0.024. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "exer",
+     "beta": -0.028,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.073,
+     "p_label": ".073",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.038 min of MVPA per additional minute of use (printed as -0.038); standardized beta printed as -0.028. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "sed",
+     "beta": 0.024,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.222 min sedentary per additional minute of use (printed as 0.222); standardized beta printed as 0.024. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve",
+     "dv": "steps",
+     "beta": -0.052,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = -6.783 steps per additional minute of use (printed as -6.783); standardized beta printed as -0.052. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "bed",
+     "beta": 0.269,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.369 min of sleep-onset delay per additional minute of use (printed as 0.369); standardized beta printed as 0.269. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "wake",
+     "beta": 0.176,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.246 min of wake-time delay per additional minute of use (printed as 0.246); standardized beta printed as 0.176. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "sleep",
+     "beta": -0.161,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.158 min of sleep per additional minute of use (printed as -0.158); standardized beta printed as -0.161. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "exer",
+     "beta": -0.015,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.356,
+     "p_label": ".356",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.008 min of MVPA per additional minute of use (printed as -0.008); standardized beta printed as -0.015. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "sed",
+     "beta": 0.019,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.067 min sedentary per additional minute of use (printed as 0.067); standardized beta printed as 0.019. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night",
+     "dv": "steps",
+     "beta": -0.065,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = -3.218 steps per additional minute of use (printed as -3.218); standardized beta printed as -0.065. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "bed",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.038,
+     "p_label": ".038",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.196 min of sleep-onset delay per additional minute of use (printed as 0.196); standardized beta printed as 0.030. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "wake",
+     "beta": -0.001,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.952,
+     "p_label": ".952",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = -0.006 min of wake-time delay per additional minute of use (printed as -0.006); standardized beta printed as -0.001. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "sleep",
+     "beta": -0.023,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.167,
+     "p_label": ".167",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.107 min of sleep per additional minute of use (printed as -0.107); standardized beta printed as -0.023. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "exer",
+     "beta": -0.034,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.005,
+     "p_label": ".005",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.087 min of MVPA per additional minute of use (printed as -0.087); standardized beta printed as -0.034. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "sed",
+     "beta": 0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.344 min sedentary per additional minute of use (printed as 0.344); standardized beta printed as 0.020. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day",
+     "dv": "steps",
+     "beta": -0.052,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = -12.287 steps per additional minute of use (printed as -12.287); standardized beta printed as -0.052. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "bed",
+     "beta": 0.026,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.045,
+     "p_label": ".045",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.503 min of sleep-onset delay per additional minute of use (printed as 0.503); standardized beta printed as 0.026. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "wake",
+     "beta": 0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.501,
+     "p_label": ".501",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.192 min of wake-time delay per additional minute of use (printed as 0.192); standardized beta printed as 0.010. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "sleep",
+     "beta": -0.016,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.298,
+     "p_label": ".298",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.220 min of sleep per additional minute of use (printed as -0.220); standardized beta printed as -0.016. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "exer",
+     "beta": 0.014,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.211,
+     "p_label": ".211",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.103 min of MVPA per additional minute of use (printed as 0.103); standardized beta printed as 0.014. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "sed",
+     "beta": 0.004,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.284,
+     "p_label": ".284",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.217 min sedentary per additional minute of use (printed as 0.217); standardized beta printed as 0.004. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve",
+     "dv": "steps",
+     "beta": 0.0,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.995,
+     "p_label": ".995",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = 0.045 steps per additional minute of use (printed as 0.045); standardized beta printed as 0.000. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "bed",
+     "beta": 0.134,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 1.548 min of sleep-onset delay per additional minute of use (printed as 1.548); standardized beta printed as 0.134. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "wake",
+     "beta": 0.08,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Combined Effect columns",
+     "note": "Unstandardized B = 0.942 min of wake-time delay per additional minute of use (printed as 0.942); standardized beta printed as 0.080. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "sleep",
+     "beta": -0.086,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.707 min of sleep per additional minute of use (printed as -0.707); standardized beta printed as -0.086. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "exer",
+     "beta": 0.014,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.22,
+     "p_label": ".220",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Combined Effect columns",
+     "note": "Unstandardized B = 0.065 min of MVPA per additional minute of use (printed as 0.065); standardized beta printed as 0.014. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "sed",
+     "beta": -0.003,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.446,
+     "p_label": ".446",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Combined Effect columns",
+     "note": "Unstandardized B = -0.097 min sedentary per additional minute of use (printed as -0.097); standardized beta printed as -0.003. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night",
+     "dv": "steps",
+     "beta": 0.0,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.976,
+     "p_label": ".976",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Combined Effect columns",
+     "note": "Unstandardized B = 0.142 steps per additional minute of use (printed as 0.142); standardized beta printed as 0.000. No CI or SE printed in the table."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Linear mixed-effects regression of daily Fitbit sleep and physical activity outcomes on within-person (person-mean-centered) and between-person (person-mean) smartphone app or keyboard minutes, same covariates as M1",
+   "location_in_paper": "Table 3 'Within-Person Effect' and 'Between-Person Effect' columns (p. 6); Fig. 1 (p. 7, standardized betas with 95% CIs); Results pp. 4-5; Abstract; Discussion p. 8.",
+   "design": "Same intensive longitudinal Year-4 data as M1. Each smartphone measure is decomposed into a between-person term (the participant's mean daily use over the study) and a within-person term (that day's use minus the participant's mean). Both terms enter the same model as fixed effects, so the within-person coefficient estimates the association of a day of above-usual use with that day's/night's outcome, net of stable individual differences in use. Repeated days nested in participants with a random intercept.",
+   "sample": "ABCD Release 5.1, Year-4 follow-up visit (ages 13-14), participants in the ABCD EARS/Fitbit wearables substudy who concurrently provided up to three weeks of passively sensed smartphone, sleep and physical activity data (data collection ended after 21 days of data or 42 elapsed days). N = 791 participants overall (Table 1): mean age 14.12 (SD 0.69); 369 male (46.6%), 422 female (53.4%); Asian 17 (2.1%), Black 75 (9.5%), Hispanic 144 (18.2%), White 471 (59.5%), another race 84 (10.6%); highest parent education: no HS diploma 15 (1.8%), HS/GED 40 (5.1%), some college 241 (30.5%), bachelor's 225 (28.4%), graduate/professional 270 (34.1%); iOS 486 (61.4%), Android 305 (38.6%). Keyboard measures come from all 791 participants (11,797 day-observations for daytime and evening, 10,159 for late night); application-use measures come only from Android users (302 participants, 6340 days; 5993 for late night). Fitbit outcomes: steps 791 participants / 6228 days; sedentary and exercise 791 / 6748 days; total sleep and sleep onset 604 / 5634 nights; wake time 604 / 5375 nights (Table 2). The paper reports 6748 days of concurrent smartphone and physical activity data and 5634 nights of concurrent smartphone and sleep data. Each model uses all pairwise-complete day-observations for that IV-DV pair; the exact day-level and participant-level N per model is not reported. Attrition and inclusion detail is in Supplementary Figure S1 (not in this PDF). The authors note the sample is more female and more non-Hispanic White and less low-income than the US population of 10-14 year olds.",
+   "iv": "Same six smartphone measures as M1, each decomposed into two terms: between-person (participant mean minutes) and within-person (daily minutes minus participant mean). Participant-mean SDs from Table 2: app 6:00AM-7:59PM 96.00; app 8:00PM-9:59PM 23.10; app 10:00PM-5:59AM 69.58; keyboard 6:00AM-7:59PM 14.62; keyboard 8:00PM-9:59PM 4.52; keyboard 10:00PM-5:59AM 7.68. The SD of the within-person deviation is not reported.",
+   "dv": "Same six Fitbit outcomes as M1.",
+   "covariates": [
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth (parent report), fixed effect"
+    },
+    {
+     "name": "Age",
+     "detail": "Age in months at the Year-4 visit, mean-centered"
+    },
+    {
+     "name": "Weekend/weekday",
+     "detail": "Weekdays Monday-Friday vs. weekend Saturday-Sunday, day-level fixed effect"
+    },
+    {
+     "name": "School night",
+     "detail": "Sunday-Thursday nights vs. Friday-Saturday nights; listed in the Table 3 and Fig. 1 notes ('covariates varied by model'), not in the Section 2.4 list. Presumably used in the sleep models, but the paper does not state which models include it."
+    },
+    {
+     "name": "Summer vacation",
+     "detail": "Day falls between June 1 and August 31, day-level fixed effect"
+    },
+    {
+     "name": "Fitbit wear time",
+     "detail": "Total minutes of recorded Fitbit wear time, excluding minutes removed in quality control"
+    },
+    {
+     "name": "Smartphone operating system",
+     "detail": "iOS vs. Android; included only in keyboard-use models, since application-use data are Android-only"
+    },
+    {
+     "name": "Individual (participant)",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "Outcome[i,t] = b0 + b1*(PhoneUse[i,t] - mean_i(PhoneUse)) + b2*mean_i(PhoneUse) + b3*sex[i] + b4*age_c[i] + b5*weekend[t] + b6*school_night[t] + b7*summer[t] + b8*fitbit_wear[i,t] (+ b9*OS[i] in keyboard models) + u_i + e[i,t]; b1 = within-person effect, b2 = between-person effect; one model per PhoneUse measure x Outcome.",
+   "estimation": "Linear mixed-effects models fit with the nlme package in R 4.3.0, with individual-level random intercepts. A separate model was fit for every smartphone measure x outcome pair. Table 3 reports both the unstandardized beta (per additional minute of use) and the standardized beta; no CIs or SEs are printed in the table, though Fig. 1 plots 95% CIs for the within- and between-person standardized betas. Significance judged at P < .05 (Fig. 1 marks * P < .05); no multiple-comparison correction is reported across the 36 combined or 72 disaggregated tests. No interaction or stratified analyses by sex or other demographics. Sensitivity analyses reported only in the supplement (not in this PDF) and summarized narratively on p. 5: adding race and socioeconomic status (all significant effects retained), adding time recorded awake to the physical activity models (11/15 retained), redefining late night as 9:00PM-4:59AM or 11:00PM-6:59AM, winsorizing outcomes at +/-3 SD (30/31 retained), and inverse-propensity weighting by proportion of complete days (25/31 retained). Standardized effects in all sensitivity models were within 0.10 SD of the primary effects. Fig. 1 marks a reference line at standardized beta = 0.2 described as a 'clinically significant effect size'.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "app_day_within",
+     "label": "Smartphone application use, 6:00AM-7:59PM (min/day) - within-person",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days",
+     "sd_iv": null
+    },
+    {
+     "id": "app_day_between",
+     "label": "Smartphone application use, 6:00AM-7:59PM (min/day) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 96.0; Android only; 302 participants, 6340 days",
+     "sd_iv": 96.0
+    },
+    {
+     "id": "app_eve_within",
+     "label": "Smartphone application use, 8:00PM-9:59PM (min/day) - within-person",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 6340 days",
+     "sd_iv": null
+    },
+    {
+     "id": "app_eve_between",
+     "label": "Smartphone application use, 8:00PM-9:59PM (min/day) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 23.1; Android only; 302 participants, 6340 days",
+     "sd_iv": 23.1
+    },
+    {
+     "id": "app_night_within",
+     "label": "Smartphone application use, 10:00PM-5:59AM (min/night) - within-person",
+     "meta": "Daily deviation from participant's own mean; Android only; 302 participants, 5993 days",
+     "sd_iv": null
+    },
+    {
+     "id": "app_night_between",
+     "label": "Smartphone application use, 10:00PM-5:59AM (min/night) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 69.58; Android only; 302 participants, 5993 days",
+     "sd_iv": 69.58
+    },
+    {
+     "id": "kb_day_within",
+     "label": "Keyboard use, 6:00AM-7:59PM (min/day) - within-person",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days",
+     "sd_iv": null
+    },
+    {
+     "id": "kb_day_between",
+     "label": "Keyboard use, 6:00AM-7:59PM (min/day) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 14.62; iOS + Android; 791 participants, 11,797 days",
+     "sd_iv": 14.62
+    },
+    {
+     "id": "kb_eve_within",
+     "label": "Keyboard use, 8:00PM-9:59PM (min/day) - within-person",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 11,797 days",
+     "sd_iv": null
+    },
+    {
+     "id": "kb_eve_between",
+     "label": "Keyboard use, 8:00PM-9:59PM (min/day) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 4.52; iOS + Android; 791 participants, 11,797 days",
+     "sd_iv": 4.52
+    },
+    {
+     "id": "kb_night_within",
+     "label": "Keyboard use, 10:00PM-5:59AM (min/night) - within-person",
+     "meta": "Daily deviation from participant's own mean; iOS + Android; 791 participants, 10,159 days",
+     "sd_iv": null
+    },
+    {
+     "id": "kb_night_between",
+     "label": "Keyboard use, 10:00PM-5:59AM (min/night) - between-person",
+     "meta": "Participant's mean use; participant-mean SD = 7.68; iOS + Android; 791 participants, 10,159 days",
+     "sd_iv": 7.68
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bed",
+     "label": "Sleep onset (min delayed)",
+     "sd_dv": 134,
+     "p0": null
+    },
+    {
+     "id": "wake",
+     "label": "Wake time (min delayed)",
+     "sd_dv": 137,
+     "p0": null
+    },
+    {
+     "id": "sleep",
+     "label": "Total sleep (min)",
+     "sd_dv": 95.39,
+     "p0": null
+    },
+    {
+     "id": "exer",
+     "label": "Moderate-to-vigorous exercise (min)",
+     "sd_dv": 47.52,
+     "p0": null
+    },
+    {
+     "id": "sed",
+     "label": "Sedentary behavior (min)",
+     "sd_dv": 333.41,
+     "p0": null
+    },
+    {
+     "id": "steps",
+     "label": "Total daily steps",
+     "sd_dv": 4578.02,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "app_day_within",
+     "dv": "bed",
+     "beta": 0.005,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.82,
+     "p_label": ".820",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.005 min of sleep-onset delay per additional minute of use (printed as 0.005); standardized beta printed as 0.005. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "bed",
+     "beta": 0.123,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.038,
+     "p_label": ".038",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.116 min of sleep-onset delay per additional minute of use (printed as 0.116); standardized beta printed as 0.123. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_within",
+     "dv": "wake",
+     "beta": 0.011,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.668,
+     "p_label": ".668",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.011 min of wake-time delay per additional minute of use (printed as 0.011); standardized beta printed as 0.011. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "wake",
+     "beta": 0.063,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.276,
+     "p_label": ".276",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.062 min of wake-time delay per additional minute of use (printed as 0.062); standardized beta printed as 0.063. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_within",
+     "dv": "sleep",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.274,
+     "p_label": ".274",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.020 min of sleep per additional minute of use (printed as 0.020); standardized beta printed as 0.030. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "sleep",
+     "beta": -0.064,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.209,
+     "p_label": ".209",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.043 min of sleep per additional minute of use (printed as -0.043); standardized beta printed as -0.064. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_within",
+     "dv": "exer",
+     "beta": -0.144,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.052 min of MVPA per additional minute of use (printed as -0.052); standardized beta printed as -0.144. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "exer",
+     "beta": -0.011,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.811,
+     "p_label": ".811",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.004 min of MVPA per additional minute of use (printed as -0.004); standardized beta printed as -0.011. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_within",
+     "dv": "sed",
+     "beta": 0.068,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.168 min sedentary per additional minute of use (printed as 0.168); standardized beta printed as 0.068. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "sed",
+     "beta": 0.151,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.017,
+     "p_label": ".017",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.369 min sedentary per additional minute of use (printed as 0.369); standardized beta printed as 0.151. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_within",
+     "dv": "steps",
+     "beta": -0.216,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = -7.344 steps per additional minute of use (printed as -7.344); standardized beta printed as -0.216. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_day_between",
+     "dv": "steps",
+     "beta": -0.12,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.037,
+     "p_label": ".037",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (6:00AM - 7:59PM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = -4.103 steps per additional minute of use (printed as -4.103); standardized beta printed as -0.120. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "bed",
+     "beta": -0.001,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.979,
+     "p_label": ".979",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.002 min of sleep-onset delay per additional minute of use (printed as -0.002); standardized beta printed as -0.001. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "bed",
+     "beta": 0.257,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.925 min of sleep-onset delay per additional minute of use (printed as 0.925); standardized beta printed as 0.257. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "wake",
+     "beta": 0.021,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.406,
+     "p_label": ".406",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.076 min of wake-time delay per additional minute of use (printed as 0.076); standardized beta printed as 0.021. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "wake",
+     "beta": 0.105,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.102,
+     "p_label": ".102",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.387 min of wake-time delay per additional minute of use (printed as 0.387); standardized beta printed as 0.105. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "sleep",
+     "beta": 0.009,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.712,
+     "p_label": ".712",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.024 min of sleep per additional minute of use (printed as 0.024); standardized beta printed as 0.009. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "sleep",
+     "beta": -0.179,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.462 min of sleep per additional minute of use (printed as -0.462); standardized beta printed as -0.179. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "exer",
+     "beta": -0.031,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.058,
+     "p_label": ".058",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.043 min of MVPA per additional minute of use (printed as -0.043); standardized beta printed as -0.031. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "exer",
+     "beta": 0.002,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.97,
+     "p_label": ".970",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.003 min of MVPA per additional minute of use (printed as 0.003); standardized beta printed as 0.002. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "sed",
+     "beta": 0.023,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.218 min sedentary per additional minute of use (printed as 0.218); standardized beta printed as 0.023. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "sed",
+     "beta": 0.097,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.153,
+     "p_label": ".153",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.908 min sedentary per additional minute of use (printed as 0.908); standardized beta printed as 0.097. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_within",
+     "dv": "steps",
+     "beta": -0.053,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = -6.846 steps per additional minute of use (printed as -6.846); standardized beta printed as -0.053. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_eve_between",
+     "dv": "steps",
+     "beta": -0.044,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.484,
+     "p_label": ".484",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (8:00PM - 9:59PM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = -5.73 steps per additional minute of use (printed as -5.73); standardized beta printed as -0.044. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "bed",
+     "beta": 0.24,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.330 min of sleep-onset delay per additional minute of use (printed as 0.330); standardized beta printed as 0.240. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "bed",
+     "beta": 0.436,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.599 min of sleep-onset delay per additional minute of use (printed as 0.599); standardized beta printed as 0.436. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "wake",
+     "beta": 0.136,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.190 min of wake-time delay per additional minute of use (printed as 0.190); standardized beta printed as 0.136. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "wake",
+     "beta": 0.353,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.495 min of wake-time delay per additional minute of use (printed as 0.495); standardized beta printed as 0.353. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "sleep",
+     "beta": -0.158,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.154 min of sleep per additional minute of use (printed as -0.154); standardized beta printed as -0.158. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "sleep",
+     "beta": -0.173,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.170 min of sleep per additional minute of use (printed as -0.170); standardized beta printed as -0.173. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "exer",
+     "beta": -0.011,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.53,
+     "p_label": ".530",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.006 min of MVPA per additional minute of use (printed as -0.006); standardized beta printed as -0.011. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "exer",
+     "beta": -0.041,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.361,
+     "p_label": ".361",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.022 min of MVPA per additional minute of use (printed as -0.022); standardized beta printed as -0.041. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "sed",
+     "beta": 0.018,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.002,
+     "p_label": ".002",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.064 min sedentary per additional minute of use (printed as 0.064); standardized beta printed as 0.018. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "sed",
+     "beta": 0.091,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.124,
+     "p_label": ".124",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.322 min sedentary per additional minute of use (printed as 0.322); standardized beta printed as 0.091. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_within",
+     "dv": "steps",
+     "beta": -0.054,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.001,
+     "p_label": ".001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = -2.655 steps per additional minute of use (printed as -2.655); standardized beta printed as -0.054. No CI or SE printed in the table."
+    },
+    {
+     "iv": "app_night_between",
+     "dv": "steps",
+     "beta": -0.186,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Smartphone Application Use (10:00PM - 5:59AM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = -9.204 steps per additional minute of use (printed as -9.204); standardized beta printed as -0.186. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "bed",
+     "beta": 0.023,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.129,
+     "p_label": ".129",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.155 min of sleep-onset delay per additional minute of use (printed as 0.155); standardized beta printed as 0.023. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "bed",
+     "beta": 0.068,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.079,
+     "p_label": ".079",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.451 min of sleep-onset delay per additional minute of use (printed as 0.451); standardized beta printed as 0.068. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "wake",
+     "beta": -0.006,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.742,
+     "p_label": ".742",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.039 min of wake-time delay per additional minute of use (printed as -0.039); standardized beta printed as -0.006. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "wake",
+     "beta": 0.019,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.596,
+     "p_label": ".596",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.129 min of wake-time delay per additional minute of use (printed as 0.129); standardized beta printed as 0.019. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "sleep",
+     "beta": -0.021,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.258,
+     "p_label": ".258",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.101 min of sleep per additional minute of use (printed as -0.101); standardized beta printed as -0.021. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "sleep",
+     "beta": -0.026,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.431,
+     "p_label": ".431",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.124 min of sleep per additional minute of use (printed as -0.124); standardized beta printed as -0.026. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "exer",
+     "beta": -0.046,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.116 min of MVPA per additional minute of use (printed as -0.116); standardized beta printed as -0.046. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "exer",
+     "beta": 0.023,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.44,
+     "p_label": ".440",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.059 min of MVPA per additional minute of use (printed as 0.059); standardized beta printed as 0.023. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "sed",
+     "beta": 0.019,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.329 min sedentary per additional minute of use (printed as 0.329); standardized beta printed as 0.019. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "sed",
+     "beta": 0.092,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.027,
+     "p_label": ".027",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 1.578 min sedentary per additional minute of use (printed as 1.578); standardized beta printed as 0.092. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_within",
+     "dv": "steps",
+     "beta": -0.054,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = -12.95 steps per additional minute of use (printed as -12.95); standardized beta printed as -0.054. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_day_between",
+     "dv": "steps",
+     "beta": -0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.408,
+     "p_label": ".408",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (6:00AM - 7:59PM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = -7.029 steps per additional minute of use (printed as -7.029); standardized beta printed as -0.030. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "bed",
+     "beta": 0.019,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.152,
+     "p_label": ".152",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.375 min of sleep-onset delay per additional minute of use (printed as 0.375); standardized beta printed as 0.019. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "bed",
+     "beta": 0.104,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.028,
+     "p_label": ".028",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 2.021 min of sleep-onset delay per additional minute of use (printed as 2.021); standardized beta printed as 0.104. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "wake",
+     "beta": 0.004,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.793,
+     "p_label": ".793",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.080 min of wake-time delay per additional minute of use (printed as 0.080); standardized beta printed as 0.004. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "wake",
+     "beta": 0.056,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.207,
+     "p_label": ".207",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 1.112 min of wake-time delay per additional minute of use (printed as 1.112); standardized beta printed as 0.056. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "sleep",
+     "beta": -0.013,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.423,
+     "p_label": ".423",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.184 min of sleep per additional minute of use (printed as -0.184); standardized beta printed as -0.013. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "sleep",
+     "beta": -0.032,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.441,
+     "p_label": ".441",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -0.444 min of sleep per additional minute of use (printed as -0.444); standardized beta printed as -0.032. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "exer",
+     "beta": 0.008,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.476,
+     "p_label": ".476",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.062 min of MVPA per additional minute of use (printed as 0.062); standardized beta printed as 0.008. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "exer",
+     "beta": 0.059,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.081,
+     "p_label": ".081",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.441 min of MVPA per additional minute of use (printed as 0.441); standardized beta printed as 0.059. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "sed",
+     "beta": 0.004,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.36,
+     "p_label": ".360",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.186 min sedentary per additional minute of use (printed as 0.186); standardized beta printed as 0.004. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "sed",
+     "beta": 0.081,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.074,
+     "p_label": ".074",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 4.071 min sedentary per additional minute of use (printed as 4.071); standardized beta printed as 0.081. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_within",
+     "dv": "steps",
+     "beta": 0.0,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.993,
+     "p_label": ".993",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.069 steps per additional minute of use (printed as -0.069); standardized beta printed as -0.000. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_eve_between",
+     "dv": "steps",
+     "beta": 0.002,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.957,
+     "p_label": ".957",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (8:00PM - 9:59PM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = 1.517 steps per additional minute of use (printed as 1.517); standardized beta printed as 0.002. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "bed",
+     "beta": 0.118,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 1.356 min of sleep-onset delay per additional minute of use (printed as 1.356); standardized beta printed as 0.118. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "bed",
+     "beta": 0.341,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Bedtime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 3.937 min of sleep-onset delay per additional minute of use (printed as 3.937); standardized beta printed as 0.341. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "wake",
+     "beta": 0.064,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.755 min of wake-time delay per additional minute of use (printed as 0.755); standardized beta printed as 0.064. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "wake",
+     "beta": 0.219,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Waketime (Min Delayed)', Between-Person Effect columns",
+     "note": "Unstandardized B = 2.588 min of wake-time delay per additional minute of use (printed as 2.588); standardized beta printed as 0.219. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "sleep",
+     "beta": -0.08,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.661 min of sleep per additional minute of use (printed as -0.661); standardized beta printed as -0.080. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "sleep",
+     "beta": -0.124,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.005,
+     "p_label": ".005",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Sleep (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = -1.017 min of sleep per additional minute of use (printed as -1.017); standardized beta printed as -0.124. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "exer",
+     "beta": 0.015,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.248,
+     "p_label": ".248",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = 0.064 min of MVPA per additional minute of use (printed as 0.064); standardized beta printed as 0.015. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "exer",
+     "beta": 0.018,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.648,
+     "p_label": ".648",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Exercise (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 0.080 min of MVPA per additional minute of use (printed as 0.080); standardized beta printed as 0.018. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "sed",
+     "beta": -0.004,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.374,
+     "p_label": ".374",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Within-Person Effect columns",
+     "note": "Unstandardized B = -0.113 min sedentary per additional minute of use (printed as -0.113); standardized beta printed as -0.004. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "sed",
+     "beta": 0.1,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.069,
+     "p_label": ".069",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Sedentary Behavior (Min)', Between-Person Effect columns",
+     "note": "Unstandardized B = 2.991 min sedentary per additional minute of use (printed as 2.991); standardized beta printed as 0.100. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_within",
+     "dv": "steps",
+     "beta": 0.006,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.626,
+     "p_label": ".626",
+     "sig": false,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Within-Person Effect columns",
+     "note": "Unstandardized B = 2.371 steps per additional minute of use (printed as 2.371); standardized beta printed as 0.006. No CI or SE printed in the table."
+    },
+    {
+     "iv": "kb_night_between",
+     "dv": "steps",
+     "beta": -0.1,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.038,
+     "p_label": ".038",
+     "sig": true,
+     "location": "Table 3 (p. 6), block 'Minutes of Keyboard Use (10:00PM - 5:59AM)', row 'Total Steps', Between-Person Effect columns",
+     "note": "Unstandardized B = -41.43 steps per additional minute of use (printed as -41.43); standardized beta printed as -0.100. No CI or SE printed in the table."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Hourly-binned smartphone application use relative to sleep onset (12 h before to 12+ h after) predicting sleep duration and step count",
+   "location": "Supplementary Figure S1 (not in this PDF); summarized in Results pp. 5-6",
+   "why": "Per-bin estimates are not printed in the paper; the text gives only ranges of unstandardized betas and p-values across bins (e.g., sleep duration beta range -91.73 to -17.02 s for post-onset bins). No single cell-level estimate with its own location is extractable from the article PDF."
+  },
+  {
+   "model": "Sensitivity models (adding race and SES; adding time awake to activity models; late-night redefined as 9:00PM-4:59AM and 11:00PM-6:59AM; winsorized outcomes +/-3 SD; inverse-propensity weighting for missing data)",
+   "location": "Supplementary material (not in this PDF); summarized narratively p. 5",
+   "why": "Only counts of retained significant effects and the statement that standardized effects were within 0.10 SD of primary effects are given; no per-cell numbers in the article."
+  },
+  {
+   "model": "Smartphone operating system (iOS vs. Android) as a fixed-effect covariate in keyboard models",
+   "location": "Results p. 4",
+   "why": "OS is a covariate, not the focal smartphone use variable; its coefficients (standardized beta 0.09-0.18 for steps/exercise, -0.17 to -0.16 for sedentary) describe device platform differences, not amount of smartphone use."
+  },
+  {
+   "model": "Covariate effects in full model outputs",
+   "location": "Supplementary material",
+   "why": "Non-phone covariate coefficients; not in this PDF and not phone/SM estimates."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (standardized beta from linear mixed models; unstandardized B per minute also printed)",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines section 4a). Alternative from raw B: beta_std = B * SD_IV / SD_DV, then the same formula.",
+  "contrast_type": "per 1 SD of daily minutes of smartphone app or keyboard use in the given time window (combined effect, M1); per 1 SD of the within-person daily deviation (M2 within) or of the participant mean (M2 between)",
+  "transformable": true,
+  "notes": "The paper prints standardized betas directly in Table 3 (p. 6), so d can be derived without SDs. No CIs or SEs are printed in the table, so d CIs cannot be computed from the table; Fig. 1 (p. 7) plots 95% CIs for M2 betas but these were not read off the figure. sd_iv for M1 is the grand (all-observation) SD from Table 2 (p. 5); sd_iv for M2 between-person terms is the participant-mean SD from Table 2; the within-person deviation SD is not reported (null). sd_dv is the grand SD from Table 2: steps 4578.02, sedentary 333.41, exercise 47.52, total sleep 95.39; sleep onset SD printed as '2 h, 14 m' and wake time as '2 h, 17 m', converted to 134 and 137 min. The paper does not state exactly how beta_std was standardized (e.g., grand vs. within SDs); recomputing B*SD_IV/SD_DV with the grand SDs reproduces the printed beta_std only approximately (e.g., app 6AM-7:59PM on exercise: -0.046*140.26/47.52 = -0.136 vs. printed -0.128), so the printed beta_std should be used. Effects are per-day associations from intensive longitudinal data and are not directly comparable to between-person cross-sectional d's from questionnaire-based papers."
+ },
+ "extraction_flags": "1) The authors interpret both the combined-effect models and the within/between decomposition (both appear in the Abstract), so I extracted two cards: M1 with 36 combined estimates and M2 with 72 within- and between-person estimates. A reviewer should decide whether both cards belong in the meta-matrix or only one; they share the same data. 2) Native metric is set to the standardized beta printed in Table 3. Each estimate's note gives the unstandardized B per minute. No CIs or SEs are printed in Table 3. Fig. 1 plots 95% CIs for the M2 betas, but I did not read values off the figure, so beta_lo and beta_hi are null. 3) The paper does not say how beta_std was standardized. Recomputing it from B and the grand SDs in Table 2 matches the printed values only approximately (e.g., -0.136 vs. -0.128), so use the printed beta_std. 4) The covariate set \"varied by model\" per the Table 3 note. The 'school night' covariate is listed in that note but not in the Methods, and the paper does not say which models include which covariates. OS was included only in the keyboard models. 5) The analytic N per model (days and participants) is not reported, since each model uses pairwise-complete days. App-use IVs are Android-only (302 participants); keyboard IVs cover 791. 6) The sleep-onset and wake-time SDs were printed as '2 h, 14 m' and '2 h, 17 m' and converted to 134 and 137 minutes. 7) I counted significance at P<.05 with no multiple-comparison correction, across 108 tests. 8) The hourly-binned models (Supplementary Fig. S1) and all sensitivity analyses are supplementary and not printed in the PDF, so they are excluded; reviewers may want to check the online supplement.json"
+}

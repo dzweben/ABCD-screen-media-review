@@ -1,0 +1,162 @@
+{
+ "paper_id": "24",
+ "title": "Contemporary screen time modalities among children 9-10 years old and binge-eating disorder at one-year follow-up: A prospective cohort study",
+ "doi": "10.1002/eat.23489",
+ "year": "2021",
+ "authors": "Nagata JM, Iyer P, Chu J, Baker FC, Pettee Gabriel K, Garber AK, Murray SB, Bibbins-Domingo K, Ganson KT",
+ "journal": "International Journal of Eating Disorders",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Multiple logistic regression of 1-year follow-up binge-eating disorder on baseline phone/SM hours per day, adjusted for sociodemographics, BMI percentile, site and baseline binge-eating disorder",
+   "location_in_paper": "Table 2, adjusted columns (aOR, p. 890); results text p. 890; interpreted in Abstract and Discussion pp. 890-891.",
+   "design": "Prospective longitudinal cohort with two waves. Screen time (exposure) measured at ABCD baseline (2016-2018, ages 9-10); binge-eating disorder (outcome) measured at one-year follow-up (2017-2019, ages 10-11). Single follow-up outcome, one observation per child. Baseline binge-eating disorder entered as a covariate. Each screen modality was entered in a separate model (each type of screen time modeled independently). No time-by-IV interaction (only two waves).",
+   "sample": "ABCD 3.0 release. Of 11,875 enrolled children, participants missing baseline screen time (N = 63) or one-year follow-up binge-eating disorder (N = 793) were excluded, leaving N = 11,025. Missing covariate data (N = 1,016) were imputed with Gaussian normal regression imputation. Baseline mean age 9.95 years (SD 0.63); 48.8% female, 51.2% male (including three intersex-male participants); 52.4% White, 20.1% Latino/Hispanic, 17.3% Black, 5.5% Asian, 3.2% Native American, 1.5% Other. Household income: 18.1% <$25,000, 20.7% $25,000-49,999, 18.0% $50,000-74,999, 15.7% $75,000-99,999, 20.1% $100,000-199,999, 6.7% >=$200,000. 79.7% with a parent with college education or more. BMI percentile mean 62.13 (SD 30.70). Table 1 values are propensity-weighted. Twins/siblings retained in the main analysis.",
+   "iv": "Baseline child-reported hours per day of each phone/SM modality from the ABCD Youth Screen Time Survey, one modality per model: texting, video chat (e.g., Skype, Facetime), and social networking (e.g., Facebook, Instagram, Twitter). Typical weekday and weekend hours were combined as ((weekday x 5) + (weekend x 2)) / 7 and treated as continuous hours/day. Baseline weighted M (SD): texting 0.24 (0.56); video chat 0.21 (0.52); social networking 0.13 (0.45) hours/day (Table 1).",
+   "dv": "Binge-eating disorder (binary, present vs. absent) at one-year follow-up per DSM-5 criteria, from the parent/caregiver-completed binge-eating disorder module of the computerized KSADS-5, with the KSADS-5 scoring system converting reported symptoms into a current diagnosis. Prevalence 1.1% at one-year follow-up (0.7% at baseline), propensity-weighted (Table 1).",
+   "covariates": [
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian, Native American, Other (parent report)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Sex assigned at birth: female vs. male (male includes three intersex-male participants)"
+    },
+    {
+     "name": "Household income",
+     "detail": "Past-year household income, six categories (parent report)"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, high school or less vs. college or more"
+    },
+    {
+     "name": "BMI percentile",
+     "detail": "From measured height and weight, converted to sex- and age-specific CDC percentiles; listed in Table 2 footnote and Abstract but not in the Statistical analysis paragraph"
+    },
+    {
+     "name": "Site",
+     "detail": "Study site (21 sites); entered as a covariate, form (fixed dummies vs. other) not stated"
+    },
+    {
+     "name": "Baseline binge-eating disorder",
+     "detail": "Binary KSADS-5 diagnosis at baseline"
+    }
+   ],
+   "equation": "logit(P(BED_1yr[i] = 1)) = b0 + b1*phoneSM_hours[i] + b2..b6*race_ethnicity + b7*sex + b8..b12*household_income + b13*parent_college + b14*BMI_percentile + site terms + b_k*BED_baseline[i]; fit separately for each modality (texting, video chat, social networking). aOR = exp(b1) per additional hour/day.",
+   "estimation": "Stata 15.1. Multiple logistic regression with propensity weights based on the American Community Survey to yield nationally representative estimates. Missing covariates imputed via Gaussian normal regression imputation. alpha = .05; no multiple-comparison correction reported. Sensitivity analysis restricting to one sibling per family: 'findings did not differ', numbers not printed. Effect modification by sex tested for every exposure; all p > .05 except video games (p = .013), so no sex-stratified phone/SM estimates were reported. Age is listed among sociodemographic covariates in Section 2.2.3 but is not named in the adjustment sets in Section 2.3 or the Table 2 footnote.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "texting",
+     "label": "Texting",
+     "meta": "M = 0.24 h/day, SD = 0.56",
+     "sd_iv": 0.56
+    },
+    {
+     "id": "video_chat",
+     "label": "Video chat",
+     "meta": "M = 0.21 h/day, SD = 0.52",
+     "sd_iv": 0.52
+    },
+    {
+     "id": "social_networking",
+     "label": "Social networking",
+     "meta": "M = 0.13 h/day, SD = 0.45",
+     "sd_iv": 0.45
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bed_1yr",
+     "label": "Binge-eating disorder (1-yr follow-up)",
+     "sd_dv": null,
+     "p0": 0.011
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "texting",
+     "dv": "bed_1yr",
+     "OR": 1.4,
+     "OR_lo": 1.08,
+     "OR_hi": 1.82,
+     "p": 0.011,
+     "p_label": ".011",
+     "sig": true,
+     "location": "Table 2, adjusted columns, Texting row (p. 890)"
+    },
+    {
+     "iv": "video_chat",
+     "dv": "bed_1yr",
+     "OR": 1.32,
+     "OR_lo": 0.99,
+     "OR_hi": 1.76,
+     "p": 0.057,
+     "p_label": ".057",
+     "sig": false,
+     "location": "Table 2, adjusted columns, Video chat row (p. 890)"
+    },
+    {
+     "iv": "social_networking",
+     "dv": "bed_1yr",
+     "OR": 1.62,
+     "OR_lo": 1.18,
+     "OR_hi": 2.22,
+     "p": 0.003,
+     "p_label": ".003",
+     "sig": true,
+     "location": "Table 2, adjusted columns, Social networking row (p. 890)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Unadjusted logistic regressions (texting OR 1.48, 1.18-1.87; video chat OR 1.38, 1.11-1.72; social networking OR 1.66, 1.29-2.12)",
+   "location": "Table 2, unadjusted columns (p. 890)",
+   "why": "Transparency comparison; the authors anchor their claims on the covariate-adjusted aORs."
+  },
+  {
+   "model": "Total screen time (hours/day) model, unadjusted and adjusted (aOR 1.11, 1.05-1.18)",
+   "location": "Table 2, first row; Abstract; Results p. 890",
+   "why": "Headline composite bundles TV/movies, videos and video games with texting, video chat and social networking. Fails FT-IC2 Step 2; per-modality phone/SM breakouts are extracted instead."
+  },
+  {
+   "model": "Television shows/movies, Videos (YouTube), and Video games models",
+   "location": "Table 2 rows (p. 890)",
+   "why": "Non-phone/non-SM modalities."
+  },
+  {
+   "model": "Sex-stratified video games models (females AOR 1.54; males AOR 0.92)",
+   "location": "Results text p. 890",
+   "why": "Video games is not a phone/SM modality; sex interactions for texting, video chat and social networking were non-significant and not stratified."
+  },
+  {
+   "model": "Sex x exposure interaction tests",
+   "location": "Statistical analysis p. 889; Results p. 890",
+   "why": "Interaction p-values only (all p > .05 for phone/SM modalities); no new phone/SM estimates."
+  },
+  {
+   "model": "One-sibling-per-family sensitivity analysis",
+   "location": "Statistical analysis p. 889",
+   "why": "Narrative only ('findings did not differ'); no numbers printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (adjusted odds ratio)",
+  "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); applied to OR, OR_lo and OR_hi.",
+  "contrast_type": "per 1 additional hour/day of the modality at baseline",
+  "transformable": true,
+  "notes": "Chinn conversion of the aOR yields d for a 1 hour/day contrast, not a 1-SD contrast. Baseline SDs of the IVs are in Table 1 (p. 889): texting 0.56, video chat 0.52, social networking 0.45 h/day, so 1 hour/day is roughly 1.8-2.2 SD of these IVs; a per-SD rescaling would be ln(OR)*SD_IV before the Chinn step if needed for comparability. p0 = 0.011 is the weighted one-year follow-up BED prevalence in the full sample (Table 1), not an unexposed-group rate; it is not needed for the OR conversion. The outcome is rare (1.1%), so OR approximates RR."
+ },
+ "extraction_flags": "The adjustment set is reported inconsistently. The Table 2 footnote and the Abstract include BMI percentile, but the Statistical analysis paragraph (p. 889) leaves it out. Age is listed as a covariate in Section 2.2.3 but is not named in any adjustment set. I followed the Table 2 footnote. Site is entered as a covariate, but the paper does not say whether as fixed dummies or a random effect. Each modality was modeled separately, so each estimate is not adjusted for the other modalities. The aORs are per additional hour/day, while the IV SDs are only about 0.45-0.56 h/day, so the Chinn d corresponds to roughly a 2-SD contrast; reviewers should decide whether to rescale it to a per-SD contrast. p0 (0.011) is the weighted full-sample prevalence at follow-up (Table 1), not the rate in the unexposed group. Video chat (aOR 1.32, 0.99-1.76, p = .057) is recorded as non-significant."
+}

@@ -1,0 +1,174 @@
+{
+ "paper_id": "388",
+ "title": "Screen media activity does not displace other recreational activities among 9-10 year-old youth: a cross-sectional ABCD study(R)",
+ "doi": "10.1186/s12889-020-09894-w",
+ "year": "2020",
+ "authors": "Lees B, Squeglia LM, Breslin FJ, Thompson WK, Tapert SF, Paulus MP",
+ "journal": "BMC Public Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Logistic generalized linear mixed model of any recreational activity endorsement on GFA-derived texting and weekday social SMA group factor scores, adjusted for the other 13 group factors and sociodemographics",
+   "location_in_paper": "Fig. 5 (p. 8), full model; Methods 'Mixed models' p. 4; Results 'Engagement with any recreational activity' pp. 4-6; Discussion pp. 7-9. GF loadings for the texting and weekday social SMA factors are in supplementary figures not bundled in this PDF.",
+   "design": "Cross-sectional analysis of the ABCD baseline visit (data collected 2016-2017). IV and DV measured at the same visit, one observation per child. Two-stage approach: first, Group Factor Analysis (GFA) on four variable groups (12 SMA items, psychopathology, cognition, social environment) yields 15 robust latent group factors (GFs); second, the averaged GF scores enter a logistic GLMM as simultaneous predictors of recreational activity involvement. A base model (sociodemographics only) was compared with the full model (sociodemographics plus all 15 GFs). No interaction terms.",
+   "sample": "ABCD Data Release 2.0.1, baseline, 21 U.S. sites. Of 11,875 enrolled, N=9,254 with complete data on all relevant measures (listwise). Ages 9-10. 8,308 youth endorsed at least one recreational activity and 946 did not. Table 1 reports demographics by group only (no-activity vs activity): age M 9.8 (SD 0.6) vs 9.9 (0.6); male 50.4% vs 52.1%; White 29.7% vs 59.3%, Black 31.3% vs 10.7%, Hispanic 26.2% vs 17.6%, Asian 1.4% vs 2.2%, Other 11.4% vs 10.3%; household income <$50K 64.6% vs 22.9%, $50-100K 25.7% vs 29.0%, >$100K 9.7% vs 48.2%; married/living together 59.3% vs 79.5%; parent age M 37.2 (7.1) vs 40.5 (6.6). Whole-sample demographics not reported.",
+   "iv": "Latent group factor scores from GFA (R package 'GFA'). The SMA group comprised 12 youth-report items: hours per day (none, <30 min, 30 min, 1 h, 2 h, 3 h, 4 h) on weekdays and weekends for TV shows/movies, videos, video games, messaging on a cell phone/tablet/computer, social networking sites, and video chat. GFA was repeated 10 times with different seeds; GFs whose posterior component means correlated >=0.7 across chains and that appeared in >=70% of replicates were retained, and their scores averaged across replicates. Two of the six SMA-related GFs carry phone/SM-specific labels in Fig. 5: 'Texting' and 'Weekday social SMA'. Their item loadings are shown only in supplementary figures not in this PDF, so the extent to which they load on non-phone items cannot be verified here. ORs are per 1 SD increase in the GF score (Results p. 6). Descriptive statistics for GF scores not reported.",
+   "dv": "Any recreational activity involvement (binary yes/no), parent report on the Sports and Activities Involvement Questionnaire, 29 activities (sports, music, art, hobbies). Dichotomized because data were positively skewed with little gradation. 89.8% of parents endorsed at least one activity (8,308 of 9,254).",
+   "covariates": [
+    {
+     "name": "Youth age",
+     "detail": "Continuous"
+    },
+    {
+     "name": "Sex",
+     "detail": "Dummy coded, male vs female"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Dummy coded; White reference; Black, Hispanic, Asian, Other"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Dummy coded; <high school reference; HS diploma or equivalent, college, Bachelor's degree, post-graduate degree"
+    },
+    {
+     "name": "Household income",
+     "detail": "Dummy coded; <$50K reference; $50-100K, >$100K"
+    },
+    {
+     "name": "Marital status",
+     "detail": "Single parent household vs married/living together"
+    },
+    {
+     "name": "Parent age",
+     "detail": "Continuous"
+    },
+    {
+     "name": "Other 13 group factors",
+     "detail": "Entered simultaneously: Screen media (high general SMA), Weekend vs weekday SMA, Games vs social media, Media and internalizing (the other four SMA-related GFs), plus High cognition low psychopathology, Verbal learning, Psychopathology, Youth family conflict, Parental monitoring, Parental acceptance, High family conflict, Low prosocial, Withdrawn"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept"
+    },
+    {
+     "name": "Siblings nested within site",
+     "detail": "Random intercept for family"
+    }
+   ],
+   "equation": "logit(P(any_activity[i]=1)) = b0 + b1*GF_texting[i] + b2*GF_weekday_social_SMA[i] + b3..b15*(other 13 GFs)[i] + b16*youth_age + b17*male + b18..b21*race/ethnicity + b22..b25*parent_education + b26..b27*household_income + b28*married + b29*parent_age + u_site + u_family(site) + e[i]",
+   "estimation": "Generalized linear mixed model with logistic link, R package glmmTMB, parameters estimated by restricted maximum likelihood. Random intercepts for research site and siblings nested within site. No weighting reported. No multiple-comparison correction reported; significance appears to be judged at p < .05. Base vs full model compared with ANOVA F-test and BIC (full model R^2 = 0.35 vs base R^2 = 0.34, BIC = 5146.9, deltaBIC = 52.8, LRT = 84.2; the full model did not significantly improve on the base model). No interaction or stratified tests. Unadjusted group comparisons (ANOVA/chi-square, tableone) reported separately in Suppl. Table 1. Same GLMM structure repeated for five specific activities (soccer, music, swimming, baseball, art).",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "gf_texting",
+     "label": "Texting GF",
+     "meta": "GFA latent factor score, OR per 1 SD",
+     "sd_iv": null
+    },
+    {
+     "id": "gf_wd_social",
+     "label": "Weekday social SMA GF",
+     "meta": "GFA latent factor score, OR per 1 SD",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "any_activity",
+     "label": "Any recreational activity (yes/no)",
+     "sd_dv": null,
+     "p0": 0.898
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "gf_texting",
+     "dv": "any_activity",
+     "OR": 1.05,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Fig. 5 row 'Texting' (p. 8)",
+     "note": "Printed as '1.05 \u00b1 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6 (only two SMA GFs significant: games vs social media and media and internalizing)."
+    },
+    {
+     "iv": "gf_wd_social",
+     "dv": "any_activity",
+     "OR": 0.96,
+     "OR_lo": null,
+     "OR_hi": null,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Fig. 5 row 'Weekday social SMA' (p. 8)",
+     "note": "Printed as '0.96 \u00b1 0.09' with axis label 'Odds Ratio +/- 95% CI'; CI bounds not printed separately, so left null. No p-value printed; non-significant per text p. 6."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "'Games vs social media' GF ('high games/movies and low social media') in the any-activity GLMM, OR = 0.83 (95% CI 0.76-0.89)",
+   "location": "Fig. 5 row 'Games vs social media' (p. 8); text p. 6; loadings Fig. 4 (p. 7)",
+   "why": "Bipolar latent factor loading on TV/movies, videos and games items against social media items (Fig. 4). The phone/SM component is not isolated from non-phone modalities, so it fails the composite rule (FT-IC2 Step 2). This is the authors' headline significant SMA effect; coders may wish to revisit."
+  },
+  {
+   "model": "'Screen media' (high general SMA) GF in the any-activity GLMM, OR 0.99 \u00b1 0.07",
+   "location": "Fig. 5 (p. 8); loadings Fig. 2 (p. 5)",
+   "why": "Loads on all 12 SMA items including TV/movies, videos and games. Non-phone composite."
+  },
+  {
+   "model": "'Weekend vs weekday SMA' GF, OR 1.07 \u00b1 0.08",
+   "location": "Fig. 5 (p. 8)",
+   "why": "Contrasts day-type across all SMA modalities, not phone/SM-specific."
+  },
+  {
+   "model": "'Media and internalizing' (low SMA, high internalizing) GF, OR 1.10 (95% CI 1.02-1.18)",
+   "location": "Fig. 5 (p. 8); text p. 6; loadings Fig. 3 (p. 6)",
+   "why": "Cross-domain factor loading negatively on all 12 SMA items (including TV, videos, games) and positively on internalizing symptoms. Not phone/SM-specific."
+  },
+  {
+   "model": "Five activity-specific GLMMs (soccer, swimming, baseball, music, art) on the same 15 GFs plus sociodemographics",
+   "location": "Results p. 6-7; Suppl. Figs. 16-20 (not in this PDF)",
+   "why": "Main text reports estimates only for the 'high games/movies and low social media', 'high general SMA' and 'low SMA and high internalizing' GFs, none of which is phone/SM-specific. Texting and weekday social SMA GF estimates for these outcomes are only in supplementary figures not available in this PDF. If the supplement is obtained, these could be added as a second model card."
+  },
+  {
+   "model": "Base model (sociodemographics only)",
+   "location": "Fig. 5 / Results p. 6 (model fit comparison)",
+   "why": "Contains no SMA variables."
+  },
+  {
+   "model": "Unadjusted group comparisons (ANOVA / chi-square) of SMA items between activity endorsers and non-endorsers",
+   "location": "Results p. 4; Suppl. Table 1 (not in this PDF)",
+   "why": "Unadjusted; authors anchor interpretation on the adjusted GLMM. Per-item values not printed in the main text (only 'all ps < .001')."
+  },
+  {
+   "model": "Group factor analysis itself",
+   "location": "Methods p. 4; Figs. 2-4; Suppl. Figs. 1-15",
+   "why": "Measurement/dimension-reduction step producing factor loadings, not an association estimate between a phone/SM variable and an outcome."
+  },
+  {
+   "model": "Sociodemographic and non-SMA GF effects in the GLMM",
+   "location": "Fig. 5; text pp. 6-7",
+   "why": "Not phone/SM variables."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR",
+  "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000)",
+  "contrast_type": "per 1 SD increase in the GFA latent factor score (texting GF or weekday social SMA GF)",
+  "transformable": "partial",
+  "notes": "Point estimates convert directly via Chinn. CI bounds are printed only as 'OR \u00b1 half-width' in Fig. 5 (p. 8), so OR_lo/OR_hi were left null and no d CI is derived; text-reported CIs for other factors show the intervals are slightly asymmetric (e.g., games vs social media printed 0.83 \u00b1 0.07 in Fig. 5 but 0.76-0.89 in text), so symmetric reconstruction would not match exactly. No p-values printed for the phone/SM GFs. The IV is a latent factor score rather than hours of use, so the per-SD d is not on the same footing as per-hour or per-SD-of-hours estimates in other papers, and the factors' loadings on non-phone SMA items cannot be checked without the supplement. p0 = 0.898 is the marginal endorsement rate (8,308/9,254; Results p. 4 and Table 1), recorded for context only since the native metric is OR."
+ },
+ "extraction_flags": "1) Phone/SM eligibility is borderline. The IVs are latent group factor scores from a GFA run on all 12 SMA items. Only the 'Texting' and 'Weekday social SMA' factors have phone/SM labels, and their loadings sit in supplementary figures that are not in this PDF, so I could not confirm they are free of non-phone items. Check Suppl. Figs. 4-15. 2) Both estimates come from Fig. 5 (p. 8), where they are printed as 'OR \u00b1 95% CI' half-widths: 1.05 \u00b1 0.09 and 0.96 \u00b1 0.09. I left the CI bounds null rather than rebuilding them. Where the text gives CIs for other factors, they don't quite match a symmetric \u00b1 (games vs SM: 0.83 \u00b1 0.07 in the figure, 0.76-0.89 in the text). No p-values are printed. Non-significance comes from the text, which says only 2 of 6 SMA factors were significant. 3) I excluded the authors' headline significant SMA finding: the 'games vs social media' bipolar factor, OR 0.83 (0.76-0.89). It contrasts games/movies/videos against social media, so the SM part is not isolated. Coders may disagree. 4) The five activity-specific GLMMs (soccer, swimming, baseball, music, art) report texting and weekday-social factor estimates only in Suppl. Figs. 16-20, which are not available. A second model card could be added if the supplement is obtained. 5) The OR is per 1 SD of a latent factor score, not per hour, so the derived d is not comparable with per-hour designs. p0 = 0.898 is the marginal endorsement rate, recorded for context only."
+}

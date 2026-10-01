@@ -1,0 +1,276 @@
+{
+ "paper_id": "287",
+ "title": "Social media use, smoking expectancies, and nicotine experimentation in early adolescents: A prospective cohort study",
+ "doi": "10.1111/ajad.70135",
+ "year": "2026",
+ "authors": "Nagata JM, Caffrey A, Heuer A, Beltran Murillo K, Helmer CK, Frimpong I, Ricklefs C, Al-Shoaibi AA, Testa A, Brindis CD, Santos GM, Baker FC",
+ "journal": "The American Journal on Addictions",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Generalized SEM (binomial logit outcome equation) of Year 4 nicotine experimentation on Year 2 social media time, adjusted for Year 3 smoking expectancies, Year 2 nicotine use and sociodemographics",
+   "location_in_paper": "Table 2, Direct effect columns (p. 5); Figure 1a and 1b direct paths (p. 5); Results p. 3; interpreted in Abstract and Discussion p. 3",
+   "design": "Prospective longitudinal mediation design across three ABCD follow-up waves. Social media time is measured at Year 2 (2018-2020), smoking expectancies (mediators) at Year 3 (2019-2021), and nicotine experimentation at Year 4 (2020-2022). The outcome is a single Year 4 binary measure, not repeated measures. Two separate mediation models were fit, one with positive expectancies as the mediator and one with negative expectancies; the direct effect of social media time on Year 4 nicotine experimentation is reported from each model. Year 2 nicotine experimentation and Year 2 smoking expectancies are included as covariates to address prior experimentation and beliefs. No time-by-IV interaction applies.",
+   "sample": "ABCD Study, Years 2-4 (release not stated in the paper). N = 8292 after excluding participants with missing data on social media use, nicotine variables, or sociodemographic factors (exclusion flowchart in Appendix A, not bundled in the PDF). Mean age 12.0 years (SD 0.7) at Year 2; 48.7% female, 51.3% male; 56.7% White, 19.0% Latino/Hispanic, 14.4% Black, 5.3% Asian, 3.2% Native American, 1.3% Other (43.3% racial/ethnic minorities). Parent education: 10.5% high school or less, 89.5% college or more. Weighted descriptives (Table 1, p. 4).",
+   "iv": "Year 2 youth-reported social media time in hours per day. Adolescents reported usual daily time on social media separately for weekdays and weekends; the daily average is ([weekday x 5] + [weekend x 2]) / 7. Continuous, per 1 hour/day. Weighted M = 0.7, SD = 1.5 h/day (Table 1).",
+   "dv": "Past-year nicotine experimentation at Year 4, binary (yes/no). From the youth-administered modified Timeline Follow-Back question asking whether the child had ever tried a puff of a nicotine product (cigarette, e-cigarette, or smokeless tobacco) since the last visit. Weighted prevalence 5.4% at Year 4 (0.9% at Year 2) (Table 1).",
+   "covariates": [
+    {
+     "name": "Year 3 smoking expectancies (mediator)",
+     "detail": "Positive expectancy sum score in the positive model; negative expectancy sum score in the negative model (Adolescent Smoking Consequences Questionnaire, modified). Direct effect is net of the mediator."
+    },
+    {
+     "name": "Age",
+     "detail": "Year 2, years"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs male (baseline)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Asian, Black, Latino/Hispanic, Native American, White, Other (baseline)"
+    },
+    {
+     "name": "Household income",
+     "detail": "Six categories (Year 2), from <=$24,999 to >=$200,000"
+    },
+    {
+     "name": "Highest parent education",
+     "detail": "High school or less vs college or more (Year 2)"
+    },
+    {
+     "name": "Depressive symptoms",
+     "detail": "CBCL depressive symptoms t-score (Year 2); weighted M = 54.4, SD = 6.2"
+    },
+    {
+     "name": "Year 2 nicotine experimentation",
+     "detail": "Prior experimentation, binary"
+    },
+    {
+     "name": "Year 2 smoking expectancies",
+     "detail": "Positive or negative, matching the mediator in each model"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as a covariate (Table 2 note: 'adjusted for ... study site'); not described as a random effect"
+    }
+   ],
+   "equation": "logit(P(nicotine_Y4[i] = 1)) = b0 + b1*SM_hours_Y2[i] + b2*expectancy_Y3[i] + b3*age + b4*sex + b5..b9*race/ethnicity + b10..b14*income + b15*parent_ed + b16*CBCL_depression + b17*nicotine_Y2 + b18*expectancy_Y2 + site terms; fit jointly with the mediator equation expectancy_Y3[i] = a0 + a1*SM_hours_Y2[i] + covariates + e[i]. Focal estimate b1 (direct effect). Run separately with expectancy = positive and expectancy = negative.",
+   "estimation": "Stata 18, generalized structural equation modeling (gsem); outcome equation binomial with logit link. Indirect effects and SEs by the delta method; proportion mediated = indirect / (indirect + direct). Sampling weights calibrated to the American Community Survey applied. Study site entered as a covariate; no random effects or family clustering described. Two-sided alpha = .05. No multiple-comparison correction. No interaction or stratified analyses reported. No sensitivity analyses reported. Coefficients are unstandardized log-odds (B); ORs are not printed.",
+   "native_metric": "other:logit_B",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "h/day; M = 0.7, SD = 1.5",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "nicotine_y4_posmodel",
+     "label": "Nicotine experimentation Y4 (positive-expectancy model)",
+     "sd_dv": null,
+     "p0": 0.054
+    },
+    {
+     "id": "nicotine_y4_negmodel",
+     "label": "Nicotine experimentation Y4 (negative-expectancy model)",
+     "sd_dv": null,
+     "p0": 0.054
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "nicotine_y4_posmodel",
+     "value": 0.138,
+     "value_lo": 0.081,
+     "value_hi": 0.196,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 2, Positive smoking expectancies model, Direct effect (p. 5); Figure 1a (B = 0.14***)",
+     "note": "Unstandardized logit coefficient (log-odds per 1 h/day of social media), SE = 0.029. Adjusted for Year 3 positive expectancies. Text (p. 3) rounds to B = 0.14, 95% CI 0.08-0.20. p0 = 0.054 is the weighted whole-sample Year 4 prevalence, not the rate in non-users."
+    },
+    {
+     "iv": "sm_time_y2",
+     "dv": "nicotine_y4_negmodel",
+     "value": 0.153,
+     "value_lo": 0.1,
+     "value_hi": 0.206,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 2, Negative smoking expectancies model, Direct effect (p. 5); Figure 1b (B = 0.15***)",
+     "note": "Unstandardized logit coefficient, SE = 0.027. Adjusted for Year 3 negative expectancies. Text (p. 3) rounds to B = 0.15, 95% CI 0.10-0.21."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "GSEM mediator equation (a-path) of Year 3 smoking expectancies on Year 2 social media time, same covariates",
+   "location_in_paper": "Figure 1a and 1b, Social Media Time -> Smoking Expectancies paths (p. 5)",
+   "design": "Same longitudinal mediation models as M1. This is the mediator equation: Year 2 social media time predicting the Year 3 expectancy sum score, estimated in the same gsem fit. Single Year 3 outcome per model.",
+   "sample": "Same as M1, N = 8292.",
+   "iv": "Same as M1: Year 2 social media hours/day, weighted M = 0.7, SD = 1.5.",
+   "dv": "Year 3 smoking expectancy sum scores from the Adolescent Smoking Consequences Questionnaire (modified, about 6 items, 5-point Likert). Positive expectancies (e.g., stress reduction, social facilitation, weight control): weighted M = 5.6, SD = 2.2, possible/observed range 4-20. Negative expectancies (e.g., health risks, negative social impression, physical discomfort): weighted M = 7.2, SD = 2.1, range 2-10 (Table 1 and footnote). Cronbach's alpha .56-.88 reported from prior samples.",
+   "covariates": [
+    {
+     "name": "(same as M1, excluding the mediator itself)",
+     "detail": "Age, sex, race/ethnicity, household income, parent education, CBCL depressive symptoms, Year 2 nicotine experimentation, Year 2 smoking expectancies, study site. The paper does not state the covariate set for the mediator equation separately; Table 2 note says all models were adjusted for these."
+    }
+   ],
+   "equation": "expectancy_Y3[i] = a0 + a1*SM_hours_Y2[i] + a2*age + a3*sex + race/ethnicity + income + parent_ed + CBCL_depression + nicotine_Y2 + expectancy_Y2 + site terms + e[i]. Focal estimate a1. Run separately for positive and negative expectancies.",
+   "estimation": "Stata 18 gsem, same fit as M1. The link for the mediator equation is not stated; presumably Gaussian/identity for the continuous sum score. Sampling weights applied. Only point estimates with significance asterisks are printed in Figure 1; no SE, CI, or exact p.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "h/day; M = 0.7, SD = 1.5",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "pos_exp_y3",
+     "label": "Positive smoking expectancies (Year 3)",
+     "sd_dv": 2.2,
+     "p0": null
+    },
+    {
+     "id": "neg_exp_y3",
+     "label": "Negative smoking expectancies (Year 3)",
+     "sd_dv": 2.1,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "pos_exp_y3",
+     "B": 0.07,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "<.001 (***)",
+     "sig": true,
+     "location": "Figure 1a, a-path (p. 5)",
+     "note": "Read from figure label 'B = 0.07***'. No CI or SE printed."
+    },
+    {
+     "iv": "sm_time_y2",
+     "dv": "neg_exp_y3",
+     "B": 0.003,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "ns (no asterisk)",
+     "sig": false,
+     "location": "Figure 1b, a-path (p. 5)",
+     "note": "Read from figure label 'B = 0.003'. No CI, SE, or p printed."
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Indirect effect of Year 2 social media time on Year 4 nicotine experimentation via Year 3 smoking expectancies (delta-method), with proportion mediated",
+   "location_in_paper": "Table 2, Indirect effect and Proportion mediated columns (p. 5); Results p. 3; Abstract",
+   "design": "Same longitudinal mediation models as M1/M2 (Year 2 -> Year 3 -> Year 4).",
+   "sample": "Same as M1, N = 8292.",
+   "iv": "Year 2 social media hours/day (as M1).",
+   "dv": "Year 4 past-year nicotine experimentation (binary), through Year 3 positive or negative smoking expectancies.",
+   "covariates": [
+    {
+     "name": "(same as M1)",
+     "detail": "Age, sex, race/ethnicity, household income, parent education, CBCL depressive symptoms, Year 2 nicotine experimentation, Year 2 smoking expectancies, study site"
+    }
+   ],
+   "equation": "indirect = a1 * b2 (product of the social media -> expectancy path and the expectancy -> nicotine logit path); proportion mediated = indirect / (indirect + direct).",
+   "estimation": "Stata 18 gsem; indirect effects and SEs via the delta method. Sampling weights applied. Alpha = .05.",
+   "native_metric": "other:indirect_effect_logit",
+   "iv_axis": [
+    {
+     "id": "sm_time_y2",
+     "label": "Social media time (Year 2)",
+     "meta": "h/day",
+     "sd_iv": 1.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "nic_via_pos",
+     "label": "Nicotine Y4 via positive expectancies",
+     "sd_dv": null,
+     "p0": 0.054
+    },
+    {
+     "id": "nic_via_neg",
+     "label": "Nicotine Y4 via negative expectancies",
+     "sd_dv": null,
+     "p0": 0.054
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time_y2",
+     "dv": "nic_via_pos",
+     "value": 0.009,
+     "value_lo": 0.003,
+     "value_hi": 0.014,
+     "p": 0.002,
+     "p_label": ".002",
+     "sig": true,
+     "location": "Table 2, Positive smoking expectancies model, Indirect effect (p. 5)",
+     "note": "SE = 0.003. Proportion mediated 5.97% (95% CI 1.27%, 10.67%), p = .013."
+    },
+    {
+     "iv": "sm_time_y2",
+     "dv": "nic_via_neg",
+     "value": 0.001,
+     "value_lo": -0.002,
+     "value_hi": 0.003,
+     "p": 0.616,
+     "p_label": ".616",
+     "sig": false,
+     "location": "Table 2, Negative smoking expectancies model, Indirect effect (p. 5)",
+     "note": "SE = 0.001. Proportion mediated 0.34% (95% CI -1.00%, 1.67%), p = .617."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Smoking expectancies (Year 3) -> nicotine experimentation (Year 4) b-paths",
+   "location": "Figure 1a (B = 0.12***) and 1b (B = -0.04); Results p. 3 (positive B = 0.12, 95% CI 0.07-0.17, p < .001)",
+   "why": "Neither side of this path is a phone/SM variable; social media time is only a covariate in that equation."
+  },
+  {
+   "model": "Total effect of social media time on nicotine experimentation",
+   "location": "Not printed",
+   "why": "The paper reports only direct and indirect effects and proportion mediated; no total-effect estimate is printed."
+  },
+  {
+   "model": "Appendix A (sample flowchart) and Appendix B (expectancy items)",
+   "location": "Online Supporting Information (not bundled in the PDF)",
+   "why": "Methods material per the text; no phone/SM estimates are described as being in the appendices."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "M1: unstandardized logit coefficient (log-odds); M2: unstandardized B (mediator equation, presumably linear); M3: indirect effect on the logit scale",
+  "conversion_formula": "M1: ln(OR) = B, so d = B * sqrt(3)/pi (Chinn 2000), applied to B and each CI bound. M2: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). M3: not converted (mediation indirect effect).",
+  "contrast_type": "M1 and M3: per 1 hour/day of Year 2 social media time. M2: per 1 hour/day, converted to per 1 SD of social media time via SD_IV.",
+  "transformable": "partial",
+  "notes": "SD_IV = 1.5 h/day; SD_DV = 2.2 (positive expectancies) and 2.1 (negative expectancies), weighted Table 1 descriptives for the N = 8292 analytic sample (p. 4). M1 B is on the log-odds scale because the gsem outcome equation is binomial logit (Statistical analysis, p. 3); it is not an OR and should not be run through the linear B formula. A per-1-SD log-odds contrast would multiply by 1.5. M2 values are read from Figure 1 labels with no CI, so only point d can be derived, and the mediator equation's link function is not stated. M3 indirect effects mix a linear and a logit equation and are kept in native units as non-convertible. Year 4 nicotine prevalence (5.4%, weighted marginal) is given as p0 but is not the non-user rate."
+ },
+ "extraction_flags": "The paper is 7 pages and the supporting appendices are not in the PDF.\n\n1. The M1 direct effects (0.138 and 0.153) are unstandardized log-odds from a binomial-logit gsem outcome equation. They are not linear B. I coded them as other:logit_B, the same way as sibling paper 107 (same authors and design, with a cannabis outcome). They should be converted with d = B*sqrt(3)/pi, per 1 hour/day.\n2. The two direct effects come from the positive-expectancy and negative-expectancy mediation models. The authors interpret both, and neither is clearly the anchor. No total effect is printed.\n3. The M2 a-path values (0.07* and 0.003) are read off the Figure 1 labels. There is no CI, SE or exact p, and the link function for the mediator equation is not stated.\n4. p0 = 0.054 is the weighted whole-sample prevalence at Year 4, not the rate among non-users.\n5. Study site is entered as a covariate, not a random effect, as far as the text says.\n6. The ABCD release is not stated.\n7. Including the a-path (social media time to smoking expectancies) as a qualifying analysis assumes expectancies count as an individual-trait construct (substance-related cognition). The coder should confirm this."
+}

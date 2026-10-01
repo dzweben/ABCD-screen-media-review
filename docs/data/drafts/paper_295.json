@@ -1,0 +1,191 @@
+{
+ "paper_id": "295",
+ "title": "Extracurricular Activities, Screen Media Activity, and Sleep May Be Modifiable Factors Related to Children's Cognitive Functioning: Evidence From the ABCD Study",
+ "doi": "10.1111/cdev.13578",
+ "year": "2021",
+ "authors": "Kirlic N, Colaizzi JM, Cosgrove KT, Cohen ZP, Yeh HW, Breslin F, Morris AS, Aupperle RL, Singh MK, Paulus MP",
+ "journal": "Child Development",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Follow-up linear mixed-effects models of fluid cognitive functioning and of sleep length on weekday time per screen media activity type (social media, texting, video chat), site and family random effects, no other covariates",
+   "location_in_paper": "Method, Follow-Up Analyses (p. 2042); Results, Follow-Up Analyses (p. 2044, in-text F statistics; also plotted in Figure S5, not included in the PDF). FCF findings interpreted in Discussion p. 2046 and p. 2047.",
+   "design": "Cross-sectional, ABCD baseline visit only. Screen media time and both outcomes (age-corrected NIH Toolbox fluid cognition composite; parent-reported sleep amount) measured at the same baseline assessment. One observation per child (one child randomly kept per family). These LMEs are post hoc follow-ups to a stacked machine-learning ensemble in which the weekday Screen Time Questionnaire total was among the 15 most important predictors of FCF; the follow-up decomposes weekday screen time by activity type. The text says activity type was 'entered as fixed effects'; the error df differ by activity type (e.g., 9,664 for social media vs 9,670 for video chat in the FCF models), which suggests each activity was tested in its own model with its own listwise N, but this is not stated explicitly. Direction of the screen-sleep relation is not stated as causal; screen activity is treated as the fixed-effect predictor in both sets of models.",
+   "sample": "ABCD Data Release 2.0.1, complete baseline sample N = 11,877. Excluded participants without the FCF composite, then randomly selected one child per family where multiple siblings were assessed, leaving N = 9,718 (mean age 9.89, SD 0.62, range 9.00 to 10.92). Male 5,125 (52.8%), female 4,590 (47.2%). White 4,937 (50.9%), Black or African American 1,459 (15.0%), Hispanic 2,066 (21.3%), Asian 225 (2.3%), Other/mixed 1,019 (10.5%). Twins 856 (8.8%). Income < $50,000 30.4%, $50,000-$100,000 41.3%, > $100,000 28.3% (Table 1, pp. 2039-2041). Model-specific N not printed; error df range from 9,662 to 9,670, implying roughly 9,660-9,690 children per model depending on random-effect df.",
+   "iv": "Youth-reported Screen Time Questionnaire (STQ) hours on a typical weekday for each activity type, with response options none, < 30 min, 30 min, then 1-hr increments up to 4+ hr (range 0.00 to 4.00 hr per item). Qualifying items: social network sites, M = 0.11 hr (SD 0.42); text and instant messages, M = 0.22 hr (SD 0.56); video chat, M = 0.18 hr (SD 0.50) (Table 1, pp. 2040-2041). Non-phone items modeled the same way (TV shows/movies, R-rated movies, Internet videos, video games, mature-rated games) are excluded. Units of the fixed effect are presumably hours/day, but no slope is reported, only the F test.",
+   "dv": "(1) Age-corrected fluid cognitive functioning (FCF) composite from the NIH Toolbox Cognition Battery (Dimensional Change Card Sort, Flanker, Picture Sequence Memory, List Sorting Working Memory, Pattern Comparison Processing Speed), normed standard score; sample M = 95.57, SD = 17.48 (Results p. 2043). (2) Sleep length: parent-reported Sleep Disturbance Scale for Children item 'How many hours of sleep does your child get on most nights?', five ordered categories (< 5, 5-7, 7-8, 8-9, 9-11 hr; Table 1 p. 2040 gives counts only, no mean or SD). How this ordinal item was coded in the LME is not stated.",
+   "covariates": [
+    {
+     "name": "ABCD site",
+     "detail": "Random effect (random intercept)"
+    },
+    {
+     "name": "Family ID",
+     "detail": "Random effect, although only one child per family was retained in the analytic sample"
+    },
+    {
+     "name": "No other covariates reported",
+     "detail": "No demographic, SES, or other screen-type adjustment is described for the follow-up LMEs"
+    }
+   ],
+   "equation": "Y[i] = b0 + b1*weekday_screen_activity_k[i] + u_site + u_family + e[i], where Y is FCF or sleep length and k is one of the STQ weekday activity types (social media, texting, video chat for this extraction). Focal effect b1 is tested with an F(1, df) statistic; b1 itself is not reported.",
+   "estimation": "R 3.5.1 (RStudio), package lme4 (Bates et al., 2014). Linear mixed-effects models with ABCD site and family ID as random effects. Only F(1, df) and p are reported; no coefficients, standard errors, or confidence intervals. Spearman correlations among screen types (Figure S6) were also computed. No multiple-comparison correction is described for the follow-up LMEs (FDR was applied only to the Table 2 univariate Spearman correlations). The authors state that, given the large sample, the analysis focused on effect sizes rather than significance, but no effect sizes are printed. No sex or other interaction tests and no stratified results. The parent machine-learning model (stacked elastic net, SVR, conditional inference forest, kNN with repeated nested cross-validation) is described separately and does not include per-modality phone/SM predictors.",
+   "native_metric": "other:F(1,df)",
+   "iv_axis": [
+    {
+     "id": "wd_sm",
+     "label": "Weekday social media (social network sites)",
+     "meta": "STQ hr/day, M 0.11",
+     "sd_iv": 0.42
+    },
+    {
+     "id": "wd_text",
+     "label": "Weekday texting / instant messages",
+     "meta": "STQ hr/day, M 0.22",
+     "sd_iv": 0.56
+    },
+    {
+     "id": "wd_vc",
+     "label": "Weekday video chat",
+     "meta": "STQ hr/day, M 0.18",
+     "sd_iv": 0.5
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "fcf",
+     "label": "Fluid cognitive functioning (age-corrected NIH Toolbox composite)",
+     "sd_dv": 17.48,
+     "p0": null
+    },
+    {
+     "id": "sleep",
+     "label": "Sleep length (SDSC hours category)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "wd_sm",
+     "dv": "fcf",
+     "value": 6.79,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results, Follow-Up Analyses, p. 2044 (left column)",
+     "note": "F(1, 9,664) = 6.79. Described as a small negative relation (more social media, lower FCF). No coefficient or CI reported."
+    },
+    {
+     "iv": "wd_text",
+     "dv": "fcf",
+     "value": 0.1,
+     "value_lo": null,
+     "value_hi": null,
+     "p": 0.75,
+     "p_label": "= .75",
+     "sig": false,
+     "location": "Results, Follow-Up Analyses, p. 2044 (left column)",
+     "note": "F(1, 9,669) = 0.10. Authors state texting did not show a relation with FCF; sign not reported."
+    },
+    {
+     "iv": "wd_vc",
+     "dv": "fcf",
+     "value": 27.18,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results, Follow-Up Analyses, p. 2044 (left column)",
+     "note": "F(1, 9,670) = 27.18. Described as a small negative relation (more video chat, lower FCF). No coefficient or CI reported."
+    },
+    {
+     "iv": "wd_sm",
+     "dv": "sleep",
+     "value": 27.36,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results, Follow-Up Analyses, p. 2044 (right column)",
+     "note": "F(1, 9,662) = 27.36. Described as a small negative relation with sleep length."
+    },
+    {
+     "iv": "wd_text",
+     "dv": "sleep",
+     "value": 7.99,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.005",
+     "sig": true,
+     "location": "Results, Follow-Up Analyses, p. 2044 (right column)",
+     "note": "F(1, 9,666) = 7.99. Listed among the small negative relations with sleep length."
+    },
+    {
+     "iv": "wd_vc",
+     "dv": "sleep",
+     "value": 6.81,
+     "value_lo": null,
+     "value_hi": null,
+     "p": null,
+     "p_label": "<.01",
+     "sig": true,
+     "location": "Results, Follow-Up Analyses, p. 2044 (right column)",
+     "note": "F(1, 9,666) = 6.81. Described as a small positive relation with sleep length (more video chat, longer sleep)."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Stacked machine-learning ensemble (elastic net, SVR, CIF, kNN) predicting FCF from 52 variables, variable importance",
+   "location": "Table 2 (p. 2043), Figure 1 (p. 2044), Figure 2 partial dependence plots (p. 2045)",
+   "why": "Screen media enters only as weekday and weekend STQ totals, which bundle TV, movies, R-rated movies, Internet videos, video games, and mature-rated games with social media, texting, and video chat. Non-phone ingredients; fails FT-IC2 Step 2. Weekday STQ VI = 26.642, weekend VI = 9.183."
+  },
+  {
+   "model": "Univariate Spearman correlations of weekday and weekend STQ total screen media with FCF",
+   "location": "Table 2 (p. 2043)",
+   "why": "Same mixed screen-time composites (weekday r = .148, weekend r = .089, both pFDR < .001); no phone/SM breakout in this table."
+  },
+  {
+   "model": "Follow-up LMEs of FCF and sleep length on non-phone weekday screen activities (Internet videos, mature-rated video games, TV shows/movies, mature-rated movies, video games)",
+   "location": "Results, Follow-Up Analyses (p. 2044)",
+   "why": "Non-phone/non-SM modalities; fail FT-IC2."
+  },
+  {
+   "model": "Follow-up LMEs of FCF on extracurricular activity categories (art, team sport, individual sport)",
+   "location": "Results, Follow-Up Analyses (p. 2044); Figure S5",
+   "why": "No phone/SM variable."
+  },
+  {
+   "model": "Spearman correlations among screen media activity types",
+   "location": "Results p. 2044; Figure S6 (supplement, not in PDF)",
+   "why": "Screen type with screen type; no individual-trait variable on the other side, and values not printed in the article."
+  },
+  {
+   "model": "Spearman correlations of extracurricular involvement with family income and caregiver education",
+   "location": "Results p. 2044",
+   "why": "No phone/SM variable."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "other:F(1,df) from linear mixed-effects models",
+  "conversion_formula": "Not one of the \u00a74a conversions. A point d can be approximated from a 1-df F test as t = sqrt(F), d = 2*t/sqrt(df_error) (equivalently r = sqrt(F/(F+df_error)), d = 2r/sqrt(1-r^2)), with the sign taken from the authors' prose description (negative for social media and video chat with FCF; negative for social media and texting with sleep; positive for video chat with sleep; unknown for texting with FCF).",
+  "contrast_type": "Per 1 hour/day of weekday activity (implied by STQ coding; slope not reported). The F-based d is a test-statistic conversion and does not depend on the IV unit.",
+  "transformable": "partial",
+  "notes": "No regression coefficients, SEs, or CIs are reported, so the \u00a74a B-to-d route cannot be used even though SD_IV (Table 1, pp. 2040-2041: social network sites 0.42, texting 0.56, video chat 0.50) and SD_FCF (17.48, Results p. 2043) are available. Only F(1, df) and p are printed (p. 2044). A point d is recoverable from F and the error df, but no CI on d is possible, the sign depends on narrative wording, and the error df come from mixed models with site and family random effects (approximate df). Sleep length is an ordinal five-category item with no SD reported. The models carry no fixed-effect covariates, so these are essentially unadjusted associations apart from site/family clustering."
+ },
+ "extraction_flags": "1) The stage2_reason gives the wrong pairings. F(1,9662)=6.79 is not in the paper. Social media\u2192FCF is F(1,9,664)=6.79, p<.01. Texting\u2192FCF is F(1,9,669)=0.10, p=.75, which is not significant. Video chat\u2192FCF is F(1,9,670)=27.18, p<.001. The texting F(1,9,666)=7.99 and video chat F(1,9,666)=6.81 figures are for sleep length, not FCF. I extracted both outcomes (FCF and parent-reported sleep length), since sleep is also an individual-trait outcome. 2) The paper reports only F statistics and p values: no coefficients, SEs or CIs, and no signs. Direction comes from the authors' wording ('small negative', and 'small positive' for video chat\u2192sleep). The sign for texting\u2192FCF is unknown. 3) The \u00a74a rules have no F-to-d conversion. A point d is possible via d=2*sqrt(F)/sqrt(df) using approximate mixed-model df, but no CI is possible, so I marked it partial. 4) The models have no covariates beyond site and family random effects, so they are essentially unadjusted. The family random effect is odd because only one child per family was kept. 5) It is unclear whether each activity type was tested in a separate model or all were entered together. The differing error df suggest separate models. 6) Sleep length is a 5-category ordinal SDSC item with no SD reported, and its coding in the LME is not stated. 7) Figures S5/S6 and Table S1 are in an online supplement that is not in the PDF, so they were not checked. 8) The headline ML/VI and Table 2 analyses use mixed STQ totals that include TV and gaming, so they are excluded."
+}

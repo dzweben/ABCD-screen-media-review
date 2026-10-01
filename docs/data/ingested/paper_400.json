@@ -1,0 +1,473 @@
+{
+ "paper_id": "400",
+ "title": "Longitudinal associations of screen time, physical activity, and sleep duration with body mass index in U.S. youth",
+ "doi": "10.1186/s12966-024-01587-6",
+ "year": "2024",
+ "authors": "Zink J, Booker R, Wolff-Hughes DL, Allen NB, Carnethon MR, Alexandria SJ, Berrigan D",
+ "journal": "International Journal of Behavioral Nutrition and Physical Activity",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": false,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Sex-stratified isotemporal substitution survey linear regression of one-year follow-up BMI z-score on 30-min reallocations involving baseline socializing (texting + video chat + social networking), adjusted for baseline BMI z-score",
+   "location_in_paper": "Table 2 (p. 7); methods p. 4 (Isotemporal substitution analysis); results p. 5; interpreted in Abstract and Discussion pp. 8-9.",
+   "design": "Prospective longitudinal, two waves. All behaviors (including socializing) and covariates measured at ABCD baseline (2017-2018); outcome is BMI z-score at the one-year follow-up (2018-2019), a single follow-up value per child, with baseline BMI z-score as a covariate. Not repeated measures. Isotemporal substitution: for each sex, five linear regressions are fit, each dropping one behavior while keeping the other four plus total time, so each coefficient is the association of adding 30 min of the row behavior while removing 30 min of the dropped (column) behavior. Socializing is the qualifying phone/SM variable and appears both as the behavior added (row) and the behavior displaced (column). Phone/SM is the IV.",
+   "sample": "ABCD Release 4.0 (September 2021); baseline 2017-2018 and one-year follow-up 2018-2019, both pre-COVID. Of 11,876 enrolled, 156 were dropped for missing baseline exposure or covariate data (85 BMI z-score, 39 socializing, 7 gaming, 9 streaming, 10 physical activity, 4 internalizing, 2 race/ethnicity), 777 for missing follow-up BMI z-score, 78 for BMI z-score < -3 at baseline or follow-up, and 321 for > 13 h/day screen time (reports summing to > 24 h/day), giving an isotemporal substitution analytic N = 10,544 (Fig. 1). Analyses stratified by caregiver-reported sex assigned at birth: females n = 5,058 (48.9% weighted), males n = 5,486. Weighted mean (SE) baseline age 9.9 (0.03) in females and 10.0 (0.03) in males. Race/ethnicity, females / males, n (weighted %): Asian 120 (4.0%) / 107 (3.3%); Black 693 (12.3%) / 679 (11.0%); Hispanic 996 (23.0%) / 1,095 (23.5%); Other/Multiracial 534 (6.9%) / 565 (6.7%); White 2,715 (53.8%) / 3,040 (55.5%). Overall 45.4% non-White. Income-to-needs ratio range 0.1-15.4; 972 'not reported'.",
+   "iv": "Baseline socializing screen time, defined as the sum of youth-reported texting, video chatting, and using social networking sites from the ABCD Youth Screen Time Survey (weekday and weekend items; response options none, <30 min coded 0.5 h, 1 h, 2 h, 3 h, 4+ h coded 4.8 h). Usual daily hours = weekday*0.71 + weekend*0.29, converted to minutes/day, then divided by 30 so one unit = 30 min/day. Weighted mean (SE) socializing: females 31.5 (2.0) min/day, males 22.3 (1.9) min/day (Table 1); overall 26.8 (1.9) min/day; 4,623 participants reported 0 min/day. Each estimate is a 30-min substitution: either 30 more min of socializing replacing 30 min of streaming, gaming, physical activity, or sleep, or 30 more min of one of those behaviors replacing 30 min of socializing. Other behaviors: streaming (TV shows/movies + videos e.g. YouTube), gaming (video games), physical activity (YRBSS days active >=60 min x 60 / 7), sleep (caregiver SDSC single item, category midpoints in minutes). SD of socializing not reported (only SE of mean).",
+   "dv": "BMI z-score at one-year follow-up, computed from staff-measured height and weight (triplicate) using the CDC 2000 Growth Chart SAS program (age- and sex-specific). Weighted mean (SE): females 0.49 (0.05), males 0.55 (0.05) (Table 1). Analyzed separately in females and males. Sample SD not reported.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline age, continuous (years)"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Caregiver-reported, categorical: non-Hispanic Asian, non-Hispanic Black, Hispanic, Other (including Mixed Race), non-Hispanic White"
+    },
+    {
+     "name": "Socioeconomic status",
+     "detail": "Income-to-needs ratio (household income / 2017 federal poverty threshold for household size), categorized <=0.99, 1.00-1.99, 2.00-3.99, >=4.00, plus a 'not reported' category (n = 972)"
+    },
+    {
+     "name": "Internalizing symptoms",
+     "detail": "Baseline CBCL internalizing (depressive, anxiety) raw score, caregiver report, possible range 0-64; weighted mean (SE) 5.2 (0.2) in both sexes"
+    },
+    {
+     "name": "Baseline BMI z-score",
+     "detail": "CDC 2000 growth chart z-score at baseline"
+    },
+    {
+     "name": "Other behaviors",
+     "detail": "Baseline time (in 30-min units) in every behavior except the one being replaced, entered simultaneously: streaming, gaming, socializing, physical activity, sleep"
+    },
+    {
+     "name": "Total time",
+     "detail": "Sum of time in all five behaviors (30-min units), held constant so each coefficient is a substitution for the omitted behavior"
+    },
+    {
+     "name": "Sex",
+     "detail": "Not a covariate; all models stratified by sex assigned at birth"
+    }
+   ],
+   "equation": "For sex s and dropped (displaced) behavior R: BMIz_FU[i] = b0 + sum over k != R of b_k*(time_k[i]/30) + b_T*(total_time[i]/30) + b_age*age + b_race*race/ethnicity dummies + b_SES*income-to-needs dummies + b_int*internalizing + b_bmi*BMIz_baseline + e[i], where k ranges over {socializing, streaming, gaming, physical activity, sleep}. b_k is the association with adding 30 min/day of behavior k while removing 30 min/day of behavior R. Focal cells: k = socializing (R = each other behavior) and R = socializing (k = each other behavior).",
+   "estimation": "Linear regression with complex survey design in SAS v9.4 SURVEY procedures; study site specified as the cluster variable and ABCD sample weights applied to approximate the American Community Survey. Model formulation informed by a DAG (Supplemental Fig. 1, not bundled in this PDF). All analyses stratified by sex; no formal sex interaction test reported. Significance flagged *P < .05, **P < .01, ***P < .001; exact p-values not printed. No multiple-comparison correction reported. Sensitivity analysis including participants whose reported time summed to > 24 h/day said to give qualitatively similar results (data not shown).",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "soc_for_stream",
+     "label": "+30 min socializing, -30 min streaming",
+     "meta": "row \u2191Socializing, col \u2193Streaming",
+     "sd_iv": null
+    },
+    {
+     "id": "soc_for_game",
+     "label": "+30 min socializing, -30 min gaming",
+     "meta": "row \u2191Socializing, col \u2193Gaming",
+     "sd_iv": null
+    },
+    {
+     "id": "soc_for_pa",
+     "label": "+30 min socializing, -30 min physical activity",
+     "meta": "row \u2191Socializing, col \u2193Physical Activity",
+     "sd_iv": null
+    },
+    {
+     "id": "soc_for_sleep",
+     "label": "+30 min socializing, -30 min sleep",
+     "meta": "row \u2191Socializing, col \u2193Sleep",
+     "sd_iv": null
+    },
+    {
+     "id": "stream_for_soc",
+     "label": "+30 min streaming, -30 min socializing",
+     "meta": "row \u2191Streaming, col \u2193Socializing",
+     "sd_iv": null
+    },
+    {
+     "id": "game_for_soc",
+     "label": "+30 min gaming, -30 min socializing",
+     "meta": "row \u2191Gaming, col \u2193Socializing",
+     "sd_iv": null
+    },
+    {
+     "id": "pa_for_soc",
+     "label": "+30 min physical activity, -30 min socializing",
+     "meta": "row \u2191Physical Activity, col \u2193Socializing",
+     "sd_iv": null
+    },
+    {
+     "id": "sleep_for_soc",
+     "label": "+30 min sleep, -30 min socializing",
+     "meta": "row \u2191Sleep, col \u2193Socializing",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bmiz_f",
+     "label": "Follow-up BMI z-score, females (n = 5,058)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "bmiz_m",
+     "label": "Follow-up BMI z-score, males (n = 5,486)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "soc_for_stream",
+     "dv": "bmiz_f",
+     "B": -0.003,
+     "B_lo": -0.01,
+     "B_hi": 0.01,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Socializing, column \u2193Streaming",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_game",
+     "dv": "bmiz_f",
+     "B": -0.005,
+     "B_lo": -0.02,
+     "B_hi": 0.01,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Socializing, column \u2193Gaming",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_pa",
+     "dv": "bmiz_f",
+     "B": 0.03,
+     "B_lo": 0.002,
+     "B_hi": 0.05,
+     "p": null,
+     "p_label": "P < .05",
+     "sig": true,
+     "location": "Table 2, Females panel, row \u2191Socializing, column \u2193Physical Activity",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_sleep",
+     "dv": "bmiz_f",
+     "B": 0.002,
+     "B_lo": -0.01,
+     "B_hi": 0.01,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Socializing, column \u2193Sleep",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "stream_for_soc",
+     "dv": "bmiz_f",
+     "B": 0.003,
+     "B_lo": -0.01,
+     "B_hi": 0.01,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Streaming, column \u2193Socializing",
+     "note": "Point estimate printed as '.003' (no leading zero) in the table.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "game_for_soc",
+     "dv": "bmiz_f",
+     "B": 0.005,
+     "B_lo": -0.01,
+     "B_hi": 0.02,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Gaming, column \u2193Socializing",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "pa_for_soc",
+     "dv": "bmiz_f",
+     "B": -0.03,
+     "B_lo": -0.05,
+     "B_hi": -0.002,
+     "p": null,
+     "p_label": "P < .05",
+     "sig": true,
+     "location": "Table 2, Females panel, row \u2191Physical Activity, column \u2193Socializing",
+     "note": "Reported in Abstract and Results p. 5: replacing 30 min of socializing with 30 min of physical activity associated with lower follow-up BMI z-score in females.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "sleep_for_soc",
+     "dv": "bmiz_f",
+     "B": -0.002,
+     "B_lo": -0.01,
+     "B_hi": 0.01,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Females panel, row \u2191Sleep, column \u2193Socializing",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_stream",
+     "dv": "bmiz_m",
+     "B": 0.01,
+     "B_lo": -0.002,
+     "B_hi": 0.02,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Males panel, row \u2191Socializing, column \u2193Streaming",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_game",
+     "dv": "bmiz_m",
+     "B": 0.01,
+     "B_lo": 0.0001,
+     "B_hi": 0.02,
+     "p": null,
+     "p_label": "P < .05",
+     "sig": true,
+     "location": "Table 2, Males panel, row \u2191Socializing, column \u2193Gaming",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_pa",
+     "dv": "bmiz_m",
+     "B": 0.004,
+     "B_lo": -0.03,
+     "B_hi": 0.04,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Males panel, row \u2191Socializing, column \u2193Physical Activity",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "soc_for_sleep",
+     "dv": "bmiz_m",
+     "B": 0.03,
+     "B_lo": 0.01,
+     "B_hi": 0.05,
+     "p": null,
+     "p_label": "P < .01",
+     "sig": true,
+     "location": "Table 2, Males panel, row \u2191Socializing, column \u2193Sleep",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "stream_for_soc",
+     "dv": "bmiz_m",
+     "B": -0.01,
+     "B_lo": -0.02,
+     "B_hi": 0.002,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Males panel, row \u2191Streaming, column \u2193Socializing",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "game_for_soc",
+     "dv": "bmiz_m",
+     "B": -0.01,
+     "B_lo": -0.02,
+     "B_hi": -0.0001,
+     "p": null,
+     "p_label": "P < .05",
+     "sig": true,
+     "location": "Table 2, Males panel, row \u2191Gaming, column \u2193Socializing",
+     "note": "Reported in Abstract and Results p. 5 and Discussion p. 9: replacing 30 min of socializing with 30 min of gaming associated with lower follow-up BMI z-score in males.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "pa_for_soc",
+     "dv": "bmiz_m",
+     "B": -0.004,
+     "B_lo": -0.04,
+     "B_hi": 0.03,
+     "p": null,
+     "p_label": "no asterisk (P >= .05)",
+     "sig": false,
+     "location": "Table 2, Males panel, row \u2191Physical Activity, column \u2193Socializing",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "sleep_for_soc",
+     "dv": "bmiz_m",
+     "B": -0.03,
+     "B_lo": -0.05,
+     "B_hi": -0.01,
+     "p": null,
+     "p_label": "P < .01",
+     "sig": true,
+     "location": "Table 2, Males panel, row \u2191Sleep, column \u2193Socializing",
+     "note": "Reported in Abstract and Results p. 5: replacing 30 min of socializing with 30 min of sleep associated with lower follow-up BMI z-score in males.",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Sex-stratified compositional data analysis (ILR survey linear regression) of one-year follow-up BMI z-score on the baseline proportion of the day spent socializing relative to the remaining behaviors, adjusted for baseline BMI z-score",
+   "location_in_paper": "Table 6 (p. 9), row 'Socializing'; methods pp. 4-5 (Compositional data analysis); results p. 7; interpreted in Discussion p. 9 and Conclusions p. 11.",
+   "design": "Prospective longitudinal, two waves; same timing as M1 (baseline behaviors and covariates, BMI z-score at one-year follow-up as a single outcome, baseline BMI z-score as covariate). Secondary analysis. The 24-h day is treated as a six-part composition (socializing, streaming, gaming, physical activity, sleep, and 'other activities' = 1,440 min minus the sum of the five). Proportions are isometric log-ratio (ILR) transformed using sequential binary partitioning; separate regressions are fit with each behavior rotated into the first position, and only ILR 1 of each rotation is reported (12 models total, 6 per sex). The socializing estimate is the association of a greater proportion of time in socializing relative to the remaining behaviors (at their geometric mean) with follow-up BMI z-score. Phone/SM is the IV.",
+   "sample": "Subset of the M1 sample: 5,380 excluded for 0 min/day of socializing (n = 4,623), gaming (n = 746), or streaming (n = 11), leaving N = 5,164 (females n = 2,542, males n = 2,622). 50.4% female (weighted), baseline age 10.0 (0.03) years, 47.7% non-White. Included vs excluded differed in age, sex, race/ethnicity, all screen time forms, sleep, and BMI z-score (Table 3); included participants had socializing 46.8 (2.0) vs 6.2 (0.7) min/day. Zero minutes of physical activity (n = 574) replaced with 30 s using multiplicative replacement. Compositional means: socializing 2.4% of the day in females and 2.1% in males (Table 4).",
+   "iv": "Baseline proportion of the 1,440-min day spent socializing (texting + video chatting + social networking sites; same instrument and scoring as M1), expressed as ILR 1 with socializing as the first component, i.e. the log-ratio of socializing to the geometric mean of the other five components. The authors illustrate that a 1% (14.4 min/day) increase in socializing relative to the remaining day in a male with baseline BMI z-score 0.50 corresponds to a predicted follow-up BMI z-score of 0.55.",
+   "dv": "BMI z-score at one-year follow-up (CDC 2000 growth charts), analyzed separately by sex. Means for this subsample not reported by sex; overall included follow-up BMI z-score 0.57 (0.05) (Table 3).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline, continuous years"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "Same five categories as M1"
+    },
+    {
+     "name": "Socioeconomic status",
+     "detail": "Income-to-needs categories as in M1"
+    },
+    {
+     "name": "Internalizing symptoms",
+     "detail": "Baseline CBCL internalizing raw score"
+    },
+    {
+     "name": "Baseline BMI z-score",
+     "detail": "CDC 2000 growth chart z-score at baseline"
+    },
+    {
+     "name": "Remaining ILR coordinates",
+     "detail": "The other four ILR coordinates of the composition for that rotation"
+    },
+    {
+     "name": "Sex",
+     "detail": "Stratification variable, not a covariate"
+    }
+   ],
+   "equation": "For sex s, with socializing rotated first: BMIz_FU[i] = b0 + b1*ILR1[i] + b2*ILR2[i] + ... + b5*ILR5[i] + b_age*age + b_race*race/ethnicity + b_SES*income-to-needs + b_int*internalizing + b_bmi*BMIz_baseline + e[i], where ILR1 = sqrt(5/6) * ln( socializing / geometric_mean(streaming, gaming, physical activity, sleep, other activities) ). Only b1 is reported. (The sqrt(5/6) scaling follows standard sequential binary partitioning; the paper does not print the ILR formula.)",
+   "estimation": "Survey-weighted linear regression in R using the 'survey' package, with the same ABCD design features (site cluster, sample weights) as M1. Significance defined a priori as a 95% CI not crossing zero; no p-values printed; no multiple-comparison correction. Sex-stratified; no formal sex interaction test reported. Sensitivity analysis without 30-s replacement for zero physical activity reported as qualitatively similar in Supplemental Table 1 (not bundled in this PDF).",
+   "native_metric": "other:ILR regression coefficient",
+   "iv_axis": [
+    {
+     "id": "soc_ilr",
+     "label": "Socializing proportion of day (ILR 1)",
+     "meta": "compositional mean 2.4% F, 2.1% M",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "bmiz_f",
+     "label": "Follow-up BMI z-score, females (n = 2,542)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "bmiz_m",
+     "label": "Follow-up BMI z-score, males (n = 2,622)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "soc_ilr",
+     "dv": "bmiz_f",
+     "value": -0.01,
+     "value_lo": -0.03,
+     "value_hi": 0.01,
+     "p": null,
+     "p_label": "not printed; CI crosses 0",
+     "sig": false,
+     "location": "Table 6, row Socializing, Females column",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:ILR regression coefficient' (flagged for later review level)"
+    },
+    {
+     "iv": "soc_ilr",
+     "dv": "bmiz_m",
+     "value": 0.05,
+     "value_lo": 0.02,
+     "value_hi": 0.08,
+     "p": null,
+     "p_label": "not printed; bold (CI excludes 0)",
+     "sig": true,
+     "location": "Table 6, row Socializing, Males column; also Results p. 7 and Abstract",
+     "derived_d": null,
+     "derived_d_method": "no Cohen's d conversion for 'other:ILR regression coefficient' (flagged for later review level)"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Isotemporal substitutions not involving socializing (streaming, gaming, physical activity, and sleep exchanged among themselves)",
+   "location": "Table 2, all cells outside the \u2191Socializing row and \u2193Socializing column, both sexes",
+   "why": "No phone/SM variable on either side. Streaming bundles TV shows/movies with videos (e.g. YouTube) on unspecified devices and gaming is unspecified-platform video games; both fail FT-IC2."
+  },
+  {
+   "model": "CoDA ILR estimates for streaming, gaming, physical activity, sleep, and other activities",
+   "location": "Table 6, rows other than Socializing",
+   "why": "Non-phone/SM behaviors (streaming and gaming fail FT-IC2 Step 2)."
+  },
+  {
+   "model": "Comparison of CoDA-included vs excluded participants",
+   "location": "Table 3 (p. 8)",
+   "why": "Descriptive weighted t-tests/chi-square tests of sample differences; socializing differs by inclusion status, but this is not a phone/SM to individual-trait association."
+  },
+  {
+   "model": "Compositional means and compositional variation matrix",
+   "location": "Tables 4 and 5 (pp. 8-9)",
+   "why": "Descriptive compositional summaries (proportions and log-ratio variances), not inferential estimates."
+  },
+  {
+   "model": "CoDA sensitivity analysis without 30-s assignment for zero physical activity",
+   "location": "Supplemental Table 1 (online supplement, not bundled in this PDF)",
+   "why": "Supplement not available in the PDF; text says results were qualitatively similar. Coders may wish to check the online supplement for a socializing row."
+  },
+  {
+   "model": "Sensitivity analysis including participants whose behaviors summed to > 24 h/day",
+   "location": "Methods, Data exclusions (p. 5)",
+   "why": "Narrative only ('data not shown'); no numbers printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized isotemporal substitution coefficient, M1) + other: ILR regression coefficient (M2)",
+  "conversion_formula": "None applied. Would require beta_std = B * SD_IV / SD_DV; d = 2*beta_std / sqrt(1 - beta_std^2) (Borenstein 2009 eq 7.1), but no SDs are reported and the M1 contrast is a fixed-total-time substitution rather than a one-unit change in a single IV. M2 ILR coefficients are on a log-ratio scale with no reported SD of the ILR coordinate.",
+  "contrast_type": "M1: adding 30 min/day of one behavior while removing 30 min/day of another (socializing added or displaced), total time fixed. M2: one-unit increase in ILR 1 (log-ratio of socializing to the geometric mean of the remaining five components).",
+  "transformable": false,
+  "notes": "Table 1 (p. 7) reports weighted means with standard errors, not SDs, for socializing (females 31.5 (2.0), males 22.3 (1.9) min/day) and follow-up BMI z-score (females 0.49 (0.05), males 0.55 (0.05)); SDs of the IV and DV in the analytic sample are not reported anywhere in the PDF. BMI z-score has reference-population SD 1 by construction, but the sample SD is not reported and the IV SD is still missing. Isotemporal substitution coefficients are conditional on total time and on the displaced behavior, so even with SDs a per-SD d would have no single-IV interpretation. CoDA ILR coefficients are not convertible without the SD of the ILR coordinate. Exact p-values are not printed for either model (M1 uses asterisks; M2 uses CI excluding 0)."
+ },
+ "extraction_flags": "1) The qualifying IV is the 'socializing' composite (texting + video chat + social networking sites). Under \u00a75 it counts as phone/SM-only, so it was extracted as the IV. 2) M1 is an isotemporal substitution model. For each sex I extracted all 8 cells that involve socializing in Table 2: the 4 cells in the \u2191Socializing row, where socializing is added, and the 4 in the \u2193Socializing column, where socializing is displaced. Each cell comes from a different drop-one regression. The authors anchor their claims on the column cells (PA replaces socializing in females; gaming and sleep replace socializing in males). Coders should decide whether to keep both directions. 3) For both models, Table 1 gives only weighted mean (SE), not SD, so sd_iv and sd_dv are null and d_transformable is false. BMI z has a reference SD of 1, but the sample SD is not reported. 4) No exact p-values are printed. M1 uses asterisks, which I recorded in p_label. M2 counts as significant when the CI excludes 0. 5) In Table 2, the females \u2191Streaming/\u2193Socializing estimate is printed as '.003'; I recorded it as 0.003. 6) In the M2 equation, the sqrt(5/6) ILR scaling is my standard-SBP reconstruction; the paper does not print it. 7) Supplemental Table 1 and Supplemental Fig. 1 (the CoDA sensitivity analysis and the DAG) are not in the bundled PDF. 8) M2 drops the 4,623 participants with zero socializing, so it is a selected subsample (N = 5,164)."
+}

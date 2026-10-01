@@ -1,0 +1,167 @@
+{
+ "paper_id": "389",
+ "title": "Problematic social media use and alcohol expectancies in early adolescents",
+ "doi": "10.1186/s12889-023-15298-3",
+ "year": "2023",
+ "authors": "Nagata JM, Smith N, Zamora G, Sajjad OM, Ganson KT, Testa A, Jackson DB",
+ "journal": "BMC Public Health",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Propensity-weighted linear regression of positive and negative alcohol expectancies on social media time and problematic social media use (SMAQ) entered jointly, adjusted for sociodemographics and site",
+   "location_in_paper": "Table 2, Model 3 (p. 7); described in Results p. 4, abstract, and Fig. 1 (predicted scores, p. 5); interpreted in Discussion pp. 4-6",
+   "design": "Cross-sectional. All variables (social media time, SMAQ, alcohol expectancies, covariates) taken from the ABCD Year 2 follow-up assessment (2018-2020). One observation per adolescent. Each of the two outcomes (positive and negative expectancies) is fit in a separate regression; Model 3 enters social media time and SMAQ score simultaneously so each estimate is adjusted for the other exposure. The authors present Model 1 (social media time only) and Model 2 (SMAQ only) as preceding steps and anchor their conclusions (abstract, Results, Discussion) on Model 3.",
+   "sample": "ABCD Study Release 4.0, Year 2 assessment (2018-2020), 21 U.S. sites. Participants missing screen time or alcohol expectancy data were excluded (Additional File Table S1, not bundled in PDF), leaving N = 9,008. The SMAQ was administered only to youth who reported having at least one social media account (n = 5,642; Table 1 and Table 2 footnote a), so Model 3, which includes the SMAQ score, is presumably estimated on this subset; the paper does not state the Model 3 analytic N explicitly. Full sample (N = 9,008, weighted, Table 1): mean age 12.02 (SD 0.66); 48.67% female, 51.33% male; race/ethnicity 57.36% White, 18.74% Latino/Hispanic, 14.44% Black, 5.18% Asian, 3.04% Native American, 1.23% Other; sexual minority status 87.65% no, 4.45% yes, 3.77% questioning, 2.99% don't understand the question, 1.14% declined; household income 45.92% < $75,000, 54.08% >= $75,000; parent education 13.43% high school or less, 86.57% college or more; parents 71.87% married/partnered. Descriptives for the n = 5,642 SMAQ subset are not reported separately.",
+   "iv": "Two phone/SM exposures entered together. (1) Social media time: youth-reported hours and minutes on a typical weekday and weekend day visiting social media apps (e.g., Snapchat, Facebook, Twitter, Instagram, TikTok), ABCD Youth Screen Time Survey; weighted daily average = (weekday x 5 + weekend x 2)/7, in hours per day. Table 1: M = 0.71, SD = 1.62 hours/day (N = 9,008). (2) Problematic social media use: Social Media Addiction Questionnaire (SMAQ), six items modeled on the Bergen Facebook Addiction Scale (mood modification, salience, relapse, conflict, tolerance, withdrawal), averaged into a mean score; asked only of youth with at least one social media account. Cronbach's alpha = 0.82, test-retest r = 0.83 (cited). Table 1: M = 1.84, SD = 0.90 (n = 5,642). The item response range is not stated in the paper; Fig. 1 plots the SMAQ mean score on a 0-6 axis. Variance inflation factors in Model 3: social media time 1.19, SMAQ 1.17.",
+   "dv": "Alcohol expectancies, youth self-report, Alcohol Expectancy Questionnaire-Adolescent, Brief (AEQ-AB), 7 items on a 5-point Likert agree/disagree scale (range 1-5; higher = stronger expectancy). Positive expectancies = mean of items 1, 2, 4 and 6 (e.g., 'Alcohol makes a person feel stronger and more powerful'); Table 1: M = 2.99, SD = 0.61. Negative expectancies = mean of items 3, 5 and 7 (e.g., 'Alcohol can hurt how well a person gets along with others'); Table 1: M = 2.80, SD = 0.78. Each outcome is modeled separately; both are continuous.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years, continuous"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs. male"
+    },
+    {
+     "name": "Sexual minority status",
+     "detail": "Categorical: no, yes, questioning, don't understand the question, declined to answer"
+    },
+    {
+     "name": "Race/ethnicity",
+     "detail": "White, Latino/Hispanic, Black, Asian, Native American, Other"
+    },
+    {
+     "name": "Household income",
+     "detail": "Binary: < $75,000 vs. >= $75,000"
+    },
+    {
+     "name": "Parent education",
+     "detail": "Highest parent education, binary: high school or less vs. college or more"
+    },
+    {
+     "name": "Parental marital status",
+     "detail": "Partnered/married vs. unpartnered/single"
+    },
+    {
+     "name": "Study site",
+     "detail": "Entered as a covariate (fixed effects per Table 2 footnote: 'adjusting for ... study site'); no random effects described"
+    }
+   ],
+   "equation": "AlcExp_k[i] = b0 + b1*SM_time[i] + b2*SMAQ[i] + b3*age + b4*sex + b5..*sexual_minority + b..*race_ethnicity + b*income + b*parent_ed + b*parent_marital + b..*site + e[i], fit separately for k = positive and k = negative expectancies; b1 and b2 are the focal estimates.",
+   "estimation": "Stata 17.0 (2022). Linear regression (OLS-type) with ABCD propensity weights matched to the American Community Survey. Study site entered as a covariate; no random effects or family clustering described. Two-sided alpha = 0.01 because of the large sample; no other multiple-comparison correction. Multicollinearity checked in Model 3 (VIFs < 1.20). Marginal predicted scores from Model 3 plotted in Fig. 1. No interaction/effect-modification tests or sensitivity analyses reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_time",
+     "label": "Social media time (hours/day)",
+     "meta": "M = 0.71, SD = 1.62 h/day (N = 9,008)",
+     "sd_iv": 1.62
+    },
+    {
+     "id": "smaq",
+     "label": "Problematic social media use (SMAQ mean score)",
+     "meta": "M = 1.84, SD = 0.90 (n = 5,642)",
+     "sd_iv": 0.9
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "pos_exp",
+     "label": "Positive alcohol expectancies",
+     "sd_dv": 0.61,
+     "p0": null
+    },
+    {
+     "id": "neg_exp",
+     "label": "Negative alcohol expectancies",
+     "sd_dv": 0.78,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_time",
+     "dv": "pos_exp",
+     "B": -0.01,
+     "B_lo": -0.022,
+     "B_hi": 0.002,
+     "p": 0.106,
+     "p_label": "0.106",
+     "sig": false,
+     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Positive Expectancies"
+    },
+    {
+     "iv": "sm_time",
+     "dv": "neg_exp",
+     "B": 0.005,
+     "B_lo": -0.01,
+     "B_hi": 0.02,
+     "p": 0.504,
+     "p_label": "0.504",
+     "sig": false,
+     "location": "Table 2, Model 3, row 'Social media time (hours per day)', Negative Expectancies"
+    },
+    {
+     "iv": "smaq",
+     "dv": "pos_exp",
+     "B": 0.045,
+     "B_lo": 0.02,
+     "B_hi": 0.069,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Positive Expectancies"
+    },
+    {
+     "iv": "smaq",
+     "dv": "neg_exp",
+     "B": 0.072,
+     "B_lo": 0.043,
+     "B_hi": 0.101,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, Model 3, row 'Social Media Addiction Questionnaire Score', Negative Expectancies"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Model 1: social media time only",
+   "location": "Table 2, Model 1 (p. 7)",
+   "why": "Stepwise scaffolding; the authors anchor their conclusions on Model 3, which adds SMAQ. Values for reference: positive B = 0.001 (-0.010; 0.011), p = 0.909; negative B = 0.018 (0.005; 0.032), p = 0.007. The authors note the Model 1 negative-expectancy association does not hold in Model 3."
+  },
+  {
+   "model": "Model 2: SMAQ score only",
+   "location": "Table 2, Model 2 (p. 7)",
+   "why": "Stepwise scaffolding superseded by Model 3. Values for reference: positive B = 0.038 (0.015; 0.061), p < 0.001; negative B = 0.076 (0.048; 0.104), p < 0.001."
+  },
+  {
+   "model": "Unadjusted linear regressions",
+   "location": "Mentioned in abstract Methods only",
+   "why": "Abstract says unadjusted and adjusted regressions were run, but no unadjusted estimates are printed anywhere in the paper."
+  },
+  {
+   "model": "Marginal predicted scores of alcohol expectancies across SMAQ values",
+   "location": "Fig. 1A and 1B (p. 5)",
+   "why": "Post-estimation predictions from Model 3; they re-express the Model 3 SMAQ slope and add no new estimate. Values are only readable off the figure."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized linear regression coefficient)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1); CI endpoints converted the same way.",
+  "contrast_type": "per 1-SD change in the IV (B itself is per 1 hour/day of social media time, or per 1 point of SMAQ mean score)",
+  "transformable": true,
+  "notes": "All SDs from Table 1 (p. 6), weighted descriptives. SD_IV: social media time 1.62 h/day (computed on N = 9,008); SMAQ 0.90 (computed on the n = 5,642 subset with a social media account). SD_DV: positive expectancies 0.61, negative expectancies 0.78, both computed on N = 9,008, whereas Model 3 is presumably fit on the n = 5,642 subset; SDs in that subset are not reported, so the sample-level SDs are an approximation. Social media time is heavily right-skewed (M 0.71, SD 1.62)."
+ },
+ "extraction_flags": "The paper never states the analytic N for Model 3. The SMAQ was only given to youth with a social media account (n=5,642), so Model 3 is presumably fit on that subset, but the outcome SDs (0.61 and 0.78) and the social media time SD (1.62) in Table 1 come from the full N=9,008. That makes the SD-based d conversion approximate. The SMAQ item response range is not stated: Fig. 1 plots it on a 0-6 axis, and the mean is 1.84 with SD 0.90. The abstract's covariate list leaves out age, but the Methods and the Table 2 footnote include it. Study site is treated as a covariate, not a random effect. Alpha is 0.01. Model 1, which uses social media time only, showed a significant negative-expectancy association (B=0.018, p=0.007). I excluded it as scaffolding because the authors anchor their conclusions on Model 3, so a coder should confirm that choice. Table 1's caption says 'Year 2 assessment 2016-2018', which conflicts with the 2018-2020 dates given in the text. Supplementary Tables S1 and S2 are not bundled in the PDF."
+}

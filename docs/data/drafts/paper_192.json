@@ -1,0 +1,387 @@
+{
+ "paper_id": "192",
+ "title": "Long-term impact of digital media on brain development in children",
+ "doi": "10.1038/s41598-024-63566-y",
+ "year": "2024",
+ "authors": "Nivins S, Sauce B, Liebherr M, Judd N, Klingberg T",
+ "journal": "Scientific Reports",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Quadratic linear mixed-effects model of brain structure trajectories (global CSA, striatum, cerebellum) on average social media usage x time, adjusted for age, sex, SES, cogPGS and 20 genetic PCs",
+   "location_in_paper": "Table 2, social media block (p. 4); model in Methods Eq. 1 (pp. 10-11); interpreted in Results pp. 3-5 and Discussion pp. 6-7. Text-only SNS-only sensitivity estimate on p. 6.",
+   "design": "Longitudinal, three MRI waves: baseline (T0, age ~9.9), 2-year follow-up (T2) and 4-year follow-up (T4). The outcome enters as repeated measures (not averaged) with random intercepts and random slopes on time per child. The IV is time-invariant: average self-reported social media hours/day across all annual visits (T0-T4). The focal estimates are the interactions of average social media usage with the linear and quadratic (orthogonal polynomial) time terms, i.e. whether brain developmental trajectories differ by social media use; the social media main effect is also reported.",
+   "sample": "ABCD Study release 5.0, data collected September 2016 to January 2022. Of 11,875 children, 6469 met inclusion criteria at T0 (age mean 9.9, SD 0.6; boys n = 3369, 52.1%; girls 3100), 4610 at T2 (age 12.0, SD 0.7; boys 2487, 53.9%) and 1697 at T4 (age 13.4, SD 0.6; boys 949, 55.9%); 1462 had usable MRI at all three time points. Exclusions: born <28 weeks or birth weight <1200 g, not proficient in English, neurological problems, seizure history, MRI contraindication, missing SES, genetic, DM usage or neuroimaging data, failed MRI QC or incidental findings; one child randomly selected per family. Race/ethnicity breakdown not reported.",
+   "iv": "Average estimated hours/day using social media, from the child-reported Youth Screen Time Survey, defined as the sum of texting on a cell phone, tablet or computer (item 4), visiting social networking sites such as Facebook, Twitter, Instagram (item 5) and video chat such as Skype, FaceTime (item 6). Weekday and weekend hours combined as [(weekday*5)+(weekend*2)]/7. T0/T1 categorical responses (0, 0.25, 0.5, 1, 2, 3, 4); T2-T4 continuous responses recoded to the same categories (top code 4). The IV is the average across all annual visits, entered as a continuous variable. Table 1: average over four years 1.35 h/day (SD 0.95) overall, 1.12 (0.87) boys, 1.60 (0.99) girls; T0 0.49 (1.06), T1 0.84 (1.49), T2 1.22 (1.33), T3 1.87 (1.45), T4 2.50 (1.45).",
+   "dv": "Three structural MRI outcomes from FreeSurfer 5.3.0 (3T T1-weighted MP-RAGE): global cortical surface area (Destrieux atlas, mm^2), striatum volume (caudate + putamen + accumbens, ASEG, mm^3) and cerebellum volume (grey + white matter, ASEG, mm^3), left and right combined; striatum and cerebellum adjusted for total brain volume. Scaling of outcomes in the model (raw vs standardized) is not stated; outcome SDs not reported.",
+   "covariates": [
+    {
+     "name": "Age at baseline",
+     "detail": "Continuous, years, mean-centered"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "Dummy, 1 = male, 0 = female"
+    },
+    {
+     "name": "SES",
+     "detail": "First principal component of probabilistic PCA of household income (5 categories), highest parental education (7 categories) and neighbourhood quality (Area Deprivation Index); 65% of variance; normalized mean 0, SD 1"
+    },
+    {
+     "name": "cogPGS",
+     "detail": "Polygenic score for cognitive performance (PRSice-2, MTAG GWAS of educational attainment, highest math class, self-rated math ability, cognitive performance; 5255 SNPs, p = 1.00 threshold), normalized mean 0, SD 1"
+    },
+    {
+     "name": "Ancestry",
+     "detail": "First 20 genetic principal components"
+    },
+    {
+     "name": "Poly(Time, 2)",
+     "detail": "Linear and quadratic terms of follow-up time (continuous) and their main effects"
+    },
+    {
+     "name": "Three-way interactions",
+     "detail": "Social media usage x Poly(Time,2) x SES and social media usage x Poly(Time,2) x cogPGS, included in the same model"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random intercept (1|site)"
+    },
+    {
+     "name": "Total brain volume",
+     "detail": "Striatum and cerebellum volumes adjusted for total brain volume (Outcomes, p. 10); global CSA not adjusted"
+    }
+   ],
+   "equation": "Y_ij = b0 + b1*cogPGS_i + b2*Poly(Time,2)_ij + b3*Sex_i + b4*AgeAtBaseline_i + b5*SMUsage_i + b6*SES_i + b7*Ancestry(20 PCs)_i + b8*SMUsage_i*Poly(Time,2)_ij + b9*SMUsage_i*Poly(Time,2)_ij*SES_i + b10*SMUsage_i*Poly(Time,2)_ij*cogPGS_i + (1|site) + u0_i + u1_i*Poly(Time,2)_ij + e_ij. Focal terms: b5 (main effect), b8 split into SMUsage x Time and SMUsage x Time^2.",
+   "estimation": "lme4::lmer in R, restricted maximum likelihood. Random intercept for site; per-child random intercept and random slope on time. No weights. Quadratic over linear age model chosen by AIC/BIC (eTable 1) and likelihood ratio test. Bonferroni correction across 3 DM types x 3 brain regions x (overall + sex) = 18 tests, significance p < 0.05/18 = 0.0027 (Table 2 caption; text says p < 0.003); p values in Table 2 are uncorrected. Separate models fit for each DM type (social media, video games, TV/videos); social media not mutually adjusted for the other DM types. Sex x DM x time three-way interactions tested (Eq. 2; eTable 4), all non-significant, so no sex-stratified estimates. Three-way DM x time x SES interactions non-significant (no numbers in main text). Sensitivity analyses: excluding preterm (<37 weeks), birth weight <2500 g or ADHD (n = 3979; eTable 7) and restricting to children with MRI at all three visits (n = 1462; eTable 8) reported narratively as remaining significant; and excluding texting/video chat from the social media composite (beta = -0.02, p = 0.002, text p. 6). Code: github.com/samniv/ScreenTime-and-Brain.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_main",
+     "label": "Social media usage (main effect)",
+     "meta": "avg h/day across T0-T4",
+     "sd_iv": 0.95
+    },
+    {
+     "id": "sm_x_time",
+     "label": "Social media usage x Time (linear)",
+     "meta": "interaction with linear time",
+     "sd_iv": 0.95
+    },
+    {
+     "id": "sm_x_time2",
+     "label": "Social media usage x Time^2 (quadratic)",
+     "meta": "interaction with quadratic time",
+     "sd_iv": 0.95
+    },
+    {
+     "id": "sns_only",
+     "label": "Social networking sites only (texting/video chat removed)",
+     "meta": "text-only sensitivity, term unspecified",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "csa",
+     "label": "Global cortical surface area",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "striatum",
+     "label": "Striatum volume",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cerebellum",
+     "label": "Cerebellum volume",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_main",
+     "dv": "csa",
+     "beta": 0.001,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.67,
+     "p_label": "0.67",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage' column",
+     "note": "SE as printed in Table 2: (0.001). No CI reported."
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "csa",
+     "beta": 0.001,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.36,
+     "p_label": "0.36",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time' column",
+     "note": "SE as printed in Table 2: (0.006). No CI reported."
+    },
+    {
+     "iv": "sm_x_time2",
+     "dv": "csa",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.004,
+     "p_label": "0.004",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Global cortical surface area row, 'Social media usage x Time^2' column",
+     "note": "SE as printed in Table 2: (0.004). No CI reported. Nominally p<.05 but not below the paper's Bonferroni threshold (p<0.0027 / p<0.003); not bolded and not interpreted by the authors."
+    },
+    {
+     "iv": "sm_main",
+     "dv": "striatum",
+     "beta": -0.007,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.49,
+     "p_label": "0.49",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage' column",
+     "note": "SE as printed in Table 2: (0.01). No CI reported."
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "striatum",
+     "beta": -0.007,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.91,
+     "p_label": "0.91",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time' column",
+     "note": "SE as printed in Table 2: (0.006). No CI reported."
+    },
+    {
+     "iv": "sm_x_time2",
+     "dv": "striatum",
+     "beta": 0.001,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.96,
+     "p_label": "0.96",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Striatum volume row, 'Social media usage x Time^2' column",
+     "note": "SE as printed in Table 2: (0.003). No CI reported."
+    },
+    {
+     "iv": "sm_main",
+     "dv": "cerebellum",
+     "beta": 0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.1,
+     "p_label": "0.10",
+     "sig": false,
+     "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage' column",
+     "note": "SE as printed in Table 2: (0.01). No CI reported."
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "cerebellum",
+     "beta": 0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time' column (bolded)",
+     "note": "SE as printed in Table 2: (0.005). No CI reported. Interpreted in Results p. 3-5 ('positive association of social media usage and time with cerebellum volumes for a linear term (beta = 0.02)') and Discussion p. 6."
+    },
+    {
+     "iv": "sm_x_time2",
+     "dv": "cerebellum",
+     "beta": -0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2, social media block (p. 4), Cerebellum volume row, 'Social media usage x Time^2' column (bolded)",
+     "note": "SE as printed in Table 2: (0.003). No CI reported. Interpreted in Results p. 5 and Discussion p. 6 as a subtle decrease in cerebellum volume / earlier decline among heavier social media users (beta = -0.02)."
+    },
+    {
+     "iv": "sns_only",
+     "dv": "cerebellum",
+     "beta": -0.02,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.002,
+     "p_label": "0.002",
+     "sig": true,
+     "location": "Results text, p. 6 ('after excluding time spent on video chatting or texting from social media usage'); Methods p. 11",
+     "note": "Reported in text only (beta = -0.02; p = 0.002); no SE or CI printed. The text does not say which model term this is; the magnitude and the phrase 'same effect size' suggest it is the social media x Time^2 term for cerebellum, but this is an inference. IV here is social networking sites only (texting and video chat removed)."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Linear regression of later change in cerebellum volume on earlier social media usage, adjusted for age, sex, SES, cogPGS and 20 genetic PCs",
+   "location_in_paper": "Results 'Additional analysis' pp. 5-6 (eTables 5 and 6, supplement not bundled in PDF); Methods p. 11; the T0 -> T4-T0 estimate is cited in the Abstract and Discussion p. 6.",
+   "design": "Longitudinal, temporal-precedence analyses with a single change-score outcome per child. (a) Average social media usage over the first two annual visits, (T0+T1)/2, predicting change in cerebellum volume between T2 and T4. (b) Social media usage at T0 predicting total change in cerebellum volume from T0 to T4. No repeated measures; no time interactions.",
+   "sample": "ABCD release 5.0 children with cerebellum volume at the relevant pair of MRI waves (T2 and T4, or T0 and T4) from the same analytic cohort as M1; exact N for these models not reported in the main text (at most 1697 with T4 imaging).",
+   "iv": "(a) Average social media hours/day across T0 and T1; (b) social media hours/day at T0. Same Youth Screen Time Survey composite as M1 (texting + social networking sites + video chat). T0 mean 0.49 h/day (SD 1.06); T1 mean 0.84 (SD 1.49) (Table 1).",
+   "dv": "Change in cerebellum volume, (a) T4 minus T2, (b) T4 minus T0 (FreeSurfer ASEG, grey + white matter; adjusted for total brain volume per Outcomes section). Scaling and SD of the change score not reported.",
+   "covariates": [
+    {
+     "name": "Age at baseline",
+     "detail": "Continuous"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "Binary"
+    },
+    {
+     "name": "SES",
+     "detail": "PCA composite, mean 0, SD 1"
+    },
+    {
+     "name": "cogPGS",
+     "detail": "Polygenic score for cognitive performance, mean 0, SD 1"
+    },
+    {
+     "name": "Ancestry",
+     "detail": "20 genetic principal components"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random effect"
+    }
+   ],
+   "equation": "DeltaCerebellum_i = b0 + b1*SMUsage_i + b2*AgeAtBaseline_i + b3*Sex_i + b4*SES_i + b5*cogPGS_i + b6*Ancestry(20 PCs)_i + u_site + e_i. Focal term b1. SMUsage = (T0+T1)/2 average for DeltaCerebellum(T4-T2), or T0 value for DeltaCerebellum(T4-T0).",
+   "estimation": "Described as a linear model with study site as a random effect (R, lme4 presumably, not stated for this step). Same Bonferroni framework as M1 (p < 0.003). SE and CI are in eTables 5 and 6, which are not included in the PDF; only beta and p are printed in the text.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_avg_t0t1",
+     "label": "Social media usage, average of T0 and T1",
+     "meta": "h/day",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_t0",
+     "label": "Social media usage at T0",
+     "meta": "h/day",
+     "sd_iv": 1.06
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "cereb_change_t2t4",
+     "label": "Change in cerebellum volume T2 to T4",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cereb_change_t0t4",
+     "label": "Change in cerebellum volume T0 to T4",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_avg_t0t1",
+     "dv": "cereb_change_t2t4",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.1,
+     "p_label": "0.10",
+     "sig": false,
+     "location": "Results text, 'Additional analysis', p. 5 (eTable 5, supplement not in PDF)",
+     "note": "Text: negative trend for high social media users with changes in cerebellum volumes (beta = -0.01; p = 0.10). SE/CI only in eTable 5, which is not bundled with the PDF."
+    },
+    {
+     "iv": "sm_t0",
+     "dv": "cereb_change_t0t4",
+     "beta": -0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.16,
+     "p_label": "0.16",
+     "sig": false,
+     "location": "Results text p. 6 (eTable 6, supplement not in PDF); quoted in Abstract",
+     "note": "Authors describe this estimate as 'the overall effect size of social media usage over a 4-year study period' and cite it in the Abstract as the accumulated high-vs-low effect (beta = -0.03), judged below their 0.05 meaningfulness threshold. SE/CI only in eTable 6, not in PDF."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Playing video games x time models",
+   "location": "Table 2, video games block (p. 4); Results p. 5; eTable 5",
+   "why": "Video games item covers computer, console, phone or other device without a phone-only breakout; generic gaming fails FT-IC2."
+  },
+  {
+   "model": "Watching television/videos x time models",
+   "location": "Table 2, TV block (p. 4); Results p. 5",
+   "why": "Non-phone/non-SM modality (TV, movies, YouTube videos)."
+  },
+  {
+   "model": "Total screen time (child- and parent-reported)",
+   "location": "Table 1 descriptives only (p. 3)",
+   "why": "Composite bundles TV/videos and video games with social media; only descriptive, no model estimate."
+  },
+  {
+   "model": "Normal developmental trajectory and sex-stratified trajectories (no DM term)",
+   "location": "Figure 1 (p. 4); eTables 1-3",
+   "why": "No phone/SM variable in the model."
+  },
+  {
+   "model": "SES and cogPGS main effects within the Table 2 models",
+   "location": "Table 2 SES and cogPGS columns",
+   "why": "Covariate estimates, not phone/SM estimates."
+  },
+  {
+   "model": "Social media x time x sex three-way interactions",
+   "location": "Methods Eq. 2 (p. 11); Results p. 5; eTable 4 (supplement not in PDF)",
+   "why": "Reported narratively as non-significant; no numeric estimates printed in the PDF and no sex-stratified estimates produced."
+  },
+  {
+   "model": "Social media x time x SES and x cogPGS three-way interactions",
+   "location": "Results p. 3 (included in Eq. 1)",
+   "why": "Reported narratively as non-significant; coefficients not printed."
+  },
+  {
+   "model": "Sensitivity: excluding preterm, low birth weight and ADHD (n = 3979)",
+   "location": "Results p. 6; eTable 7 (supplement not in PDF)",
+   "why": "Narrative only ('remained significant'); no numbers in the PDF."
+  },
+  {
+   "model": "Sensitivity: children with MRI at all three visits (n = 1462)",
+   "location": "Results p. 6; eTable 8 (supplement not in PDF)",
+   "why": "Narrative only; no numbers in the PDF."
+  },
+  {
+   "model": "Figure 3 quartile-plotted trajectories",
+   "location": "Figure 3 (p. 6)",
+   "why": "Visual presentation of the M1 interaction at 0.59/1.19/1.92 h/day; no additional estimates."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std (assumed; paper labels coefficients only as 'beta')",
+  "conversion_formula": "Treat beta as approximate r: d = 2*beta / sqrt(1 - beta^2). If beta proves to be unstandardized, beta_std = B * SD_IV / SD_DV first (SD_DV not reported).",
+  "contrast_type": "M1 main effect and M2: per 1 unit (h/day) of social media use, or per 1 SD if the IV was standardized (not stated). M1 interaction terms: difference in the linear or quadratic orthogonal-polynomial time slope per unit of average social media use.",
+  "transformable": "partial",
+  "notes": "The paper never says whether variables were standardized. Raw brain volumes (cerebellum ~150 x 10^3 mm^3, Fig. 1) are incompatible with time coefficients of 0.04-0.12 and SEs of 0.001-0.02, which suggests the outcomes were standardized; SES and cogPGS are explicitly z-scored, but social media hours apparently entered in hours/day. SD_IV for the average social media variable is 0.95 h/day (Table 1, p. 3, 'Average estimated time spent over four years on Using social media'); SD at T0 is 1.06 (Table 1). SD_DV is not reported anywhere in the PDF. The M1 main-effect beta and the M2 betas can be converted to an approximate d under the beta_std assumption. The M1 interaction coefficients with Poly(Time,2) (orthogonal polynomial terms) are slope-difference parameters and do not map onto a between-person Cohen's d; they should be displayed in native metric only. No CIs are reported (SEs only for M1; neither SE nor CI for M2 in the PDF), so d CIs cannot be produced."
+ },
+ "extraction_flags": "1) Standardization: the paper labels coefficients only as \"beta\" and never says whether variables were standardized. Raw volumes of about 150x10^3 mm^3 don't fit coefficients of 0.01-0.12, so the outcomes look standardized, but this is an assumption. I coded native_metric as beta_std. 2) The focal M1 estimates are social media x Poly(Time,2) interaction slopes (orthogonal polynomial). They don't convert cleanly to a between-person d; only the main effect and the M2 betas are roughly convertible. SD_DV is not reported anywhere. SD_IV = 0.95 for average social media use (Table 1); T0 SD = 1.06. 3) Composite: the social media IV is texting (cell phone/tablet/computer) + social networking sites + video chat. That qualifies under FT-IC2 Step 2 and clarification 5. 4) The supplement (eTables 1-8) is not bundled in the PDF. M2 estimates (beta -0.01, p 0.10, eTable 5; beta -0.03, p 0.16, eTable 6) are from the text only, with no SE or CI, and their analytic N is unknown. The abstract anchors on the beta -0.03. Please check the online supplement. 5) The SNS-only sensitivity estimate (beta -0.02, p 0.002, text p. 6) does not name which model term it is. I inferred it is the Time^2 term for cerebellum and flagged this in its note. 6) The significance threshold is Bonferroni p<0.0027 (Table 2 caption), while the text says p<0.003. CSA x Time^2 has p = 0.004, so I coded it sig=false. 7) Coders may want to decide whether M2 (the abstract-cited accumulated-effect estimate) should be the primary anchor rather than the M1 interactions."
+}

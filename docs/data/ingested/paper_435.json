@@ -1,0 +1,496 @@
+{
+ "paper_id": "435",
+ "title": "Digital Media, Genetics, and Risk for ADHD Symptoms in Children: A Longitudinal Study",
+ "doi": "10.1542/pedsos.2025-000922",
+ "year": "2025",
+ "authors": "Nivins S, Mooney MA, Nigg J, Klingberg T",
+ "journal": "Pediatrics Open Science",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": "partial",
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed model of repeated CBCL ADHD symptom scores (T0-T4) on 4-year average social media use and social media use x time, adjusted for age, sex, SES, PGS-ADHD and 10 genetic PCs",
+   "location_in_paper": "Table 2, top panel (Social Media Use rows), p. 6; Results text p. 5 ('DM Use and ADHD-Related Symptoms'); interpreted in Discussion p. 7.",
+   "design": "Longitudinal cohort, ABCD baseline (T0, ages 9-10) and four annual follow-ups (T1-T4). The outcome enters as repeated measures at T0-T4 (not averaged), with random intercepts and slopes. The exposure is a single time-invariant value per child: average daily social media hours across all available visits (T0-T4), chosen by the authors to absorb the COVID-19-era increase in use. The focal longitudinal term is the two-way social media use x time interaction (described by the authors as the between-person longitudinal effect, i.e. difference in yearly symptom slope); the social media main effect is the association with symptom level at time = 0. A three-way social media use x time x PGS-ADHD term tests genetic moderation of the slope. Because the exposure is averaged over the same waves as the outcome, IV and DV are not strictly temporally ordered.",
+   "sample": "ABCD Data Release 5.0. Of 11,875 enrolled children, 8,324 included at T0 after excluding children born extremely preterm (<28 weeks), birthweight <1200 g, not English-proficient, neurological problems, history of seizures, or MRI contraindication, and keeping one randomly selected child per family. Follow-up >85% through T3 and 43% at T4. Mean age at T0 9.9 (SD 0.6); 4,408 (53.0%) male. Race/ethnicity: White 4,356 (52.3%), Black 1,358 (16.3%), Hispanic 1,763 (21.2%), Asian 496 (6.0%), Native American 183 (2.2%), Pacific Islander 2 (0.02%), Other 106 (1.3%). N = 8,324 printed in Table 2 header for all cells.",
+   "iv": "Social media use, a phone/SM-only composite from the youth-reported Youth Screen Time Survey: item 4 (texting on a cell phone, tablet, or computer, e.g. Google Chat, WhatsApp) + item 5 (visiting social networking sites, e.g. Facebook, Instagram) + item 6 (video chat, e.g. Skype, FaceTime). Daily hours = [(weekday hours x 5) + (weekend hours x 2)]/7, then averaged across T0-T4. Average over 4 years: mean 1.4 (SD 1.0) hours/day (Table 1). By wave: T0 0.5 (1.1), T1 0.9 (1.6), T2 1.3 (1.4), T3 1.9 (1.5), T4 2.5 (1.4) hours/day. Coefficients are reported as standardized betas.",
+   "dv": "Parent-reported CBCL ADHD symptoms at every visit, as three continuous scores run in separate models: (1) combined ADHD = CBCL DSM-5-oriented ADHD scale raw score (cbcl_scr_dsm5_adhd; alpha > 0.72 at all time points); (2) inattention = 4 CBCL items retained by factor analysis (loading > 0.3) of the 9 DSM-5 ADHD items, correlated r = 0.93 with the CBCL inattention summary score at T0; (3) hyperactivity-impulsivity = 5 items from the same factor analysis. T0 means (SD): combined 2.7 (3.0), inattention 1.7 (1.9), hyperactivity-impulsivity 1.3 (1.8) (Table 1). Raw item sums, not T-scores.",
+   "covariates": [
+    {
+     "name": "Time",
+     "detail": "Visit (T0-T4), entered as fixed effect and in interaction with social media use"
+    },
+    {
+     "name": "Age at T0",
+     "detail": "Years"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "Caregiver-reported"
+    },
+    {
+     "name": "Socioeconomic status",
+     "detail": "First principal component of parental education, household income, and neighborhood quality; Table 1 mean 0.03 (SD 1.4)"
+    },
+    {
+     "name": "PGS-ADHD",
+     "detail": "Polygenic score from the 2016-2017 PGC + iPSYCH ADHD GWAS (LDpred), standardized to mean 0, SD 1; also enters the three-way interaction"
+    },
+    {
+     "name": "Genetic principal components",
+     "detail": "First 10 genetic PCs, for ancestry/genetic confounding"
+    },
+    {
+     "name": "Study site",
+     "detail": "Random effect"
+    }
+   ],
+   "equation": "ADHD_DV[i,t] = b0 + b1*SM_avg[i] + b2*time[t] + b3*SM_avg[i]*time[t] + b4*age_T0[i] + b5*sex[i] + b6*SES[i] + b7*PGS_ADHD[i] + b8*SM_avg[i]*time[t]*PGS_ADHD[i] (with lower-order terms) + b9..b18*genPC1-10[i] + u_site + u0_i + u1_i*time[t] + e[i,t]. Focal: b3 (SM x time); b1 (SM level) and b8 (genetic moderation) also printed.",
+   "estimation": "R 3.5 (RStudio), lmer in lme4, restricted maximum likelihood. Random intercepts and slopes; study site as random effect. Separate model per DM category (social media, video games, TV/videos) and per symptom score (combined, inattention, hyperactivity-impulsivity). Coefficients reported as standardized beta (SE); no CIs or exact p-values printed in Table 2. Alpha 0.05 with Bonferroni correction for 9 tests (0.05/9 = 0.005); Table 2 footnotes mark a = <0.001 and b = <0.005 (Bonferroni corrected). Authors define yearly standardized beta > 0.05 or cumulative beta > 0.10 as meaningful. Moderation of significant DM x time effects by sex, ADHD diagnosis at T0, and ADHD medication at T0 tested in separate models (Supplemental Tables 1-3, not bundled in the PDF; reported non-significant). Sensitivity analyses (at-term births only; typically developing children only; complete behavioral data only; follow-up truncated at T3) reported narratively as consistent (Supplemental Tables 4-8, not bundled).",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_avg",
+     "label": "Social media use (average, main effect)",
+     "meta": "Average of T0-T4 texting + SNS + video chat, M = 1.4 h/day, SD = 1.0",
+     "sd_iv": 1.0
+    },
+    {
+     "id": "sm_x_time",
+     "label": "Social media use x time",
+     "meta": "Difference in yearly symptom slope; authors' focal longitudinal term",
+     "sd_iv": 1.0
+    },
+    {
+     "id": "sm_x_time_x_pgs",
+     "label": "Social media use x time x PGS-ADHD",
+     "meta": "Genetic moderation of the slope; not a main association",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "combined",
+     "label": "Combined ADHD (CBCL DSM-5 ADHD)",
+     "sd_dv": 3.0,
+     "p0": null
+    },
+    {
+     "id": "inattention",
+     "label": "Inattention (4 CBCL items)",
+     "sd_dv": 1.9,
+     "p0": null
+    },
+    {
+     "id": "hyperactivity",
+     "label": "Hyperactivity-impulsivity (5 CBCL items)",
+     "sd_dv": 1.8,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_avg",
+     "dv": "combined",
+     "beta": 0.11,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use column, Combined ADHD row",
+     "note": "SE = 0.04. No CI or exact p printed.",
+     "derived_d": 0.2213,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_avg",
+     "dv": "inattention",
+     "beta": 0.05,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use column, Inattention row",
+     "note": "SE = 0.02. No CI or exact p printed.",
+     "derived_d": 0.1001,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_avg",
+     "dv": "hyperactivity",
+     "beta": 0.21,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<0.001 (Bonferroni corrected)",
+     "sig": true,
+     "location": "Table 2, Social Media Use column, Hyperactivity-impulsivity row",
+     "note": "SE = 0.04. Footnote a.",
+     "derived_d": 0.4296,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "combined",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use x Time column, Combined ADHD row",
+     "note": "SE = 0.01. No CI or exact p printed.",
+     "derived_d": 0.06,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "inattention",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Table 2, Social Media Use x Time column, Inattention row; Results p. 5",
+     "note": "SE = 0.01. Footnote a (<0.001 Bonferroni corrected); text gives P < .001. Headline finding; per-year slope difference.",
+     "derived_d": 0.06,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "hyperactivity",
+     "beta": -0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use x Time column, Hyperactivity-impulsivity row",
+     "note": "SE = 0.01. No CI or exact p printed.",
+     "derived_d": -0.06,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time_x_pgs",
+     "dv": "combined",
+     "beta": -0.04,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.002,
+     "p_label": "=.002",
+     "sig": true,
+     "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Combined ADHD row; Results p. 5",
+     "note": "SE = 0.01. Footnote b (<0.005 Bonferroni corrected). Moderation term; not a phone/SM main association and not meaningfully convertible to d.",
+     "derived_d": -0.0801,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time_x_pgs",
+     "dv": "inattention",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Inattention row",
+     "note": "SE = 0.01. Moderation term.",
+     "derived_d": -0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "sm_x_time_x_pgs",
+     "dv": "hyperactivity",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not marked significant (Bonferroni)",
+     "sig": false,
+     "location": "Table 2, Social Media Use x Time x PGS-ADHD column, Hyperactivity-impulsivity row",
+     "note": "SE = 0.01. Moderation term.",
+     "derived_d": -0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Linear regression of 4-year change in inattention symptoms (T4-T0) on average social media use, adjusted for predefined covariates (cumulative effect)",
+   "location_in_paper": "Results p. 5 ('Cumulative Effect Size of DM Use on ADHD-Related Symptoms (T4-T0)'); Figure 2B (p. 6); interpreted in Discussion p. 7 ('cumulative effect over the study period was 0.15'); details in Methods in Supplemental Material (not bundled).",
+   "design": "Longitudinal change-score analysis. DV is the single difference score in inattention from baseline (T0) to 4-year follow-up (T4); IV is average social media use across T0-T4. One observation per child. Authors present this as the cumulative 4-year effect corresponding to the yearly SM x time slope in M1, and anchor their population-level interpretation (0.15 SD) to it.",
+   "sample": "Same ABCD Release 5.0 cohort as M1 (N = 8,324 at T0). The analytic N for the T4-T0 change score is not printed; T4 follow-up was 43%, so the effective N is likely considerably smaller than 8,324.",
+   "iv": "Average daily social media use (texting + social networking sites + video chat) across T0-T4, hours/day; mean 1.4 (SD 1.0) (Table 1). For Figure 2B the authors split it into quartiles (Q1 <0.54, Q2 >=0.54 to <1.36, Q3 >=1.36 to <1.86, Q4 >=1.86 hours/day in the panel legend; the Figure 2 caption instead gives cutoffs 0.61, 1.22, 1.97), but the reported beta uses the continuous variable.",
+   "dv": "Change in the 4-item CBCL-derived inattention score from T0 to T4 (T4 minus T0). T0 inattention mean 1.7 (SD 1.9); SD of the change score not reported.",
+   "covariates": [
+    {
+     "name": "Predefined covariates",
+     "detail": "Stated as 'adjusting for predefined covariates (Methods in Supplemental Material)'; presumably the M1 set (age at T0, sex, SES, PGS-ADHD, 10 genetic PCs, site) but the exact list is in the unbundled supplement"
+    }
+   ],
+   "equation": "Inattention_T4[i] - Inattention_T0[i] = b0 + b1*SM_avg[i] + covariates[i] + e[i]. Focal: b1.",
+   "estimation": "R 3.5 (RStudio). Regression class and estimator not specified in the main text beyond 'regressing total change'; whether site enters as random effect is not stated. Standardized beta (SE) and p reported. Meaningfulness threshold: cumulative beta > 0.10. Cumulative effects for video games and TV/videos on hyperactivity-impulsivity change are also reported in text (excluded below). Cumulative effects of social media on combined ADHD or hyperactivity-impulsivity change are not reported.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_avg",
+     "label": "Social media use (average T0-T4)",
+     "meta": "M = 1.4 h/day, SD = 1.0",
+     "sd_iv": 1.0
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "inatt_change",
+     "label": "Change in inattention (T4-T0)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_avg",
+     "dv": "inatt_change",
+     "beta": 0.15,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 5 (also Abstract); Figure 2B",
+     "note": "SE = 0.03. No CI printed.",
+     "derived_d": 0.3034,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M3",
+   "name": "Cross-lagged panel model of social media use and inattention symptoms across T0-T4 (standardized paths)",
+   "location_in_paper": "Figure 3 (p. 7); Results text p. 6 ('Additional Analyses'); Discussion p. 7; Methods in Supplemental Material (not bundled).",
+   "design": "Five-wave cross-lagged panel model (T0-T4) with autoregressive paths for inattention (delta1-4 = 0.75, 0.74, 0.74, 0.74) and social media use (alpha1-4 = 0.42, 0.46, 0.55, 0.56), within-wave covariances at T0 and T4 drawn, and cross-lagged paths in both directions. The cross-lagged paths are displayed with identical values at every lag (gamma = 0.03 for S(t) -> I(t+1); beta = -0.002 for I(t) -> S(t+1)), suggesting equality constraints across lags. Social media is the IV in the S -> I path and the DV in the I -> S path.",
+   "sample": "ABCD Release 5.0 cohort as in M1 (N = 8,324 at T0); handling of missing waves (e.g., FIML) and analytic N not stated in the main text.",
+   "iv": "Wave-specific social media use (texting + social networking sites + video chat), hours/day, at T0-T3 for the S -> I paths. Wave means (SD): T0 0.5 (1.1), T1 0.9 (1.6), T2 1.3 (1.4), T3 1.9 (1.5), T4 2.5 (1.4). For the reverse path, wave-specific inattention is the IV.",
+   "dv": "Wave-specific inattention (4 CBCL items) at T1-T4 for S -> I; wave-specific social media use at T1-T4 for I -> S.",
+   "covariates": [
+    {
+     "name": "Not reported in main text",
+     "detail": "Covariates for the CLPM are described only in the unbundled supplemental methods"
+    }
+   ],
+   "equation": "I[t+1] = delta_t*I[t] + gamma*S[t] + e_I[t+1]; S[t+1] = alpha_t*S[t] + beta*I[t] + e_S[t+1], t = 0..3; cov(I0,S0) and cov(e_I4,e_S4) estimated. Focal: gamma (S -> I) and beta (I -> S).",
+   "estimation": "Cross-lagged panel model; software beyond R 3.5 and estimator not specified in main text. All coefficients standardized beta weights. Figure 3 marks a = P < .01, b = P < .001; text gives exact p for the cross-lagged paths.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "sm_wave",
+     "label": "Social media use at wave t",
+     "meta": "Hours/day, wave-specific",
+     "sd_iv": null
+    },
+    {
+     "id": "inatt_wave",
+     "label": "Inattention at wave t",
+     "meta": "Reverse path; SM is DV",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "inatt_next",
+     "label": "Inattention at wave t+1",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sm_next",
+     "label": "Social media use at wave t+1",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_wave",
+     "dv": "inatt_next",
+     "beta": 0.03,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.004,
+     "p_label": "=.004",
+     "sig": true,
+     "location": "Figure 3 (gamma paths, each lag); Results text p. 6",
+     "note": "SE = 0.01 (text). Figure marks a (P < .01). Same value displayed at all four lags.",
+     "derived_d": 0.06,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "inatt_wave",
+     "dv": "sm_next",
+     "beta": -0.002,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": 0.64,
+     "p_label": "=.64",
+     "sig": false,
+     "location": "Figure 3 (beta paths, each lag); Results text p. 6",
+     "note": "SE = 0.004 (text). Social media is the DV here.",
+     "derived_d": -0.004,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  },
+  {
+   "model_id": "M4",
+   "name": "Reverse-direction model of social media use over time on average inattention symptoms (inattention x time), with cumulative T4-T0 effect",
+   "location_in_paper": "Results text p. 6 ('Potential recursive effects of inattention on later social media use'); Figure 2C (p. 6); Supplemental Tables 4-8 (not bundled).",
+   "design": "Longitudinal; social media use is the DV. Average inattention symptoms across visits predict social media use over time (yearly estimate) and change in social media use T4-T0 (total effect). The exact specification is in the unbundled supplement; by analogy with M1 it appears to be a mixed model with an inattention x time term plus a change-score regression.",
+   "sample": "ABCD Release 5.0 cohort (N = 8,324 at T0); analytic N not printed in main text.",
+   "iv": "Average inattention symptoms (4 CBCL items). For Figure 2C split into quartiles (Q1 <0.2, Q2 >=0.2 to <1.0, Q3 >=1.0 to <2.6, Q4 >=2.6 symptoms/years in the panel legend).",
+   "dv": "Social media use (texting + social networking sites + video chat), hours/day, over T0-T4; and its change T4-T0.",
+   "covariates": [
+    {
+     "name": "Not reported in main text",
+     "detail": "Specification described in Supplemental Material (not bundled)"
+    }
+   ],
+   "equation": "Not printed in main text; presumably SM[i,t] = b0 + b1*Inatt_avg[i] + b2*time + b3*Inatt_avg[i]*time + covariates + random effects + e[i,t], and SM_T4 - SM_T0 = c0 + c1*Inatt_avg[i] + covariates + e[i].",
+   "estimation": "R 3.5. Standardized beta (SE). Authors describe the effect as 'statistically significant but negligible'.",
+   "native_metric": "beta_std",
+   "iv_axis": [
+    {
+     "id": "inatt_avg",
+     "label": "Average inattention symptoms",
+     "meta": "CBCL 4-item score",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sm_yearly",
+     "label": "Social media use over time (yearly)",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "sm_change",
+     "label": "Change in social media use (T4-T0)",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "inatt_avg",
+     "dv": "sm_yearly",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Results text p. 6; Supplemental Tables 4-8",
+     "note": "SE = 0.001. Social media is the DV.",
+     "derived_d": -0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    },
+    {
+     "iv": "inatt_avg",
+     "dv": "sm_change",
+     "beta": -0.01,
+     "beta_lo": null,
+     "beta_hi": null,
+     "p": null,
+     "p_label": "not reported",
+     "sig": false,
+     "location": "Results text p. 6 ('total effect (T4-T0) = -0.01'); Figure 2C",
+     "note": "No SE or p printed; sig set false only because no test is reported.",
+     "derived_d": -0.02,
+     "derived_d_lo": null,
+     "derived_d_hi": null,
+     "derived_d_method": "standardized beta -> d"
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Playing video games and watching TV/videos LMMs",
+   "location": "Table 2, middle and bottom panels (p. 6); Results p. 5",
+   "why": "Non-phone/non-SM modalities (items 1-3 of the Youth Screen Time Survey). Fail FT-IC2."
+  },
+  {
+   "model": "SES and PGS-ADHD coefficients",
+   "location": "Table 2, SES and PGS-ADHD columns",
+   "why": "Covariate coefficients, not phone/SM estimates."
+  },
+  {
+   "model": "Cumulative T4-T0 effects of TV/videos and video games on hyperactivity-impulsivity change",
+   "location": "Results p. 6 (beta -0.06 and -0.05)",
+   "why": "Non-phone/non-SM modalities."
+  },
+  {
+   "model": "T0 Pearson correlation heatmap (social media with PGS 0.15, inattention 0.05, hyperactivity 0.07, combined ADHD 0.06)",
+   "location": "Figure 1 (p. 5)",
+   "why": "Unadjusted bivariate baseline correlations presented as preliminary description before the main analyses; the authors do not anchor any social media-symptom claim to them. No p-values printed."
+  },
+  {
+   "model": "Moderation of DM use x time by sex, ADHD diagnosis at T0, and ADHD medication at T0",
+   "location": "Results p. 5; Supplemental Tables 1-3 (not bundled in PDF)",
+   "why": "Reported narratively as non-significant; estimates are in a supplement not included in the PDF, and these are interaction tests rather than new phone/SM associations."
+  },
+  {
+   "model": "Sensitivity analyses: at-term births only, typically developing children only, complete behavioral data only, follow-up limited to T3",
+   "location": "Results p. 6; Supplemental Tables 4-8 (not bundled)",
+   "why": "Narrative only in the main text ('consistent effect sizes', 'did not alter results'); no numbers printed in the PDF."
+  },
+  {
+   "model": "Social media quartile plots",
+   "location": "Figure 2A and 2B (p. 6)",
+   "why": "Graphical illustrations of the M1 and M2 estimates using quartiles of average social media use; no separate estimates printed."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "beta_std",
+  "conversion_formula": "Standardized beta treated as approximate r: d = 2*beta_std / sqrt(1 - beta_std^2) (guidelines section 4a).",
+  "contrast_type": "Per 1 SD of social media use (hours/day) in SD units of the symptom score; for M1 SM x time terms, per 1 SD of average social media use difference in the yearly symptom slope; for M2, per 1 SD of average social media use in the 4-year inattention change score.",
+  "transformable": "partial",
+  "notes": "All estimates are reported as standardized betas, so SD_IV and SD_DV are not needed for conversion. SDs recorded for reference from Table 1 (pp. 4-5): average social media use over 4 years 1.0 h/day; T0 combined ADHD 3.0, inattention 1.9, hyperactivity-impulsivity 1.8. Convertible: M1 social media main effects, M2 cumulative beta 0.15, M3 cross-lagged paths, M4 reverse paths (SM as DV). Caveats: (1) the M1 SM x time coefficients are differences in yearly slope, so a d derived from them is a per-year rate, not a level difference, and is not comparable to cross-sectional d's; (2) the three-way SM x time x PGS-ADHD terms are moderation effects and should not be converted; (3) how the authors standardized variables inside lmer (both sides z-scored vs. partial standardization) is not described; (4) only SEs are reported, no CIs, so d CIs cannot be formed without computing beta +/- 1.96*SE, which the extraction rules prohibit. The M4 total effect has no SE or p."
+ },
+ "extraction_flags": "1. The supplement is not bundled in the 10-page PDF. As a result, the M2 cumulative-change covariates, the CLPM (M3) covariates, missing-data handling and estimator, the full M4 reverse-direction spec, Supplemental Tables 1-8 (moderation and sensitivity analyses) and analytic Ns other than 8,324 could not be checked.\n2. The 'social media use' IV is a composite of texting, social networking sites and video chat (YSTS items 4+5+6). All three items are phone/SM, so it qualifies under Step 2. Texting is asked as cell phone/tablet/computer, which is activity-defined and qualifies under clarification 5.\n3. The exposure is averaged over T0-T4, the same waves as the outcome, so the IV and DV are not temporally ordered in M1 and M2.\n4. In M1 the authors anchor on the SM x time interaction, which gives a difference in yearly slope. A d derived from it is a per-year rate. I included the three-way SM x time x PGS-ADHD terms as estimates and flagged them as not convertible; a coder may prefer to strike them.\n5. Table 2 prints only beta (SE) with Bonferroni footnote markers. Cells without a marker are coded sig=false with p null. CIs are null throughout and the SEs are in the notes.\n6. In M3 the CLPM cross-lagged values look constrained equal across lags; this is inferred from the figure.\n7. The M4 total effect (-0.01) has no SE or p. sig=false is set only because no test is reported.\n8. The Figure 2 caption quartile cutoffs (0.61/1.22/1.97) disagree with the Figure 2B panel legend (0.54/1.36/1.86).\n9. The year is recorded as 2025 per items.json, but the journal issue is Vol 2, Issue 1, 2026.\n10. Spot-checked all 9 Table 2 social media cells plus the in-text values 0.15, 0.03/p=.004, -0.002/p=.64 and -0.01/SE 0.001 against the PDF text layer; all match."
+}

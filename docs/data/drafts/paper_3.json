@@ -1,0 +1,445 @@
+{
+ "paper_id": "3",
+ "title": "Addictive Screen Use Trajectories and Suicidal Behaviors, Suicidal Ideation, and Mental Health in US Youths",
+ "doi": "10.1001/jama.2025.7829",
+ "year": "2025",
+ "authors": "Xiao Y, Meng Y, Brown TT, Keyes KM, Mann JJ",
+ "journal": "JAMA",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Modified Poisson regression (robust SE) of year 4 suicidal behaviors and suicidal ideation on social media (SMAQ) and mobile phone (MPIQ) addictive use trajectory class, adjusted for demographics and baseline clinical characteristics",
+   "location_in_paper": "Figure 3, adjusted RR column (p. 224); Methods Statistical Analysis (p. 221); Results text pp. 222-223; interpreted in Discussion p. 223 and Conclusions p. 226.",
+   "design": "Prospective longitudinal cohort. Exposure is membership in an addictive-use trajectory class estimated from SMAQ or MPIQ scores at the year 2, year 3, and year 4 follow-ups (ages about 11 to 15). Outcomes are suicidal behaviors and suicidal ideation over the prior year assessed at year 4, so the last exposure measurement is concurrent with the outcome assessment. Baseline (year 0) suicidal ideation, suicidal behaviors, and CBCL symptoms are adjusted for. One outcome observation per child; not repeated measures. Social media and mobile phone trajectories enter separate models (each with its own low-trajectory reference), and each outcome is modeled separately.",
+   "sample": "ABCD Study release 5.1, baseline (2016-2018) through year 4 follow-up (data through January 2022), 21 US sites. Of 11,868 baseline participants, 7,233 were excluded for not completing any of the year 2, 3, or 4 follow-up surveys (year 4 data limited to the available random subset, n = 4,754), and 350 more for missing age, sex, race and ethnicity, parental income, marital status, or parental education, giving an analytic sample of 4,285. CHAID analysis showed no selection bias versus participants without year 4 data (eAppendix 1, supplement not bundled). Outcome-specific N: 4,240 completed the KSADS suicidal behaviors and ideation items; 4,206 completed the CBCL. Baseline mean age 10.0 (SD 0.6) years; 2,051 (47.9%) female, 2,234 (52.1%) male; 96 (2.2%) Asian, 426 (9.9%) Black, 830 (19.4%) Hispanic, 2,515 (58.7%) White, 418 (9.8%) multiracial and/or other. Household income <$75,000: 1,722 (40.2%). Parents married 3,138 (73.2%); parental education below bachelor's 1,474 (34.4%). Binary-outcome models use N = 4,240. Year 4 prevalence: suicidal behaviors 218 (5.1%), suicidal ideation 760 (17.9%).",
+   "iv": "Trajectory class membership from latent class linear mixed models fit separately per platform to repeated addictive-use scores (years 2, 3, and 4 follow-up; ages about 11 to 15) on age and age squared. Social media addictive use was measured with the 6-item Social Media Addiction Questionnaire (SMAQ; Likert 1 = never to 6 = very often), mobile phone addictive use with the 8-item Mobile Phone Involvement Questionnaire (MPIQ; 1 = strongly disagree to 7 = strongly agree). Scores are CFA-weighted (range: social media 4.5-26.8, mobile phone 5.6-39.5); Cronbach alpha = 0.88 per scale. Youths without social media accounts or mobile phones were assigned 1 (never / strongly disagree) on skipped items. Social media classes: high-peaking (n = 410, 9.6%), increasing (n = 1,342, 31.3%), low (n = 2,533, 59.1%). Mobile phone classes: high (n = 2,109, 49.2%), increasing (n = 1,052, 24.6%), low (n = 1,124, 26.2%). Classes were dummy coded with the low trajectory of that platform as reference, so each estimate is a class-vs-low contrast within one platform's model.",
+   "dv": "Two binary year 4 outcomes from child- and parent-reported KSADS (past year). Suicidal ideation = any of passive ideation, nonspecific active ideation, specific active ideation, active ideation with intent, or active ideation with plan and intent endorsed by youth or caregiver: 760/4,240 (17.9%). Suicidal behaviors = any of preparatory actions for imminent suicidal behavior, interrupted attempt, aborted attempt, or suicide attempt endorsed by youth or caregiver: 218/4,240 (5.1%) (Table, p. 222).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline age in years (continuous); sample mean 10.0 (SD 0.6)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs male (47.9% female)"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Caregiver-reported categories: non-Hispanic Asian, non-Hispanic Black, Hispanic (any race), non-Hispanic White, multiracial and/or other; described as a social construct capturing structural disadvantage"
+    },
+    {
+     "name": "Parental income",
+     "detail": "Annual household income; Table reports <$75,000 vs >=$75,000 (exact coding in the model not stated)"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Table reports less than bachelor's degree vs bachelor's or higher"
+    },
+    {
+     "name": "Parental marital status",
+     "detail": "Married, living with partner, single"
+    },
+    {
+     "name": "Baseline suicidal ideation and suicidal behaviors",
+     "detail": "KSADS-based baseline indicators"
+    },
+    {
+     "name": "Baseline CBCL internalizing and externalizing symptoms",
+     "detail": "Parent-reported CBCL T scores at baseline"
+    }
+   ],
+   "equation": "log(E[Y_i]) = b0 + b1*HighTraj_i + b2*IncreasingTraj_i + b3*age_i + b4*sex_i + b5..b8*race_ethnicity_i + b9*income_i + b10*parent_education_i + b11..b12*marital_status_i + b13*baseline_suicidal_ideation_i + b14*baseline_suicidal_behaviors_i + b15*baseline_CBCL_internalizing_i + b16*baseline_CBCL_externalizing_i, where Y is year 4 suicidal behaviors or suicidal ideation (0/1) and HighTraj/IncreasingTraj are dummies for one platform's trajectory classes (low = reference). RR = exp(b1) or exp(b2). Exact dummy coding of income, education, and marital status is not stated.",
+   "estimation": "Poisson regression with robust standard errors to estimate risk ratios for binary outcomes. All analyses in R version 4.3.1. Trajectories were estimated first with latent class linear mixed models (lcmm package, ref 37), fit separately for each platform on age and quadratic age; the number of classes was chosen by lowest BIC, average posterior probability >70%, odds of correct classification >5.0, and minimum class size 5% (eTable 4, eAppendix 4; supplement not bundled). Class membership was then treated as a categorical exposure (hard assignment; classification uncertainty is not carried into the outcome model). Two-sided alpha = .05 with Benjamini-Hochberg FDR correction within each group of tests. No survey weights, site clustering, or family clustering are described. Sensitivity analyses: (1) adding baseline total screen time as a covariate (eFigures 1-3, supplement not bundled; text says associations were not altered and screen time was not independently associated); (2) COVID-19 timing (eAppendix 5, not bundled; described as consistent); (3) E-values for unmeasured confounding, range 1.10-4.21 (p. 223). No sex or race interaction tests or stratified estimates are reported.",
+   "native_metric": "RR",
+   "iv_axis": [
+    {
+     "id": "sm_high",
+     "label": "SM high-peaking vs low",
+     "meta": "SMAQ trajectory; n = 410 (9.6%) vs low n = 2,533",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_incr",
+     "label": "SM increasing vs low",
+     "meta": "SMAQ trajectory; n = 1,342 (31.3%) vs low n = 2,533",
+     "sd_iv": null
+    },
+    {
+     "id": "ph_high",
+     "label": "Phone high vs low",
+     "meta": "MPIQ trajectory; n = 2,109 (49.2%) vs low n = 1,124",
+     "sd_iv": null
+    },
+    {
+     "id": "ph_incr",
+     "label": "Phone increasing vs low",
+     "meta": "MPIQ trajectory; n = 1,052 (24.6%) vs low n = 1,124",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "sb",
+     "label": "Suicidal behaviors (Y4)",
+     "sd_dv": null,
+     "p0": 0.051,
+     "_p0_note": "Whole-sample year 4 prevalence 218/4,240 (5.1%). Reference-group (low trajectory) rates differ by platform and are given per estimate as p0: social media low 3.0%, mobile phone low 2.7%. Exposure prevalence is large (up to 49%), so use the per-estimate reference-group p0 rather than the marginal rate."
+    },
+    {
+     "id": "si",
+     "label": "Suicidal ideation (Y4)",
+     "sd_dv": null,
+     "p0": 0.179,
+     "_p0_note": "Whole-sample year 4 prevalence 760/4,240 (17.9%). Reference-group rates: social media low 14.2%, mobile phone low 13.3% (per-estimate p0)."
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_high",
+     "dv": "sb",
+     "RR": 2.39,
+     "RR_lo": 1.66,
+     "RR_hi": 3.43,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / suicidal behaviors / high-peaking; FDR P from text p. 222",
+     "p0": 0.03,
+     "note": "Reference (low SM trajectory) event rate 76/2,507 (3.0%); exposed 36/407 (8.8%)."
+    },
+    {
+     "iv": "sm_incr",
+     "dv": "sb",
+     "RR": 2.14,
+     "RR_lo": 1.61,
+     "RR_hi": 2.85,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / suicidal behaviors / increasing; FDR P from text p. 222",
+     "p0": 0.03,
+     "note": "Reference event rate 76/2,507 (3.0%); exposed 105/1,326 (7.9%)."
+    },
+    {
+     "iv": "sm_high",
+     "dv": "si",
+     "RR": 1.51,
+     "RR_lo": 1.25,
+     "RR_hi": 1.83,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / suicidal ideation / high-peaking; FDR P from text p. 222",
+     "p0": 0.142,
+     "note": "Reference event rate 357/2,507 (14.2%); exposed 94/407 (23.1%)."
+    },
+    {
+     "iv": "sm_incr",
+     "dv": "si",
+     "RR": 1.46,
+     "RR_lo": 1.28,
+     "RR_hi": 1.67,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / suicidal ideation / increasing; FDR P from text pp. 222-223",
+     "p0": 0.142,
+     "note": "Reference event rate 357/2,507 (14.2%); exposed 305/1,326 (23.0%)."
+    },
+    {
+     "iv": "ph_high",
+     "dv": "sb",
+     "RR": 2.17,
+     "RR_lo": 1.48,
+     "RR_hi": 3.19,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / suicidal behaviors / high; FDR P from text p. 223",
+     "p0": 0.027,
+     "note": "Reference (low phone trajectory) event rate 30/1,115 (2.7%); exposed 146/2,085 (7.0%)."
+    },
+    {
+     "iv": "ph_incr",
+     "dv": "sb",
+     "RR": 1.35,
+     "RR_lo": 0.86,
+     "RR_hi": 2.12,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / suicidal behaviors / increasing",
+     "p0": 0.027,
+     "note": "P value not printed; CI includes 1 and text says the increasing trajectory was not associated with outcomes other than suicidal ideation. Reference event rate 30/1,115 (2.7%); exposed 41/1,040 (3.9%)."
+    },
+    {
+     "iv": "ph_high",
+     "dv": "si",
+     "RR": 1.5,
+     "RR_lo": 1.27,
+     "RR_hi": 1.78,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / suicidal ideation / high; FDR P from text p. 223",
+     "p0": 0.133,
+     "note": "Reference event rate 148/1,115 (13.3%); exposed 435/2,085 (20.9%)."
+    },
+    {
+     "iv": "ph_incr",
+     "dv": "si",
+     "RR": 1.22,
+     "RR_lo": 1.01,
+     "RR_hi": 1.48,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / suicidal ideation / increasing; FDR P from text p. 223",
+     "p0": 0.133,
+     "note": "FDR-adjusted P printed as <.001 in text despite a CI lower bound of 1.01; copied as printed. Reference event rate 148/1,115 (13.3%); exposed 173/1,040 (16.6%)."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "Generalized linear model (Gaussian) of year 4 CBCL internalizing and externalizing T scores on social media (SMAQ) and mobile phone (MPIQ) addictive use trajectory class, adjusted for demographics and baseline clinical characteristics",
+   "location_in_paper": "Figure 3, adjusted mean difference column (p. 224); Methods Statistical Analysis (p. 221); Results text p. 223; interpreted in Discussion p. 223.",
+   "design": "Same prospective design and exposure as M1: trajectory class from year 2-4 SMAQ or MPIQ scores predicting a single year 4 outcome, adjusted for baseline clinical characteristics including the baseline CBCL scores. Separate models per platform and per outcome; not repeated measures.",
+   "sample": "ABCD Study release 5.1, baseline (2016-2018) through year 4 follow-up (data through January 2022), 21 US sites. Of 11,868 baseline participants, 7,233 were excluded for not completing any of the year 2, 3, or 4 follow-up surveys (year 4 data limited to the available random subset, n = 4,754), and 350 more for missing age, sex, race and ethnicity, parental income, marital status, or parental education, giving an analytic sample of 4,285. CHAID analysis showed no selection bias versus participants without year 4 data (eAppendix 1, supplement not bundled). Outcome-specific N: 4,240 completed the KSADS suicidal behaviors and ideation items; 4,206 completed the CBCL. Baseline mean age 10.0 (SD 0.6) years; 2,051 (47.9%) female, 2,234 (52.1%) male; 96 (2.2%) Asian, 426 (9.9%) Black, 830 (19.4%) Hispanic, 2,515 (58.7%) White, 418 (9.8%) multiracial and/or other. Household income <$75,000: 1,722 (40.2%). Parents married 3,138 (73.2%); parental education below bachelor's 1,474 (34.4%). CBCL models use N = 4,206. Year 4 CBCL internalizing T score mean 47.5 (SD 10.8); externalizing mean 43.4 (SD 9.3) (Table, p. 222).",
+   "iv": "Trajectory class membership from latent class linear mixed models fit separately per platform to repeated addictive-use scores (years 2, 3, and 4 follow-up; ages about 11 to 15) on age and age squared. Social media addictive use was measured with the 6-item Social Media Addiction Questionnaire (SMAQ; Likert 1 = never to 6 = very often), mobile phone addictive use with the 8-item Mobile Phone Involvement Questionnaire (MPIQ; 1 = strongly disagree to 7 = strongly agree). Scores are CFA-weighted (range: social media 4.5-26.8, mobile phone 5.6-39.5); Cronbach alpha = 0.88 per scale. Youths without social media accounts or mobile phones were assigned 1 (never / strongly disagree) on skipped items. Social media classes: high-peaking (n = 410, 9.6%), increasing (n = 1,342, 31.3%), low (n = 2,533, 59.1%). Mobile phone classes: high (n = 2,109, 49.2%), increasing (n = 1,052, 24.6%), low (n = 1,124, 26.2%). Classes were dummy coded with the low trajectory of that platform as reference, so each estimate is a class-vs-low contrast within one platform's model.",
+   "dv": "Parent-reported CBCL internalizing (e.g., anxiety, depression) and externalizing (e.g., aggression, rule-breaking) T scores at year 4, analyzed as continuous. Internalizing range 33-87, externalizing range 33-82; T >= 65 indicates clinically elevated symptoms (used only for the descriptive with/without-outcome counts in Figure 3, not as the model outcome). Analytic sample year 4 means: internalizing 47.5 (SD 10.8), externalizing 43.4 (SD 9.3).",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Baseline age in years (continuous); sample mean 10.0 (SD 0.6)"
+    },
+    {
+     "name": "Sex",
+     "detail": "Female vs male (47.9% female)"
+    },
+    {
+     "name": "Race and ethnicity",
+     "detail": "Caregiver-reported categories: non-Hispanic Asian, non-Hispanic Black, Hispanic (any race), non-Hispanic White, multiracial and/or other; described as a social construct capturing structural disadvantage"
+    },
+    {
+     "name": "Parental income",
+     "detail": "Annual household income; Table reports <$75,000 vs >=$75,000 (exact coding in the model not stated)"
+    },
+    {
+     "name": "Parental education",
+     "detail": "Table reports less than bachelor's degree vs bachelor's or higher"
+    },
+    {
+     "name": "Parental marital status",
+     "detail": "Married, living with partner, single"
+    },
+    {
+     "name": "Baseline suicidal ideation and suicidal behaviors",
+     "detail": "KSADS-based baseline indicators"
+    },
+    {
+     "name": "Baseline CBCL internalizing and externalizing symptoms",
+     "detail": "Parent-reported CBCL T scores at baseline"
+    }
+   ],
+   "equation": "Y_i = b0 + b1*HighTraj_i + b2*IncreasingTraj_i + b3*age_i + b4*sex_i + b5..b8*race_ethnicity_i + b9*income_i + b10*parent_education_i + b11..b12*marital_status_i + b13*baseline_suicidal_ideation_i + b14*baseline_suicidal_behaviors_i + b15*baseline_CBCL_internalizing_i + b16*baseline_CBCL_externalizing_i + e_i, where Y is the year 4 CBCL internalizing or externalizing T score; b1 and b2 are adjusted mean differences versus the platform's low trajectory.",
+   "estimation": "Generalized linear models estimating adjusted mean differences with 95% CIs from ordinary standard errors (Gaussian family implied). Text describes social media effects as small (printed as 'Cohen d < 2'; no d values are reported). All analyses in R version 4.3.1. Trajectories were estimated first with latent class linear mixed models (lcmm package, ref 37), fit separately for each platform on age and quadratic age; the number of classes was chosen by lowest BIC, average posterior probability >70%, odds of correct classification >5.0, and minimum class size 5% (eTable 4, eAppendix 4; supplement not bundled). Class membership was then treated as a categorical exposure (hard assignment; classification uncertainty is not carried into the outcome model). Two-sided alpha = .05 with Benjamini-Hochberg FDR correction within each group of tests. No survey weights, site clustering, or family clustering are described. Sensitivity analyses: (1) adding baseline total screen time as a covariate (eFigures 1-3, supplement not bundled; text says associations were not altered and screen time was not independently associated); (2) COVID-19 timing (eAppendix 5, not bundled; described as consistent); (3) E-values for unmeasured confounding, range 1.10-4.21 (p. 223). No sex or race interaction tests or stratified estimates are reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "sm_high",
+     "label": "SM high-peaking vs low",
+     "meta": "SMAQ trajectory; n = 410 (9.6%) vs low n = 2,533",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_incr",
+     "label": "SM increasing vs low",
+     "meta": "SMAQ trajectory; n = 1,342 (31.3%) vs low n = 2,533",
+     "sd_iv": null
+    },
+    {
+     "id": "ph_high",
+     "label": "Phone high vs low",
+     "meta": "MPIQ trajectory; n = 2,109 (49.2%) vs low n = 1,124",
+     "sd_iv": null
+    },
+    {
+     "id": "ph_incr",
+     "label": "Phone increasing vs low",
+     "meta": "MPIQ trajectory; n = 1,052 (24.6%) vs low n = 1,124",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "int",
+     "label": "CBCL internalizing T (Y4)",
+     "sd_dv": 10.8,
+     "p0": null
+    },
+    {
+     "id": "ext",
+     "label": "CBCL externalizing T (Y4)",
+     "sd_dv": 9.3,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "sm_high",
+     "dv": "int",
+     "B": 0.78,
+     "B_lo": -0.17,
+     "B_hi": 1.73,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), social media / CBCL internalizing / high-peaking",
+     "note": "Adjusted mean difference in T score vs low trajectory. P not printed; CI includes 0 and text reports only the increasing trajectory as associated with internalizing."
+    },
+    {
+     "iv": "sm_incr",
+     "dv": "int",
+     "B": 1.27,
+     "B_lo": 0.66,
+     "B_hi": 1.88,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / CBCL internalizing / increasing; FDR P from text p. 223",
+     "note": "Adjusted mean difference in T score vs low trajectory."
+    },
+    {
+     "iv": "sm_high",
+     "dv": "ext",
+     "B": 1.25,
+     "B_lo": 0.45,
+     "B_hi": 2.04,
+     "p": 0.004,
+     "p_label": ".004",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / CBCL externalizing / high-peaking; FDR P from text p. 223",
+     "note": "Adjusted mean difference in T score vs low trajectory."
+    },
+    {
+     "iv": "sm_incr",
+     "dv": "ext",
+     "B": 1.05,
+     "B_lo": 0.54,
+     "B_hi": 1.56,
+     "p": null,
+     "p_label": "<.001",
+     "sig": true,
+     "location": "Figure 3, adjusted column (p. 224), social media / CBCL externalizing / increasing; FDR P from text p. 223",
+     "note": "Adjusted mean difference in T score vs low trajectory."
+    },
+    {
+     "iv": "ph_high",
+     "dv": "int",
+     "B": 0.66,
+     "B_lo": 0.0,
+     "B_hi": 1.33,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / CBCL internalizing / high",
+     "note": "P not printed. CI lower bound printed as 0.00; text does not describe this as an association (only suicidal behaviors and ideation are reported for the high phone trajectory), so coded non-significant after FDR correction. Human check needed."
+    },
+    {
+     "iv": "ph_incr",
+     "dv": "int",
+     "B": 0.32,
+     "B_lo": -0.44,
+     "B_hi": 1.08,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / CBCL internalizing / increasing",
+     "note": "P not printed; text: increasing phone trajectory 'not with other mental health outcomes'."
+    },
+    {
+     "iv": "ph_high",
+     "dv": "ext",
+     "B": 0.2,
+     "B_lo": -0.36,
+     "B_hi": 0.76,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / CBCL externalizing / high",
+     "note": "P not printed; CI includes 0."
+    },
+    {
+     "iv": "ph_incr",
+     "dv": "ext",
+     "B": -0.3,
+     "B_lo": -0.94,
+     "B_hi": 0.33,
+     "p": null,
+     "p_label": null,
+     "sig": false,
+     "location": "Figure 3, adjusted column (p. 224), mobile phone / CBCL externalizing / increasing",
+     "note": "P not printed; CI includes 0."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Video game addictive use trajectories (VGAQ high vs low) predicting all four outcomes",
+   "location": "Figure 3, video game rows (p. 224); text p. 223",
+   "why": "Generic video gaming (VGAQ) is not a phone- or social-media-specific modality (2L-criteria FT-IC2 clarification 2)."
+  },
+  {
+   "model": "Unadjusted Poisson and GLM models (trajectory class only)",
+   "location": "Figure 3, unadjusted column (p. 224)",
+   "why": "Transparency-only; the authors anchor their claims to the adjusted estimates."
+  },
+  {
+   "model": "Baseline total screen time (weekday and weekend, low/moderate/high) predicting year 4 outcomes",
+   "location": "Figure 4 (p. 225)",
+   "why": "Total screen time bundles streaming TV/movies, single- and multiplayer games, texting, social media, and video chat with no phone/SM breakout; fails FT-IC2 Step 2."
+  },
+  {
+   "model": "Trajectory models additionally adjusted for baseline total screen time",
+   "location": "eFigures 1-3 in Supplement 1 (not bundled in this PDF); summarized in text p. 223",
+   "why": "Sensitivity analysis; numbers not printed in the main article and the supplement is not in the PDF. Text states associations were not altered."
+  },
+  {
+   "model": "COVID-19 sensitivity analysis",
+   "location": "eAppendix 5 in Supplement 1 (not bundled); mentioned in Limitations p. 226",
+   "why": "Narrative-only in the article ('consistent findings'); no estimates available in the PDF."
+  },
+  {
+   "model": "E-values for unmeasured confounding",
+   "location": "Results p. 223",
+   "why": "Sensitivity metric (range 1.10-4.21), not an association estimate; per-estimate E-values not printed."
+  },
+  {
+   "model": "Latent class linear mixed models identifying addictive-use trajectories",
+   "location": "Figure 2 (p. 223); eTable 4, eAppendix 3-4 in Supplement 1",
+   "why": "Measurement/classification model describing phone/SM use over age with no individual-trait variable on the other side; it generates the exposure used in M1 and M2."
+  },
+  {
+   "model": "Baseline demographic and clinical differences between trajectory classes",
+   "location": "Results text p. 222; eTable 5 in Supplement 1 (not bundled)",
+   "why": "Descriptive absolute differences in proportions/means by class (mostly demographic); not the authors' inferential test of the phone/SM-outcome association, and the full table is not in the PDF. Baseline clinical differences (e.g., SM high-peaking vs low baseline suicidal behaviors absolute difference 1.67%, 95% CI 0.06%-3.50%; externalizing T difference 1.79, 95% CI 0.75-2.82) could be considered by human coders as a cross-sectional supplement but were not extracted."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "RR (M1) + adjusted mean difference B in T-score units (M2)",
+  "conversion_formula": "M1: OR = RR*(1-p0)/(1-RR*p0); d = ln(OR)*sqrt(3)/pi (Chinn 2000), with p0 = observed event rate in that platform's low-trajectory reference group. M2: d = B / SD_DV (adjusted mean difference over the analytic-sample SD of the year 4 outcome as an approximation to the pooled SD).",
+  "contrast_type": "Trajectory class vs the same platform's low addictive-use trajectory (high-peaking or increasing vs low for social media; high or increasing vs low for mobile phone). Group contrast, not per-unit or per-SD.",
+  "transformable": true,
+  "notes": "p0 values are unadjusted reference-group event rates from Figure 3 'With outcome' counts (p. 224): social media low trajectory suicidal behaviors 76/2,507 (3.0%), suicidal ideation 357/2,507 (14.2%); mobile phone low trajectory suicidal behaviors 30/1,115 (2.7%), suicidal ideation 148/1,115 (13.3%). These are stored per estimate as 'p0' because the reference groups differ by platform; dv_axis p0 holds the whole-sample prevalence (5.1%, 17.9%) only as a fallback and should not be used because exposure prevalence is far above 10%. SD_DV for M2 is from the Table (p. 222): year 4 CBCL internalizing SD 10.8, externalizing SD 9.3 in the analytic sample (not SD 10 by construction, since the sample SD is reported). Using the marginal SD rather than a within-group pooled SD is an approximation. The year 4 CBCL SDs are for all 4,285 participants, while the CBCL models use N = 4,206."
+ },
+ "extraction_flags": "I checked them all against the Figure 3 adjusted column (p. 224) and against the text.\n\n1. Where the numbers come from: all estimates are taken from Figure 3, which is a forest plot with printed values, not a table. No supplement is bundled in the PDF, so eFigures 1-3 (models also adjusted for screen time), eTable 5 and eAppendix 5 could not be checked.\n\n2. p0 placement is non-standard: the reference group is the low trajectory, and its event rate differs by platform (social media low 3.0% / 14.2%; mobile phone low 2.7% / 13.3%). So I stored p0 on each estimate as an extra field. The dv_axis p0 holds only the whole-sample prevalence (5.1% / 17.9%) as a fallback, and that should not be used because up to 49% of the sample is exposed. Check whether the d pipeline reads p0 per estimate. If it doesn't, M1 may need to be split into a social media card and a phone card.\n\n3. SD_DV for M2: I used the analytic-sample year 4 SDs (internalizing 10.8, externalizing 9.3, from the Table on p. 222) instead of 10 by construction. These SDs cover N = 4,285, but the CBCL models use N = 4,206.\n\n4. P values and significance calls:\n   - Only FDR-adjusted P values quoted in the text are recorded. Most are printed as \"<.001\", so p is null with p_label filled in.\n   - For the phone increasing trajectory and suicidal ideation (RR 1.22, CI 1.01-1.48), the text prints FDR P < .001, which looks implausibly small for that CI. I copied it as printed.\n   - For the phone high trajectory and internalizing (0.66, CI 0.00 to 1.33), no P is printed and the CI touches 0. The text does not report it as an association, so I coded it non-significant. Please verify.\n   - For the other cells with no printed P value, significance was inferred from whether the CI excludes the null and from the text.\n\n5. Design caveats:\n   - The exposure is a hard class assignment from latent class mixed models, so classification uncertainty is not carried into the outcome models.\n   - The last exposure wave (year 4) is the same wave as the outcomes, so the analysis is not strictly prospective.\n   - No site or family clustering and no weights are described.\n\n6. Exact covariate coding of income, education and marital status is not stated; the equations assume the categories shown in the Table.\n\n7. Excluded as not phone/SM: the video game trajectory estimates (VGAQ) were excluded under FT-IC2 clarification 2. The baseline total screen time analysis (Figure 4) was excluded because it bundles TV, gaming and phone/SM with no breakout.\n\n8. Possibly extractable: baseline clinical differences between trajectory classes (text p. 222) were left out as descriptive. A human coder may want to reconsider them."
+}

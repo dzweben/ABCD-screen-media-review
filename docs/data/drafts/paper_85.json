@@ -1,0 +1,363 @@
+{
+ "paper_id": "85",
+ "title": "Mobile phone ownership, social media use, and substance use at ages 11-13 in the ABCD study",
+ "doi": "10.1016/j.addbeh.2024.108211",
+ "year": "2025",
+ "authors": "Doran N, Wade NE, Courtney KE, Sullivan RM, Jacobus J",
+ "journal": "Addictive Behaviors",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "GEE longitudinal logistic regression of any alcohol, nicotine/tobacco, and cannabis use (4 timepoints) on age 11-12 phone ownership or social media use, adjusted for age, sex, race/ethnicity, income, and time",
+   "location_in_paper": "Results pp. 3-4: phone x alcohol in Table 2 (p. 4); SM x alcohol in Table 3 (p. 5); phone x nicotine/tobacco in Supplementary Table 1, phone x cannabis in Supplementary Table 'S' (sic), SM x nicotine/tobacco in Supplementary Table 3, SM x cannabis in Supplementary Table 4 (supplement not bundled in PDF; values taken from Results text p. 3). Interpreted in Discussion pp. 4-6 and Abstract.",
+   "design": "Prospective longitudinal cohort. Predictor (phone ownership or social media use) and covariates measured once at the ABCD Year 2 annual visit (age 11-12, analytic baseline, time = 0) and treated as time-invariant. Outcome (any use of the substance since the prior assessment, binary) is time-varying across four assessments: Year 2 annual (time 0), Year 2 mid-year (1), Year 3 annual (2), Year 3 mid-year (3), roughly ages 11-12 to 13-14, data collected September 2018 to January 2022. Outcomes enter as repeated measures, not averaged. Six separate models, one per predictor x substance combination. Each model initially included predictor, linear time, and predictor x time; the interaction was dropped when non-significant. It was retained (significant) only for SM x alcohol and SM x nicotine/tobacco, so in those two models the SM main effect is the group difference at time 0 (age 11-12) and the interaction is the per-timepoint change in that log-odds difference. In the other four models the predictor main effect is the average group difference across all four timepoints.",
+   "sample": "ABCD Study (release not stated); all participants with substance use data at one or more of the four assessments, n = 10,907 (from the 11,880 enrolled). No imputation; all observed data used ('intent-to-treat'). Table 1 (age 11-12): mean age 12.0 years (SD 0.67); 52.5% male; 53.5% non-Hispanic white, 19.7% Hispanic or Latino, 14.2% Black or African American, 10.5% other; household income 11.1% < $25,000, 36.3% $25,000-$99,999, 31.1% $100,000-$200,000; grade 13.7% 5th, 44.2% 6th, 35.4% 7th; 67.8% of parents married. Per-model analytic N not reported.",
+   "iv": "Two binary predictors, each from a single youth-report item at the age 11-12 (Year 2) annual visit, modeled in separate models: (1) mobile phone ownership, 'Do you have your own mobile phone?' (0 = no, 1 = yes), endorsed by 71.2%; (2) social media use, 'Do you have at least one social media account?' (0 = no, 1 = yes), endorsed by 54.9%. The two overlap strongly (chi-square(1) = 1531.05, p < 0.001; 66.7% of phone owners vs 25.7% of non-owners used SM). Phone/SM is the IV.",
+   "dv": "Three binary time-varying outcomes, each modeled separately: any alcohol use, any nicotine/tobacco use, any cannabis use since the prior assessment. At annual visits (ages 11-12, 12-13) from the interviewer-assisted Timeline Followback; at the two mid-year phone assessments from a brief past-6-month substance use questionnaire. Prevalence at age 11-12 (Table 1): alcohol 9.9%, nicotine/tobacco 0.9%, cannabis 0.5%.",
+   "covariates": [
+    {
+     "name": "Age",
+     "detail": "Years at the age 11-12 assessment, continuous, time-invariant"
+    },
+    {
+     "name": "Sex assigned at birth",
+     "detail": "0 = male, 1 = female"
+    },
+    {
+     "name": "Racial/ethnic background",
+     "detail": "Five categories (Black or African American, Hispanic or Latino, Asian, non-Hispanic white, Other); non-Hispanic white reference, 4 dummies"
+    },
+    {
+     "name": "Household income",
+     "detail": "Ordinal 1-10, higher = higher income, measured at ABCD baseline"
+    },
+    {
+     "name": "Time",
+     "detail": "Linear, coded 0 (age 11-12 annual) to 3 (Year 3 mid-year)"
+    },
+    {
+     "name": "Predictor x time",
+     "detail": "Retained only in SM x alcohol and SM x nicotine/tobacco models; dropped elsewhere as non-significant"
+    }
+   ],
+   "equation": "logit(P(SubUse[i,t] = 1)) = b0 + b1*PhoneOrSM[i] + b2*time[t] + b3*age[i] + b4*female[i] + b5*Black[i] + b6*Hispanic[i] + b7*Asian[i] + b8*Other[i] + b9*income[i] (+ b10*PhoneOrSM[i]*time[t] in the SM-alcohol and SM-nicotine/tobacco models only); t = 0..3; within-person correlation handled by AR working correlation in GEE.",
+   "estimation": "Generalized estimating equations (Liang & Zeger 1986), Stata 17.0 xtgee, binomial family, logit link, autoregressive working correlation structure. No site or family clustering terms, no weights, no imputation. Alpha = 0.05; no multiple-comparison correction. Non-significant predictor x time interactions dropped; significant ones followed by simple-effects tests of time within each predictor level. Post-hoc sensitivity analysis refitting all models in substance-naive youth is extracted separately as M2. No sex, race, or other effect-modification tests reported.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "phone",
+     "label": "Phone ownership (yes vs no)",
+     "meta": "71.2% yes at age 11-12; main effect, interaction dropped in all 3 models",
+     "sd_iv": null
+    },
+    {
+     "id": "sm",
+     "label": "Social media use (>=1 account vs none)",
+     "meta": "54.9% yes; for alcohol and nicotine/tobacco this is the effect at time 0 (interaction retained); for cannabis the averaged effect",
+     "sd_iv": null
+    },
+    {
+     "id": "sm_x_time",
+     "label": "Social media use x time",
+     "meta": "Change in SM log-odds difference per timepoint; only where retained",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "alcohol",
+     "label": "Any alcohol use",
+     "sd_dv": null,
+     "p0": 0.099
+    },
+    {
+     "id": "nicotine",
+     "label": "Any nicotine/tobacco use",
+     "sd_dv": null,
+     "p0": 0.009
+    },
+    {
+     "id": "cannabis",
+     "label": "Any cannabis use",
+     "sd_dv": null,
+     "p0": 0.005
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "phone",
+     "dv": "alcohol",
+     "OR": 1.34,
+     "OR_lo": 1.18,
+     "OR_hi": 1.51,
+     "p": 0.001,
+     "p_label": "<0.001",
+     "sig": true,
+     "location": "Table 2 row 'Mobile phone ownership' (p. 4); Results text p. 3",
+     "note": "b = 0.29 (0.16, 0.41). Std Err cell blank in Table 2 for this row."
+    },
+    {
+     "iv": "phone",
+     "dv": "nicotine",
+     "OR": 1.71,
+     "OR_lo": 1.21,
+     "OR_hi": 2.4,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3 (Supplementary Table 1, not in PDF)",
+     "note": "b = 0.53 [0.19, 0.87]. p not reported; significance from CI and text."
+    },
+    {
+     "iv": "phone",
+     "dv": "cannabis",
+     "OR": 1.31,
+     "OR_lo": 0.82,
+     "OR_hi": 2.09,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Results text pp. 3 (Supplementary Table 'S', not in PDF)",
+     "note": "b = 0.27 [-0.20, 0.74]. p not reported."
+    },
+    {
+     "iv": "sm",
+     "dv": "alcohol",
+     "OR": 1.5,
+     "OR_lo": 1.31,
+     "OR_hi": 1.72,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 3 row 'Social media use' (p. 5)",
+     "note": "Table 3: b = 0.41 (0.27, 0.54), SE 0.04; effect at time 0 since SM x time retained. CONFLICT: Results text p. 3 reports a non-significant SM main effect b = 0.04 [-0.18, 0.26], OR = 1.06 [0.92, 1.21] for the same model. Table value entered here; human must decide."
+    },
+    {
+     "iv": "sm",
+     "dv": "nicotine",
+     "OR": 1.22,
+     "OR_lo": 1.06,
+     "OR_hi": 1.37,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3 (Supplementary Table 3, not in PDF)",
+     "note": "b = 0.21 [0.06. 0.37] (sic). Effect at time 0 since SM x time retained. p not reported."
+    },
+    {
+     "iv": "sm",
+     "dv": "cannabis",
+     "OR": 4.91,
+     "OR_lo": 2.84,
+     "OR_hi": 8.47,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3 (Supplementary Table 4, not in PDF)",
+     "note": "b = 1.59 [1.04, 2.14]. Interaction dropped, so averaged across 4 timepoints. p not reported."
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "alcohol",
+     "OR": 1.09,
+     "OR_lo": 1.01,
+     "OR_hi": 1.17,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Table 3 row 'Social media use X time' (p. 5)",
+     "note": "b = 0.09 (0.01, 0.16), SE 0.04. Text p. 3 prints the OR CI as [1.01, 1.017] (typo)."
+    },
+    {
+     "iv": "sm_x_time",
+     "dv": "nicotine",
+     "OR": 1.08,
+     "OR_lo": 1.05,
+     "OR_hi": 1.11,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3 (Supplementary Table 3, not in PDF)",
+     "note": "b = 0.08 [0.05, 0.11]."
+    }
+   ]
+  },
+  {
+   "model_id": "M2",
+   "name": "GEE longitudinal logistic regression of substance use on age 11-12 phone ownership or social media use in substance-naive youth (post-hoc sensitivity)",
+   "location_in_paper": "Results, 'Sensitivity Analyses', pp. 3-4 (text only, no table); summarized p. 4 and interpreted in Discussion p. 6 ('results of our post-hoc sensitivity analyses do suggest...').",
+   "design": "Same longitudinal design as M1 (predictor at age 11-12, binary substance use outcomes across four timepoints, time 0-3), refit in a subsample that was substance-naive at age 11-12 to address confounding by prior use. Predictor x time interaction tested and not significant in all six models, so dropped; predictor estimates are averaged group differences across the follow-up.",
+   "sample": "Subsample of M1 who reported at age 11-12 never having had more than a sip of alcohol and never having tried nicotine/tobacco or cannabis: n = 9,628 (87% of the original sample). No further demographics reported.",
+   "iv": "Same as M1: binary phone ownership and binary social media use (>= 1 account) at age 11-12, separate models.",
+   "dv": "Same as M1: any alcohol, any nicotine/tobacco, any cannabis use, time-varying binary across four assessments.",
+   "covariates": [
+    {
+     "name": "Time",
+     "detail": "Linear 0-3; main effect reported in each model"
+    },
+    {
+     "name": "Age, sex, race/ethnicity, household income",
+     "detail": "Text says the models were 're-fit'; presumably the same covariates as M1, not explicitly restated"
+    }
+   ],
+   "equation": "logit(P(SubUse[i,t] = 1)) = b0 + b1*PhoneOrSM[i] + b2*time[t] + covariates (as M1); no predictor x time term (non-significant in all six models).",
+   "estimation": "As M1: GEE, Stata 17.0 xtgee, binomial/logit, autoregressive working correlation, alpha = 0.05, no multiple-comparison correction. Post-hoc analysis.",
+   "native_metric": "OR",
+   "iv_axis": [
+    {
+     "id": "phone",
+     "label": "Phone ownership (yes vs no)",
+     "meta": "Substance-naive subsample",
+     "sd_iv": null
+    },
+    {
+     "id": "sm",
+     "label": "Social media use (>=1 account vs none)",
+     "meta": "Substance-naive subsample",
+     "sd_iv": null
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "alcohol",
+     "label": "Any alcohol use",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "nicotine",
+     "label": "Any nicotine/tobacco use",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "cannabis",
+     "label": "Any cannabis use",
+     "sd_dv": null,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "phone",
+     "dv": "alcohol",
+     "OR": 1.28,
+     "OR_lo": 1.1,
+     "OR_hi": 1.5,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3, Sensitivity Analyses",
+     "note": "b = 0.25 [0.10, 0.41]."
+    },
+    {
+     "iv": "phone",
+     "dv": "nicotine",
+     "OR": 1.92,
+     "OR_lo": 1.25,
+     "OR_hi": 2.96,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 3, Sensitivity Analyses",
+     "note": "b = 0.65 [0.22, 1.08]."
+    },
+    {
+     "iv": "phone",
+     "dv": "cannabis",
+     "OR": 1.71,
+     "OR_lo": 0.95,
+     "OR_hi": 3.09,
+     "p": null,
+     "p_label": "",
+     "sig": false,
+     "location": "Results text p. 3, Sensitivity Analyses",
+     "note": "b = 0.54 [-0.05, 1.13]."
+    },
+    {
+     "iv": "sm",
+     "dv": "alcohol",
+     "OR": 1.61,
+     "OR_lo": 1.4,
+     "OR_hi": 1.85,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 4, Sensitivity Analyses",
+     "note": "b = 0.47 [0.33, 0.61]."
+    },
+    {
+     "iv": "sm",
+     "dv": "nicotine",
+     "OR": 4.12,
+     "OR_lo": 2.7,
+     "OR_hi": 6.27,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 4, Sensitivity Analyses",
+     "note": "b = 1.42 [0.99, 1.84]."
+    },
+    {
+     "iv": "sm",
+     "dv": "cannabis",
+     "OR": 3.46,
+     "OR_lo": 1.96,
+     "OR_hi": 6.1,
+     "p": null,
+     "p_label": "",
+     "sig": true,
+     "location": "Results text p. 4, Sensitivity Analyses",
+     "note": "b = 1.24 [0.67, 1.81]."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Initial models including non-significant predictor x time interactions",
+   "location": "Methods p. 2; Results p. 3",
+   "why": "Model-building scaffolding; the interaction was dropped and the authors interpret the reduced model. No numbers printed."
+  },
+  {
+   "model": "Simple-effects tests of time within SM user / non-user groups (alcohol and nicotine/tobacco)",
+   "location": "Results p. 3",
+   "why": "Estimate the effect of time within each SM group (e.g., non-users b = -0.14, OR = 0.82; users OR = 0.93 for alcohol), not a phone/SM effect on the outcome."
+  },
+  {
+   "model": "Bivariate chi-square tests of phone ownership / SM use with substance use at age 11-12",
+   "location": "Results p. 3",
+   "why": "Unadjusted; only 'ps < 0.01' reported, no effect estimates."
+  },
+  {
+   "model": "Chi-square test of overlap between phone ownership and SM use",
+   "location": "Results p. 3",
+   "why": "Phone vs SM association; no individual-trait variable on the other side."
+  },
+  {
+   "model": "Unadjusted prevalence of substance use over time by phone ownership and by SM use",
+   "location": "Fig. 1 (p. 4), Fig. 2 (p. 5)",
+   "why": "Descriptive, unadjusted percentages read only from line graphs; no inferential estimate."
+  },
+  {
+   "model": "Covariate and time coefficients in Tables 2 and 3",
+   "location": "Tables 2-3",
+   "why": "Not phone/SM terms."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "OR (adjusted, from GEE logistic)",
+  "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000); CI endpoints converted the same way.",
+  "contrast_type": "Binary contrast: phone owner vs non-owner, or has >= 1 social media account vs none, at age 11-12. For sm_x_time rows, the per-timepoint (about 6-month) change in the SM log-odds difference.",
+  "transformable": true,
+  "notes": "OR converts directly via Chinn; no SDs needed. p0 values in M1 dv_axis are the marginal age 11-12 prevalences from Table 1 (p. 3), not the unexposed-group rate, and are not needed for the OR conversion. Caveats: (1) In M1 SM-alcohol and SM-nicotine/tobacco, the SM OR is the difference at time 0 with an interaction retained, so it is not comparable to averaged effects in the other cells. (2) The SM-alcohol main effect in Table 3 (OR 1.50) conflicts with the Results text (OR 1.06, non-significant). (3) The sm_x_time interaction ORs are not a group contrast and probably should not be converted to d alongside the main effects. (4) Five of the six M1 models come from supplementary tables not included in the PDF; values were copied from the Results text."
+ },
+ "extraction_flags": "1) The values for social media and alcohol disagree within the paper. Table 3 gives the SM main effect as OR 1.50 (1.31, 1.72), b 0.41. The Results text on p. 3 gives OR 1.06 [0.92, 1.21], b 0.04, not significant. The draft uses the table value, so a human needs to decide which is correct. 2) The supplementary tables (Supp Tables 1, 3, 4 and the one printed as 'S') are not in the PDF. Five of the six full-sample models were therefore copied from the Results text, and their p-values and SEs are missing. 3) In the SM-alcohol and SM-nicotine/tobacco models the SM x time interaction was kept. That makes the SM main effect the difference at time 0, not an average over follow-up. The two interaction ORs are entered as a separate 'sm_x_time' IV row and probably should not be converted to d alongside the main effects. 4) M2 is the post-hoc sensitivity analysis in substance-naive youth (n=9,628). It is reported in the text only, but the authors interpret it in the Discussion. Its covariates are assumed to match M1 because the text only says the models were 're-fit'. 5) For phone and alcohol, p was entered as 0.001 with the label '<0.001'. The p0 values are the marginal age 11-12 prevalences from Table 1, not the rates in the unexposed group. 6) There are typos in the source: the CI '[1.01, 1.017]' for the SM x time OR, and '[0.06. 0.37]'. 7) The ABCD release is not stated, and per-model analytic N is not reported; only the total of 10,907 is given."
+}

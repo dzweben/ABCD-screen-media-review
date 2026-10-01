@@ -1,0 +1,271 @@
+{
+ "paper_id": "31",
+ "title": "Associations of Sleep, Screen Time, and Extracurricular Activities With Cognitive Development: A Longitudinal Study",
+ "doi": "10.1002/jad.70069",
+ "year": "2026",
+ "authors": "Zheng J, Berg E, Byrne ML, Rakesh D",
+ "journal": "Journal of Adolescence",
+ "extraction_status": "ai_draft",
+ "lead_coder": "danny",
+ "contributors": [
+  "danny"
+ ],
+ "last_edited_by": "danny",
+ "d_transformable": true,
+ "primary_models": [
+  {
+   "model_id": "M1",
+   "name": "Linear mixed-effects residual change model of 2-year follow-up NIH Toolbox task scores on baseline social media and social engagement (texting + video chat) hours, adjusted for baseline task score, demographics, SES and visit type, with family random intercept",
+   "location_in_paper": "Table 3 (FCF tasks) and Table 4 (CCF tasks), p. 399; methods Section 2.4 (p. 397); results Sections 3.2.1-3.2.2 (pp. 397-398); interpreted in Discussion p. 400. Effect sizes (semi-partial R2) and fit indices in Supporting Information Tables S2-S3 (not bundled in the PDF).",
+   "design": "Longitudinal, two waves (ABCD baseline and 2-year follow-up). Each lifestyle factor is measured at baseline and each cognitive task score at the 2-year follow-up (T2) is the DV, with the same task score at baseline (T1) entered as a predictor (residual change score model). One observation per child; the outcome is a single follow-up score, not repeated measures. Each lifestyle factor was entered as the sole predictor in a separate model, giving eight models per outcome; social media and social engagement therefore each have their own model per outcome and are not mutually adjusted for other screen types. No time x IV interaction; a negative B means smaller increase in the task score from baseline to follow-up per additional hour of the IV.",
+   "sample": "ABCD release 5.1, baseline and 2-year follow-up. Complete-case analytic sample of N = 7043 adolescents (complete data on cognitive scores at both time points, all lifestyle factors, and covariates); 52.2% male, 47.8% female. Mean age 118.98 months (SD 7.50) at baseline and 144.32 months (SD 8.03) at follow-up. Mean income-to-needs ratio 3.46 (SD 2.28); average parent education 15.08 years (SD 2.63). Race/ethnicity breakdown not reported. Baseline visits 100% in person; at 2-year follow-up 92.3% in person, 0.3% remote, 7.4% hybrid (Table 2, p. 398).",
+   "iv": "Two qualifying baseline IVs from the youth-report ABCD Screen Time Questionnaire, response options from 'none' to 'more than 4 h', converted to a weighted average daily hours variable based on weekday and weekend reports. (1) Social media: 'Visit social networking sites like Facebook, Twitter, Instagram, etc.'; baseline M = 0.10 h, SD = 0.38. (2) Social engagement: sum of 'Text on a cell phone, tablet, or computer (e.g. GChat, Whatsapp, etc.)' and 'Video chat (Skype, Facetime, etc.)'; baseline M = 0.37 h, SD = 0.79. Social engagement is a composite built only from texting and video chat items, which qualifies under FT-IC2 Step 2. Units are hours; B is the change in T2 task score per 1 hour of the IV.",
+   "dv": "Five NIH Toolbox Cognition Battery tasks at 2-year follow-up, age-uncorrected raw scores, each modeled separately. FCF tasks: Flanker (inhibitory control and attention), baseline M = 94.55 (SD 8.71), follow-up M = 100.36 (SD 7.49); Pattern Comparison Processing Speed (information processing speed), baseline 88.52 (14.37), follow-up 103.75 (15.09); Picture Sequence Memory (visuospatial sequencing and memory), baseline 103.52 (12.09), follow-up 109.55 (12.14). CCF tasks: Picture Vocabulary (verbal intellect), baseline 85.25 (7.99), follow-up 89.42 (8.31); Oral Reading Recognition (reading and language ability), baseline 91.32 (6.73), follow-up 95.03 (6.50).",
+   "covariates": [
+    {
+     "name": "Baseline (T1) score on the same cognitive task",
+     "detail": "Makes the model a residual change score model"
+    },
+    {
+     "name": "Sex",
+     "detail": "Coding not reported"
+    },
+    {
+     "name": "Age at T2",
+     "detail": "Coding not reported (age reported in months in Table 2)"
+    },
+    {
+     "name": "Age difference between T2 and T1",
+     "detail": "Interval between assessments"
+    },
+    {
+     "name": "Income-to-needs ratio",
+     "detail": "Household income relative to the federal poverty threshold for household size, continuous"
+    },
+    {
+     "name": "Average parent educational attainment",
+     "detail": "Years, continuous"
+    },
+    {
+     "name": "Visit type at T2",
+     "detail": "Remote vs. in-person vs. hybrid"
+    },
+    {
+     "name": "Family ID",
+     "detail": "Random intercept"
+    }
+   ],
+   "equation": "Cog_T2[i] = b0 + b1*IV_T1[i] + b2*Cog_T1[i] + b3*sex + b4*age_T2 + b5*age_diff_T2_T1 + b6*income_to_needs + b7*parent_edu + b8*visit_type_T2 + u_family(i) + e[i], where IV is one of social media or social engagement hours (one lifestyle factor per model) and Cog is one of the five NIH Toolbox tasks.",
+   "estimation": "Linear mixed-effects models fit with lmer in R version 2023.09.0. Random intercept for family ID; no site random effect or survey weights reported. Complete-case analysis, no imputation. FDR correction (pFDR < 0.05) applied separately for each outcome across the eight lifestyle-factor models; significance markers in Tables 3-4 refer to pFDR. Exploratory sex moderation tested for all associations; only passive watching (Flanker) and physical activity (Picture Sequence Memory) were significant and stratified in Table 5; text states sex did not significantly moderate any other associations, with nonsignificant interaction output in Supporting Information Tables S4-S5 (not in the PDF). No sensitivity analyses for the social media or social engagement estimates are reported.",
+   "native_metric": "B",
+   "iv_axis": [
+    {
+     "id": "social_media",
+     "label": "Social media",
+     "meta": "Baseline h/day, M = 0.10, SD = 0.38",
+     "sd_iv": 0.38
+    },
+    {
+     "id": "social_engagement",
+     "label": "Social engagement (texting + video chat)",
+     "meta": "Baseline h/day, M = 0.37, SD = 0.79",
+     "sd_iv": 0.79
+    }
+   ],
+   "dv_axis": [
+    {
+     "id": "flanker",
+     "label": "Inhibitory control and attention (Flanker)",
+     "sd_dv": 7.49,
+     "p0": null
+    },
+    {
+     "id": "pattern",
+     "label": "Information processing speed (Pattern Comparison)",
+     "sd_dv": 15.09,
+     "p0": null
+    },
+    {
+     "id": "picseq",
+     "label": "Visuospatial sequencing and memory (Picture Sequence Memory)",
+     "sd_dv": 12.14,
+     "p0": null
+    },
+    {
+     "id": "picvocab",
+     "label": "Verbal intellect (Picture Vocabulary)",
+     "sd_dv": 8.31,
+     "p0": null
+    },
+    {
+     "id": "reading",
+     "label": "Reading and language ability (Oral Reading Recognition)",
+     "sd_dv": 6.5,
+     "p0": null
+    }
+   ],
+   "estimates": [
+    {
+     "iv": "social_media",
+     "dv": "flanker",
+     "B": -0.5,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.017,
+     "p_label": "0.017",
+     "sig": true,
+     "location": "Table 3 (p. 399), row 'Social media' under outcome 'Inhibitory control and attention'",
+     "note": "SE = 0.21, t = -2.40, pFDR = 0.026* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_media",
+     "dv": "pattern",
+     "B": -0.99,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.015,
+     "p_label": "0.015",
+     "sig": true,
+     "location": "Table 3 (p. 399), row 'Social media' under outcome 'Information processing speed'",
+     "note": "SE = 0.41, t = -2.44, pFDR = 0.039* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_media",
+     "dv": "picseq",
+     "B": -1.4,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 3 (p. 399), row 'Social media' under outcome 'Visuospatial sequencing and memory'",
+     "note": "SE = 0.30, t = -4.68, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_media",
+     "dv": "picvocab",
+     "B": -0.79,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 4 (p. 399), row 'Social media' under outcome 'Verbal intellect'",
+     "note": "SE = 0.15, t = -5.26, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_media",
+     "dv": "reading",
+     "B": -0.28,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.014,
+     "p_label": "0.014",
+     "sig": true,
+     "location": "Table 4 (p. 399), row 'Social media' under outcome 'Reading and language ability'",
+     "note": "SE = 0.11, t = -2.46, pFDR = 0.019* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_engagement",
+     "dv": "flanker",
+     "B": -0.5,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Inhibitory control and attention'",
+     "note": "SE = 0.10, t = -4.96, pFDR = 0.006* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_engagement",
+     "dv": "pattern",
+     "B": -0.35,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.072,
+     "p_label": "0.072",
+     "sig": false,
+     "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Information processing speed'",
+     "note": "SE = 0.20, t = -1.80, pFDR = 0.144 (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_engagement",
+     "dv": "picseq",
+     "B": -0.9,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 3 (p. 399), row 'Social engagement' under outcome 'Visuospatial sequencing and memory'",
+     "note": "SE = 0.14, t = -6.32, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_engagement",
+     "dv": "picvocab",
+     "B": -0.57,
+     "B_lo": null,
+     "B_hi": null,
+     "p": null,
+     "p_label": "< 0.001",
+     "sig": true,
+     "location": "Table 4 (p. 399), row 'Social engagement' under outcome 'Verbal intellect'",
+     "note": "SE = 0.07, t = -8.03, pFDR = < 0.001* (asterisk = significant after FDR). CI not reported."
+    },
+    {
+     "iv": "social_engagement",
+     "dv": "reading",
+     "B": -0.19,
+     "B_lo": null,
+     "B_hi": null,
+     "p": 0.001,
+     "p_label": "0.001",
+     "sig": true,
+     "location": "Table 4 (p. 399), row 'Social engagement' under outcome 'Reading and language ability'",
+     "note": "SE = 0.05, t = -3.39, pFDR = 0.001* (asterisk = significant after FDR). CI not reported."
+    }
+   ]
+  }
+ ],
+ "excluded_models": [
+  {
+   "model": "Passive watching (TV shows/movies + videos such as YouTube) as predictor of each cognitive task",
+   "location": "Tables 3 and 4 (p. 399), rows 'Passive watching'",
+   "why": "Non-phone/non-SM modality; fails FT-IC2."
+  },
+  {
+   "model": "Gaming (video games on computer, console, phone or other device) as predictor",
+   "location": "Tables 3 and 4 (p. 399), rows 'Gaming'",
+   "why": "Generic gaming with platform not isolated to phone; fails FT-IC2 clarification 2."
+  },
+  {
+   "model": "Physical and nonphysical extracurricular activities, sleep duration and sleep initiation as predictors",
+   "location": "Tables 3 and 4 (p. 399)",
+   "why": "Not phone/SM variables."
+  },
+  {
+   "model": "Sex-stratified models and sex x lifestyle-factor interactions",
+   "location": "Section 3.3 (p. 398), Table 5 (p. 400), Figure 1 (p. 401); Supporting Information Tables S4-S6",
+   "why": "Printed stratified estimates are for passive watching and physical activity only. Sex did not significantly moderate social media or social engagement associations, and those interaction estimates are only in supplementary tables not bundled in the PDF."
+  },
+  {
+   "model": "Normative change in cognitive scores with age",
+   "location": "Section 3.1 (p. 397); Supporting Information Table S1",
+   "why": "No phone/SM variable."
+  },
+  {
+   "model": "Semi-partial R2, conditional R2, AIC, BIC for the main models",
+   "location": "Supporting Information Tables S2-S3",
+   "why": "Not in the PDF; additional effect-size metrics for the same M1 estimates. Could be added if the supplement is obtained."
+  }
+ ],
+ "d_transformation": {
+  "native_metric": "B (unstandardized)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
+  "contrast_type": "per 1 hour/day of baseline social media or social engagement use, converted to per 1 SD of the IV",
+  "transformable": true,
+  "notes": "SD_IV from Table 2 (p. 398), baseline analytic sample: social media 0.38, social engagement 0.79. SD_DV taken as the 2-year follow-up SD of the raw task score from Table 2 (Flanker 7.49, Pattern Comparison 15.09, Picture Sequence Memory 12.14, Picture Vocabulary 8.31, Oral Reading 6.50), because the DV is the T2 score. B is conditional on the baseline score (residual change), so the derived d expresses the association with residualized change scaled by the raw T2 SD, not by the residual SD, which makes it smaller than a d on residualized change would be. No CIs are reported (only SE), so d CIs are not computed. Social media is highly right-skewed (M 0.10, SD 0.38 h), so per-SD contrasts reflect a small number of heavy users."
+ },
+ "extraction_flags": "1) I counted 'social engagement' (texting + video chat, summed weighted daily hours) as a qualifying IV. It is a composite built only from phone/SM items, so it passes FT-IC2 Step 2, and the texting item says 'cell phone, tablet, or computer'. Coders should confirm this. 2) Each lifestyle factor was fit in its own model, so the social media B is not adjusted for the other screen types. 3) For SD_DV I used the 2-year follow-up raw-score SDs from Table 2. B comes from a residual change model (it conditions on the baseline score), so d scaled by the raw T2 SD is a convention choice to check. 4) Only SE is reported, so CIs are null. Several p values are printed as '< 0.001', so p is left null and p_label is filled in. Significance follows the pFDR asterisks. 5) The social media x sex interactions and the semi-partial R2 values are only in the Supporting Information (Tables S2-S5), which is not bundled in the PDF. 6) Race/ethnicity of the sample is not reported. 7) Unrelated quirks in the paper: sleep duration on the Flanker is marked significant at pFDR 0.119*, and the text gives SE = -3.03 for the sex interaction. These do not affect the extracted phone/SM cells.json"
+}
