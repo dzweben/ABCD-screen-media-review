@@ -72,7 +72,7 @@ These are the papers that survived the Stage 2 full-text screen (`02-L2/`) and a
 | 62 | 400 | Longitudinal associations of screen time, physical activity, and sleep duration with body mass index in U.S. youth | 2024 | [`10.1186/s12966-024-01587-6`](https://doi.org/10.1186/s12966-024-01587-6) | draft |
 | 63 | 404 | Dating app use and depression symptoms in adolescents | 2026 | [`10.1186/s13104-026-07641-9`](https://doi.org/10.1186/s13104-026-07641-9) | draft |
 | 64 | 420 | Screen time and early adolescent mental health, academic, and social outcomes in 9- and 10- year old children: Utilizing the Adolescent Brain Cognitive Development   (ABCD) Study | 2021 | [`10.1371/journal.pone.0256591`](https://doi.org/10.1371/journal.pone.0256591) | draft |
-| 65 | 431 | Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence | 2026 | [`10.1542/peds.2025-072941`](https://doi.org/10.1542/peds.2025-072941) | ⚠️ PDF is supplement only |
+| 65 | 431 | Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence | 2026 | [`10.1542/peds.2025-072941`](https://doi.org/10.1542/peds.2025-072941) | draft |
 | 66 | 435 | Digital Media, Genetics, and Risk for ADHD Symptoms in Children: A Longitudinal Study | 2025 | [`10.1542/pedsos.2025-000922`](https://doi.org/10.1542/pedsos.2025-000922) | draft |
 | 67 | 436 | Digital Media, Genetics, and Risk for ADHD Symptoms in Children: A Longitudinal Study |  | [`10.1542/pedsos.2025-000922/205729`](https://doi.org/10.1542/pedsos.2025-000922/205729) | dup of #435 |
 | 68 | 443 | Beyond screen time: The core influences of problematic screen use on adolescent development networks | 2025 | [`10.1556/2006.2025.00035`](https://doi.org/10.1556/2006.2025.00035) | draft |

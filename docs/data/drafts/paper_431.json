@@ -11,341 +11,352 @@
   "danny"
  ],
  "last_edited_by": "danny",
- "d_transformable": "partial",
- "source_note": "The PDF on file (docs/pdfs/10.1542_peds.2025-072941.pdf, 10 pages) contains ONLY the Supplemental Material: the table of contents, eMethods 1-5, the eMethods references, Supplemental Figure S1 (correlations among outcomes) and Supplemental Figure S2 (distribution of age at first smartphone). The main article text and tables are not in the PDF. Supplemental Tables S1-S28 are in a separate Excel file that is also not on file. The publisher page returned HTTP 403. Every estimate below is copied from the authors' structured abstract (PubMed PMID 41324306, as stored in 00-search/pubmed_results.csv). Estimates that appear only in the main-text tables or the supplemental Excel file could not be extracted. Before this draft is approved, a human coder needs the main article and the Excel supplement to fill in the missing cells and check which model step the abstract ORs come from.",
+ "d_transformable": true,
  "primary_models": [
   {
    "model_id": "M1",
-   "name": "Mixed-effects logistic regression of binary health outcomes at age 12 on smartphone ownership (yes vs no), fully adjusted (Model 2)",
-   "location_in_paper": "Abstract (Results); main-text table not on file (the Stage 2 note cites Table 1 of the main paper); Supplemental Tables S3-S5 (Excel, not on file); methods in Supplemental eMethods 2-3 (supplement pp. 3-4).",
-   "design": "Cross-sectional analysis (Analysis 1) at the ABCD 2-year follow-up assessment (about age 12). Caregiver-reported smartphone ownership and the three health outcomes are measured at the same visit. Each participant contributes one observation, so there are no repeated measures in this specification. A separate repeated-measures version across the 2-, 3- and 4-year follow-ups (Supplemental Tables S23-S25) is listed under excluded_models.",
-   "sample": "ABCD participants with smartphone-ownership data at the 2-year follow-up, N = 10,588 (eMethods 2; abstract). Of these, 6,739 owned a smartphone and 3,849 did not. The ABCD data release is not stated in the available material. Age, sex and race/ethnicity breakdowns are in the main text and Supplemental Table S1, neither of which is on file. Children with extreme BMI z scores (<-4 or >8) were excluded from BMI/obesity analyses, and sleep-duration outliers beyond mean +/- 4 SD were removed (eMethods 1).",
-   "iv": "Smartphone ownership at the 2-year follow-up, reported by the caregiver. Binary: 1 = owns a smartphone (n = 6,739), 0 = does not (n = 3,849; reference).",
-   "dv": "Three binary outcomes at the 2-year follow-up (eMethods 1). (1) Depression: lifetime (past or current) diagnosis of major depressive disorder, persistent depressive disorder (dysthymia) or unspecified depressive disorder from the KSADS-5. (2) Obesity: BMI at or above the CDC sex- and age-specific 95th percentile, from measured height and weight. (3) Insufficient sleep: fewer than 9 hours of night sleep (American Academy of Sleep Medicine recommendation). Sleep duration came from the youth-reported Munich Chronotype Questionnaire as average nightly sleep across school days and free days. Outcome prevalences are not available in the material on file.",
+   "name": "Mixed-effects logistic regression of binary health outcomes at age 12 on smartphone ownership (yes vs no), fully adjusted Model 2",
+   "location_in_paper": "Analysis 1. Results p. 5-6 (adjusted Model 2 ORs printed in text); Figure 2A (p. 15, Model 2 shown in red); full model output in Supplemental Tables S3-S5 (appendix Excel file, not in the extracted PDFs). Interpreted in Abstract and Discussion p. 7.",
+   "design": "Cross-sectional. Smartphone ownership and all three outcomes are measured at the same visit, the ABCD 2-year follow-up (mean age ~12). One observation per child; no repeated measures. Smartphone ownership was first assessed at the 2-year follow-up, which is why this wave is the analytic baseline. A longitudinal version pooling the 2-, 3- and 4-year follow-ups was run only as a sensitivity analysis (see excluded models).",
+   "sample": "ABCD Release 5.1, 2-year follow-up assessment. N = 10,588 with smartphone ownership data: 6,739 owned a smartphone (4,313 iPhone, 2,426 Android) and 3,849 did not (Table 1, p. 17). Youth whose caregiver reported a cellphone that was not an iPhone or Android are not counted as owners (6,739 of 7,010 cellphone owners had smartphones, p. 5). Listwise deletion, so per-outcome N is lower than 10,588; Table 1 missingness: lifetime depression 0.71%, obesity 16.13%, insufficient sleep 0.96%. Exact per-model N is in Supplemental Tables S3-S5 (not available). Mean age 12.02 (SD 0.67); 47.49% female sex assigned at birth; caregiver-reported race 75.42% White, 20.33% Black, 6.31% Asian, 3.45% American Indian/Alaska Native, 12.11% mixed (categories not mutually exclusive); 19.52% Hispanic. Owners were slightly older (12.13 vs 11.83), more often female (50.53% vs 42.17%), more often Black (24.65% vs 12.78%) and Hispanic (21.46% vs 16.13%), and from lower-income households (7.35 vs 7.86 on the 10-bracket scale).",
+   "iv": "Smartphone ownership at the 2-year follow-up, binary (1 = owns a smartphone, 0 = does not). Caregiver report to \"Does your child have their own cellphone?\" plus a follow-up item on device type; iPhone or Android counted as a smartphone. 63.6% (6,739/10,588) owned a smartphone at this wave.",
+   "dv": "Three binary outcomes at the 2-year follow-up, each modeled separately: (1) lifetime depression diagnosis (past or current major depressive disorder, persistent depressive disorder, or unspecified depressive disorder) from the computerized KSADS-5; 5.70% overall, 4.52% in non-owners, 6.38% in owners. (2) Obesity, BMI (measured height and weight) above the sex- and age-specific CDC 95th percentile, extreme BMI z-scores (< -4 or > 8) excluded; 15.57% overall, 11.80% non-owners, 17.73% owners. (3) Insufficient sleep, youth-reported average nightly sleep < 9 hours from the Munich Chronotype Questionnaire (outliers beyond mean +/- 4 SD removed); 41.29% overall, 31.02% non-owners, 47.16% owners (Table 1, p. 17).",
    "covariates": [
     {
      "name": "Age",
-     "detail": "At assessment (entered from Model 1 onward)"
+     "detail": "Age at assessment (Model 1 and Model 2)"
     },
     {
      "name": "Sex assigned at birth",
-     "detail": "Entered from Model 1 onward"
+     "detail": "Model 1 and Model 2"
     },
     {
      "name": "Household income",
-     "detail": "Added in Model 2"
+     "detail": "Caregiver-reported, 10 brackets (<$5,000 to >$200,000), entered as numeric"
     },
     {
-     "name": "Parent years of education",
-     "detail": "Highest of the parents; Model 2"
+     "name": "Parent education",
+     "detail": "Highest level attained by either parent (eMethods 3 calls it parent years of education; Table 1 shows 5 categories)"
     },
     {
-     "name": "Black race",
-     "detail": "Parent-reported; Model 2"
+     "name": "Race",
+     "detail": "Caregiver-reported; eMethods 3 lists Black race as the race covariate"
     },
     {
-     "name": "Hispanic ethnicity",
-     "detail": "Parent-reported; Model 2"
-    },
-    {
-     "name": "Ownership of other devices",
-     "detail": "Tablets, laptops, iPods and smartwatches; Model 2"
+     "name": "Ethnicity",
+     "detail": "Caregiver-reported Hispanic ethnicity"
     },
     {
      "name": "Pubertal status",
-     "detail": "Self-reported at time of assessment, 1-5 Likert scale from prepubertal to post-pubertal; Model 2"
+     "detail": "Self-reported, 1-5 scale (pre-, early, mid-, late, post-pubertal)"
     },
     {
      "name": "Parental monitoring",
-     "detail": "Youth-reported mean of 5 Parental Monitoring Scale items, each 1 (never) to 5 (always or almost always); Model 2"
+     "detail": "Mean of five youth-reported Parental Monitoring items, each 1 (never) to 5 (always or almost always)"
+    },
+    {
+     "name": "Ownership of other devices",
+     "detail": "Tablet, laptop, iPod, smartwatch (separate indicators)"
+    },
+    {
+     "name": "Family",
+     "detail": "Random intercept, nested within site"
+    },
+    {
+     "name": "Research site",
+     "detail": "Random intercept (21 sites)"
     }
    ],
-   "equation": "logit(P(Outcome[i,j]=1)) = b0 + b1*SmartphoneOwnership[i] + b2*age + b3*sex + b4*household_income + b5*parent_education + b6*Black + b7*Hispanic + b8*other_device_ownership + b9*pubertal_status + b10*parental_monitoring + u[j], where u[j] is the random effect(s). The random-effect structure (e.g., site and/or family) is not described in the material on file. b1 is the log-odds ratio for owners vs non-owners.",
-   "estimation": "Mixed-effects logistic regression in R 4.5.0 (eMethods 3). Covariates were added stepwise: Model 1 had age and sex, and Model 2 added the full set. The random effects, weighting, alpha and multiple-comparison correction are not described in the supplement on file. Analytic code is posted at github.com/barzilab1/ABCD_smartphone_health. Sensitivity analyses: (a) fully adjusted models excluding youth with problematic smartphone use, defined as a mean MPIQ score above 5 on the 1-7 scale (Supplemental Table S12; eMethods 4); (b) E-values for the Model 2 logistic models (Supplemental Table S13; eMethods 5); (c) continuous outcomes (BMI, sleep hours, psychopathology; Supplemental Tables S14-S16); (d) repeated measures across 3 timepoints (Supplemental Tables S23-S25). The abstract reports that results were consistent across several sensitivity analyses. No effect-modification tests appear in the material on file.",
+   "equation": "logit(P(outcome[i]=1)) = b0 + b1*smartphone_owner[i] + b2*age + b3*sex + b4*income + b5*parent_ed + b6*black_race + b7*hispanic + b8*puberty + b9*parental_monitoring + b10*tablet + b11*laptop + b12*iPod + b13*smartwatch + u_site + u_family(site). OR = exp(b1).",
+   "estimation": "Mixed-effects logistic regression in R 4.5.0, package lme4 (glmer). Nested random intercepts for family within research site. No survey weights reported. Two models per outcome built stepwise: Model 1 adjusts for age and sex only; Model 2 (extracted here) is the fully adjusted model the authors interpret. Listwise deletion of missing data. Bonferroni-type threshold P < 0.017 (0.05/3) for the three outcomes. Sex x exposure interactions tested; none significant in the main analyses. Sensitivity analyses: excluding youth with problematic smartphone use (MPIQ mean > 5; Supplemental Table S12), E-values for Model 2 (S13), linear mixed models with continuous outcomes (S14-S16), and longitudinal models pooling 2-, 3- and 4-year follow-ups (S23-S25); all described as similar in direction and significance.",
    "native_metric": "OR",
    "iv_axis": [
     {
-     "id": "own",
-     "label": "Smartphone ownership (age 12)",
-     "meta": "owners n=6,739 vs non-owners n=3,849",
+     "id": "own_smartphone",
+     "label": "Owns a smartphone (vs not)",
+     "meta": "6,739 owners vs 3,849 non-owners at age 12",
      "sd_iv": null
     }
    ],
    "dv_axis": [
     {
      "id": "depression",
-     "label": "Depression (KSADS-5 diagnosis)",
+     "label": "Lifetime depression diagnosis (KSADS)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.0452
     },
     {
      "id": "obesity",
-     "label": "Obesity (BMI >= 95th pct)",
+     "label": "Obesity (BMI > 95th percentile)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.118
     },
     {
-     "id": "insuff_sleep",
-     "label": "Insufficient sleep (<9 h)",
+     "id": "insufficient_sleep",
+     "label": "Insufficient sleep (< 9 h/night)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.3102
     }
    ],
    "estimates": [
     {
-     "iv": "own",
+     "iv": "own_smartphone",
      "dv": "depression",
      "OR": 1.31,
      "OR_lo": 1.05,
      "OR_hi": 1.63,
-     "p": null,
-     "p_label": null,
+     "p": 0.016,
+     "p_label": "0.016",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "The p-value is not in the abstract. Significance is inferred from the 95% CI excluding 1. Model step assumed to be Model 2 (fully adjusted), because the abstract states the models were adjusted for all covariates; verify against the main-text table."
+     "location": "Results p. 5; Figure 2A Model 2; Supplemental Table S3",
+     "note": "Significant at the paper's P < 0.017 threshold."
     },
     {
-     "iv": "own",
+     "iv": "own_smartphone",
      "dv": "obesity",
      "OR": 1.4,
      "OR_lo": 1.2,
      "OR_hi": 1.63,
      "p": null,
-     "p_label": null,
+     "p_label": "<.001",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "The p-value is not in the abstract. Significance is inferred from the CI. Model step assumed to be Model 2."
+     "location": "Results p. 5-6; Figure 2A Model 2; Supplemental Table S4"
     },
     {
-     "iv": "own",
-     "dv": "insuff_sleep",
+     "iv": "own_smartphone",
+     "dv": "insufficient_sleep",
      "OR": 1.62,
      "OR_lo": 1.46,
      "OR_hi": 1.79,
      "p": null,
-     "p_label": null,
+     "p_label": "<.001",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "The p-value is not in the abstract. Significance is inferred from the CI. Model step assumed to be Model 2."
+     "location": "Results p. 6; Figure 2A Model 2; Supplemental Table S5"
     }
    ]
   },
   {
    "model_id": "M2",
-   "name": "Mixed-effects logistic regression of binary health outcomes at age 12 on age of first smartphone acquisition (per year earlier) among owners, fully adjusted (Model 2)",
-   "location_in_paper": "Abstract (Results); main-text table not on file; Supplemental Tables S6-S8 (Excel, not on file); methods in Supplemental eMethods 2-3 (supplement pp. 3-4); age distribution in Supplemental Figure S2 (supplement p. 10).",
-   "design": "Cross-sectional analysis (Analysis 2) at the 2-year follow-up (about age 12), limited to youth who owned a smartphone by that visit. The IV is the caregiver-reported age at first smartphone acquisition, which is retrospective. Outcomes are measured at the 2-year follow-up. Each participant contributes one observation.",
-   "sample": "Smartphone owners at the 2-year follow-up, n = 6,739 (eMethods 2; abstract). Demographic breakdowns are not available in the material on file. Supplemental Figure S2 pools the age-of-onset reports across the 2-, 3- and 4-year waves: median age 11, range 4-15, interquartile range 10-12.",
-   "iv": "Age of first smartphone acquisition in years, reported by the caregiver. Continuous. The abstract expresses the OR per earlier year of acquisition, so the OR is either for 1 year younger or the coefficient was sign-reversed. No SD is reported in the material on file; Figure S2 gives only median 11, IQR 10-12 and range 4-15, pooled across waves.",
-   "dv": "Same three binary outcomes as M1: KSADS-5 depression diagnosis, obesity (BMI at or above the CDC 95th percentile) and insufficient sleep (<9 h, Munich Chronotype Questionnaire), all at the 2-year follow-up.",
+   "name": "Mixed-effects logistic regression of binary health outcomes at age 12 on age of first smartphone acquisition among owners, fully adjusted Model 2",
+   "location_in_paper": "Analysis 2. Results p. 6 (adjusted Model 2 ORs printed in text); Figure 2B (p. 15, Model 2 in red); full output in Supplemental Tables S6-S8 (appendix Excel file, not available). Interpreted in Abstract and Discussion p. 7.",
+   "design": "Cross-sectional, restricted to youth who already owned a smartphone at the ABCD 2-year follow-up. Age of acquisition is retrospectively caregiver-reported at that visit; outcomes measured at the same visit. One observation per child. A longitudinal version using 2-, 3- and 4-year follow-ups was run as a sensitivity analysis only.",
+   "sample": "ABCD Release 5.1, 2-year follow-up. Smartphone owners, n = 6,739 (eMethods 2; Table 1 owner column): mean age 12.13 (SD 0.66); 50.53% female sex assigned at birth; race 71.58% White, 24.65% Black, 5.88% Asian, 3.98% American Indian/Alaska Native, 12.90% mixed; 21.46% Hispanic; 4,313 iPhone, 2,426 Android. Listwise deletion; per-outcome N is in Supplemental Tables S6-S8 (not available). Median age of acquisition 11 years (range 4-13, IQR 10-11; Figure 1, p. 14).",
+   "iv": "Age at first smartphone acquisition, continuous in years, caregiver report to \"How old was your child when he/she got their own cellphone?\". The paper reports ORs inverted (1/OR and inverted CI bounds) so that each estimate is the odds ratio per one year EARLIER acquisition. No mean or SD reported; median 11, range 4-13, IQR 10-11.",
+   "dv": "Same three binary outcomes at the 2-year follow-up as M1 (KSADS lifetime depression diagnosis; obesity, BMI > 95th percentile; insufficient sleep < 9 h/night), restricted to owners. Prevalence among owners (Table 1): depression 6.38%, obesity 17.73%, insufficient sleep 47.16%.",
    "covariates": [
     {
-     "name": "(same 9 as M1 Model 2)",
-     "detail": "Age, sex assigned at birth, household income, parent education, Black race, Hispanic ethnicity, ownership of other devices, pubertal status, parental monitoring"
+     "name": "(same as M1)",
+     "detail": "Age, sex assigned at birth, household income, parent education, Black race, Hispanic ethnicity, pubertal status, parental monitoring, ownership of tablet / laptop / iPod / smartwatch; random intercepts for family nested in site"
     }
    ],
-   "equation": "logit(P(Outcome[i,j]=1)) = b0 + b1*(earlier age of first smartphone, years)[i] + b2*age + b3*sex + b4*household_income + b5*parent_education + b6*Black + b7*Hispanic + b8*other_device_ownership + b9*pubertal_status + b10*parental_monitoring + u[j]. exp(b1) is reported as the OR for each earlier year of acquisition.",
-   "estimation": "Same as M1: mixed-effects logistic regression in R 4.5.0, stepwise Model 1 then Model 2. The random-effect structure, alpha and multiple-comparison correction are not described in the material on file. Sensitivity analyses are the same as M1: problematic-use exclusion (S12), E-values (S13), continuous outcomes (S17-S19) and repeated measures (S26-S28).",
+   "equation": "logit(P(outcome[i]=1)) = b0 + b1*age_first_smartphone[i] + b2*age + b3*sex + b4*income + b5*parent_ed + b6*black_race + b7*hispanic + b8*puberty + b9*parental_monitoring + b10..b13*other_devices + u_site + u_family(site). Reported OR = exp(-b1), i.e. per 1 year earlier acquisition.",
+   "estimation": "Mixed-effects logistic regression, R 4.5.0, lme4. Random intercepts for family nested within site. No weights reported. Model 1 (age, sex) and Model 2 (fully adjusted, extracted here). Listwise deletion. P < 0.017 threshold for three outcomes. Sex x exposure interactions tested, none significant. Sensitivity analyses as in M1: excluding problematic smartphone users (S12), E-values (S13), continuous outcomes (S17-S19), longitudinal 3-wave models (S26-S28).",
    "native_metric": "OR",
    "iv_axis": [
     {
-     "id": "age_acq",
-     "label": "Age of first smartphone (per year earlier)",
-     "meta": "median 11, IQR 10-12 (Fig S2, pooled waves)",
+     "id": "age_acq_earlier",
+     "label": "Age of first smartphone (per 1 year earlier)",
+     "meta": "Median 11 y, IQR 10-11, range 4-13; owners only",
      "sd_iv": null
     }
    ],
    "dv_axis": [
     {
      "id": "depression",
-     "label": "Depression (KSADS-5 diagnosis)",
+     "label": "Lifetime depression diagnosis (KSADS)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.0638
     },
     {
      "id": "obesity",
-     "label": "Obesity (BMI >= 95th pct)",
+     "label": "Obesity (BMI > 95th percentile)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.1773
     },
     {
-     "id": "insuff_sleep",
-     "label": "Insufficient sleep (<9 h)",
+     "id": "insufficient_sleep",
+     "label": "Insufficient sleep (< 9 h/night)",
      "sd_dv": null,
-     "p0": null
+     "p0": 0.4716
     }
    ],
    "estimates": [
     {
-     "iv": "age_acq",
+     "iv": "age_acq_earlier",
      "dv": "depression",
-     "OR": null,
-     "OR_lo": null,
-     "OR_hi": null,
-     "p": null,
-     "p_label": null,
+     "OR": 1.03,
+     "OR_lo": 0.94,
+     "OR_hi": 1.12,
+     "p": 0.503,
+     "p_label": "0.503",
      "sig": false,
-     "location": "Main-text table / Supplemental Table S6-S8 (not on file)",
-     "note": "This estimate is not reported in the abstract. The abstract names only obesity and insufficient sleep as associated with younger acquisition, which implies the depression estimate was non-significant. sig=false is inferred from that and must be verified against the main-text table."
+     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S6",
+     "note": "Inverted OR (per year earlier). Model 1 (age and sex only) gave OR 1.08 (1.0-1.15), P = 0.046, not significant at the 0.017 threshold."
     },
     {
-     "iv": "age_acq",
+     "iv": "age_acq_earlier",
      "dv": "obesity",
      "OR": 1.09,
      "OR_lo": 1.02,
      "OR_hi": 1.16,
-     "p": null,
-     "p_label": null,
+     "p": 0.007,
+     "p_label": "0.007",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "OR for each earlier year of acquisition. The p-value is not in the abstract."
+     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S7",
+     "note": "Inverted OR (per year earlier)."
     },
     {
-     "iv": "age_acq",
-     "dv": "insuff_sleep",
+     "iv": "age_acq_earlier",
+     "dv": "insufficient_sleep",
      "OR": 1.08,
      "OR_lo": 1.02,
      "OR_hi": 1.12,
-     "p": null,
-     "p_label": null,
+     "p": 0.005,
+     "p_label": "0.005",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "OR for each earlier year of acquisition. The p-value is not in the abstract. The CI is asymmetric on the log scale (1.02-1.12 around 1.08), so check it against the main-text table."
+     "location": "Results p. 6; Figure 2B Model 2; Supplemental Table S8",
+     "note": "Inverted OR (per year earlier). The abstract prints the CI as 1.02-1.12, same as Results."
     }
    ]
   },
   {
    "model_id": "M3",
-   "name": "Mixed-effects logistic regression of binary health outcomes at age 13 on smartphone acquisition in the past year among non-owners at age 12, adjusted for the prior-year outcome (Model 2)",
-   "location_in_paper": "Abstract (Results); main-text table not on file; Supplemental Tables S9-S11 (Excel, not on file); methods in Supplemental eMethods 1-3 (supplement pp. 3-4).",
-   "design": "Prospective analysis over one year (Analysis 3). The sample is limited to youth who did not own a smartphone at the 2-year follow-up (about age 12). The exposure is acquiring a smartphone by the 3-year follow-up. Outcomes are measured at the 3-year follow-up (about age 13), and each model adjusts for the same health measure at the 2-year follow-up. The exposure and outcome are both assessed at the 3-year visit, so the exposure is not strictly before the outcome. Each participant contributes one observation.",
-   "sample": "Youth without a smartphone at the 2-year follow-up, n = 3,486 (eMethods 2; abstract). Of these, 1,546 had acquired a smartphone in the past year and 1,940 had not. Demographic breakdowns are not available in the material on file.",
-   "iv": "Smartphone acquisition between the 2-year and 3-year follow-ups, reported by the caregiver. Binary: 1 = acquired (n = 1,546), 0 = did not (n = 1,940; reference).",
-   "dv": "Binary outcomes at the 3-year follow-up. (1) Clinical-level psychopathology: the KSADS mood module was not given at this wave, so depression was replaced by a youth self-reported Brief Problem Monitor T-score of 65 or higher, covering internalizing, externalizing and attention symptoms (eMethods 1). (2) Insufficient sleep: <9 h on the Munich Chronotype Questionnaire. (3) Obesity: BMI at or above the 95th percentile. According to eMethods 2, all three outcomes were analyzed, but the abstract reports estimates only for psychopathology and insufficient sleep.",
+   "name": "Mixed-effects logistic regression of binary health outcomes at age 13 on past-year smartphone acquisition among non-owners at age 12, adjusted for prior-year outcome",
+   "location_in_paper": "Analysis 3. Results p. 6 (adjusted Model 2 ORs printed in text); Figure 3 (p. 16, Model 2 in red); Table 2 (p. 19) sample description; full output in Supplemental Tables S9-S11 (appendix Excel file, not available). Interpreted in Abstract and Discussion p. 7.",
+   "design": "Prospective two-wave cohort. Restricted to youth without a smartphone at the 2-year follow-up (age ~12) who were also assessed at the 3-year follow-up (age ~13). Exposure = acquired a smartphone between the two visits (caregiver said no at 2-year, yes at 3-year). Outcomes measured at the 3-year follow-up; the same outcome measured at the 2-year follow-up is a covariate, so the estimate is the association with outcome status a year later net of pre-exposure status. Single follow-up, no repeated measures.",
+   "sample": "ABCD Release 5.1. n = 3,486 youth without a smartphone at the 2-year follow-up who participated in the 3-year follow-up: 1,546 acquired a smartphone (1,017 iPhone, 529 Android) and 1,940 did not (Table 2, p. 19). Mean age at 2-year follow-up 11.82 (SD 0.63); 41.82% female sex assigned at birth; race 83.10% White, 12.08% Black, 7.23% Asian, 2.70% American Indian/Alaska Native, 10.99% mixed; 15.83% Hispanic. Acquirers were more often female (44.18% vs 39.95%), Black (14.29% vs 10.31%), Hispanic (17.85% vs 14.23%), and had higher BMI at age 12 (20.14 vs 19.44). Listwise deletion; per-outcome N in Supplemental Tables S9-S11 (not available).",
+   "iv": "Past-year smartphone acquisition, binary (1 = no smartphone at 2-year follow-up and caregiver-reported smartphone at 3-year follow-up; 0 = still no smartphone at 3-year follow-up). 1,546 vs 1,940.",
+   "dv": "Three binary outcomes at the 3-year follow-up, modeled separately: (1) clinical-threshold psychopathology, youth self-report Brief Problem Monitor (internalizing, externalizing, attention) T-score >= 65 (used instead of depression because the KSADS mood module was not given at the 3-year follow-up); (2) obesity, BMI > CDC 95th percentile; (3) insufficient sleep, < 9 h/night. Outcome prevalence at the 3-year follow-up by group is not reported; Table 2 gives 2-year (pre-exposure) values: clinical-threshold psychopathology 7.22% non-acquirers vs 8.15% acquirers; obesity 10.21% vs 13.58%; sleep duration 9.47 (SD 1.12) vs 9.30 (SD 1.15) hours.",
    "covariates": [
     {
-     "name": "(same 9 as M1 Model 2)",
-     "detail": "Age, sex assigned at birth, household income, parent education, Black race, Hispanic ethnicity, ownership of other devices, pubertal status, parental monitoring"
+     "name": "(same as M1)",
+     "detail": "Age, sex assigned at birth, household income, parent education, Black race, Hispanic ethnicity, pubertal status, parental monitoring, ownership of tablet / laptop / iPod / smartwatch"
     },
     {
-     "name": "Same health measure at 2-year follow-up",
-     "detail": "Baseline (prior-year) value of the outcome being tested (eMethods 3)"
+     "name": "Prior-year outcome",
+     "detail": "The index outcome measured at the 2-year follow-up (pre-exposure)"
+    },
+    {
+     "name": "Family and site",
+     "detail": "Random intercepts, family nested in site"
     }
    ],
-   "equation": "logit(P(Outcome_3yr[i,j]=1)) = b0 + b1*AcquiredSmartphonePastYear[i] + b2*Outcome_2yr[i] + b3*age + b4*sex + b5*household_income + b6*parent_education + b7*Black + b8*Hispanic + b9*other_device_ownership + b10*pubertal_status + b11*parental_monitoring + u[j].",
-   "estimation": "Same as M1: mixed-effects logistic regression in R 4.5.0, stepwise Model 1 then Model 2, with the 2-year value of the outcome added. The random-effect structure, alpha and multiple-comparison correction are not described in the material on file. Sensitivity analyses: problematic-use exclusion (S12), E-values (S13) and continuous outcomes (S20-S22).",
+   "equation": "logit(P(outcome_3yr[i]=1)) = b0 + b1*acquired_past_year[i] + b2*outcome_2yr[i] + b3*age + b4*sex + b5*income + b6*parent_ed + b7*black_race + b8*hispanic + b9*puberty + b10*parental_monitoring + b11..b14*other_devices + u_site + u_family(site). OR = exp(b1).",
+   "estimation": "Mixed-effects logistic regression, R 4.5.0, lme4. Random intercepts for family nested in site. No weights reported. Model 1 (age, sex) and Model 2 (fully adjusted plus prior-year outcome; extracted here). Listwise deletion. P < 0.017 threshold. Sex x exposure interactions tested, none significant. Sensitivity analyses: excluding problematic smartphone users (S12), E-values (S13), continuous outcomes (S20-S22). The authors describe this design as providing higher-quality causal evidence because both groups share a pre-exposure period.",
    "native_metric": "OR",
    "iv_axis": [
     {
-     "id": "acq_pastyr",
-     "label": "Acquired smartphone in past year (age 12->13)",
-     "meta": "acquirers n=1,546 vs non-acquirers n=1,940",
+     "id": "acquired_past_year",
+     "label": "Acquired smartphone in past year (vs not)",
+     "meta": "1,546 acquirers vs 1,940 non-acquirers, age 12 to 13",
      "sd_iv": null
     }
    ],
    "dv_axis": [
     {
-     "id": "psychopath",
-     "label": "Clinical psychopathology (BPM T >= 65)",
+     "id": "clinical_psychopathology",
+     "label": "Clinical-threshold psychopathology (BPM T >= 65)",
      "sd_dv": null,
      "p0": null
     },
     {
      "id": "obesity",
-     "label": "Obesity (BMI >= 95th pct)",
+     "label": "Obesity (BMI > 95th percentile)",
      "sd_dv": null,
      "p0": null
     },
     {
-     "id": "insuff_sleep",
-     "label": "Insufficient sleep (<9 h)",
+     "id": "insufficient_sleep",
+     "label": "Insufficient sleep (< 9 h/night)",
      "sd_dv": null,
      "p0": null
     }
    ],
    "estimates": [
     {
-     "iv": "acq_pastyr",
-     "dv": "psychopath",
+     "iv": "acquired_past_year",
+     "dv": "clinical_psychopathology",
      "OR": 1.57,
      "OR_lo": 1.12,
      "OR_hi": 2.2,
-     "p": null,
-     "p_label": null,
+     "p": 0.009,
+     "p_label": "0.009",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "The p-value is not in the abstract. Adjusted for baseline mental health."
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S9"
     },
     {
-     "iv": "acq_pastyr",
+     "iv": "acquired_past_year",
      "dv": "obesity",
-     "OR": null,
-     "OR_lo": null,
-     "OR_hi": null,
-     "p": null,
-     "p_label": null,
+     "OR": 1.57,
+     "OR_lo": 0.82,
+     "OR_hi": 3.04,
+     "p": 0.176,
+     "p_label": "0.176",
      "sig": false,
-     "location": "Main-text table / Supplemental Table S9-S11 (not on file)",
-     "note": "This estimate is not reported in the abstract. The abstract does not name obesity among the Analysis 3 associations, which implies it was non-significant. sig=false is inferred and must be verified."
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S10"
     },
     {
-     "iv": "acq_pastyr",
-     "dv": "insuff_sleep",
+     "iv": "acquired_past_year",
+     "dv": "insufficient_sleep",
      "OR": 1.5,
      "OR_lo": 1.26,
      "OR_hi": 1.77,
      "p": null,
-     "p_label": null,
+     "p_label": "<0.001",
      "sig": true,
-     "location": "Abstract, Results",
-     "note": "The p-value is not in the abstract. Adjusted for baseline sleep."
+     "location": "Results p. 6; Figure 3 Model 2; Supplemental Table S11"
     }
    ]
   }
  ],
  "excluded_models": [
   {
-   "model": "Model 1 (age + sex only) for Analyses 1-3",
-   "location": "Main-text tables; Supplemental Tables S3-S11 (Excel, not on file)",
-   "why": "This is the first step of the stepwise models. The authors anchor their claims to the fully adjusted Model 2, which is the model used for the E-values (eMethods 5)."
+   "model": "Model 1 (age and sex only) for Analyses 1-3",
+   "location": "Figures 2A, 2B and 3 (blue points); Supplemental Tables S3-S11; Analysis 2 depression value in text p. 6",
+   "why": "Base model in a stepwise build; the authors anchor their claims to the fully adjusted Model 2. The one Model 1 value printed in text (Analysis 2 depression OR 1.08, 1.0-1.15, P = 0.046) is noted on the M2 depression cell."
   },
   {
-   "model": "Fully adjusted Analyses 1-3 excluding youth with problematic smartphone use (MPIQ mean > 5)",
-   "location": "Supplemental Table S12 (Excel, not on file); eMethods 4 (supplement p. 5)",
-   "why": "This is a sensitivity re-estimate of M1-M3 on a restricted sample. The numbers are in the Excel supplement, which is not on file, and the abstract says only that results were consistent. It should be extracted if the authors interpret it in the main text."
+   "model": "Sensitivity: fully adjusted models excluding youth with problematic smartphone use (MPIQ mean > 5)",
+   "location": "Supplemental Table S12 (appendix Excel file)",
+   "why": "Main text only says results were similar in direction and significance; the numbers are in an Excel appendix that is not among the extracted PDFs. Re-check if the Excel file is obtained."
   },
   {
    "model": "E-value analyses",
-   "location": "Supplemental Table S13 (Excel, not on file); eMethods 5 (supplement pp. 5-6)",
-   "why": "E-values measure robustness to unmeasured confounding. They are not new estimates of the phone-outcome association."
+   "location": "Supplemental Table S13; eMethods 5",
+   "why": "Quantify unmeasured confounding needed to explain away Model 2 estimates; not new phone/SM association estimates."
   },
   {
-   "model": "Analyses 1-3 with continuous outcomes (BMI, sleep hours, psychopathology symptoms)",
-   "location": "Supplemental Tables S14-S22 (Excel, not on file)",
-   "why": "These are qualifying phone-IV models (linear mixed models with continuous DVs) and could be extracted as separate cards, but the tables are not in the PDF on file and no numbers are available. Extract them once the Excel supplement is obtained."
+   "model": "Linear mixed models with continuous outcomes (BPM psychopathology score, BMI, hours of sleep) for Analyses 1-3",
+   "location": "Supplemental Tables S14-S22 (appendix Excel file); described p. 5 and p. 6",
+   "why": "Sensitivity analyses described only as similar to main results in the text; coefficients are in the Excel appendix, which is not available. These would be a separate linear spec if the Excel tables are obtained."
   },
   {
-   "model": "Analyses 1-2 across three assessment timepoints (repeated measures, 2-, 3- and 4-year follow-ups)",
-   "location": "Supplemental Tables S23-S28 (Excel, not on file)",
-   "why": "These are qualifying longitudinal sensitivity models, but the tables are not on file and no numbers are available. Extract them once the Excel supplement is obtained."
+   "model": "Longitudinal mixed models for Analyses 1-2 pooling the 2-, 3- and 4-year follow-ups",
+   "location": "Supplemental Figure S2, Supplemental Tables S23-S28 (appendix Excel file); described p. 6 and p. 8",
+   "why": "Sensitivity analyses; numbers not printed in available materials. Text reports a smartphone x sex interaction for sleep (interaction P = 0.001, stronger in girls; Supplemental Table S25) but no stratified ORs are printed."
   },
   {
-   "model": "Correlations among health outcomes",
-   "location": "Supplemental Figure S1 (supplement p. 9)",
-   "why": "These are outcome-outcome correlations (psychopathology, sleep duration, BMI). No phone variable is involved."
+   "model": "Smartphone exposure x sex interaction tests (main analyses)",
+   "location": "Results p. 6 (Sex differences)",
+   "why": "Interaction tests only, all non-significant; no sex-stratified estimates reported."
   },
   {
-   "model": "Comparison of included vs excluded participants",
-   "location": "Supplemental Table S2 (Excel, not on file)",
-   "why": "This is a missing-data attrition comparison, not a phone-outcome association."
+   "model": "Univariate comparisons of owners vs non-owners and acquirers vs non-acquirers",
+   "location": "Tables 1 and 2",
+   "why": "Descriptive t-tests / chi-square tests reported only as p-values; not the specification the authors interpret."
+  },
+  {
+   "model": "Correlations among outcome measures",
+   "location": "Supplemental Figure S1",
+   "why": "Correlations among psychopathology, BMI and sleep; no phone/SM variable."
   }
  ],
  "d_transformation": {
-  "native_metric": "OR",
+  "native_metric": "OR (all three models)",
   "conversion_formula": "d = ln(OR) * sqrt(3) / pi (Chinn 2000), applied to the OR and to each CI bound.",
-  "contrast_type": "M1: smartphone owner vs non-owner at age 12. M2: per 1 year earlier age of first smartphone acquisition. M3: acquired a smartphone in the past year vs did not, among non-owners at age 12.",
-  "transformable": "partial",
-  "notes": "All available estimates are adjusted ORs from mixed-effects logistic models and convert to d with Chinn's formula. p0 is not needed for the OR conversion. Outcome base rates are not in the material on file. Transformability is partial for two reasons. (1) Two cells have no number in the material on file: M2 depression and M3 obesity. (2) The M2 d is per 1 year of acquisition age, and no SD of acquisition age is reported (Figure S2 gives only median 11, IQR 10-12, range 4-15, pooled across waves), so it cannot be rescaled to a per-SD contrast. The M1 and M3 d values are binary-group contrasts, which are comparable in kind to paper 156's group contrasts but not to per-SD d values. All numeric estimates come from the abstract, not the main tables. The full text and the Excel supplement are needed to confirm the values and to add p-values and the missing cells."
+  "contrast_type": "M1: smartphone owner vs non-owner at age 12. M2: per 1 year earlier age of first smartphone acquisition (inverted OR, positive d = earlier acquisition associated with higher odds of the adverse outcome). M3: acquired a smartphone in the past year vs did not, net of the prior-year outcome.",
+  "transformable": true,
+  "notes": "All estimates are adjusted odds ratios printed in the Results text (pp. 5-6) and matching Figures 2-3; no values were read off a figure. Chinn conversion needs no SDs. p0 for M1 is the outcome prevalence in non-owners from Table 1 (p. 17): depression 4.52%, obesity 11.80%, insufficient sleep 31.02%. p0 for M2 is the outcome prevalence among owners from Table 1 (there is no unexposed group for a continuous IV). p0 for M3 is not reported: Table 2 gives only 2-year (pre-exposure) prevalences, not 3-year outcome rates. SD of age at acquisition is not reported (median 11, IQR 10-11), so M2 cannot be put on a per-1-SD basis; its d is per one year earlier. M2 d values are not directly comparable to the group-contrast d values of M1 and M3."
  },
- "extraction_flags": "The PDF on file (docs/pdfs/10.1542_peds.2025-072941.pdf) is not the paper. It is only the 10-page Supplemental Material: eMethods 1-5, references, Fig S1 and Fig S2. The main article text and tables are missing. Supplemental Tables S1-S28 are in a separate Excel file that is also missing. The publisher page returned HTTP 403. All 7 numeric ORs and CIs were therefore copied from the authors' structured abstract (PubMed 41324306, in 00-search/pubmed_results.csv). I checked all 7 against that abstract text programmatically and they match exactly.\n\nA human needs the full article and the Excel supplement to check five things:\n(1) That the abstract ORs are from Model 2 (fully adjusted) rather than Model 1. I assumed Model 2.\n(2) The two cells with no number, M2 age of acquisition to depression and M3 acquisition to obesity. Both are set to sig=false only because the abstract does not name them as associations.\n(3) All p-values, outcome prevalences (p0), sample demographics, ABCD release and random-effect structure. None of these appear in the material on file.\n(4) Whether the continuous-outcome models (S14-S22), the repeated-measures models (S23-S28) and the problematic-use exclusion sensitivity models (S12) are interpreted in the main text. If so, they should become additional cards.\n(5) The M2 insufficient-sleep CI, 1.08 (1.02-1.12), is asymmetric on the log scale. Confirm it against the table.\n\nM3 uses a BPM T-score of 65 or higher (general psychopathology) instead of KSADS depression. In M3 the exposure and the outcome are both assessed at the 3-year visit. No SD is available for age at acquisition, so the M2 d stays per year rather than per SD."
+ "extraction_flags": "The PDF at the items.json path is already the 19-page NIH author manuscript (modified Oct 1 02:43), so I extracted from it. (1) Supplemental Tables S1-S28 are in an Excel appendix that is not among the files I had. All 9 estimates were copied from the Results text (pp. 5-6) and checked against Figures 2-3 and the abstract, but these are not available: exact per-outcome Ns (listwise deletion), the problematic-use exclusion (S12), the continuous-outcome linear mixed models (S14-S22) and the 3-wave longitudinal models (S23-S28). If the Excel file is obtained, the continuous-outcome models could become additional model cards. (2) M2 ORs are inverted by the authors (per 1 year EARLIER acquisition). The SD of age at acquisition is not reported (median 11, IQR 10-11), so d for M2 is per year, not per SD. (3) p0 for M1 is the non-owner prevalence from Table 1. For M2 it is the owner prevalence, since there is no unexposed group. For M3 it is null, because 3-year outcome rates are not reported. Chinn's OR-to-d conversion does not need p0. (4) The race covariate is described as 'race and ethnicity' in the main text but as 'Black race and Hispanic ethnicity' in eMethods 3; I followed eMethods. (5) Three separate cards were used because the analytic samples differ (all youth, owners only, and non-owners at age 12), and M3 adds the prior-year outcome. (6) p-values printed as '<.001' are stored as p = null with p_label."
 }
