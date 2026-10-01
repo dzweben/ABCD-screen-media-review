@@ -66,7 +66,7 @@
     {
      "id": "st_tumblr",
      "label": "Screentime Tumblr [18]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Tumblr (youth report, 0-10; Table S1 item screentime_smq_tumblr); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -108,7 +108,7 @@
     {
      "id": "st_youtube",
      "label": "Screentime YouTube [16]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on YouTube (youth report, 0-10; Table S1 item screentime_smq_youtube); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -120,13 +120,13 @@
     {
      "id": "st_twitter",
      "label": "Screentime Twitter [15]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Twitter (youth report, 0-10; Table S1 item screentime_smq_twitter); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
      "id": "st_reddit",
      "label": "Screentime Reddit [19]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Reddit (youth report, 0-10; Table S1 item screentime_smq_reddit); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -138,13 +138,13 @@
     {
      "id": "st_tiktok",
      "label": "Screentime TikTok [21]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on TikTok (youth report, 0-10; Table S1 item screentime_smq_musical_ly); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
      "id": "st_other_apps",
      "label": "Screentime other apps [22]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Other (youth report, 0-10; Table S1 item screentime_smq_other); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -162,7 +162,7 @@
     {
      "id": "st_facebook",
      "label": "Screentime Facebook [12]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Facebook (youth report, 0-10; Table S1 item screentime_smq_facebook); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -186,7 +186,7 @@
     {
      "id": "st_snapchat",
      "label": "Screentime Snapchat [14]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Snapchat (youth report, 0-10; Table S1 item screentime_smq_snapchat); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -210,7 +210,7 @@
     {
      "id": "st_instagram",
      "label": "Screentime Instagram [13]",
-     "meta": "app-specific screentime",
+     "meta": "number of accounts on Instagram (youth report, 0-10; Table S1 item screentime_smq_instagram); Fig. 2B labels it 'Screentime'",
      "sd_iv": null
     },
     {
@@ -236,6 +236,36 @@
      "label": "Screentime videochat weekday [3]",
      "meta": "Youth Screen Time Survey",
      "sd_iv": null
+    },
+    {
+     "id": "parent_follow",
+     "label": "Parent follows child on social media [10]",
+     "meta": "parent report; screentime_following_child_p, 1=Yes/0=No",
+     "sd_iv": null
+    },
+    {
+     "id": "acct_pinterest",
+     "label": "Number of Pinterest accounts [17]",
+     "meta": "youth report; screentime_smq_pinterest, 0-10",
+     "sd_iv": null
+    },
+    {
+     "id": "top_instagram",
+     "label": "Top app Instagram [23]",
+     "meta": "youth report; most-used SM site is Instagram, 1=Yes/0=No",
+     "sd_iv": null
+    },
+    {
+     "id": "top_snapchat",
+     "label": "Top app Snapchat [24]",
+     "meta": "youth report; most-used SM site is Snapchat, 1=Yes/0=No",
+     "sd_iv": null
+    },
+    {
+     "id": "top_youtube",
+     "label": "Top app YouTube [25]",
+     "meta": "youth report; most-used SM site is YouTube, 1=Yes/0=No",
+     "sd_iv": null
     }
    ],
    "dv_axis": [
@@ -257,7 +287,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #9 screentime_smq_secret, 1=Yes/0=No.",
      "iv_type": "binary",
      "se": null
     },
@@ -271,7 +301,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Discussion p. 6 (text); Fig. 2B (p. 4); Supplementary Table S1",
-     "note": "Text: public (vs private) account associated with 'estimate = 2.13 T-score points higher on the BPM on average'. CI not printed in text (shown only graphically in Fig. 2B). Binary exposure, so B is an adjusted mean difference in BPM T-score points. [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure, so d = B/SD_DV needs no SD_IV; B = 2.13 (Discussion p.6) has no CI/SE/p/t printed anywhere in the PDF. [audit 2026-10-01] B = 2.13 verified against Discussion p. 6; CI, SE, exact p, t, N not printed in PDF; no supplement file available.",
+     "note": "Text: public (vs private) account associated with 'estimate = 2.13 T-score points higher on the BPM on average'. CI not printed in text (shown only graphically in Fig. 2B). Binary exposure, so B is an adjusted mean difference in BPM T-score points. [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure, so d = B/SD_DV needs no SD_IV; B = 2.13 (Discussion p.6) has no CI/SE/p/t printed anywhere in the PDF. [audit 2026-10-01] B = 2.13 verified against Discussion p. 6; CI, SE, exact p, t, N not printed in PDF; no supplement file available. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #38 screentime_smq_account, 1=Public/0=Private, \"Reverse coded for analysis\".",
      "iv_type": "binary",
      "se": null
     },
@@ -285,7 +315,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #18 screentime_smq_tumblr = number of Tumblr accounts, 0-10 (a count, not screentime).",
      "se": null
     },
     {
@@ -298,7 +328,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #11 screentime_secs_media_p, 1=Yes/0=No.",
      "iv_type": "binary",
      "se": null
     },
@@ -312,7 +342,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #33 screentime_smqa6, 1=Never-6=Very often.",
      "se": null
     },
     {
@@ -325,7 +355,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #30 screentime_smqa3, 1-6.",
      "se": null
     },
     {
@@ -338,7 +368,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #29 screentime_smqa2, 1-6.",
      "se": null
     },
     {
@@ -351,7 +381,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #32 screentime_smqa5, 1-6.",
      "se": null
     },
     {
@@ -364,7 +394,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #31 screentime_smqa4, 1-6.",
      "se": null
     },
     {
@@ -377,7 +407,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #16 screentime_smq_youtube = number of YouTube accounts, 0-10.",
      "se": null
     },
     {
@@ -390,7 +420,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #28 screentime_smqa1, 1-6.",
      "se": null
     },
     {
@@ -403,7 +433,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #15 screentime_smq_twitter = number of Twitter accounts, 0-10.",
      "se": null
     },
     {
@@ -416,7 +446,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #19 screentime_smq_reddit = number of Reddit accounts, 0-10.",
      "se": null
     },
     {
@@ -429,7 +459,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #36 screentime_sq13, 1=0 nights-4=5-7 nights.",
      "se": null
     },
     {
@@ -442,7 +472,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #21 screentime_smq_musical_ly = number of TikTok accounts, 0-10.",
      "se": null
     },
     {
@@ -455,7 +485,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #22 screentime_smq_other = number of other accounts, 0-10.",
      "se": null
     },
     {
@@ -468,7 +498,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #8 screentime_smq_soc_med, hours/day 0-24, outliers >7h removed.",
      "se": null
     },
     {
@@ -481,7 +511,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #39 screentime_phone3, 1-7 agreement.",
      "se": null
     },
     {
@@ -494,7 +524,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #12 screentime_smq_facebook = number of Facebook accounts, 0-10.",
      "se": null
     },
     {
@@ -507,7 +537,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #34 screentime_sq7, 1=0 nights-4=5-7 nights.",
      "se": null
     },
     {
@@ -520,7 +550,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #6 screentime_12_wknd, hours 0-24, outliers >9h removed.",
      "se": null
     },
     {
@@ -533,7 +563,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Binary exposure: once B is obtained from Table S1, d = B/10 needs no SD_IV. [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #27 screentime_smq_use_most_TikTok, 1=Yes/0=No.",
      "iv_type": "binary",
      "se": null
     },
@@ -547,7 +577,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #14 screentime_smq_snapchat = number of Snapchat accounts, 0-10.",
      "se": null
     },
     {
@@ -560,7 +590,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #41 screentime_smq_following, count, outliers >5000 removed.",
      "se": null
     },
     {
@@ -573,7 +603,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #2 screentime_5_wkdy, hours 0-24, outliers >7h removed.",
      "se": null
     },
     {
@@ -586,7 +616,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #5 screentime_11_wknd, hours 0-24, outliers >8h removed.",
      "se": null
     },
     {
@@ -599,7 +629,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #13 screentime_smq_instagram = number of Instagram accounts, 0-10.",
      "se": null
     },
     {
@@ -612,7 +642,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #35 screentime_sq8, 1=0 nights-4=5-7 nights.",
      "se": null
     },
     {
@@ -625,7 +655,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #40 screentime_smq_followers, count, outliers >5000 removed.",
      "se": null
     },
     {
@@ -638,7 +668,7 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #7 screentime_14_wknd, hours 0-24, outliers >7h removed.",
      "se": null
     },
     {
@@ -651,8 +681,77 @@
      "p_label": "FDR-corrected p < 0.05",
      "sig": true,
      "location": "Fig. 2B (forest plot, p. 4); numeric values in Supplementary Table S1 (not bundled in PDF)",
-     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF.",
+     "note": "Coefficient and 95% CI are shown only graphically in Fig. 2B; Table S1 is in the online supplement, which was not available. Value left null rather than read off the plot. Listed among the 35 FDR-significant exposures (positive coefficient = higher BPM T-score). [complete-stage check] Checked full 10-page PDF: Abstract p.1, Methods pp.3, Results pp.3-6 (text), Table 1 p.4 (demographics only; no exposure or BPM descriptives), Fig. 2A/2B p.4 (Manhattan and forest plots; points and CI whiskers are unlabelled, values not read off plot), Table 2 p.5 (exposomic score model only), Fig. 3 p.5, Discussion pp.6-7. No supplementary file is bundled in docs/pdfs for this DOI. Per-exposure B, 95% CI, SE, exact p, t and analytic N, plus exposure SDs/units, are printed only in online Supplementary Table S1 (not available). Continuous exposure: SD_IV also not printed (only in Supplement). [audit 2026-10-01] Re-read all 10 pp. of the PDF (text layer + rendered p.4 Fig. 2B at 400 dpi); no file with stem 10.1038_s44277-024-00006-9_supplement exists in docs/pdfs. Fig. 2B label and Table S1 number confirmed; no numeric B/CI/SE/p/t/N printed for this exposure anywhere in the PDF. [complete-stage 2026-10-01, supplement now bundled] Read bundled supplement (10.1038_s44277-024-00006-9_supplement.docx; text in supplement_text/196_supplement.txt) in full: Supplementary Methods, Table S1, Tables S2-S8, Fig. S1-S2. Supplement Table S1 is a VARIABLE LIST only (item text, scoring, outlier rule, missing N in discovery sample, bold = FDR-significant); it prints no ExWAS coefficients, CIs, SEs, t or exact p. Tables S2-S8 are composite exposomic-score models only. Fig. S1 is an exposure correlation heatmap (image), Fig. S2 marginal R2 bars. No exposure means/SDs printed anywhere (Table 1 p.4 gives only non-social screentime and adversity SDs). B, CI, SE, p and sd_iv therefore remain null; values appear only graphically in Fig. 2B (unlabelled bars, not read). Item coding per Table S1: #3 screentime_8_wkdy, hours 0-24, outliers >5h removed.",
      "se": null
+    },
+    {
+     "iv": "parent_follow",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "se": null,
+     "p": null,
+     "p_label": "FDR-corrected p >= 0.05 (not significant)",
+     "sig": false,
+     "location": "Supplement Table S1 (item not bolded/asterisked = not FDR-significant); not plotted in Fig. 2B (p. 4)",
+     "note": "Retained ExWAS exposure that did not survive FDR correction (Table S1 note: bolded = FDR p<.05; 35 of 41 significant, Results p. 4). No coefficient, CI, SE, t, exact p or N is printed in the main PDF (Fig. 2B shows only the 35 significant exposures) or in the supplement (Table S1 is a variable list; Tables S2-S8 are composite-score models). Added at audit as a null-result cell; B left null.",
+     "iv_type": "binary"
+    },
+    {
+     "iv": "acct_pinterest",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "se": null,
+     "p": null,
+     "p_label": "FDR-corrected p >= 0.05 (not significant)",
+     "sig": false,
+     "location": "Supplement Table S1 (item not bolded/asterisked = not FDR-significant); not plotted in Fig. 2B (p. 4)",
+     "note": "Retained ExWAS exposure that did not survive FDR correction (Table S1 note: bolded = FDR p<.05; 35 of 41 significant, Results p. 4). No coefficient, CI, SE, t, exact p or N is printed in the main PDF (Fig. 2B shows only the 35 significant exposures) or in the supplement (Table S1 is a variable list; Tables S2-S8 are composite-score models). Added at audit as a null-result cell; B left null."
+    },
+    {
+     "iv": "top_instagram",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "se": null,
+     "p": null,
+     "p_label": "FDR-corrected p >= 0.05 (not significant)",
+     "sig": false,
+     "location": "Supplement Table S1 (item not bolded/asterisked = not FDR-significant); not plotted in Fig. 2B (p. 4)",
+     "note": "Retained ExWAS exposure that did not survive FDR correction (Table S1 note: bolded = FDR p<.05; 35 of 41 significant, Results p. 4). No coefficient, CI, SE, t, exact p or N is printed in the main PDF (Fig. 2B shows only the 35 significant exposures) or in the supplement (Table S1 is a variable list; Tables S2-S8 are composite-score models). Added at audit as a null-result cell; B left null.",
+     "iv_type": "binary"
+    },
+    {
+     "iv": "top_snapchat",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "se": null,
+     "p": null,
+     "p_label": "FDR-corrected p >= 0.05 (not significant)",
+     "sig": false,
+     "location": "Supplement Table S1 (item not bolded/asterisked = not FDR-significant); not plotted in Fig. 2B (p. 4)",
+     "note": "Retained ExWAS exposure that did not survive FDR correction (Table S1 note: bolded = FDR p<.05; 35 of 41 significant, Results p. 4). No coefficient, CI, SE, t, exact p or N is printed in the main PDF (Fig. 2B shows only the 35 significant exposures) or in the supplement (Table S1 is a variable list; Tables S2-S8 are composite-score models). Added at audit as a null-result cell; B left null.",
+     "iv_type": "binary"
+    },
+    {
+     "iv": "top_youtube",
+     "dv": "bpm_total",
+     "B": null,
+     "B_lo": null,
+     "B_hi": null,
+     "se": null,
+     "p": null,
+     "p_label": "FDR-corrected p >= 0.05 (not significant)",
+     "sig": false,
+     "location": "Supplement Table S1 (item not bolded/asterisked = not FDR-significant); not plotted in Fig. 2B (p. 4)",
+     "note": "Retained ExWAS exposure that did not survive FDR correction (Table S1 note: bolded = FDR p<.05; 35 of 41 significant, Results p. 4). No coefficient, CI, SE, t, exact p or N is printed in the main PDF (Fig. 2B shows only the 35 significant exposures) or in the supplement (Table S1 is a variable list; Tables S2-S8 are composite-score models). Added at audit as a null-result cell; B left null.",
+     "iv_type": "binary"
     }
    ],
    "iv_type": "continuous"
@@ -705,7 +804,7 @@
   "conversion_formula": "Binary exposures: d = B / SD_DV (adjusted mean difference over SD 10). Continuous exposures: beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1).",
   "contrast_type": "Per one unit of each exposure as coded in Table S1: yes vs no for binary items (e.g., public vs private account), per unit of time or count for continuous items. Units are not given in the main text.",
   "transformable": "partial",
-  "notes": "SD_DV = 10 by construction for BPM T-scores (normed), but BPM T-scores are floor-truncated in community samples so the observed SD may differ; the paper reports no BPM descriptives. SD_IV is not reported for any exposure in the main text, and exposure units/coding are only in the Supplement. Only one qualifying coefficient is printed as a number in the main text (public social media account, B = 2.13, Discussion p. 6, no CI); this is binary, so d is computable with SD_DV = 10. All other 30 qualifying coefficients and all CIs are in Fig. 2B (graphic only) and Supplementary Table S1, which is not in the PDF. With Table S1, the binary items become convertible; continuous items still need SD_IV. [complete-stage 2026-10-01] Re-read entire PDF (10 pp.) and searched docs/pdfs for a '_supplement' file for this DOI (none). No additional per-exposure estimates, CIs, SEs, exact p-values, t-statistics, or exposure SDs are printed; Fig. 2B is an unlabelled forest plot. Model iv_type set to continuous with per-estimate iv_type='binary' overrides for public account, secret accounts, parent-suspects-secret-account, and top-app TikTok (prevalences reported in Discussion p.6). SD_DV = 10 (T-score convention) retained."
+  "notes": "SD_DV = 10 by construction for BPM T-scores (normed), but BPM T-scores are floor-truncated in community samples so the observed SD may differ; the paper reports no BPM descriptives. SD_IV is not reported for any exposure in the main text, and exposure units/coding are only in the Supplement. Only one qualifying coefficient is printed as a number in the main text (public social media account, B = 2.13, Discussion p. 6, no CI); this is binary, so d is computable with SD_DV = 10. All other 30 qualifying coefficients and all CIs are in Fig. 2B (graphic only) and Supplementary Table S1, which is not in the PDF. With Table S1, the binary items become convertible; continuous items still need SD_IV. [complete-stage 2026-10-01] Re-read entire PDF (10 pp.) and searched docs/pdfs for a '_supplement' file for this DOI (none). No additional per-exposure estimates, CIs, SEs, exact p-values, t-statistics, or exposure SDs are printed; Fig. 2B is an unlabelled forest plot. Model iv_type set to continuous with per-estimate iv_type='binary' overrides for public account, secret accounts, parent-suspects-secret-account, and top-app TikTok (prevalences reported in Discussion p.6). SD_DV = 10 (T-score convention) retained. [complete-stage 2026-10-01] Supplement (docx) is now bundled and was read in full. Its Table S1 is a variable list, not a coefficient table: no per-exposure B/CI/SE/p are printed anywhere, so 30 of 31 cells remain without a value and the one printed B (public account 2.13) has no CI input. Table S1 does give coding/units: '[n] Screentime <App>' items (#12-22) are actually number of accounts on that app (0-10), not time; #2,#3,#5,#6,#7,#8 are hours; #28-33 are 1-6 frequency scales; #34-36 are 1-4 nights/week; #39 is 1-7 agreement; #40-41 counts (>5000 removed). The public/private item (#38) is listed as '1=Public; 0=Private, Reverse coded for analysis'. The 6 non-significant exposures are #10 parent follows child on SM, #17 Pinterest accounts, #23-26 most-used app Instagram/Snapchat/YouTube/Multiplayer chat (not bolded in Table S1); no estimates printed for these either. No exposure SDs printed (sd_iv unavailable)."
  },
  "extraction_flags": "1. Missing supplement. The PDF is the 10-page main article only. All per-exposure ExWAS coefficients and CIs are in Supplementary Table S1, which was not available. In the main text they appear only as a forest plot (Fig. 2B). The only qualifying number printed in the text is public (vs private) social media account, B = 2.13 (Discussion p. 6), with no CI. The other 30 qualifying cells are B = null on purpose: I did not read values off the plot. To fill them, get Table S1 from the online supplement at 10.1038/s44277-024-00006-9.\n\n2. Sample label conflict. The Methods and Results headings say the ExWAS ran in the training subsample (n = 5082). The Fig. 2 caption says \"testing subsample\". I followed the Methods; please check.\n\n3. Units and coding of exposures are not given in the main text. SD_IV and per-model N are not reported. SD_DV is set to 10 because BPM scores are normed T-scores, but BPM T-scores are floor-truncated, so the observed SD may differ.\n\n4. Six non-significant exposures (Table S1 numbers 10, 17, 23, 24, 25, 26) are not named in the main text. Some are probably phone/SM null results and should be added once Table S1 is available.\n\n5. Eligibility calls a coder should check:\n- Included: \"Night chatroom use\" (platform not specified), \"Connectedness via phone\", \"Parent suspects secret account\" (parent report) and \"Follower/Following count\".\n- Excluded as gaming: \"Screentime Video Games [20]\", although Fig. 2A puts it in the App-type domain, so it may be app-based.\n- Excluded: cyberbullying, per FT-IC2 clarification 3.\n- Excluded: the headline exposomic risk score (Table 2, and the suicide-attempt ORs in Table S3). It is a weighted composite that includes cyberbullying and video-game items, so it fails FT-IC2 Step 2.\n\n6. Spot-checked against the page images: Table 1 training demographics, Table 2 Model-4 (1.78, 1.58-1.98, t = 17.41, n = 4004), the text values 2.13 and 3.57, and the suicide ORs 1.76 [1.39-2.23] and 2.76 [1.88-4.05].",
  "verification_log": [
@@ -1224,6 +1323,366 @@
    "was": 10,
    "value": 10,
    "where": "Not printed in PDF (no BPM descriptives in Table 1 p.4); 10 is the T-score norm SD, an assumption already flagged in d_transformation notes"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 model",
+   "action": "set_iv_type",
+   "value": "continuous",
+   "where": "Supplement Table S1 coding: mix of continuous/ordinal items (model-level continuous) with binary per-estimate overrides (secret_acct, public_acct, parent_secret, top_tiktok)"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Secret social media accounts [9] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Public social media account [38] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Tumblr [18] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Parent suspects secret account [11] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social media affects school [33] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social media to forget [30] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Need for social media [29] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Upset to stop social media [32] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Can't lessen social media [31] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime YouTube [16] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Thinks about social media [28] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Twitter [15] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Reddit [19] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Night awakening for phone [36] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime TikTok [21] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime other apps [22] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Social media time [8] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Connectedness via phone [39] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Facebook [12] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Night social media use [34] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime social media weekend [6] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Top app TikTok [27] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Snapchat [14] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Following count [41] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime texting weekday [2] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime texting weekend [5] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime Instagram [13] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Night chatroom use [35] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Follower count [40] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime videochat weekend [7] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 Screentime videochat weekday [3] x BPM Total",
+   "action": "confirmed_missing",
+   "value": null,
+   "where": "PDF pp.1-10 (Table 1, Table 2, Fig. 2B graphic only, text) and supplement Table S1 (variable list, no coefficients), Tables S2-S8 (composite score only), Figs S1-S2"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_tumblr",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Tumblr (youth report, 0-10; Table S1 item screentime_smq_tumblr); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_youtube",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on YouTube (youth report, 0-10; Table S1 item screentime_smq_youtube); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_twitter",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Twitter (youth report, 0-10; Table S1 item screentime_smq_twitter); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_reddit",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Reddit (youth report, 0-10; Table S1 item screentime_smq_reddit); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_tiktok",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on TikTok (youth report, 0-10; Table S1 item screentime_smq_musical_ly); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_other_apps",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Other (youth report, 0-10; Table S1 item screentime_smq_other); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_facebook",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Facebook (youth report, 0-10; Table S1 item screentime_smq_facebook); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_snapchat",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Snapchat (youth report, 0-10; Table S1 item screentime_smq_snapchat); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis st_instagram",
+   "action": "corrected",
+   "was": "app-specific screentime",
+   "value": "number of accounts on Instagram (youth report, 0-10; Table S1 item screentime_smq_instagram); Fig. 2B labels it 'Screentime'",
+   "where": "Supplement Table S1 items 12-16, 18-19, 21-22 (List the number of accounts on ..., scored 0-10)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Parent follows child on social media [10] x BPM Total",
+   "action": "added",
+   "was": null,
+   "value": "sig=false, B=null",
+   "where": "Supplement Table S1 (not bolded); Results p. 4 (35/41 significant)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Number of Pinterest accounts [17] x BPM Total",
+   "action": "added",
+   "was": null,
+   "value": "sig=false, B=null",
+   "where": "Supplement Table S1 (not bolded); Results p. 4 (35/41 significant)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Top app Instagram [23] x BPM Total",
+   "action": "added",
+   "was": null,
+   "value": "sig=false, B=null",
+   "where": "Supplement Table S1 (not bolded); Results p. 4 (35/41 significant)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Top app Snapchat [24] x BPM Total",
+   "action": "added",
+   "was": null,
+   "value": "sig=false, B=null",
+   "where": "Supplement Table S1 (not bolded); Results p. 4 (35/41 significant)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Top app YouTube [25] x BPM Total",
+   "action": "added",
+   "was": null,
+   "value": "sig=false, B=null",
+   "where": "Supplement Table S1 (not bolded); Results p. 4 (35/41 significant)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 Most-used app Multiplayer Videogame Online Chatting [26]",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "not added (gaming item, consistent with exclusion of [20]); nonsignificant per Table S1",
+   "where": "Supplement Table S1 item 26"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 31 significant cells",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "B/CI/SE/p/t/sd_iv not printed; sig=true matches Table S1 bolding and Fig. 2B; public account B=2.13 confirmed Discussion p. 6",
+   "where": "PDF pp.1-10; Supplement Table S1-S8"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 covariates",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": "Supplementary Methods ('Model Covariates') states all LMEs also included household income and parent education; main-text ExWAS step (d) p. 3 lists only age, sex, race, Hispanic ethnicity. Covariate list left as main text; discrepancy noted here.",
+   "where": "Supplement, Supplementary Methods; Methods p. 3"
   }
  ]
 }

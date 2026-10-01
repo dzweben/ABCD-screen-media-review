@@ -563,6 +563,53 @@
    "was": null,
    "value": "sd_dv 12.22/22.07/14.79/16.10/15.62 match Table 2 p.3 (full sample; analytic-sample SDs not printed); iv_type continuous confirmed (Section 2.2 daily hours); estimate set complete (2 phone/SM devices x 5 domains = all Table S1 phone/SM cells)",
    "where": "Table 2 p.3; Section 2.2 p.2; Supplementary Table S1"
+  },
+  {
+   "stage": "complete",
+   "item": "M1 all 10 estimates",
+   "action": "confirmed_missing",
+   "value": "se and per-device sd_iv not printed; beta, 95% CI, t, df, p already filled for all cells; iv_type continuous already set",
+   "where": "Re-checked article PDF full text (Table 2 p.3 gives only total screen time 3.79 +/- 3.07) and supplement text 84_supplement.txt (Table S1 columns: beta, CI, t, d.f., p, r2, FDR p; no SE column; Table S2 correlations among cognitive domains only)"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 all 10 estimates",
+   "action": "confirmed",
+   "was": null,
+   "value": "beta, CI bounds, t, d.f., raw p/p_label, FDR p (in note) and sig all match",
+   "where": "Supplementary Table S1 (docs/pdfs/10.1016_j.actpsy.2026.106742_supplement.docx), texting and video chat rows"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 dv_axis sd_dv",
+   "action": "confirmed",
+   "was": null,
+   "value": "EF 12.22, PS 22.07, WM 14.79, EM 16.10, Lang 15.62",
+   "where": "Table 2, p. 3"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis text sd_iv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement Tables S1-S2/Fig S1: only total screen time SD (3.07) printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 iv_axis vchat sd_iv",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Article pp.1-6 (Tables 1-2, Figs 1-2, text) and supplement Tables S1-S2/Fig S1: only total screen time SD (3.07) printed"
+  },
+  {
+   "stage": "audit",
+   "item": "M1 se (all estimates)",
+   "action": "confirmed_missing",
+   "was": null,
+   "value": null,
+   "where": "Supplementary Table S1 has no SE column; article text reports none for per-device models"
   }
  ]
 }
