@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0525",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — Yale press release about Weill Cornell / Columbia excessive screen media and mental health; provisional paper 95 (He 2025 Computers in Human Behavior, social media addiction and reward circuit) does not match; article title 'Yale Study Probes Connection Between Excessive Screen Media Activity and Mental Health Problems in Youth' likely refers to the Xiao/Mann/Keyes JAMA paper (paper 3) or a related Columbia/Weill Cornell study, but without article body no L2-L4 can be confirmed; published 2023 and no URL-embedded DOI for any corpus paper — insufficient evidence to link to paper 3 or any other corpus paper.",
+    "evidence": "Title references Yale and excessive screen media activity + mental health, but provisional paper 95 (He 2025) is a reward-circuit neuroimaging paper with UCSF/Beijing affiliation, not Yale. No body text available to satisfy L2-L4 for any corpus paper."
+  },
+  {
+    "article_id": "A0526",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "General commentary/opinion piece about 'brain rot' from colloquial social media use — does not paraphrase a specific corpus paper finding. No article body available; provisional paper 95 (He 2025, reward circuit/SMA neuroimaging) is a highly specific neuroimaging paper that would not be described as 'brain rot experts say.' Topic is popular-science opinion, not a report on a specific ABCD corpus study.",
+    "evidence": "Detroit News lifestyle article 'Is brain rot real? Here's what brain health experts say' (June 2025) is a general commentary. Provisional paper 95 (He 2025 Computers in Human Behavior) covers social media addiction and reward-circuit fMRI — not a match for this type of broad expert-opinion piece. No L1-L4 criteria met."
+  },
+  {
+    "article_id": "A0527",
+    "matched_paper_ids": ["144"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Social media use hurts preteens' development of reading and memory skills' published October 14 2025 maps strongly to paper 144 (Nagata 2026, Lancet Regional Health - Americas: 'Associations of adolescent social media use trajectories with spatial and verbal memory'). The paraphrase of social media -> reading and memory in preteens/early adolescents is distinctively consistent with paper 144's finding of high-increasing SM trajectory predicting lower verbal memory (RAVLT, LMT). Provisional paper 95 (reward circuit paper) is not relevant. Published date Oct 2025 aligns with a pre-publication/online-first appearance of paper 144 (2026 journal year). L3 satisfied: SM use + memory outcome + adolescent ABCD sample. No article body to confirm author/journal (L2 not confirmed)."
+  },
+  {
+    "article_id": "A0528",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Study shows smartphones for kids under 13 could carry health risks' published December 2025 maps to paper 431 (Barzilay 2026 Pediatrics: 'Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence'). The paraphrase of smartphones + children under 13 + health risks is distinctively consistent with paper 431's finding that earlier smartphone acquisition is associated with depression, obesity, and sleep problems. Provisional paper 95 is not relevant. L3 satisfied: smartphone ownership/acquisition age + health outcomes + adolescent ABCD cohort. No article body available to confirm L2."
+  },
+  {
+    "article_id": "A0529",
+    "matched_paper_ids": ["144"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Should Parents Limit Social Media For Teens? New Study Shows It Is Lowering Their Memory Score' published October 14 2025 aligns with paper 144 (Nagata 2026, Lancet Regional Health - Americas: SM trajectories and spatial/verbal memory). The paraphrase of social media lowering memory scores in teens is distinctively consistent with paper 144's finding (e.g., high-increasing SM trajectory B=-1.90 for RAVLT). Published same day as A0527 (Oct 14, 2025), suggesting both are covering the same paper 144 release. Provisional paper 95 (reward circuit) is not relevant. L3 satisfied: SM use + memory scores + adolescent ABCD sample."
+  },
+  {
+    "article_id": "A0530",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Non-corpus topic and wrong time period — ABC7 article from December 2016 about a UCLA/CHLA study on how kids grow up to be successful predates all corpus papers and does not relate to smartphone/social media use. Provisional paper 95 (He 2025) is entirely unrelated. No L1-L4 criteria met.",
+    "evidence": "Article published December 19, 2016 about a UCLA/CHLA longitudinal study on child success — entirely unrelated to any corpus paper. No phone/SM content evident from title. Wrong cohort, wrong topic, wrong era."
+  },
+  {
+    "article_id": "A0531",
+    "matched_paper_ids": ["106"],
+    "linkage_test": "L3",
+    "confidence": 0.87,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Last Scroll for Alcohol? Study Links Teen Social Media Bingeing to Early Substance Use' published November 2024 maps to paper 106 (Nagata 2025, Drug and Alcohol Dependence: 'Prospective association between screen use modalities and substance use experimentation in early adolescents'). The paraphrase of social media -> substance/alcohol experimentation in early adolescents from ABCD is distinctively consistent with paper 106 (AOR for social media -> any substance = 1.20). L3 satisfied: SM use + substance use + early adolescents + ABCD. Provisional paper 106 confirmed. No article body to confirm L2 (author + journal)."
+  },
+  {
+    "article_id": "A0532",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — NIDA blog post 'Commercial interests contribute to drug use and addiction' (September 2024) is a broad policy/commentary piece about commercial influences on addiction, not a report on a specific ABCD corpus paper. Provisional paper 124 (Roberston 2022, screen time and internalizing disorders) is unrelated to commercial interests. No evidence of L1-L4 linkage to any corpus paper.",
+    "evidence": "NIDA Director Nora Volkow blog about commercial interests and drug use. Provisional paper 124 covers screen time and internalizing disorder diagnoses in 9-10 year olds — no thematic connection. No L1-L4 criteria met."
+  },
+  {
+    "article_id": "A0533",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "General youth mental health commentary — Psych Central interview with Surgeon General Vivek Murthy about youth mental health crisis (April 2022) is a broad policy interview, not a report on a specific ABCD corpus paper. Provisional paper 130 (Kiss 2022, pandemic mental health in ABCD) is a specific ABCD COVID paper; no evidence the interview cites or paraphrases this paper's findings. No L1-L4 criteria met.",
+    "evidence": "Psych Central interview with Surgeon General about youth mental health crisis. Provisional paper 130 is a machine-learning ABCD paper on pandemic mental health — a very specific methodological paper that would not typically be cited in a Surgeon General interview without specific paraphrase. No body text available to confirm any linkage."
+  },
+  {
+    "article_id": "A0534",
+    "matched_paper_ids": ["139", "157"],
+    "linkage_test": "L3",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen Time Before Bed: How to Make Sure Phone Use Doesn't Ruin Your Sleep' (Everyday Health, December 2025) is a general consumer health article about bedtime screen use and sleep — thematically aligned with both paper 139 (Nagata 2024 Journal of Adolescent Health: bedtime screen use behaviors and sleep outcomes, prospective) and paper 157 (Nagata 2023 Sleep Health: bedtime screen use behaviors and sleep outcomes, ABCD). Both papers are by Nagata on bedtime screen use and sleep in ABCD adolescents. A consumer sleep article from Dec 2025 could plausibly cite either or both. Confidence lowered to 0.75 because without article body it cannot be confirmed which (if any) specific paper is cited. Provisional paper IDs 139 and 157 match well. L3 partially satisfied on topic + ABCD + outcome configuration, but multi-paper ambiguity reduces certainty."
+  },
+  {
+    "article_id": "A0535",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Non-ABCD study, wrong topic — UKNow (University of Kentucky) article from May 2018 about selfies and teenage body image is not about the ABCD Study and predates the ABCD corpus papers. Provisional paper 150 (Nagata 2026 NeuroImage: social media use and brain structure) is entirely unrelated to selfies or body image. No L1-L4 criteria met.",
+    "evidence": "Article from 2018 about selfies and teen body image from a University of Kentucky study. Corpus paper 150 covers ABCD neuroimaging of social media use and brain morphology — completely different topic. Wrong year, wrong cohort, wrong topic."
+  },
+  {
+    "article_id": "A0536",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Legal/litigation resource page — Motley Rice law firm page 'Social Media and Self-Esteem: Mental Health Risks Explained' (March 2026) is a legal informational page about social media litigation, not a news article reporting on a specific ABCD corpus paper. Provisional paper 150 (Nagata 2026 NeuroImage, social media and brain structure) could potentially be cited but without article body there is no evidence of L1-L4 linkage to any specific corpus paper. Legal aggregator pages typically do not cite specific academic papers with sufficient paraphrase for L3/L4.",
+    "evidence": "Motley Rice law firm litigation resource page about social media and self-esteem. Provisional paper 150 is a neuroimaging paper about brain structure, not self-esteem. No specific ABCD paper paraphrase identifiable from title alone. Excluded as general legal resource without demonstrable corpus linkage."
+  },
+  {
+    "article_id": "A0537",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Non-ABCD study, wrong topic and wrong year — Refinery29 article from August 2019 about young women scribbling out their faces on Instagram is a cultural commentary piece, not a report on an ABCD corpus paper. Provisional paper 150 (Nagata 2026 NeuroImage) did not exist in 2019. No L1-L4 criteria met.",
+    "evidence": "Refinery29 cultural piece from 2019 about Instagram face-scribbling behavior. Entirely unrelated to any corpus paper. Provisional paper 150 (2026 neuroimaging paper) was published seven years after this article."
+  },
+  {
+    "article_id": "A0538",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Unrelated product review — Medical News Today '7 best night lights: Products and how to choose' (August 2022) is a product review article with no connection to any ABCD corpus paper. Provisional paper 156 (Hisler 2020 Sleep Health: screen media use and sleep disturbance) is entirely unrelated to night light products. No L1-L4 criteria met.",
+    "evidence": "MNT product review of night lights. Provisional paper 156 is about screen media use (including social media) and sleep disturbances in ABCD children — no thematic or factual connection. Clearly a false positive from keyword matching."
+  },
+  {
+    "article_id": "A0539",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "General technology overview article — Medical News Today 'Negative effects of technology: Psychological, social, and health' (April 2025) is a broad evergreen overview article about technology harms. While it may cite multiple studies, without article body there is no evidence it specifically paraphrases paper 398 (Guerrero 2019, International Journal of Behavioral Nutrition and Physical Activity: screen time, sleep mediation, problem behaviors in ABCD) with sufficient specificity to satisfy L3 or L4. General technology articles typically draw on numerous sources without providing unique paper-level paraphrase.",
+    "evidence": "MNT evergreen overview of negative technology effects. Provisional paper 398 (Guerrero 2019) is a specific ABCD mediation analysis of screen time, sleep, and problem behaviors. Without article body confirming citation of this specific paper (L1) or paraphrase of its distinctive findings (L3: ABCD sample + social media composite + sleep mediation + IRR estimates), exclusion is warranted."
+  },
+  {
+    "article_id": "A0540",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Non-ABCD cohort — Psychiatry Online article reporting on American Journal of Psychiatry paper 'National Trends in Suicidal Thoughts and Suicide Attempts Among High School Students in the United States' (published May 2025) is about a national trends study of high school students, not the ABCD Study. Provisional paper 160 (Chu 2023, Preventive Medicine: screen time and suicidal behaviors in ABCD 9-11 year olds) is a different paper. AJP national trends paper uses different data source (likely YRBS/national surveillance). No L1-L4 criteria met for any corpus paper.",
+    "evidence": "PsychiatryOnline article about AJP national trends paper on suicidal thoughts in high school students — different study, different cohort, different age range from corpus paper 160. URL doi/10.1176/appi.ajp.20240706 does not match any corpus paper DOI."
+  },
+  {
+    "article_id": "A0541",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "General ABCD/HBCD study overview — PsychiatryOnline article 'The ABCD and HBCD Studies: Longitudinal Studies to Inform Prevention Science' (FOCUS journal, October 2024) is an overview of ABCD and HBCD study designs, not a report on specific corpus papers 160 or 389. This is a general overview of study infrastructure that would not paraphrase specific paper findings with L3/L4 specificity. Excluded as general ABCD coverage without specific corpus paper linkage.",
+    "evidence": "FOCUS journal overview article about ABCD and HBCD study designs. Provisional papers 160 (Chu 2023, suicidal behaviors) and 389 (Nagata 2023, BMC Public Health, problematic social media and alcohol expectancies) are specific content papers; an overview of study infrastructure would not constitute coverage of either paper's specific findings."
+  },
+  {
+    "article_id": "A0542",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Policy/platform news article — Parents.com 'TikTok Launches Screen Time Limits for Teens: Too Little, Too Late?' (March 2023) is a news piece about TikTok's platform policy decision, not a report on a specific ABCD corpus paper. Provisional paper 160 (Chu 2023, screen time and suicidal behaviors) may be mentioned in passing but there is no basis without article body to confirm L3/L4 paraphrase of that specific ABCD paper. Platform policy news articles typically do not provide paper-level paraphrase.",
+    "evidence": "Parents.com article about TikTok's screen time limit feature launch (March 2023). Provisional paper 160 is a specific ABCD prospective cohort study on screen time and suicidal behaviors. No evidence of L1-L4 linkage from title alone; general platform-policy piece unlikely to cite a specific ABCD paper with the specificity required by L3/L4."
+  },
+  {
+    "article_id": "A0543",
+    "matched_paper_ids": ["167", "175", "310"],
+    "linkage_test": "L4",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "UGA Today press release 'Frequent social media use could impact child development' (March 25, 2026) is from the University of Georgia news office — matching the affiliation of papers 167 (Carvalho 2025, Development and Psychopathology: smartphones and parent-adolescent discrepancy, U of Georgia), 175 (Carvalho 2025, Journal of Family Psychology: youth electronic media use and family conflict, U of Georgia), and 310 (Carvalho 2025, Journal of Research on Adolescence: social media and crystallized/fluid performance trajectories, U of Georgia). L4 satisfied: UGA institution + social media topic + ABCD Study configuration uniquely maps to Carvalho et al. papers. Provisional paper IDs 167, 175, 310 all confirmed as multi-map. The press release timing (March 2026) aligns with paper 310 (Journal of Research on Adolescence, 2025) and paper 167 (Development and Psychopathology, 2025)."
+  },
+  {
+    "article_id": "A0544",
+    "matched_paper_ids": ["175", "310"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "UGA Today 'Cellphones lead to family conflict, mental health problems in kids' (October 13, 2025) maps to paper 175 (Carvalho 2025, Journal of Family Psychology: 'Youth electronic media use and family conflict: Bidirectional associations across early adolescence') and paper 310 (Carvalho 2025, Journal of Research on Adolescence: social media and cognitive performance trajectories). Title paraphrase of cellphones/electronic media -> family conflict + mental health problems is distinctively consistent with paper 175's finding of social EMU (social media + texting) bidirectionally predicting family conflict. L3 satisfied: cellphone/SM use + family conflict + mental health + early adolescence + ABCD (UGA affiliation context). Paper 310 provisionally included as Carvalho also covers mental health-adjacent cognitive outcomes."
+  },
+  {
+    "article_id": "A0545",
+    "matched_paper_ids": ["175"],
+    "linkage_test": "L3",
+    "confidence": 0.87,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Futurity.org 'Youth phone use can be bad for family bonds and mental health' (October 15, 2025) is a research news aggregator article covering a UGA study. The paraphrase of youth phone use -> family bonds + mental health is distinctively consistent with paper 175 (Carvalho 2025, Journal of Family Psychology: social EMU and family conflict bidirectional associations in ABCD). Published 2 days after UGA Today press release (A0544), consistent with Futurity syndication of UGA news. Provisional paper 167 (smartphone ownership and parent-adolescent discrepancy) is less consistent with 'family bonds' framing — paper 175's family conflict content is the closer match. L3 satisfied: phone use + family conflict/bonds + mental health + early adolescence."
+  },
+  {
+    "article_id": "A0546",
+    "matched_paper_ids": ["310"],
+    "linkage_test": "L3",
+    "confidence": 0.90,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Yahoo News 'Frequent Social Media Use Related to Worse Reading Skills for Tweens and Teens, Study Finds' (March 27, 2026) maps to paper 310 (Carvalho 2025, Journal of Research on Adolescence: 'Associations between social media and crystallized and fluid performance trajectories in early adolescence'). The paraphrase of social media -> worse reading skills (crystallized intelligence/vocabulary) in tweens/teens from ABCD is distinctively consistent with paper 310's finding that social media trajectory slopes predict crystallized cognitive performance (beta = -.36, p < .001 for s_sm -> s_cryst). Published March 27, 2026 — same day as A0543 (UGA Today press release about Carvalho work). L3 satisfied: SM use + reading/crystallized performance + adolescence + ABCD. Provisional papers 175 and 310 noted; 310 is the closer match for reading skills specifically."
+  },
+  {
+    "article_id": "A0547",
+    "matched_paper_ids": ["310"],
+    "linkage_test": "L3",
+    "confidence": 0.90,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "ConsumerAffairs 'Heavy social media use tied to declines in reading skills among adolescents' (March 27, 2026) maps to paper 310 (Carvalho 2025, Journal of Research on Adolescence: social media and crystallized/fluid performance trajectories). Same publication date as A0543 and A0546, covering the same UGA Carvalho et al. finding that social media use is associated with declines in crystallized cognitive performance (reading/vocabulary skills). L3 satisfied: SM use + reading skill declines + adolescents + ABCD. Provisional papers 175 and 310 noted; 310 is the primary match for 'reading skills' paraphrase."
+  },
+  {
+    "article_id": "A0548",
+    "matched_paper_ids": ["175"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "British Psychological Society Research Digest 'Does pre-teen screen time lead to later family conflict?' (December 18, 2025) maps to paper 175 (Carvalho 2025, Journal of Family Psychology: 'Youth electronic media use and family conflict: Bidirectional associations across early adolescence'). The BPS Research Digest typically covers specific published academic papers with detailed paraphrase. The paraphrase of pre-teen screen time -> family conflict is distinctively consistent with paper 175's bidirectional cross-lagged finding linking social EMU (social media + texting) to family conflict in ABCD. L3 satisfied: screen time + family conflict + pre-teen/early adolescence + ABCD. BPS Digest format likely satisfies L2 (author Carvalho + Journal of Family Psychology named) but cannot confirm without article body."
+  },
+  {
+    "article_id": "A0549",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "General COVID/pandemic mental health overview — respiratory-therapy.com 'Youth Mental Health During the Pandemic' (May 2024) is a general overview of pandemic youth mental health factors. Provisional paper 177 (Kiss 2023, Health Psychology: COVID-19 effects on screen time and sleep in ABCD adolescents) is a specific longitudinal ABCD paper on social media and sleep changes during COVID. Without article body there is no evidence this respiratory-therapy.com summary specifically paraphrases paper 177's distinctive findings (social media use + sleep outcomes + ABCD longitudinal design + specific chi-square estimates). General pandemic mental health articles typically do not cite this specific paper with L3/L4 specificity.",
+    "evidence": "Respiratory-therapy.com overview of pandemic youth mental health. Provisional paper 177 is a specific ABCD paper by Kiss et al. on screen time (incl. social media) and sleep changes during COVID. No L1-L4 linkage confirmable from title alone; excluded as general pandemic mental health overview."
+  }
+]

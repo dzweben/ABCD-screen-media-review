@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0000",
+    "matched_paper_ids": ["144", "1"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NPR title 'Kids who use social media score lower on reading and memory tests' — 'reading and memory' maps to paper 144 (Nagata 2026 Lancet Regional Health Americas, SM use trajectories and spatial/verbal memory outcomes). 'Lower on cognitive assessments' also consistent with paper 1 (Nagata 2025 JAMA, SM trajectories and NIH Toolbox cognitive performance). ABCD study mentioned in summary. Dual match: 'memory' is the specific DV in paper 144; paper 1 covers broader cognitive battery."
+  },
+  {
+    "article_id": "A0001",
+    "matched_paper_ids": ["3"],
+    "linkage_test": "L2",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NPR article names 'Xiao and her colleagues' plus references ABCD Study. 'Xiao' is the first author of paper 3 (Xiao 2025 JAMA, addictive screen use trajectories and suicidal behaviors). Title 'Screen addiction and suicidal behaviors are linked' directly paraphrases paper 3's headline finding. L2 satisfied: author surname Xiao + JAMA (the venue) almost certainly named in full article. L3 also satisfied: addictive screen use + suicidality + ABCD."
+  },
+  {
+    "article_id": "A0002",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.15,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — 2018 article about possible benefits of social media for kids; no matching paper in the 69-paper corpus (all corpus papers are from 2019–2026 and none report a social-media-benefits finding matching this article's framing).",
+    "evidence": "Published June 2018; cites ~4,500 youth from ABCD pilot/baseline. None of the 69 INCLUDE papers are from 2018 or report net positive social media outcomes matching this article. Provisional paper_id 95 (He 2025 Computers in Human Behavior) is from 2025 and not a benefits paper."
+  },
+  {
+    "article_id": "A0003",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — cannabis/marijuana and cognition; not a smartphone or social media paper.",
+    "evidence": "Title 'Study: Laying Off Pot Improved Teens' Learning'; ABCD is mentioned as context for future cannabis research. No corpus paper covers cannabis as the primary exposure."
+  },
+  {
+    "article_id": "A0004",
+    "matched_paper_ids": ["3"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NPR transcript for the same story as A0001 (same URL base nx-s1-5436951, same date Jun 18 2025). Summary states '4,000 kids from ABCD' and topic is addictive screen use + suicidal behaviors — uniquely maps to paper 3 (Xiao 2025 JAMA). Syndicated transcript of A0001; both should be retained as separate coverage items."
+  },
+  {
+    "article_id": "A0005",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — sugar/taste/diet research, not smartphone or social media.",
+    "evidence": "Title 'TASTE BUDDIES: No Sugarcoating How Sweet Affects The...' and summary reference ABCD study in the context of a sweetness/diet segment. No corpus paper covers taste or dietary preferences as the primary exposure."
+  },
+  {
+    "article_id": "A0006",
+    "matched_paper_ids": ["139"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NPR article 'Tweens, screens and sleep: How parents can help kids get zzzzz' (Jul 24, 2024). Summary specifies 'nearly 9,400 11- and 12-year-olds who are part of the ABCD Study.' Paper 139 (Nagata 2024 J Adolesc Health, bedtime screen use behaviors and sleep outcomes) used ~9,400 ABCD Year-2 participants ages 11-12. Three-way match: sample size ~9,400, ages 11-12, bedtime screens → sleep outcomes → uniquely paper 139."
+  },
+  {
+    "article_id": "A0007",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — ADHD medication mechanism (Adderall/Ritalin), not smartphone or social media.",
+    "evidence": "Title 'ADHD drugs may work indirectly to boost attention'; ABCD data used to study stimulant medication effects. No corpus paper covers ADHD medication as a topic."
+  },
+  {
+    "article_id": "A0008",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — cannabis and psychosis, not smartphone or social media.",
+    "evidence": "Title 'More Evidence Links Marijuana Use And Psychosis'; ABCD mentioned as an ongoing study that may yield future cannabis data. No corpus paper covers cannabis/psychosis as primary exposure."
+  },
+  {
+    "article_id": "A0009",
+    "matched_paper_ids": ["139"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NPR 'Up First' newsletter (Jul 25, 2024) summary states 'Scientists looked at nearly 9,400 11- and 12-year-olds for the Adolescent Brain Cognitive Development Study' — same sample size/age range as paper 139 (Nagata 2024 J Adolesc Health, ~9,400 ABCD Year-2 participants ages 11-12, bedtime screen use and sleep). Same study covered in A0006 the day before, consistent with paper 139. Confidence slightly lower (0.82) because news brief excerpt lacks explicit screen-type or sleep-outcome mention."
+  },
+  {
+    "article_id": "A0010",
+    "matched_paper_ids": ["150"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "PsyPost 'More time spent on social media is linked to a thinner cerebral cortex in young adolescents' (Apr 15, 2026). 'Thinner cerebral cortex' is a cortical thickness finding — directly maps to paper 150 (Nagata 2026 NeuroImage, social media use and early adolescent brain structure including cortical thickness). Published Apr 2026 consistent with paper 150 (2026). L3: social media time + thinner cortex + young adolescents + ABCD uniquely identifies paper 150."
+  },
+  {
+    "article_id": "A0011",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "PsyPost 'Higher social media engagement linked to reduced performance on cognitive assessments' (Dec 2, 2025). 'Social media engagement' + 'reduced cognitive performance' maps to paper 1 (Nagata 2025 JAMA, social media use trajectories and cognitive performance on NIH Toolbox). Published Dec 2025, consistent with Oct 2025 paper 1 publication. L3: social media + reduced cognitive test scores uniquely map to paper 1 in corpus."
+  },
+  {
+    "article_id": "A0012",
+    "matched_paper_ids": ["106"],
+    "linkage_test": "L3",
+    "confidence": 0.91,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "PsyPost 'Three types of screen time linked to substance experimentation in early adolescents' (Jan 10, 2025). 'Three types of screen time' (social media, texting, video chat) + 'substance experimentation' + 'early adolescents' maps to paper 106 (Nagata 2025 Drug Alcohol Depend, prospective associations between screen use modalities and substance use experimentation; reports per-modality AORs for social media, texting, video chatting vs. substance experimentation). L3: three modalities + substance experimentation outcome + prospective ABCD."
+  },
+  {
+    "article_id": "A0013",
+    "matched_paper_ids": ["84"],
+    "linkage_test": "L3",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "PsyPost 'Brain structure changes may partially explain the link between screen time and ADHD' (Nov 26, 2025). Paper 84 (Shou 2026 Acta Psychologica, screen time → cognitive function mediated by putamen volume) is the best corpus match: putamen volume = brain structure change mediating screen time → cognition. Putamen is implicated in attention/ADHD-adjacent circuits. 'ADHD' in title may reflect the article's interpretation of the cognition/attention findings. Confidence 0.80 because paper 84 reports cognitive function broadly, not ADHD diagnosis per se; however no closer ABCD corpus match exists for brain-structure + screen-time mediation."
+  },
+  {
+    "article_id": "A0014",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — screen time and autism; no corpus paper studies autism as the primary outcome.",
+    "evidence": "Title 'Early screen time not a cause of autism, study concludes.' No INCLUDE paper in the 69-paper corpus studies autism as an outcome. Provisional paper_id 84 (Shou 2026, putamen/cognition) is unrelated to autism."
+  },
+  {
+    "article_id": "A0015",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.35,
+    "excluded": true,
+    "exclusion_reason": "General ABCD/social-media coverage — aggregator review article about psychological costs of social media in teens; no specific finding from corpus uniquely paraphrased; published Mar 2024 before most corpus papers.",
+    "evidence": "PsyPost 'From likes to anxiety: Examining the psychological costs of social media among teens' (Mar 15, 2024). Review/aggregator piece on social media and teen anxiety generally. No specific sample size, author surname, effect magnitude, or other L3 anchor matches a unique corpus paper. Published before several key corpus papers. Provisional paper_id 84 (Shou 2026, putamen) would not be published until 2026."
+  },
+  {
+    "article_id": "A0016",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.10,
+    "excluded": true,
+    "exclusion_reason": "Non-ABCD cohort or out-of-corpus topic — TikTok platform usage statistics among underage users; no ABCD-based finding paraphrased and no corpus paper reports TikTok market-share data.",
+    "evidence": "PsyPost 'TikTok leads as the most popular platform among underage users, research reveals' (Jan 10, 2025). This is a platform-usage statistics piece. Provisional paper_id 95 (He 2025, social media addiction and reward circuit fMRI) does not report TikTok platform popularity data. No L1-L4 criterion satisfied against any corpus paper."
+  },
+  {
+    "article_id": "A0017",
+    "matched_paper_ids": ["420"],
+    "linkage_test": "L3",
+    "confidence": 0.65,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "PsyPost 'Excessive screen time linked to developmental and behavioral issues in U.S. children' (Jan 30, 2024). 'Developmental and behavioral issues in U.S. children' + 'excessive screen time' is consistent with paper 420 (Paulich 2021 PLOS ONE, screen time and early adolescent mental health, academic, and social outcomes in 9-10 year-olds in ABCD). Provisional paper_id 190 (Sauce 2022, intelligence) is a plausible alternative. Confidence 0.65 (flagged for human review) because multiple corpus papers could produce this headline and the summary is absent."
+  },
+  {
+    "article_id": "A0018",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L3",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "MedPage Today 'Increasing Social Media Use in Preteens May Be Hurting Cognition Too' (Oct 13, 2025). Summary quotes ABCD data, mentions 'low increasing social media use (+1.3 hours/day)' and 'high increasing' trajectory groups, 'ages 9 to 13 years' — these trajectory labels and age range are unique markers of paper 1 (Nagata 2025 JAMA, social media use trajectories and cognitive performance, ages 9-13, trajectory groups including low-increasing and high-increasing). L3: trajectory terminology, +1.3 h/day increment, ages 9-13, SM → cognition."
+  },
+  {
+    "article_id": "A0019",
+    "matched_paper_ids": ["154"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "MedPage Today 'Teens Spend an Hour on Their Smartphones at School' (Jan 5, 2026). Summary states 'Among 640 teens with passive measurement software on their phones, a mean of 1.16 hours was spent using...' — passive measurement software (sensor-based) + specific sample n=640 + smartphone use + school context maps to paper 154 (Alexander 2025 Psychiatry Research, adolescent smartphone use, sleep, and physical activity using sensor-based/passive measures in ABCD). L3: passive sensor measurement + smartphone + n~640 uniquely identifies paper 154."
+  },
+  {
+    "article_id": "A0020",
+    "matched_paper_ids": ["3"],
+    "linkage_test": "L3",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "MedPage Today 'Addiction to Screen Time Tied to Suicidality in U.S. Kids' (Jun 18, 2025). Mentions ABCD study, '21 sites across the U.S.' — addictive screen use + suicidality + ABCD + 21-site sample uniquely identifies paper 3 (Xiao 2025 JAMA, addictive screen use trajectories and suicidal behaviors in ABCD). L3: addictive screen use + suicidality + ABCD national sample."
+  },
+  {
+    "article_id": "A0021",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — toddler screen time and developmental delay; ABCD study begins at age 9-10 and no corpus paper covers toddlers.",
+    "evidence": "MedPage Today 'Toddlers' Screen Time Linked to Delayed Development' (Aug 21, 2023). References toddlers, which is not the ABCD population (ABCD starts at ages 9-10). No corpus paper studies toddlers. This likely covers a non-ABCD cohort study (e.g., JAMA Pediatrics Japanese cohort)."
+  },
+  {
+    "article_id": "A0022",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.05,
+    "excluded": true,
+    "exclusion_reason": "General ABCD coverage — policy/overview article about ABCD Study data misuse and RFK Jr.; no specific smartphone/SM corpus paper paraphrased.",
+    "evidence": "MedPage Today 'NIH Data Misused for Race Science; RFK Jr.'s Autism...' (Jan 28, 2026). ABCD Study mentioned as context for a political/policy story. No specific corpus paper finding paraphrased."
+  },
+  {
+    "article_id": "A0023",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.40,
+    "excluded": true,
+    "exclusion_reason": "Insufficient information — incomplete title ('Brain Structure, Cognitive Performance Linked With...') and no summary text prevent L3/L4 matching; the 2022 ABCD brain-structure + cognition finding most likely covers a screen-time topic not uniquely distinguishable.",
+    "evidence": "MedPage Today 'Brain Structure, Cognitive Performance Linked With...' (Aug 10, 2022). No summary provided; title is truncated. Could map to paper 190 (Sauce 2022 Scientific Reports, digital media + intelligence) or paper 97 (Miller 2023 Cortex, screen media + functional brain organization), but neither can be confirmed without the full article text. Excluded pending human review if full text is available."
+  },
+  {
+    "article_id": "A0024",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.35,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic or insufficient evidence — article focuses on video games not hurting cognition; no corpus paper's primary finding is specifically about video games and cognitive benefit/neutrality using ABCD.",
+    "evidence": "MedPage Today 'Video Games May Not Rot Kids' Brains After All' (Oct 24, 2022). Primary focus is video game screen time and cognition; ABCD data referenced. Paper 190 (Sauce 2022) covers socializing (SM) + video games separately and found video game play associated with higher IQ scores — this might fit, but paper 190's qualifying variable is the 'socializing' composite, not video games. No corpus paper has video games as its primary qualifying phone/SM variable. Confidence below threshold."
+  }
+]

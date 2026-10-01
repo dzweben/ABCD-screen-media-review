@@ -1,0 +1,738 @@
+[
+ {
+  "paper_id": "1",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 12,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "This paper is a 2-page JAMA Research Letter. The output file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_1.json.\n\nWhat was extracted: one model, M1. It is a weighted multiple linear regression with robust standard errors, comparing 2 social media trajectory groups (low increasing and high increasing) against the no-or-very-low-use reference group, across 6 NIH Toolbox outcomes at year 2. That gives 12 estimates, all copied from the Table on p. 1949. I checked every value against the PDF text layer and they all match.\n\nThings a human should verify:\n1. **Supplement missing.** Supplement 1 (eMethods: how the trajectory model was built, the social media item, exclusions, ABCD release, race breakdown) is not in the PDF. Those fields are marked \"not reported in the letter.\"\n2. **sd_dv is my choice, not the paper's.** The paper gives no whole-sample or pooled SD. I used the reference group's unadjusted weighted SD from the Table. Coders may prefer a pooled SD or the normed SD of 15 the authors cite. All group SDs are recorded in the notes.\n3. **IV and DV overlap in time.** Trajectories cover baseline to year 2 (the Figure shows ages 9-13), and the outcome is measured at year 2. So the exposure is not strictly before the outcome.\n4. **Exact p-values missing for some cells.** Cells printed as \"<.001\" have p set to null, with the printed label kept in p_label.\n5. **d is a group contrast.** It compares groups rather than measuring per hour or per SD, so it is not directly comparable to estimates from continuous-IV papers.\n6. **Covariate details are thin.** Site is entered as a covariate, not a random effect. \"Other screen time\" components and the score type (uncorrected vs age-corrected) are not specified."
+ },
+ {
+  "paper_id": "3",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 16,
+  "native_metrics": [
+   "RR",
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_3.json. It has 16 estimates: 8 risk ratios in M1 (Poisson model of suicidal behaviors and ideation) and 8 adjusted T-score mean differences in M2 (GLM of CBCL scores). I checked them all against the Figure 3 adjusted column (p. 224) and against the text.\n\n1. **Where the numbers come from:** all estimates are taken from Figure 3, which is a forest plot with printed values, not a table. No supplement is bundled in the PDF, so eFigures 1-3 (models also adjusted for screen time), eTable 5 and eAppendix 5 could not be checked.\n\n2. **p0 placement is non-standard:** the reference group is the low trajectory, and its event rate differs by platform (social media low 3.0% / 14.2%; mobile phone low 2.7% / 13.3%). So I stored p0 on each estimate as an extra field. The dv_axis p0 holds only the whole-sample prevalence (5.1% / 17.9%) as a fallback, and that should not be used because up to 49% of the sample is exposed. Check whether the d pipeline reads p0 per estimate. If it doesn't, M1 may need to be split into a social media card and a phone card.\n\n3. **SD_DV for M2:** I used the analytic-sample year 4 SDs (internalizing 10.8, externalizing 9.3, from the Table on p. 222) instead of 10 by construction. These SDs cover N = 4,285, but the CBCL models use N = 4,206.\n\n4. **P values and significance calls:**\n   - Only FDR-adjusted P values quoted in the text are recorded. Most are printed as \"<.001\", so p is null with p_label filled in.\n   - For the phone increasing trajectory and suicidal ideation (RR 1.22, CI 1.01-1.48), the text prints FDR P < .001, which looks implausibly small for that CI. I copied it as printed.\n   - For the phone high trajectory and internalizing (0.66, CI 0.00 to 1.33), no P is printed and the CI touches 0. The text does not report it as an association, so I coded it non-significant. Please verify.\n   - For the other cells with no printed P value, significance was inferred from whether the CI excludes the null and from the text.\n\n5. **Design caveats:**\n   - The exposure is a hard class assignment from latent class mixed models, so classification uncertainty is not carried into the outcome models.\n   - The last exposure wave (year 4) is the same wave as the outcomes, so the analysis is not strictly prospective.\n   - No site or family clustering and no weights are described.\n\n6. **Exact covariate coding** of income, education and marital status is not stated; the equations assume the categories shown in the Table.\n\n7. **Excluded as not phone/SM:** the video game trajectory estimates (VGAQ) were excluded under FT-IC2 clarification 2. The baseline total screen time analysis (Figure 4) was excluded because it bundles TV, gaming and phone/SM with no breakout.\n\n8. **Possibly extractable:** baseline clinical differences between trajectory classes (text p. 222) were left out as descriptive. A human coder may want to reconsider them."
+ },
+ {
+  "paper_id": "8",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 9,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1. The PDF has only the 10-page article. Supplement 1 (eMethods, eTables 1-3) is not included, so the full parameter table (eTable 3), the covariate effects (eTable 2) and the transformation applied to the social media variable all come from the main text and Figure 2 only.\n2. The paper does not say how social media time was transformed in the final model (years 0-1 were reported in ordinal categories, years 2-3 in continuous hours). The Table 2 SDs are untransformed, so sd_iv/sd_dv are left null. That is fine because the betas are already standardized.\n3. The random-intercept covariance sign does not match: the text and Abstract print -0.01 (95% CI -0.04 to 0.02, P = .46), but Figure 2 labels it r = 0.01. I used the text value.\n4. The year-2 within-wave residual covariance (r = 0.08) comes only from the Figure 2 label. It is drawn in black (significant), but no CI or p is printed.\n5. Coders should decide whether the non-directional covariances (the random-intercept covariance and the year-2 and year-3 residual covariances) belong in the matrix or should be struck. The 6 cross-lagged paths are the core estimates.\n6. The derived d from standardized within-person RI-CLPM paths is a within-person effect. It is not comparable to between-person d per SD of hours from other papers.\n7. Table 1 prints parent education as college or more 17.2% and high school or less 82.8%. That looks inverted, but I copied it as printed.\n8. p values printed as <.001 are stored as 0.001, with p_label \"<.001\"."
+ },
+ {
+  "paper_id": "13",
+  "wrote_file": true,
+  "n_primary_models": 0,
+  "n_estimates": 0,
+  "native_metrics": [],
+  "d_transformable": "no",
+  "concerns": "This paper has no qualifying phone/SM estimate in the bundled PDF, so primary_models is []. The PDF is the 9-page article only; Supplement 1 is not included. Every printed model uses total daily screen time as the IV. That variable bundles TV, videos and videogames, so it fails FT-IC2 Step 2. The communication subcategory (texting + social media + video chat) qualifies under Step 2, and the Methods define it as an exploratory analysis. But the article body gives no number for it, only the narrative line in the Discussion on p. 1005 that \"communication time effects did not involve sleep duration\". Any communication-time coefficients are in Supplement 1 (eResults, eTables), which I could not read. A human should get Supplement 1 from JAMA Pediatrics and extract the communication-time models from there. If those models turn out to have no printed coefficients either, the Stage 2 INCLUDE decision should be revisited under FT-EC4. SD_IV is available from Table 1 (communication time M 0.4, SD 0.8 h/day, N = 976). SD_DV for the CBCL depressive score (raw score, not a T-score) is not in the article body. Spot-checked against the PDF: 0.12 (0.04-0.20, P = .008); -0.21 (-0.28 to -0.14); Fig 3 path -0.23 (-0.28 to -0.16); 36.4% (18.2%-63.6%); F = 19.05; Table 1 communication 0.4 (0.8). Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_13.json"
+ },
+ {
+  "paper_id": "18",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 82,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The extraction is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_18.json. It has 3 models and 82 estimate cells.\n\n1) The Supporting Information (Tables S1-S10) is not in the PDF. M1 has 78 cells, and only the 23 significant ones have values. I copied those values from the cell labels in the Figure 2 heatmap; the figure is an image, so I read them off zoomed renders of the page. The other 55 cells are blank in the figure (not significant after Bonferroni), so their B is null. SEs and exact p-values exist only in Table S1. Someone with the supplement should fill these in.\n\n2) The Results text and Figure 2 disagree in several places:\n- Text x picture vocabulary: the text says -0.93 and -1.56. The figure shows -2.20 at baseline and -0.93 at follow-up.\n- VC x picture vocabulary: the text says -2.11 and -2.64. The figure shows -3.18 and -2.11.\n- VC x picture sequence memory: the text says -1.46 and -1.90. The figure shows -2.43 at baseline and a blank (not significant) cell at follow-up. The -1.46 in the figure belongs to VC x oral reading recognition at follow-up.\nI entered the figure values and explained each mismatch in the cell notes. Check these against Table S1.\n\n3) The main text does not list the LME covariates, the random effects, the software, or whether the DV scores are raw, T-scores or age-corrected. The only covariates named are sex, income and parental education (Discussion, p. 8). Because of this, SD_DV is unknown for M1 and its cells cannot be converted to d. The coefficients are called beta but look unstandardized.\n\n4) M1 is two separate cross-sectional LMEs: baseline (n=7107) and 2-year follow-up (n=4505). I coded the IVs by wave so each cell gets the SD for its own wave.\n\n5) M2 is the one-sample MR of Text, SNS and VC on daily reading time (Table 2). I treated reading time as a qualifying behavioral outcome; please confirm that eligibility call. Only SEs are printed, so CI fields are null. SNS p is printed as \"0.000\". Text has p=0.045 but is not bolded, so I marked it non-significant under the authors' Bonferroni rule. Its d conversion uses the baseline reading-time SD of 0.67, on the assumption that the MR used baseline data.\n\n6) M3 is a single reverse-MR estimate with phone/SM as the outcome: picture vocabulary -> VC hours, B=-0.001, corrected p<10^-8. It comes from the text only. The MR analytic n and confounders are not reported in the main text.\n\n7) Several analyses were excluded because the main text gives only a range or unlabeled plot points: the forward MR for Text, SNS and VC (Figure 3a), the mediation and two-step MR indirect effects (Figure 6b/6d, Tables S7/S9), and the LME of screen use on reading time (Figure 6a/Table S6). A coder with the supplement could add them."
+ },
+ {
+  "paper_id": "24",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 3,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The adjustment set is reported inconsistently. The Table 2 footnote and the Abstract include BMI percentile, but the Statistical analysis paragraph (p. 889) leaves it out. Age is listed as a covariate in Section 2.2.3 but is not named in any adjustment set. I followed the Table 2 footnote. Site is entered as a covariate, but the paper does not say whether as fixed dummies or a random effect. Each modality was modeled separately, so each estimate is not adjusted for the other modalities. The aORs are per additional hour/day, while the IV SDs are only about 0.45-0.56 h/day, so the Chinn d corresponds to roughly a 2-SD contrast; reviewers should decide whether to rescale it to a per-SD contrast. p0 (0.011) is the weighted full-sample prevalence at follow-up (Table 1), not the rate in the unexposed group. Video chat (aOR 1.32, 0.99-1.76, p = .057) is recorded as non-significant."
+ },
+ {
+  "paper_id": "31",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 10,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) I counted 'social engagement' (texting + video chat, summed weighted daily hours) as a qualifying IV. It is a composite built only from phone/SM items, so it passes FT-IC2 Step 2, and the texting item says 'cell phone, tablet, or computer'. Coders should confirm this. 2) Each lifestyle factor was fit in its own model, so the social media B is not adjusted for the other screen types. 3) For SD_DV I used the 2-year follow-up raw-score SDs from Table 2. B comes from a residual change model (it conditions on the baseline score), so d scaled by the raw T2 SD is a convention choice to check. 4) Only SE is reported, so CIs are null. Several p values are printed as '< 0.001', so p is left null and p_label is filled in. Significance follows the pFDR asterisks. 5) The social media x sex interactions and the semi-partial R2 values are only in the Supporting Information (Tables S2-S5), which is not bundled in the PDF. 6) Race/ethnicity of the sample is not reported. 7) Unrelated quirks in the paper: sleep duration on the Flanker is marked significant at pFDR 0.119*, and the text gives SE = -3.03 for the sex interaction. These do not affect the extracted phone/SM cells. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_31.json"
+ },
+ {
+  "paper_id": "35",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 12,
+  "native_metrics": [
+   "other:PR",
+   "RR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_35.json and parses as valid JSON. All 12 estimates were checked against the table images on pp. 351-352 and match.\n\nItems to verify:\n\n(1) The paper prints no p-values. The sig flags come from whether the 95% CI excludes 1 and from what the authors say in the text. Two CIs have a lower bound printed as 1.00: Table 2 Wave 1 mild SMA, Model 2, PR 1.35 (1.00-1.84), and Table 3 mild SMA, Model 3, RR 1.37 (1.00-1.87). The authors call both non-significant, so I set sig false.\n\n(2) The p0 values are marginal BE prevalences I computed from reported counts: Wave 1 is 249/1940 = 0.128 and Wave 3 is 237/1940 = 0.122. The paper does not report the BE rate in the reference group. The mild SMA group (24.6%) and the increased trajectory class (23.5%) are each more than 10% of the sample, so the RR-to-OR step is approximate for those cells.\n\n(3) M1 is cross-sectional and reports prevalence ratios. I coded it as native_metric \"other:PR\" with value fields. A PR converts to d the same way as an RR, so check whether the pipeline needs \"RR\" here instead.\n\n(4) SMT is per 1 hour/day and the paper reports no SD for it, so the d for SMT is per hour, not standardized.\n\n(5) The trajectory class sizes contradict each other. The text on p. 350 says decreased n=455 (7.4%) and increased n=143 (23.5%). Figure 2 gives decreased N=143 and increased N=455, and the percentages fit the Figure 2 counts. I used the Figure 2 assignment in the axis meta.\n\n(6) The paper does not say whether SMT and SMA were entered in the same model or in separate models.\n\n(7) M3's IV is a latent SMA trajectory across Waves 1-3, which includes Wave 3, the outcome wave. It is unclear which wave the BMI and behavioral covariates come from in M3.\n\n(8) Supplementary Tables S3-S7 are not in the PDF: frequent BE among cases (the high-SMA RR of 1.57 is quoted in the text), sex and BMI interactions and stratified results, the reporter sensitivity analysis, and the larger sample without a social media account. These are listed in excluded_models. Add them if someone obtains the supplement.\n\n(9) Including the paper is not in doubt. The SMA measure is a six-item scale adapted from the Bergen Facebook Addiction Scale, and SMT is time on social media."
+ },
+ {
+  "paper_id": "48",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 16,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The bundled PDF has no supplement. Fig. 1 plots the main results with no printed values, and the full ORs are in Supplementary Tables 1 and 2, which are not in the PDF. Only the 16 social-screen-time ORs printed in the Results text (pp. 2284-2285) were extracted: 12 for M1 (symptoms predicting social screen time) and 4 for M2 (social screen time predicting symptoms). No values were read off the figure. The remaining social cells are listed under excluded_models and should be added from the supplementary tables if those can be obtained. Social screen time is texting + social media + video chat, which qualifies under FT-IC2 Step 2. The 0 / 0.25-0.5 / 0.75-12 h cut-points apply to social time; the nonsocial measure has its own cut-points. Ambiguities: (1) For total problems, the text does not say whether the weekday 1.02 and weekend 1.15 ORs are for the medium or high category. I assigned them to high based on where the points sit in Fig. 1; please verify. (2) In M2 the text says \"higher\" social screen time without naming medium or high vs 0 h. (3) The paper calls the method cumulative logistic regression in VGAM, yet it reports separate ORs for the medium and high categories. That does not fit a single proportional-odds model, so the parameterization is unclear and the Chinn conversion is only approximate. (4) No p-values are printed; sig is set from whether the 95% CI excludes 1. (5) The CIs are implausibly narrow (e.g., 0.74-0.75), which suggests the propensity weights were treated as frequency weights. Be careful using these CIs for precision weighting. (6) Follow-up CBCL prevalence is not reported, so p0 is null."
+ },
+ {
+  "paper_id": "49",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 5,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The PDF has no supplement. Supplemental Tables 1 (cross-sectional Y3) and 2 (logistic regression on the clinical cutoff) may contain per-subtype texting, video chat and social media estimates, and someone should check the online supplement. 2) SD_IV and SD_DV come from Table 1, which is propensity-weighted, so they are not unweighted analytic-sample SDs. The social media IV is heavily floored (M 0.2, SD 0.6). 3) For the M2 mediation, the covariates are only described as \"adjusting for covariates\". I assumed the M1 set and flagged that in the file. The paths are labeled beta in Fig. 1 but B in the text, and nothing says they are standardized. The p-value for the indirect effect is <0.001 only. Converting the indirect effect (a*b) to d is approximate. 4) The paper is inconsistent about the sleep mediation: the abstract and results text say video game screen time, while Fig. 3 and the Methods say total screen time. It is excluded either way. 5) The video chat lower CI bound is printed as -0.012 (three decimals) in Table 2. 6) Study site is listed as an adjustment variable, and it is unclear whether it was a fixed or random effect."
+ },
+ {
+  "paper_id": "50",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 19,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The M1 (full-sample RI-CLPM) point estimates come from the path labels in Fig. 1. Their SEs, CIs and exact p-values are in supplementary Tables S2/S3, which are not in the PDF, so M1 has no CIs and its significance is read from the asterisks. Fig. 1 was checked at high resolution, but each label's assignment to its path (for example, -0.009 is OSA T1->ADHD T2 and -0.006 is ADHD T1->OSA T2) should be confirmed against S2/S3. 2) Table 3 has printing problems in the male column. Two male ADHD->OSA CIs do not contain their own point estimates: -0.057 printed with [-0.029, -0.002], and -0.051 printed with [-0.040, -0.004]. Several other male CIs, such as -0.013 (SE 0.023) printed with [-0.253, 0.141], are much wider than 1.96*SE implies. They were copied as printed; do not convert those CIs without checking. 3) The between-person random-intercept correlation r = 0.068** is printed with '95% CI, 0.07-0.35', which does not contain 0.068, so the CI was left null. It is included in M1 as a beta_std cell. 4) The standardized coefficients are within-person (RI-CLPM), so the d's are not directly comparable to between-person d's. The Table 1 SDs are total SDs and were not used. 5) M2 (sex multigroup, Table 3) was extracted as a separate card because the authors interpret it. The paper does not say whether sex was dropped as a covariate in that model. 6) The content-type moderation (Tables S5-S7) and the non-imputed sensitivity analysis are supplement-only and were excluded for lack of numbers. 7) The SEM software is not named, and the OSA time units are implied hours/day but not stated explicitly. 8) OSA qualifies under FT-IC2 Step 2 (texting + social networking sites + video chat only). In the ADHD->OSA paths, OSA is the DV."
+ },
+ {
+  "paper_id": "55",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 18,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "Output file: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_55.json. All 18 coefficients, CIs and p-values were checked against the pdftotext layout of Tables 3-5.\n\n1. Anchoring model: the authors also read their findings off parallel models that control for depression or anxiety. Those coefficients are in Supplemental Tables 1-2, which are online only and not in the PDF. Only footnote 'a' flags in Tables 3-5 show which estimates stayed significant. I extracted the printed versions without that control (Tables 4/5 for the full sample, Table 3 sex-stratified) and listed the controlled versions under excluded models. If the supplement can be obtained, add those coefficients.\n\n2. Separate or joint models: the paper does not say whether each media category was its own GLMM or all categories went into one model. I assumed one category per model.\n\n3. Coefficients are treated as standardized betas because the paper says all variables were standardized. The SPSS link function / GLMM family is not stated; I assumed linear on continuous T-scores.\n\n4. Table 1 SDs for the media categories look implausible (e.g., weekday texting mean 11.99 min, SD 0.51, range 0-240). They are recorded only as meta. sd_iv and sd_dv are left null because the betas are already standardized.\n\n5. M2 (sex-stratified, weekend only) has no per-stratum N. The 2162 boys and 1977 girls are the full-sample sex counts.\n\n6. ABCD release is inferred as 1.0 from reference 36 and the NDA DOI."
+ },
+ {
+  "paper_id": "57",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 18,
+  "native_metrics": [
+   "other:network edge weight (MGM, LASSO-regularized, bootstrap mean)"
+  ],
+  "d_transformable": "no",
+  "concerns": "The article prints no number for any phone/SM edge. Texting, social media and video chat appear as nodes in a cross-sectional mixed graphical model with the six K-SADS-5 mood symptoms, but their edges are shown only as line width and colour in Fig. 1 (p. 1640). The per-edge values are in ESM Table S1, which is not in the bundled PDF and is not anywhere in the repo. So all 18 estimate cells (3 phone/SM nodes x 6 symptoms) are null, including value, p and sig, and each has a note saying so. A human should get ESM Table S1 (and S2) from the publisher to fill in the edge weights, bootstrap CIs and significance flags, including the female and male subsample values if they are given. The only qualitative statement is in the Results text: common screen types, which include social media, texting and video chat, \"lacked a consistent pattern\" with mood symptoms. Network edge weights cannot be converted to Cohen's d under guidelines \u00a74a, so transformable is false. The exact analytic N after missing data is not reported, since one child per family was sampled per bootstrap from 9987 families. The edges are undirected, so calling phone/SM the IV is only a convention for this review. If ESM Table S1 turns out to print no phone/SM edge values either, Stage-2 FT-IC3/IC4 eligibility (a numeric result is required) should be rechecked. The 6 sd_iv/sd_dv/p0 values I spot-checked against Table 1 (p. 1639) matched, as did the two connectivity regression numbers in excluded_models. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_57.json"
+ },
+ {
+  "paper_id": "70",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 15,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "Output written to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_70.json. Two things to check by hand. (1) The paper never states the scoring unit for SMAQ and MPIQ, so for M2 the contrast is assumed to be per 1 point on an item-mean score. That assumption comes from the Table 1 means (1.9 and 3.1) and the item ranges. (2) The Methods text names age as a confounder, but neither the Table 2 nor the Table 3 covariate footnote lists it. The extraction follows the footnotes and flags the gap. Smaller points: the p0 values are full-sample year-two prevalences from Table 1. Prevalences within the SMAQ (n=5,587) and MPIQ (n=7,280) subsamples are not reported, but Chinn's OR-to-d conversion does not need p0. Table 1 does not say outright that the 'Social media (hours)' SD of 0.4 is from baseline; it is read as baseline because it sits under the table's 'baseline' header. Per-cell N is not printed for Table 2. The Table 3 models leave out the baseline parent-reported eating disorder symptom covariate, so their specification differs from M1. The total-screen-time column is excluded as a mixed composite. The supplement (Tables S1 and S2) is not in the PDF. I checked all 15 ORs, CIs and p-values against the table text pulled from the PDF."
+ },
+ {
+  "paper_id": "80",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 6,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The PDF at the listed path is the wrong paper. /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/pdfs/10.1016_j.acap.2024.01.023.pdf (md5 142a21f2...) is actually Nagata et al., \"Neighborhood Quality and Screen Use\", Acad Pediatr 2026;26:103164. The correct nutrition paper is at /Users/dannyzweben/Desktop/ABCD-review-AI-pipeline-archive/data/pdfs_include/10.1016_j.acap.2024.01.023.pdf (md5 3e9036d9...), and the extraction comes from that file. The copy in docs/pdfs should be replaced; I did not change it. The same mismatch exists in the archive data/pdfs/ folder, so other papers' PDFs may have been swapped the same way.\n\nOn the extraction: the prospective model (year-0 IV) and the cross-sectional model (year-1 IV) are split into M1 and M2 because they have different designs. The authors interpret both, but stress the cross-sectional findings for texting and social media. Texting and social media are significant only cross-sectionally (M2). In the prospective model (M1) all phone/SM estimates are null.\n\nThree things need human checks:\n- SD_DV = 2.45 is the Table 1 \"MIND diet sum score\" row. It sits under the \"Baseline\" heading, but MIND was only measured at year 1, so the label is ambiguous.\n- How study site was modeled (fixed or random) is not stated.\n- Supplementary Appendix A (the exclusion flowchart) is not bundled in the PDF.\n\nEach modality is its own single-IV regression, so the estimates are not mutually adjusted for other modalities. All 6 B values, CIs, p-values and all 6 SD_IV values were checked against Table 2 and Table 1."
+ },
+ {
+  "paper_id": "84",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 10,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The article PDF is only 6 pages and does not contain the qualifying estimates. They are only in Supplementary Table S1. I got that table from the publisher's open-access supplement (ars.els-cdn.com, 1-s2.0-S0001691826005433-mmc1.docx), saved a copy to the scratchpad as p84_mmc1.docx, and parsed the values directly from the docx table, so they match it exactly. A human should confirm this is the official supplement and consider saving it next to the PDF. 2) The Table S1 column is just labeled 'beta' and the supplement never says whether it is standardized. I coded it as beta_std because its magnitudes (-0.02 to -0.07) match the standardized betas in the main text, and the main text reports unstandardized b of about -0.2 to -0.4. If the betas are actually unstandardized, d cannot be computed: the paper reports no SD for texting or video chat, only for total screen time (3.07 h/day). 3) Table S1 does not print per-cell N. The paper also never says whether each device was modeled on its own or all devices were entered together; the r2 values differ by device, which suggests separate models. 4) I set significance using the FDR p, which the authors corrected across all 25 tests in Table S1. On that basis texting is not significant for executive function (raw p .017, FDR .071) or processing speed (raw p .023, FDR .064). 5) The covariate list follows Section 2.6. Section 2.5 points to the Table 2 variables as covariates, and those also include total brain size and handedness, so the exact covariate set is somewhat ambiguous. Section 2.5 actually cites 'Table 1', which looks like a typo for Table 2. 6) The paper does not name the ABCD wave. Mean age 119 months points to baseline, and the authors describe the design as cross-sectional. 7) The SD_DV values come from the full sample in Table 2, not the analytic sample. They are listed for reference only, since a standardized-beta conversion does not need them. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_84.json"
+ },
+ {
+  "paper_id": "85",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 14,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The values for social media and alcohol disagree within the paper. Table 3 gives the SM main effect as OR 1.50 (1.31, 1.72), b 0.41. The Results text on p. 3 gives OR 1.06 [0.92, 1.21], b 0.04, not significant. The draft uses the table value, so a human needs to decide which is correct. 2) The supplementary tables (Supp Tables 1, 3, 4 and the one printed as 'S') are not in the PDF. Five of the six full-sample models were therefore copied from the Results text, and their p-values and SEs are missing. 3) In the SM-alcohol and SM-nicotine/tobacco models the SM x time interaction was kept. That makes the SM main effect the difference at time 0, not an average over follow-up. The two interaction ORs are entered as a separate 'sm_x_time' IV row and probably should not be converted to d alongside the main effects. 4) M2 is the post-hoc sensitivity analysis in substance-naive youth (n=9,628). It is reported in the text only, but the authors interpret it in the Discussion. Its covariates are assumed to match M1 because the text only says the models were 're-fit'. 5) For phone and alcohol, p was entered as 0.001 with the label '<0.001'. The p0 values are the marginal age 11-12 prevalences from Table 1, not the rates in the unexposed group. 6) There are typos in the source: the CI '[1.01, 1.017]' for the SM x time OR, and '[0.06. 0.37]'. 7) The ABCD release is not stated, and per-model analytic N is not reported; only the total of 10,907 is given."
+ },
+ {
+  "paper_id": "86",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 26,
+  "native_metrics": [
+   "B",
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The PDF has only 10 pages, and Appendix Table 3 (the full results with numeric CIs and p values) is in the online supplement, which is not included. All 26 point estimates come from the values printed next to the forest-plot rows in Figures 1 and 2. CIs and p values are null and need filling from Appendix Table 3. 2) Significance is judged from the text and by looking at the figure CIs. The ones to check against the supplement: SMAQ->somatic and SMAQ->anxiety (lower bounds near 0), and MPIQ->marijuana and SMAQ->tobacco (lower bounds near 1). Benjamini-Hochberg FDR was applied, but the adjusted values are not shown. 3) Figure 1 labels the coefficient 'beta', but nothing says it is standardized, so I treated it as unstandardized B (per 1 point of the MPIQ/SMAQ mean score). 4) The sleep duration unit is unclear: Figure 1 says 'Weekly sleep duration', but Table 1 gives 8.91 (SD 1.58) hours per night. 5) SD_DV for the CBCL T-scores is set to 10 by rule. The weighted sample SDs in Table 1 are 4.71-6.26, so the derived d will be smaller than with sample SDs. 6) The paper says N=8,119, but the MPIQ was asked only of phone users (n=6,158) and the SMAQ only of SM account holders (n=4,633). The per-model Ns are not printed, and the paper never says whether the phone, SM and gaming exposures were modeled separately or together. 7) The p0 values are weighted marginal Year 3 prevalences, not rates in an unexposed group. Problematic video game use is excluded (generic gaming). File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_86.json"
+ },
+ {
+  "paper_id": "95",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 96,
+  "native_metrics": [
+   "beta_std",
+   "r"
+  ],
+  "d_transformable": "partial",
+  "concerns": "Output is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_95.json. Things to check by hand:\n\n(1) For M1, the SMA estimate the paper prints is only the SMA x Time interaction (Table 3). The paper says the SMA main effect is \"not significant\" but prints no coefficient for it. So M1's d values describe how the association changed between waves, not the association itself. Coders should decide whether M1 belongs in the d comparison at all.\n\n(2) M2 uses the Table 2 partial correlations (SMA with ROI beta-weights at Time 1 and Time 2). These are conditioned on demographics only, with no head motion and no site term. The p-values appear uncorrected even though the text says all models were BH-corrected. I coded sig at p < .05 to match the paper's bolding. Two things are inferred from the table layout and Results text, not stated: that SMA and brain were measured at the same wave, and that N = 543 per correlation.\n\n(3) The SMA-as-DV model (hypothesis 2) went to excluded_models. The paper reports SMA results only as \"no significant interaction\" and gives no numbers.\n\n(4) M1 significance is coded on p_FDR < .05. Right insula loss is p = .017 uncorrected but p_FDR = .089, so it is coded sig = false.\n\n(5) The paper does not say how Time was coded or which variables were standardized. The LMM has only a site random intercept; no participant random effect is stated even though the data are repeated measures.\n\n(6) No SDs or means for SMA or beta-weights are reported anywhere, so all sd fields are null.\n\n(7) The pdftotext extraction labels the second row of each ROI pair as only \"R\" for the vmPFC rows. I mapped them by order to vmPFC R, and spot-checks against the page images matched."
+ },
+ {
+  "paper_id": "96",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 63,
+  "native_metrics": [
+   "other:regularized partial correlation (graphical LASSO edge weight)"
+  ],
+  "d_transformable": "no",
+  "concerns": "The output is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_96.json.\n\n1. How the model card is built. There is one model card: a glasso network fit separately at T1, T2 and T3. It has 9 IV rows (texting, video chat and social media at each of the 3 waves) and 7 PLE item columns, so 63 edges. All edge values come from Tables 2-4. The 28 nonzero edges match the pdftotext output of the PDF; the 35 others are exactly 0. A reviewer might prefer three cards, one per wave.\n\n2. sig and p are null for every edge. The paper prints no p-values, CIs or significance flags for single edges; the bootnet difference tests are only in the supplement. If the renderer requires a boolean for sig, this needs fixing. Each edge's note says whether it was shrunk to 0 or kept as nonzero.\n\n3. Missing details:\n   - The paper does not say whether each screen node is weekday time, weekend time or a combination.\n   - It does not say whether each PLE node is the yes/no endorsement or the 1-5 distress rating, or why these 7 of the 21 PQ-BC items were chosen.\n   - Not reported: ABCD release, correlation type, lambda/EBIC tuning, per-wave N, missing-data handling, race/ethnicity breakdown, and any descriptives or SDs for the nodes.\n\n4. Design. The paper calls itself a \"longitudinal network analysis\", but it fits three same-wave networks. There are no cross-wave edges.\n\n5. Possible later use. Bridge expected influence and centrality for the phone/SM nodes appear only as figure points (Figs. 4-9) and were excluded. These figures are the authors' main interpretive output, so a later review level might want values read off them.\n\n6. All phone/SM-PLE edges are tiny (largest 0.037). The authors' claims about texting's centrality rest mostly on its edges to other screen nodes, not to PLEs.\n\n7. Cohen's d was not computed. Section 4a of the guidelines lists network edge weights as non-convertible."
+ },
+ {
+  "paper_id": "97",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 12,
+  "native_metrics": [
+   "other:GFA factor loading",
+   "beta_std"
+  ],
+  "d_transformable": "no",
+  "concerns": "The extraction is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_97.json. No phone or social media estimate is printed as a number anywhere in the PDF.\n\nM1 is the group factor analysis. It covers the texting, video chat and social media items (weekday and weekend) together with resting-state connectivity. Their loadings appear only on the radial plots in Figs. 5 and 6 (pp. 299-300), with no printed values. Its 12 estimate cells are therefore all null. Each cell has a note with the direction the text gives: GFA 1 loads negatively on all screen media variables, and GFA 2 loads on video games. Factor loadings also cannot be converted to Cohen's d.\n\nM2 is the exploratory GAMM series: baseline social media time predicting cognitive and CBCL outcomes at the 2-year follow-up. The main text gives only the range \"b's ranging from .013 to .026\" (p. 301). The per-outcome values are in online supplement OSM-4, which is not bundled in the PDF, so estimates is empty. A human should retrieve OSM-4 from the Cortex site. Its standardized betas would make the paper partly transformable. OSM-1 should also be retrieved for the social media SD and the sample demographics.\n\nOther items to check:\n- **Social media variable:** the PDF does not say how weekday and weekend were combined into \"average weekly social media usage.\"\n- **Which outcomes:** the analytic N per model is not given. The scope of \"all study outcomes\" is my reading, taken as the 2 CBCL scales plus the 8 cognitive tests in Table 1.\n- **Covariates:** the Methods list sex, ethnicity, age and caregiver education. Results 3.3 lists a longer set: parental age, marital status and income in 4 strata are added. I used the Results list.\n- **Factor threshold:** the Methods say a factor was retained at >1% of variance; Results say >4%.\n- **Number of screen items:** the Discussion says \"ten metrics,\" but the Methods describe 6 activities on weekdays and weekends, which is 12 items.\n- **M1 as a primary model:** whether a GFA should be a primary model or excluded is a judgment call. The Stage 2 inclusion was based on the GFA loadings."
+ },
+ {
+  "paper_id": "106",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 12,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The JSON is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_106.json and parses cleanly. It holds one model (M1) with 12 estimates: 3 IVs (texting, social media, video chat) by 4 outcomes (alcohol, nicotine, cannabis, any substance). All 12 ORs and CIs were checked against a zoomed render of Fig. 1, and they match.\n\nWhat a human should verify:\n(1) Every estimate comes from the printed labels on the Fig. 1 forest plot. The paper has no results table. 11 of the 12 also appear in the Results text, but video chat -> alcohol (OR 1.04, CI 0.98-1.11, not significant) appears only in the figure. The figure label for texting -> alcohol is missing its opening parenthesis.\n(2) The paper prints no p-values. \"sig\" comes from the Fig. 1 asterisk, which marks significance after Benjamini-Hochberg correction. p is null and p_label is \"*\" when significant.\n(3) The paper never says whether each modality was fitted in its own model or all modalities were entered together. I assumed one modality per model.\n(4) Study site is listed as a covariate, but the paper doesn't say whether it is a fixed or random effect.\n(5) The ABCD release version is not stated in the PDF. Appendix A, which compares included and excluded participants, is an online supplement and was not in the PDF.\n(6) The p0 values are weighted marginal Year 3 prevalences from Table 2. They are not unexposed-group rates, and the OR conversion doesn't need them.\n(7) The derived d is per 1 hour/day, not per SD. Year 2 SD_IV values from Table 1 (texting 1.5, social media 1.6, video chat 1.3) are recorded in case they are needed.\n(8) Cannabis at Year 3 is rare (N=65, 1.0%)."
+ },
+ {
+  "paper_id": "107",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 5,
+  "native_metrics": [
+   "other:logit_B",
+   "B",
+   "other:indirect_effect_logit"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) The headline B=0.18 (95% CI 0.13-0.24) is the gsem direct effect from a binomial logit equation, so it is on the log-odds scale; I coded it as other:logit_B (d = B*sqrt(3)/pi). Please make sure the pipeline does not run it through the linear B formula. Fig. 1a and 1b both print direct B = 0.18, and the text does not say which mediation model the CI comes from. 2) The M2 a-paths (SM to positive expectancies B=0.16, to negative B=-0.16) come only from the Fig. 1 labels: there is no CI, no exact p, and the paper does not say whether they are unstandardized. The indirect effects (0.16x0.29=0.046 and 0.16x0.18=0.029) are consistent with raw-scale coefficients. Expectancies (beliefs about cannabis) were counted as an individual-level psychosocial DV, so check that they are eligible. 3) M3 indirect effects are kept in native units and marked non-convertible. 4) SDs come from Table 1 and are weighted (SM 1.5 h/day; expectancies 3.0 and 2.6). p0 = 0.051 is the weighted marginal prevalence of Year 4 experimentation, not the rate among non-users. 5) The ABCD release is not stated. The Appendix A flowchart and Appendix B (expectancy scoring) are online supplements that are not in the PDF. The paper does not say whether study site enters as a fixed or random term."
+ },
+ {
+  "paper_id": "115",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 14,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) M1 and M2 never say whether the beta is standardized. For the general-SMA CLPM, the authors read beta = 0.03 as \"per additional hour\" (p. 6), which would mean an unstandardized slope. I coded beta_std because the mediation analysis is explicitly standardized and a per-hour effect of 0.03 t-points is implausibly small. A human should decide this. If the betas are unstandardized, d cannot be computed: the paper gives no SD for texting, social media or video chat (Table 1 has only the total SMA SD, 2.896). 2) All media-specific LMM (M1) and CLPM (M2) estimates appear only in the text. There are no CIs (M2 gives SEs, which I put in notes), and only significant or near-significant cells are printed. Five of the nine M1 cells (texting with internalizing and externalizing, all three video chat cells) are null and marked as implied non-significant. 3) Supplement Table S2 holds the media-specific SMA-to-brain estimates for texting, video chat and social media. It is not bundled in the PDF, so I did not extract them. Obtain the supplement and extract them. 4) The sd_dv values in M1 are baseline SDs from Table 1, not year-3 SDs. 5) M2 includes reverse paths where phone/SM is the DV (baseline externalizing to 2-year texting and social media). Those are cross-lagged, so they qualify, but a human should confirm. 6) The tables look internally inconsistent. Table 2 reports a direct effect of 0.676 for total SMA via CON-RTN on externalizing, which is implausible against the LMM beta of 0.058. Table 4 also lists one row with pfdr 0.5715, even though the table claims all rows are significant. This casts some doubt on how the mediation tables were reported. In M3, both the texting c' (0.035, Table 4) and the indirect a*b (0.005, Table 5) are extracted; the indirect effect should not be converted to d. 7) The N for each media-specific model and for the imaging mediation subsample is not reported (cohort N = 4557). Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_115.json"
+ },
+ {
+  "paper_id": "124",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 32,
+  "native_metrics": [
+   "RR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_124.json. (1) Results text (p. 533) says social media was significantly associated with self-harm and suicidal ideation among boys, but the adjusted Table 3 CIs include 1 (SI 1.22 [0.60, 2.45]; SH 1.83 [0.95, 3.51]); only the unadjusted rows are significant. I coded sig from the adjusted CIs. (2) The model is described only as a \"univariate general linear model with covariates\"; the link function, software, and clustering are not stated, so it is unclear whether these are true risk ratios. (3) No p-values are printed. sig = 95% CI excludes 1 (bold in the table). (4) Video chat is included as a qualifying phone/SM IV per FT-IC2, even though the authors leave it out of their \"digital media\" composite. It comes from Table 2, not Table 3. (5) M2 (any vs. no social media use) exists only in the text, with no table. I made it a separate card because the contrast is different. (6) dv_axis p0 is the gender-specific marginal prevalence from Table 1. Each estimate also has a non-standard field, p0_cell, holding the printed rate in the unexposed group. That is the better p0 for converting RR to OR, especially for video chat and M2, where exposure prevalence is 12-21%. The converter may need to be pointed at p0_cell. (7) Sex is coded on the DV axis (8 DV columns = 4 diagnoses x girls/boys). (8) Supplementary Figs. 1-4 (exposure-response curves) are not in the PDF but cover composites only. (9) The first author's name is printed \"Roberston\" in the paper."
+ },
+ {
+  "paper_id": "130",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 6,
+  "native_metrics": [
+   "other:mean_abs_SHAP"
+  ],
+  "d_transformable": "no",
+  "concerns": "1) Every value comes from data labels printed on the bar charts in Figures 2, 3 and 4B. None comes from a table. They are mean |SHAP| values with no CI or p, so sig is set to null instead of true or false. Check that the renderer accepts null. 2) Texting -> depressive symptoms (Survey 1, Fig 4B, 0.07, red bar) is the only clearly qualifying estimate. 3) I also extracted 'frequency of on-line communication - yr.' for anxiety (Fig 3, 0.06, red/increase) and stress (Fig 2, 0.05, blue/decrease). Whether this item qualifies needs a human call: the authors file it under Relationships, not Screentime, and the item wording is only in Appendix B, which is not in the PDF. Strike these two if it does not count as digital socializing under FT-IC2. 4) Three of the 6 estimate cells are null placeholders: texting x anxiety, texting x stress, and online communication x depression. Neither feature reached the printed top 20 for those outcomes. 5) The online supplement (Appendix A/B, Table A1, Supplementary Figure A4 for the Survey 3 depression model) is not bundled in the PDF. A4 might show texting or other phone/SM features for Survey 3. 6) Social media time was in the feature set but appears in no printed top 20, so it has no estimate. 7) SDs and response scales for the IV items are not reported. Not convertible to d."
+ },
+ {
+  "paper_id": "133",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 3,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) Which model to use: I extracted Table 3 Model 3 (n=8,542, baseline OCD cases excluded, so the outcome is new-onset OCD), because the Abstract and Results report Model 3's aORs. Model 2 (n=9,208, baseline OCD entered as a covariate) is also adjusted. I put it in excluded_models with its values in case coders prefer it. 2) Age is listed as a covariate in the Statistical analysis text, but it is missing from the Table 3 footnote and from the Abstract. Check whether it was actually in the model. 3) Videos (YouTube) and video games are excluded as non-phone/non-SM, following the paper 156 reference. However, the stage2_reason cites them, and FT-IC2 names YouTube as a platform. Coders should confirm that \"Videos (YouTube)\" (watching videos, e.g., YouTube, on any device) does not qualify. Its Model 3 aOR is 1.11 (1.01-1.23), p=.038. 4) None of the three phone/SM estimates is significant. Texting comes closest: aOR 1.20 (1.00-1.44), p=.056. 5) p0=0.044 is from the Results text and its denominator is unclear (probably the 9,208 sample). It is not needed for the Chinn OR-to-d conversion. 6) The SD_IV values come from the Table 1 No-OCD-baseline column (n=8,542), which is the Model 3 sample. Because the contrast is per 1 hour/day and that is more than 2 SD for every modality, the derived d per hour is large relative to the typical exposure. 7) The paper is inconsistent on percent non-White: the Abstract says 43.5% (matches Table 1) and the Results text says 47.8%. 8) No multiple-comparison correction across the 7 modalities. Site was entered as a covariate, not as a random effect."
+ },
+ {
+  "paper_id": "136",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 3,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "no",
+  "concerns": "The local PDF has only the 8-page article (pp. 496-503). It has no supplement. Every analysis in the main text (Tables 3-4) uses a total screen-time composite that mixes TV, video, and games with texting, video chat, and social networking, so all of them fail FT-IC2 Step 2. The only phone/SM-isolated estimates are in online Supplementary Table A7. The Discussion (p. 501) describes these as exploratory weekend screen-type categories vs withdrawn/depressed symptoms and says none were associated. I wrote M1 as a placeholder card for Table A7 with three cells (weekend texting, video chat, SNS). All OR, CI, and p values are null. sig=false comes only from the Discussion sentence. Someone needs to get the supplement (mmc1 from the article's page at doi 10.1016/j.jadohealth.2023.09.001) and fill in the following: the values; how the IV is coded (continuous hours or dichotomized); whether the model is female-only or gender-stratified; the covariate set (my list assumes the main adjusted models); and whether the categories enter separately or together. Then set d_transformable to true if ORs with CIs are printed. Also re-check Stage 2 eligibility: the stage2_reason only notes that the headline composite fails Step 2. If Table A7 does not break out texting, video chat, and SNS with their own estimates, this paper fails FT-IC2."
+ },
+ {
+  "paper_id": "139",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 18,
+  "native_metrics": [
+   "OR",
+   "other:ordered_logit_coefficient",
+   "B"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) Which IVs count as phone/SM. I included 'Talk on the phone or text', 'Spend time online on social media', the three phone-action categories (ringer silent/vibrate, ringer on, phone outside room, each vs. turning the phone off) and 'Woken up by phone calls, text messages, or e-mails'. The phone-action and woken-by items are phone-specific but are not texting/SM time as such, so please check they belong. I excluded 'Spend time in chat rooms' (not on the FT-IC2 list, device not specified) and 'Used phone or other device when woke up during the night' (bundles other devices and mixed activities). Both are borderline; their numbers are recorded in excluded_models. 2) The IV coding is unclear. Methods describe a 1-5 Likert scale, but Table 2 shows four night-count categories, so 'per one step' is ambiguous. The paper also does not say whether each exposure was fit in its own model or entered jointly. 3) No SDs are reported for any IV, so the M3 (linear, sleep duration) frequency-item cells cannot be converted to d. The phone-action dummies are converted with B/1.62, using the total-sample SD rather than the pooled SD. 4) M2 reports raw ordered-logit coefficients (log-odds) labelled B, not ORs. I stored them in the value fields and convert them with B*sqrt(3)/pi. 5) The DV is called 'weekly sleep duration', but Table 1 gives it in hours per night (SD 1.62). 6) Appendices A-D (supplement) are not in the PDF. Appendices C and D are described only in the text, and the supplement may hold extra phone/SM numbers. 7) The ABCD release version is not stated. pdftotext drops non-bold minus signs, so every sign was checked against a 220-dpi render of Table 3. For p shown as '< .001', p is set to null and only p_label is kept."
+ },
+ {
+  "paper_id": "144",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 8,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The IV is a 3-group trajectory from a group-based trajectory model (GBTM), not hours per day, so d = B / SD_DV is a group contrast. SD_DV values are the Year 2 total-sample SDs from Table 1 (LMT 0.2, RAVLT 9.1 / 2.7 / 2.9), not pooled within-group SDs. The LMT SD is printed to only one decimal, so its d is coarse. The model adjusts for the baseline score on the same test, so B is a residualized difference. The trajectory window (baseline to Year 2) overlaps the Year 2 outcome wave. The Research-in-context panel says N = 7582, which conflicts with the N = 7528 used everywhere else. The supplement (Tables S1-S4) is not bundled in the PDF, so it is unverified whether Table S4 contains any sex-stratified social media estimates; the text and limitations suggest it does not. Software for the regression stage is not stated separately (GBTM is Stata 18.0). All 8 Table 2 values were checked against the pdftotext extraction. Output file: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_144.json"
+ },
+ {
+  "paper_id": "150",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 141,
+  "native_metrics": [
+   "other:standardized_beta_x100"
+  ],
+  "d_transformable": "yes",
+  "concerns": "File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_150.json. One model card (gamm4 GAMM, cross-sectional Year 2, N=7,614): 2 IVs (daily SM hours; SMAQ addiction score, separate models) x 70 thickness DVs from Table 2 (34 DK ROIs x 2 hemispheres + whole-hemisphere all cortical gray matter), plus 1 in-text estimate (right-hemisphere cortical volume, 100x std B = -1.916, SE 0.931, p = 0.040). Things to check: (1) Table 2 is an image; I read it from a 400-dpi render and spot-checked several cells, but all 140 values should be checked by a human against p. 4. (2) Values are stored as printed (x100 standardized beta), so they need to be divided by 100 before conversion. The paper calls them standardized betas, but Methods never say the IV was z-scored. If it was not, the coefficient is change in z-thickness per hour/day or per SMAQ point, and you should use sd_iv (1.5 / 0.8 from Table 1). The d conversion depends on this. (3) Only SE is reported, no CIs, so value_lo and value_hi are null. (4) For the 'All Cortical Gray Matter' rows only a raw p is printed (no FDR q), and the same is true for the right-hemisphere volume estimate. I set sig=true from raw p < 0.05. The text is ambiguous on whether the volume result was FDR-corrected, and it cites Table 2 even though Table 2 only shows thickness. (5) Social media time is significant at q<0.05 in 37 ROI cells, plus 2 whole-hemisphere cells and 1 volume cell. No social media addiction cell is significant. (6) Excluded: the vertexwise FEMA results (Z-maps only), the ADHD-covariate sensitivity analysis (narrative or figure only), and the surface area / subcortical volume ROI results (narrative only; supplement not bundled in the PDF). If the online supplement has those tables, they may add estimates. (7) Site is not a listed covariate; only scanner serial number and software version are."
+ },
+ {
+  "paper_id": "152",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 1,
+  "native_metrics": [
+   "RR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The single qualifying estimate is the adjusted RR 1.09 (1.00-1.19), p = 0.049, in Table 2. The IV is checking COVID-related information on social media \"almost every hour or more\" versus less often. It is not general social media time, so a coder should confirm it counts as a phone/SM modality under FT-IC2. The DV \"always masking\" was taken to mean the \"all the time last week\" response (62.3%), but the paper never states the cut explicitly. p0 = 0.623 is the weighted marginal rate for the whole sample; the rate in the unexposed group is not reported. Exposure prevalence is 9.1%, close to the 10% threshold, and the high base rate makes the RR-to-OR conversion sensitive to p0. The question wording, the response options and the included/excluded comparison are in an online Supplemental Appendix that is not bundled in the PDF. Site was adjusted for, but the paper does not say how it was modelled. The other information-source variables (internet/YouTube, TV, parent counseling) were excluded as non-phone/SM; they enter the model as mutual covariates."
+ },
+ {
+  "paper_id": "154",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 108,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The authors interpret both the combined-effect models and the within/between decomposition (both appear in the Abstract), so I extracted two cards: M1 with 36 combined estimates and M2 with 72 within- and between-person estimates. A reviewer should decide whether both cards belong in the meta-matrix or only one; they share the same data. 2) Native metric is set to the standardized beta printed in Table 3. Each estimate's note gives the unstandardized B per minute. No CIs or SEs are printed in Table 3. Fig. 1 plots 95% CIs for the M2 betas, but I did not read values off the figure, so beta_lo and beta_hi are null. 3) The paper does not say how beta_std was standardized. Recomputing it from B and the grand SDs in Table 2 matches the printed values only approximately (e.g., -0.136 vs. -0.128), so use the printed beta_std. 4) The covariate set \"varied by model\" per the Table 3 note. The 'school night' covariate is listed in that note but not in the Methods, and the paper does not say which models include which covariates. OS was included only in the keyboard models. 5) The analytic N per model (days and participants) is not reported, since each model uses pairwise-complete days. App-use IVs are Android-only (302 participants); keyboard IVs cover 791. 6) The sleep-onset and wake-time SDs were printed as '2 h, 14 m' and '2 h, 17 m' and converted to 134 and 137 minutes. 7) I counted significance at P<.05 with no multiple-comparison correction, across 108 tests. 8) The hourly-binned models (Supplementary Fig. S1) and all sensitivity analyses are supplementary and not printed in the PDF, so they are excluded; reviewers may want to check the online supplement. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_154.json"
+ },
+ {
+  "paper_id": "157",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 12,
+  "native_metrics": [
+   "RR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The IV set goes beyond the Stage 2 pointer (talk/text). I also included bedtime social media, the phone-at-bedtime ringer categories (silent/vibrate, ringer on and outside the room, each vs turning the phone off), and being woken by phone calls, texts or emails (this item also covers emails). Please confirm the ringer and woken-by-phone items count as phone-specific under FT-IC2. 2) I excluded 'spend time in chat rooms' (ARR 1.27/1.08) and 'used phone or other device after waking' (mixed device and activities). A coder may want chat rooms back in. 3) Table 3 gives social media vs sleep disturbance as 1.06 (1.01, 1.11), but the Results text on p. 500 says 1.01-1.13. I used the table value. 4) The IV coding is unclear. Methods describe a 5-point Likert scale (1 never to 5 every night), Table 2 shows 4 categories (0, 1-2, 3-4, 5-7 nights), and the exposures were 'treated as continuous'. So the per-unit contrast is ambiguous, and no SD is reported for any IV. 5) The covariates are inconsistent. Age is listed among confounders in Methods but is missing from the Table 3 footnote and the abstract. 6) p0 values are marginal rates (15.5%, 28.0%), not rates in the unexposed group, and exposure prevalence is over 10%, so the RR-to-OR conversion is approximate. 7) Each exposure seems to be modeled separately, but the paper does not say so. 8) The ABCD data release is not stated. p-values printed as '<.001' are stored as p null with p_label."
+ },
+ {
+  "paper_id": "158",
+  "wrote_file": true,
+  "n_primary_models": 4,
+  "n_estimates": 12,
+  "native_metrics": [
+   "OR",
+   "B"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) The methods describe logistic regression for SDSC sleep disturbance, but the table footnotes say the output comes from \"modified Poisson and linear regression\" models. The columns are labeled OR, so I recorded the values as OR. 2) The paper does not say whether each bedtime item was fit in its own model or whether all items were entered together; \"in addition to all variables listed\" in the footnote is ambiguous. 3) No SDs are reported for the 1-5 Likert bedtime items or for MCTQ sleep duration, so the B models (M2, M3) cannot be converted to d. The ORs can be converted with the Chinn formula. 4) I included the item about being woken by \"phone calls, text messages, or emails\" as phone-qualifying even though emails could come from a non-phone device; please check that call. I excluded the night-waking \"phone or other device ... play games/browse ...\" item as a mixed composite (OR 1.25, B -0.25); coders may want to revisit it. 5) I extracted the sex-stratified Table 5 estimates as separate cards (M3 linear, M4 logistic) because the authors interpret the sex differences. If you prefer, strike them or treat them as interaction results. 6) The ABCD release is not stated, and the online Appendices A and B are not in the PDF. 7) The paper's description of the sleep-duration weights (\"weekdays (7) and weekends (2)\") is copied as written but looks like an error for 5/2. All 12 values were checked against the Table 4 and Table 5 text."
+ },
+ {
+  "paper_id": "160",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 3,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The analytic N conflicts inside the paper: the abstract and Results say 11,633, but the Table 1 title says 11,363. I used 11,633. 2) Age is listed as a confounder in Methods 2.4 but is missing from the Table 2 footnote, so it is unclear whether the final adjusted model includes age. 3) There is another inconsistency about baseline suicidal behaviors. Methods says participants missing baseline suicidal behaviors were excluded, the Table 2 footnote lists baseline suicidal behaviors as a covariate, and a sensitivity analysis that excluded baseline cases is described only as \"unchanged\", with no numbers printed. 4) The paper never says whether each modality was run as its own model or all were entered together. I assumed separate models, based on the one-row-per-modality layout next to a separate total-screen-time row. 5) The ORs are per 1 hour/day of each modality. The baseline SDs are 0.45-0.56 h/day, so one hour is about 2 SDs, and the derived d will not be on the per-SD scale used by some other papers. 6) Social networking was not significant in the adjusted model (OR 1.27, CI 0.97-1.66, p=0.076). It is extracted as a null estimate. 7) Table 1 has a copy-paste error in its title (\"binge eating characteristics\"). Values were checked against both the page images and pdftotext output: Table 2 adjusted ORs, CIs and p-values, and the Table 1 SDs."
+ },
+ {
+  "paper_id": "167",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 56,
+  "native_metrics": [
+   "other:within-group unstandardized MLM coefficient (b); Wald chi-square for group contrasts",
+   "other:within-group latent growth slope b (standardized beta in note)",
+   "r"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) Eligibility: in this paper, age of smartphone ownership is used only to split the sample into 5 groups (8 & under, 9 & 10, 11 & 12, 13 & 14, No Phone) for multi-group models (M1 Table 3/4, M2 latent growth). It never enters a model as a regressor with its own coefficient, so in practice it works as a moderator, and FT-IC2 clarification 7 says moderators do not qualify. The only direct phone-trait numbers are the unadjusted bivariate r values in Table 1 (M3: 'Cellphone age' with youth/parent internalizing Y1-Y4) and three Wald chi-square tests comparing adjacent groups' informant effects. A human should confirm whether Stage-2 inclusion holds. 2) M1 is the analysis the authors use to interpret their findings, but it is not convertible to d. Only M3 converts (r to d), and M3 is unadjusted. It also treats the coded group variable (No Phone presumably = 5) as continuous, and the coding is not printed explicitly. 3) Table 3 errors in the No Phone column: the informant row (.03/.02/.064) and the time row (.06/.07/.401) duplicate the screen-time and puberty rows. The text reports b = -.04, SE = .06, p = .694 and b = -.09, SE = .05, p = .068. I extracted the table values and flagged them in notes. 4) The text gives SE = .17 for the 11 & 12 informant effect; Table 3 gives .03. 5) Table 4, 13 & 14 column: every printed z equals b, and Y4 z = .40 vs b = -.40, which looks like a typesetting error. Y1 b = .22, p = .039 contradicts the text's claim that 13 & 14 was significant only at Y4. 6) Per the text, beta1/beta2 in Table 3 come from the model before the interaction was added and beta3 from the interaction model. 7) M2 (post-hoc latent growth curve) values come from the Results text p. 5, which matches Figure 1. Covariates for that model are not reported. 8) The full-sample interaction CI [-.29, -.23] does not contain b = -.21 (excluded, not phone-specific). 9) There is no supplement in the PDF; Supplemental Table 1 and Figure 1 are online only and were not reviewed."
+ },
+ {
+  "paper_id": "175",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 14,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "There is one model card (M1): the gender-multigroup RI-CLPM M8 for social EMU (social media + texting) and family conflict, adjusted for income. It has 12 cross-lagged estimates (both directions x 3 lags x boys/girls) and 2 between-person random-intercept associations. All values come from the Results text (pp. 1030-1032). I checked each one against Figures 3 and 4. I recorded native beta_std and also kept b with its 95% CI in B/B_lo/B_hi, because the paper prints no CI for beta.\n\nPrinted values a human should check:\n(1) Girls social EMU T1->FC T2: b = -0.59 with SE = .02 and CI [-0.94, -0.25]. The SE does not fit the CI.\n(2) Boys FC T3->social EMU T4: b = -0.04, but beta = .03 and the CI [-0.00, 0.07] is positive. The figure shows .03, so the sign on b is probably a typo.\n(3) Girls FC T1->social EMU T2: the text says beta = -.07, the figure says -.06.\n(4) The girls random-intercept sentence says 'total EMU' even though it is in the social EMU paragraph. Its beta is .24 in the text and .22 in Figure 4.\n(5) The girls T2->T3 b CI is asymmetric.\n\nOther issues:\n- sd_dv values are full-sample observed SDs from Table 1. They are not within-person or sex-specific SDs.\n- Group-specific Ns are not reported. T3 N is printed as '100,972'.\n- The ABCD release is not stated.\n- Supplemental Tables 1-5 are not in the PDF.\n- Texting is defined as 'on a phone, tablet, or computer'. I counted it as qualifying under the activity-defined clarification 5.\n- I excluded the sensitivity-model coefficients for parents' screen behavior -> youth social media intercept (girls beta = -.05, p = .049; boys beta = -.12, p < .001), because they are covariate effects the authors do not interpret further. A coder may disagree.\n\nOutput file: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_175.json"
+ },
+ {
+  "paper_id": "177",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 18,
+  "native_metrics": [
+   "B",
+   "other:likelihood ratio chi-square"
+  ],
+  "d_transformable": "no",
+  "concerns": "The output file is /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_177.json.\n\n1. The PDF does not include Supplementary Tables S1-S9. The full LMM/GLMM coefficients (Tables S2-S5) are only in the web supplement. Because of that, the extraction relies on the in-text likelihood ratio chi-squares and simple slopes. Someone should get the supplement and check for social media coefficients, SEs and SDs of the sleep outcomes.\n\n2. The seven simple slopes for social media and time in bed (p. 7: -0.24, -0.08, -0.07, 0.05, -0.15, -0.13, -0.12) are the same numbers as the age and time-in-bed slopes printed just above them. The only difference is the sign of the August value, which is printed as -0.05 for age and +0.05 for social media. This looks like a copy error in the paper. The August +0.05 also contradicts the text saying social media was linked to shorter time in bed. The bedtime slopes for social media and age are different from each other, so they look fine. A human should verify against Table S2 / Figure S4.\n\n3. d is marked not transformable. The slopes are in raw sleep units (hours or minutes) per 1 SD of social media time, since predictors were standardized. The paper gives no SD for any sleep outcome and no CI or SE for any slope. Sleep onset latency and awakenings have only likelihood ratio chi-squares, with no coefficient. If the supplement gives SDs for the outcomes, the M1 slopes could be converted, so the status might change to partial.\n\n4. The design is concurrent: social media and sleep are measured at the same assessment across 7 timepoints. It is not a prospective design. The model names were built from the methods text, because the full term list is only in the supplement. Results on p. 8 also mention an age x video game interaction that the methods do not list.\n\n5. p-values printed as 'p < .01' are entered as p = null with p_label '<.01'. Page numbers in locations use the manuscript's printed page numbers. Texting and video chat were collected but dropped from all models because of multicollinearity, so no estimates for them can be extracted."
+ },
+ {
+  "paper_id": "184",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 12,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "Phone/SM is the DV here: SMAQ and MPIQ regressed on six parent-reported media parenting practices. Parenting practices count as individual-trait under FT-IC2, but problematic-use scales are themselves the phone/SM variable, so a reviewer may want to confirm this pairing is in scope. Table 3 is printed rotated, and I read it from a re-rotated render. I checked all 12 values against that render and against the results text on pp. 405-406. Per-outcome analytic Ns are not reported. SMAQ was asked of n=6916 and MPIQ of n=8310, while the parenting SDs in Table 1 come from the full N=10,048 sample, so the standardization behind the derived d is approximate. Exact p-values are printed only for the two non-significant control-behavior cells; the rest are '<0.001'. Appendix A, which compares included and excluded participants, is not in the PDF. The total screen time column is excluded because it is a mixed composite, and the VGAQ column is excluded because it measures generic gaming. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_184.json"
+ },
+ {
+  "paper_id": "190",
+  "wrote_file": true,
+  "n_primary_models": 4,
+  "n_estimates": 13,
+  "native_metrics": [
+   "beta_std",
+   "r",
+   "other:mixed-model coefficient (reported as r for baseline, beta for change; scaling not stated)",
+   "other:standardized indirect effect"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1. The qualifying IV is 'Socializing', which combines texting, social networking sites and video chat. It counts as a phone/SM-only composite under FT-IC2 Step 2, but the texting item says 'cell phone, tablet, or computer'. 2. M1 (the latent change score SEM) is the anchor model. A coder should decide whether to keep M2 (the Table 1 correlations, which are descriptive and Holm-corrected but have no exact p-values or N), M3 (the post hoc sibling mixed models, where the paper prints 'r' for the baseline result and 'beta' for the change result and does not state the scaling) and M4 (the mediation indirect effect, which is not convertible). 3. The Socializing<->cogPGS covariance (-0.04) was read from the Figure 1 labels. No p-value is printed; I marked it significant only because the figure does not label it 'n.s.' 4. The follow-up N is inconsistent: 5374 in Methods (p. 8) versus 5169 in the Introduction (p. 2). 5. No raw SD for Socializing is reported, but the SEM coefficients are fully standardized, so the d conversion does not need it. No CIs or SEs are given for the M1 paths. 6. A Socializing-only model is in the online Supplementary Information, which is not in this PDF. 7. Figure 1 draws the baseline-intelligence/change link as a double-headed arrow, but the gender section calls it an 'effect'. The M1 equation treats it as a covariance. Output file: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_190.json"
+ },
+ {
+  "paper_id": "192",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 12,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) Standardization: the paper labels coefficients only as \"beta\" and never says whether variables were standardized. Raw volumes of about 150x10^3 mm^3 don't fit coefficients of 0.01-0.12, so the outcomes look standardized, but this is an assumption. I coded native_metric as beta_std. 2) The focal M1 estimates are social media x Poly(Time,2) interaction slopes (orthogonal polynomial). They don't convert cleanly to a between-person d; only the main effect and the M2 betas are roughly convertible. SD_DV is not reported anywhere. SD_IV = 0.95 for average social media use (Table 1); T0 SD = 1.06. 3) Composite: the social media IV is texting (cell phone/tablet/computer) + social networking sites + video chat. That qualifies under FT-IC2 Step 2 and clarification 5. 4) The supplement (eTables 1-8) is not bundled in the PDF. M2 estimates (beta -0.01, p 0.10, eTable 5; beta -0.03, p 0.16, eTable 6) are from the text only, with no SE or CI, and their analytic N is unknown. The abstract anchors on the beta -0.03. Please check the online supplement. 5) The SNS-only sensitivity estimate (beta -0.02, p 0.002, text p. 6) does not name which model term it is. I inferred it is the Time^2 term for cerebellum and flagged this in its note. 6) The significance threshold is Bonferroni p<0.0027 (Table 2 caption), while the text says p<0.003. CSA x Time^2 has p = 0.004, so I coded it sig=false. 7) Coders may want to decide whether M2 (the abstract-cited accumulated-effect estimate) should be the primary anchor rather than the M1 interactions."
+ },
+ {
+  "paper_id": "195",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 13,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1. Fig. 3 shows only significant results (p < 0.05), so the matrix holds only the 13 significant cells and pooled estimates would lean toward non-null findings. 2. The covariates in the LMMs are unclear. Methods say only that the Table 1 demographics \"were considered as potential covariates\", plus a family random effect. 3. Total-EARS (all smartphone app time) and Game-EARS (smartphone gaming apps) are included as passively sensed phone or app time, and as mobile gaming for Game-EARS. Please confirm these count under FT-IC2. Self-reported total and gaming rows are excluded. 4. The Methods never describe the Fitbit sleep outcomes and give no N for them. 5. The SM-time vs SMAQ/VGAQ betas (text p. 3, e.g. SR 12-mos SMAQ beta = 0.15) are excluded under FT-IC2 clarification 1, which treats them as SM-to-SM associations. The reporting-bias multinomial logistic models (Table 3, picture vocabulary OR = 0.96) are excluded as measurement-concordance analyses. Please check both decisions. 6. It is not stated whether the CBCL scores are raw or T-scores. sd_dv is null, which does not matter here because the betas are already standardized. 7. The supplementary tables (4-7) are not bundled with the PDF. Values were read from the high-resolution Fig. 3 image and cross-checked against the Results text and Abstract where these report them."
+ },
+ {
+  "paper_id": "196",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 31,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_196.json.\n\n1. Missing supplement. The PDF is the 10-page main article only. All per-exposure ExWAS coefficients and CIs are in Supplementary Table S1, which was not available. In the main text they appear only as a forest plot (Fig. 2B). The only qualifying number printed in the text is public (vs private) social media account, B = 2.13 (Discussion p. 6), with no CI. The other 30 qualifying cells are B = null on purpose: I did not read values off the plot. To fill them, get Table S1 from the online supplement at 10.1038/s44277-024-00006-9.\n\n2. Sample label conflict. The Methods and Results headings say the ExWAS ran in the training subsample (n = 5082). The Fig. 2 caption says \"testing subsample\". I followed the Methods; please check.\n\n3. Units and coding of exposures are not given in the main text. SD_IV and per-model N are not reported. SD_DV is set to 10 because BPM scores are normed T-scores, but BPM T-scores are floor-truncated, so the observed SD may differ.\n\n4. Six non-significant exposures (Table S1 numbers 10, 17, 23, 24, 25, 26) are not named in the main text. Some are probably phone/SM null results and should be added once Table S1 is available.\n\n5. Eligibility calls a coder should check:\n- Included: \"Night chatroom use\" (platform not specified), \"Connectedness via phone\", \"Parent suspects secret account\" (parent report) and \"Follower/Following count\".\n- Excluded as gaming: \"Screentime Video Games [20]\", although Fig. 2A puts it in the App-type domain, so it may be app-based.\n- Excluded: cyberbullying, per FT-IC2 clarification 3.\n- Excluded: the headline exposomic risk score (Table 2, and the suicide-attempt ORs in Table S3). It is a weighted composite that includes cyberbullying and video-game items, so it fails FT-IC2 Step 2.\n\n6. Spot-checked against the page images: Table 1 training demographics, Table 2 Model-4 (1.78, 1.58-1.98, t = 17.41, n = 4004), the text values 2.13 and 3.57, and the suicide ORs 1.76 [1.39-2.23] and 2.76 [1.88-4.05]."
+ },
+ {
+  "paper_id": "208",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 7,
+  "native_metrics": [
+   "RR",
+   "other:GSEM unstandardized B (direct and indirect effects)"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The file is at /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_208.json. I checked all 7 Table 2 and Table 3 values against the PDF and they match.\n\n1) How I grouped the models. M1 puts two separate regressions on one card, Table 2 Model 1 (social media time) and Model 2 (problematic social media use), because they use the same covariates. M2 is Table 2 Model 3, with both variables entered together. M3 is the GSEM mediation in Table 3. A coder may prefer to split Model 1 and Model 2 into separate cards, or to drop M2 and M3 as mediation scaffolding. The abstract's headline estimate is Model 1, RR 1.31.\n\n2) The paper labels problematic social media use (SMAQ) as the \"mediator variable\". In Table 2 Model 2 it is the main predictor of sipping, so I kept it. Confirm this is acceptable under FT-IC2, which says a variable does not qualify if it appears only as a mediator.\n\n3) The SMAQ score comes only from youth with at least one social media account. The paper does not say how youth without an account were scored. Table 1 gives M 5.9, SD 6.6, which looks like a summed score, though the text says item averages were used.\n\n4) Converting RR to d uses p0 = 0.087, the overall Year 3 sipping rate for the whole sample (Table 1). It is not an unexposed-group rate, because both social media variables are continuous. The contrast is per 1 hour/day or per 1 SMAQ point, not per SD.\n\n5) The Model 2 row is printed as 1.03 (1.03, 1.05), so the point estimate equals the lower bound, likely from rounding.\n\n6) In the GSEM mediation (M3), the scale of B is not reported: no link function is given, and B = 0.03 does not match ln(1.21). So it is not convertible to d. The abstract gives the proportion-mediated p as 0.002, but Table 3 prints 0.001.\n\n7) The authors call the outcome \"new-onset\" sipping, but participants who sipped at Year 1 were adjusted for, not excluded. The Results text also says \"sipping alcohol (Year 2, Model 1)\", which looks like a typo for Year 3.\n\n8) Study site is listed as an adjustment variable, but the paper does not say whether it was entered as a fixed effect or a clustering term."
+ },
+ {
+  "paper_id": "215",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 0,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "no",
+  "concerns": "The PDF on file is the right paper: the PMC author manuscript of Al-Shoaibi et al. 2025, Child Obesity, 20 pages. It does not include the supplementary appendix. The only phone/SM analysis is the \"socializing\" screen-time subtype (texting + video chat + social media) regressed on year-2 BMI and WC, and its numbers are only in Supplementary Tables S6 and S7. I could not get that appendix. Europe PMC says the article is not open access. The PMC file (PMC12320422, NIHMS2098192-supplement-supplementary_appendix.docx) is behind a proof-of-work bot-check page, and I did not try to get past it. So the M1 card has the full model spec taken from the main text (Methods p. 4, Table 2/3 footnotes, Table 1), but both estimate cells (BMI, WC) are null placeholders. n_estimates is 0. A human needs to download the appendix by hand, add it to the repo, and fill in B/CI/p for socializing. They should also check: (1) whether socializing was continuous hours/day or categorized; (2) whether the three subtypes were entered together or in separate models; (3) whether S6/S7 are sex-stratified (if so, add Female/Male cells or columns); (4) whether an SD for socializing time is reported, which is needed for d; (5) whether the S8-S13 complete-case tables include the subtypes. SD_DV is taken from Table 1: year-2 BMI SD 4.9, year-2 WC SD 4.9. WC units are not stated in the manuscript. The Discussion says TV/movies and video games were \"particularly associated\", which suggests socializing was weaker or null. Covariate lists differ a little: Table 2/3 footnotes include pubertal status, but the Figure 1-4 captions leave it out. The ABCD data release is not stated. The draft overwrote an earlier paper_215.json in docs/data/drafts."
+ },
+ {
+  "paper_id": "287",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 6,
+  "native_metrics": [
+   "other:logit_B",
+   "B",
+   "other:indirect_effect_logit"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The extraction is written to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_287.json, and the JSON parses. The paper is 7 pages and the supporting appendices are not in the PDF.\n\n1. The M1 direct effects (0.138 and 0.153) are unstandardized log-odds from a binomial-logit gsem outcome equation. They are not linear B. I coded them as other:logit_B, the same way as sibling paper 107 (same authors and design, with a cannabis outcome). They should be converted with d = B*sqrt(3)/pi, per 1 hour/day.\n2. The two direct effects come from the positive-expectancy and negative-expectancy mediation models. The authors interpret both, and neither is clearly the anchor. No total effect is printed.\n3. The M2 a-path values (0.07*** and 0.003) are read off the Figure 1 labels. There is no CI, SE or exact p, and the link function for the mediator equation is not stated.\n4. p0 = 0.054 is the weighted whole-sample prevalence at Year 4, not the rate among non-users.\n5. Study site is entered as a covariate, not a random effect, as far as the text says.\n6. The ABCD release is not stated.\n7. Including the a-path (social media time to smoking expectancies) as a qualifying analysis assumes expectancies count as an individual-trait construct (substance-related cognition). The coder should confirm this."
+ },
+ {
+  "paper_id": "289",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 6,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) Which specification to anchor on is unclear. The abstract quotes Model 1 numbers (basic adjustments), and the text says nothing changed after adding family conflict (Model 2). I extracted both as M1 and M2. A coder should strike whichever one the review does not want. 2) Phone/SM is the DV here: parental ASR problem (binary, T >= 65) predicts the child's social media minutes per day. 3) In Table 3, the Video/youtube, Video games and Social media columns are headed 'OR', but the title and the scale of the values show they are linear-model coefficients in minutes per day. I coded them as B. 4) No p-values are printed for the social media cells. They have no asterisk, so I set them to p null and sig false. 5) Paper-wide social media prevalence is 43% non-users and Table 1's SD is printed as '66.14', with two decimals where every other row has one. Please check the SD_DV, which comes from Table 1. Since the pooled within-group SD is not reported, d = B/66.14 is an approximation, and the outcome is highly skewed. 6) The paper does not say clearly whether the 'social media' category includes texting and video chat or only social networking sites. 7) The logistic model for any vs no social media use gives only a p-value range, with no ORs. The supplementary Tables S2-S4 are not in the PDF, so these are listed under excluded models. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_289.json"
+ },
+ {
+  "paper_id": "295",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 6,
+  "native_metrics": [
+   "other:F(1,df)"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) The stage2_reason gives the wrong pairings. F(1,9662)=6.79 is not in the paper. Social media\u2192FCF is F(1,9,664)=6.79, p<.01. Texting\u2192FCF is F(1,9,669)=0.10, p=.75, which is not significant. Video chat\u2192FCF is F(1,9,670)=27.18, p<.001. The texting F(1,9,666)=7.99 and video chat F(1,9,666)=6.81 figures are for sleep length, not FCF. I extracted both outcomes (FCF and parent-reported sleep length), since sleep is also an individual-trait outcome. 2) The paper reports only F statistics and p values: no coefficients, SEs or CIs, and no signs. Direction comes from the authors' wording ('small negative', and 'small positive' for video chat\u2192sleep). The sign for texting\u2192FCF is unknown. 3) The \u00a74a rules have no F-to-d conversion. A point d is possible via d=2*sqrt(F)/sqrt(df) using approximate mixed-model df, but no CI is possible, so I marked it partial. 4) The models have no covariates beyond site and family random effects, so they are essentially unadjusted. The family random effect is odd because only one child per family was kept. 5) It is unclear whether each activity type was tested in a separate model or all were entered together. The differing error df suggest separate models. 6) Sleep length is a 5-category ordinal SDSC item with no SD reported, and its coding in the LME is not stated. 7) Figures S5/S6 and Table S1 are in an online supplement that is not in the PDF, so they were not checked. 8) The headline ML/VI and Table 2 analyses use mixed STQ totals that include TV and gaming, so they are excluded."
+ },
+ {
+  "paper_id": "302",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 3,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The PDF is the 5-page short communication only. Appendices A and B are online supporting information that was not available, so the per-modality sensitivity estimates for BMI and BMI z-score were not extracted. Site is listed as a covariate, but the paper does not say whether it is a fixed effect or a random effect. Age is not among the covariates; this is presumably because BMI percentile is already age- and sex-specific. SD_DV is the raw SD of follow-up BMI percentile (30.5), but the model adjusts for baseline BMI percentile, so the derived d values will be very small and are not comparable to cross-sectional d values. The SDs in Table 1 are propensity-weighted. The social networking estimate was not significant (p=0.075). Texting and video chat were significant."
+ },
+ {
+  "paper_id": "304",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 6,
+  "native_metrics": [
+   "RR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The native metric is an adjusted prevalence ratio (PR) from modified Poisson regression. It is coded as \"RR\". 2) The stage2_reason gives p<.001 for video chat and texting predicting ODD. Table 3 actually prints p=0.003 for video chat and p=0.002 for texting, and the file uses the table values. 3) Age is listed as a confounder in the Methods (p. 5) but is missing from the confounder footnotes of Tables 2 and 3, so it is unclear whether age is in the final models. Site appears as an adjustment variable, not a random effect. 4) p0 uses the marginal one-year prevalences from Table 1 (CD 1.9%, ODD 6.3%), not an unexposed-group rate, because the IV is continuous. SD_IV comes from the propensity-weighted Table 1: texting 0.6, video chat 0.5, social media 0.4. These SDs differ from paper 394's ABCD descriptives. 5) Each modality was modeled separately, so the estimates are not mutually adjusted for the other modalities. The analysis uses all N=11,875 after imputation (outcome imputed for n=793). Baseline cases were not excluded even though the Discussion calls the outcome \"new-onset\". 6) Supplementary Tables S1 to S3 are not in the PDF. They hold assumption checks, the share of each modality with zero use, and confounder estimates, and were not reviewed. 7) The two \"<0.001\" p-values are stored as p=null with p_label \"<0.001\". All 6 PRs/CIs/p-values and the 3 SDs were checked against the pdftotext output of Tables 1 to 3."
+ },
+ {
+  "paper_id": "310",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 12,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "I wrote the file to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_310.json. It has one model card: three parallel-process LGCMs (crystallized, Flanker, Pattern Comparison), all with the same specification, in Table 3 (Models 5-7). Each gives 4 social media paths: the slope-slope covariance, i_sm -> s_cog, i_cog -> s_sm and the intercept-intercept covariance. That makes 12 estimates.\n\nThings to check:\n(1) The native metric is the standardized beta column. The 95% CI in Table 3 is on the unstandardized Est. scale, so beta CIs are null. I kept Est., SE and CI in each estimate's note. This means the d values will have no CIs.\n(2) The covariance rows are latent correlations between growth factors, not directional effects. Please decide whether to convert them to d with the r -> d formula, or to keep only the directional paths.\n(3) Table 3 is inconsistent with itself in two places. For i_sm -> s_cryst, SE = 0.12 is printed next to CI [-0.15, -0.07] and p < .001. For i_cryst <-> i_sm, the CI [-0.33, 0.01] includes 0 but p = .024.\n(4) For i_flanker <-> i_sm, beta = +.06, but the zero-order correlation is negative and the Discussion says the two were negatively linked at baseline.\n(5) The analytic N per model is not printed (FIML). Y2 N is printed as '100,972', which is probably a typo for about 10,972. The listwise sensitivity N is 4289 and is reported only as narrative.\n(6) Race appears as a covariate in the Table 3 note but not in the Covariates section.\n(7) Social media hours were log-transformed. It is unclear whether the SMU M/SD in Table 1 are raw or log values; this does not matter for converting the standardized betas.\n(8) For p < .001 I set p to null and kept p_label as '<.001'."
+ },
+ {
+  "paper_id": "314",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 8,
+  "native_metrics": [
+   "other:chi2"
+  ],
+  "d_transformable": "no",
+  "concerns": "The main text reports only chi-squared statistics with FDR-corrected p-values. It gives no coefficients, SEs, CIs, df, or SDs for social media use or sleep, so none of the estimates can be converted to d. Supplementary Tables S1\u2013S3 should hold the full model output, but they are not in the PDF; someone needs to get them. If they report standardized betas, M1 might become transformable, and the SM -> brain activation model (Set 2, Table S3), which is currently excluded for having no printed numbers, could be added.\n\n1) The main effects of SM on sleep (\u03c7\u00b2=7.76) and of sleep on SM (\u03c7\u00b2=6.72) are each reported once. The paper fits 12 models per set, one per brain region, and does not say which of these models the numbers come from.\n\n2) I included the SM \u00d7 ROI interaction chi-squares as phone/SM estimates in M1. In M2 I included the effects of insula and middle frontal gyrus activation on SM, with SM as the DV. Please check that both choices meet the eligibility criteria.\n\n3) The abstract says the sleep -> SM effect was moderated by insula and middle frontal gyrus activation. The results text instead reports these as main effects of brain activation on SM and gives no interaction statistics.\n\n4) The methods say the log(x+1) transform and the zero-inflated glmmTMB model were used for the \"first set\" of models, but SM is the outcome only in the third set. It is also not stated whether the chi-squares come from the conditional component or the zero-inflation component.\n\n5) The propensity weights are mentioned, but the paper does not say how they were applied in the models."
+ },
+ {
+  "paper_id": "381",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 6,
+  "native_metrics": [
+   "other:temporal network edge weight (lagged partial correlation)"
+  ],
+  "d_transformable": "no",
+  "concerns": "1) The PDF is a 24-page author manuscript with no figures and no supplement. Figures 1-3 and Tables S1-S2 (the exact edge weights and bootstrap CIs) are missing, so every edge value comes from the Results text on pp. 9-10. No CIs or p-values exist for M1 edges; sig=true is inferred from retention after stepup pruning (alpha=.05) plus at least 50% bootstrap inclusion. 2) I added an irritability-to-social-media cell with value null and sig=false, inferred because the text never reports that edge and the Discussion calls social media \"unidirectional.\" Please verify against Table S2/Figure 3. 3) M2 (sex comparison, Figure S4) gives online chat to irritability as 0.37 in males and 0.14 in females. Both are positive and much larger than the pooled adjusted -0.03, which may be an error in the paper or a different model (unadjusted?). The p=.047 tests the sex difference, not the edge vs. zero. Decide whether M2 should be kept as a primary model. 4) Online chat is a texting + video chat composite. It qualifies under FT-IC2 Step 2, but texting and video chat are never broken out separately. 5) The journal name is not printed in the PDF. I filled in Journal of Child and Adolescent Psychopharmacology from the DOI/ISSN prefix 1044-5463, so confirm it. 6) The cross-sectional GGM phone/SM edges are implied to be zero but not printed (excluded). The internalizing/externalizing temporal network (Figure S6) gives only a 0.02-0.04 range (excluded). 7) Edge weights cannot be converted to Cohen's d, so this paper goes to the later review level. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_381.json"
+ },
+ {
+  "paper_id": "388",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 2,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) Phone/SM eligibility is borderline. The IVs are latent group factor scores from a GFA run on all 12 SMA items. Only the 'Texting' and 'Weekday social SMA' factors have phone/SM labels, and their loadings sit in supplementary figures that are not in this PDF, so I could not confirm they are free of non-phone items. Check Suppl. Figs. 4-15. 2) Both estimates come from Fig. 5 (p. 8), where they are printed as 'OR \u00b1 95% CI' half-widths: 1.05 \u00b1 0.09 and 0.96 \u00b1 0.09. I left the CI bounds null rather than rebuilding them. Where the text gives CIs for other factors, they don't quite match a symmetric \u00b1 (games vs SM: 0.83 \u00b1 0.07 in the figure, 0.76-0.89 in the text). No p-values are printed. Non-significance comes from the text, which says only 2 of 6 SMA factors were significant. 3) I excluded the authors' headline significant SMA finding: the 'games vs social media' bipolar factor, OR 0.83 (0.76-0.89). It contrasts games/movies/videos against social media, so the SM part is not isolated. Coders may disagree. 4) The five activity-specific GLMMs (soccer, swimming, baseball, music, art) report texting and weekday-social factor estimates only in Suppl. Figs. 16-20, which are not available. A second model card could be added if the supplement is obtained. 5) The OR is per 1 SD of a latent factor score, not per hour, so the derived d is not comparable with per-hour designs. p0 = 0.898 is the marginal endorsement rate, recorded for context only."
+ },
+ {
+  "paper_id": "389",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 4,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The paper never states the analytic N for Model 3. The SMAQ was only given to youth with a social media account (n=5,642), so Model 3 is presumably fit on that subset, but the outcome SDs (0.61 and 0.78) and the social media time SD (1.62) in Table 1 come from the full N=9,008. That makes the SD-based d conversion approximate. The SMAQ item response range is not stated: Fig. 1 plots it on a 0-6 axis, and the mean is 1.84 with SD 0.90. The abstract's covariate list leaves out age, but the Methods and the Table 2 footnote include it. Study site is treated as a covariate, not a random effect. Alpha is 0.01. Model 1, which uses social media time only, showed a significant negative-expectancy association (B=0.018, p=0.007). I excluded it as scaffolding because the authors anchor their conclusions on Model 3, so a coder should confirm that choice. Table 1's caption says 'Year 2 assessment 2016-2018', which conflicts with the 2018-2020 dates given in the text. Supplementary Tables S1 and S2 are not bundled in the PDF."
+ },
+ {
+  "paper_id": "395",
+  "wrote_file": true,
+  "n_primary_models": 1,
+  "n_estimates": 8,
+  "native_metrics": [
+   "B"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The Table 4 footnote calls the coefficients a \"standardized regression coefficient\". But the Results text describes them as t-score points, and their size fits t-score units, so I coded them as unstandardized B. A human should confirm this. 2) The IV is social media trajectory group membership from GBTM, compared against the Persistent Low Use group. That makes d a group-difference d (B/10) using the CBCL norm SD of 10. The paper reports no sample SD for the year-3 t-scores. Those scores are floored at 50 and right-skewed, so the real SD is probably below 10 and d may be understated. 3) The model includes group x substance-use interactions, so the group main effects apply only to the no-substance-use stratum, which is 98% of the sample. 4) The trajectory window runs from baseline to Y3 and overlaps the Y3 outcome, and baseline CBCL is not adjusted for. 5) The authors call the social media analysis exploratory, and the coding of the social media item changed between Y1 and Y2. 6) Group 4 n is 266 in the Results text but 226 in Table 2. 226 sums to N = 9,474, so I used 226. 7) Two p-values print as '< 0.001', and I stored 0.001 as the bound. 8) Supplementary Table 1 (GBTM fit indices) is not included in the PDF. The total screen time trajectory model (Table 3) is excluded because it bundles TV and gaming. File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_395.json"
+ },
+ {
+  "paper_id": "398",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 17,
+  "native_metrics": [
+   "IRR",
+   "B",
+   "other:indirect_effect_B"
+  ],
+  "d_transformable": "partial",
+  "concerns": "The extraction is written to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_398.json. It has three cards, all from one Mplus negative binomial SEM:\n- M1: 8 direct effects of social media on the 8 CBCL raw scales. The metric is IRR, and B with its CI is stored alongside.\n- M2: the social media -> sleep duration path. The metric is B.\n- M3: 8 indirect effects of social media through sleep, none significant.\n\nPlease check:\n(1) The IV units are unclear. The Methods say screen-time behaviors were binned into 4 groups (<1, 1-1.99, 2-2.99, >=3 h), but the Results read coefficients as per one hour. The SD_IV of 1.15 h/day comes from Table 1 and may be on the wrong scale for converting M2.\n(2) Table 2 prints the CIs on the B (log) scale only. No IRR CI is printed, so IRR_lo and IRR_hi are null.\n(3) In Table 2, the CI for social media -> aggressive behavior is printed as (.029, .053), which excludes its own B of .06. This looks like a typo in the paper. I copied it as printed.\n(4) The paper does not state the distribution of the sleep-duration path. I assumed it is linear, yet Table 2 still prints an 'IRR' of .968 for it.\n(5) Social media is a composite of texting, social networking sites, and video chat. All three are phone/SM items, so it qualifies under FT-IC2 Step 2. There are no per-item estimates.\n(6) The CBCL outcomes are raw counts, not T-scores. SD_DV values come from Table 1, which uses the full baseline sample. Converting IRR to d via Chinn is only a rough approximation for negative binomial outcomes.\n(7) The ABCD release number is not stated, and the TYPE=COMPLEX cluster variable is not named.\n(8) Supplement Additional file 1 was not bundled in the PDF.\n\nI checked every social media number against the PDF text layer (Tables 2 and 3) and all of them match."
+ },
+ {
+  "paper_id": "400",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 18,
+  "native_metrics": [
+   "B",
+   "other:ILR regression coefficient"
+  ],
+  "d_transformable": "no",
+  "concerns": "1) The qualifying IV is the 'socializing' composite (texting + video chat + social networking sites). Under \u00a75 it counts as phone/SM-only, so it was extracted as the IV. 2) M1 is an isotemporal substitution model. For each sex I extracted all 8 cells that involve socializing in Table 2: the 4 cells in the \u2191Socializing row, where socializing is added, and the 4 in the \u2193Socializing column, where socializing is displaced. Each cell comes from a different drop-one regression. The authors anchor their claims on the column cells (PA replaces socializing in females; gaming and sleep replace socializing in males). Coders should decide whether to keep both directions. 3) For both models, Table 1 gives only weighted mean (SE), not SD, so sd_iv and sd_dv are null and d_transformable is false. BMI z has a reference SD of 1, but the sample SD is not reported. 4) No exact p-values are printed. M1 uses asterisks, which I recorded in p_label. M2 counts as significant when the CI excludes 0. 5) In Table 2, the females \u2191Streaming/\u2193Socializing estimate is printed as '.003'; I recorded it as 0.003. 6) In the M2 equation, the sqrt(5/6) ILR scaling is my standard-SBP reconstruction; the paper does not print it. 7) Supplemental Table 1 and Supplemental Fig. 1 (the CoDA sensitivity analysis and the DAG) are not in the bundled PDF. 8) M2 drops the 4,623 participants with zero socializing, so it is a selected subsample (N = 5,164)."
+ },
+ {
+  "paper_id": "404",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 3,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "yes",
+  "concerns": "1) The paper calls its coefficients \"standardized beta\" but never says which variables were standardized. A fully standardized beta of 0.42 is implausible for a binary IV with 0.9% prevalence, so the value is probably standardized on Y only (d-like) or in raw score points. The r-to-d rule in guidelines 4a gives d of about 0.93, while passing the value through gives d of about 0.42. A human needs to choose before converting. 2) The PDF has only the 6 main-text pages. Appendices A-E are online-only, so the M2 values (youth-reported internalizing, Appendix E: 0.66, 0.34-0.99, p<0.001) and the Appendix D sensitivity values (0.44, 0.03-0.85, p=0.035) come from the Results text and could not be checked against the appendix tables. M2's covariates and N are assumed to match M1. 3) The 'don't know what a dating app is' vs never-used estimate (0.04, -0.33 to 0.41, p=0.817) is included in M1 with a note. It is not a use contrast, so coders may want to strike it. 4) N=11,530 is after multiple imputation of the exposure and the outcome; there are 8,444 complete cases. 5) SD_IV is not reported (binary exposure). SD_DV is 2.9 (Table 1). File: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_404.json"
+ },
+ {
+  "paper_id": "420",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 0,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "no",
+  "concerns": "The qualifying estimates are missing from the PDF. All of the texting, social media and video chat coefficients are in Supplementary Tables S6-S31: S6-S18 cover weekday use and S19-S31 cover weekend use, with one table per outcome, each split by sex. PLOS ONE publishes these as separate DOCX files, and they are not bundled in the 23-page PDF. Pages 18-21 list only their titles. I did not download them, because downloading a file needs explicit permission.\n\nI set up two model cards. M1 covers weekday use (N=11,727) and M2 covers weekend use (N=11,672). Each card has the full specification, 6 IV slots (3 modalities x 2 sexes) and 13 DV slots, but the estimates are empty (n_estimates = 0). A human needs to get S6-S31, for example from journals.plos.org/plosone/article?id=10.1371/journal.pone.0256591, and fill in about 156 cells (2 day types x 2 sexes x 3 modalities x 13 outcomes).\n\nThings to check against the supplement:\n(1) Whether each screen type was its own regression or all types were entered together in one regression per outcome. The PDF does not say.\n(2) Whether the supplement tables report standardized beta, t, p, SE and partial r, like Tables 3 and 5. I assumed beta_std is the native metric.\n(3) Race/ethnicity (coded 1-5) and SES (coded 1-10) look like they were entered as single numeric predictors, because Tables 2 and 4 show one coefficient each. The paper does not confirm this.\n(4) These per-type analyses are labelled secondary and tested at alpha .05 with no correction.\n\nSD_IV for each modality, day type and sex comes from Table 1 (p. 8). I spot-checked all 12 against the table. SD_DV for the CBCL outcomes is set to 10 by construction, but the in-sample SDs are about 5-11. That does not matter for conversion, because beta_std converts directly once the values are in. d_transformable is false only because no values are available yet. It becomes true once the supplement is entered.\n\nThe ABCD release number is not stated; the paper cites only NDA DOI 10.15154/1519271. The headline total-screen-time models in Tables 2-5 were excluded because total screen time includes TV, videos and gaming."
+ },
+ {
+  "paper_id": "431",
+  "wrote_file": true,
+  "n_primary_models": 3,
+  "n_estimates": 9,
+  "native_metrics": [
+   "OR"
+  ],
+  "d_transformable": "yes",
+  "concerns": "The PDF at the items.json path is already the 19-page NIH author manuscript (modified Oct 1 02:43), so I extracted from it. I did not click Allow on the Chrome prompt and did not download anything. (1) Supplemental Tables S1-S28 are in an Excel appendix that is not among the files I had. All 9 estimates were copied from the Results text (pp. 5-6) and checked against Figures 2-3 and the abstract, but these are not available: exact per-outcome Ns (listwise deletion), the problematic-use exclusion (S12), the continuous-outcome linear mixed models (S14-S22) and the 3-wave longitudinal models (S23-S28). If the Excel file is obtained, the continuous-outcome models could become additional model cards. (2) M2 ORs are inverted by the authors (per 1 year EARLIER acquisition). The SD of age at acquisition is not reported (median 11, IQR 10-11), so d for M2 is per year, not per SD. (3) p0 for M1 is the non-owner prevalence from Table 1. For M2 it is the owner prevalence, since there is no unexposed group. For M3 it is null, because 3-year outcome rates are not reported. Chinn's OR-to-d conversion does not need p0. (4) The race covariate is described as 'race and ethnicity' in the main text but as 'Black race and Hispanic ethnicity' in eMethods 3; I followed eMethods. (5) Three separate cards were used because the analytic samples differ (all youth, owners only, and non-owners at age 12), and M3 adds the prior-year outcome. (6) p-values printed as '<.001' are stored as p = null with p_label. Output: /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_431.json (this overwrote an earlier draft that was already at that path)."
+ },
+ {
+  "paper_id": "435",
+  "wrote_file": true,
+  "n_primary_models": 4,
+  "n_estimates": 14,
+  "native_metrics": [
+   "beta_std"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1. The supplement is not bundled in the 10-page PDF. As a result, the M2 cumulative-change covariates, the CLPM (M3) covariates, missing-data handling and estimator, the full M4 reverse-direction spec, Supplemental Tables 1-8 (moderation and sensitivity analyses) and analytic Ns other than 8,324 could not be checked.\n2. The 'social media use' IV is a composite of texting, social networking sites and video chat (YSTS items 4+5+6). All three items are phone/SM, so it qualifies under Step 2. Texting is asked as cell phone/tablet/computer, which is activity-defined and qualifies under clarification 5.\n3. The exposure is averaged over T0-T4, the same waves as the outcome, so the IV and DV are not temporally ordered in M1 and M2.\n4. In M1 the authors anchor on the SM x time interaction, which gives a difference in yearly slope. A d derived from it is a per-year rate. I included the three-way SM x time x PGS-ADHD terms as estimates and flagged them as not convertible; a coder may prefer to strike them.\n5. Table 2 prints only beta (SE) with Bonferroni footnote markers. Cells without a marker are coded sig=false with p null. CIs are null throughout and the SEs are in the notes.\n6. In M3 the CLPM cross-lagged values look constrained equal across lags; this is inferred from the figure.\n7. The M4 total effect (-0.01) has no SE or p. sig=false is set only because no test is reported.\n8. The Figure 2 caption quartile cutoffs (0.61/1.22/1.97) disagree with the Figure 2B panel legend (0.54/1.36/1.86).\n9. The year is recorded as 2025 per items.json, but the journal issue is Vol 2, Issue 1, 2026.\n10. Spot-checked all 9 Table 2 social media cells plus the in-text values 0.15, 0.03/p=.004, -0.002/p=.64 and -0.01/SE 0.001 against the PDF text layer; all match."
+ },
+ {
+  "paper_id": "443",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 18,
+  "native_metrics": [
+   "other:CLPN cross-lagged edge (LASSO-penalized regression coefficient B on standardized residuals)"
+  ],
+  "d_transformable": "no",
+  "concerns": "I wrote the file to /Users/dannyzweben/Desktop/ABCD-smartphon-socialmedia-review/docs/data/drafts/paper_443.json. It has two model cards for the sex-stratified cross-lagged panel network (CLPN): M1 female (N=1,863) and M2 male (N=2,091), 18 estimates in total.\n\n1. Where the numbers come from: every estimate is a B copied from the Results text on pp. 730-731. The paper has no results table, and the full edge matrix is in supplementary eTable 10, which is not in the PDF. Fig. 4B hides edges with |B| < 0.05. So only the edges the authors chose to report in the text are extracted. There may be other A2/A3 edges that are non-zero but not reported.\n\n2. pdftotext drops minus signs. I checked the page image: A2\u2192C5 in the female network is B = \u22120.251. The positive signs on the other A2/A3 edges match the narrative text.\n\n3. No SE, CI or p-value is reported for any edge. I set sig=true on every estimate on the basis that the edge is non-zero after LASSO and the authors describe these as significant associations. A coder should decide whether that is acceptable.\n\n4. The male A2\u2192C1 edge is printed with the symbol \u03b2 instead of B (0.113). I assume it is the same metric as the other edges.\n\n5. On d_transformable=false: the paper says covariate-residualized standardized residuals were used, so the coefficients may in effect be in SD units. However, they are LASSO-shrunk and conditional on 19 other T2 nodes, including the autoregressive term. Following the rule that network edges are non-convertible, I marked the paper not transformable. A coder could choose to treat them as approximate beta_std instead.\n\n6. E4 (perceived school environment) and E5 (positive school involvement) are reverse-scored. A positive B therefore means a more adverse school environment and lower school involvement. Whether perceived school environment counts as an individual-trait or a contextual variable should be checked.\n\n7. Cross-sectional GGM edges involving social media time (B2), checking (B3), A2 and A3 with CBCL/UPPS/BIS/BAS appear only in figures (Fig. 2A, Fig. 3) and in supplementary eTables 8-9. I excluded them rather than read values off the figures. A coder may want to pull eTable 8 from the online supplement.\n\n8. Whether CBCL raw scores or T-scores were used is not stated. The PDF reports no SDs for SMAQ, MPIQ or the outcomes."
+ },
+ {
+  "paper_id": "521",
+  "wrote_file": true,
+  "n_primary_models": 2,
+  "n_estimates": 16,
+  "native_metrics": [
+   "other:ratio_of_means",
+   "RR"
+  ],
+  "d_transformable": "partial",
+  "concerns": "1) M1 (Table 2) treats phone/SM minutes as the DV and parent-reported autism status as the IV. Autism counts as a clinical-diagnosis trait, so it qualifies, but please confirm. The native metric is a Poisson-GEE ratio of means. No SDs are reported for minutes/day, so d can only be approximated by the rough rate-ratio-as-OR route, which makes M1 effectively non-convertible. 2) \"Social and video chat\" combines social networking sites with video chat. That composite is entirely phone/SM, so it is extracted as a qualifying IV/DV. 3) The overall p-value for texting and obesity conflicts within the paper: the abstract says 0.02, while Table 3 and the Results text say 0.04. Separately, the pairwise texting 30+ min PR is 1.42 (1.00-2.01) with printed p = 0.05, which I coded sig=false. Please check that call. 4) The paper does not say whether Table 3's all-children PRs come from a model that includes the autism factor or are marginal. Tables 3 and 5 are in one card (M2), with obesity columns for all children, autism and TD. p0 varies by panel, so I put it on each estimate (reference-row prevalence) and left it null on dv_axis. Please confirm the pipeline reads p0 per estimate. 5) The printed prevalences do not equal raw n/N (for example 5/20 is shown as 23.9%), which suggests they are model-based. 6) The ABCD data release is not stated. There are no covariates beyond propensity matching on age, gender, race/ethnicity and SEP, and no multiple-comparison correction."
+ }
+]

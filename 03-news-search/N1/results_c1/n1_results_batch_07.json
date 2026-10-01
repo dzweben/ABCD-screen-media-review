@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0175",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; 2013 EurekAlert about newly named insect species (social media lacewing); Carvalho named is from Universidade de São Paulo, unrelated to candidate paper 310 (Carvalho, University of Georgia)",
+    "evidence": "Article is a 2013 taxonomy press release naming new species; no ABCD content, no linkage to any candidate paper."
+  },
+  {
+    "article_id": "A0176",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic; oncology journal roundup with no ABCD or smartphone/social media research content",
+    "evidence": "Article announces new Oncotarget papers; mentions social media only as a channel for sharing links. No connection to any candidate paper."
+  },
+  {
+    "article_id": "A0177",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is about haptic technology for digital touch/kiss transmission, unrelated to any candidate paper",
+    "evidence": "Article covers devices that incorporate touch into digital interactions (kiss/hug transmission). No ABCD connection and no match to paper 314 (Kiss et al. 2026 Journal of Sleep Research on social media and sleep)."
+  },
+  {
+    "article_id": "A0178",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is about Witte receiving funding for immigration research with Marissa Kiss as Institute for Immigration Research postdoc — different from candidate paper 314 (Kiss at SRI International studying sleep/social media in ABCD)",
+    "evidence": "Article describes a grant for immigration-related research. The 'Kiss' mentioned is affiliated with Institute for Immigration Research, not SRI International where paper 314's Kiss is based. No ABCD linkage."
+  },
+  {
+    "article_id": "A0179",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article mentions Yunting Zhang of Shanghai Jiao Tong University — different from candidate paper 381 (Zhang at Nuffield Department of Clinical Neuroscience, University of Oxford)",
+    "evidence": "Article discusses on-screen content types and mental health with Zhang from Shanghai Jiao Tong; paper 381 is Zhang from Oxford on bidirectional screen time and irritability in ABCD. Different researcher and institution."
+  },
+  {
+    "article_id": "A0180",
+    "matched_paper_ids": ["395"],
+    "linkage_test": "L3",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "EurekAlert Jun 2025 titled 'Screen time and emotional problems in kids: A vicious circle?' names 'Parker, PhD' as author. Paper 395 is Parker et al. BMC Public Health 2025 on adolescent screen time, anxiety/depression, and alcohol/e-cigarette use in the ABCD Study. The 'vicious circle' framing maps to the bidirectional associations examined in Parker 2025; the author surname, year, and topic (screen time ↔ emotional problems) uniquely match. L3 satisfied (author match + bidirectionality framing + screen time + mental health outcome)."
+  },
+  {
+    "article_id": "A0181",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is by 'Becky Parker-Ellis' from Taylor & Francis newsroom about screen time for children under six — different researcher from candidate paper 395 (Parker et al. BMC Public Health 2025)",
+    "evidence": "Article is a 2023 Taylor & Francis press release with Parker-Ellis as spokesperson; paper 395 (Parker, Harton, Mattey-Mora, Streck) is a BMC Public Health ABCD study. Different author identity and no ABCD content."
+  },
+  {
+    "article_id": "A0182",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; 2015 article on sedentary behavior and anxiety by Teychenne, Costigan, and Kate Parker — different authors/era from candidate paper 395",
+    "evidence": "Article is a 2015 EurekAlert about sedentary behavior and anxiety; authors are Teychenne, Costigan, and Kate Parker. Paper 395 is a 2025 ABCD study by Parker, Harton, Mattey-Mora, Streck. No ABCD connection."
+  },
+  {
+    "article_id": "A0183",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; article discusses tech-dependency and pandemic effects on very young children ('can't even tie their shoes'), not early adolescents in ABCD; no specific paper from corpus identified",
+    "evidence": "Article describes pandemic isolation and screen time effects on toddler-aged children; ABCD studies adolescents ages 9-13. No author match or finding that maps to papers 395 or 521."
+  },
+  {
+    "article_id": "A0184",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is about childhood obesity in Guam by Leon Guerrero, a registered dietitian — different from candidate paper 398 (Guerrero et al. 2019 BMC Public Health ABCD screen time study)",
+    "evidence": "Article covers obesity prevalence in Guam; the Guerrero named is a dietitian conducting island health research. Paper 398's Guerrero is the lead author of an ABCD screen time study. Different person, no ABCD content."
+  },
+  {
+    "article_id": "A0185",
+    "matched_paper_ids": ["420"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "EurekAlert Sep 2021 'Screen time only mildly linked to behavioral problems, but...' quotes 'Paulich stressed that this does not [imply causation].' Paper 420 is Paulich et al. 2021 PLOS ONE on screen time and early adolescent mental health/academic/social outcomes in the ABCD Study. Same year, same lead author surname, same hedged finding ('mildly linked,' correlation ≠ causation framing). L3 satisfied: author (Paulich) + year (2021) + finding direction (weak screen time–behavior link) + ABCD population."
+  },
+  {
+    "article_id": "A0186",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is about the BBVA Frontiers of Knowledge Award in Information and Communication Technologies; 'Regina Barzilay' named is the MIT AI/computer science researcher, not candidate paper 431's Barzilay (Children's Hospital of Philadelphia pediatrics)",
+    "evidence": "2021 EurekAlert about ICT award; Regina Barzilay listed is the MIT professor of computer science, unrelated to paper 431 (Barzilay et al. 2026 Pediatrics on smartphone ownership and adolescent health outcomes in ABCD)."
+  },
+  {
+    "article_id": "A0187",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; same issue as A0186 — Frontiers of Knowledge Award article naming MIT computer science Regina Barzilay, not the pediatrics Barzilay of candidate paper 431",
+    "evidence": "2023 EurekAlert about another Frontiers of Knowledge Award; 'Regina Barzilay, School of Engineering' is the MIT AI researcher. No ABCD content."
+  },
+  {
+    "article_id": "A0188",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; authors (Hutton, Xu, DeWitt, Horowitz-Kraus, Ittenbach) do not match candidate paper 443 (Xu, Song, Deng, Geng, Zhang); article appears to be about Cincinnati Children's screen time measurement study",
+    "evidence": "Article discusses new methods to measure screen-based media use in children by Hutton et al.; paper 443 is a Beijing Normal University ABCD network analysis study by Xu, Song, Deng, Geng, Zhang. No overlap."
+  },
+  {
+    "article_id": "A0189",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; 2009 article on caregiver language and child screen time by Dongxin Xu — different researcher, published before ABCD study existed",
+    "evidence": "2009 EurekAlert about language decreases in young children during screen time by Dongxin Xu (Seattle Children's-adjacent). Paper 443 is Xu et al. 2025 Beijing Normal University ABCD study. Different Xu, 16-year gap."
+  },
+  {
+    "article_id": "A0190",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article is about cancer risk and sleep by Xiaoke (Kerri) Xu of BGI Genomics — different from candidate paper 443 (Xu et al. Beijing Normal University ABCD study)",
+    "evidence": "Article discusses sleep and cancer risk by BGI Genomics researcher Xu. Paper 443 is a behavior addiction network analysis by Xu et al. at Beijing Normal University using ABCD data. No connection."
+  },
+  {
+    "article_id": "A0191",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; article appears to be a generic recommendation piece about limiting screen time and mental health; no author or finding linking to candidate paper 521 (Must et al. 2023 Frontiers in Pediatrics on autism and obesity)",
+    "evidence": "EurekAlert Mar 2025 recommends limiting screen time for mental health but no author names, institution, or specific finding matching paper 521 (Must et al. passive/social screen time in children with autism)."
+  },
+  {
+    "article_id": "A0192",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; article about parental screen time limitation strategies for young children, quotes Inniss; no connection to candidate paper 521 (Must et al. autism/obesity study)",
+    "evidence": "Generic parental advice article; speaker is 'Inniss' with no ABCD or autism-obesity connection. Paper 521 (Must et al.) is a Frontiers in Pediatrics study on social screen time in children with autism."
+  },
+  {
+    "article_id": "A0193",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; article reports on rising screen time trends among children/adolescents but no specific paper from corpus identified",
+    "evidence": "Mar 2026 EurekAlert summarizes screen time trends and calls for evidence-based responses; no author, finding, or sample size matching any candidate paper."
+  },
+  {
+    "article_id": "A0194",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; 2017 article about TV/bedroom screens and school/health outcomes published before ABCD study era; no match to candidate paper 521",
+    "evidence": "2017 EurekAlert on bedroom screen effects on school grades and behavior; published before ABCD baseline. No connection to Must et al. 2023 autism/obesity paper."
+  },
+  {
+    "article_id": "A0195",
+    "matched_paper_ids": ["18"],
+    "linkage_test": "L4",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "EurekAlert Nov 2023 'Children's brains shaped by their time on tech devices' describes 'Overall Chair Professor Li's team' studying how screen time affects brain development and cognitive processes (learning experience) in children. Paper 18 is Li et al. 2024 Advanced Science on causal relationships between screen use, reading, and brain development in early adolescents using ABCD data, from Zhejiang University. L4: Professor Li's institution (Zhejiang University/China) + brain development topic + ABCD Study + screen time — consistent configuration uniquely matching paper 18."
+  },
+  {
+    "article_id": "A0196",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; Mar 2022 article about children's health fears from rising screen time during pandemic; no specific author or finding matching any candidate paper",
+    "evidence": "Generic UK health commentary on screen time risks to physical health during pandemic; no ABCD authors or findings identifiable in snippet."
+  },
+  {
+    "article_id": "A0197",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic; article is about an ABCD-based study finding video gaming associated with better cognitive performance — video gaming without phone/SM component is outside the corpus scope",
+    "evidence": "Oct 2022 EurekAlert discusses ABCD study results on video gaming and cognitive outcomes, referencing the American Academy of Pediatrics screen time threshold. While ABCD-based, the topic (video gaming → cognition) does not match paper 521 or any candidate paper in the corpus."
+  },
+  {
+    "article_id": "A0198",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; 2019 article on screen time and overweight in children from a non-ABCD cohort; no match to candidate paper 521 (Must et al. autism/obesity in ABCD)",
+    "evidence": "Aug 2019 EurekAlert on screen time and overweight; cross-sectional design noted; no ABCD, no Must et al. authors, and no autism component matching paper 521."
+  },
+  {
+    "article_id": "A0199",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general screen time coverage; Nov 2022 review article on causes and remedies of sedentary behavior in children; no specific paper from corpus identified",
+    "evidence": "Generic sedentary behavior review with screen time as one factor; no author, institution, or finding matching any candidate paper in the corpus."
+  }
+]

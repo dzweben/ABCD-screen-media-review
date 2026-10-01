@@ -246,6 +246,14 @@ function renderPaper(paper) {
     pdfDl.hidden = true;
     pdfMissing.hidden = false;
   }
+  (paper.supplements || []).forEach((href) => {
+    const a = document.createElement("a");
+    a.href = href;
+    a.target = "_blank";
+    a.className = "pdf-link";
+    a.textContent = "📎 Supplement (" + href.split(".").pop().toUpperCase() + ")";
+    view.querySelector(".paper-pdf").appendChild(a);
+  });
 
   if (paper.duplicate_of) {
     const b = document.createElement("div");

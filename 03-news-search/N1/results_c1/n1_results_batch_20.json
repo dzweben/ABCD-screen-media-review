@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0500",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.88,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article about Singaporean researchers studying screen time and children's brains, not covering any ABCD corpus paper",
+    "evidence": "Title references 'Singaporean researchers' measuring screen time effects on children's brains. Provisional paper 84 (Shou 2026, Acta Psychologica) has Japanese/Karolinska affiliation — not Singaporean. Published Jan 2023, but paper 84 is from 2026 (online-first). No summary text available to assess L1-L4. Institutional mismatch precludes L4; no ABCD-specific corpus paper plausibly covered."
+  },
+  {
+    "article_id": "A0501",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.90,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic; general parenting advice about children befriending strangers online, no coverage of any specific ABCD corpus paper",
+    "evidence": "Title 'Should I stop my child from befriending strangers on the Internet?' is a general parenting advice piece. Provisional paper 190 (Sauce 2022, Scientific Reports, digital media and intelligence) involves ABCD data and intelligence outcomes. No summary text; no evidence of Sauce/Scientific Reports/ABCD linkage. No L1-L4 criteria met."
+  },
+  {
+    "article_id": "A0502",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.88,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic; general parenting feature on screen time reduction strategies, no coverage of any specific ABCD corpus paper",
+    "evidence": "Title 'Weaning children off screens? Struggling working parents say they need help, not more rules' is a general parenting feature (Jan 2025). Provisional paper 190 (Sauce 2022, Scientific Reports). No summary text to assess L1-L4; generic parenting framing with no indication of ABCD-specific paper coverage."
+  },
+  {
+    "article_id": "A0503",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.95,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; UOG student research fair article unrelated to any ABCD corpus paper",
+    "evidence": "Title 'From vaping to cancer: UOG students' research at health awareness fair' describes a University of Guam student health fair. Provisional paper 84 (Shou 2026, Acta Psychologica, ABCD screen time and cognitive function). No plausible connection to ABCD or any corpus paper. No L1-L4 linkage."
+  },
+  {
+    "article_id": "A0504",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "predates entire corpus; published January 2011, all candidate papers are 2019 or later",
+    "evidence": "Business Insider article published Jan 16, 2011 — roughly 8 years before the earliest corpus paper (Guerrero 2019, Fors 2019). No ABCD corpus paper could be covered. Provisional paper 84 (Shou 2026) is from 2026."
+  },
+  {
+    "article_id": "A0505",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.90,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic; article about ADHD brain-scan signatures in ABCD children, not covering any screen time/SM corpus paper",
+    "evidence": "Summary mentions ABCD Study, 7,805 patients ages 9-10 undergoing brain scans for ADHD. This is a neuroimaging ADHD diagnostic study from ABCD, not a screen time or social media exposure study. Corpus papers on ADHD (paper 50: Deng 2025 online social activity -> ADHD; paper 435/436: Nivins 2025 digital media genetics and ADHD) do not match this 2022 brain-scan ADHD characterization article. No L1-L4 linkage to any corpus paper."
+  },
+  {
+    "article_id": "A0506",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.95,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage; 2018 article about ABCD Study overview and child health recommendations, no specific corpus paper covered",
+    "evidence": "Title 'How Much Time Kids Should Spend on Screens, Sleeping...' (Oct 2018). Summary references 'the ongoing ABCD Study, which is following more than 10,000 kids for 10 years.' General ABCD study overview article predating the corpus papers (earliest corpus paper is 2019). No specific paper from candidate_papers.json covered."
+  },
+  {
+    "article_id": "A0507",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.98,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic; article about teen participation in Moderna vaccine trials via ABCD Study, not about screen time or social media",
+    "evidence": "Title 'Teen Brothers Describe Experience in Moderna's Vaccine Trial' (Mar 2021). Summary: 'they've participated in the Adolescent Brain Cognitive Development Study.' ABCD mentioned only as the cohort from which vaccine trial participants were recruited — entirely out-of-corpus topic. No screen time or SM content."
+  },
+  {
+    "article_id": "A0508",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "predates entire corpus; published October 2012, all candidate papers are 2019 or later",
+    "evidence": "Times of Malta article 'Reduce screen time' published Oct 9, 2012 — 7 years before earliest corpus paper. Provisional paper 84 (Shou 2026) is from 2026. No possible coverage of any corpus paper."
+  },
+  {
+    "article_id": "A0509",
+    "matched_paper_ids": ["192", "435", "86", "95"],
+    "linkage_test": "multi",
+    "confidence": 0.72,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Science News Explores 'Got brain rot?' (Mar 2026) URL slug 'brain-rot-social-media-teen-health' and provisional IDs (190, 192, 435, 436, 86, 95) indicate an aggregator piece on brain/cognitive harm from social media. L3 coverage likely for: paper 192 (Nivins 2024, Scientific Reports, long-term impact of digital media on brain development in ABCD children); papers 435/436 (Nivins 2025, Pediatrics Open Science, digital media genetics and ADHD in ABCD); paper 86 (Nagata 2026, Am J Prev Med, problematic screen/SM use and mental health/sleep/substance use prospectively in ABCD); paper 95 (He 2025, Computers in Human Behavior, social media addiction and reward-circuit loss sensitivity in ABCD). Paper 190 (Sauce 2022, Scientific Reports) is older and less likely to be the focus of a Mar 2026 piece, though possible as background citation. Confidence moderate (0.72) because no article body text is available to confirm specific paraphrases; multi-paper aggregator assessment based on provisional IDs and publication date alignment."
+  },
+  {
+    "article_id": "A0510",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Science News Explores 'New study links early smartphone ownership to health risks' (Feb 2026) maps directly to paper 431 (Barzilay 2026, Pediatrics, 'Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence'). L3 met: title paraphrases the paper's core finding (early smartphone ownership -> health risks), matches exposure (smartphone ownership/acquisition age), outcome domain (health risks including depression, obesity, insufficient sleep), and approximate timeframe (Barzilay 2026, ABCD n>10,500). Science News Explores covers peer-reviewed research for younger audiences, consistent with covering a Pediatrics paper."
+  },
+  {
+    "article_id": "A0511",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.95,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic; article about misuse of ABCD genetic data for race science, not about screen time or social media",
+    "evidence": "NYT 'Genetic Data From Over 20,000 U.S. Children Misused for Race Science' (Jan 2026). Summary confirms ABCD Study data involved. Provisional paper 95 (He 2025, social media addiction and reward circuit) has no connection to genetics or race science. This is an ethics/data-misuse story about ABCD genomic data — completely out-of-corpus topic. No L1-L4 linkage to any screen time/SM corpus paper."
+  },
+  {
+    "article_id": "A0512",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NYT 'A Smartphone Before Age 12 Could Carry Health Risks, Study Says' (Dec 2025) maps to paper 431 (Barzilay 2026, Pediatrics, 'Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence'). L3 met with high confidence: summary states 'Researchers had analyzed data from more than 10,500 children who participated in the Adolescent Brain Cognitive Development Study' — matches paper 431's ABCD n (>10,500); title paraphrases paper's main finding (smartphone before age 12 -> health risks). Exposure (smartphone ownership/age of acquisition), outcome (health risks: depression OR=1.31, obesity OR=1.40, sleep OR=1.62), cohort (ABCD), and sample size all uniquely identify paper 431. Provisional ID 95 (He 2025, reward circuit) does not fit this article."
+  },
+  {
+    "article_id": "A0513",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.93,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage; anticipatory/prospective piece about future ABCD findings, no specific corpus paper covered",
+    "evidence": "NYT 'What Social Media Does to the Teen Brain' (Sept 2023). Summary: 'She is eagerly awaiting results from the ongoing Adolescent Brain Cognitive Development, or A.B.C.D. study.' This is a forward-looking piece anticipating ABCD findings, published Sept 2023 before the relevant corpus papers (e.g., paper 1: Nagata 2025; paper 95: He 2025) existed. No specific paper from corpus is covered; ABCD mentioned as ongoing study. Excluded as general ABCD coverage."
+  },
+  {
+    "article_id": "A0514",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.98,
+    "excluded": true,
+    "exclusion_reason": "predates most corpus papers and covers only early ABCD study overview; no specific corpus paper covered",
+    "evidence": "NYT 'Is Screen Time Bad for Kids' Brains?' (Dec 2018). Summary mentions ABCD Study early results reported on CBS 60 Minutes. Published Dec 2018 — before all but the earliest corpus papers (Guerrero 2019, Fors 2019), and there is no evidence of coverage of those specific papers. General ABCD overview piece with no paraphrase of any corpus paper's specific finding."
+  },
+  {
+    "article_id": "A0515",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.97,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic; article about statistical/methodological issues in brain imaging studies, not about screen time or social media",
+    "evidence": "NYT 'Brain-Imaging Studies Hampered by Small Data Sets' (Mar 2022). Summary lists ABCD Study alongside Human Connectome Project as large neuroimaging datasets. This is a methodology critique piece about neuroimaging sample sizes. No connection to any screen time or SM corpus paper. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0516",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NYT Learning 'A Study on the Health Effects of a Cellphone Before Age 12' (Mar 2026) clearly covers paper 431 (Barzilay 2026, Pediatrics, 'Smartphone Ownership, Age of Smartphone Acquisition, and Health Outcomes in Early Adolescence'). L3 met: summary states 'Researchers had analyzed data from more than 10,500 children who participated in the Adolescent Brain Cognitive Development Study' — matches paper 431 ABCD n and design. Title ('health effects of a cellphone before age 12') paraphrases the paper's core finding on age of smartphone acquisition and health outcomes. This is a NYT Learning section adaptation of the Dec 2025 NYT article (A0512); distinct article_id warrants its own entry."
+  },
+  {
+    "article_id": "A0517",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NYT Learning 'How Young Is Too Young to Get a Smartphone?' (Mar 2026) covers paper 431 (Barzilay 2026, Pediatrics). L3 met: summary states 'Researchers had analyzed data from more than 10,500 children who participated in the Adolescent Brain Cognitive Development Study' — same identifying features as A0512 and A0516 (ABCD n>10,500, smartphone acquisition age, health outcomes). Title frames the policy question raised by paper 431. Companion piece to A0516 in the NYT Learning section."
+  },
+  {
+    "article_id": "A0518",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.96,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage; 2019 article about WHO screen time guidelines with brief ABCD mention, no specific corpus paper covered",
+    "evidence": "NYT 'W.H.O. Says Limited or No Screen Time for Children Under 5' (Apr 2019). Summary: 'The National Institutes of Health has funded a $300 million project known as the A.B.C.D. Study...which hopes to...' — ABCD is mentioned as context for ongoing research, not as the source of a specific finding from the corpus. No L1-L4 linkage to any corpus paper."
+  },
+  {
+    "article_id": "A0519",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L4",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NYT 'How A.I. and Social Media Contribute to Brain Rot' (Nov 2025). Summary: 'Dr. Jason Nagata, a pediatrician who led the study, and his colleagues looked at data from ABCD, for Adolescent Brain Cognitive Development.' L4 met: names lead author Nagata + ABCD Study + social media/cognitive topic ('brain rot') — configuration uniquely consistent with paper 1 (Nagata 2025, JAMA, 'Social Media Use Trajectories and Cognitive Performance in Adolescents', UCSF). Paper 1 is Nagata's 2025 JAMA paper on social media trajectories and cognitive performance, which generated 'brain rot' media coverage in Nov 2025. Confidence 0.85 because article body text is unavailable to confirm journal name (JAMA) or specific cognitive outcome details for L2/L3 upgrade."
+  },
+  {
+    "article_id": "A0520",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.94,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage; narrative piece about teen internet use and mental health with ABCD mentioned as ongoing study, no specific corpus paper covered",
+    "evidence": "NYT 'A Teen's Journey Into the Internet's Darkness and Back Again' (Aug/Sep 2022). Summary: 'Major research efforts, such as the federally funded Adolescent Brain Cognitive Development study, are still in their early stages. The study follows 12,000...' ABCD cited as background context for ongoing research, not as source of a specific corpus paper finding. No L1-L4 linkage."
+  },
+  {
+    "article_id": "A0521",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.95,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort; article about CSUF professors studying sports, mental health, and social media — unrelated to any ABCD corpus paper",
+    "evidence": "OC Register 'CSUF professor and grad student examine how sports, mental health and social media interact' (Apr 2026). This describes original research by Cal State Fullerton faculty — not ABCD data. Provisional paper 95 (He 2025, Computers in Human Behavior, social media addiction and reward circuit in ABCD) has no connection to CSUF or sports/mental health framing. No L1-L4 linkage."
+  },
+  {
+    "article_id": "A0522",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L3",
+    "confidence": 0.87,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NY Post 'Social media is rotting kids' brains — and especially hurting their memory and vocabulary: study' (Oct 2025). L3: title paraphrases two specific outcome domains — memory and vocabulary — that map to paper 1 (Nagata 2025, JAMA, 'Social Media Use Trajectories and Cognitive Performance in Adolescents') which used the NIH Toolbox Cognition Battery including Picture Vocabulary and memory subtests. Published Oct 2025, consistent with JAMA 2025 coverage wave. The 'brain rot' + 'memory and vocabulary' specificity uniquely maps to paper 1 among corpus papers. Provisional ID 95 (He 2025, reward circuit) does not cover memory/vocabulary outcomes."
+  },
+  {
+    "article_id": "A0523",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L3",
+    "confidence": 0.83,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Toronto Sun 'Study reveals how social media is harming kids' brains' (Oct 2025). L3: title paraphrases a finding about social media harming children's brains/cognition, consistent with paper 1 (Nagata 2025, JAMA, social media use trajectories and cognitive performance in ABCD adolescents). Published Oct 2025 during the same media wave as A0522. Provisional paper 95 (He 2025, reward circuit in Computers in Human Behavior) is less likely; paper 1 generated the dominant Oct 2025 media coverage cycle on social media and children's brain/cognitive outcomes. Confidence 0.83 because no article summary available to confirm specific finding details or Nagata/JAMA attribution."
+  },
+  {
+    "article_id": "A0524",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.65,
+    "excluded": true,
+    "exclusion_reason": "insufficient evidence for L1-L4 linkage to any specific corpus paper; likely institutional commentary rather than primary coverage of a corpus paper",
+    "evidence": "Yale School of Medicine 'Social Media and Youth Mental Health: Does More Use Always Mean More Harm?' (Mar 2026). Provisional paper 95 (He 2025, UCSF/China affiliation, Computers in Human Behavior) has no Yale connection. Possible candidates with Yale/New York area affiliation include paper 3 (Xiao 2025, JAMA, Weill Cornell) or paper 196 (Pagliaccio 2024, NPP-Digital Psychiatry). However, no summary text is available, the 'does more use always mean more harm?' framing suggests a review/commentary rather than primary paper coverage, and the Mar 2026 date and Yale institutional outlet do not uniquely map to any corpus paper with sufficient confidence. Flagged for human review (confidence <0.7)."
+  }
+]

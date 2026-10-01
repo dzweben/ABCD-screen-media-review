@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0450",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article about sleep duration and brain outcomes in ABCD youth (Aug 2022). Summary references MRI scans and surveys but no mention of screen time or social media as IV. No candidate paper in the corpus studies sleep deprivation -> brain harms as the primary exposure-outcome pair; corpus papers use phone/SM as IV. Topic does not match any of the 69 included papers."
+  },
+  {
+    "article_id": "A0451",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article (Nov 2022) about obesity -> brain health decline in ABCD. None of the 69 candidate papers study obesity as IV predicting brain outcomes. Papers that include BMI/obesity (302, 215, 400) treat it as a DV, not IV. No L1-L4 match."
+  },
+  {
+    "article_id": "A0452",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage, no specific paper from corpus",
+    "evidence": "Healthday article (Mar 2023) with generic summary: 'brain scans, psychological evaluations and behavior tracking.' Title 'Too Much Time Online Might Raise Kids' Odds for Mental...' is too vague to satisfy L3 (no specific finding, sample size, effect direction, or effect magnitude). No author, journal, or institution named. Cannot confirm linkage to any specific corpus paper."
+  },
+  {
+    "article_id": "A0453",
+    "matched_paper_ids": ["157"],
+    "linkage_test": "L4",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Healthday article (May 30, 2023) titled 'One Key to Good Sleep for Teens: No Social Media at...' — bedtime social media use -> sleep outcomes in ABCD adolescents. The ABCD Study + bedtime social media/screen use + sleep outcomes configuration uniquely matches paper 157 (Nagata 2023, Sleep Health, 'Bedtime screen use behaviors and sleep outcomes: Findings from the ABCD Study'). Published May 2023 is consistent with the 2023 paper. UCSF-led (Nagata) + ABCD + bedtime SM + sleep is a distinctive L4 configuration. Confidence 0.75 because full article text not available but title-summary alignment is strong."
+  },
+  {
+    "article_id": "A0454",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article (Nov 2024) about adequate sleep -> reduced hypertension risk in ABCD adolescents. No candidate paper in the corpus addresses screen time/SM use and hypertension or blood pressure. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0455",
+    "matched_paper_ids": ["184"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Healthday article (Feb 5, 2025) titled 'Kids Consume More Mature Media When Parents Overuse Screens.' Studies data from 10,000+ 12-13-year-olds in ABCD. The finding — parental media overuse/practices predicting children's media content consumption — maps to paper 184 (Nagata 2025, Pediatric Research, 'Associations between media parenting practices and early adolescent screen use'). The distinctive paraphrase of media parenting behaviors -> child screen use (including SMAQ/MPIQ outcomes) with large ABCD sample (n~10,000) uniquely satisfies L3. Published Feb 2025 aligns with paper 184 (2025)."
+  },
+  {
+    "article_id": "A0456",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article (Oct 2022) about video games -> cognitive benefits in ABCD. Topic is video gaming, not phone/SM-specific variables required by the corpus. No corpus paper treats video games alone (without phone/SM) as the qualifying variable. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0457",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article (Mar 2023) about minority stress -> worse sleep in LGBTQ+ ABCD youth (Nagata team, n>8,500, ages 10-14). LGBTQ+ sleep is not the topic of any of the 69 candidate papers. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0458",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Healthday article (Oct 2023) about sexual minority status -> binge eating odds in ABCD adolescents (n>10,000, ages 10-14). The corpus papers on binge eating (paper 24, 35) use screen time/social media as IV, not sexual minority status. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0459",
+    "matched_paper_ids": ["49"],
+    "linkage_test": "L3",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Movieguide article (Feb 24, 2025) titled 'Adolescence Screen Time Spikes Risk of This Mental Health Disorder.' Provisional paper 49 (Nagata 2025, Social Psychiatry and Psychiatric Epidemiology, 'Screen time and manic symptoms in early adolescents'). The article title specifically identifies screen time -> a mental health disorder spike, and the 2025 publication date aligns with paper 49. The manic/bipolar disorder framing ('spikes risk of this mental health disorder') with screen time IV is a distinctive combination matching paper 49. Confidence 0.80 without full text."
+  },
+  {
+    "article_id": "A0460",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "insufficient evidence for L1-L4",
+    "evidence": "Movieguide article (Mar 10, 2025) with entirely generic title 'This New Study Gives Yet Another Reason to Keep Your Kids From Screens.' No summary text available. Provisional paper 49 was used but this title/absence of content cannot satisfy L3 or L4 without specific findings, author, journal, sample size, or institution. Excluded pending full-text review."
+  },
+  {
+    "article_id": "A0461",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "PNAS article (Oct 2021) titled 'Adolescent civic engagement: Lessons from Black Lives Matter.' Provisional paper 55 (Fors & Barch 2019, screen time and anxiety) has no relationship to civic engagement or BLM. This is a different PNAS paper on a completely different topic — civic engagement, not screen time or social media. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0462",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "PNAS article (Jan 2024) titled 'Higher chronic absenteeism threatens academic recovery from the COVID-19 pandemic.' Provisional paper 177 (Kiss 2023, Health Psychology, COVID-19 screen time + sleep) is unrelated to school absenteeism. The article is about academic absenteeism post-COVID — not screen time or social media in the corpus. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0463",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "PNAS article (Jan 2020) titled 'Cannabis and the adolescent brain.' Provisional paper 381 (Zhang 2026, JCAP, screen time and irritability) is entirely unrelated. Cannabis and adolescent brain is a different ABCD topic not covered by any of the 69 corpus papers. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0464",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage, no specific paper from corpus",
+    "evidence": "APA webpage (Nov 2024) titled 'APA Recommendations for Healthy Teen Video Viewing.' This is an APA policy/guidance document, not a news article about a specific corpus paper. Provisional paper 57 (Lin 2020, JACP) is a network analysis paper; the APA page appears to be broader guidance on teen video viewing. No L1-L4 evidence linking this to a specific corpus paper without full text. Excluded as general guidance."
+  },
+  {
+    "article_id": "A0465",
+    "matched_paper_ids": ["133"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "ADDitude article (Dec 20, 2022) titled 'Research Links Screen Time to Emotional Dysregulation, OCD.' Provisional papers 133, 160, 70. The OCD mention is highly specific and matches paper 133 (Nagata 2023, Journal of Adolescent Health, 'Screen Time and Obsessive-Compulsive Disorder Among Children 9-10 Years Old'). ADDitude is a specialty ADHD/mental health publication that covers OCD research. Dec 2022 timing is consistent with Nagata 2023 JAH (accepted/online late 2022). Emotional dysregulation + OCD + screen time is a configuration uniquely matching paper 133. Papers 160 (suicidal behaviors) and 70 (eating disorders) less likely given OCD specificity. Confidence 0.82 without full text."
+  },
+  {
+    "article_id": "A0466",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "ADDitude article (Jul 18, 2018) about heavy media use and ADHD symptoms. Provisional paper 84 (Shou 2026, Acta Psychologica) is a 2026 paper — this 2018 article cannot cover it. The 2018 article likely covers a non-ABCD or early ABCD study; the ABCD Study was only launched in 2015-2016 and baseline data were barely published by 2018. No corpus paper matches the 2018 date. Excluded — date mismatch and out-of-corpus topic."
+  },
+  {
+    "article_id": "A0467",
+    "matched_paper_ids": ["435", "436"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "ADDitude article (Mar 19, 2026) titled 'New Studies Link Heavy Social Media, Screen Use to ADHD Symptoms.' Provisional papers 435 and 436 are both Nivins 2025, Pediatrics Open Science, 'Digital Media, Genetics, and Risk for ADHD Symptoms in Children: A Longitudinal Study' (Karolinska Institute). The title 'New Studies Link Heavy Social Media, Screen Use to ADHD Symptoms' with plural 'studies' and March 2026 publication date aligns with these 2025 papers. L3: social media use predicting ADHD/inattention symptoms in longitudinal ABCD analysis (beta=0.03, p<.001 from paper 435) is a distinctive finding. Confidence 0.85."
+  },
+  {
+    "article_id": "A0468",
+    "matched_paper_ids": ["70"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Economic Times article (Jan 28, 2025) titled 'Study reveals social media's growing influence on eating disorders among adolescents.' Provisional paper 70 (Chu 2024, Eating and Weight Disorders, 'Screen time, problematic screen use, and eating disorder symptoms among early adolescents: findings from the ABCD Study'). The finding of social media -> eating disorders in ABCD adolescents uniquely maps to paper 70, which reports ORs for social media use predicting fear of obesity and binge eating (Jan 2025 coverage aligns with 2024 publication). L3 satisfied: social media IV + eating disorder DV + ABCD cohort = distinctive paraphrase of paper 70."
+  },
+  {
+    "article_id": "A0469",
+    "matched_paper_ids": ["84"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "HMP Global Learning Network article (Dec 3, 2025) titled 'Higher Screen Time Tied to ADHD Symptoms, Altered Brain Structure in Children.' Provisional paper 84 (Shou 2026, Acta Psychologica, 'The association between screen time and cognitive function in children: The partially mediating role of putamen volume'). The article title's 'altered brain structure' + ADHD symptoms + screen time + children combination maps to paper 84, which specifically examines putamen volume (brain structure) mediating screen time -> cognitive function. Published Nov-Dec 2025 aligns with a 2026 paper appearing online late 2025. L3: brain structure (putamen) as mediator between screen time and cognition in ABCD children is distinctive to paper 84."
+  },
+  {
+    "article_id": "A0470",
+    "matched_paper_ids": ["84"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "NR Times article (Nov 24, 2025) titled 'Higher screen time linked to ADHD symptoms and altered brain development.' Provisional paper 84 (Shou 2026, Acta Psychologica, putamen volume mediating screen time -> cognitive function in ABCD). Same finding as A0469 — brain structure + ADHD symptoms + screen time in children, published Nov 2025. L3: brain development/structure (putamen) mediating screen time -> cognitive outcome in ABCD is distinctive to paper 84. Likely syndicated or parallel coverage of same paper as A0469 and A0472."
+  },
+  {
+    "article_id": "A0471",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "NR Times article (Aug 31, 2023) titled 'Screen time can lead to developmental delay.' Provisional paper 84 (Shou 2026, Acta Psychologica) is a 2026 paper — cannot be covered by an August 2023 article. This likely covers a different, non-corpus study on screen time and developmental delay. Excluded due to date mismatch with the only plausible corpus candidate."
+  },
+  {
+    "article_id": "A0472",
+    "matched_paper_ids": ["84"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "U.S. Right to Know article (Nov 21, 2025) titled 'Higher screen time linked to brain abnormalities and ADHD symptoms in children, study shows.' Provisional paper 84 (Shou 2026, Acta Psychologica). Brain abnormalities (putamen volume alteration) + ADHD symptoms + screen time + children matches paper 84's core finding uniquely. Published Nov 2025 consistent with paper appearing online ahead of 2026 print. L3: putamen-mediated brain structural abnormality pathway from screen time to cognition/ADHD is a distinctive paraphrase of paper 84."
+  },
+  {
+    "article_id": "A0473",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "Heart.org article (Aug 6, 2025) titled 'Excessive screen time among youth may pose heart health risks.' Provisional paper 84 (Shou 2026, Acta Psychologica — cognition/putamen) does not address cardiovascular outcomes. No corpus paper among the 69 examines screen time -> heart/cardiovascular health. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0474",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic",
+    "evidence": "ScienceDaily article (Nov 1, 2025) titled 'Too much screen time may be hurting kids' hearts.' Provisional paper 84 (Shou 2026, Acta Psychologica) is about putamen/cognition — not heart health. No corpus paper covers screen time -> cardiovascular outcomes. Out-of-corpus topic."
+  }
+]

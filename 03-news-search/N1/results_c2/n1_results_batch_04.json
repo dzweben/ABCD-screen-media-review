@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0100",
+    "matched_paper_ids": ["13"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "EurekAlert press release titled 'Role of sleep and white matter in the link between screen...' — title exactly paraphrases paper 13 (Lima Santos 2025 JAMA Pediatrics: screen time → depressive symptoms mediated by sleep and white matter cingulum bundle). Summary confirms 'more screen time in late childhood was associated with more depressive symptoms.' Distinctive three-way paraphrase (screen time + depressive symptoms + sleep/white matter mediation) uniquely maps to paper 13."
+  },
+  {
+    "article_id": "A0101",
+    "matched_paper_ids": ["13"],
+    "linkage_test": "L2",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "EurekAlert press release title 'Teen depression? Study finds clues in screen use and...' + summary directly quotes 'Lima Santos said' — author surname match. Lima Santos is the first author of paper 13 (Lima Santos 2025 JAMA Pediatrics). Summary content (screen use + teen depression) consistent with paper 13's findings. L2 satisfied: lead author surname in article text."
+  },
+  {
+    "article_id": "A0102",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.9,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort or different study — author 'Xuedi Li, M.Sc., of the Hospital for Sick Children in Toronto' does not match paper 18 (Li et al. Zhejiang University); likely a SickKids COVID screen use study unrelated to corpus",
+    "evidence": "Title 'Screen use, mental health symptoms in children during pandemic'; summary names 'Xuedi Li, M.Sc., of the Hospital for Sick Children in Toronto.' Paper 18 (Li 2024 Advanced Science) is from Zhejiang University, China — different institution, different country, different study cohort. No L1-L4 link to any candidate paper."
+  },
+  {
+    "article_id": "A0103",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.92,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic or pre-dates all candidate papers — published Jun 2018, no candidate paper from corpus dated 2018 on this topic; likely non-ABCD insomnia/sleep study",
+    "evidence": "Published Jun 4, 2018. All candidate papers on screen time and sleep are 2019 or later. Summary references 'adverse influences of social media and screen use on sleep and mental health' but no author, journal, institution, or sample detail links to any candidate paper. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0104",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.92,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort — 'Li, first author and Epidemiologist at SickKids' does not match paper 18 (Li et al. Zhejiang University); this is a SickKids academic-achievement study from a different cohort",
+    "evidence": "Title 'Screen time linked to lower academic achievement among...' + summary names 'Li, first author and Epidemiologist at SickKids.' Paper 18 (Li 2024 Advanced Science) is from Zhejiang University — completely different institution. No match to any candidate paper on L1-L4."
+  },
+  {
+    "article_id": "A0105",
+    "matched_paper_ids": ["160"],
+    "linkage_test": "L4",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Excessive screen time linked to suicidal behaviors in US preteens' + published Feb 27, 2023 + summary names 'Nagata, MD, assistant professor of pediatrics at the University of [California, San Francisco].' Paper 160 (Chu et al. 2023 Preventive Medicine: screen time and suicidal behaviors among US children 9-11) matches on all four L4 elements: UCSF institution (Nagata co-author), suicidal behaviors topic, ABCD Study, early adolescent/preteen sample. Article date aligns with paper 160 publication year."
+  },
+  {
+    "article_id": "A0106",
+    "matched_paper_ids": ["184"],
+    "linkage_test": "L4",
+    "confidence": 0.9,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'How parents can protect children from mature and adult...' + published Feb 5, 2025 + summary quotes Nagata: 'One key factor in a child's exposure to mature content is how much screen time their parents use.' This directly paraphrases the topic of paper 184 (Nagata et al. 2025 Pediatric Research: associations between media parenting practices and early adolescent screen use). L4: UCSF/Nagata + media parenting practices topic + ABCD Study configuration."
+  },
+  {
+    "article_id": "A0107",
+    "matched_paper_ids": ["302", "24"],
+    "linkage_test": "multi",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Adolescents' recreational screen time doubled during...' + published Nov 1, 2021 + summary mentions Nagata and 'weight gain and binge eating.' Maps to paper 302 (Nagata 2021 Pediatric Obesity: screen time and BMI in 9-10 year olds) via L4 (UCSF + BMI/obesity topic + ABCD) and to paper 24 (Nagata 2021 IJED: screen time modalities and binge-eating disorder) via L4 (UCSF + binge eating topic + ABCD). Both 2021 Nagata ABCD papers align with date and content. Multi-mapped."
+  },
+  {
+    "article_id": "A0108",
+    "matched_paper_ids": ["393"],
+    "linkage_test": "L4",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'For preteens, more screen time is tied to depression...' + published Oct 7, 2024 + mentions Nagata. Maps to paper 393 (Nagata 2024 BMC Public Health: screen time and mental health prospective ABCD analysis). L4: Nagata/UCSF + depression/mental health topic + ABCD Study. Publication date Oct 2024 aligns with paper 393 (2024). The '394' entry is a duplicate DOI of 393 — mapping to 393."
+  },
+  {
+    "article_id": "A0109",
+    "matched_paper_ids": ["302"],
+    "linkage_test": "L2",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Excessive screen time linked to obesity in US preteen' + published Jun 28, 2021 + summary shows citation 'Nagata, JM, Iyer...' matching paper 302 (Nagata, Iyer, Chu, Baker, Gabriel 2021 Pediatric Obesity: screen time → BMI percentile in 9-10 year olds). L2: lead author surname Nagata + Pediatric Obesity journal implied by citation. Author list directly matches paper 302."
+  },
+  {
+    "article_id": "A0110",
+    "matched_paper_ids": ["133", "304"],
+    "linkage_test": "multi",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time linked to OCD in U.S. preteens' + published Dec 12, 2022 + mentions Nagata. Primary map: paper 133 (Nagata 2023 J Adolescent Health: screen time and OCD, 9-10 year olds prospective — L4: UCSF + OCD topic + ABCD). Summary also explicitly references 'July' finding of 'disruptive behavior disorders in 9-11 year olds' — cross-reference to paper 304 (Nagata 2023 JCPP: screen time and disruptive behavior disorders). Multi-mapped."
+  },
+  {
+    "article_id": "A0111",
+    "matched_paper_ids": ["70"],
+    "linkage_test": "L4",
+    "confidence": 0.87,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time and social media use linked to eating disorder symptoms in young adolescents' + published Sep 10, 2024 + names 'Nagata, MD, an associate professor of pediatrics.' Maps to paper 70 (Chu et al. 2024 Eating and Weight Disorders: screen time, problematic screen use, and eating disorder symptoms in early adolescents from ABCD Study — Nagata is a co-author). L4: UCSF + eating disorder symptoms topic + ABCD + 2024 publication date."
+  },
+  {
+    "article_id": "A0112",
+    "matched_paper_ids": ["139"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Great news, parents: You do have power over your tweens'...' + published Jun 5, 2024 + summary quotes Nagata: 'Screen time at bedtime displaces sleep time, which is essential for health and development in young adolescents.' This is a distinctive paraphrase of paper 139 (Nagata 2024 J Adolescent Health: bedtime screen use behaviors and sleep outcomes in early adolescents, prospective ABCD cohort). L3: bedtime screen use + sleep displacement + young adolescents + Nagata/UCSF uniquely map to paper 139."
+  },
+  {
+    "article_id": "A0113",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.92,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic — general physical activity / sedentary behavior study (non-ABCD cohort study by Yang, Cao, Kantor, Nguyen, Zheng); no link to any candidate paper",
+    "evidence": "Title 'Despite health warnings, Americans still sit too much' + Apr 23, 2019. Summary lists authors Yang L, Cao C, Kantor ED, Nguyen LH, Zheng X — none are authors of candidate papers 31 (Zheng 2026) or 57 (Lin 2020). This is a general population sedentary behavior epidemiology study, not ABCD Study. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0114",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — AI persuasion / social media liability study; 'Weiyan Shi' is not the Shi first author of paper 35 (Shi 2025 Obesity, first author Shi at Johns Hopkins)",
+    "evidence": "Title 'AI-generated arguments are persuasive, even when labeled' + Feb 10, 2026. About AI persuasion research. 'Weiyan Shi, Northeastern University Khoury College of Computer...' — completely different Shi than paper 35 (Shi 2025 Obesity: social media and binge eating in ABCD adolescents). No health, ABCD, or adolescent content. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0115",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — AI-generated content quality study; no connection to ABCD Study or candidate papers",
+    "evidence": "Title ''AI slop' hurts consumers and creators' + Mar 4, 2026. About AI-generated content on social media platforms — not about adolescent health, screen time, or ABCD Study. Provisional paper 35 (Shi 2025 Obesity) is unrelated. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0116",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — oncology/cancer research (MYC enhancer); no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'Enhancer provides a potential target for undruggable MYC...' + Apr 22, 2026. Cancer Research journal, MYC oncogene, St. Jude. Authors include Shi but a different Shi entirely. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0117",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — immunotherapy/cancer biology research; no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'Reprogramming gatekeeper immune cell may boost...' + Apr 2, 2026. Immunotherapy study in Science journal from St. Jude. 'Hao Shi' is an immunology researcher. No connection to adolescent screen time or ABCD Study. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0118",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — fake news / media misinformation research; no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'News media amplified rather than rectified misleading...' + Dec 20, 2021. About fake news amplification on social media. 'Shi, Assistant Professor of Marketing at HKUST' — different Shi from paper 35. No ABCD content. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0119",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — corporate social media activism; no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'Social media activism is driving corporate agendas' + Nov 16, 2016. About corporate activism on social media. 'Wang Shi, chairman of Vanke' — entirely different Shi. Predates all candidate papers. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0120",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — cybersecurity / NATO grant; no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'NATO taps UH professor to keep big data secure on the...' + Mar 23, 2016. Cybersecurity research. 'Shi' is a UH cybersecurity professor. No adolescent health or ABCD content. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0121",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — particle physics / meson measurements; no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'Scientists calculate predictions for meson measurements' + Nov 6, 2024. Physics study from Brookhaven Lab. 'Shi and Xiang Gao' are physics researchers. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0122",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.99,
+    "excluded": true,
+    "exclusion_reason": "unrelated topic — immunotherapy / cancer biology (protein signal jammer); no connection to ABCD Study or candidate papers",
+    "evidence": "Title 'Removing a protein signal jammer improves immunotherapy' + Mar 19, 2025. Nature journal, St. Jude, immunotherapy. 'Hao Shi' is an immunologist. No adolescent screen time or ABCD content. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0123",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.92,
+    "excluded": true,
+    "exclusion_reason": "image asset only — no article content to evaluate against L1-L4 criteria; photo caption cannot satisfy any linkage test",
+    "evidence": "EurekAlert multimedia item: 'Anne-Marie Fors Connolly [IMAGE]' — a photograph of the author with caption 'Mattias Pettersson / Media use / Licensed content.' No article text, no findings paraphrased, no journal or DOI cited. Provisional paper 55 (Fors 2019 Child Psychiatry & Human Development) cannot be linked without any substantive content. No L1-L4 satisfied."
+  },
+  {
+    "article_id": "A0124",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.95,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort — 'Growing Up in Singapore' cohort study on infant screen time; no connection to ABCD Study or any candidate paper",
+    "evidence": "Title 'Too much screen time too soon? A*STAR study links infant...' + Dec 30, 2025. Summary explicitly states 'data from the Growing Up in Singapore' — a different cohort. Provisional paper 57 (Lin 2020 J Abnormal Child Psychology, ABCD Study) is unrelated. No L1-L4 satisfied."
+  }
+]

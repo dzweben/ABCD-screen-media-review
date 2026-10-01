@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0475",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: cardiometabolic/cardiovascular outcomes from screen time; no corpus paper covers cardiometabolic health; provisional paper 84 covers cognitive function via putamen, not cardiometabolic outcomes",
+    "evidence": "Healio article (Aug 2025) headline 'Too much screen time may negatively impact kids' cardiometabolic health' addresses cardiovascular/metabolic risk — an out-of-corpus topic. Paper 84 (Shou 2026, Acta Psychologica) covers cognitive function and putamen volume, not cardiometabolic health. No L1-L4 match to any corpus paper."
+  },
+  {
+    "article_id": "A0476",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: heart disease and diabetes risk from screen time; no corpus paper covers cardiometabolic outcomes",
+    "evidence": "Open Access Government article (Aug 2025) 'Excessive screen time may raise kids' risk of heart disease and diabetes' addresses cardiometabolic outcomes. No corpus paper covers heart disease or diabetes risk from screen time. Provisional paper 84 is about cognitive function, not cardiometabolic health. No L1-L4 match."
+  },
+  {
+    "article_id": "A0477",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort: toddler/infant-age screen time and autism symptoms; ABCD Study enrolls children 9-10+; autism is not a corpus topic",
+    "evidence": "Medical Dialogues article (Oct 2025) 'Higher Screen Time in Toddlers Linked to Increased Risk of Autism Symptoms' concerns toddler-age subjects in a non-ABCD cohort. ABCD Study baseline is ages 9-10; toddler studies are definitively non-ABCD. No L1-L4 match to any corpus paper."
+  },
+  {
+    "article_id": "A0478",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort: infant/toddler screen time and developmental delays; ABCD Study does not enroll infants",
+    "evidence": "Medical Dialogues article (Aug 2023) 'Screen time in infants leads to developmental delays in communication and problem-solving' concerns infants — a non-ABCD population. No L1-L4 match to any corpus paper."
+  },
+  {
+    "article_id": "A0479",
+    "matched_paper_ids": ["49"],
+    "linkage_test": "L4",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Medical Dialogues article (Feb 2025) 'Screen time linked to bipolar and manic symptoms in preteens, suggests study' paraphrases a finding uniquely consistent with paper 49 (Nagata 2025, Social Psychiatry and Psychiatric Epidemiology — 'Screen time and manic symptoms in early adolescents: prospective findings from the ABCD Study'). The article names the ABCD Study configuration (preteens/early adolescents + manic/bipolar symptoms + screen time). Paper 49 is the only corpus paper examining screen time and manic symptoms in ABCD. L4: institution-consistent ABCD + manic symptoms + screen time. Provisional paper 215 (BMI/waist circumference) does not match. Confidence 0.75 — no body text available to confirm author or journal name."
+  },
+  {
+    "article_id": "A0480",
+    "matched_paper_ids": ["302"],
+    "linkage_test": "L3",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Medical Dialogues article (Jul 2021) 'Increased screen time linked to weight gain in children: Study' paraphrases a finding uniquely consistent with paper 302 (Nagata 2021, Pediatric Obesity — 'Contemporary screen time usage among children 9-10-years-old is associated with higher body mass index percentile at 1-year follow-up'). Matching features: screen time + weight gain/BMI + children (ages 9-10) + prospective cohort + published 2021. Paper 521 (Must 2023, Frontiers in Pediatrics) concerns autism/obesity and is dated 2023, making it a less likely match for a Jul 2021 article. L3: sample (children 9-10), outcome (BMI/weight gain), exposure (screen time), effect direction (positive association). Confidence 0.75 — no body text to confirm journal or author name."
+  },
+  {
+    "article_id": "A0481",
+    "matched_paper_ids": ["435", "436"],
+    "linkage_test": "L3",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Medical Dialogues article (Dec 2025) 'Study links social media use to poor focus, rising ADHD symptoms in children' paraphrases findings uniquely consistent with papers 435/436 (Nivins 2025, Pediatrics Open Science — 'Digital Media, Genetics, and Risk for ADHD Symptoms in Children'). Matching features: social media use + ADHD/attention/focus symptoms + children + digital media + published Dec 2025 (consistent with 2025 paper). L3: exposure (social media use), outcome (ADHD/inattention symptoms), effect direction (positive association), sample (children). Papers 435 and 436 are duplicate entries for the same paper; both tagged. Confidence 0.80."
+  },
+  {
+    "article_id": "A0482",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general aggregator content: BMJ Open top-10 most-read list mentioning 'smartphone use' among other topics; no corpus paper is published in BMJ Open; cannot identify specific corpus paper",
+    "evidence": "BMJ Blogs article (Nov 2025) is a monthly top-10 most-read list for BMJ Open covering algorithms, singing, vaping, smartphone use, and fast food. No corpus paper is published in BMJ Open. The 'smartphone use' entry cannot be linked to a specific corpus paper without body text. No L1-L4 match confirmed."
+  },
+  {
+    "article_id": "A0483",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: cardiometabolic and cardiovascular disease risk from screen time; no corpus paper covers cardiometabolic outcomes; this is a medRxiv preprint unrelated to any corpus paper",
+    "evidence": "medRxiv preprint (Jul 2024) 'Screen Time is Associated with Cardiometabolic and Cardiovascular Disease Risk in Childhood and Adolescence' addresses cardiometabolic outcomes — an out-of-corpus topic. Provisional paper 84 (Shou 2026, Acta Psychologica) is about cognitive function via putamen, not cardiovascular risk. No L1-L4 match."
+  },
+  {
+    "article_id": "A0484",
+    "matched_paper_ids": ["184"],
+    "linkage_test": "L4",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "medRxiv preprint (Nov 2025) 'Longitudinal Patterns of Digital Parenting Restrictions and Adolescent Screen Use: Insights from the Adolescent Brain Cognitive Development (ABCD) Study' directly names the ABCD Study and covers digital/media parenting restrictions and adolescent screen use — uniquely consistent with paper 184 (Nagata 2025, Pediatric Research — 'Associations between media parenting practices and early adolescent screen use'). L4: ABCD Study named + media parenting practices/restrictions + adolescent screen use. Paper 184 is the only corpus paper examining media parenting practices and screen use in ABCD. Provisional papers 154 and 395 do not match the parenting topic. Confidence 0.80."
+  },
+  {
+    "article_id": "A0485",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: fertility decline during COVID-19 pandemic; completely unrelated to screen time, smartphones, or social media",
+    "evidence": "medRxiv preprint (Apr 2024) 'Fertility decline in the later phase of the COVID-19 pandemic: The role of policy interventions, vaccination programmes, and economic uncertainty' is about demographic fertility trends — entirely unrelated to screen time or ABCD. Provisional paper 177 (Kiss 2023, COVID-19 and screen time/sleep in ABCD) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0486",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: COVID-19 pandemic effects on park use in U.S. cities; unrelated to screen time, smartphones, or social media",
+    "evidence": "medRxiv preprint (Apr 2021) 'Effects of the COVID-19 Pandemic on Park Use in U.S. Cities' is about park utilization during COVID — entirely unrelated to screen time or ABCD. Provisional paper 177 (COVID-19, screen time, sleep in ABCD) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0487",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: exposome and attention-related brain networks predicting attention problems; neuroimaging/exposome approach not covered by any corpus paper; does not map to paper 420 (Paulich 2021, PLOS ONE)",
+    "evidence": "medRxiv preprint (Mar 2026) 'The exposome and attention-related brain networks jointly predict attention problems in early adolescence' studies exposome factors and neural networks — not a screen-time-as-exposure study from the corpus. Paper 420 (Paulich 2021) is a cross-sectional screen time and mental health outcomes paper, not a brain-network/exposome study. No qualifying screen time or SM variable as primary IV mapping to any corpus paper. No L1-L4 match."
+  },
+  {
+    "article_id": "A0488",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: screen time and autism research review; autism is not a topic covered by any corpus paper",
+    "evidence": "The Transmitter article (May 2024) 'Studies investigating link between screen time and autism must improve' reviews screen time and autism research broadly — autism is not a corpus topic. No corpus paper covers autism as an outcome. Provisional paper 84 (Shou 2026, cognitive function/putamen) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0489",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "insufficient evidence to link to specific corpus paper: published Oct 2022, general topic of screen time and cognitive deficits without body text or author/journal identifying information; multiple corpus papers could be candidates but none confirmed",
+    "evidence": "MGH Psych News article (Oct 2022) 'Does Excessive Screen Time Contribute to Cognitive Deficits in Adolescents?' addresses screen time and cognition, which overlaps with corpus papers (e.g., paper 295 Kirlic 2021, paper 190 Sauce 2022). However, no body text, author names, journal names, or specific statistics are available to satisfy L1-L4. Cannot confirm linkage to any specific corpus paper without additional evidence. Excluded pending human review."
+  },
+  {
+    "article_id": "A0490",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort: Brazilian adolescents, adults, and older adults; not an ABCD Study paper",
+    "evidence": "Cambridge article (Nov 2024) 'Ultra-processed food consumption is related to screen time among Brazilian adolescents, adults and older adults' uses a Brazilian cohort — definitively non-ABCD. Provisional paper 84 (Shou 2026, Acta Psychologica, ABCD data) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0491",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: SARS-CoV-2 household transmission by pediatric index cases; unrelated to screen time, smartphones, or social media",
+    "evidence": "Cambridge article (Nov 2024) 'Association between age of paediatric index cases and household SARS-CoV-2 transmission' is epidemiology of COVID-19 transmission — entirely unrelated to screen time or social media. Provisional paper 152 (Nagata 2022, COVID information/masking/social media in ABCD) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0492",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: COVID-19 pandemic effects on academic journal submissions in political science; unrelated to screen time or ABCD",
+    "evidence": "Cambridge article (Feb 2024) 'Effects of the COVID-19 Pandemic on Submissions to Politics & Gender' is about academic publishing patterns — entirely unrelated to screen time or ABCD. Provisional paper 177 (Kiss 2023, COVID-19, screen time, sleep in ABCD) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0493",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort or insufficient evidence: youth mental health and COVID-19 pandemic study does not name ABCD, screen time, or specific corpus paper authors/journals",
+    "evidence": "Cambridge BJPsych Open article (Nov 2023) 'Differing impact of the COVID-19 pandemic on youth mental health: combined population and clinical study' addresses COVID-19 and youth mental health but does not reference ABCD, screen time, or any corpus author/journal. Provisional paper 177 (Kiss 2023, COVID-19, screen time, sleep in ABCD) requires screen time as a primary exposure — not satisfied here. No L1-L4 match."
+  },
+  {
+    "article_id": "A0494",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: psychopathology as predictor of alcohol initiation; screen time or social media is not the exposure; does not map to paper 208 (Nagata 2024, social media and alcohol sipping)",
+    "evidence": "Cambridge Development and Psychopathology article (Mar 2023) 'Psychopathology as dynamic markers of alcohol initiation across development' examines psychopathology (not screen time/social media) predicting alcohol initiation. Paper 208 (Nagata 2024) has social media use as IV predicting alcohol sipping — opposite directionality and different exposure. No L1-L4 match."
+  },
+  {
+    "article_id": "A0495",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: sleep duration as predictor of behavior problems; screen time is not the primary exposure; does not map to paper 398 (Guerrero 2019, screen time and problem behaviors mediated by sleep)",
+    "evidence": "Cambridge Development and Psychopathology article (Nov 2022) 'Middle childhood and adolescence sleep duration and behavior problems in adolescence' examines sleep as IV predicting behavior — not screen time as the primary exposure. Paper 398 (Guerrero 2019, IJBNPA) has screen time as IV with sleep as mediator. Different exposure-outcome configuration. No L1-L4 match."
+  },
+  {
+    "article_id": "A0496",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort: Norwegian Institute of Public Health (FHI) report on screen use and musculoskeletal pain/headache/eye health; not an ABCD Study paper",
+    "evidence": "FHI (Norwegian Institute of Public Health) report (May 2024) on screen use and physical health (musculoskeletal pain, headache, eye health) in a Norwegian cohort — definitively non-ABCD. Provisional paper 84 (Shou 2026, Acta Psychologica, ABCD data) does not match topic or cohort. No L1-L4 match."
+  },
+  {
+    "article_id": "A0497",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: diabetes risk from screen time; published 2017, predates ABCD corpus; cardiometabolic outcome not covered by any corpus paper",
+    "evidence": "CNBC article (Mar 2017) 'Screen time linked to increased diabetes risk in children: study' is from 2017 and covers diabetes/cardiometabolic outcomes — both out-of-corpus topic and predating the ABCD Study corpus. Provisional paper 84 (Shou 2026) was published 9 years later. No L1-L4 match."
+  },
+  {
+    "article_id": "A0498",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic: smartphone use and myopia/refractive errors in teens; eye health is not a corpus topic; not an ABCD Study paper",
+    "evidence": "Ophthalmology Advisor article (Aug 2021) 'Continuous Teen Smartphone Use Associated with Myopic Refractive Errors' covers myopia/eye health — an out-of-corpus topic. No corpus paper examines ophthalmic outcomes. Provisional paper 84 (Shou 2026, cognitive function) does not match. No L1-L4 match."
+  },
+  {
+    "article_id": "A0499",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "non-ABCD cohort: preschool-age children; ABCD Study baseline is ages 9-10; published 2019, predates ABCD corpus",
+    "evidence": "University of Calgary article (Jan 2019) 'Excessive screen time linked to preschool learning delays' concerns preschool-age children in a Canadian cohort — non-ABCD population and published before the ABCD Study corpus. Provisional paper 84 (Shou 2026) was published 7 years later. No L1-L4 match."
+  }
+]

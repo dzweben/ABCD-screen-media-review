@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0675",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic — academic blog post about political communication theory (Chadwick, Loughborough), no connection to ABCD study or any corpus paper",
+    "evidence": "Title 'New Crisis of Public Communication' and outlet (Loughborough University Online Civic Culture Centre) concern political communication, not smartphone/social media and child health. Provisional link to paper 192 (Nivins 2024 Scientific Reports on digital media and brain development) is a false positive with no thematic overlap."
+  },
+  {
+    "article_id": "A0676",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic — covers short-form video and school grades without referencing a specific corpus paper",
+    "evidence": "Article (The Star, Jan 2025) discusses short videos and children's school performance. Provisional paper 192 is Nivins 2024 Scientific Reports (Karolinska, cerebellum volume, digital media). No author names, journal, institution, sample size, or findings from any corpus paper are mentioned or paraphrased. Generic EdTech/parenting coverage."
+  },
+  {
+    "article_id": "A0677",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Smartphone Ownership in Young Adolescence Drives Physical and Emotional Health Risks' (Patient Care Online, Dec 2025) paraphrases the core finding of paper 431 (Barzilay 2026 Pediatrics): smartphone ownership by early adolescence linked to depression, obesity, and sleep loss. Timing (Dec 2025) matches paper 431 publication (2026 online-first Dec 2025). L3: outcome triad (physical + emotional health risks from early smartphone ownership) uniquely maps to paper 431."
+  },
+  {
+    "article_id": "A0678",
+    "matched_paper_ids": ["393", "394"],
+    "linkage_test": "L4",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'UCSF study shows extended screen time is mentally unhealthy for kids' (NBC Bay Area, Oct 2024) names UCSF (Nagata affiliation) + screen time + mental health outcomes in kids — uniquely consistent with papers 393 and 394 (Nagata et al. 2024 BMC Public Health, screen time and mental health prospective ABCD analysis). Both papers 393 and 394 share the same DOI/publication; multi-mapped as both are listed in candidate_papers.json."
+  },
+  {
+    "article_id": "A0679",
+    "matched_paper_ids": ["398"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time, lack of sleep linked to impulsive behaviour in kids' (CBC, Aug 2019) paraphrases the finding of paper 398 (Guerrero 2019 Int J Behav Nutr Phys Act): screen time predicts problem behaviors (including rule-breaking and aggression) mediated by sleep duration in ABCD children. Published same month as Guerrero 2019. At least two distinctive elements map to paper 398: sleep mediation + child behavioral outcomes (impulsivity/rule-breaking), uniquely consistent with Guerrero 2019 ABCD design."
+  },
+  {
+    "article_id": "A0680",
+    "matched_paper_ids": ["420"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Kids and their computers: Several hours a day of screen time is OK, study suggests' (The Conversation, Oct 2021) paraphrases the null/reassuring finding of paper 420 (Paulich 2021 PLOS ONE): ABCD study of 9-10 year olds showing screen time associations with mental health, academic, and social outcomes were modest. Publication date (Oct 2021) matches Paulich 2021. The 'screen time is OK' framing uniquely echoes the Paulich paper's conclusions about modest effect sizes in ABCD."
+  },
+  {
+    "article_id": "A0681",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Summary explicitly states '63.6% of the ABCD study's participants owned a [smartphone]' — this sample-specific statistic uniquely maps to paper 431 (Barzilay 2026 Pediatrics, smartphone ownership and health outcomes in ABCD). Title 'Children who have smartphones by age 12 are at increased risk of health problems' directly paraphrases paper 431's finding on age of acquisition. Published Dec 2025, matching paper 431's online-first date."
+  },
+  {
+    "article_id": "A0682",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage — 60 Minutes segment (Dec 2018) introduces the ABCD Study as a longitudinal research initiative, no specific corpus paper referenced",
+    "evidence": "Summary describes Dr. Gaya Dowling of NIH explaining the ABCD study's 10,000-child longitudinal design. This is introductory/overview coverage of the ABCD Study launched in 2018, predating most corpus papers. No specific finding, author, or paper from candidate_papers.json is referenced or paraphrased."
+  },
+  {
+    "article_id": "A0683",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Study links owning smartphone before age 12 to health risks' (Jefferson City News Tribune, Dec 2025) directly paraphrases paper 431 (Barzilay 2026 Pediatrics): smartphone ownership/age of acquisition predicts health risks in early adolescents using ABCD data. Date (Dec 2025) matches paper 431 online-first publication. Unique combination of smartphone age-of-acquisition + health risk framing maps to paper 431."
+  },
+  {
+    "article_id": "A0684",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L1",
+    "confidence": 0.99,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "URL is the AAP/Pediatrics journal abstract page for paper 431 (Barzilay et al., DOI 10.1542/peds.2025-072941): https://publications.aap.org/pediatrics/article-abstract/157/1/e2025072941/205716/Smartphone-Ownership-Age-of-Smartphone-Acquisition. Article title matches paper 431 title exactly. Direct journal page = L1 linkage."
+  },
+  {
+    "article_id": "A0685",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L2",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title names 'Dr. Ran Barzilay, psychiatrist' (first author of paper 431) discussing when kids should own smartphones — directly tied to paper 431's finding that early smartphone acquisition is linked to health risks. Published Jan 2026, shortly after paper 431's Dec 2025 online-first. Lead author surname (Barzilay) + smartphone timing + ABCD topic configuration uniquely maps to paper 431 (L2/L4)."
+  },
+  {
+    "article_id": "A0686",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Something Grim Is Happening to Kids Who Got Cell Phones Early' (Futurism, Dec 2025) paraphrases paper 431 (Barzilay 2026 Pediatrics): early smartphone acquisition → adverse health outcomes. Date (Dec 2025) matches paper 431. Distinctive framing of 'got cell phones early' → health risk uniquely maps to paper 431's age-of-acquisition finding."
+  },
+  {
+    "article_id": "A0687",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.90,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Kids' smartphone use linked to health risks' (Politico, Dec 2025) paraphrases paper 431 (Barzilay 2026 Pediatrics). Date, topic (smartphone + health risks in children), and framing align with paper 431. L3: exposure (smartphone ownership/use) + outcome (health risks) + child population uniquely consistent with paper 431."
+  },
+  {
+    "article_id": "A0688",
+    "matched_paper_ids": ["431"],
+    "linkage_test": "L3",
+    "confidence": 0.97,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Smartphone ownership linked to depression, obesity, and sleep loss in early adolescents' (Times of India, Mar 2026) explicitly lists the three outcome domains from paper 431 (Barzilay 2026 Pediatrics: depression OR=1.31, obesity OR=1.40, insufficient sleep OR=1.62). The specific triad of depression + obesity + sleep loss in early adolescents from smartphone ownership is uniquely identifying of paper 431."
+  },
+  {
+    "article_id": "A0689",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage of out-of-corpus topic — religious/moral opinion piece about screen addiction dangers, no specific corpus paper referenced",
+    "evidence": "Word on Fire (Catholic media outlet) publishes opinion piece urging parents to address screen addiction. Provisional paper 521 (Must 2023 Frontiers in Pediatrics, autism + social screen time + obesity) has no thematic overlap. No author, journal, finding, or institution from any corpus paper is identifiable in title or outlet description. Generic screen-addiction advocacy."
+  },
+  {
+    "article_id": "A0690",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "out-of-corpus topic — policy commentary on teen social media ban in Sri Lanka, no specific corpus paper referenced",
+    "evidence": "The Morning (Sri Lanka) discusses pros and cons of a national social media ban for teens. Provisional paper 521 (Must 2023 Frontiers in Pediatrics) is unrelated. No author, finding, sample, or journal from any corpus paper appears. This is domestic policy commentary with no linkage to ABCD corpus."
+  },
+  {
+    "article_id": "A0691",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — video gaming and cognitive performance, the referenced study (Chaarani 2022 JAMA Network Open on video games and cognition) is not in the corpus",
+    "evidence": "The Hill (Oct 2022) covers an ABCD-based study finding video gaming may boost cognitive performance in children. This refers to Chaarani et al. 2022 JAMA Network Open, which is not in candidate_papers.json. Provisional paper 521 (Must 2023, autism/obesity) has no match. None of the 69 corpus papers study video gaming as the primary IV predicting cognitive outcomes in this framing."
+  },
+  {
+    "article_id": "A0692",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — marijuana/cannabis rescheduling policy and prenatal exposure, unrelated to smartphone/social media corpus",
+    "evidence": "WSJ opinion piece (Dec 2025) cites ABCD study for prenatal marijuana exposure findings. Cannabis policy/prenatal exposure is outside the smartphone-social media review corpus. No corpus paper is referenced or paraphrased."
+  },
+  {
+    "article_id": "A0693",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — video gaming and cognitive benefits (Chaarani 2022 JAMA Network Open), not in corpus",
+    "evidence": "CNN (2022) covers ABCD data (nearly 2,000 9- and 10-year-olds) linking video gaming to cognitive/memory benefits. This is Chaarani et al. 2022 JAMA Network Open, not in candidate_papers.json. No corpus paper covers video gaming as a standalone exposure for cognitive outcomes in this configuration."
+  },
+  {
+    "article_id": "A0694",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — sex/gender differences in child brain development, unrelated to smartphone/social media",
+    "evidence": "CNN (Jul 2024) covers ABCD study research on how biological sex shapes children's brain development. No smartphone or social media IV. No corpus paper covers sex/gender brain differences as the primary finding. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0695",
+    "matched_paper_ids": ["184"],
+    "linkage_test": "L4",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "CNN (Feb 2025) summary states 'Nagata and other researchers analyzed data from the Adolescent Brain Cognitive Development (ABCD) Study, including more than 10,000 adolescents aged 12 to 13.' Title 'Parents' phone habits increase exposure of mature content' describes parental screen/phone behaviors linked to child screen outcomes — uniquely consistent with paper 184 (Nagata 2025 Pediatric Research: media parenting practices and early adolescent screen use, ABCD, n>10,000). L4: Nagata + ABCD + parental phone/media behavior + adolescent screen use configuration maps to paper 184."
+  },
+  {
+    "article_id": "A0696",
+    "matched_paper_ids": ["184"],
+    "linkage_test": "L4",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "CNN (Jun 2024) summary states 'The researchers analyzed data from the national ABCD Study, involving over 10,000 families with 12- and 13-year-olds.' Title 'To curb kids' use of screens, parents may have to cut back' describes parental screen behavior influencing child screen use — consistent with paper 184 (Nagata 2025 Pediatric Research: associations between media parenting practices and early adolescent screen use). L4: Nagata + ABCD + 10,000+ families + parental media practices predicting child screen use uniquely maps to paper 184. Note: article date (Jun 2024) is before paper 184's 2025 publication, suggesting online-first/preprint coverage."
+  },
+  {
+    "article_id": "A0697",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — childhood sleep problems as predictor of suicide risk, sleep is the IV not a SM/phone variable",
+    "evidence": "CNN (Sep 2024) covers ABCD data (8,800+ children) on childhood sleep problems predicting suicide risk. The IV is sleep disturbance, not a smartphone or social media variable. This does not match any corpus paper where SM/phone is the qualifying IV. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0698",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic — sex/gender differences in child brain development (Spanish-language version of A0694 story)",
+    "evidence": "CNN Español (Jul 2024) is a Spanish-language version of the same sex/gender brain development story as A0694. ABCD coverage of sex/gender neurodevelopment — no smartphone or social media IV. Out-of-corpus topic."
+  },
+  {
+    "article_id": "A0699",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "general ABCD coverage — COVID-19 pandemic screen time doubling in teens, does not link to a specific corpus paper",
+    "evidence": "USA Today (Nov 2021) reports ABCD data showing teen screen time doubled during COVID-19. While papers 177 (Kiss 2023 Health Psychology) and 130 (Kiss 2022 J Adolesc Health) cover COVID + screen time in ABCD, this Nov 2021 article predates both publications by 1-2 years and likely covers an earlier descriptive report or press release not in the corpus. No author names, journal, or specific finding from any corpus paper is identifiable."
+  }
+]

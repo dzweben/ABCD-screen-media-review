@@ -1,0 +1,227 @@
+[
+  {
+    "article_id": "A0025",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (asthma and memory; no smartphone/social media exposure)",
+    "evidence": "Title 'Asthma Tied to Memory Difficulties in Kids' and snippet reference ABCD Study data but concern asthma as the primary exposure, which falls outside the smartphone/social media corpus."
+  },
+  {
+    "article_id": "A0026",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (stimulant medications and psychotic symptoms; no smartphone/social media exposure)",
+    "evidence": "Title 'No Causal Link Between Stimulants and Psychotic...' and snippet reference ABCD Study but concern ADHD stimulant treatment outcomes, not smartphone/social media."
+  },
+  {
+    "article_id": "A0027",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (racial differences in gray matter; no smartphone/social media exposure)",
+    "evidence": "Title 'Childhood Adversity Tied to Race-Related Differences in...' and snippet reference ABCD Study gray matter analyses, not smartphone/social media exposures."
+  },
+  {
+    "article_id": "A0028",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (ADHD neuroimaging/brain MRI; no smartphone/social media exposure)",
+    "evidence": "Title 'Brain MRI Finds Areas of Interest in Kids With ADHD' and snippet reference ABCD Study MRI data; primary focus is ADHD neuroimaging, not smartphone/social media."
+  },
+  {
+    "article_id": "A0029",
+    "matched_paper_ids": ["154"],
+    "linkage_test": "L4",
+    "confidence": 0.65,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Teens use cellphones for an hour a day at school, study finds' (pub. 01/10/2026) describes sensor-measured smartphone use in adolescents. Paper 154 (Alexander et al. 2025 Psychiatry Research) uses ABCD sensor-based smartphone data to measure daily app use and keyboard use. 'Cellphones + hour a day' + ABCD configuration uniquely consistent with the sensor-smartphone ABCD paper. Confidence <0.7 because no body text or DOI link available to confirm; flagged for human review."
+  },
+  {
+    "article_id": "A0030",
+    "matched_paper_ids": ["1"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Social media usage linked to lower cognitive performance in preteens' directly paraphrases the primary finding of paper 1 (Nagata et al. 2025 JAMA: 'Social Media Use Trajectories and Cognitive Performance in Adolescents'). Matches on: SM exposure, cognitive outcome, direction (lower performance), preteen/adolescent sample from ABCD."
+  },
+  {
+    "article_id": "A0031",
+    "matched_paper_ids": ["3"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Addictive screen use, not total screen time, linked to youth suicide risk' uniquely maps to paper 3 (Xiao et al. 2025 JAMA: 'Addictive Screen Use Trajectories and Suicidal Behaviors, Suicidal Ideation, and Mental Health in US Youths'). The contrast 'addictive vs. total screen time' is a distinctive analytic framing of paper 3, which uses SMAQ/MPIQ addictive use trajectories as the key IVs for suicidal behavior outcomes."
+  },
+  {
+    "article_id": "A0032",
+    "matched_paper_ids": ["8"],
+    "linkage_test": "L3",
+    "confidence": 0.82,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Problematic social media use predicts higher depressive symptoms in adolescents under 16' (pub. 03/2026) maps to paper 8 (Nagata et al. 2025 JAMA Network Open: 'Social Media Use and Depressive Symptoms During Early Adolescence'). Matches: SM use -> depressive symptoms, adolescents, ABCD. The 'under 16' age range is consistent with ABCD early adolescence cohort. Could also relate to paper 86 (Nagata 2026 AJPM, problematic screen use) but paper 8 is the most direct match given the depressive symptoms focus."
+  },
+  {
+    "article_id": "A0033",
+    "matched_paper_ids": ["8"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Social media use increases depression in preteens, not vice versa, researchers find' (pub. 05/2025) captures the directional (cross-lagged) finding of paper 8 (Nagata et al. 2025 JAMA Network Open). Paper 8 reports cross-lagged path SM use Y1->depression Y2 beta=0.07 and Y2->Y3 beta=0.09, with the reverse path (depression->SM) also modeled. 'Not vice versa' uniquely references the asymmetric cross-lagged result."
+  },
+  {
+    "article_id": "A0034",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Article predates assigned provisional paper; cannot confirm linkage to any corpus paper",
+    "evidence": "Published 01/18/2024; provisional paper 8 is from 2025 and cannot be covered. Title 'teen personalities, social media preferences and depressive symptoms' may relate to a different cohort or non-corpus ABCD paper; no L1-L4 criterion can be satisfied without body text confirming ABCD data and a specific corpus-paper finding."
+  },
+  {
+    "article_id": "A0035",
+    "matched_paper_ids": ["13"],
+    "linkage_test": "L3",
+    "confidence": 0.90,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Teen depression? Study finds clues in screen use and sleep quality' (pub. 06/23/2025) maps to paper 13 (Lima Santos et al. 2025 JAMA Pediatrics: 'Role of Sleep and White Matter in the Link Between Screen Time and Depression in Childhood and Early Adolescence'). Matches on: screen use + sleep quality as mediator/clue + depression outcome + teen/childhood sample + ABCD 2025 study. Published the same month as paper 13 (2025), consistent with press coverage timing."
+  },
+  {
+    "article_id": "A0036",
+    "matched_paper_ids": ["86", "95"],
+    "linkage_test": "multi",
+    "confidence": 0.80,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Addictive digital habits in early adolescence linked to mental health struggles, study finds' (pub. 02/12/2026). Primary match: paper 86 (Nagata et al. 2026 American Journal of Preventive Medicine: 'Prospective Associations Between Early Adolescent Problematic Screen Use, Mental Health, Sleep, and Substance Use') — addictive/problematic screen use -> mental health outcomes in early adolescence. Secondary match: paper 95 (He et al. 2025 CHB: 'Elevated loss sensitivity in the reward circuit in adolescents with video game but not social media addiction') — social media addiction + early adolescence. Both provisional IDs supported; paper 86 is primary L3 match."
+  },
+  {
+    "article_id": "A0037",
+    "matched_paper_ids": ["393"],
+    "linkage_test": "L3",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time tied to depression, anxiety in 9- and 10-year-olds' (pub. 10/07/2024). Paper 393 (Nagata et al. 2024 BMC Public Health: 'Screen time and mental health: a prospective analysis of the ABCD Study') reports screen time subtypes (including social media, texting, video chat) predicting depressive symptoms in ABCD youth aged 9-10. Published 2024, matches age range '9- and 10-year-olds' and dual anxiety/depression outcome. Note: paper_ids 393 and 394 share the same DOI (10.1186/s12889-024-20102-x), so 393 represents the paper."
+  },
+  {
+    "article_id": "A0038",
+    "matched_paper_ids": ["49"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time linked to bipolar and manic symptoms in U.S. preteens' (pub. 02/20/2025) uniquely maps to paper 49 (Nagata et al. 2025 Social Psychiatry and Psychiatric Epidemiology: 'Screen time and manic symptoms in early adolescents: prospective findings from the Adolescent Brain Cognitive Development Study'). Matches: screen time -> manic/bipolar symptoms, US preteens, ABCD prospective study. 'Manic symptoms' is a very specific outcome not covered by other corpus papers."
+  },
+  {
+    "article_id": "A0039",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (transgender youth screen time; no corpus paper on gender identity and screen time)",
+    "evidence": "Title 'Transgender preteens report 13 hours of daily screen time' (pub. 05/2024). No candidate paper in the 69-paper corpus addresses transgender or gender-minority identity as a primary variable in relation to screen time. The provisional paper IDs are all generic Nagata screen-time papers with no gender-identity focus. This is an out-of-corpus ABCD paper (likely Nagata et al. on gender identity and screen time)."
+  },
+  {
+    "article_id": "A0040",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "ABCD coverage of out-of-corpus topic (sexual minority youth screen time; no corpus paper on sexual orientation and screen time)",
+    "evidence": "Title 'Gay, lesbian, bisexual preteens spend 4 more hours on screens daily, finds study' (pub. 03/2023). No candidate paper in the 69-paper corpus addresses sexual minority youth screen time disparities as a primary finding. This is an out-of-corpus ABCD paper."
+  },
+  {
+    "article_id": "A0041",
+    "matched_paper_ids": ["160"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Excessive screen time linked to suicidal behaviors in US preteens' (pub. 02/27/2023). Paper 160 (Chu et al. 2023 Preventive Medicine: 'Screen time and suicidal behaviors among U.S. children 9-11 years old: a prospective cohort study') matches on all L3 dimensions: screen time (exposure), suicidal behaviors (outcome), US children/preteens, prospective cohort from ABCD, 2023 publication. Article publication date (02/2023) consistent with press coverage of paper 160."
+  },
+  {
+    "article_id": "A0042",
+    "matched_paper_ids": ["70"],
+    "linkage_test": "L3",
+    "confidence": 0.92,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Screen time and social media use linked to eating disorder symptoms in young adolescents' (pub. 09/10/2024). Paper 70 (Chu et al. 2024 Eating and Weight Disorders: 'Screen time, problematic screen use, and eating disorder symptoms among early adolescents: findings from the ABCD Study') matches: screen time + social media use -> eating disorder symptoms, young adolescents, ABCD 2024. The dual 'screen time and social media' framing corresponds to the paper's two exposure sets (total screen time hours and SMAQ/MPIQ)."
+  },
+  {
+    "article_id": "A0043",
+    "matched_paper_ids": ["435"],
+    "linkage_test": "L3",
+    "confidence": 0.75,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Higher screen time linked to ADHD symptoms and altered brain development' (pub. 11/21/2025). Paper 435 (Nivins et al. 2025 Pediatrics Open Science: 'Digital Media, Genetics, and Risk for ADHD Symptoms in Children: A Longitudinal Study') matches: digital media/screen time -> ADHD symptoms, longitudinal ABCD data, 2025. The 'altered brain development' phrase aligns with Nivins et al. tracking brain changes alongside ADHD risk. Confidence 0.75 (not certain) because provisional ID was 84 (Shou 2026 Acta Psychologica, putamen volume and cognition) which published after this article; paper 435 is a better temporal match but body text unavailable to confirm."
+  },
+  {
+    "article_id": "A0044",
+    "matched_paper_ids": [],
+    "linkage_test": "",
+    "confidence": 0.0,
+    "excluded": true,
+    "exclusion_reason": "Cannot confirm linkage to corpus paper; likely out-of-corpus topic or earlier non-corpus study",
+    "evidence": "Title 'Genetic risks of autism and ADHD may be related to more screen time in children' (pub. 10/26/2023). Provisional paper 84 (Shou 2026) is dated after this article and does not address autism/ADHD genetic risk. No corpus paper specifically addresses genetic risk scores for autism/ADHD as a moderator of screen time. This appears to be an out-of-corpus ABCD paper or a non-ABCD cohort study; L1-L4 cannot be satisfied without body text."
+  },
+  {
+    "article_id": "A0045",
+    "matched_paper_ids": ["106"],
+    "linkage_test": "L3",
+    "confidence": 0.93,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Excessive social media use tied to substance experimentation in US pre-teens' (pub. 11/16/2024). Paper 106 (Nagata et al. 2025 Drug and Alcohol Dependence: 'Prospective association between screen use modalities and substance use experimentation in early adolescents') matches: social media use -> substance experimentation, US pre-teens, ABCD prospective cohort. Social media AOR=1.20 for any substance experimentation is a key finding."
+  },
+  {
+    "article_id": "A0046",
+    "matched_paper_ids": ["139"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'New study reveals how screen time affects preteen sleep' (pub. 07/22/2024). Paper 139 (Nagata et al. 2024 Journal of Adolescent Health: 'Bedtime Screen Use Behaviors and Sleep Outcomes in Early Adolescents: A Prospective Cohort Study') matches: screen time (bedtime modalities) -> sleep outcomes, preteens, ABCD 2024. Published 07/2024 aligns with 2024 paper coverage. Paper 157 (Nagata 2023 Sleep Health) is also possible but the 2024 publication date favors paper 139."
+  },
+  {
+    "article_id": "A0047",
+    "matched_paper_ids": ["157"],
+    "linkage_test": "L3",
+    "confidence": 0.88,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Unlocking restful nights: Teen-friendly social media habits for optimal sleep' (pub. 05/24/2023). Paper 157 (Nagata et al. 2023 Sleep Health: 'Bedtime screen use behaviors and sleep outcomes: Findings from the ABCD Study') matches: bedtime social media habits -> sleep outcomes in teens, ABCD 2023. Published 05/2023 is consistent with coverage of a 2023 paper. Paper 139 (2024) is ruled out by publication date."
+  },
+  {
+    "article_id": "A0048",
+    "matched_paper_ids": ["175", "167"],
+    "linkage_test": "multi",
+    "confidence": 0.85,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Youth screen use can cause family conflict, exacerbate mental health problems' (pub. 10/13/2025). Primary match: paper 175 (Carvalho et al. 2025 Journal of Family Psychology: 'Youth electronic media use and family conflict: Bidirectional associations across early adolescence') — screen use -> family conflict, bidirectional. Secondary match: paper 167 (Carvalho et al. 2025 Development and Psychopathology: 'The role of smartphones in adolescent-parent discrepancy in reporting adolescents' internalizing problems') — smartphones + mental health problems + parent-youth dynamics. Both provisional IDs supported; paper 175 is primary for 'family conflict' L3 match."
+  },
+  {
+    "article_id": "A0049",
+    "matched_paper_ids": ["302"],
+    "linkage_test": "L3",
+    "confidence": 0.95,
+    "excluded": false,
+    "exclusion_reason": "",
+    "evidence": "Title 'Excessive screen time linked to obesity in US preteen' (pub. 06/28/2021). Paper 302 (Nagata et al. 2021 Pediatric Obesity: 'Contemporary screen time usage among children 9-10-years-old is associated with higher body mass index percentile at 1-year follow-up: A prospective cohort study') matches precisely: screen time -> BMI/obesity, US preteen/9-10-year-olds, prospective ABCD cohort, 2021 publication date."
+  }
+]

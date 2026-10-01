@@ -156,6 +156,12 @@ def process(paper):
                 est["derived_d"] = None
                 est["derived_d_method"] = f"conversion failed: {e}"
                 issues.append(f"M{mi+1} {est.get('iv')}x{est.get('dv')}: {e}")
+    # Link any supplement files saved next to the PDF as <doi>_supplement*.*
+    stem = (paper.get("doi") or "").strip().replace("/", "_")
+    pdf_dir = os.path.join(REPO, "docs", "pdfs")
+    paper["supplements"] = sorted(
+        "pdfs/" + f for f in os.listdir(pdf_dir) if stem and f.startswith(stem + "_supplement")
+    )
     paper.setdefault("extraction_status", "ai_draft")
     paper.setdefault("lead_coder", "danny")
     paper.setdefault("contributors", ["danny"])

@@ -2,7 +2,9 @@
 
 A PRISMA 2020 systematic review of publications using U.S. Adolescent Brain Cognitive Development (ABCD) Study data that examine associations involving youth **smartphone** or **social media** use.
 
-**➡ [FINAL-PAPERS.md](FINAL-PAPERS.md) — the 69 papers in the final synthesis, with DOI links and extraction status.**
+**➡ [FINAL-PAPERS.md](FINAL-PAPERS.md) — the 69 papers in the final synthesis, with DOI links and Stage 3 status.**
+
+**➡ Review site: https://dzweben.github.io/ABCD-screen-media-review/** (password `ABCD`). Each paper has its extracted models, excluded models, a Cohen's d results matrix, and links to the PDF and supplements. Coders pick their name, then agree, strike through, add notes, or edit in place. Everything is attributed and saved live to Firestore.
 
 ---
 
@@ -48,8 +50,26 @@ A PRISMA 2020 systematic review of publications using U.S. Adolescent Brain Cogn
     out/                           Generated snippets pasted into 3L-models.html
     README.md                      Pipeline docs, formulas, references
 
+  agent-extraction/              First-pass extraction harness (one agent per
+                                 PDF), work list, agent summaries
+
+docs/                Review website (GitHub Pages) + Stage 3 data
+  index.html, app.js, style.css  Single-page editor (password gate, coder
+                                 identity, agree / strike / notes)
+  storage.js, firebase-config.js Firestore adapter (project abcd-ssm)
+  pdfs/                          All 69 INCLUDE PDFs (+ supplements)
+  data/drafts/                   Per-paper extraction drafts
+  data/ingested/                 Drafts + computed Cohen's d per estimate
+  data/firestore-export.json     Snapshot of the live site (incl. coder edits)
+  scripts/                       build_seed.py, ingest_drafts.py,
+                                 upload_to_firestore.mjs, export_firestore.mjs
+
+03-news-search/      News-coverage search (SerpAPI) and N1 linkage screening
+
+.firebase/           Firestore security rules (deploy: firebase deploy --only firestore:rules)
+
 FINAL-PAPERS.md                  The 69 included papers, DOI-linked, with
-                                 extraction-status checkmarks
+                                 Stage 3 status
 METHODS.md                       Overall methods overview
 README.md                        This file
 ```

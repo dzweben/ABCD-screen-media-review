@@ -15,12 +15,12 @@
  "primary_models": [
   {
    "model_id": "M1",
-   "name": "Weighted multivariable linear regression of year-2 BMI and waist circumference on baseline socializing screen time (texting + video chat + social media), adjusted for baseline BMI/WC and sociodemographics",
-   "location_in_paper": "Supplementary Tables S6 (BMI) and S7 (WC), referenced in Results p. 6 (\"Supplementary Tables S6 and S7 show the associations of specific screen time modalities with BMI and WC, with results consistent with the main findings\"); subtype analysis described in Statistical Analysis p. 4. The supplementary appendix is NOT bundled in the PDF on file (author manuscript, 20 pages), so no estimates could be copied.",
-   "design": "Prospective longitudinal cohort. Screen time (including the socializing subtype) is measured once at ABCD baseline (2016-2018); BMI and WC are measured at baseline and at the year-2 follow-up. The DV is a single follow-up value (year-2 BMI or year-2 WC), with the baseline value of the same anthropometric measure entered as a covariate, so the coefficient reflects association with year-2 adiposity net of baseline adiposity. No repeated measures. Interaction terms between screen time and sleep were tested and reported as nonsignificant (p. 4); whether the subtype models were also sex-stratified cannot be determined without the supplement.",
-   "sample": "ABCD Study (release not stated in the manuscript). N = 7,445 participants with complete baseline screen time, sleep disturbance and sleep duration data and year-2 BMI and WC (COVID-19 reduced year-2 anthropometric collection; Supplementary Table S1 compares included and excluded participants). Implausible anthropometric values excluded (BMI z <= -4 or >= 8 SD; WC z < -4 or > 4 SD). Remaining missing covariate data handled by multiple imputation by chained equations (Supplementary Data S4). Age 9-10 at baseline, mean 9.9 (SD 0.6); 3,511 females (47.3%) and 3,934 males. Weighted race/ethnicity: 5.9% Asian, 16.6% Black, 16.2% Latino/Hispanic, 3.5% Native American, 56.5% White, 1.3% Other. 57.0% household income < $75,000; 85.3% parent with college education or more (Table 1, p. 17).",
-   "iv": "Baseline socializing screen time, one of three screen time subtypes (TV shows/movies, video games, socializing) derived from the ABCD Youth Screen Time Survey (p. 3). Socializing is defined by the authors as texting, video chatting, and social media, so it is built exclusively from phone/SM items and qualifies under FT-IC2. Total screen time was a weighted average of typical weekday and weekend day hours; the manuscript does not state whether the socializing subtype was entered as continuous hours/day or categorized, and no descriptive statistics for socializing time are given in the main text (Table 1 reports only total daily screen time, mean 3.7 h, SD 2.9). Units and coding must be confirmed from Supplementary Tables S6/S7.",
-   "dv": "Two continuous outcomes at the year-2 follow-up, modeled separately: (1) BMI (kg/m^2), computed from the mean of three measured weights and heights; year-2 mean 20.6 (SD 4.9); (2) waist circumference (units not stated in the manuscript; presumably inches per the ABCD protocol), mean of two measurements; year-2 mean 28.8 (SD 4.9) (Table 1, p. 17).",
+   "name": "Weighted multivariable linear regression of year-2 BMI percentile and WC percentile on baseline socializing screen time (texting + video chat + social media), adjusted for baseline BMI/WC percentile, puberty and sociodemographics, overall and stratified by sex",
+   "location_in_paper": "Supplementary Table 6 (BMI) and Supplementary Table 7 (WC) in the separate supplementary appendix (docs/pdfs/10.1089_chi.2025.0022_supplement.docx; not bundled in the 20-page author-manuscript PDF). Subtype analysis described in Statistical Analysis (p. 4); referred to in Results (p. 6) as 'consistent with the main findings'. The Discussion (p. 6) singles out TV/movies and video games as 'particularly associated' and does not discuss socializing.",
+   "design": "Prospective longitudinal cohort. Socializing screen time is measured once at ABCD baseline (2016-2018, ages 9-10). The outcome is a single follow-up value at the year-2 visit (BMI percentile in one model, WC percentile in the other), with the baseline percentile of the same measure entered as a covariate, so the coefficient is the association with year-2 adiposity net of baseline adiposity. No repeated measures. Screen time x sleep interaction terms were tested for the main total-screen-time models and reported as nonsignificant (p. 4); no interaction tests are reported for the subtype models. The subtype models are reported for the whole sample and separately for females and males.",
+   "sample": "ABCD Study (data release not stated). N = 7,445 participants with complete baseline screen time, sleep disturbance and sleep duration and year-2 BMI and WC (Methods p. 3; Table 1 p. 17); Supplementary Table 1 gives the included group as N = 7,455 and the excluded group as N = 4,516. COVID-19 reduced year-2 anthropometric collection. Implausible anthropometrics excluded (BMI z <= -4 or >= 8 SD; WC z < -4 or > 4 SD). Missing covariates imputed (puberty 16.3%, income 7.6%, baseline BMI percentile 0.4%, parent education 0.2%, physical activity 0.1%; Supplementary S4). 3,511 females (47.3%) and 3,934 males; mean age 9.9 (SD 0.6). Weighted race/ethnicity: 5.9% Asian, 16.6% Black, 16.2% Latino/Hispanic, 3.5% Native American, 56.5% White, 1.3% Other; 57.0% household income < $75,000; 85.3% parent with college education or more (Table 1, p. 17). The sex-stratified columns use the female (n = 3,511) and male (n = 3,934) subsamples.",
+   "iv": "Baseline socializing screen time, one of three screen-time types the authors derived from the ABCD Youth Screen Time Survey (TV shows/movies, video games, socializing). Socializing is defined as texting, video chatting (e.g., Skype, FaceTime) and social media (e.g., Facebook, Instagram, Twitter) (p. 3; Supplementary S2), so it is built only from phone/SM items and qualifies under FT-IC2 as a phone/SM-exclusive composite. Daily screen time was computed as [(weekday x 5) + (weekend x 2)] / 7 hours (Supplementary S2). The paper does not state the coding of the subtype explicitly; given that total screen time was entered as continuous hours/day, socializing is most likely continuous hours/day, so B would be per 1 hour/day. No mean or SD for socializing time is reported anywhere in the paper or supplement (Table 1 gives only total daily screen time, 3.7 h, SD 2.9).",
+   "dv": "Two continuous year-2 outcomes, modeled separately: (1) BMI percentile, computed from the mean of three measured weights and heights against CDC age- and sex-specific references; (2) waist circumference percentile, the mean of two WC measurements (inches, nearest 0.1) converted to percentiles using NHANES III reference data via the R package childsds (Supplementary S2). The footnotes of Supplementary Tables 6 and 7 state that the dependent variable is BMI percentile and WC percentile, and Supplementary S3 says baseline BMI and WC percentiles were the adjustment covariates. The main text and Table 1 instead describe BMI (kg/m^2; year-2 mean 20.6, SD 4.9) and WC (year-2 mean 28.8, SD 4.9), but those raw-unit descriptives do not appear to be the modeled scale. Year-2 percentile SDs are not reported; baseline percentile SDs for the included sample are BMI percentile 61.8 (SD 30.3) and WC percentile 61.1 (SD 29.0) (Supplementary Table 1).",
    "covariates": [
     {
      "name": "Age",
@@ -28,7 +28,7 @@
     },
     {
      "name": "Sex",
-     "detail": "Male/female (overall models)"
+     "detail": "Male/female; in the overall model only (dropped in the sex-stratified models)"
     },
     {
      "name": "Race and ethnicity",
@@ -36,7 +36,7 @@
     },
     {
      "name": "Household income",
-     "detail": "Seven brackets from < $25,000 to >= $200,000"
+     "detail": "Six brackets: < $25,000; $25,000-$49,999; $50,000-$74,999; $75,000-$99,999; $100,000-$199,999; >= $200,000"
     },
     {
      "name": "Parent education",
@@ -44,130 +44,198 @@
     },
     {
      "name": "Physical activity",
-     "detail": "Number of days with >= 1 hour of physical activity in the preceding week"
+     "detail": "Number of days in the past week with >= 1 hour (60 min) of physical activity"
     },
     {
      "name": "Study site",
-     "detail": "Entered as a covariate (no random-effects structure described)"
+     "detail": "Listed as a covariate; sites also used as clusters in the survey design (Supplementary S5)"
     },
     {
-     "name": "Baseline BMI or baseline WC",
-     "detail": "Baseline value of the outcome being modeled"
+     "name": "Baseline BMI percentile or baseline WC percentile",
+     "detail": "Baseline value of the outcome being modeled (Supplementary Table 6 footnote: baseline BMI percentile; Supplementary Table 7 footnote: baseline WC)"
     },
     {
      "name": "Pubertal status",
-     "detail": "Self-reported: prepubertal, early, mid, late, post-pubertal (listed in Table 2/3 footnotes and Methods p. 4; omitted from the Figure 1-4 captions)"
-    },
-    {
-     "name": "Other screen time subtypes",
-     "detail": "Unknown whether TV/movies and video games were entered simultaneously with socializing or modeled one subtype at a time; requires Supplementary Tables S6/S7"
+     "detail": "Self-reported Pubertal Development Scale category: prepubertal, early, mid, late, post-pubertal"
     }
    ],
-   "equation": "Y2_outcome[i] = b0 + b1*socializing_screen_time[i] + b2*baseline_outcome[i] + b3*age + b4*sex + b5..b9*race_ethnicity + b10..b15*income + b16*parent_ed + b17*physical_activity + b18..*study_site + b..*pubertal_status + e[i], where Y2_outcome is year-2 BMI or year-2 WC (separate models). Whether other screen subtypes and sleep variables also enter is not stated for the subtype models.",
-   "estimation": "Weighted multivariable linear regression in Stata 18, with American Community Survey-derived sampling weights to account for complex design and nonresponse (Supplementary Data S5). Missing data imputed with multiple imputation by chained equations. Regression assumptions reported as tested and met. alpha = 0.05; no multiple-comparison correction reported. Main models also stratified by sex; whether S6/S7 present sex-stratified subtype estimates is unknown. Sensitivity analyses using complete-case data (Supplementary Tables S8-S13) reported as yielding comparable findings; it is not stated whether these include subtype models.",
+   "equation": "Y2_pct[i] = b0 + b1*socializing_hours[i] + b2*baseline_pct[i] + b3*age + b4*sex + b5..b9*race_ethnicity + b10..b14*income + b15*parent_ed + b16*physical_activity + b17..*study_site + b..*pubertal_status + e[i], where Y2_pct is year-2 BMI percentile or year-2 WC percentile (separate models) and b1 is the focal estimate. Sex term omitted in the female and male models. The supplement does not say whether TV/movies and video games (or the sleep variables, which the S6/S7 footnote mentions) enter the same model as socializing.",
+   "estimation": "Weighted multivariable linear regression in Stata 18, using American Community Survey-based propensity weights and study sites as clusters in the survey procedures (Supplementary S1, S5). Missing covariate data handled by multiple imputation by chained equations, 10 imputed datasets pooled (Supplementary S4). Regression assumptions reported as tested and met. alpha = 0.05; no multiple-comparison correction. Sex-stratified estimates reported alongside the overall model; no formal sex x socializing interaction test reported. Complete-case sensitivity analyses (Supplementary Tables 8-13) cover total screen time and the joint categories only, not the subtypes.",
    "native_metric": "B",
    "iv_axis": [
     {
      "id": "socializing",
      "label": "Socializing screen time (texting + video chat + social media)",
-     "meta": "Baseline; units/coding not stated in main text",
+     "meta": "Baseline, presumably hours/day; no M/SD reported",
      "sd_iv": null
     }
    ],
    "dv_axis": [
     {
-     "id": "bmi_y2",
-     "label": "BMI at year 2",
-     "sd_dv": 4.9,
+     "id": "bmi_all",
+     "label": "Year-2 BMI percentile, all",
+     "sd_dv": 30.3,
      "p0": null
     },
     {
-     "id": "wc_y2",
-     "label": "Waist circumference at year 2",
-     "sd_dv": 4.9,
+     "id": "bmi_female",
+     "label": "Year-2 BMI percentile, females",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "bmi_male",
+     "label": "Year-2 BMI percentile, males",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "wc_all",
+     "label": "Year-2 WC percentile, all",
+     "sd_dv": 29.0,
+     "p0": null
+    },
+    {
+     "id": "wc_female",
+     "label": "Year-2 WC percentile, females",
+     "sd_dv": null,
+     "p0": null
+    },
+    {
+     "id": "wc_male",
+     "label": "Year-2 WC percentile, males",
+     "sd_dv": null,
      "p0": null
     }
    ],
    "estimates": [
     {
      "iv": "socializing",
-     "dv": "bmi_y2",
-     "B": null,
-     "B_lo": null,
-     "B_hi": null,
-     "p": null,
-     "p_label": null,
-     "sig": null,
-     "location": "Supplementary Table S6 (not available in PDF on file)",
-     "note": "Estimate exists in the supplementary appendix but could not be extracted; the appendix (NIHMS2098192-supplement-supplementary_appendix.docx on PMC12320422) is not in the repo PDF and the PMC download is behind a bot-check page. The main text only says subtype results were 'consistent with the main findings' and the Discussion (p. 6) singles out TV/movies and video games as 'particularly associated', implying socializing was weaker or null.",
+     "dv": "bmi_all",
+     "B": 0.31,
+     "B_lo": -0.02,
+     "B_hi": 0.65,
+     "p": 0.065,
+     "p_label": "0.065",
+     "sig": false,
+     "location": "Supplementary Table 6, Socializing row, All column",
      "derived_d": null,
-     "derived_d_method": "B missing"
+     "derived_d_method": "SD_IV or SD_DV not reported"
     },
     {
      "iv": "socializing",
-     "dv": "wc_y2",
-     "B": null,
-     "B_lo": null,
-     "B_hi": null,
-     "p": null,
-     "p_label": null,
-     "sig": null,
-     "location": "Supplementary Table S7 (not available in PDF on file)",
-     "note": "Same as BMI cell: value only in the unavailable supplementary appendix.",
+     "dv": "bmi_female",
+     "B": -0.15,
+     "B_lo": -0.62,
+     "B_hi": 0.32,
+     "p": 0.53,
+     "p_label": "0.530",
+     "sig": false,
+     "location": "Supplementary Table 6, Socializing row, Female column",
      "derived_d": null,
-     "derived_d_method": "B missing"
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "socializing",
+     "dv": "bmi_male",
+     "B": 0.77,
+     "B_lo": 0.3,
+     "B_hi": 1.25,
+     "p": 0.001,
+     "p_label": "0.001",
+     "sig": true,
+     "location": "Supplementary Table 6, Socializing row, Male column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "socializing",
+     "dv": "wc_all",
+     "B": 0.19,
+     "B_lo": -0.26,
+     "B_hi": 0.63,
+     "p": 0.412,
+     "p_label": "0.412",
+     "sig": false,
+     "location": "Supplementary Table 7, Socializing row, All column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "socializing",
+     "dv": "wc_female",
+     "B": -0.17,
+     "B_lo": -0.8,
+     "B_hi": 0.47,
+     "p": 0.608,
+     "p_label": "0.608",
+     "sig": false,
+     "location": "Supplementary Table 7, Socializing row, Female column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
+    },
+    {
+     "iv": "socializing",
+     "dv": "wc_male",
+     "B": 0.5,
+     "B_lo": -0.12,
+     "B_hi": 1.13,
+     "p": 0.113,
+     "p_label": "0.113",
+     "sig": false,
+     "location": "Supplementary Table 7, Socializing row, Male column",
+     "derived_d": null,
+     "derived_d_method": "SD_IV or SD_DV not reported"
     }
    ]
   }
  ],
  "excluded_models": [
   {
-   "model": "Total screen time (continuous and low/medium/high categories) on year-2 BMI and WC",
+   "model": "Total screen time (continuous and low/medium/high categories) on year-2 BMI and WC, overall and by sex",
    "location": "Tables 2 and 3 (pp. 19-20); Results p. 5; Abstract",
-   "why": "Headline IV is total recreational screen time bundling TV, video games, and socializing. Mixed composite including non-phone/SM items; fails FT-IC2 step 2. The phone/SM-isolated breakout is the socializing subtype (M1)."
+   "why": "Total recreational screen time bundles TV/movies, videos, video games and socializing. Mixed composite with non-phone/SM items; fails FT-IC2 step 2. The phone/SM-isolated breakout is the socializing subtype (M1)."
   },
   {
    "model": "Sleep disturbance (SDSC >= 39) and sleep duration (< 9 h) on BMI and WC",
-   "location": "Tables 2 and 3 (pp. 19-20)",
-   "why": "Sleep IVs, no phone/SM variable."
+   "location": "Tables 2 and 3 (pp. 19-20); Results p. 5",
+   "why": "Sleep IVs; no phone/SM variable."
   },
   {
-   "model": "Joint screen time x sleep disturbance categories on BMI and WC",
-   "location": "Figures 1 and 2 (pp. 13-14); Results p. 5; Supplementary Tables S2-S5",
+   "model": "Joint total screen time x sleep disturbance categories on BMI and WC, overall and by sex",
+   "location": "Figures 1 and 2 (pp. 13-14); Results p. 5; Supplementary Tables 2 and 3",
    "why": "Joint categories are built from total screen time (mixed composite) crossed with sleep disturbance; no phone/SM-specific component."
   },
   {
-   "model": "Joint screen time x sleep duration categories on BMI and WC",
-   "location": "Figures 3 and 4 (pp. 15-16); Results pp. 5-6; Supplementary Tables S2-S5",
-   "why": "Same as above, total screen time crossed with sleep duration."
-  },
-  {
-   "model": "Sex-stratified total screen time and sleep models",
-   "location": "Tables 2 and 3 Female/Male columns; Figures 1-4",
-   "why": "Stratified estimates are for total screen time and sleep only, not for the socializing subtype."
+   "model": "Joint total screen time x sleep duration categories on BMI and WC, overall and by sex",
+   "location": "Figures 3 and 4 (pp. 15-16); Results pp. 5-6; Supplementary Tables 4 and 5",
+   "why": "Total screen time crossed with sleep duration; no phone/SM-specific component."
   },
   {
    "model": "TV shows/movies and video games subtype estimates",
-   "location": "Supplementary Tables S6 and S7",
+   "location": "Supplementary Tables 6 and 7, TV shows/movies and Video games rows",
    "why": "Non-phone/SM modalities; fail FT-IC2."
   },
   {
-   "model": "Screen time x sleep interaction terms",
+   "model": "Screen time x sleep disturbance and screen time x sleep duration interaction terms",
    "location": "Statistical Analysis p. 4; Discussion p. 6",
-   "why": "Reported only as nonsignificant; no coefficients printed, and they involve total screen time, not a phone/SM variable."
+   "why": "Reported only as nonsignificant with no coefficients, and they involve total screen time, not a phone/SM variable."
   },
   {
    "model": "Complete-case sensitivity analyses",
-   "location": "Supplementary Tables S8-S13; Results p. 6",
-   "why": "Described only as 'comparable findings'; supplement unavailable and it is unknown whether any of these tables include the socializing subtype. Sensitivity models, not the specification the authors anchor on."
+   "location": "Supplementary Tables 8-13; Results p. 6",
+   "why": "Cover total screen time, sleep variables and the joint categories only; no socializing (phone/SM) estimate is reported in the complete-case tables."
   }
  ],
  "d_transformation": {
-  "native_metric": "B (unstandardized linear regression coefficient), assumed from the main-table format; to be confirmed in Supplementary Tables S6/S7",
-  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1). If socializing is instead categorized (e.g., high vs. low group), d = B / SD_DV (adjusted group difference over pooled SD) would apply.",
-  "contrast_type": "Unknown until the supplement is read: per 1 hour/day of socializing screen time if continuous, or category vs. reference if categorized.",
+  "native_metric": "B (unstandardized linear regression coefficient)",
+  "conversion_formula": "beta_std = B * SD_IV / SD_DV; d = 2 * beta_std / sqrt(1 - beta_std^2) (Borenstein et al. 2009 eq 7.1)",
+  "contrast_type": "Per 1 unit of baseline socializing screen time, presumably 1 hour/day (coding of the subtype not stated explicitly)",
   "transformable": false,
-  "notes": "Not transformable with the material on file because the socializing estimates themselves (Supplementary Tables S6/S7) are not in the PDF. SD_DV is available from Table 1 (p. 17): year-2 BMI SD 4.9, year-2 WC SD 4.9 (weighted analytic sample, n = 7,445). SD_IV for socializing hours is not reported in the main text; it may appear in the supplement. Once the supplementary appendix is obtained, this paper should become transformable if B, its CI, and an SD for socializing time are reported."
+  "notes": "Not convertible because SD_IV is missing: neither the main text nor the supplement reports a mean or SD for socializing screen time (Table 1, p. 17 gives only total daily screen time, 3.7 h, SD 2.9, which cannot stand in for the subtype). On SD_DV: the Supplementary Table 6/7 footnotes and Supplementary S2/S3 indicate the modeled outcomes are BMI percentile and WC percentile, not raw BMI (kg/m^2) or WC. I therefore did not use the Table 1 year-2 raw-unit SDs (BMI 4.9, WC 4.9). Year-2 percentile SDs are not reported; as the closest available values I entered the baseline percentile SDs for the included sample from Supplementary Table 1 (BMI percentile SD 30.3; WC percentile SD 29.0) for the overall columns only, and left the sex-specific SDs null. If an SD for socializing hours becomes available (e.g., from ABCD baseline data for this sample), the overall cells could be converted with these proxy SD_DVs."
  },
- "extraction_flags": "The PDF on file is the right paper: the PMC author manuscript of Al-Shoaibi et al. 2025, Child Obesity, 20 pages. It does not include the supplementary appendix. The only phone/SM analysis is the \"socializing\" screen-time subtype (texting + video chat + social media) regressed on year-2 BMI and WC, and its numbers are only in Supplementary Tables S6 and S7. I could not get that appendix. Europe PMC says the article is not open access. The PMC file (PMC12320422, NIHMS2098192-supplement-supplementary_appendix.docx) is behind a proof-of-work bot-check page, and I did not try to get past it. So the M1 card has the full model spec taken from the main text (Methods p. 4, Table 2/3 footnotes, Table 1), but both estimate cells (BMI, WC) are null placeholders. n_estimates is 0. A human needs to download the appendix by hand, add it to the repo, and fill in B/CI/p for socializing. They should also check: (1) whether socializing was continuous hours/day or categorized; (2) whether the three subtypes were entered together or in separate models; (3) whether S6/S7 are sex-stratified (if so, add Female/Male cells or columns); (4) whether an SD for socializing time is reported, which is needed for d; (5) whether the S8-S13 complete-case tables include the subtypes. SD_DV is taken from Table 1: year-2 BMI SD 4.9, year-2 WC SD 4.9. WC units are not stated in the manuscript. The Discussion says TV/movies and video games were \"particularly associated\", which suggests socializing was weaker or null. Covariate lists differ a little: Table 2/3 footnotes include pubertal status, but the Figure 1-4 captions leave it out. The ABCD data release is not stated. The draft overwrote an earlier paper_215.json in docs/data/drafts."
+ "extraction_flags": "Estimates come from the supplementary appendix (docs/pdfs/10.1089_chi.2025.0022_supplement.docx, Supplementary Tables 6 and 7), not from the 20-page author-manuscript PDF. The only phone/SM analysis is the socializing subtype (texting + video chat + social media). Things to verify: (1) Outcome scale. The S6/S7 footnotes and Supplementary S2/S3 say BMI percentile and WC percentile, while the main text and Table 1 describe BMI and WC in raw units. I treated the DV as percentile. (2) The IV coding (hours/day) is not stated explicitly. (3) The paper does not say whether socializing was modeled alone or together with TV/movies and video games. The S6/S7 footnote also mentions the sleep variables as IVs, which may be copied boilerplate. (4) No SD for socializing time, so d cannot be computed. (5) Supplement error: the Video games row in Supplementary Table 7 (WC) is identical to the Video games row in Supplementary Table 6 (BMI), which looks like a copy-paste error. It does not affect the socializing rows. (6) N is 7,445 in the main text but 7,455 in Supplementary Table 1. (7) The authors do not interpret socializing directly. They say the subtype results were 'consistent with the main findings' and highlight TV/movies and video games.",
+ "supplements": [
+  "pdfs/10.1089_chi.2025.0022_supplement.docx"
+ ]
 }
