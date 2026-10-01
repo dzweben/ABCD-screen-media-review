@@ -117,6 +117,62 @@ def spec_for(est, metric, iv_meta, dv_meta):
     return None, f"no Cohen's d conversion for '{m}' (flagged for later review level)"
 
 
+CHINN = math.sqrt(3) / math.pi
+
+
+def g(x, n=4):
+    """Compact number formatting for worked calculations."""
+    return f"{x:.{n}g}" if abs(x) < 1e-3 and x != 0 else f"{round(x, n):g}"
+
+
+def sq(x):
+    return f"({g(x)})²" if x < 0 else f"{g(x)}²"
+
+
+def worked(spec, metric, est):
+    """Return (formula, worked calculation) strings for one conversion."""
+    k = spec["kind"]
+    if k == "d_passthrough":
+        if metric == "d":
+            return "d reported by the paper", f"d = {g(spec['d'])} (no conversion)"
+        return ("d = β (β is a Y-standardized mean difference for a binary IV)",
+                f"d = β = {g(spec['d'])}")
+    if k == "linear_continuous":
+        B, a, b = spec["B"], spec["sd_iv"], spec["sd_dv"]
+        beta = B * a / b
+        d = 2 * beta / math.sqrt(1 - beta ** 2)
+        return ("β_std = B × SD_IV / SD_DV;  d = 2β_std / √(1 − β_std²)",
+                f"β_std = {g(B)} × {g(a)} / {g(b)} = {g(beta)};  d = 2({g(beta)}) / √(1 − {sq(beta)}) = {g(d)}")
+    if k in ("standardized_beta", "r"):
+        r = spec["beta"] if k == "standardized_beta" else spec["r"]
+        d = 2 * r / math.sqrt(1 - r ** 2)
+        sym = "β" if k == "standardized_beta" else "r"
+        pre = ""
+        if metric == "other:standardized_beta_x100":
+            pre = f"β = {g(est.get('value'))} / 100 = {g(r)};  "
+        return (f"d = 2{sym} / √(1 − {sym}²)" + ("  (β reported ×100 by the paper)" if pre else ""),
+                pre + f"d = 2({g(r)}) / √(1 − {sq(r)}) = {g(d)}")
+    if k in ("or", "irr"):
+        OR = spec["OR"] if k == "or" else spec["IRR"]
+        d = math.log(OR) * CHINN
+        name = "IRR (treated as OR)" if k == "irr" else "OR"
+        pre = ""
+        if metric in ("other:logit_B", "other:ordered_logit_coefficient"):
+            pre = f"OR = e^b = e^{g(est.get('value'))} = {g(OR)};  "
+            return ("OR = e^b;  d = ln(OR) × √3/π  (Chinn 2000)",
+                    pre + f"d = {g(est.get('value'))} × 0.5513 = {g(d)}")
+        return (f"d = ln({name}) × √3/π  (Chinn 2000)",
+                f"d = ln({g(OR)}) × 0.5513 = {g(math.log(OR))} × 0.5513 = {g(d)}")
+    if k == "rr":
+        RR, p0 = spec["RR"], spec["p0"]
+        OR = RR * (1 - p0) / (1 - RR * p0)
+        d = math.log(OR) * CHINN
+        lab = "PR" if metric == "other:PR" else "RR"
+        return (f"OR = {lab}(1 − p0) / (1 − {lab}·p0);  d = ln(OR) × √3/π  (Chinn 2000)",
+                f"OR = {g(RR)}(1 − {g(p0)}) / (1 − {g(RR)}×{g(p0)}) = {g(OR)};  d = ln({g(OR)}) × 0.5513 = {g(d)}")
+    return "", ""
+
+
 def process(paper):
     issues = []
     for k in REQUIRED_TOP:
@@ -141,12 +197,15 @@ def process(paper):
                 spec, why = spec_for(est, model.get("native_metric"), ivs.get(est.get("iv"), {}), dvs.get(est.get("dv"), {}))
             for k in ("d", "d_lo", "d_hi") if model.get("native_metric") != "d" else ():
                 est.pop("derived_" + k, None)
+            est.pop("derived_d_formula", None)
+            est.pop("derived_d_calc", None)
             if spec is None:
                 est["derived_d"] = None
                 est["derived_d_method"] = why
                 continue
             try:
                 out = to_d(spec)
+                est["derived_d_formula"], est["derived_d_calc"] = worked(spec, model.get("native_metric"), est)
                 est["derived_d"] = round(out["d"], 4)
                 est["derived_d_lo"] = round(out["d_lo"], 4) if "d_lo" in out else None
                 est["derived_d_hi"] = round(out["d_hi"], 4) if "d_hi" in out else None

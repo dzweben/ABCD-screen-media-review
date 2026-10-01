@@ -94,6 +94,8 @@
      "sig": true,
      "location": "Table 2, row 1, Adjusted ARR (95% CI) column (p. 3)",
      "note": "Adjusted risk ratio. Unadjusted RR 1.15 (1.07-1.25), p <0.001 (Table 2, excluded as transparency artifact). Direction: frequent COVID social media checking associated with higher likelihood of always masking. p0 = 0.623 is the weighted marginal rate of 'all the time last week' in the whole sample (Table 1), not the rate in the unexposed group.",
+     "derived_d_formula": "OR = RR(1 \u2212 p0) / (1 \u2212 RR\u00b7p0);  d = ln(OR) \u00d7 \u221a3/\u03c0  (Chinn 2000)",
+     "derived_d_calc": "OR = 1.09(1 \u2212 0.623) / (1 \u2212 1.09\u00d70.623) = 1.2804;  d = ln(1.2804) \u00d7 0.5513 = 0.1363",
      "derived_d": 0.1363,
      "derived_d_lo": 0.0,
      "derived_d_hi": 0.3037,

@@ -621,3 +621,20 @@ table.est-matrix .dline.none { color: var(--muted); font-weight: 400; font-style
 #paper-view textarea { overflow: hidden; resize: none; min-height: 30px; line-height: 1.5; }
 .ex-table textarea { min-height: 26px; }
 .model-name { resize: none; overflow: hidden; font-family: inherit; line-height: 1.35; }
+
+/* ── computed Cohen's d table ───────────────────────── */
+.d-computed { margin-top: 22px; padding-top: 16px; border-top: 2px solid var(--line); }
+.dc-title { margin: 0 0 4px; font-size: 14px; color: #7a4a99; text-transform: uppercase; letter-spacing: .05em; }
+.dc-note { color: var(--muted); font-size: 12px; margin: 0 0 14px; }
+.dc-model { margin-bottom: 18px; }
+.dc-head { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.dc-formula { display: inline-block; background: #f3ecf8; color: #5a2d7a; font-family: ui-monospace, "SF Mono", monospace; font-size: 12px; padding: 4px 10px; border-radius: 4px; margin: 2px 6px 6px 0; }
+.dc-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+.dc-table th { text-align: left; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; padding: 5px 8px; border-bottom: 1px solid var(--line); }
+.dc-table td { padding: 5px 8px; border-bottom: 1px solid #eee; vertical-align: top; }
+.dc-table td.mono { font-family: ui-monospace, "SF Mono", monospace; }
+.dc-table td.calc { color: #444; }
+.dc-table td.dval { color: #7a4a99; white-space: nowrap; }
+.dc-table tr.sig td { background: #eef7f2; }
+.dc-na { color: var(--muted); font-style: italic; }
+.dc-empty { color: var(--muted); font-style: italic; }

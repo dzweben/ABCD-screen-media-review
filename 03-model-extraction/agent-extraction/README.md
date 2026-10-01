@@ -14,5 +14,6 @@ Duplicates were not extracted. 393 is the same paper as 394, and 436 is the same
 ```bash
 python3 docs/scripts/ingest_drafts.py                      # validate + compute Cohen's d per estimate -> docs/data/ingested/
 cd docs/scripts && npm install && node upload_to_firestore.mjs   # push to the live site (skips papers coders have touched)
+node patch_derived.mjs                                     # once coders are reviewing: update only the computed-d fields, never their edits
 node export_firestore.mjs                                  # snapshot live site state (incl. coder edits) -> docs/data/firestore-export.json
 ```
